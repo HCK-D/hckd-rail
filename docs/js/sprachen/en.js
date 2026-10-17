@@ -671,6 +671,14 @@ uebDict({
   'Nur wenn du auf «In meiner Nähe» tippst, fragt dein Browser dich, ob die Seite deinen Standort verwenden darf. Sagst du ja, wird der Standort auf etwa 100 Meter gerundet an transport.opendata.ch geschickt, um den nächsten Bahnhof zu finden. Wir speichern den Standort nicht.': 'Only if you tap «Near me» does your browser ask whether the site may use your location. If you agree, the location is rounded to about 100 metres and sent to transport.opendata.ch to find the nearest station. We do not store your location.'
 });
 
+/* ---- 04-app.js ---- */
+/* English – install as an app */
+uebDict({
+  'App installieren': 'Install the app',
+  'Auf dem iPhone: In Safari unten auf «Teilen» tippen, dann «Zum Home-Bildschirm». Danach erscheint HCKD RAIL als App auf deinem Handy.': 'On iPhone: in Safari tap «Share» at the bottom, then «Add to Home Screen». HCKD RAIL then appears as an app on your phone.',
+  'Damit die Website auch als App schnell startet und ohne Internet funktioniert, legt dein Browser besuchte Seiten, Bilder und Skripte in einem Zwischenspeicher auf deinem Gerät ab. Darin stehen nur Inhalte dieser Website, keine Angaben über dich.': 'So that the website starts quickly as an app and works without internet, your browser keeps visited pages, pictures and scripts in a cache on your device. It contains only content from this website, no information about you.'
+});
+
 /* ---- 20-personenverkehr.js ---- */
 /* English – SBB Passenger vehicles */
 uebDict({ 'ja': 'yes', 'nein': 'no' });

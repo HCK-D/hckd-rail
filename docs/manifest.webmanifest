@@ -1,0 +1,17 @@
+{
+  "id": "./",
+  "name": "HCKD RAIL – Train Database",
+  "short_name": "HCKD RAIL",
+  "description": "Schweizer Bahnfahrzeuge: Technik, Geschichte, Bilder, Abfahrten und Quiz.",
+  "lang": "de-CH",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#F5F6F7",
+  "theme_color": "#D71920",
+  "icons": [
+    { "src": "bilder/app/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "bilder/app/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "bilder/app/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

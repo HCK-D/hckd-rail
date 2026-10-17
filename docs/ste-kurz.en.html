@@ -21,6 +21,11 @@
 <meta property="og:image" content="https://hck-d.github.io/hckd-rail/bilder/slides/slide-01.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#D71920">
+<link rel="apple-touch-icon" href="bilder/app/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="HCKD RAIL">
 <script>window.HCKD_SEITEN=true;window.HCKD_LANG='en';window.HCKD_START='ste-kurz';</script>
 <script>try{var t=localStorage.getItem('hckd-theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
 <link rel="preload" href="schrift/source-sans-3-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -543,6 +548,7 @@
           <p>Um zu sehen, welche Seiten gefragt sind, nutzen wir GoatCounter (goatcounter.com). GoatCounter setzt keine Cookies und speichert keine IP-Adressen. Erfasst werden die aufgerufene Seite, die Seite, von der du kommst, Browser und Betriebssystem, Bildschirmgrösse und das Land. Daraus lässt sich nicht ablesen, wer du bist. Die Zahlen sehen nur wir. Die Daten können ausserhalb der Schweiz verarbeitet werden.</p>
           <h2>Speicher im Browser</h2>
           <p>Dein Browser merkt sich im lokalen Speicher (localStorage), welche Fahrzeuge du für den Vergleich ausgewählt und im Sammelalbum als gesehen markiert hast, sowie dein bestes Quiz-Ergebnis pro Level, deine Sprache und ob du die Seite hell oder dunkel möchtest. Zum Schutz vor Spam merkt er sich ausserdem für 10 Minuten, wann du eine Meldung geschickt hast. Diese Angaben verlassen dein Gerät nicht. Du kannst sie löschen, indem du die Websitedaten im Browser löschst.</p>
+          <p>Damit die Website auch als App schnell startet und ohne Internet funktioniert, legt dein Browser besuchte Seiten, Bilder und Skripte in einem Zwischenspeicher auf deinem Gerät ab. Darin stehen nur Inhalte dieser Website, keine Angaben über dich.</p>
           <h2>Abfahrtstafel</h2>
           <p>Für die Abfahrtstafel fragt dein Browser den Fahrplan direkt bei transport.opendata.ch (Opendata.ch) ab. Dabei werden der gesuchte Bahnhof und, wie bei jedem Seitenaufruf, deine IP-Adresse übermittelt. Die Tafel lädt nur, solange sie auf dem Bildschirm sichtbar ist. Den zuletzt gewählten Bahnhof merkt sich dein Browser im lokalen Speicher.</p>
           <p>Nur wenn du auf «In meiner Nähe» tippst, fragt dein Browser dich, ob die Seite deinen Standort verwenden darf. Sagst du ja, wird der Standort auf etwa 100 Meter gerundet an transport.opendata.ch geschickt, um den nächsten Bahnhof zu finden. Wir speichern den Standort nicht.</p>
@@ -581,6 +587,13 @@
     </div>
     <ul class="foot-links" id="foot-links"></ul>
     <div class="foot-bottom">© 2026 HCKD · Stand der Daten: Oktober 2026 · <button class="foot-donate" type="button" data-report="allg" aria-haspopup="dialog">Fehler melden</button> · <button class="foot-donate" type="button" data-fotos="allg" aria-haspopup="dialog">Fotos einsenden</button> ·<button class="foot-donate" type="button" data-donate aria-haspopup="dialog">Spenden</button></div>
+    <div class="foot-app">
+      <button class="qz-btn ghost app-install" id="app-install" type="button" hidden>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M12 7v7M9 11l3 3 3-3"/></svg>
+        <span>App installieren</span>
+      </button>
+      <p class="app-tipp" id="app-tipp" hidden>Auf dem iPhone: In Safari unten auf «Teilen» tippen, dann «Zum Home-Bildschirm». Danach erscheint HCKD RAIL als App auf deinem Handy.</p>
+    </div>
   </div>
 </footer>
 
@@ -687,5 +700,6 @@
 <script src="js/melden.js"></script>
 <script src="js/fotos.js"></script>
 <script src="js/start.js"></script>
+<script src="js/app.js"></script>
 </body>
 </html>

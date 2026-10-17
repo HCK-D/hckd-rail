@@ -145,6 +145,10 @@ body.has-cmp .footer{padding-bottom:76px}
 .board-form{display:flex;gap:10px}
 .board-form .filter{flex:1}
 .board-form .qz-btn{height:48px;flex:none}
+.foot-app{display:grid;gap:10px;justify-items:start}
+.foot-app:not(:has(:not([hidden]))){display:none}
+.app-install{display:inline-flex;align-items:center;gap:8px;height:42px;padding:0 18px;font-size:15px}
+.app-tipp{margin:0;max-width:52ch;font-size:15px;line-height:1.5}
 .board-near{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:0 18px}
 .board-near:disabled{opacity:.6}
 .board-panel{border-radius:var(--r-md);background:#0B1F44;color:#fff;box-shadow:var(--shadow-lift);overflow:hidden}

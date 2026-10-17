@@ -138,6 +138,9 @@ function Build-Page([string]$l, [string]$start, [string]$titel, [string]$text, [
   }
   if ($start -eq 'vergleich') { $meta += "<meta name=`"robots`" content=`"noindex`">`n" }
   $meta += "<link rel=`"icon`" href=`"favicon.svg`" type=`"image/svg+xml`">`n"
+  # als App installierbar (manifest.webmanifest, sw.js und js/app.js)
+  $meta += "<link rel=`"manifest`" href=`"manifest.webmanifest`">`n<meta name=`"theme-color`" content=`"#D71920`">`n"
+  $meta += "<link rel=`"apple-touch-icon`" href=`"bilder/app/apple-touch-icon.png`">`n<meta name=`"apple-mobile-web-app-capable`" content=`"yes`">`n<meta name=`"apple-mobile-web-app-title`" content=`"HCKD RAIL`">`n"
   # HCKD_SEITEN: Links zeigen auf die einzelnen Dateien (re-460.html statt #re-460)
   # HCKD_START: welche Ansicht ohne # gezeigt wird; HCKD_LANG: Sprache dieser Datei
   $js = "window.HCKD_SEITEN=true;window.HCKD_LANG='$l';"
@@ -158,6 +161,54 @@ $logo = [regex]::Match($body, '<symbol id="logo" viewBox="([^"]+)">([\s\S]*?)</s
 if ($logo.Success) { Write-Utf8 (Join-Path $out 'favicon.svg') "<svg xmlns=`"http://www.w3.org/2000/svg`" viewBox=`"$($logo.Groups[1].Value)`">$($logo.Groups[2].Value.Trim())</svg>`n" }
 # GitHub Pages: Dateien unverändert ausliefern
 Write-Utf8 (Join-Path $out '.nojekyll') ''
+
+# ---------- App (PWA) ----------
+# Symbole: bilder\app\*.png (neu zeichnen mit werkzeuge\app-symbole.ps1)
+$manifest = @'
+{
+  "id": "./",
+  "name": "HCKD RAIL – Train Database",
+  "short_name": "HCKD RAIL",
+  "description": "Schweizer Bahnfahrzeuge: Technik, Geschichte, Bilder, Abfahrten und Quiz.",
+  "lang": "de-CH",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#F5F6F7",
+  "theme_color": "#D71920",
+  "icons": [
+    { "src": "bilder/app/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "bilder/app/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "bilder/app/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
+'@
+Write-Utf8 (Join-Path $out 'manifest.webmanifest') $manifest
+# Service Worker: Seiten zuerst aus dem Netz (sonst aus dem Speicher), alles andere aus dem Speicher.
+# Die Version ändert sich bei jedem Bauen; dann wird der alte Speicher gelöscht und alles neu geladen.
+$sw = @'
+/* HCKD RAIL – Service Worker (automatisch erzeugt von werkzeuge\website-bauen.ps1) */
+'use strict';
+const V = 'hckd-__VERSION__';
+self.addEventListener('install', e => {
+  e.waitUntil(caches.open(V).then(c => c.addAll(['./', 'index.html', 'manifest.webmanifest'])).then(() => self.skipWaiting()));
+});
+self.addEventListener('activate', e => {
+  e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k !== V).map(k => caches.delete(k)))).then(() => self.clients.claim()));
+});
+const merke = (req, res) => { if (res.ok && res.type === 'basic') { const c = res.clone(); caches.open(V).then(k => k.put(req, c)); } return res; };
+self.addEventListener('fetch', e => {
+  const req = e.request;
+  if (req.method !== 'GET' || new URL(req.url).origin !== location.origin) return;
+  if (req.mode === 'navigate') {
+    e.respondWith(fetch(req).then(res => merke(req, res))
+      .catch(() => caches.match(req, { ignoreSearch: true }).then(m => m || caches.match('index.html'))));
+    return;
+  }
+  e.respondWith(caches.match(req).then(m => m || fetch(req).then(res => merke(req, res))));
+});
+'@
+Write-Utf8 (Join-Path $out 'sw.js') $sw.Replace('__VERSION__', (Get-Date -Format 'yyyyMMddHHmmss'))
 # Eigene Domain: GitHub Pages braucht die Datei CNAME im docs-Ordner (bei *.github.io nicht)
 if ($base -match '^https?://([^/]+)/' -and $Matches[1] -notmatch '\.github\.io$') { Write-Utf8 (Join-Path $out 'CNAME') ($Matches[1] + "`n") }
 

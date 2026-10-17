@@ -672,6 +672,14 @@ uebDict({
   'Nur wenn du auf «In meiner Nähe» tippst, fragt dein Browser dich, ob die Seite deinen Standort verwenden darf. Sagst du ja, wird der Standort auf etwa 100 Meter gerundet an transport.opendata.ch geschickt, um den nächsten Bahnhof zu finden. Wir speichern den Standort nicht.': 'Ce n’est que si tu touches « Près de moi » que ton navigateur te demande si le site peut utiliser ta position. Si tu acceptes, la position est arrondie à environ 100 mètres et envoyée à transport.opendata.ch pour trouver la gare la plus proche. Nous n’enregistrons pas ta position.'
 });
 
+/* ---- 04-app.js ---- */
+/* Français – installer comme application */
+uebDict({
+  'App installieren': 'Installer l’application',
+  'Auf dem iPhone: In Safari unten auf «Teilen» tippen, dann «Zum Home-Bildschirm». Danach erscheint HCKD RAIL als App auf deinem Handy.': 'Sur iPhone : dans Safari, touche « Partager » en bas, puis « Sur l’écran d’accueil ». HCKD RAIL apparaît ensuite comme une application sur ton téléphone.',
+  'Damit die Website auch als App schnell startet und ohne Internet funktioniert, legt dein Browser besuchte Seiten, Bilder und Skripte in einem Zwischenspeicher auf deinem Gerät ab. Darin stehen nur Inhalte dieser Website, keine Angaben über dich.': 'Pour que le site démarre rapidement comme application et fonctionne sans Internet, ton navigateur garde les pages, images et scripts consultés dans une mémoire cache sur ton appareil. Elle ne contient que des contenus de ce site, aucune information sur toi.'
+});
+
 /* ---- 20-personenverkehr.js ---- */
 /* Français – véhicules CFF Voyageurs */
 uebDict({ 'ja': 'oui', 'nein': 'non', 'SBB': 'CFF' });
