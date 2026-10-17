@@ -10,7 +10,7 @@
 const KATS = [
   { id: 'personenverkehr', code: 'P', name: 'SBB Personenverkehr', text: 'Fernverkehr, Regionalverkehr und S-Bahn: Hochgeschwindigkeits- und Doppelstockzüge, Triebzüge und Lokomotiven.', rep: 'rabe-501', bild: 'bilder/rabe-502-c2.jpg', bildPos: 'center 55%' },
   { id: 'cargo', code: 'G', name: 'SBB Cargo', text: 'Lokomotiven für den Güterverkehr im Inland und über die Alpen, inklusive Mehrsystemloks für den Verkehr ins Ausland.', rep: 're-482', bild: 'bilder/re620-2.jpg', bildPos: 'center 60%' },
-  { id: 'infrastruktur', code: 'I', name: 'SBB Infrastruktur', text: 'Fahrzeuge für Bau, Unterhalt und Logistik am Netz: Bauzuglokomotiven und Baudienstfahrzeuge.', rep: 'aem-940', gruppen: ['Lokomotiven und Traktoren', 'Wagen und Bauzüge'], bild: 'bilder/aem-940-c1.jpg', bildPos: 'center 62%' },
+  { id: 'infrastruktur', code: 'I', name: 'SBB Infrastruktur', text: 'Fahrzeuge für Bau, Unterhalt und Logistik am Netz: Bauzuglokomotiven und Baudienstfahrzeuge.', rep: 'aem-940', gruppen: ['Lokomotiven und Traktoren', 'Schotter- und Kippwagen', 'Schienentransport', 'Werkstatt- und Mannschaftswagen'], bild: 'bilder/aem-940-c1.jpg', bildPos: 'center 62%' },
   { id: 'rangier', code: 'R', name: 'Rangierfahrzeuge', text: 'Lokomotiven und Traktoren für das Rangieren in Bahnhöfen, Abstellanlagen und Anschlussgleisen.', rep: 'eem-923', bild: 'bilder/ee-922-c3.jpg', bildPos: 'center 60%' },
   { id: 'dienst', code: 'D', name: 'Dienst- und Spezialfahrzeuge', text: 'Lösch- und Rettungszüge, Schneeräumung, Messfahrzeuge, Krane und Fahrleitungsfahrzeuge.', rep: 'xrotm', bild: 'bilder/lrz-18-c1.jpg', bildPos: 'center 65%' },
   { id: 'historisch', code: 'H', name: 'Historische Fahrzeuge', text: 'Klassiker der SBB, die heute nicht mehr im Alltag fahren. Viele sind bei SBB Historic oder in Museen erhalten.', rep: 'h-ce68ii', bild: 'bilder/h-ce68ii-c1.jpg', bildPos: 'center 60%' }
@@ -64,8 +64,9 @@ const ZUEGE = [
   { id: 'rabe-502', kat: 'personenverkehr', name: 'RABe 502', beiname: 'FV-Dosto', typ: 'Twindexx Swiss Express, Doppelstock-Fernverkehrszug', vorlaeufig: false,
     text: ['Der Twindexx Swiss Express ist der Fernverkehrs-Doppelstocktriebzug der SBB. Die SBB bezeichnet ihn als FV-Dosto.', 'Drei Ausführungen bieten unterschiedlich viel Platz und können je nach Nachfrage miteinander gekuppelt werden: der IC200 als RABDe 502 sowie IR200 und IR100 als RABe 502.'],
     kennzahlen: [['62', 'Züge in der SBB-Flotte'], ['200 km/h', 'Höchstgeschwindigkeit'], ['2018', 'erster SBB-Einsatz'], ['3', 'Ausführungen']],
-    daten: { 'Baureihe': 'RABDe 502 (IC200), RABe 502 (IR200, IR100)', 'Hersteller': 'Bombardier Transportation, heute Alstom', 'Spurweite': 'Normalspur, 1435 mm', 'Höchstgeschwindigkeit': '200 km/h', 'Antrieb': 'Permanentmagnet-Synchronmotoren', 'Länge': '200,6 m (IC200, IR200), 101,0 m (IR100)', 'Sitzplätze': '606 (IC200), 682 (IR200), 330 (IR100)', 'Leistung': '7500 kW max. (IR100: 3750 kW)', 'Anzahl': '62 Züge (23 Intercity, 39 Interregio)', 'In Betrieb seit': '2018, ganze Flotte geliefert 2022' },
-    specOrder: ['Baureihe', 'Hersteller', 'Spurweite', 'Höchstgeschwindigkeit', 'Antrieb', 'Länge', 'Sitzplätze', 'Leistung', 'Anzahl', 'In Betrieb seit'],
+    daten: { 'Baureihe': 'RABDe 502 (IC200), RABe 502 (IR200, IR100)', 'Hersteller': 'Bombardier Transportation, heute Alstom', 'Spurweite': 'Normalspur, 1435 mm', 'Höchstgeschwindigkeit': '200 km/h', 'Antrieb': 'Permanentmagnet-Synchronmotoren', 'Länge': '200,6 m (IC200, IR200), 101,0 m (IR100)', 'Sitzplätze': '606 (IC200), 682 (IR200), 330 (IR100)', 'Leistung': '7500 kW max. (IR100: 3750 kW)', 'Gewicht': '237,1–467,4 t leer, je nach Ausführung', 'Anzahl': '62 Züge (23 Intercity, 39 Interregio)', 'In Betrieb seit': '2018, ganze Flotte geliefert 2022' },
+    specOrder: ['Baureihe', 'Hersteller', 'Spurweite', 'Höchstgeschwindigkeit', 'Antrieb', 'Länge', 'Sitzplätze', 'Leistung', 'Gewicht', 'Anzahl', 'In Betrieb seit'],
+    specNote: 'Leergewichte laut SBB: IR100 237,1 t, IR200 463,2 t, IC200 467,4 t.',
     abschnitte: [
       { titel: 'Technische Daten der drei Ausführungen', tabelle: { kopf: ['Merkmal', 'IC200', 'IR200', 'IR100'], zeilen: [
         ['Baureihe', 'RABDe 502', 'RABe 502', 'RABe 502'],
@@ -94,8 +95,9 @@ const ZUEGE = [
   { id: 'rabe-511', kat: 'personenverkehr', name: 'RABe 511', beiname: 'KISS', typ: 'Doppelstock-Triebzug, Regio-Dosto und IR-Dosto', vorlaeufig: false,
     text: ['Die Baureihe RABe 511 von Stadler (Typ KISS) umfasst zwei Doppelstockausführungen: 69 sechsteilige Regio-Dosto und 24 vierteilige IR-Dosto.', 'Die SBB führt die beiden Ausführungen getrennt, weil Länge, Kapazität und Einsatz voneinander abweichen.'],
     kennzahlen: [['93', 'Züge beider Ausführungen'], ['160 km/h', 'Höchstgeschwindigkeit'], ['2012', 'erster Einsatz'], ['Stadler', 'Hersteller']],
-    daten: { 'Hersteller': 'Stadler', 'Betreiber': 'SBB Personenverkehr', 'Bauart': 'Doppelstock-Triebzug', 'Zugbildung': '6 Wagen (Regio-Dosto), 4 Wagen (IR-Dosto)', 'Spurweite': 'Normalspur, 1435 mm', 'Stromsystem': '15 kV 16,7 Hz', 'Höchstgeschwindigkeit': '160 km/h', 'Länge': '150,0 m (Regio-Dosto), 100,0 m (IR-Dosto)', 'Sitzplätze': '535 (Regio-Dosto), 317 (IR-Dosto)', 'Niederflureinstieg': 'ja', 'Anzahl': '93 Züge (69 Regio-Dosto, 24 IR-Dosto)', 'In Betrieb seit': '2012', 'Einsatz': 'S-Bahn Zürich, RegioExpress, InterRegio' },
-    specOrder: ['Hersteller', 'Betreiber', 'Bauart', 'Zugbildung', 'Spurweite', 'Stromsystem', 'Höchstgeschwindigkeit', 'Länge', 'Sitzplätze', 'Niederflureinstieg', 'Anzahl', 'In Betrieb seit', 'Einsatz'],
+    daten: { 'Hersteller': 'Stadler', 'Betreiber': 'SBB Personenverkehr', 'Bauart': 'Doppelstock-Triebzug', 'Zugbildung': '6 Wagen (Regio-Dosto), 4 Wagen (IR-Dosto)', 'Spurweite': 'Normalspur, 1435 mm', 'Stromsystem': '15 kV 16,7 Hz', 'Höchstgeschwindigkeit': '160 km/h', 'Länge': '150,0 m (Regio-Dosto), 100,0 m (IR-Dosto)', 'Leistung': '6000 kW (beide Ausführungen)', 'Gewicht': '210–292 t, je nach Ausführung', 'Sitzplätze': '535 (Regio-Dosto), 317 (IR-Dosto)', 'Niederflureinstieg': 'ja', 'Anzahl': '93 Züge (69 Regio-Dosto, 24 IR-Dosto)', 'In Betrieb seit': '2012', 'Einsatz': 'S-Bahn Zürich, RegioExpress, InterRegio' },
+    specOrder: ['Hersteller', 'Betreiber', 'Bauart', 'Zugbildung', 'Spurweite', 'Stromsystem', 'Höchstgeschwindigkeit', 'Länge', 'Leistung', 'Gewicht', 'Sitzplätze', 'Niederflureinstieg', 'Anzahl', 'In Betrieb seit', 'Einsatz'],
+    specNote: 'Gewicht laut SBB: 210 t für den vierteiligen IR-Dosto, 292 t für den sechsteiligen Regio-Dosto.',
     abschnitte: [
       { titel: 'Ausführungen im Vergleich', tabelle: { kopf: ['Merkmal', 'Regio-Dosto', 'IR-Dosto'], zeilen: [
         ['Fahrzeuge', '69', '24'],
@@ -103,6 +105,8 @@ const ZUEGE = [
         ['Länge', '150,0 m', '100,0 m'],
         ['Sitzplätze', '535 (120 / 415)', '317'],
         ['Geschwindigkeit', '160 km/h', '160 km/h'],
+        ['Leistung', '6000 kW', '6000 kW'],
+        ['Gewicht', '292 t', '210 t'],
         ['Niederflureinstieg', 'ja', 'ja'],
         ['Verkehr', 'S-Bahn / RE', 'IR / RE']] },
         hinweis: 'Die Aufteilung 120 / 415 bezeichnet die Plätze der 1. und 2. Klasse im Regio-Dosto. Für die IR-Ausführung nennt die SBB 317 Plätze insgesamt.' },
@@ -110,7 +114,7 @@ const ZUEGE = [
       { titel: 'Ausstattung und Erneuerung', liste: ['Breite Tiefeinstiege', 'Rollstuhlplätze', 'Rollstuhlgängiges WC', 'Flächen für Kinderwagen und Velos'],
         p: ['Die IR-Dosto wurden 2020–2024 für den Fernverkehr aufgewertet, unter anderem mit Steckdosen und 2+1-Bestuhlung in der 1. Klasse.', 'Die SBB erneuert die Regio-Dosto schrittweise; der erste erneuerte Zug verkehrt seit September 2026.'] }
     ],
-    quellen: ['SBB – Regio-Dosto: 69 sechsteilige Züge', 'SBB – IR-Dosto: 24 vierteilige Züge', 'SBB News – Erneuerung der Zürcher S-Bahn-Flotten, Oktober 2026'],
+    quellen: ['SBB – Regio-Dosto: 69 sechsteilige Züge', 'SBB – IR-Dosto: 24 vierteilige Züge', 'SBB News – Erneuerung der Zürcher S-Bahn-Flotten, Oktober 2026', 'SBB – Regio-Dosto RABe 511 mit Flottenangaben (Leistung und Gewicht)'],
     art: { typ: 'triebzug', nase: 'kurz', dd: true, farbe: W1, akzent: RED, tuer: RED, panto: true }, bilder: [
       { src: 'bilder/rabe-511-c1.jpg', titel: 'Regio-Dosto als S15 der Zürcher S-Bahn in Jona', foto: 'GleisReis', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:S15_ZVV_Jona.jpg' },
       { src: 'bilder/rabe-511-c2.jpg', titel: 'RABe 511 112 in Genève-Cornavin', foto: 'SmoIchopper', lizenz: 'CC BY 2.0', lizenzUrl: 'https://creativecommons.org/licenses/by/2.0', quelle: 'https://commons.wikimedia.org/wiki/File:511112_-_Gen%C3%A8ve-Cornavin.jpg' },
@@ -121,14 +125,14 @@ const ZUEGE = [
   { id: 'rabe-514', kat: 'personenverkehr', name: 'RABe 514', beiname: 'DTZ', typ: 'Doppelstocktriebzug der Zürcher S-Bahn', vorlaeufig: false,
     text: ['Der RABe 514 ist der doppelstöckige Triebwagenzug (DTZ) der zweiten Generation der Zürcher S-Bahn. Siemens lieferte 61 vierteilige Züge.', 'Tiefeinstiege mit Spaltüberbrückung erleichtern den Zugang.'],
     kennzahlen: [['61', 'Züge'], ['360', 'Sitzplätze je Zug'], ['140 km/h', 'Höchstgeschwindigkeit'], ['2006', 'erster SBB-Einsatz']],
-    daten: { 'Hersteller': 'Siemens', 'Betreiber': 'SBB Personenverkehr', 'Bauart': 'Doppelstocktriebzug', 'Zugbildung': '4 Wagen', 'Spurweite': 'Normalspur, 1435 mm', 'Stromsystem': '15 kV 16,7 Hz', 'Länge': '100,0 m', 'Höchstgeschwindigkeit': '140 km/h', 'Sitzplätze': '360', 'Niederflureinstieg': 'ja', 'Anzahl': '61 Züge', 'In Betrieb seit': '2006', 'Beschaffungszeit': '2006–2009', 'Einsatz': 'S-Bahn Zürich' },
-    specOrder: ['Hersteller', 'Betreiber', 'Bauart', 'Zugbildung', 'Spurweite', 'Stromsystem', 'Länge', 'Höchstgeschwindigkeit', 'Sitzplätze', 'Niederflureinstieg', 'Anzahl', 'In Betrieb seit', 'Beschaffungszeit', 'Einsatz'],
+    daten: { 'Hersteller': 'Siemens', 'Betreiber': 'SBB Personenverkehr', 'Bauart': 'Doppelstocktriebzug', 'Zugbildung': '4 Wagen', 'Spurweite': 'Normalspur, 1435 mm', 'Stromsystem': '15 kV 16,7 Hz', 'Länge': '100,0 m', 'Leistung': '3200 kW', 'Gewicht': '223 t leer', 'Höchstgeschwindigkeit': '140 km/h', 'Sitzplätze': '360', 'Niederflureinstieg': 'ja', 'Anzahl': '61 Züge', 'In Betrieb seit': '2006', 'Beschaffungszeit': '2006–2009', 'Einsatz': 'S-Bahn Zürich' },
+    specOrder: ['Hersteller', 'Betreiber', 'Bauart', 'Zugbildung', 'Spurweite', 'Stromsystem', 'Länge', 'Leistung', 'Gewicht', 'Höchstgeschwindigkeit', 'Sitzplätze', 'Niederflureinstieg', 'Anzahl', 'In Betrieb seit', 'Beschaffungszeit', 'Einsatz'],
     abschnitte: [
       { titel: 'Einsatz und Fahrgasträume', liste: ['Durchgehender Tiefeinstieg', 'Multifunktionsbereiche für Velo und Kinderwagen', 'Vorrangsitze', 'Rollstuhlplätze', 'Rollstuhlgängiges WC'],
         p: ['Die DTZ können auf dem gesamten Netz der Zürcher S-Bahn eingesetzt werden.'] },
       { titel: 'Modernisierung', p: ['Die SBB erneuert die Flotte seit 2025, voraussichtlich bis etwa 2030. Dazu gehören eine neue Lackierung, besserer Mobilfunkempfang durch angepasste Fensterscheiben sowie Arbeiten an Beleuchtung, Innenraum und technischen Komponenten.', 'Die Erneuerung soll die Nutzungsdauer auf 32 Jahre verlängern.'] }
     ],
-    quellen: ['SBB – DTZ: Kenndaten, Einsatz und Ausstattung', 'SBB News – Erneuerung der DTZ und Regio-Dosto, Oktober 2026'],
+    quellen: ['SBB – DTZ: Kenndaten, Einsatz und Ausstattung', 'SBB News – Erneuerung der DTZ und Regio-Dosto, Oktober 2026', 'SBB Infrastruktur – Fahrtypenkatalog 2026, technische Daten RABe 514'],
     art: { typ: 'triebzug', nase: 'kurz', dd: true, farbe: W1, akzent: RED, tuer: '#4B545C', panto: true }, bilder: [
       { src: 'bilder/rabe-514-c1.jpg', titel: 'RABe 514 «DTZ» unterwegs', foto: 'Samson Ng . D201@EAL', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:RABe_514_DTZ_EMU_(54904500242).jpg' },
       { src: 'bilder/rabe-514-c2.jpg', titel: 'Treppe zum Mittelstock im erneuerten DTZ', foto: 'E235JREMU', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:LR25_RABe_514,_Treppenhaus_Mittelstock.jpg' },
@@ -138,16 +142,16 @@ const ZUEGE = [
     ] },
   { id: 'rabe-523', kat: 'personenverkehr', name: 'RABe 523', beiname: 'FLIRT', typ: 'Elektrischer Regionaltriebzug von Stadler', vorlaeufig: false,
     text: ['Der vierteilige RABe 523 war der erste FLIRT für die SBB. Er wurde für die Stadtbahn Zug entwickelt und ging 2004 in den Fahrgasteinsatz.', 'Die Baureihe gehört zur grösseren FLIRT-Familie, die in mehreren Ausführungen verkehrt.'],
-    kennzahlen: [['2004', 'erster Einsatz'], ['4', 'Wagenteile des Grundtyps'], ['160 km/h', 'FLIRT-Höchstwert laut SBB'], ['Stadler', 'Hersteller']],
-    daten: { 'Bauart': 'Elektrotriebzug', 'Fahrzeugfamilie': 'FLIRT', 'Grundtyp': '4 Wagen', 'Einstieg': 'niederflurig', 'Hersteller': 'Stadler', 'Spurweite': 'Normalspur, 1435 mm', 'Stromsystem': '15 kV 16,7 Hz', 'Höchstgeschwindigkeit': '160 km/h (FLIRT-Familie laut SBB)', 'Erste Region': 'Stadtbahn Zug', 'Einsatz': 'Regionalverkehr, S-Bahn', 'In Betrieb seit': '2004', 'SBB-FLIRT': 'mehrere Ausführungen' },
-    specOrder: ['Bauart', 'Fahrzeugfamilie', 'Grundtyp', 'Einstieg', 'Hersteller', 'Spurweite', 'Stromsystem', 'Höchstgeschwindigkeit', 'Erste Region', 'Einsatz', 'In Betrieb seit', 'SBB-FLIRT'],
-    specNote: 'Die SBB nennt für ihre 209 Regional-FLIRT insgesamt 160 km/h, 75–105 m Länge und 156–236 Sitzplätze. Diese Spannen beschreiben die ganze FLIRT-Familie und sind keine einheitlichen Daten für jeden RABe 523.',
+    kennzahlen: [['2004', 'erster Einsatz'], ['98*', 'Fahrzeuge gemäss Nummernreihen'], ['2656 kW', 'Leistung'], ['74,08 m', 'Länge']],
+    daten: { 'Bauart': 'Elektrotriebzug', 'Fahrzeugfamilie': 'FLIRT', 'Grundtyp': '4 Wagen', 'Einstieg': 'niederflurig', 'Hersteller': 'Stadler', 'Spurweite': 'Normalspur, 1435 mm', 'Stromsystem': '15 kV 16,7 Hz', 'Länge': '74,08 m', 'Gewicht': '120 t', 'Leistung': '2656 kW', 'Höchstgeschwindigkeit': '160 km/h (FLIRT-Familie laut SBB)', 'Erste Region': 'Stadtbahn Zug', 'Einsatz': 'Regionalverkehr, S-Bahn', 'Anzahl': '98* (gemäss Nummernreihen)', 'In Betrieb seit': '2004' },
+    specOrder: ['Bauart', 'Fahrzeugfamilie', 'Grundtyp', 'Einstieg', 'Hersteller', 'Spurweite', 'Stromsystem', 'Länge', 'Gewicht', 'Leistung', 'Höchstgeschwindigkeit', 'Erste Region', 'Einsatz', 'Anzahl', 'In Betrieb seit'],
+    specNote: '* Die 98 ergeben sich aus den veröffentlichten Nummernreihen 001–073, 101–114 und 501–511; eine separat bestätigte aktuelle SBB-Bestandsmeldung gibt es nicht. Die 160 km/h nennt die SBB für die ganze Regional-FLIRT-Familie.',
     abschnitte: [
       { titel: 'Regionaler Einsatz und Ausstattung', liste: ['Niederflureinstieg', 'Rollstuhlplätze', 'Rollstuhlgängige Toiletten', 'Abstellflächen für Velos und Kinderwagen'],
         p: ['FLIRT fahren laut SBB als S-Bahn unter anderem in den Kantonen Aargau, Solothurn, Luzern, Basel, Neuenburg, Freiburg und Waadt. Die Ausstattung gehört zur ganzen Familie; Details unterscheiden sich nach Ausführung.'] },
-      { titel: 'Stückzahl richtig einordnen', p: ['Die veröffentlichte Zahl von 209 umfasst sämtliche im Regionalverkehr eingesetzten FLIRT der SBB, darunter weitere Baureihen und Ausführungen. Die SBB-Fahrzeugübersicht weist keine separate aktuelle Stückzahl nur für den RABe 523 aus.', 'Deshalb wird hier bewusst keine Stückzahl für den RABe 523 aus der Familienzahl abgeleitet.'] }
+      { titel: 'Stückzahl richtig einordnen', p: ['Die veröffentlichte Zahl von 209 umfasst sämtliche im Regionalverkehr eingesetzten FLIRT der SBB, darunter weitere Baureihen und Ausführungen.', 'Für den RABe 523 allein ergeben die veröffentlichten Nummernreihen 001–073, 101–114 und 501–511 zusammen 98 Fahrzeuge. Das ist eine Herleitung aus den Nummern, keine offizielle aktuelle Bestandsmeldung der SBB.'] }
     ],
-    quellen: ['SBB – FLIRT: Familienflotte, technische Spannbreiten und Einsatz', 'Stadler – Mitteilung zur FLIRT-Entwicklung, S. 2 (RABe 523 ab 2004)'],
+    quellen: ['SBB – FLIRT: Familienflotte, technische Spannbreiten und Einsatz', 'Stadler – Mitteilung zur FLIRT-Entwicklung, S. 2 (RABe 523 ab 2004)', 'SBB Infrastruktur – Fahrtypenkatalog 2026, technische Daten RABe 523', 'SBB – FLIRT-Familie der SBB, Nummernreihen'],
     art: { typ: 'triebzug', nase: 'mittel', farbe: W1, akzent: RED, tuer: RED, panto: true }, bilder: [
       { src: 'bilder/rabe-523-c1.jpg', titel: 'RABe 523 001 in Muttenz', foto: 'The Nikon User', lizenz: 'CC BY 2.0', lizenzUrl: 'https://creativecommons.org/licenses/by/2.0', quelle: 'https://commons.wikimedia.org/wiki/File:523_001_Muttenz.jpg' },
       { src: 'bilder/rabe-523-c2.jpg', titel: 'RABe 523 019', foto: 'Alex Noble', lizenz: 'CC0', lizenzUrl: 'http://creativecommons.org/publicdomain/zero/1.0/deed.en', quelle: 'https://commons.wikimedia.org/wiki/File:20221007_SBB_523019.jpg' },
@@ -230,9 +234,17 @@ const ZUEGE = [
     ] },
 
   // ---------- Neu angelegt, Katalogblatt folgt ----------
-  { id: 'rabe-503', kat: 'personenverkehr', name: 'RABe 503', beiname: 'Astoro', typ: 'Elektrischer Neigezug (ETR 610)',
-    text: ['Der RABe 503, beim Hersteller ETR 610 genannt, ist ein elektrischer Neigezug aus der Pendolino-Familie von Alstom.', 'Die SBB setzt ihn vor allem im Verkehr zwischen der Schweiz und Italien ein.'],
-    daten: { 'Hersteller': 'Alstom (Pendolino-Familie)', 'Höchstgeschwindigkeit': '250 km/h', 'Neigetechnik': 'ja', 'Antrieb': 'elektrisch, Mehrsystem', 'Einsatz': 'Fernverkehr Schweiz–Italien' },
+  { id: 'rabe-503', kat: 'personenverkehr', name: 'RABe 503', beiname: 'Astoro', typ: 'Mehrsystem-Neigezug für den internationalen Verkehr', vorlaeufig: false,
+    text: ['Der Astoro ist ein siebenteiliger elektrischer Mehrsystem-Neigezug aus der Pendolino-Familie von Alstom (ETR 610).', 'Die SBB setzt ihn im EuroCity-Verkehr zwischen Deutschland, der Schweiz und Italien ein.'],
+    kennzahlen: [['19', 'Züge in der SBB-Flotte'], ['250 km/h', 'konstruktive Höchstgeschwindigkeit'], ['2009', 'erster SBB-Einsatz'], ['187,4 m', 'Länge']],
+    daten: { 'Hersteller': 'Alstom (Pendolino-Familie, ETR 610)', 'Zugbildung': '7 Wagen', 'Spurweite': 'Normalspur, 1435 mm', 'Stromsystem': '15 kV und 25 kV AC, 3 kV DC', 'Länge': '187,4 m', 'Gewicht': '418 t leer (FOS), 466 t beladen', 'Leistung': '5500 kW', 'Anfahrzugkraft': '226 kN', 'Höchstgeschwindigkeit': '250 km/h (Fahrzeug), 200 km/h im Schweizer Fahrtyp', 'Neigetechnik': 'aktiv', 'Sitzplätze': '402', 'Niederflureinstieg': 'nein', 'Anzahl': '19', 'In Betrieb seit': '2009', 'Einsatz': 'EuroCity Deutschland–Schweiz–Italien' },
+    specOrder: ['Hersteller', 'Zugbildung', 'Spurweite', 'Stromsystem', 'Länge', 'Gewicht', 'Leistung', 'Anfahrzugkraft', 'Höchstgeschwindigkeit', 'Neigetechnik', 'Sitzplätze', 'Niederflureinstieg', 'Anzahl', 'In Betrieb seit', 'Einsatz'],
+    specNote: 'Die SBB nennt 250 km/h als Höchstgeschwindigkeit des Fahrzeugs; im Fahrtypenkatalog ist für den Schweizer Fahrtyp 200 km/h hinterlegt.',
+    abschnitte: [
+      { titel: 'Beschaffung und Einsatz', p: ['Zur SBB-Flotte gehören 19 Astoro: sieben aus der ersten Beschaffung und zwölf später gelieferte Fahrzeuge.', 'Sie verkehren auf der internationalen Nord-Süd-Achse, unter anderem via Gotthard nach Milano, und auf Verbindungen in Richtung Deutschland.'] },
+      { titel: 'Erneuerung', p: ['Seit 2024 erneuert die SBB die ganze Flotte im Werk Bellinzona. Innenraum, Fahrgastinformation und technische Komponenten werden überarbeitet; das Programm soll voraussichtlich bis Ende 2027 dauern.'] }
+    ],
+    quellen: ['SBB – Astoro: Flottengrösse, Sitzplätze und Kenndaten', 'SBB Infrastruktur – Fahrtypenkatalog 2026, Fahrtyp 6013, S. 332', 'SBB News – Erneuerung der Astoro-Flotte bis Ende 2027'],
     art: { typ: 'triebzug', nase: 'lang', farbe: W1, akzent: RED, tuer: '#7B848C', panto: true }, bilder: [
       { src: 'bilder/rabe-503-c1.jpg', titel: 'RABe 503 «Astoro» in Brig', foto: 'Hoff1980', lizenz: 'CC BY-SA 3.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/3.0', quelle: 'https://commons.wikimedia.org/wiki/File:ETR_610_Brig.JPG' },
       { src: 'bilder/rabe-503-c2.jpg', titel: 'RABe 503 «Astoro» am Perron', foto: 'Falk2', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:I08_500_RABe_503.jpg' },
@@ -250,9 +262,17 @@ const ZUEGE = [
       { src: 'bilder/re-450-c4.jpg', titel: 'Re 450 022 in Niederweningen, 1991', foto: 'Phil Richards from London, UK', lizenz: 'CC BY-SA 2.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/2.0', quelle: 'https://commons.wikimedia.org/wiki/File:10.02.91_Niederweningen_SBB_450.022_(5943830670).jpg' },
       { src: 'bilder/re-450-c5.jpg', titel: 'Re 450 mit der S5 auf dem Seedamm in Rapperswil', foto: 'Roland zh', lizenz: 'CC BY-SA 3.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/3.0', quelle: 'https://commons.wikimedia.org/wiki/File:Bahnhof_Rapperswil_-_ZVV_S5_-_Seedamm_(Gleis_4)_2011-11-16_15-52-49_(SX230HS).JPG' }
     ] },
-  { id: 'rabe-512', kat: 'personenverkehr', name: 'RABe 512', beiname: 'KISS', typ: 'Doppelstock-Triebzug',
-    text: ['Neuere Doppelstock-Triebzüge von Stadler aus der KISS-Familie.', 'Die IR-Ausführung des RABe 511 kann mit dem RABe 512 gekuppelt werden.'],
-    daten: { 'Hersteller': 'Stadler', 'Antrieb': 'elektrisch', 'Einsatz': 'Regional- und Interregioverkehr' },
+  { id: 'rabe-512', kat: 'personenverkehr', name: 'RABe 512', beiname: 'IR-Dosto', typ: 'Sechsteiliger Interregio-Doppelstocktriebzug (Stadler KISS)', vorlaeufig: false,
+    nummern: [[512001, 512060]],
+    text: ['Der RABe 512 ist ein sechsteiliger Doppelstocktriebzug aus der Stadler-KISS-Familie.', 'Er verbindet die bewährte Plattform des RABe 511 mit einer auf den InterRegio-Verkehr zugeschnittenen Innenausstattung.'],
+    kennzahlen: [['60', 'bestellte Züge'], ['466', 'Sitzplätze'], ['160 km/h', 'Höchstgeschwindigkeit'], ['2023', 'erster Einsatz']],
+    daten: { 'Hersteller': 'Stadler', 'Plattform': 'Stadler KISS', 'Zugbildung': '6 Wagen', 'Spurweite': 'Normalspur, 1435 mm', 'Stromsystem': '15 kV 16,7 Hz AC', 'Länge': '151,88 m', 'Gewicht': '299 t leer, 382 t beladen', 'Leistung': '6000 kW', 'Anfahrzugkraft': '400 kN', 'Höchstgeschwindigkeit': '160 km/h', 'Sitzplätze': '466', 'Niederflureinstieg': 'ja', 'Nummern': '512 001–060', 'Anzahl': '60 bestellt', 'In Betrieb seit': 'Juli 2023', 'Einsatz': 'InterRegio, RegioExpress' },
+    specOrder: ['Hersteller', 'Plattform', 'Zugbildung', 'Spurweite', 'Stromsystem', 'Länge', 'Gewicht', 'Leistung', 'Anfahrzugkraft', 'Höchstgeschwindigkeit', 'Sitzplätze', 'Niederflureinstieg', 'Nummern', 'Anzahl', 'In Betrieb seit', 'Einsatz'],
+    abschnitte: [
+      { titel: 'Beschaffung', p: ['Die SBB bestellte 2021 insgesamt 60 neue IR-Dosto. Der erste kommerzielle Einsatz begann im Juli 2023; die vollständige Auslieferung soll bis Ende 2026 abgeschlossen sein.'] },
+      { titel: 'Einsatz und Komfort', p: ['Die Züge sind für InterRegio- und RegioExpress-Leistungen in der Region Zürich, im Mittelland und in der Westschweiz vorgesehen.', 'Niederflureinstiege, Rollstuhlplätze, Mehrzweckbereiche, Steckdosen und moderne Fahrgastinformation verbessern Zugänglichkeit und Reisekomfort. Doppeltraktion mit aufgewerteten RABe 511 ist möglich.'] }
+    ],
+    quellen: ['SBB – Neuer IR-Dosto: 60 Züge, Einsatz seit Juli 2023', 'SBB Infrastruktur – Fahrtypenkatalog 2026, Fahrtyp 6072, S. 389', 'Wikipedia – SBB RABe 512: Technik, Nummerierung und Beschaffung'],
     art: { typ: 'triebzug', nase: 'kurz', dd: true, farbe: W1, akzent: RED, tuer: RED, panto: true }, bilder: [
       { src: 'bilder/rabe-512-c1.jpg', titel: 'IR-Dosto RABe 512 in Zürich HB', foto: 'Borknorg', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:IR-DostoRABe512.jpg' },
       { src: 'bilder/rabe-512-c2.jpg', titel: 'RABe 512 IR-Dosto unterwegs', foto: 'Samson Ng . D201@EAL', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:RABe_512_IR-Dosto_EMU_(54948662392).jpg' },
@@ -260,9 +280,18 @@ const ZUEGE = [
       { src: 'bilder/rabe-512-c4.jpg', titel: 'Oberstock 2. Klasse im RABe 512', foto: 'E235JREMU', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:LR25_RABe_512_Oberstock_2.Klasse.jpg' },
       { src: 'bilder/rabe-512-c5.jpg', titel: 'Front des RABe 512', foto: 'Kecko from Eastern Switzerland', lizenz: 'CC BY 2.0', lizenzUrl: 'https://creativecommons.org/licenses/by/2.0', quelle: 'https://commons.wikimedia.org/wiki/File:SBB_IR-Dosto_-_RABe_512_(52079557611).jpg' }
     ] },
-  { id: 'rabe-520', kat: 'personenverkehr', name: 'RABe 520', beiname: 'GTW', typ: 'Gelenktriebwagen',
-    text: ['Niederfluriger Gelenktriebwagen (GTW) von Stadler für den Regionalverkehr.'],
-    daten: { 'Hersteller': 'Stadler', 'Antrieb': 'elektrisch', 'Einsatz': 'Regionalverkehr, u. a. im Seetal' },
+  { id: 'rabe-520', kat: 'personenverkehr', name: 'RABe 520', beiname: 'GTW', typ: 'Schmaler Stadler GTW für die Seetalbahn', vorlaeufig: false,
+    nummern: [[520000, 520016]],
+    text: ['Der RABe 520 ist ein speziell für das schmale Lichtraumprofil der Seetalbahn entwickelter elektrischer Gelenktriebwagen.', 'Sein mittiges Antriebsmodul und der nur rund 2,65 Meter breite Wagenkasten unterscheiden ihn deutlich von den übrigen SBB-Regionalzügen.'],
+    kennzahlen: [['17', 'ursprünglich beschaffte Züge'], ['115 km/h', 'Höchstgeschwindigkeit'], ['2002/03', 'Baujahre'], ['53,5 m', 'Länge']],
+    daten: { 'Hersteller': 'Stadler', 'Fahrzeugtyp': 'GTW 2/8', 'Spurweite': 'Normalspur, 1435 mm', 'Stromsystem': '15 kV 16,7 Hz AC', 'Länge': '53,5 m', 'Breite': 'ca. 2,65 m (Seetalprofil)', 'Gewicht': '78 t leer (FOS), 105 t beladen', 'Leistung': '760 kW', 'Anfahrzugkraft': '77 kN', 'Höchstgeschwindigkeit': '115 km/h', 'Niederflureinstieg': 'ja', 'Nummern': '520 000–016', 'Anzahl': '17 beschafft', 'In Betrieb seit': '2002', 'Einsatz': 'Seetalbahn Luzern–Lenzburg' },
+    specOrder: ['Hersteller', 'Fahrzeugtyp', 'Spurweite', 'Stromsystem', 'Länge', 'Breite', 'Gewicht', 'Leistung', 'Anfahrzugkraft', 'Höchstgeschwindigkeit', 'Niederflureinstieg', 'Nummern', 'Anzahl', 'In Betrieb seit', 'Einsatz'],
+    specNote: 'Zwei Einheiten gingen später an Thurbo; die Zahl 17 bezeichnet die ursprüngliche Beschaffung und nicht zwingend den heutigen SBB-Bestand.',
+    abschnitte: [
+      { titel: 'Beschaffung und Besonderheiten', p: ['Die SBB beschaffte 17 Fahrzeuge mit den Nummern 520 000–016. Die schmale Bauweise vergrössert den Sicherheitsabstand zur parallel verlaufenden Strasse.', 'Ein Teil der Türen war ursprünglich für die niedrigen Seetalperrons ausgelegt; bei der Modernisierung 2018–2021 kam ein Einstieg für 55-cm-Standardperrons dazu.'] },
+      { titel: 'Einsatz', p: ['Haupteinsatzgebiet ist die Seetalbahn Luzern–Lenzburg. Die Fahrzeuge fuhren zeitweise auch auf weiteren Linien ab Luzern und Lenzburg.'] }
+    ],
+    quellen: ['Wikipedia – SBB RABe 520: Bestand, Technik, Einsatz und Modernisierung', 'SBB Infrastruktur – Fahrtypenkatalog 2026, Fahrtyp 6027, S. 344'],
     art: { typ: 'triebzug', nase: 'mittel', farbe: W1, akzent: RED, tuer: RED, panto: true }, bilder: [
       { src: 'bilder/rabe-520-c1.jpg', titel: 'RABe 520 «GTW» in Beinwil am See', foto: 'Smiley.toerist', lizenz: 'CC BY-SA 3.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/3.0', quelle: 'https://commons.wikimedia.org/wiki/File:Beinwil_am_See_station.jpg' },
       { src: 'bilder/rabe-520-c2.jpg', titel: 'RABe 520 im Seetal bei Seengen', foto: 'Ray Swi-hymn from Sijhih-Taipei, Taiwan', lizenz: 'CC BY-SA 2.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/2.0', quelle: 'https://commons.wikimedia.org/wiki/File:20170710_SeengenHwy_5743_(36762966812).jpg' },
@@ -270,9 +299,18 @@ const ZUEGE = [
       { src: 'bilder/rabe-520-c4.jpg', titel: 'RABe 520 am Bahnübergang in Beinwil am See', foto: 'Smiley.toerist', lizenz: 'CC BY-SA 3.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/3.0', quelle: 'https://commons.wikimedia.org/wiki/File:Beinwil_am_See_crossing.jpg' },
       { src: 'bilder/rabe-520-c5.jpg', titel: 'RABe 520 als S28 bei Hunzenschwil', foto: 'TracksOnWax', lizenz: 'CC BY-SA 3.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/3.0', quelle: 'https://commons.wikimedia.org/wiki/File:SBB_S28_Hunzenschwil_Suhr.JPG' }
     ] },
-  { id: 'rabe-521', kat: 'personenverkehr', name: 'RABe 521', beiname: 'FLIRT', typ: 'Niederflur-Triebzug',
-    text: ['FLIRT-Triebzug von Stadler, eingesetzt bei der S-Bahn Basel.'],
-    daten: { 'Hersteller': 'Stadler', 'Antrieb': 'elektrisch', 'Einsatz': 'S-Bahn Basel' },
+  { id: 'rabe-521', kat: 'personenverkehr', name: 'RABe 521', beiname: 'FLIRT', typ: 'Zweisystem-FLIRT für Deutschland und die Schweiz', vorlaeufig: false,
+    nummern: [[521001, 521030], [521201, 521209]],
+    text: ['Der RABe 521 ist ein vierteiliger FLIRT für grenzüberschreitende Regionalverbindungen zwischen der Nordwestschweiz und Deutschland.', 'Er bildet einen wichtigen Teil der Regio-S-Bahn Basel und fährt auch im Seehas-Verkehr.'],
+    kennzahlen: [['39', 'Züge'], ['160 km/h', 'Höchstgeschwindigkeit'], ['2004', 'erster Einsatz'], ['74,08 m', 'Länge']],
+    daten: { 'Hersteller': 'Stadler', 'Zugbildung': '4 Wagen', 'Spurweite': 'Normalspur, 1435 mm', 'Stromsystem': '15 kV 16,7 Hz AC', 'Länge': '74,08 m', 'Gewicht': '120 t leer, 152 t beladen', 'Leistung': '2656 kW (FOS-Fahrtypwert)', 'Anfahrzugkraft': '200 kN', 'Höchstgeschwindigkeit': '160 km/h', 'Niederflureinstieg': 'ja', 'Nummern': '521 001–030 und 201–209', 'Anzahl': '39', 'In Betrieb seit': '2004', 'Einsatz': 'S-Bahn Basel, Seehas, Schweiz–Deutschland' },
+    specOrder: ['Hersteller', 'Zugbildung', 'Spurweite', 'Stromsystem', 'Länge', 'Gewicht', 'Leistung', 'Anfahrzugkraft', 'Höchstgeschwindigkeit', 'Niederflureinstieg', 'Nummern', 'Anzahl', 'In Betrieb seit', 'Einsatz'],
+    specNote: 'Der SBB-Fahrtypenkatalog fasst unter diesem Fahrtyp auch technisch ähnliche vierteilige FLIRT-Varianten zusammen; die Leistung ist deshalb als Fahrtypwert angegeben.',
+    abschnitte: [
+      { titel: 'Beschaffung und Flotte', p: ['Die Baureihe umfasst 30 Fahrzeuge mit den Nummern 521 001–030 und neun weitere Einheiten 521 201–209, zusammen 39 Züge. Die ersten Fahrzeuge gingen 2004 in Betrieb.', 'Stadler entwickelte die FLIRT-Grundplattform ursprünglich für die SBB.'] },
+      { titel: 'Einsatz', p: ['Die RABe 521 verkehren hauptsächlich auf Linien der trinationalen S-Bahn Basel sowie auf grenzüberschreitenden Leistungen nach Deutschland.', 'Automatische Kupplungen erlauben Mehrfachtraktion mit kompatiblen FLIRT; Niederflureinstiege und Mehrzweckbereiche helfen beim schnellen Fahrgastwechsel.'] }
+    ],
+    quellen: ['SBB – FLIRT: Fahrzeugfamilie, Grunddaten und Einsatzregionen', 'SBB Infrastruktur – Fahrtypenkatalog 2026, Fahrtyp 6028, S. 345', 'Wikipedia – RABe 521: Bestand, Nummern und Einsatz'],
     art: { typ: 'triebzug', nase: 'mittel', farbe: W1, akzent: RED, tuer: RED, panto: true }, bilder: [
       { src: 'bilder/rabe-521-c1.jpg', titel: 'RABe 521 «FLIRT»', foto: 'Samson Ng . D201@EAL', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:RABe_521_Flirt_EMU_(54920974686).jpg' },
       { src: 'bilder/rabe-521-c2.jpg', titel: 'RABe 521 als S3 nach Olten in Porrentruy', foto: 'JoachimKohler-HB', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:Porrentruy_railway_station_with_S3_to_Olten.jpg' },
@@ -280,9 +318,17 @@ const ZUEGE = [
       { src: 'bilder/rabe-521-c4.jpg', titel: 'FLIRT auf der Aarebrücke bei Olten', foto: 'Julian Ryf', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:Aarebr%C3%BCcken_bei_Olten_200728.jpg' },
       { src: 'bilder/rabe-521-c5.jpg', titel: 'Innenraum des RABe 521 «Express-Hase»', foto: 'JoachimKohler-HB', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:%22Express-Hase%22_des_%22Seehas%22,_Innenansicht_SBB_RABe_521_(2025).jpg' }
     ] },
-  { id: 'rabe-522', kat: 'personenverkehr', name: 'RABe 522', beiname: 'FLIRT', typ: 'Mehrsystem-Niederflur-Triebzug',
-    text: ['FLIRT-Triebzug von Stadler mit Mehrsystemausrüstung für den grenzüberschreitenden Regionalverkehr nach Frankreich.'],
-    daten: { 'Hersteller': 'Stadler', 'Antrieb': 'elektrisch, Mehrsystem', 'Einsatz': 'Regionalverkehr Schweiz–Frankreich' },
+  { id: 'rabe-522', kat: 'personenverkehr', name: 'RABe 522', beiname: 'FLIRT', typ: 'Zweisystem-FLIRT für Frankreich', vorlaeufig: false,
+    nummern: [[522201, 522232]],
+    text: ['Der RABe 522 ist ein vierteiliger Zweisystem-FLIRT für Verbindungen zwischen der Schweiz und Frankreich.', 'Die Fahrzeuge sind auf das französische 25-kV-Netz abgestimmt und fahren vor allem im Raum Genève und im Raum Basel.'],
+    kennzahlen: [['32', 'Züge der Serie 201–232'], ['160 km/h', 'Höchstgeschwindigkeit'], ['2011', 'Einsatz der heutigen Serie ab'], ['75,0 m', 'Länge']],
+    daten: { 'Hersteller': 'Stadler', 'Zugbildung': '4 Wagen', 'Spurweite': 'Normalspur, 1435 mm', 'Stromsystem': '15 kV 16,7 Hz und 25 kV 50 Hz AC', 'Länge': '75,0 m', 'Gewicht': '135 t leer, 167 t beladen', 'Leistung': '2600 kW', 'Anfahrzugkraft': '200 kN', 'Höchstgeschwindigkeit': '160 km/h', 'Niederflureinstieg': 'ja', 'Nummern': '522 201–232', 'Anzahl': '32', 'In Betrieb seit': '2011', 'Einsatz': 'Léman Express, Regionalverkehr Basel' },
+    specOrder: ['Hersteller', 'Zugbildung', 'Spurweite', 'Stromsystem', 'Länge', 'Gewicht', 'Leistung', 'Anfahrzugkraft', 'Höchstgeschwindigkeit', 'Niederflureinstieg', 'Nummern', 'Anzahl', 'In Betrieb seit', 'Einsatz'],
+    abschnitte: [
+      { titel: 'Seriengeschichte', p: ['Eine erste Serie mit zwölf Fahrzeugen trug die Nummern 522 001–012. Weil diese Züge zunächst keine französische Zulassung erhielten, wurden sie später zu RABe 523 umgebaut.', 'Die heutige Baureihe umfasst 32 neuere Fahrzeuge mit den Nummern 522 201–232.'] },
+      { titel: 'Einsatz und Ausstattung', p: ['Die RABe 522 verkehren unter anderem im Léman-Express-Netz und auf grenznahen Regionalverbindungen im Raum Basel.', 'Wie andere FLIRT haben sie einen verteilten elektrischen Antrieb, breite Niederflureinstiege, Mehrzweckbereiche und automatische Kupplungen für Mehrfachtraktion.'] }
+    ],
+    quellen: ['SBB – FLIRT: Fahrzeugfamilie, Grunddaten und Einsatzregionen', 'SBB Infrastruktur – Fahrtypenkatalog 2026, Fahrtyp 6029, S. 346', 'Wikipedia – RABe 522: Serien, Bestand und Einsatz'],
     art: { typ: 'triebzug', nase: 'mittel', farbe: W1, akzent: RED, tuer: RED, panto: true }, bilder: [
       { src: 'bilder/rabe-522-c1.jpg', titel: 'RABe 522 209 in Delle', foto: 'Phil Richards from London, UK', lizenz: 'CC BY-SA 2.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/2.0', quelle: 'https://commons.wikimedia.org/wiki/File:02.02.19_Delle_SBB_522209_and_SNCF_Z27731_32_(40065407663).jpg' },
       { src: 'bilder/rabe-522-c2.jpg', titel: 'RABe 522 in Noiraigue', foto: 'Hansueli Krapf', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:2024-07-29_12-20-53_RABe_522_Noiraigue_756.0.jpg' },
@@ -290,18 +336,38 @@ const ZUEGE = [
       { src: 'bilder/rabe-522-c4.jpg', titel: 'RABe 522 231 in Genève', foto: 'Phil Richards from London, UK', lizenz: 'CC BY-SA 2.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/2.0', quelle: 'https://commons.wikimedia.org/wiki/File:06.06.23_Gen%C3%A8ve_522231_(52969184413).jpg' },
       { src: 'bilder/rabe-522-c5.jpg', titel: 'RABe 522 213 in Genève-Cornavin', foto: 'SmoIchopper', lizenz: 'CC BY 2.0', lizenzUrl: 'https://creativecommons.org/licenses/by/2.0', quelle: 'https://commons.wikimedia.org/wiki/File:522213_-_Gen%C3%A8ve-Cornavin.jpg' }
     ] },
-  { id: 'rabe-524', kat: 'personenverkehr', name: 'RABe 524', beiname: 'FLIRT TILO', typ: 'Mehrsystem-Niederflur-Triebzug',
-    text: ['FLIRT-Triebzug von Stadler für TILO, den Regionalverkehr im Tessin und in der Lombardei.'],
-    daten: { 'Hersteller': 'Stadler', 'Antrieb': 'elektrisch, Mehrsystem', 'Einsatz': 'TILO, Tessin–Lombardei' },
+  { id: 'rabe-524', kat: 'personenverkehr', name: 'RABe 524', beiname: 'FLIRT TILO', typ: 'Mehrsystem-FLIRT für TILO', vorlaeufig: false,
+    text: ['Die RABe 524 sind vier- und sechsteilige FLIRT-Triebzüge für den grenzüberschreitenden Regionalverkehr zwischen dem Tessin und der Lombardei.', 'Sie können unter dem Schweizer Wechselstrom- und dem italienischen Gleichstromsystem verkehren.'],
+    kennzahlen: [['53', 'Züge bei TILO'], ['160 km/h', 'Höchstgeschwindigkeit'], ['2007', 'erster Einsatz'], ['4 / 6', 'Wagen je Zug']],
+    daten: { 'Hersteller': 'Stadler', 'Betreiber': 'TILO / SBB', 'Zugbildung': '4 oder 6 Wagen', 'Spurweite': 'Normalspur, 1435 mm', 'Stromsystem': '15 kV 16,7 Hz AC und 3 kV DC', 'Länge': '74,1 m (4-teilig), 106,3 m (6-teilig), 104,9 m (FLIRT TSI)', 'Gewicht': '133 t (4-teilig), 174 t (6-teilig), 179 t (FLIRT TSI)', 'Leistung': '2600 kW', 'Anfahrzugkraft': '200 kN', 'Höchstgeschwindigkeit': '160 km/h', 'Anzahl': '53 (23 vierteilig, 17 sechsteilig, 13 FLIRT TSI)', 'In Betrieb seit': '2007 (gebaut 2006–2021)', 'Einsatz': 'TILO, Tessin–Lombardei' },
+    specOrder: ['Hersteller', 'Betreiber', 'Zugbildung', 'Spurweite', 'Stromsystem', 'Länge', 'Gewicht', 'Leistung', 'Anfahrzugkraft', 'Höchstgeschwindigkeit', 'Anzahl', 'In Betrieb seit', 'Einsatz'],
+    specNote: 'Länge und Leergewicht je Variante nach dem SBB-Fahrtypenkatalog. FLIRT TSI bezeichnet die neuere, TSI-konforme sechsteilige Ausführung (RABe 524.3).',
+    abschnitte: [
+      { titel: 'Varianten', tabelle: { kopf: ['Variante', 'Anzahl', 'Länge', 'Leergewicht'], zeilen: [
+        ['RABe 524, vierteilig', '23', '74,1 m', '133 t'],
+        ['RABe 524, sechsteilig', '17', '106,3 m', '174 t'],
+        ['RABe 524.3, FLIRT TSI', '13', '104,9 m', '179 t']] } },
+      { titel: 'Beschaffung und Einsatz', p: ['Die heute eingesetzten Fahrzeuge wurden zwischen 2006 und 2021 gebaut; die ersten Züge gingen 2007 in Betrieb. Die Mehrsystemtechnik erlaubt direkte Verbindungen über die Landesgrenze ohne Lok- oder Fahrzeugwechsel.', 'Die Baureihe prägt das TILO-Netz im Tessin und in der Lombardei. Je nach Linie werden vier- oder sechsteilige Fahrzeuge eingesetzt; die neueren FLIRT TSI wurden besonders für den Ausbau des grenzüberschreitenden Angebots beschafft.'] }
+    ],
+    quellen: ['TILO – Daten und Fakten: Flotte mit 53 RABe 524', 'SBB Infrastruktur – Fahrtypenkatalog 2026, Fahrtypen 6030, 6031 und 6064', 'Wikipedia – SBB RABe 524: Baujahre, Varianten und Inbetriebnahme'],
     art: { typ: 'triebzug', nase: 'mittel', farbe: W1, akzent: '#1F6FB2', tuer: RED, panto: true }, bilder: [
       { src: 'bilder/rabe-524-c1.jpg', titel: 'RABe 524 008 in Milano Centrale', foto: 'NAC', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:16_FFS_RABe_524_008_Milano_Cle_110917.jpg' },
       { src: 'bilder/rabe-524-c2.jpg', titel: 'RABe 524 303 im neuen TILO-Design in Milano Centrale', foto: 'The Nikon User', lizenz: 'CC BY 2.0', lizenzUrl: 'https://creativecommons.org/licenses/by/2.0', quelle: 'https://commons.wikimedia.org/wiki/File:524_303_Milano_Centrale.jpg' },
       { src: 'bilder/rabe-524-c3.jpg', titel: 'RABe 524 in Capolago-Riva San Vitale', foto: 'Andrzej Otrębski', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:Capolago-Riva_S_Vitale_ETR_524.jpg' },
-      { src: 'bilder/rabe-524-c5.jpg', titel: 'RABe 524 in Milano Cadorna', foto: 'Airon90', lizenz: 'CC BY 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:ETR_524_a_Milano_Cadorna.jpg' }
+      { src: 'bilder/rabe-524-c5.jpg', titel: 'RABe 524 in Milano Cadorna', foto: 'Airon90', lizenz: 'CC BY 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:ETR_524_a_Milano_Cadorna.jpg' },
+      { src: 'bilder/rabe-524-c6.jpg', titel: 'RABe 524 012 als S20 in Locarno', foto: 'NAC', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:FFS_RABe_524_012_Locarno_250515_S20_25640.jpg' },
+      { src: 'bilder/rabe-524-c7.jpg', titel: 'RABe 524 014 mit Werbung für «Rete Tre» in Maccagno', foto: 'NAC', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:FFS_RABe_524_014_Maccagno_020312_copia.jpg' }
     ] },
-  { id: 'ic2000', kat: 'personenverkehr', name: 'IC2000', beiname: 'Doppelstockwagen', typ: 'Doppelstock-Reisezugwagen',
-    text: ['Doppelstöckige Reisezugwagen für den Fernverkehr. Sie fahren meist mit einer Re 460 und einem Steuerwagen als Pendelzug.'],
-    daten: { 'Fahrzeugart': 'Reisezugwagen ohne eigenen Antrieb', 'In Betrieb seit': '1997', 'Einsatz': 'InterCity, InterRegio' },
+  { id: 'ic2000', kat: 'personenverkehr', name: 'IC2000', beiname: 'Doppelstockwagen', typ: 'Doppelstock-Pendelzug des Fernverkehrs', vorlaeufig: false,
+    text: ['Der IC2000 ist eine Familie doppelstöckiger Reisezug- und Steuerwagen.', 'Die Wagen bilden mit der Re 460 leistungsfähige Pendelzüge für den InterCity- und InterRegio-Verkehr; nach der umfassenden Erneuerung heissen sie auch IC2020.'],
+    kennzahlen: [['341', 'Wagen'], ['200 km/h', 'Höchstgeschwindigkeit'], ['1997', 'erster Einsatz'], ['26,8 m', 'Länge je Wagen']],
+    daten: { 'Fahrzeugart': 'Doppelstock-Reisezugwagen', 'Hersteller': 'Schindler-Konsortium (Schindler Waggon, FIAT-SIG, ABB/Adtranz)', 'Spurweite': 'Normalspur, 1435 mm', 'Länge': '26,8 m je Wagen', 'Gewicht': '47 t leer (FOS-Typ), 60 t beladen', 'Höchstgeschwindigkeit': '200 km/h', 'Sitzplätze': 'bis 86 je Wagen (1. Klasse), bis 126 je Wagen (2. Klasse)', 'Niederflureinstieg': 'ja', 'Wagenübergang': 'im Oberdeck', 'Antrieb': 'keiner, mit Re 460', 'Anzahl': '341 Wagen', 'In Betrieb seit': '1997', 'Einsatz': 'InterCity, InterRegio' },
+    specOrder: ['Fahrzeugart', 'Hersteller', 'Spurweite', 'Länge', 'Gewicht', 'Höchstgeschwindigkeit', 'Sitzplätze', 'Niederflureinstieg', 'Wagenübergang', 'Antrieb', 'Anzahl', 'In Betrieb seit', 'Einsatz'],
+    abschnitte: [
+      { titel: 'Beschaffung und Konstruktion', p: ['Die 341 Wagen wurden ab 1997 in mehreren Serien geliefert. Die Wagenkästen entstanden bei Schindler Waggon, die Drehgestelle bei FIAT-SIG und die elektrische Ausrüstung bei ABB/Adtranz.', 'Zur Familie gehören Wagen der 1. und 2. Klasse, Service-, Speise- und Steuerwagen.'] },
+      { titel: 'Modernisierung und Einsatz', p: ['Die SBB modernisierte die komplette Flotte im Programm IC2020. Erneuert wurden unter anderem Innenraum, Beleuchtung, Fahrgastinformation, Steckdosen und Mobilfunkdurchlässigkeit.', 'Die Kompositionen verkehren auf wichtigen Ost-West- und Nord-Süd-Achsen und lassen sich je nach Nachfrage unterschiedlich lang bilden.'] }
+    ],
+    quellen: ['SBB – IC2000: Flottengrösse, Ausstattung und Kenndaten', 'SBB Infrastruktur – Fahrtypenkatalog 2026, Fahrtypen 3004/3005, S. 131–132', 'Wikipedia – IC2000: Bau, Varianten und Liefergeschichte'],
     art: { typ: 'wagen', dd: true, farbe: W1, akzent: RED }, bilder: [
       { src: 'bilder/ic2000-c1.jpg', titel: 'IC2000-Pendelzug in der Landschaft', foto: 'Markus Giger', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:20080330Y222a.jpg' },
       { src: 'bilder/ic2000-c3.jpg', titel: 'Re 460 mit IC2000-Doppelstockwagen', foto: 'User:Filzstift', lizenz: 'CC BY-SA 3.0', lizenzUrl: 'http://creativecommons.org/licenses/by-sa/3.0/', quelle: 'https://commons.wikimedia.org/wiki/File:Re460.jpg' },
@@ -309,14 +375,23 @@ const ZUEGE = [
       { src: 'bilder/ic2000-c5.jpg', titel: 'Übergang zwischen einstöckigem Wagen und IC2000-Doppelstockwagen', foto: 'Falk2', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:L03_328_Kupplung_einst%C3%B6ckiger_und_Doppelstockwagen.jpg' },
       { src: 'bilder/ic2000-c6.jpg', titel: 'IC2000-Steuerwagen in Romanshorn', foto: 'Falk2', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:I09_310_Bf_Romanshorn,_Bt_IC_2000.jpg' }
     ] },
-  { id: 'ew-iv', kat: 'personenverkehr', name: 'EW IV', beiname: 'Einheitswagen IV', typ: 'Reisezugwagen',
-    text: ['Einstöckige Reisezugwagen für InterCity und InterRegio, oft mit einer Re 460 als Pendelzug unterwegs.'],
-    daten: { 'Fahrzeugart': 'Reisezugwagen ohne eigenen Antrieb', 'Einsatz': 'InterCity, InterRegio' },
+  { id: 'ew-iv', kat: 'personenverkehr', name: 'EW IV', beiname: 'Einheitswagen IV', typ: 'Klimatisierter Fernverkehrswagen', vorlaeufig: false,
+    text: ['Der Einheitswagen IV, kurz EW IV, ist die letzte Schweizer Einheitswagen-Bauart.', 'Die lokbespannten Wagen wurden für den InterCity-Verkehr entwickelt und verkehren heute in Pendelzügen sowie zusammen mit passenden EuroCity-Wagen.'],
+    kennzahlen: [['496', 'ursprünglich für die SBB'], ['200 km/h', 'Höchstgeschwindigkeit'], ['1981', 'erster Einsatz'], ['26,4 m', 'Länge je Wagen']],
+    daten: { 'Fahrzeugart': 'Reisezugwagen', 'Hersteller': 'SIG, SWS, SWP, SWA', 'Betreiber': 'SBB Personenverkehr', 'Spurweite': 'Normalspur, 1435 mm', 'Länge': '26,4 m je Wagen', 'Gewicht': '45 t leer (FOS-Typ), 50 t beladen', 'Steuerwagen': 'IC Bt EW IV, 48 t leer', 'Höchstgeschwindigkeit': '200 km/h', 'Niederflureinstieg': 'nein', 'Antrieb': 'keiner, mit separater Lokomotive', 'Anzahl': '540 gebaut, davon 496 für die SBB', 'In Betrieb seit': '1981', 'Einsatz': 'EuroCity, InterCity, InterRegio' },
+    specOrder: ['Fahrzeugart', 'Hersteller', 'Betreiber', 'Spurweite', 'Länge', 'Gewicht', 'Steuerwagen', 'Höchstgeschwindigkeit', 'Niederflureinstieg', 'Antrieb', 'Anzahl', 'In Betrieb seit', 'Einsatz'],
+    specNote: 'Die Zahl 496 ist ein historischer Wert und keine heutige Bestandszahl: Verkäufe, Umbauten und Ausrangierungen haben die Flotte verkleinert.',
+    abschnitte: [
+      { titel: 'Beschaffung und Modernisierung', p: ['1981 wurden zunächst 40 klimatisierte Wagen der 1. Klasse geliefert; ab 1983 folgten Wagen der 2. Klasse und Speisewagen. Insgesamt entstanden 540 EW IV, davon 496 für die SBB.', 'Zwischen 2019 und 2025 setzte die SBB mehr als 250 EW-IV- und EuroCity-Wagen instand; die Modernisierung der Steuerwagen läuft laut SBB bis Ende 2027.'] },
+      { titel: 'Einsatz', p: ['Die Wagen verkehren als EC-, IC- und IR-Kompositionen, meist mit einer Re 460. Typische Einsatzachsen führen unter anderem von Genève nach Brig, von Basel nach Lugano sowie von Zürich über Olten nach Bern.'] }
+    ],
+    quellen: ['SBB – Einheitswagen IV / Eurocity: Eigenschaften, Einsatz und Modernisierung', 'SBB Infrastruktur – Fahrtypenkatalog 2026, Fahrtypen 3013 und 3016, S. 140 und 142', 'Wikipedia – Einheitswagen IV: Beschaffungs- und Entwicklungsgeschichte'],
     art: { typ: 'wagen', farbe: W1, akzent: RED }, bilder: [
       { src: 'bilder/ew-iv-c1.jpg', titel: 'EW-IV-Steuerwagen in Bellinzona', foto: 'NAC', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:10_IC_Bt_Bellinzona_S_Paolo_170417.jpg' },
       { src: 'bilder/ew-iv-c2.jpg', titel: 'InterRegio mit EW IV in Zürich HB', foto: 'NAC', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:3_IR_2441_Zue-Chi_Zuerich_HB_101216.jpg' },
       { src: 'bilder/ew-iv-c3.jpg', titel: 'Gotthard-Weekender mit EW IV in Brugg', foto: 'NAC', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:3_IR_Gotthard-Weekender_Brugg_220418.jpg' },
-      { src: 'bilder/ew-iv-c5.jpg', titel: 'Innenraum 1. Klasse im EW IV', foto: 'Abaddon1337', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:A_50_85_10-75_198-7_IR_1741_Gen%C3%A8ve-A%C3%A9roport_-_Brig_corridor.jpg' }
+      { src: 'bilder/ew-iv-c5.jpg', titel: 'Innenraum 1. Klasse im EW IV', foto: 'Abaddon1337', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:A_50_85_10-75_198-7_IR_1741_Gen%C3%A8ve-A%C3%A9roport_-_Brig_corridor.jpg' },
+      { src: 'bilder/ew-iv-c6.jpg', titel: 'EW-IV-Wagen 2. Klasse in Montreux', foto: 'Markus Giger', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:20050506S053_B4-418.jpg' }
     ] },
 
   // ---------- SBB Cargo ----------
@@ -432,9 +507,18 @@ const ZUEGE = [
     quellen: ['SBB Cargo – Einführung der 35 BR 193 und Schweizer Höchstgeschwindigkeit', 'Siemens Mobility – Bestellung, Vermietung und Auslieferung 2024', 'Siemens Mobility – Vectron-Mehrsystemlokomotiven für SBB Cargo International'],
     art: { typ: 'lok', form: 'kantig', farbe: CRED, akzent: '#F3F4F2', panto: true }, bilder: [] },
 
-  { id: 're-421', kat: 'cargo', name: 'Re 421', beiname: 'Re 4/4 II für Deutschland', typ: 'Vierachsige Universallokomotive',
-    text: ['Die Re 421 entstand durch den Umbau von Re 4/4 II (Re 420) für den Einsatz in Deutschland.'],
-    daten: { 'Basis': 'Re 420 (Re 4/4 II)', 'Achsfolge': 'Bo′Bo′', 'Antrieb': 'elektrisch', 'Einsatz': 'Güterverkehr Schweiz–Deutschland' },
+  { id: 're-421', kat: 'cargo', name: 'Re 421', beiname: 'Re 4/4 II für Deutschland', typ: 'Elektrische Universallokomotive für den grenzüberschreitenden Verkehr', vorlaeufig: false,
+    nummern: [[421371, 421397]],
+    text: ['Die Re 421 ist die für Einsätze in Deutschland umgebaute Variante der SBB Re 4/4 II.', 'Zwischen 2002 und 2004 entstanden 26 Lokomotiven aus der letzten Bauserie; sie erhielten die neue Bezeichnung Re 421 und den rot-blauen Cargo-Anstrich.'],
+    kennzahlen: [['26', 'Lokomotiven umgebaut'], ['4700 kW', 'Maximalleistung'], ['140 km/h', 'Höchstgeschwindigkeit'], ['255 kN', 'Anfahrzugkraft']],
+    daten: { 'Hersteller': 'SLM, BBC, MFO, SAAS', 'Bauart': 'elektrische Universallokomotive', 'Achsfolge': 'Bo′Bo′', 'Spurweite': 'Normalspur, 1435 mm', 'Stromsystem': '15 kV 16,7 Hz AC', 'Länge': '15,4 m', 'Gewicht': '84 t (Wert im Fahrtypenkatalog)', 'Leistung': '4700 kW', 'Anfahrzugkraft': '255 kN', 'Höchstgeschwindigkeit': '140 km/h', 'Nummern': '421 371–397 (ohne 382)', 'Anzahl': '26', 'In Betrieb seit': '2002 (Umbau 2002–2004)', 'Einsatz': 'Güterverkehr Schweiz–Deutschland' },
+    specOrder: ['Hersteller', 'Bauart', 'Achsfolge', 'Spurweite', 'Stromsystem', 'Länge', 'Gewicht', 'Leistung', 'Anfahrzugkraft', 'Höchstgeschwindigkeit', 'Nummern', 'Anzahl', 'In Betrieb seit', 'Einsatz'],
+    specNote: 'Der SBB-Fahrtypenkatalog 2026 führt die Re 421 als Alias des aktiven Fahrtyps 1051 Re 420. Die 84 t sind ein Fahrdynamikwert für diesen zusammengefassten Fahrtyp.',
+    abschnitte: [
+      { titel: 'Umbau für Deutschland', p: ['Als Basis dienten die Re 4/4 II 11371 bis 11397; die nach einem Brand ausgeschiedene 11382 war nicht Teil des Programms.', 'Für die deutsche Zulassung erhielten die Lokomotiven die nötigen Anpassungen und Ausrüstungen sowie die neue Nummernreihe 421 371 bis 421 397.'] },
+      { titel: 'Einsatz und Katalogstatus', p: ['Die Re 421 verbindet die robuste Technik der Re 4/4 II mit grenzüberschreitender Einsatzfähigkeit und war vor allem für Güterzüge nach Deutschland vorgesehen.', 'Im SBB-Fahrtypenkatalog 2026 bleibt sie als Alias des aktiven Re-420-Fahrtyps hinterlegt.'] }
+    ],
+    quellen: ['SBB Infrastruktur – Fahrtypenkatalog 2026, Fahrtyp 1051 Re 420 mit Alias Re 421, S. 67', 'Archiv SBB Historic – Fahrzeugdossier Re 4/4 II 11108, Angaben zur Fahrzeugfamilie und zum Umbau Re 421, Stand Oktober 2025'],
     art: { typ: 'lok', form: 'kantig', kurz: true, farbe: CRED, akzent: '#F3F4F2', panto: true }, bilder: [
       { src: 'bilder/re-421-c1.jpg', titel: 'Re 421 374 in Thun', foto: 'NAC', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:1_FFS_Re_421_374-0_Thun_120818.jpg' },
       { src: 'bilder/re-421-c2.jpg', titel: 'Re 421 395 in Pirna', foto: 'Pedalito', lizenz: 'CC0', lizenzUrl: 'http://creativecommons.org/publicdomain/zero/1.0/deed.en', quelle: 'https://commons.wikimedia.org/wiki/File:421_395-5_Pirna.jpg' },
@@ -442,7 +526,6 @@ const ZUEGE = [
       { src: 'bilder/re-421-c4.jpg', titel: 'Re 421 383 in Lindau Hbf', foto: 'Phil Richards from London, UK', lizenz: 'CC BY-SA 2.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/2.0', quelle: 'https://commons.wikimedia.org/wiki/File:26.05.17_Lindau_Hbf_421.383_(34952955682).jpg' },
       { src: 'bilder/re-421-c5.jpg', titel: 'Re 421 in Dresden', foto: 'Bybbisch94', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:20150419.Dresden,_7.Loktreffen.-012.jpg' }
     ] },
-  // ---------- SBB Infrastruktur ----------
   { id: 'aem-940', kat: 'infrastruktur', name: 'Aem 940', beiname: 'Prima H4', typ: 'Zweikraftlokomotive', vorlaeufig: false,
     text: ['Die Aem 940 ist eine vierachsige Zweikraftlokomotive von Alstom für SBB Infrastruktur. Sie fährt elektrisch unter der Fahrleitung und auf nicht elektrifizierten Gleisen mit zwei Dieselgeneratoren.', 'So eignet sie sich für Bauzüge und schwere Rangierarbeiten.'],
     kennzahlen: [['47', 'Lokomotiven bestellt'], ['120 km/h', 'Höchstgeschwindigkeit'], ['2000 kW', 'elektrische Leistung'], ['2018', 'Start der Erprobung']],
@@ -482,11 +565,11 @@ const ZUEGE = [
   { id: 'tm-234', kat: 'infrastruktur', name: 'Tm 234', beiname: 'Ameise', typ: 'Baudiensttraktor', vorlaeufig: false,
     text: ['Der Tm 234 «Ameise» ist ein zweiachsiger Dieseltraktor für den Bau und Unterhalt der Bahnanlagen. Je nach Ausführung besitzt er eine Ladebrücke mit Ladekran oder eine Arbeitsbühne.', 'Diese Seite behandelt die ältere «Ameise», nicht den späteren Windhoff Tm 234-4.'],
     kennzahlen: [['125', 'in drei Serien bestellt'], ['550 kW', 'Dieselmotorleistung'], ['80 km/h', 'Streckengeschwindigkeit'], ['124', 'SBB-Bestand im Jahr 2019']],
-    daten: { 'Hersteller': 'Stadler Winterthur und Partner', 'Bauart': 'zweiachsiger Dieseltraktor', 'Spurweite': 'Normalspur, 1435 mm', 'Länge': '11,22 m', 'Gewicht': '30 t Dienstmasse, höchstens 37 t', 'Antrieb': 'hydrostatisch, MTU-Dieselmotor', 'Leistung': '550 kW', 'Anfahrzugkraft': 'ca. 81 kN', 'Höchstgeschwindigkeit': '80 km/h', 'Zuladung': '7 t; Korbversion 0,5 t', 'Arbeitsmodus': 'bis 20 km/h, Kranfahrten bis 4 km/h', 'Anzahl': '125 bestellt (1997, 2000, 2005)', 'Einsatz': 'Gleis-, Fahrleitungs- und Signalunterhalt' },
-    specOrder: ['Hersteller', 'Bauart', 'Spurweite', 'Länge', 'Gewicht', 'Antrieb', 'Leistung', 'Anfahrzugkraft', 'Höchstgeschwindigkeit', 'Zuladung', 'Arbeitsmodus', 'Anzahl', 'Einsatz'],
+    daten: { 'Hersteller': 'Stadler Winterthur und Partner', 'Bauart': 'zweiachsiger Dieseltraktor', 'Spurweite': 'Normalspur, 1435 mm', 'Länge': '11,22 m', 'Gewicht': '30 t Dienstmasse, höchstens 37 t', 'Antrieb': 'hydrostatisch, MTU-Dieselmotor', 'Leistung': '550 kW', 'Anfahrzugkraft': 'ca. 81 kN', 'Höchstgeschwindigkeit': '80 km/h', 'Zuladung': '7 t; Korbversion 0,5 t', 'Arbeitsmodus': 'bis 20 km/h, Kranfahrten bis 4 km/h', 'Anzahl': '125 bestellt (1997, 2000, 2005)', 'In Betrieb seit': '1999 (erste Serie 1997 bestellt)', 'Einsatz': 'Gleis-, Fahrleitungs- und Signalunterhalt' },
+    specOrder: ['Hersteller', 'Bauart', 'Spurweite', 'Länge', 'Gewicht', 'Antrieb', 'Leistung', 'Anfahrzugkraft', 'Höchstgeschwindigkeit', 'Zuladung', 'Arbeitsmodus', 'Anzahl', 'In Betrieb seit', 'Einsatz'],
     specNote: 'Herstellerdatenblatt und eine Vorstudie von DLR und SBB beschreiben die verschiedenen Ausführungen.',
     abschnitte: [
-      { titel: 'Serien und Einsatz', p: ['Die SBB bestellte 1997 und 2000 je 50 Fahrzeuge sowie 2005 weitere 25. Stadler meldete die Auslieferung der letzten 25 im Jahr 2007.', 'Die Traktoren dienen im Gleis-, Fahrleitungs- und Signalunterhalt, transportieren Material und können Bauzüge bewegen oder rangieren.'] },
+      { titel: 'Serien und Einsatz', p: ['Die SBB bestellte 1997 und 2000 je 50 Fahrzeuge sowie 2005 weitere 25. Ablieferung und Inbetriebnahme der ersten Serie begannen 1999. Stadler meldete die Auslieferung der letzten 25 im Jahr 2007.', 'Die Traktoren dienen im Gleis-, Fahrleitungs- und Signalunterhalt, transportieren Material und können Bauzüge bewegen oder rangieren.'] },
       { titel: 'Bestand und Abgrenzung', p: ['SBB Infrastruktur nannte 2019 einen Bestand von 124 älteren Tm 234 «Ameise». Das ist ein historischer Stand und keine Angabe zur Flotte im Oktober 2026.', 'Der ebenfalls als Tm 234-4 bezeichnete neuere Baudiensttraktor stammt von Windhoff und gehört zu einer anderen Beschaffung.'] }
     ],
     quellen: ['Stadler – Datenblatt Tm 234 «Ameise», archivierte Herstellerbroschüre', 'DLR und SBB – Vorstudie SBB, Abschnitt 2.3.1, S. 12–13', 'SBB News – Neue Baudiensttraktoren und Bestand der «Ameise», 2019', 'Stadler – Medienmitteilung zum Geschäftsjahr 2007 mit Tm-234-Auslieferung'],
@@ -513,7 +596,8 @@ const ZUEGE = [
       { src: 'bilder/am-841-c1.jpg', titel: 'Am 841', foto: 'GoodRJ', lizenz: 'CC BY-SA 3.0', lizenzUrl: 'http://creativecommons.org/licenses/by-sa/3.0/', quelle: 'https://commons.wikimedia.org/wiki/File:CH_SBB_AM_841.JPG' },
       { src: 'bilder/am-841-c2.jpg', titel: 'Am 841 014', foto: 'Markus Eigenheer from Genève, Schweiz', lizenz: 'CC BY-SA 2.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/2.0', quelle: 'https://commons.wikimedia.org/wiki/File:SBB_CFF_FFS_Am_841_014-4_(46362495484).jpg' },
       { src: 'bilder/am-841-c3.jpg', titel: 'Drei Am 841 in Frauenfeld', foto: 'JoachimKohler-HB', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:3_SBB_Am_841_Rangierloks_in_Frauenfeld.jpg' },
-      { src: 'bilder/am-841-c4.jpg', titel: 'Am 841 017', foto: 'Lord Koxinga', lizenz: 'CC BY-SA 3.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/3.0', quelle: 'https://commons.wikimedia.org/wiki/File:2012_09_02_Am_841_017_7.JPG' }
+      { src: 'bilder/am-841-c4.jpg', titel: 'Am 841 017', foto: 'Lord Koxinga', lizenz: 'CC BY-SA 3.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/3.0', quelle: 'https://commons.wikimedia.org/wiki/File:2012_09_02_Am_841_017_7.JPG' },
+      { src: 'bilder/am-841-c5.jpg', titel: 'Am 841 002 in Küsnacht ZH', foto: 'Der Messer', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:SBB_Am_841_K%C3%BCsnacht_ZH.jpg' }
     ] },
   { id: 'am-842', kat: 'infrastruktur', name: 'Am 842', beiname: 'MaK G 1204 BB', typ: 'Dieselhydraulische Lok für schweren Rangier- und leichten Streckendienst', vorlaeufig: false,
     nummern: [[842000, 842001], [842011, 842013]],
@@ -560,18 +644,262 @@ const ZUEGE = [
       { src: 'bilder/tm-234-4-c5.jpg', titel: 'Tm 234 435 in Kreuzlingen', foto: 'JoachimKohler-HB', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:Bautraktor_SBB_Tm_234_435_(Kreuzlingen,_2023).jpg' }
     ] },
 
-  { id: 'schotterwagen', kat: 'infrastruktur', gruppe: 'Wagen und Bauzüge', name: 'Schotterwagen', beiname: '', typ: 'Selbstentladewagen für Schotter',
-    text: ['Güterwagen, die Schotter zur Baustelle bringen und ihn gezielt neben oder zwischen den Schienen abladen.'],
-    daten: { 'Fahrzeugart': 'Güterwagen ohne eigenen Antrieb', 'Einsatz': 'Gleisbau und Gleisunterhalt' },
+  // ---------- Infrastruktur: Schotter- und Kippwagen ----------
+  { id: 'fans-u', kat: 'infrastruktur', gruppe: 'Schotter- und Kippwagen', name: 'Fans-u', beiname: '', typ: 'Vierachsiger Schottertransportwagen mit seitlicher Entladung', vorlaeufig: false,
+    text: ['Der Fans-u ist ein vierachsiger Spezialwagen für Schotter, Aushub und weitere Gleisbaustoffe.', 'Seine beiden Mulden können seitlich entleert werden; die hydraulische Arbeitsausrüstung wird extern mit Energie versorgt.'],
+    kennzahlen: [['100 km/h', 'Höchstgeschwindigkeit'], ['12,74 m', 'Länge'], ['29,0 t', 'Leergewicht'], ['80 t', 'max. Gesamtgewicht']],
+    daten: { 'Fahrtyp': '5106', 'Fahrzeugart': 'Güterwagen, Basistyp Baumaschine', 'Achsen': '4, auf 2 Drehgestellen', 'Spurweite': 'Normalspur, 1435 mm', 'Länge': '12,74 m', 'Gewicht': '29,0 t leer, 80 t beladen', 'Nutzlast': 'rechnerisch bis ca. 51,0 t', 'Behältervolumen': 'ca. 40 m³', 'Entladung': 'seitlich, hydraulisch', 'Arbeitsenergie': 'externe Versorgung', 'Eigener Fahrantrieb': 'nein', 'Höchstgeschwindigkeit': '100 km/h', 'Status': 'aktiv (Fahrtypenkatalog 2026)', 'Einsatz': 'Schotter und Aushub' },
+    specOrder: ['Fahrtyp', 'Fahrzeugart', 'Achsen', 'Spurweite', 'Länge', 'Gewicht', 'Nutzlast', 'Behältervolumen', 'Entladung', 'Arbeitsenergie', 'Eigener Fahrantrieb', 'Höchstgeschwindigkeit', 'Status', 'Einsatz'],
+    specNote: 'Die Nutzlast ergibt sich aus dem aktuellen SBB-Gesamt- und Leergewicht; ältere Schulungsunterlagen nennen abweichende Werte.',
+    abschnitte: [
+      { titel: 'Aufgabe im Gleisbau', p: ['Der Wagen übernimmt den Abtransport von Aushub und Altmaterial sowie die Versorgung von Baustellen mit Schüttgut. Die seitliche Entleerung erlaubt einen gezielten Materialumschlag neben dem Gleis.'] },
+      { titel: 'Betrieb und Sicherheit', p: ['Beim Entladen muss der Wagen gegen Kippen gesichert und der Arbeitsbereich freigehalten werden. Hydraulik, Energieversorgung und Verriegelungen sind vor jeder Arbeitsfahrt nach den örtlichen Vorgaben zu prüfen.'] }
+    ],
+    quellen: ['SBB Infrastruktur – Ausbildungspräsentation «Wagon de chantier», 15.09.2022, Folie Fans-u', 'SBB Infrastruktur – Fahrtypenkatalog 2026, Fahrtyp 5106 Fans-u, S. 292', 'SBB Infrastruktur – Anhang A zu I-40036, Förder- und Transportwagen'],
     art: { typ: 'wagen', var: 'schotter', farbe: YEL }, bilder: [] },
-  { id: 'schienenwagen', kat: 'infrastruktur', gruppe: 'Wagen und Bauzüge', name: 'Schienentransportwagen', beiname: '', typ: 'Flachwagen für lange Schienen',
-    text: ['Flachwagen mit Gestellen, auf denen lange Schienen zur Baustelle gebracht werden.'],
-    daten: { 'Fahrzeugart': 'Güterwagen ohne eigenen Antrieb', 'Einsatz': 'Schienenwechsel, Gleisbau' },
-    art: { typ: 'wagen', var: 'flach', farbe: YEL }, bilder: [] },
-  { id: 'mannschaftswagen', kat: 'infrastruktur', gruppe: 'Wagen und Bauzüge', name: 'Mannschaftswagen', beiname: '', typ: 'Aufenthaltswagen für Bautrupps',
-    text: ['Wagen mit Aufenthaltsraum, Werkstatt oder Lager für die Mitarbeitenden auf grossen Baustellen. Auch die Kirow-Krane fahren mit einem Mannschaftswagen.'],
-    daten: { 'Fahrzeugart': 'Dienstwagen ohne eigenen Antrieb', 'Einsatz': 'Baustellen im ganzen Netz' },
+  { id: 'xans-37', kat: 'infrastruktur', gruppe: 'Schotter- und Kippwagen', name: 'Xans 37', beiname: 'Faccnpps', typ: 'Vierachsiger Schotterwagen mit Schwerkraftentladung', vorlaeufig: false,
+    text: ['Der Xans 37 ist ein vierachsiger Schotterwagen für Transport und dosiertes Einschottern.', 'Die Entladung erfolgt über bodennahe Schieber durch Schwerkraft.'],
+    kennzahlen: [['100 km/h', 'Höchstgeschwindigkeit'], ['14,0 m', 'Länge'], ['23,9 t', 'Leergewicht'], ['88 t', 'max. Gesamtgewicht']],
+    daten: { 'Fahrtyp': '5107', 'UIC-Bezeichnung': 'Faccnpps', 'Achsen': '4, auf 2 Drehgestellen', 'Spurweite': 'Normalspur, 1435 mm', 'Länge': '14,0 m', 'Gewicht': '23,9 t leer, 88 t beladen', 'Nutzlast': 'rechnerisch bis ca. 64,1 t', 'Volumen': 'ca. 45 m³', 'Entladung': 'Schwerkraft, dosiertes Ballastieren', 'Eigener Fahrantrieb': 'nein', 'Höchstgeschwindigkeit': '100 km/h', 'Status': 'aktiv (Fahrtypenkatalog 2026)', 'Einsatz': 'Schottertransport' },
+    specOrder: ['Fahrtyp', 'UIC-Bezeichnung', 'Achsen', 'Spurweite', 'Länge', 'Gewicht', 'Nutzlast', 'Volumen', 'Entladung', 'Eigener Fahrantrieb', 'Höchstgeschwindigkeit', 'Status', 'Einsatz'],
+    specNote: 'Der Fahrtypenkatalog nennt 87,5 t für die Fahrdynamik und rundet das zulässige Gesamtgewicht auf 88 t.',
+    abschnitte: [
+      { titel: 'Einsatz', p: ['Der Xans 37 transportiert Neuschotter und verteilt ihn im Baustellenbetrieb über seine Auslauföffnungen. Damit eignet er sich für Neubau, Erneuerung und Nachschotterung.'] },
+      { titel: 'Beladung und Verschub', p: ['Vor Zug- oder Rangierfahrten müssen sämtliche Klappen vollständig geschlossen und verriegelt sein. Die Schulungsunterlage verlangt Fahrten mit leerem oder vollständig beladenem Wagen und warnt vor Teilfüllungen.'] }
+    ],
+    quellen: ['SBB Infrastruktur – Ausbildungspräsentation «Wagon de chantier», 15.09.2022, Folie Xans 37', 'SBB Infrastruktur – Fahrtypenkatalog 2026, Fahrtyp 5107 Xans 37 (Faccnpps), S. 293', 'SBB Infrastruktur – Anhang A zu I-40036, Neuschotterwagen'],
+    art: { typ: 'wagen', var: 'schotter', farbe: YEL }, bilder: [] },
+  { id: 'xans-74', kat: 'infrastruktur', gruppe: 'Schotter- und Kippwagen', name: 'Xans 74', beiname: '', typ: 'Vierachsiger Schotterwagen für Ballast und PSS-Material', vorlaeufig: false,
+    text: ['Der Xans 74 ist ein vierachsiger Schüttgutwagen für Ballast und Material der Planumsschutzschicht (PSS).', 'Je nach Ausrüstung unterstützt ein Förderband die seitlich versetzte Ablage des Materials.'],
+    kennzahlen: [['100 km/h', 'Höchstgeschwindigkeit'], ['15,0 m', 'Länge'], ['26,0 t', 'Leergewicht'], ['80 t', 'max. Gesamtgewicht']],
+    daten: { 'Fahrtyp': '5109', 'Fahrzeugart': 'Güterwagen', 'Achsen': '4, auf 2 Drehgestellen', 'Spurweite': 'Normalspur, 1435 mm', 'Länge': '15,0 m', 'Gewicht': '26,0 t leer, 80 t beladen', 'Nutzlast': 'rechnerisch bis ca. 54,0 t', 'Volumen': 'ca. 40 m³', 'Entladung': 'Schwerkraft', 'Förderband': 'seitliche Ablage bis ca. 4,5 m ab Gleisachse', 'Abdeckung': 'zweiteilig möglich', 'Eigener Fahrantrieb': 'nein', 'Höchstgeschwindigkeit': '100 km/h', 'Status': 'aktiv (Fahrtypenkatalog 2026)', 'Einsatz': 'Ballast und PSS' },
+    specOrder: ['Fahrtyp', 'Fahrzeugart', 'Achsen', 'Spurweite', 'Länge', 'Gewicht', 'Nutzlast', 'Volumen', 'Entladung', 'Förderband', 'Abdeckung', 'Eigener Fahrantrieb', 'Höchstgeschwindigkeit', 'Status', 'Einsatz'],
+    specNote: 'Die Schulungsfolie nennt für ältere Ausführungen andere Massen; hier gelten die Werte des SBB-Fahrtypenkatalogs 2026.',
+    abschnitte: [
+      { titel: 'PSS und Ballast', p: ['Neben normalem Schotter kann der Wagen feuchteempfindliches PSS-Material transportieren. Abdeckungen helfen, den geforderten Feuchtegehalt während der Überführung zu erhalten.'] },
+      { titel: 'Förderbandbetrieb', p: ['Für den Bandbetrieb braucht es eine externe Energieversorgung oder eine Generatoreinheit. Vor dem Einschalten sind Schwenkbereich, Nachbargleis und Staubentwicklung zu kontrollieren.'] }
+    ],
+    quellen: ['SBB Infrastruktur – Ausbildungspräsentation «Wagon de chantier», 15.09.2022, Folie Xans 74', 'SBB Infrastruktur – Fahrtypenkatalog 2026, Fahrtyp 5109 Xans 74, S. 295', 'SBB Infrastruktur – Flottenmanagement Schienenfahrzeuge, Präsentation 04.06.2025, S. 20'],
+    art: { typ: 'wagen', var: 'schotter', farbe: YEL }, bilder: [
+      { src: 'bilder/xans-74-c1.jpg', titel: 'Xans 74 von SBB Infrastruktur, 2021', foto: 'Kecko from Eastern Switzerland', lizenz: 'CC BY 2.0', lizenzUrl: 'https://creativecommons.org/licenses/by/2.0', quelle: 'https://commons.wikimedia.org/wiki/File:XANS_74_-_Hopper_Wagon_SBBI_(51234285938).jpg' },
+      { src: 'bilder/xans-74-c2.jpg', titel: 'Mittlerer Trichter des Xans 74 über dem Förderband', foto: 'Kecko from Eastern Switzerland', lizenz: 'CC BY 2.0', lizenzUrl: 'https://creativecommons.org/licenses/by/2.0', quelle: 'https://commons.wikimedia.org/wiki/File:XANS_74_-_Hopper_Wagon_SBBI_(51233371237).jpg' },
+      { src: 'bilder/xans-74-c3.jpg', titel: 'Ausschwenkbares Förderband unter dem Xans 74', foto: 'Kecko from Eastern Switzerland', lizenz: 'CC BY 2.0', lizenzUrl: 'https://creativecommons.org/licenses/by/2.0', quelle: 'https://commons.wikimedia.org/wiki/File:XANS_74_-_Hopper_Wagon_SBBI_(51233371477).jpg' }
+    ] },
+  { id: 'xas-53', kat: 'infrastruktur', gruppe: 'Schotter- und Kippwagen', name: 'Xas 53', beiname: '', typ: 'Muldentransportwagen mit seitlichen Laufschienen', vorlaeufig: false,
+    text: ['Der Xas 53 transportiert austauschbare Mulden für Schotter, Siebrückstände und PSS-Material.', 'Seitliche Laufschienen erlauben es, die Behälter im Verbund mit Gleisbaumaschinen zu verschieben.'],
+    kennzahlen: [['100 km/h', 'Höchstgeschwindigkeit'], ['19,9 m', 'Länge'], ['31,0 t', 'Leergewicht'], ['7', 'Mulden je Wagen']],
+    daten: { 'Fahrtyp': '5113', 'Fahrzeugart': 'Muldentransportwagen', 'Achsen': '4, auf 2 Drehgestellen', 'Spurweite': 'Normalspur, 1435 mm', 'Länge': '19,9 m', 'Gewicht': '31,0 t leer, 78 t beladen', 'Nutzlast': 'rechnerisch bis ca. 46,6 t', 'Behälter': '7 Mulden zu je ca. 4 m³', 'Ausrüstung': 'seitliche Laufschienen, Planen möglich', 'Eigener Fahrantrieb': 'nein', 'Höchstgeschwindigkeit': '100 km/h', 'Status': 'aktiv (Fahrtypenkatalog 2026)', 'Einsatz': 'Sieb- und Bauzüge' },
+    specOrder: ['Fahrtyp', 'Fahrzeugart', 'Achsen', 'Spurweite', 'Länge', 'Gewicht', 'Nutzlast', 'Behälter', 'Ausrüstung', 'Eigener Fahrantrieb', 'Höchstgeschwindigkeit', 'Status', 'Einsatz'],
+    specNote: 'Der Fahrtypenkatalog nennt 77,6 t Fahrdynamikgewicht. Die Flottenplanung sieht einen Ersatz der Xans/Xas-52/53-Familie vor.',
+    abschnitte: [
+      { titel: 'Muldenlogistik', p: ['Die Mulden können innerhalb einer Arbeitskette verschoben, befüllt und an geeigneter Stelle entleert werden. Das beschleunigt die laufende Materialabfuhr bei Schotterreinigung und Gleisumbau.'] },
+      { titel: 'Ladungssicherung', p: ['Hände und Füsse sind von den Laufschienen fernzuhalten. Für feuchteempfindliches PSS können die Mulden abgedeckt werden; vor jeder Fahrt müssen Behälter und Planen korrekt gesichert sein.'] }
+    ],
+    quellen: ['SBB Infrastruktur – Ausbildungspräsentation «Wagon de chantier», 15.09.2022, Folie Xas 53', 'SBB Infrastruktur – Fahrtypenkatalog 2026, Fahrtyp 5113 Xas 53, S. 299', 'SBB Infrastruktur – Flottenmanagement Schienenfahrzeuge, Präsentation 04.06.2025, S. 20'],
+    art: { typ: 'wagen', var: 'mulde', farbe: YEL }, bilder: [
+      { src: 'bilder/xas-53-c1.jpg', titel: 'Xas 80 85 98 53 420-0 von SBB Infrastruktur in Effretikon', foto: 'User:Beroesz', lizenz: 'CC BY-SA 2.5 hu', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/2.5/hu/deed.en', quelle: 'https://commons.wikimedia.org/wiki/File:Effretikon_CH-SBBI_Xas_8085_9853_420-0_teherkocsi_2016-09-16.JPG' }
+    ] },
+  { id: 'xas-62', kat: 'infrastruktur', gruppe: 'Schotter- und Kippwagen', name: 'Xas 62', beiname: '', typ: 'Vierachsiger Altschotter-Kippwagen ohne Förderband', vorlaeufig: false,
+    text: ['Der Xas 62 nimmt Altschotter, Aushub, Kies und Sand auf.', 'Der Wagenkasten wird elektrohydraulisch gekippt, sodass das Material durch Schwerkraft herausfällt.'],
+    kennzahlen: [['100 km/h', 'Höchstgeschwindigkeit'], ['15,04 m', 'Länge'], ['30,0 t', 'Leergewicht'], ['80 t', 'max. Gesamtgewicht']],
+    daten: { 'Fahrtyp': '5111', 'Ausführung': 'ohne Förderband', 'Achsen': '4, auf 2 Drehgestellen', 'Spurweite': 'Normalspur, 1435 mm', 'Länge': '15,04 m', 'Gewicht': '30,0 t leer, 80 t beladen', 'Nutzlast': 'rechnerisch bis ca. 50,0 t', 'Volumen': 'ca. 51 m³', 'Entladung': 'Kippkasten, elektrohydraulisch', 'Eigener Fahrantrieb': 'nein', 'Höchstgeschwindigkeit': '100 km/h', 'Status': 'aktiv (Fahrtypenkatalog 2026)', 'Einsatz': 'Altschotter und Aushub' },
+    specOrder: ['Fahrtyp', 'Ausführung', 'Achsen', 'Spurweite', 'Länge', 'Gewicht', 'Nutzlast', 'Volumen', 'Entladung', 'Eigener Fahrantrieb', 'Höchstgeschwindigkeit', 'Status', 'Einsatz'],
+    specNote: 'Der Fahrtypenkatalog trennt klar zwischen dieser Ausführung und dem Xas 62 mit Förderband.',
+    abschnitte: [
+      { titel: 'Materialabfuhr', p: ['Der Xas 62 dient vor allem der Entsorgung von Material aus Gleiserneuerung und Unterbausanierung. Das Kippen beschleunigt die Entladung an geeigneten Ablagestellen.'] },
+      { titel: 'Arbeitsbetrieb', p: ['Während des Kippens sind Standsicherheit, Fahrleitung, Nachbargleis und seitlicher Freiraum zu überwachen. Aufstieg und Aufenthalt auf dem Wagen während Bewegungen sind untersagt.'] }
+    ],
+    quellen: ['SBB Infrastruktur – Ausbildungspräsentation «Wagon de chantier», 15.09.2022, Folie Xas 62', 'SBB Infrastruktur – Fahrtypenkatalog 2026, Fahrtyp 5111 Xas 62, S. 297', 'SBB Infrastruktur – Anhang A zu I-40036, Altschotterwagen'],
+    art: { typ: 'wagen', var: 'kipp', farbe: YEL }, bilder: [] },
+  { id: 'xas-62-fb', kat: 'infrastruktur', gruppe: 'Schotter- und Kippwagen', name: 'Xas 62', beiname: 'mit Förderband', typ: 'Altschotter-Kippwagen mit zusätzlichem Förderband', vorlaeufig: false,
+    text: ['Die Förderband-Ausführung des Xas 62 verbindet den kippbaren Wagenkasten mit einem Band für kontrollierten Materialabtrag.', 'Sie wird als eigener aktiver Fahrtyp geführt.'],
+    kennzahlen: [['100 km/h', 'Höchstgeschwindigkeit'], ['15,04 m', 'Länge'], ['30,5 t', 'Leergewicht'], ['80 t', 'max. Gesamtgewicht']],
+    daten: { 'Fahrtyp': '5075', 'Ausführung': 'mit Förderband (FB)', 'Achsen': '4, auf 2 Drehgestellen', 'Spurweite': 'Normalspur, 1435 mm', 'Länge': '15,04 m', 'Gewicht': '30,5 t leer, 80 t beladen', 'Nutzlast': 'rechnerisch bis ca. 49,5 t', 'Entladung': 'Kippkasten und Förderband', 'Arbeitsantrieb': 'elektrohydraulisch', 'Eigener Fahrantrieb': 'nein', 'Höchstgeschwindigkeit': '100 km/h', 'Status': 'aktiv (Fahrtypenkatalog 2026)', 'Einsatz': 'Materialabfuhr' },
+    specOrder: ['Fahrtyp', 'Ausführung', 'Achsen', 'Spurweite', 'Länge', 'Gewicht', 'Nutzlast', 'Entladung', 'Arbeitsantrieb', 'Eigener Fahrantrieb', 'Höchstgeschwindigkeit', 'Status', 'Einsatz'],
+    specNote: '«FB» steht für die Ausführung mit Förderband; gegenüber dem Wagen ohne Band steigt das Leergewicht um rund 0,5 t.',
+    abschnitte: [
+      { titel: 'Gezielter Materialfluss', p: ['Das Förderband erweitert die reine Kippentladung. Material kann kontrolliert an nachfolgende Einheiten oder seitlich an eine bestimmte Stelle übergeben werden.'] },
+      { titel: 'Sicherheitsbereich', p: ['Band, Kippkasten und Hydraulik dürfen nur im freigegebenen Arbeitsbereich betrieben werden. Quetschstellen, Absturzgefahr und die Nähe zur Fahrleitung sind besonders zu beachten.'] }
+    ],
+    quellen: ['SBB Infrastruktur – Ausbildungspräsentation «Wagon de chantier», 15.09.2022, Folie Xas 62', 'SBB Infrastruktur – Fahrtypenkatalog 2026, Fahrtyp 5075 Xas 62 mit FB, S. 261', 'SBB Infrastruktur – Anhang A zu I-40036, Altschotterwagen'],
+    art: { typ: 'wagen', var: 'kipp', band: true, farbe: YEL }, bilder: [] },
+  { id: 'xas-73', kat: 'infrastruktur', gruppe: 'Schotter- und Kippwagen', name: 'Xas 73', beiname: 'Talbot', typ: 'Schotterwagen für Erst- und Zweitstopfung', vorlaeufig: false,
+    text: ['Der Xas 73 ist ein vierachsiger Talbot-Schotterwagen mit Schwerkraftentladung.', 'Er wird besonders beim ersten und zweiten Stopfgang eingesetzt, um Schotter gezielt zu verteilen.'],
+    kennzahlen: [['100 km/h', 'Höchstgeschwindigkeit'], ['15,04 m', 'Länge'], ['22,5 t', 'Leergewicht'], ['200', 'Wagen für Lebensverlängerung geplant']],
+    daten: { 'Fahrtyp': '5110', 'Bauart': 'Talbot-Schotterwagen', 'Achsen': '4, auf 2 Drehgestellen', 'Spurweite': 'Normalspur, 1435 mm', 'Länge': '15,04 m', 'Gewicht': '22,5 t leer, 80 t beladen', 'Nutzlast': 'rechnerisch bis ca. 57,5 t', 'Volumen': 'ca. 31 m³', 'Behälter': '4 Halbkammern', 'Bedienung': '4 Handräder', 'Entladung': 'Schwerkraft', 'Eigener Fahrantrieb': 'nein', 'Höchstgeschwindigkeit': '100 km/h', 'Status': 'aktiv (Fahrtypenkatalog 2026)', 'Einsatz': 'Ballastieren' },
+    specOrder: ['Fahrtyp', 'Bauart', 'Achsen', 'Spurweite', 'Länge', 'Gewicht', 'Nutzlast', 'Volumen', 'Behälter', 'Bedienung', 'Entladung', 'Eigener Fahrantrieb', 'Höchstgeschwindigkeit', 'Status', 'Einsatz'],
+    specNote: 'Laut Flottenpräsentation 2025 plant die SBB die Lebensverlängerung von 200 vierachsigen Xas-73-Talbotwagen.',
+    abschnitte: [
+      { titel: 'Dosierte Entladung', p: ['Vier Handräder steuern die einzelnen Ausläufe. So kann Schotter abschnittsweise und passend zur Lage im Gleis verteilt werden.'] },
+      { titel: 'Flottenperspektive', p: ['Der Typ bleibt im Fahrtypenkatalog 2026 aktiv. Für die grosse Bestandsflotte ist ein Refit vorgesehen, damit die Wagen für weitere Bauperioden verfügbar bleiben.'] }
+    ],
+    quellen: ['SBB Infrastruktur – Ausbildungspräsentation «Wagon de chantier», 15.09.2022, Folie Xas 73', 'SBB Infrastruktur – Fahrtypenkatalog 2026, Fahrtyp 5110 Xas 73, S. 296', 'SBB Infrastruktur – Flottenmanagement Schienenfahrzeuge, Präsentation 04.06.2025, S. 20'],
+    art: { typ: 'wagen', var: 'schotter', farbe: YEL }, bilder: [] },
+  { id: 'xns-39', kat: 'infrastruktur', gruppe: 'Schotter- und Kippwagen', name: 'Xns 39', beiname: 'Fccnpps', typ: 'Zweiachsiger Schotterwagen mit Handbetätigung', vorlaeufig: false,
+    text: ['Der Xns 39 ist ein kompakter zweiachsiger Schotterwagen.', 'Seine Auslaufschieber werden über Hebelstangen von Hand betätigt und ermöglichen das Einschottern direkt im Gleis.'],
+    kennzahlen: [['100 km/h', 'Höchstgeschwindigkeit'], ['10,0 m', 'Länge'], ['13,1 t', 'Leergewicht'], ['45 t', 'max. Gesamtgewicht']],
+    daten: { 'Fahrtyp': '5108', 'UIC-Bezeichnung': 'Fccnpps', 'Achsen': '2', 'Spurweite': 'Normalspur, 1435 mm', 'Länge': '10,0 m', 'Gewicht': '13,1 t leer, 45 t beladen', 'Nutzlast': 'rechnerisch bis ca. 31,9 t', 'Volumen': 'ca. 22 m³', 'Entladung': 'Schwerkraft', 'Bedienung': 'Schieber von Hand, über Hebelstangen', 'Eigener Fahrantrieb': 'nein', 'Höchstgeschwindigkeit': '100 km/h', 'Status': 'aktiv (Fahrtypenkatalog 2026)', 'Einsatz': 'Einschottern' },
+    specOrder: ['Fahrtyp', 'UIC-Bezeichnung', 'Achsen', 'Spurweite', 'Länge', 'Gewicht', 'Nutzlast', 'Volumen', 'Entladung', 'Bedienung', 'Eigener Fahrantrieb', 'Höchstgeschwindigkeit', 'Status', 'Einsatz'],
+    specNote: 'Die französische Schulungsfolie schreibt einmal «Xas 39»; Inhaltsverzeichnis und Fahrtypenkatalog bestätigen die Bezeichnung Xns 39.',
+    abschnitte: [
+      { titel: 'Kompakter Ballastwagen', p: ['Mit zwei Achsen und zehn Metern Länge eignet sich der Xns 39 für kleinere Schottermengen und kurze Baustellenabschnitte. Der einfache mechanische Aufbau kommt ohne zusätzliche Energiequelle aus.'] },
+      { titel: 'Sicherer Transport', p: ['Vor jeder Fahrt sind die von Hand bedienten Schieber zu schliessen und zu sichern. Beim Entladen dürfen sich keine Personen im Auslauf- oder Gefahrenbereich aufhalten.'] }
+    ],
+    quellen: ['SBB Infrastruktur – Ausbildungspräsentation «Wagon de chantier», 15.09.2022, Folie Xns 39', 'SBB Infrastruktur – Fahrtypenkatalog 2026, Fahrtyp 5108 Xns 39 (Fccnpps), S. 294', 'SBB Infrastruktur – Anhang A zu I-40036, Neuschotterwagen'],
+    art: { typ: 'wagen', var: 'schotter', zweiachs: true, farbe: YEL }, bilder: [] },
+  { id: 'xns-60', kat: 'infrastruktur', gruppe: 'Schotter- und Kippwagen', name: 'Xns 60', beiname: '', typ: 'Zweiachsiger Schotterkippwagen für Ballast und Siebrückstände', vorlaeufig: false,
+    text: ['Der Xns 60 ist ein zweiachsiger Kippwagen für Schotter, Siebrückstände und ähnliches Schüttgut.', 'Die Entladung erfolgt durch Kippen und Schwerkraft.'],
+    kennzahlen: [['100 km/h', 'Höchstgeschwindigkeit'], ['10,94 m', 'Länge'], ['17,0 t', 'Leergewicht'], ['42 t', 'max. Gesamtgewicht']],
+    daten: { 'Fahrtyp': '5112', 'Fahrzeugart': 'Güterwagen mit Kippbehälter', 'Achsen': '2', 'Spurweite': 'Normalspur, 1435 mm', 'Länge': '10,94 m', 'Gewicht': '17,0 t leer, 42 t beladen', 'Nutzlast': 'rechnerisch bis ca. 25,0 t', 'Volumen': 'ca. 17,5 m³', 'Entladung': 'Kippen, Schwerkraft', 'Eigener Fahrantrieb': 'nein', 'Höchstgeschwindigkeit': '100 km/h', 'Status': 'aktiv (Fahrtypenkatalog 2026)', 'Einsatz': 'Schotter und Siebrückstände' },
+    specOrder: ['Fahrtyp', 'Fahrzeugart', 'Achsen', 'Spurweite', 'Länge', 'Gewicht', 'Nutzlast', 'Volumen', 'Entladung', 'Eigener Fahrantrieb', 'Höchstgeschwindigkeit', 'Status', 'Einsatz'],
+    specNote: 'Die Schulungspräsentation nennt 17 t Nutzlast; aus den aktuellen SBB-Massen ergeben sich rechnerisch bis etwa 25 t.',
+    abschnitte: [
+      { titel: 'Einfacher Kippwagen', p: ['Der kompakte Wagen kann mit Baggern beladen werden und eignet sich für kleinere Materialmengen. Die Schwerkraftentladung macht zusätzliche Fördertechnik überflüssig.'] },
+      { titel: 'Kippvorgang', p: ['Vor dem Kippen sind Untergrund, seitlicher Freiraum und die Lage des Schüttguts zu prüfen. Während der Wagen bewegt wird, darf sich niemand auf dem Aufbau aufhalten.'] }
+    ],
+    quellen: ['SBB Infrastruktur – Ausbildungspräsentation «Wagon de chantier», 15.09.2022, Folie Xns 60', 'SBB Infrastruktur – Fahrtypenkatalog 2026, Fahrtyp 5112 Xns 60, S. 298', 'SBB Infrastruktur – Anhang A zu I-40036, Altschotterwagen'],
+    art: { typ: 'wagen', var: 'kipp', zweiachs: true, farbe: YEL }, bilder: [] },
+  { id: 'xs-72', kat: 'infrastruktur', gruppe: 'Schotter- und Kippwagen', name: 'Xs 72', beiname: '', typ: 'Älterer zweiachsiger Ballastwagen mit Handrädern', vorlaeufig: false,
+    text: ['Der Xs 72 ist ein zweiachsiger Ballastwagen mit handbetätigten Auslaufklappen.', 'Er erscheint in der SBB-Ausbildungsunterlage von 2022, jedoch nicht mehr als eigener aktiver Typ im Fahrtypenkatalog 2026.'],
+    kennzahlen: [['10,24 m', 'Länge'], ['13,0 t', 'Leergewicht'], ['25,0 t', 'Nutzlast laut Folie'], ['15 m³', 'Volumen']],
+    daten: { 'Bezeichnung': 'Xs 72', 'Achsen': '2', 'Spurweite': 'Normalspur, 1435 mm', 'Länge': '10,24 m', 'Gewicht': '13,0 t leer, rechnerisch ca. 38 t beladen', 'Nutzlast': '25,0 t laut Folie', 'Volumen': '15 m³', 'Entladung': 'Schwerkraft', 'Bedienung': 'Handräder', 'Eigener Fahrantrieb': 'nein', 'Status': 'Bestandstyp, kein eigener Fahrtyp 2026', 'Datenstand': '15.09.2022', 'Einsatz': 'Schottertransport, Ballastieren' },
+    specOrder: ['Bezeichnung', 'Achsen', 'Spurweite', 'Länge', 'Gewicht', 'Nutzlast', 'Volumen', 'Entladung', 'Bedienung', 'Eigener Fahrantrieb', 'Status', 'Datenstand', 'Einsatz'],
+    specNote: 'Weil es 2026 keinen eigenen Fahrtyp gibt, stammen die Werte bewusst aus der Schulungsfolie von 2022.',
+    abschnitte: [
+      { titel: 'Funktionsprinzip', p: ['Die Auslaufklappen werden über Handräder geöffnet und geschlossen. So kann Schotter ohne externe Energiequelle verteilt werden.'] },
+      { titel: 'Einordnung', p: ['Das Fehlen im aktuellen Fahrtypenkatalog heisst nicht zwingend, dass kein Einzelwagen mehr existiert. Der Typ wird aber nicht als eigener aktiver Fahrtyp für die Trassenbestellung geführt.'] }
+    ],
+    quellen: ['SBB Infrastruktur – Ausbildungspräsentation «Wagon de chantier», 15.09.2022, Folie Xs 72', 'SBB Infrastruktur – Fahrtypenkatalog 2026, aktive Schotterwagen-Fahrtypen 5106–5113'],
+    art: { typ: 'wagen', var: 'schotter', zweiachs: true, farbe: YEL }, bilder: [] },
+  // ---------- Infrastruktur: Schienentransport ----------
+  { id: 'silad-1-3', kat: 'infrastruktur', gruppe: 'Schienentransport', name: 'SILAD 1–3', beiname: 'Robel', typ: 'Schienenladeeinheit mit Materialwagen', vorlaeufig: false,
+    text: ['SILAD 1–3 sind aktive SBB-Schienenladeeinheiten für den Transport und Umschlag langer Schienen.', 'Der offizielle Fahrtyp umfasst Ladeeinheit und Materialwagen; im Arbeitszug kommen weitere Transportwagen dazu.'],
+    kennzahlen: [['90 km/h', 'Höchstgeschwindigkeit'], ['44,0 m', 'Länge des Fahrtyps'], ['80 t', 'Leer- und Fahrdynamikgewicht'], ['120 m', 'max. Schienenlänge']],
+    daten: { 'Fahrtyp': '5031', 'Hersteller': 'Robel', 'Fahrzeugart': 'Güterzug, Basistyp Baumaschine', 'Formation': 'Ladeeinheit und Materialwagen, mehrteilig', 'Transportwagen': 'u. a. Xas 60', 'Spurweite': 'Normalspur, 1435 mm', 'Länge': '44,0 m (Fahrtyp)', 'Gewicht': '80 t (Fahrtyp)', 'Schienenlänge': 'bis 120 m', 'Kapazität': 'bis 30 Schienen laut Folie', 'Eigener Fahrantrieb': 'nein', 'Höchstgeschwindigkeit': '90 km/h', 'Status': 'aktiv (Fahrtypenkatalog 2026)' },
+    specOrder: ['Fahrtyp', 'Hersteller', 'Fahrzeugart', 'Formation', 'Transportwagen', 'Spurweite', 'Länge', 'Gewicht', 'Schienenlänge', 'Kapazität', 'Eigener Fahrantrieb', 'Höchstgeschwindigkeit', 'Status'],
+    specNote: 'Die 44 m und 80 t gelten für den im Fahrtypenkatalog definierten Fahrtyp, nicht für den ganzen langen Schienentransportzug.',
+    abschnitte: [
+      { titel: 'Langschienentransport', p: ['Die Schulungsunterlage beschreibt eine Transporteinheit mit sechs Wagen und Schienen bis 120 Meter. Die SILAD-Ladeeinheit hilft beim sicheren Be- und Entladen auf der Baustelle.'] },
+      { titel: 'Flottenentwicklung', p: ['Die SBB führt SILAD 1–3 weiterhin aktiv. Die Flottenplanung sieht zudem ein grosses Programm mit 90 SILAD-Transporteinheiten und vier Ladern vor.'] }
+    ],
+    quellen: ['SBB Infrastruktur – Ausbildungspräsentation «Wagon de chantier», 15.09.2022, Folie Xas 60 / SILAD', 'SBB Infrastruktur – Fahrtypenkatalog 2026, Fahrtyp 5031 SILAD 1–3 mit Wagen, S. 217', 'SBB Infrastruktur – Flottenmanagement Schienenfahrzeuge, Präsentation 04.06.2025, S. 20'],
+    art: { typ: 'wagen', var: 'flach', portal: true, farbe: YEL, akzent: '#2E3338' }, bilder: [] },
+  { id: 'silad-4', kat: 'infrastruktur', gruppe: 'Schienentransport', name: 'SILAD 4', beiname: '', typ: 'Schienenladeeinheit für Bau- und Erneuerungsarbeiten', vorlaeufig: false,
+    text: ['SILAD 4 ist eine eigenständig erfasste Schienenladeeinheit der SBB.', 'Sie arbeitet mit den zugehörigen Transportwagen beim Auf- und Abladen langer Schienen.'],
+    kennzahlen: [['100 km/h', 'Höchstgeschwindigkeit'], ['29,0 m', 'Länge'], ['58 t', 'Leergewicht'], ['aktiv', 'Status 2026']],
+    daten: { 'Fahrtyp': '5071', 'Fahrzeugart': 'Güterzug, Basistyp Baumaschine', 'Beschreibung': 'Schienenladeeinheit', 'Spurweite': 'Normalspur, 1435 mm', 'Länge': '29,0 m', 'Gewicht': '58 t (Gesamt- und Fahrdynamikgewicht)', 'Anfahrzugkraft': '0 kN', 'Eigener Fahrantrieb': 'nein', 'Höchstgeschwindigkeit': '100 km/h', 'Transport': 'im Arbeitsverband', 'Status': 'aktiv (Fahrtypenkatalog 2026)', 'Einsatz': 'Schienen auf- und abladen' },
+    specOrder: ['Fahrtyp', 'Fahrzeugart', 'Beschreibung', 'Spurweite', 'Länge', 'Gewicht', 'Anfahrzugkraft', 'Eigener Fahrantrieb', 'Höchstgeschwindigkeit', 'Transport', 'Status', 'Einsatz'],
+    specNote: 'Der Fahrtypenkatalog veröffentlicht nur die für die Trasse wichtigen Eckwerte; Arbeitsdaten stehen in separaten Betriebsunterlagen.',
+    abschnitte: [
+      { titel: 'Arbeitsverband', p: ['SILAD 4 ist kein selbstfahrendes Triebfahrzeug. Für Überführungen und Bewegungen auf der Baustelle wird die Einheit in einen gezogenen Verband eingestellt.'] },
+      { titel: 'Schienenlogistik', p: ['SILAD-Systeme verringern schwere Handarbeit beim Heben und sorgen für einen geordneten Materialfluss zwischen Lagerplatz, Transportzug und Einbaustelle.'] }
+    ],
+    quellen: ['SBB Infrastruktur – Ausbildungspräsentation «Wagon de chantier», 15.09.2022, Abschnitt Schienen', 'SBB Infrastruktur – Fahrtypenkatalog 2026, Fahrtyp 5071 SILAD 4, S. 257', 'SBB Infrastruktur – Flottenmanagement Schienenfahrzeuge, Präsentation 04.06.2025, S. 20'],
+    art: { typ: 'wagen', var: 'flach', portal: true, farbe: YEL, akzent: '#2E3338' }, bilder: [] },
+  { id: 'silad-reserve', kat: 'infrastruktur', gruppe: 'Schienentransport', name: 'SILAD Reserve', beiname: '', typ: 'Kompakte Reserve-Schienenladeeinheit', vorlaeufig: false,
+    text: ['Die SILAD-Reserveeinheit steht als Ersatz oder Ergänzung für Schienenladeeinsätze bereit.', 'Sie ist deutlich kürzer und leichter als SILAD 4 und wird als eigener aktiver Fahrtyp geführt.'],
+    kennzahlen: [['90 km/h', 'Höchstgeschwindigkeit'], ['14,0 m', 'Länge'], ['18 t', 'Leergewicht'], ['aktiv', 'Status 2026']],
+    daten: { 'Fahrtyp': '5072', 'Fahrzeugart': 'Güterzug, Basistyp Baumaschine', 'Beschreibung': 'Reserve-Ladeeinheit', 'Spurweite': 'Normalspur, 1435 mm', 'Länge': '14,0 m', 'Gewicht': '18 t (Gesamt- und Fahrdynamikgewicht)', 'Anfahrzugkraft': '0 kN', 'Eigener Fahrantrieb': 'nein', 'Höchstgeschwindigkeit': '90 km/h', 'Transport': 'im Arbeitsverband', 'Status': 'aktiv (Fahrtypenkatalog 2026)', 'Einsatz': 'Reserve und Ergänzung' },
+    specOrder: ['Fahrtyp', 'Fahrzeugart', 'Beschreibung', 'Spurweite', 'Länge', 'Gewicht', 'Anfahrzugkraft', 'Eigener Fahrantrieb', 'Höchstgeschwindigkeit', 'Transport', 'Status', 'Einsatz'],
+    specNote: '«Reserve» bezeichnet die betriebliche Rolle; der Fahrtypenkatalog führt die Einheit trotzdem als aktiven eigenen Typ.',
+    abschnitte: [
+      { titel: 'Verfügbarkeit', p: ['Die Reserveeinheit springt bei Unterhalt, Störung oder grossem Bedarf ein und erhöht damit die Verfügbarkeit der Schienenlogistik.'] },
+      { titel: 'Betrieb', p: ['Wie die übrigen SILAD-Einheiten hat sie keinen eigenen Fahrantrieb. Überführung, Rangieren und Arbeitsbewegungen erfolgen im dafür zugelassenen Zugverband.'] }
+    ],
+    quellen: ['SBB Infrastruktur – Ausbildungspräsentation «Wagon de chantier», 15.09.2022, Abschnitt Schienen', 'SBB Infrastruktur – Fahrtypenkatalog 2026, Fahrtyp 5072 SILAD Reserve, S. 258', 'SBB Infrastruktur – Anhang A zu I-40036, Schienenladeeinheit'],
+    art: { typ: 'wagen', var: 'flach', portal: true, zweiachs: true, farbe: YEL, akzent: '#2E3338' }, bilder: [] },
+  { id: 'ste-kurz', kat: 'infrastruktur', gruppe: 'Schienentransport', name: 'STE kurz', beiname: 'Xans 51', typ: 'Schienentransporteinheit mit zwei Kränen für Schienen von 12 bis 36 m', vorlaeufig: false,
+    text: ['Die kurze Schienentransporteinheit (STE) basiert laut Schulungsunterlage auf einem vierachsigen Xans-51-Flachwagen.', 'Zwei kleine Krane laden kurze Schienen direkt auf der Baustelle ab.'],
+    kennzahlen: [['12–36 m', 'Schienenlänge'], ['29,5 t', 'Leergewicht'], ['50 t', 'Nutzlast laut Folie'], ['2 × 1,5 t', 'Krane']],
+    daten: { 'Bezeichnung': 'STE kurz / Xans 51', 'Bauart': 'Flachwagen', 'Achsen': '4', 'Spurweite': 'Normalspur, 1435 mm', 'Gewicht': '29,5 t leer', 'Nutzlast': '50 t laut Folie', 'Krane': '2 Stück, je 1500 kg Traglast', 'Energie': 'Generator an Bord', 'Schienenlänge': '12 bis 36 m', 'Eigener Fahrantrieb': 'nein', 'Status': 'Bestandsangabe 2022, kein eigener Fahrtyp 2026', 'Einsatz': 'Schienen abladen' },
+    specOrder: ['Bezeichnung', 'Bauart', 'Achsen', 'Spurweite', 'Gewicht', 'Nutzlast', 'Krane', 'Energie', 'Schienenlänge', 'Eigener Fahrantrieb', 'Status', 'Einsatz'],
+    specNote: 'Der Name Xans 51 erscheint nicht als eigener Eintrag im Fahrtypenkatalog 2026; die Werte sind deshalb als Schulungsstand 2022 gekennzeichnet.',
+    abschnitte: [
+      { titel: 'Kurze Schienen', p: ['Die Einheit deckt Schienenlängen ab, die ohne 120-Meter-Langschienenzug transportiert werden können. Die beiden Krane teilen sich die Last beim Abladen.'] },
+      { titel: 'Arbeitsplatzsicherheit', p: ['Während Rangierbewegungen darf niemand aufrecht auf dem Wagen stehen. Kranbereich, Anschlagmittel, Fahrleitung und Nachbargleis sind vor jedem Hub zu sichern.'] }
+    ],
+    quellen: ['SBB Infrastruktur – Ausbildungspräsentation «Wagon de chantier», 15.09.2022, Folie STE courte (Xans 51)', 'SBB Infrastruktur – Fahrtypenkatalog 2026, Verzeichnis der aktiven Fahrtypen', 'SBB Infrastruktur – Anhang A zu I-40036, Schienenladeeinheit / Flachwagen'],
+    art: { typ: 'wagen', var: 'flach', kran: true, farbe: YEL }, bilder: [] },
+  { id: 'ste-lang', kat: 'infrastruktur', gruppe: 'Schienentransport', name: 'STE lang', beiname: 'Xans 51', typ: 'Mehrteilige Schienentransporteinheit für Schienen bis 120 m', vorlaeufig: false,
+    text: ['Die lange STE nutzt Xans-51-Wagen mit Kränen für den Transport und das Abladen von Langschienen.', 'Eine betriebliche Einheit besteht laut Präsentation aus sechs Wagen und erreicht 120 Meter Länge.'],
+    kennzahlen: [['120 m', 'max. Schienenlänge'], ['6', 'Wagen je Einheit'], ['29,5 t', 'Leergewicht je Kranwagen'], ['2 × 1,5 t', 'Krane je Kranwagen']],
+    daten: { 'Bezeichnung': 'STE lang / Xans 51', 'Bauart': 'Flachwagenverband', 'Formation': '6 Wagen', 'Achsen': '4 je Wagen', 'Spurweite': 'Normalspur, 1435 mm', 'Gewicht': '29,5 t leer je Kranwagen', 'Nutzlast': '50 t je Kranwagen laut Folie', 'Krane': '2 je Kranwagen, je 1500 kg', 'Energie': 'Generator an Bord', 'Schienenlänge': 'bis 120 m', 'Eigener Fahrantrieb': 'nein', 'Status': 'Bestandsangabe 2022, kein eigener Fahrtyp 2026', 'Einsatz': 'Langschienen abladen' },
+    specOrder: ['Bezeichnung', 'Bauart', 'Formation', 'Achsen', 'Spurweite', 'Gewicht', 'Nutzlast', 'Krane', 'Energie', 'Schienenlänge', 'Eigener Fahrantrieb', 'Status', 'Einsatz'],
+    specNote: 'Die SILAD-Fahrtypen sind 2026 separat aktiv; STE lang / Xans 51 wird im Katalog nicht als eigener Fahrtyp geführt.',
+    abschnitte: [
+      { titel: 'Langschienenverband', p: ['Mehrere Wagen tragen die langen, biegsamen Schienen gemeinsam. Die Krane helfen beim kontrollierten Übergang vom Transportverband ins Gleis.'] },
+      { titel: 'Betriebsgrenzen', p: ['Die sechs Wagen werden als abgestimmter Verband behandelt. Bei Bewegungen sind Aufenthalt auf den Wagen, Kurvenlauf, Überstände und die Lage der Schienen besonders zu überwachen.'] }
+    ],
+    quellen: ['SBB Infrastruktur – Ausbildungspräsentation «Wagon de chantier», 15.09.2022, Folie STE longue (Xans 51)', 'SBB Infrastruktur – Fahrtypenkatalog 2026, SILAD-Fahrtypen 5031, 5071 und 5072', 'SBB Infrastruktur – Anhang A zu I-40036, Schienenladeeinheit / Flachwagen'],
+    art: { typ: 'wagen', var: 'flach', kran: true, farbe: YEL }, bilder: [] },
+  // ---------- Infrastruktur: Werkstatt- und Mannschaftswagen ----------
+  { id: 'xs-45', kat: 'infrastruktur', gruppe: 'Werkstatt- und Mannschaftswagen', name: 'Xs 45', beiname: '', typ: 'Zweiachsiger Werkzeug-, Werkstatt- und Mannschaftswagen', vorlaeufig: false,
+    text: ['Der Xs 45 ist ein gedeckter Bauzugwagen für Werkzeug, Ersatzteile und Werkstattausrüstung.', 'Er dient zugleich als geschützter Arbeits- und Unterstützungsraum für Baustellenmannschaften.'],
+    kennzahlen: [['2', 'Achsen'], ['15,0 m', 'Länge'], ['16,5 t', 'Leergewicht'], ['22 t', 'Nutzlast laut Folie']],
+    daten: { 'Bezeichnung': 'Xs 45', 'Bauart': 'gedeckter Bauzugwagen', 'Achsen': '2', 'Spurweite': 'Normalspur, 1435 mm', 'Länge': '15,0 m', 'Gewicht': '16,5 t leer, rechnerisch ca. 38,5 t beladen', 'Nutzlast': '22 t laut Folie', 'Zugänge': 'seitliche Türen', 'Eigener Fahrantrieb': 'nein', 'Status': 'Bestandstyp, kein eigener Fahrtyp 2026', 'Datenstand': '15.09.2022', 'Einsatz': 'Werkzeug und Werkstatt, Unterstützung der Mannschaft' },
+    specOrder: ['Bezeichnung', 'Bauart', 'Achsen', 'Spurweite', 'Länge', 'Gewicht', 'Nutzlast', 'Zugänge', 'Eigener Fahrantrieb', 'Status', 'Datenstand', 'Einsatz'],
+    specNote: 'Der Fahrtypenkatalog 2026 führt den Xs 45 nicht separat; die Werte stammen aus der SBB-Schulungsunterlage von 2022.',
+    abschnitte: [
+      { titel: 'Unterstützung der Baustelle', p: ['Werkzeuge und kleinere Maschinen werden wettergeschützt mitgeführt und direkt am Einsatzort bereitgestellt. Der Wagen ergänzt Triebfahrzeuge und Materialwagen im Bauzug.'] },
+      { titel: 'Fahrtstellung', p: ['Vor jeder Bewegung sind Seitentüren, lose Ausrüstung und Arbeitsplätze zu sichern. Personen dürfen sich nur unter den dafür zugelassenen Bedingungen im Wagen aufhalten.'] }
+    ],
+    quellen: ['SBB Infrastruktur – Ausbildungspräsentation «Wagon de chantier», 15.09.2022, Folie Xs 45', 'SBB Infrastruktur – Fahrtypenkatalog 2026, Verzeichnis der aktiven Fahrtypen', 'SBB Infrastruktur – Flottenmanagement Schienenfahrzeuge, Präsentation 04.06.2025, PWFZ-Projekt, S. 20'],
+    art: { typ: 'wagen', geschlossen: true, zweiachs: true, farbe: YEL, akzent: '#2E3338' }, bilder: [] },
+  { id: 'xs-48', kat: 'infrastruktur', gruppe: 'Werkstatt- und Mannschaftswagen', name: 'Xs 48', beiname: '', typ: 'Werkstatt- und Mannschaftswagen mit Hubarbeitsbühnen', vorlaeufig: false,
+    text: ['Der Xs 48 kombiniert einen gedeckten Werkzeug- und Werkstattwagen mit Hubarbeitsbühnen.', 'Er unterstützt vor allem Arbeiten an Anlagen im Bereich der Fahrleitung.'],
+    kennzahlen: [['2', 'Achsen'], ['15,0 m', 'Länge'], ['16,5 t', 'Leergewicht'], ['23 t', 'Nutzlast laut Folie']],
+    daten: { 'Bezeichnung': 'Xs 48', 'Bauart': 'gedeckter Arbeitswagen', 'Achsen': '2', 'Spurweite': 'Normalspur, 1435 mm', 'Länge': '15,0 m', 'Gewicht': '16,5 t leer, rechnerisch ca. 39,5 t beladen', 'Nutzlast': '23 t laut Folie', 'Ausrüstung': 'Hubarbeitsbühnen', 'Sicherheitsregel': 'Fahrleitung vor dem Anheben ausschalten', 'Eigener Fahrantrieb': 'nein', 'Status': 'Bestandstyp, kein eigener Fahrtyp 2026', 'Datenstand': '15.09.2022', 'Einsatz': 'Werkzeug und Werkstatt, Fahrleitungsarbeiten' },
+    specOrder: ['Bezeichnung', 'Bauart', 'Achsen', 'Spurweite', 'Länge', 'Gewicht', 'Nutzlast', 'Ausrüstung', 'Sicherheitsregel', 'Eigener Fahrantrieb', 'Status', 'Datenstand', 'Einsatz'],
+    specNote: 'Die Schulungsfolie verlangt ausdrücklich, die Fahrleitung vor dem Anheben der Arbeitsbühnen auszuschalten.',
+    abschnitte: [
+      { titel: 'Arbeitsbühnen', p: ['Die Bühnen ermöglichen Arbeiten oberhalb des Wagenbodens. So stellt der Wagen Material, Werkstatt und einen erhöhten Arbeitsplatz in einer Einheit bereit.'] },
+      { titel: 'Elektrische Sicherheit', p: ['Vor dem Heben muss die Fahrleitung ausgeschaltet, geerdet und gegen Wiedereinschalten gesichert sein. Für die Fahrt sind die Bühnen eingefahren sowie Türen und Ladung verriegelt.'] }
+    ],
+    quellen: ['SBB Infrastruktur – Ausbildungspräsentation «Wagon de chantier», 15.09.2022, Folie Xs 48', 'SBB Infrastruktur – Fahrtypenkatalog 2026, Verzeichnis der aktiven Fahrtypen', 'SBB Infrastruktur – Technischer Netzzugang, Arbeitsgenehmigung für Hubarbeitsbühnen'],
+    art: { typ: 'wagen', geschlossen: true, buehne: true, zweiachs: true, farbe: YEL, akzent: '#2E3338' }, bilder: [
+      { src: 'bilder/xs-48-c1.jpg', titel: 'Fahrleitungs-Arbeitswagen Xs 40 85 95 48 453-1 bei Bad Ragaz', foto: 'Kecko from Eastern Switzerland', lizenz: 'CC BY 2.0', lizenzUrl: 'https://creativecommons.org/licenses/by/2.0', quelle: 'https://commons.wikimedia.org/wiki/File:SBB_-_Catenary_Construction_Train_(49094462411).jpg' }
+    ] },
+  { id: 'xs-mannschaftswagen', kat: 'infrastruktur', gruppe: 'Werkstatt- und Mannschaftswagen', name: 'Xs', beiname: 'Mannschaftswagen', typ: 'Zweiachsiger Werkstatt- und Unterstützungswagen', vorlaeufig: false,
+    text: ['Der in der Schulungsunterlage schlicht als Xs bezeichnete Wagen transportiert Werkzeug und Werkstattausrüstung.', 'Als Unterstützungswagen im Bauzug bietet er der Mannschaft einen geschützten Arbeitsbereich.'],
+    kennzahlen: [['2', 'Achsen'], ['14,0 m', 'Länge'], ['16,5 t', 'Leergewicht'], ['24 t', 'Nutzlast laut Folie']],
+    daten: { 'Bezeichnung': 'Xs', 'Bauart': 'gedeckter Bauzugwagen', 'Achsen': '2', 'Spurweite': 'Normalspur, 1435 mm', 'Länge': '14,0 m', 'Gewicht': '16,5 t leer, rechnerisch ca. 40,5 t beladen', 'Nutzlast': '24 t laut Folie', 'Zugänge': 'seitliche Türen', 'Eigener Fahrantrieb': 'nein', 'Status': 'Sammelbezeichnung, kein eindeutiger Fahrtyp 2026', 'Datenstand': '15.09.2022', 'Einsatz': 'Werkzeug und Werkstatt, Unterstützung der Mannschaft' },
+    specOrder: ['Bezeichnung', 'Bauart', 'Achsen', 'Spurweite', 'Länge', 'Gewicht', 'Nutzlast', 'Zugänge', 'Eigener Fahrantrieb', 'Status', 'Datenstand', 'Einsatz'],
+    specNote: '«Xs» ist eine breite Bauartbezeichnung. Ohne Fahrzeugnummer lässt sich der Wagen keinem eindeutigen aktuellen Fahrtyp zuordnen.',
+    abschnitte: [
+      { titel: 'Mannschaftsunterstützung', p: ['Der Wagen dient vor allem der Logistik und der Arbeit der Bauzugbesatzung. Er ist kein regulärer Personenwagen und darf nur gemäss seiner betrieblichen Zulassung genutzt werden.'] },
+      { titel: 'Sicherung', p: ['Werkzeuge, Ersatzteile und lose Gegenstände müssen vor jeder Zugbewegung festgemacht sein. Die Seitentüren bleiben während der Fahrt geschlossen und verriegelt.'] }
+    ],
+    quellen: ['SBB Infrastruktur – Ausbildungspräsentation «Wagon de chantier», 15.09.2022, Folie Xs', 'SBB Infrastruktur – Fahrtypenkatalog 2026, Verzeichnis und Erläuterung der Fahrtypen', 'SBB Infrastruktur – Flottenmanagement Schienenfahrzeuge, Präsentation 04.06.2025, PWFZ-Projekt, S. 20'],
+    art: { typ: 'wagen', geschlossen: true, zweiachs: true, farbe: YEL, akzent: '#2E3338' }, bilder: [] },
+  { id: 'kirow-mannschaftswagen', kat: 'infrastruktur', gruppe: 'Werkstatt- und Mannschaftswagen', name: 'Kirow-Mannschaftswagen', beiname: '', typ: 'Begleitwagen der Kirow-Kranverbände 250, 800 und 1200', vorlaeufig: false,
+    text: ['Die SBB-Krane Kirow 250, 800 und 1200 verkehren in festen Verbänden mit einem Mannschaftswagen.', 'Der Begleitwagen unterstützt Personal, Werkzeug und Einsatzlogistik des Eisenbahnkrans.'],
+    kennzahlen: [['3', 'Krantypen mit Mannschaftswagen'], ['1', 'Mannschaftswagen je Verband'], ['80 km/h', 'Verbandsgeschwindigkeit'], ['aktiv', 'Status der Verbände 2026']],
+    daten: { 'Fahrzeugrolle': 'Begleitwagen im Kranverband', 'Spurweite': 'Normalspur, 1435 mm', 'Höchstgeschwindigkeit': '80 km/h (ganzer Verband)', 'Eigener Fahrantrieb': 'nein', 'Einzelfahrdaten': 'nicht separat publiziert', 'Betreiber': 'SBB Infrastruktur', 'Fahrtypen': '5089–5091 (ganze Kranverbände)', 'Status': 'aktiv (Fahrtypenkatalog 2026)' },
+    specOrder: ['Fahrzeugrolle', 'Spurweite', 'Höchstgeschwindigkeit', 'Eigener Fahrantrieb', 'Einzelfahrdaten', 'Betreiber', 'Fahrtypen', 'Status'],
+    specNote: 'Die SBB veröffentlicht im Fahrtypenkatalog nur Gesamtwerte der untrennbaren Kranverbände, keine separaten Masse des Mannschaftswagens.',
+    abschnitte: [
+      { titel: 'Zuordnung zu den Kranverbänden', tabelle: { kopf: ['Kran', 'Formation', 'Verband Länge / Gewicht'], zeilen: [
+        ['Kirow 250', '1 Schutz- und 1 Mannschaftswagen', '47 m / 169 t'],
+        ['Kirow 800', '1 Schutz- und 1 Mannschaftswagen', '48 m / 203 t'],
+        ['Kirow 1200', 'Schutz-, Gegenlast- und Mannschaftswagen', '63 m / 279 t']
+      ] } },
+      { titel: 'Funktion', p: ['Der Mannschaftswagen stellt dem Kranteam Material, Arbeitsmittel und einen Aufenthaltsraum bereit. Seine Ausrüstung ist auf den jeweiligen Kranverband abgestimmt.'] },
+      { titel: 'Fester Verband', p: ['Für Trassenbestellung und Überführung wird die komplette Einheit betrachtet. Änderungen an Formation, Beladung oder Bremse dürfen nur nach den freigegebenen Betriebsunterlagen erfolgen.'] }
+    ],
+    quellen: ['SBB Infrastruktur – Fahrtypenkatalog 2026, Fahrtypen 5089–5091, S. 275–277', 'SBB Infrastruktur – Technischer Netzzugang, Rollmaterialdaten und Dienstfahrzeuge', 'HCKD RAIL – Katalogblätter Kirow 250, 800 und 1200, Quellenstand 17.10.2026'],
     art: { typ: 'wagen', farbe: YEL, akzent: '#2E3338' }, bilder: [] },
+  { id: 'pwfz', kat: 'infrastruktur', gruppe: 'Werkstatt- und Mannschaftswagen', name: 'PWFZ', beiname: 'Personal Werkstatt Fahrzeug', typ: 'Geplantes Personal- und Werkstattfahrzeug', vorlaeufig: false,
+    text: ['Das Personal- und Werkstattfahrzeug PWFZ ist ein geplantes Flottenprojekt der SBB Infrastruktur.', 'Es soll ältere Xs-Werkstatt- und Mannschaftswagen durch eine einheitliche, moderne Serie ersetzen.'],
+    kennzahlen: [['30', 'Fahrzeuge geplant'], ['2', 'erste Projektfahrzeuge'], ['28', 'weitere Serienfahrzeuge'], ['Juni 2025', 'Stand der Planung']],
+    daten: { 'Projekt': 'FFM PWFZ', 'Langname': 'Personal Werkstatt Fahrzeug', 'Bestand': 'noch keine Serienflotte', 'Anzahl': '30 geplant (2 + 14 + 14)', 'Einsatz': 'Personal und Werkstatt', 'Vorgänger': 'Xs-Bauzugwagen', 'Technische Daten': 'noch nicht publiziert', 'Status': 'geplante Beschaffung', 'Betreiber': 'SBB Infrastruktur', 'Datenstand': '04.06.2025' },
+    specOrder: ['Projekt', 'Langname', 'Bestand', 'Anzahl', 'Einsatz', 'Vorgänger', 'Technische Daten', 'Status', 'Betreiber', 'Datenstand'],
+    specNote: 'Öffentlich zugängliche SBB-Unterlagen nennen Stückzahl und Staffelung, aber noch keine verbindlichen Masse oder Leistungsdaten.',
+    abschnitte: [
+      { titel: 'Ziel des Projekts', p: ['Eine einheitliche PWFZ-Serie soll Werkstatt, Materialtransport und Unterstützung des Personals in einem zeitgemässen Wagenkonzept bündeln.'] },
+      { titel: 'Abgrenzung', p: ['Das PWFZ ist noch kein im Fahrtypenkatalog 2026 ausgewiesener Serienfahrtyp. Dieser Eintrag beschreibt den Projektstand und keine bereits zugelassene Fahrzeugserie.'] }
+    ],
+    quellen: ['SBB Infrastruktur – Fahrtypenkatalog 2026, aktuelles Verzeichnis der Fahrtypen', 'SBB Infrastruktur – Flottenmanagement Schienenfahrzeuge, Präsentation 04.06.2025, S. 20', 'SBB Infrastruktur – Ausbildungspräsentation «Wagon de chantier», 15.09.2022, Xs 45 / Xs 48 / Xs'],
+    art: { typ: 'wagen', geschlossen: true, farbe: YEL, akzent: '#2E3338' }, bilder: [] },
   // ---------- Rangierfahrzeuge ----------
   { id: 'ee-922', kat: 'rangier', name: 'Ee 922', beiname: '', typ: 'Elektrische Rangierlok für Personenbahnhöfe', vorlaeufig: false,
     text: ['Die Ee 922 ist eine kompakte elektrische Rangierlokomotive von Stadler.', 'Die SBB beschaffte sie für das Bereitstellen von Personenzügen und das Beistellen zusätzlicher Wagen in grossen Bahnhöfen.'],
@@ -677,7 +1005,11 @@ const ZUEGE = [
     ],
     quellen: ['SBB Infrastruktur – Übersicht Lösch- und Rettungszüge', 'SBB / Windhoff – Bestellung und Bestand von insgesamt sechs LRZ 18', 'Windhoff – Drei neue LRZ 18 für die SBB, 14. September 2016', 'Vogt Schweiz – Löschanlage LRZ 18, vierteilige Formation und technische Daten'],
     art: { typ: 'spezial', var: 'loesch', farbe: YEL, akzent: CRED }, bilder: [
-      { src: 'bilder/lrz-18-c1.jpg', titel: 'LRZ 18 «Bern» bei Einigen', foto: 'Nelso Silva from Porto, Portugal', lizenz: 'CC BY-SA 2.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/2.0', quelle: 'https://commons.wikimedia.org/wiki/File:SBB_LRZ_18_%22Bern%22_(52557604099).jpg' }
+      { src: 'bilder/lrz-18-c1.jpg', titel: 'LRZ 18 «Bern» bei Einigen', foto: 'Nelso Silva from Porto, Portugal', lizenz: 'CC BY-SA 2.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/2.0', quelle: 'https://commons.wikimedia.org/wiki/File:SBB_LRZ_18_%22Bern%22_(52557604099).jpg' },
+      { src: 'bilder/lrz-18-c2.jpg', titel: 'LRZ 18 in Genève', foto: 'MHM55', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:CFF-train_de_sauvetage_TES_18_(Gen%C3%A8ve)-01.jpg' },
+      { src: 'bilder/lrz-18-c3.jpg', titel: 'Rettungsfahrzeug des LRZ 18 in Genève', foto: 'MHM55', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:CFF-train_de_sauvetage_TES_18_(Gen%C3%A8ve)-02.jpg' },
+      { src: 'bilder/lrz-18-c4.jpg', titel: 'LRZ 18 in Genève, Seitenansicht', foto: 'MHM55', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:CFF-train_de_sauvetage_TES_18_(Gen%C3%A8ve)-05.jpg' },
+      { src: 'bilder/lrz-18-c5.jpg', titel: 'Hilfsgerätefahrzeug Xtmas 99 85 9177 015 an der Innotrans 2018', foto: 'Falk2', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:J33_791_Windhoff_Xtmas_99_85_9177_015.jpg' }
     ] },
   { id: 'lrz-14', kat: 'dienst', name: 'LRZ 14', beiname: 'Lösch- und Rettungszug', typ: 'Vierteiliger Lösch- und Rettungszug für lange Tunnel', vorlaeufig: false,
     text: ['Der LRZ 14 ist eine leistungsfähigere vierteilige Weiterentwicklung für lange Bahntunnel. Er hat ein zweites Rettungsfahrzeug.', 'Zwei Garnituren wurden im Zusammenhang mit dem Ausbau des Interventionskonzepts für die Gotthardachse beschafft.'],
@@ -693,7 +1025,9 @@ const ZUEGE = [
     quellen: ['SBB Infrastruktur – Übersicht und Datenblatt LRZ 14', 'SBB – Faktenblatt Lösch- und Rettungszug 2014, technische Daten', 'SBB Infrastruktur – Fahrtypenkatalog 2026, Fahrzeuggruppe LRZ'],
     art: { typ: 'spezial', var: 'loesch', farbe: YEL, akzent: CRED }, bilder: [
       { src: 'bilder/lrz-14-c1.jpg', titel: 'Neuer LRZ 14 beim Erhaltungs- und Interventionszentrum Erstfeld', foto: 'Kecko from Rural area, Eastern Switzerland', lizenz: 'CC BY 2.0', lizenzUrl: 'https://creativecommons.org/licenses/by/2.0', quelle: 'https://commons.wikimedia.org/wiki/File:SBB_-_EIZ_Erstfeld_(23518335636).jpg' },
-      { src: 'bilder/lrz-14-c2.jpg', titel: 'LRZ 14 «Uri» im Bahnhof Erstfeld', foto: 'JoachimKohler-HB', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:SBB_L%C3%B6sch-_und_Rettunszug_LRZ-14_%22Uri%22_im_Bahnhof_Erstfeld_(2015).jpg' }
+      { src: 'bilder/lrz-14-c2.jpg', titel: 'LRZ 14 «Uri» im Bahnhof Erstfeld', foto: 'JoachimKohler-HB', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:SBB_L%C3%B6sch-_und_Rettunszug_LRZ-14_%22Uri%22_im_Bahnhof_Erstfeld_(2015).jpg' },
+      { src: 'bilder/lrz-14-c3.jpg', titel: 'LRZ 14 «Uri» der Betriebswehr Erstfeld', foto: 'Valanagut', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:Betriebswehr_SBB_Erstfeld_2.jpg' },
+      { src: 'bilder/lrz-14-c4.jpg', titel: 'LRZ 14 in Erstfeld', foto: 'Valanagut', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:Esrtsfeld2.jpg' }
     ] },
   { id: 'lrz-08', kat: 'dienst', name: 'LRZ 08', beiname: 'Lösch- und Rettungszug', typ: 'Lösch- und Rettungszug der Generation 2008', vorlaeufig: false,
     text: ['Die SBB beschaffte acht Lösch- und Rettungszüge der Generation LRZ 08 aus Tanklöschwagen, Gerätefahrzeug und Rettungsfahrzeug.', 'Sie wurden für schnelle Interventionen auf dem offenen Netz und in Tunneln ausgelegt.'],
@@ -706,7 +1040,10 @@ const ZUEGE = [
     ],
     quellen: ['SBB Infrastruktur – Übersicht und Datenblatt LRZ 08', 'SBB – Faktenblatt Lösch- und Rettungszug 2008, technische Daten', 'SBB Infrastruktur – Fahrtypenkatalog 2026, Fahrzeuggruppe LRZ'],
     art: { typ: 'spezial', var: 'loesch', farbe: YEL, akzent: CRED }, bilder: [
-      { src: 'bilder/lrz-08-c1.jpg', titel: 'LRZ 08 (TES 08 Olten) in Renens', foto: 'flybyeigenheer', lizenz: 'CC BY-SA 2.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/2.0', quelle: 'https://commons.wikimedia.org/wiki/File:SBB_CFF_FFS_LRZ_XTmas_008-4_(20525784048).jpg' }
+      { src: 'bilder/lrz-08-c1.jpg', titel: 'LRZ 08 (TES 08 Olten) in Renens', foto: 'flybyeigenheer', lizenz: 'CC BY-SA 2.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/2.0', quelle: 'https://commons.wikimedia.org/wiki/File:SBB_CFF_FFS_LRZ_XTmas_008-4_(20525784048).jpg' },
+      { src: 'bilder/lrz-08-c2.jpg', titel: 'Rettungsfahrzeug XTmas 99 85 9174 004 «Lausanne» in Bern', foto: 'NAC', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:4_FFS_XTmas_99_85_9174_004-3_Bern_290317.jpg' },
+      { src: 'bilder/lrz-08-c4.jpg', titel: 'XTmas 99 85 9174 008 «Olten» in Lausanne', foto: 'Akiry', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:Gare_de_lausanne_-_novembre_2015.jpg' },
+      { src: 'bilder/lrz-08-c5.jpg', titel: 'LRZ 08 in Winterthur', foto: 'JoachimKohler-HB', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:SBB_L%C3%B6sch-_und_Rettungszug_in_Winterthur-IMG_1070.jpg' }
     ] },
   { id: 'lrz-04', kat: 'dienst', name: 'LRZ 04', beiname: 'Lösch- und Rettungszug', typ: 'Lösch- und Rettungszug der Generation 2004', vorlaeufig: false,
     text: ['Der LRZ 04 war die erste neuere Generation des SBB-Lösch- und Rettungszuges und leitete den Wechsel vom lokbespannten zum selbstfahrenden Zug ein.', 'Die einzelne Garnitur verbindet Löschmittel, Rettungsraum und einen eigenen Antrieb für Einsätze auf Bahnstrecken und in Tunneln.'],
@@ -719,7 +1056,11 @@ const ZUEGE = [
       { titel: 'Einsatz', p: ['Der Zug dient Ereignissen auf dem Bahnnetz, besonders in längeren Tunneln und an schwer zugänglichen Streckenabschnitten.'] }
     ],
     quellen: ['SBB Infrastruktur – Übersicht Lösch- und Rettungszüge sowie Datenblätter', 'SBB – Faktenblatt Lösch- und Rettungszug 2004, technische Daten', 'SBB Infrastruktur – Fahrtypenkatalog 2026, Fahrzeuggruppe LRZ'],
-    art: { typ: 'spezial', var: 'loesch', farbe: YEL, akzent: CRED }, bilder: [] },
+    art: { typ: 'spezial', var: 'loesch', farbe: YEL, akzent: CRED }, bilder: [
+      { src: 'bilder/lrz-04-c1.jpg', titel: 'LRZ 04 in Brig, 2016', foto: 'flybyeigenheer', lizenz: 'CC BY-SA 2.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/2.0', quelle: 'https://commons.wikimedia.org/wiki/File:SBB_CFF_FFS_Infra_XTmas_(24745875640).jpg' },
+      { src: 'bilder/lrz-04-c2.jpg', titel: 'LRZ 04 in Hohtenn', foto: 'Smiley.toerist', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:Hohtenn_station_2014_1.jpg' },
+      { src: 'bilder/lrz-04-c3.jpg', titel: 'LRZ 04 im Bahnhof Hohtenn', foto: 'Smiley.toerist', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:Hohtenn_station_2014_2.jpg' }
+    ] },
   { id: 'xrotm', kat: 'dienst', name: 'Schneeschleudern', beiname: 'Xrotm', typ: 'Spezialfahrzeuge für die Schneeräumung', vorlaeufig: false,
     text: ['SBB Infrastruktur verwendet mehrere Typen selbstfahrender Schneeschleudern.', 'Die Betriebsvorschrift unterscheidet vier Serien, die je nach Schneemenge, Strecke und Einsatzort unterschiedliche Aufgaben übernehmen.'],
     kennzahlen: [['4', 'Serien in der Vorschrift'], ['17', 'Fahrzeuge nach Nummernbereichen'], ['60–80 km/h', 'Vmax der grossen Typen'], ['95–115', 'betriebliche Fahrzeugnummern']],
@@ -749,20 +1090,21 @@ const ZUEGE = [
     ],
     quellen: ['SBB Infrastruktur – Fahrtypenkatalog 2026, Fahrtyp Xtmass 2/4, S. 59', 'Mermec – Produktübersicht ROGER 1000', 'Mermec – Messdienst der SBB auf einer DB-Hochgeschwindigkeitsstrecke'],
     art: { typ: 'spezial', var: 'mess', farbe: W1, akzent: YEL }, bilder: [
-      { src: 'bilder/diagnose-c1.jpg', titel: 'Messtriebwagen XTmass 99 85 9160 001 von MerMec in Lausanne', foto: 'NAC', lizenz: 'CC BY-SA 3.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/3.0', quelle: 'https://commons.wikimedia.org/wiki/File:FFS_XTmass_99_85_9_160_001-5_Lausanne_050809.jpg' }
+      { src: 'bilder/diagnose-c1.jpg', titel: 'Messtriebwagen XTmass 99 85 9160 001 von MerMec in Lausanne', foto: 'NAC', lizenz: 'CC BY-SA 3.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/3.0', quelle: 'https://commons.wikimedia.org/wiki/File:FFS_XTmass_99_85_9_160_001-5_Lausanne_050809.jpg' },
+      { src: 'bilder/diagnose-c2.jpg', titel: 'ROGER 1000 (XTmass 99 85 9160 001) in Lausanne, 2009', foto: 'NAC', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:FFS_XTmass_99_85_9_160_001-5_Lausanne_050809_1.jpg' }
     ] },
   { id: 'kirow-krc-1100', kat: 'dienst', name: 'Kirow KRC 1100', beiname: 'Multi Tasker', typ: 'Schwerer Eisenbahndrehkran für Intervention und Bau', vorlaeufig: false,
     text: ['Der SBB-Kran der Kirow-1100er-Klasse gehört zur neuen Grosskrangeneration.', 'Er ersetzte zusammen mit dem Multi Tasker 1200 die beiden älteren KRC 800.'],
     kennzahlen: [['1', 'SBB-Kran dieser Klasse'], ['2019', 'Ersatzprogramm abgeschlossen'], ['125 t', 'maximale Tragfähigkeit'], ['16°', 'Schwenken bei freiem Nachbargleis']],
-    daten: { 'Hersteller': 'Kirow Leipzig', 'Typ': 'Multi Tasker KRC 1100', 'Bauart': 'Eisenbahndrehkran', 'Maximale Tragfähigkeit': '125 t', 'Schwenkwinkel': 'bis 16° bei freiem Nachbargleis', 'Eigenmasse': 'nicht verlässlich publiziert', 'Transport': 'mit Schutzwagen, Gegengewicht darauf abgelegt', 'Netz': 'SBB-Normalspurnetz', 'Betreiber': 'SBB Infrastruktur', 'Vorgänger': 'einer der zwei KRC 800', 'Anzahl': '1', 'In Betrieb seit': '2019 (Ersatzprogramm 2016–2019)', 'Einsatz': 'Bergung, Hilfsbrücken, schwere Bauarbeiten' },
+    daten: { 'Hersteller': 'Kirow Leipzig', 'Typ': 'Multi Tasker KRC 1100', 'Bauart': 'Eisenbahndrehkran', 'Maximale Tragfähigkeit': '125 t', 'Schwenkwinkel': 'bis 16° bei freiem Nachbargleis', 'Eigenmasse': '112 t Transportgewicht (Herstellerdatenblatt)', 'Transport': 'mit Schutzwagen, Gegengewicht darauf abgelegt', 'Netz': 'SBB-Normalspurnetz', 'Betreiber': 'SBB Infrastruktur', 'Vorgänger': 'einer der zwei KRC 800', 'Anzahl': '1', 'In Betrieb seit': '2019 (Ersatzprogramm 2016–2019)', 'Einsatz': 'Bergung, Hilfsbrücken, schwere Bauarbeiten' },
     specOrder: ['Hersteller', 'Typ', 'Bauart', 'Maximale Tragfähigkeit', 'Schwenkwinkel', 'Eigenmasse', 'Transport', 'Netz', 'Betreiber', 'Vorgänger', 'Anzahl', 'In Betrieb seit', 'Einsatz'],
-    specNote: '125 t ist die maximale Tragfähigkeit und nicht die Masse des Krans. Eine belastbare SBB-spezifische Eigenmasse wurde nicht veröffentlicht.',
+    specNote: '125 t ist die maximale Tragfähigkeit und nicht die Masse des Krans. Die 112 t Transportgewicht stammen aus dem technischen Datenblatt des KRC 1100 von Kirow, nicht aus einer SBB-Unterlage.',
     abschnitte: [
       { titel: 'Beschaffung', p: ['Die SBB entschied sich im Dezember 2017 für den KRC 1100. Kirow beschreibt den Ersatz der zwei KRC 800 durch zwei neue Grosskrane zwischen 2016 und 2019; einer davon gehört zur 1100er-Klasse.'] },
       { titel: 'Arbeiten neben befahrenen Gleisen', p: ['Das angeschrägte Gegengewicht erlaubt laut Hersteller eine Drehung bis 16 Grad, während das Lichtraumprofil des Nachbargleises frei bleibt. In Transportstellung liegt das Gegengewicht auf einem Schutzwagen.'] },
       { titel: 'Leistungsangabe', p: ['Die maximale Tragfähigkeit gilt nur unter definierten Bedingungen. Die zulässige Last sinkt mit der Ausladung und hängt von Abstützung und Gleislage ab.'] }
     ],
-    quellen: ['Kirow – Chronik 2019: Ersatz der SBB-KRC-800 durch 1100er und 1200er', 'Kirow – Kirow Chronicle 01/2018, «Neuer Eisenbahnkran für die Schweizer Bundesbahn», S. 15'],
+    quellen: ['Kirow – Chronik 2019: Ersatz der SBB-KRC-800 durch 1100er und 1200er', 'Kirow – Kirow Chronicle 01/2018, «Neuer Eisenbahnkran für die Schweizer Bundesbahn», S. 15', 'Kirow – Technisches Datenblatt Multi Tasker KRC 1100'],
     art: { typ: 'spezial', var: 'kran', farbe: YEL, akzent: '#2E3338' }, bilder: [] },
   { id: 'kirow-800', kat: 'dienst', name: 'Kirow KRC 800', beiname: 'Kirow 1', typ: 'Historische Schienenkrane der 1990er-Jahre', vorlaeufig: false,
     text: ['Die SBB erhielt 1996 zwei Kirow-Krane der Leistungsklasse KRC 800.', 'Sie dienten schweren Bergungs- und Bauarbeiten und wurden zwischen 2016 und 2019 durch neue Grosskrane ersetzt.'],
@@ -776,14 +1118,14 @@ const ZUEGE = [
     quellen: ['SBB Infrastruktur – Fahrtypenkatalog 2026, Fahrtyp 5089, S. 275', 'Kirow – Chronik 2019: zwei KRC 800 von 1996 und deren Ersatz'],
     art: { typ: 'spezial', var: 'kran', farbe: YEL, akzent: '#2E3338' }, bilder: [] },
   { id: 'kirow-250', kat: 'dienst', name: 'Kirow KRC 250', beiname: '', typ: 'Eisenbahndrehkran für mittelschwere Hebearbeiten', vorlaeufig: false,
-    text: ['Der Kirow KRC 250 ist ein Eisenbahndrehkran für Bau- und Unterhaltsarbeiten.', 'Öffentlich zugängliche SBB-Unterlagen nennen technische Daten, veröffentlichen aber keine belastbare Gesamtstückzahl oder ein eindeutiges Beschaffungsjahr.'],
-    kennzahlen: [['169 t', 'Masse der Kranformation'], ['47 m', 'Länge der Formation'], ['80 km/h', 'Höchstgeschwindigkeit'], ['–', 'Stückzahl nicht publiziert']],
-    daten: { 'Hersteller': 'Kirow Leipzig', 'Typ': 'KRC 250', 'Formation': 'Kran mit Schutz- bzw. Gegengewichtswagen und Mannschaftswagen', 'Gewicht': 'rund 169 t (ganze Formation)', 'Länge': 'rund 47 m (ganze Formation)', 'Höchstgeschwindigkeit': '80 km/h', 'Antrieb': 'hydraulischer Kranantrieb, kein eigener Fahrantrieb', 'Tragfähigkeit': 'ausladungsabhängig', 'Betreiber': 'SBB Infrastruktur', 'Anzahl': 'öffentlich nicht dokumentiert' },
-    specOrder: ['Hersteller', 'Typ', 'Formation', 'Gewicht', 'Länge', 'Höchstgeschwindigkeit', 'Antrieb', 'Tragfähigkeit', 'Betreiber', 'Anzahl'],
-    specNote: 'Eine Zahl ohne verlässliche Primärquelle wird bewusst nicht angegeben. Kranmasse und Traglast sind verschiedene Werte.',
+    text: ['Der Kirow KRC 250 ist ein Eisenbahndrehkran für Bau- und Unterhaltsarbeiten.', 'Mindestens ein SBB-Kran dieses Typs ist spätestens 2005 belegt; eine genaue Gesamtstückzahl und ein Beschaffungsjahr sind öffentlich nicht verlässlich dokumentiert.'],
+    kennzahlen: [['169 t', 'Masse der Kranformation'], ['47 m', 'Länge der Formation'], ['80 km/h', 'Höchstgeschwindigkeit'], ['2005', 'spätestens im SBB-Bestand']],
+    daten: { 'Hersteller': 'Kirow Leipzig', 'Typ': 'KRC 250', 'Formation': 'Kran mit Schutz- bzw. Gegengewichtswagen und Mannschaftswagen', 'Gewicht': 'rund 169 t (ganze Formation)', 'Länge': 'rund 47 m (ganze Formation)', 'Höchstgeschwindigkeit': '80 km/h', 'Antrieb': 'hydraulischer Kranantrieb, kein eigener Fahrantrieb', 'Tragfähigkeit': 'ausladungsabhängig', 'Betreiber': 'SBB Infrastruktur', 'Anzahl': 'mindestens 1, Gesamtzahl nicht belegt', 'Im SBB-Bestand': 'spätestens 2005 (Fotobeleg)' },
+    specOrder: ['Hersteller', 'Typ', 'Formation', 'Gewicht', 'Länge', 'Höchstgeschwindigkeit', 'Antrieb', 'Tragfähigkeit', 'Betreiber', 'Anzahl', 'Im SBB-Bestand'],
+    specNote: 'Anzahl und Jahr sind bewusst nur als Mindeststand angegeben: Ein SBB-KRC-250 ist 2005 bildlich dokumentiert. Kranmasse und Traglast sind verschiedene Werte.',
     abschnitte: [
       { titel: 'Aufgabe', p: ['Der KRC 250 hebt Gleisjoche, Weichenbauteile und weitere schwere Lasten. Schutz- und Gegengewichtswagen gehören zur betrieblichen Formation; der Mannschaftswagen bietet Arbeits- und Aufenthaltsräume.'] },
-      { titel: 'Datenlage', p: ['Der SBB-Fahrtypenkatalog belegt Bauart, Formation und Fahrdaten. Eine aktuelle Flottenzahl oder ein Beschaffungsjahr ist dort nicht ausgewiesen.'] }
+      { titel: 'Datenlage', p: ['Der SBB-Fahrtypenkatalog belegt Bauart, Formation und Fahrdaten. Eine aktuelle Flottenzahl oder ein Beschaffungsjahr ist dort nicht ausgewiesen.', 'Ein Foto belegt mindestens einen SBB-KRC-250 im Jahr 2005. Mehr lässt sich aus öffentlichen Quellen derzeit nicht sicher sagen.'] }
     ],
     quellen: ['SBB Infrastruktur – Fahrtypenkatalog 2026, Fahrtyp 5090, S. 276', 'Kirow – Multi Tasker Produktbroschüre, Einsatzfelder von Eisenbahnkranen'],
     art: { typ: 'spezial', var: 'kran', farbe: YEL, akzent: '#2E3338' }, bilder: [] },
@@ -802,14 +1144,14 @@ const ZUEGE = [
   { id: 'bendini', kat: 'dienst', name: 'Bendini', beiname: 'XTms', typ: 'Kompakter Kranwagen der 30-tm-Klasse', vorlaeufig: false,
     text: ['Der Bendini ist ein kompakter Kranwagen für mittlere und leichtere Hebeaufgaben im Unterhalt der Bahninfrastruktur.', 'Der SBB-Fahrtypenkatalog führt ihn als aktiven, antriebslosen XTms-Kranwagen.'],
     kennzahlen: [['30 tm', 'Kranklasse'], ['100 km/h', 'Transportgeschwindigkeit'], ['38 t', 'Fahrzeugmasse'], ['8,1 m', 'Fahrzeuglänge']],
-    daten: { 'Hersteller': 'Bendini', 'Wagengattung': 'XTms', 'Basistyp': 'Baumaschine', 'Kranklasse': '30 tm', 'Länge': '8,1 m', 'Gewicht': '38 t', 'Höchstgeschwindigkeit': '100 km/h', 'Eigener Fahrantrieb': 'nein', 'Fahrzeugart': 'Güterwagen', 'Betreiber': 'SBB Infrastruktur', 'Einsatz': 'Unterhalt und Montage', 'Katalogstatus 2026': 'aktiv' },
-    specOrder: ['Hersteller', 'Wagengattung', 'Basistyp', 'Kranklasse', 'Länge', 'Gewicht', 'Höchstgeschwindigkeit', 'Eigener Fahrantrieb', 'Fahrzeugart', 'Betreiber', 'Einsatz', 'Katalogstatus 2026'],
-    specNote: 'Die 30-tm-Angabe bezeichnet die im SBB-Katalog verwendete Kranklasse; sie ist nicht mit der Fahrzeugmasse von 38 t gleichzusetzen.',
+    daten: { 'Hersteller': 'Bendini', 'Wagengattung': 'XTms', 'Basistyp': 'Baumaschine', 'Kranklasse': '30 tm', 'Länge': '8,1 m', 'Gewicht': '38 t', 'Höchstgeschwindigkeit': '100 km/h', 'Eigener Fahrantrieb': 'nein', 'Fahrzeugart': 'Güterwagen', 'Betreiber': 'SBB Infrastruktur', 'Anzahl': 'mehrere, Gesamtzahl nicht bestätigt', 'Fahrzeugnummern': 'Beispiele von XTm 91551 bis 91596', 'In Betrieb seit': '1980er-Jahre (Unterwagen 1984, 1985 und 1989 belegt)', 'Einsatz': 'Unterhalt und Montage', 'Katalogstatus 2026': 'aktiv' },
+    specOrder: ['Hersteller', 'Wagengattung', 'Basistyp', 'Kranklasse', 'Länge', 'Gewicht', 'Höchstgeschwindigkeit', 'Eigener Fahrantrieb', 'Fahrzeugart', 'Betreiber', 'Anzahl', 'Fahrzeugnummern', 'In Betrieb seit', 'Einsatz', 'Katalogstatus 2026'],
+    specNote: 'Die 30-tm-Angabe bezeichnet die im SBB-Katalog verwendete Kranklasse; sie ist nicht mit der Fahrzeugmasse von 38 t gleichzusetzen. Anzahl und Jahr sind bewusst nur als Mindeststand bzw. Zeitraum angegeben.',
     abschnitte: [
       { titel: 'Rolle in der Kranflotte', p: ['Mit nur 8,1 Metern Länge ist der Bendini deutlich kompakter als die schweren Kirow-Verbände.', 'Er eignet sich für lokale Montage- und Hebearbeiten, bei denen kein grosser Schwerkran nötig ist.'] },
       { titel: 'Geplante Ablösung', p: ['In der Beschaffungsplanung von SBB Infrastruktur erscheint ein Projekt für Krane mittlerer Lasten ausdrücklich als Ersatz des Bendini und weiterer älterer Krane.', 'Der Fahrtypenkatalog 2026 weist den Bendini dennoch weiterhin als aktiv aus.'] }
     ],
-    quellen: ['SBB Infrastruktur – Fahrtypenkatalog 2026, Fahrtyp 5011, S. 197', 'SBB Infrastruktur – Flottenmanagement Schienenfahrzeuge, Präsentation vom 4. Juni 2025, S. 20'],
+    quellen: ['SBB Infrastruktur – Fahrtypenkatalog 2026, Fahrtyp 5011, S. 197', 'SBB Infrastruktur – Flottenmanagement Schienenfahrzeuge, Präsentation vom 4. Juni 2025, S. 20', 'Rollmaterialverzeichnis Schweiz – SBB-Mutationen 1989 mit Ablieferungen der XTm-Kranwagen'],
     art: { typ: 'spezial', var: 'kran', farbe: YEL, akzent: '#2E3338' }, bilder: [] },
   { id: 'fahrleitung', kat: 'dienst', name: 'Fahrleitungsfahrzeuge', beiname: 'Hubi, Krani, Combi 4A', typ: 'Dienstfahrzeuge für Bau und Unterhalt der Fahrleitung', vorlaeufig: false,
     text: ['Fahrleitungsfahrzeuge bringen Personal, Werkzeuge und Material direkt zur Fahrleitung.', 'SBB Infrastruktur verwendet dafür mehrere Serien und Ausführungen; öffentlich genannte Beispiele sind Hubi, Krani und Combi 4A.'],
@@ -822,7 +1164,11 @@ const ZUEGE = [
       { titel: 'Abgrenzung', p: ['Diese Seite beschreibt die Fahrzeuggruppe. Für ein technisches Einzelporträt braucht es die genaue Serienbezeichnung und Fahrzeugnummer, weil Leistung, Masse, Länge und Baujahr stark variieren.'] }
     ],
     quellen: ['SBB Infrastruktur – Qualitätsstandard Aus- und Weiterbildungen mit den Serienbeispielen Hubi, Krani und Combi 4A'],
-    art: { typ: 'spezial', var: 'montage', farbe: YEL, akzent: '#2E3338' }, bilder: [] },
+    art: { typ: 'spezial', var: 'montage', farbe: YEL, akzent: '#2E3338' }, bilder: [
+      { src: 'bilder/fahrleitung-c1.jpg', titel: 'Montagewagen des Combi XTmass 99 85 9236 051 bei Bad Ragaz', foto: 'Kecko from Eastern Switzerland', lizenz: 'CC BY 2.0', lizenzUrl: 'https://creativecommons.org/licenses/by/2.0', quelle: 'https://commons.wikimedia.org/wiki/File:SBB_-_Catenary_Construction_Train_(49094462641).jpg' },
+      { src: 'bilder/fahrleitung-c2.jpg', titel: 'Fahrleitungsbauzug Combi zwischen Bad Ragaz und Sargans, 2019', foto: 'Kecko from Eastern Switzerland', lizenz: 'CC BY 2.0', lizenzUrl: 'https://creativecommons.org/licenses/by/2.0', quelle: 'https://commons.wikimedia.org/wiki/File:SBB_-_Catenary_Construction_Train_(49094652767).jpg' },
+      { src: 'bilder/fahrleitung-c3.jpg', titel: 'Kranwagen «Krani 3» mit Hubbühne für den Fahrleitungsbau', foto: 'Kecko from Eastern Switzerland', lizenz: 'CC BY 2.0', lizenzUrl: 'https://creativecommons.org/licenses/by/2.0', quelle: 'https://commons.wikimedia.org/wiki/File:SBB_Krani_3_-_Catenary_Construction_(50286160263).jpg' }
+    ] },
   // ---------- Historische Fahrzeuge (Katalogblatt folgt) ----------
   { id: 'h-ce68ii', kat: 'historisch', name: 'Ce 6/8 II', beiname: 'Krokodil', typ: 'Elektrische Güterzuglokomotive (historisch)',
     text: ['Das «Krokodil» ist die bekannteste Lokomotive der Schweiz. Die Güterzuglok mit Stangenantrieb fuhr vor allem am Gotthard.'],
@@ -834,9 +1180,17 @@ const ZUEGE = [
       { src: 'bilder/h-ce68ii-c4.jpg', titel: 'Ce 6/8 II 14282 in grüner Farbe', foto: 'Frank Nowotny', lizenz: 'CC BY 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:Ellok_14282_SBB.jpg' },
       { src: 'bilder/h-ce68ii-c5.jpg', titel: 'Ce 6/8 II 14253 in Erstfeld', foto: 'Kecko from Rural area, Eastern Switzerland', lizenz: 'CC BY 2.0', lizenzUrl: 'https://creativecommons.org/licenses/by/2.0', quelle: 'https://commons.wikimedia.org/wiki/File:Erstfeld_-_Crocodile_Ce_6-8_II_14253_(24414633606).jpg' }
     ] },
-  { id: 'h-ce68iii', kat: 'historisch', name: 'Ce 6/8 III', beiname: 'Krokodil', typ: 'Elektrische Güterzuglokomotive (historisch)',
-    text: ['Die zweite Krokodil-Bauart der SBB, äusserlich ähnlich wie die Ce 6/8 II, aber mit anderer Technik.'],
-    daten: { 'Achsfolge': '(1′C)(C1′)', 'Antrieb': 'elektrisch, Stangenantrieb', 'In Betrieb seit': '1926', 'Einsatz': 'Güterzüge' },
+  { id: 'h-ce68iii', kat: 'historisch', name: 'Ce 6/8 III', beiname: 'Krokodil', typ: 'Die jüngere Generation des Gotthard-Krokodils (historisch)', vorlaeufig: false,
+    nummern: [[14301, 14318], [13301, 13318]],
+    text: ['Die Ce 6/8 III ist die weiterentwickelte Bauart der berühmten Schweizer «Krokodil»-Lokomotive.', 'Ihre gegliederten Vorbauten und der Stangenantrieb machten sie zu einem unverwechselbaren Fahrzeug des schweren Güterverkehrs.'],
+    kennzahlen: [['18', 'Lokomotiven'], ['1926', 'erste Inbetriebnahme'], ['75 km/h', 'nach Umbau'], ['131 t', 'Dienstmasse']],
+    daten: { 'Hersteller': 'SLM, MFO', 'Achsfolge': '(1′C)(C1′)', 'Antrieb': 'Schrägstangen', 'Spurweite': 'Normalspur, 1435 mm', 'Stromsystem': '15 kV 16,7 Hz AC', 'Länge': '20,06 m', 'Gewicht': '131 t Dienstmasse', 'Leistung': '1810 kW Stundenleistung', 'Höchstgeschwindigkeit': '65 km/h, später 75 km/h', 'Nummern': '14301–14318, ab 1956 Be 6/8 III 13301–13318', 'Anzahl': '18', 'In Betrieb seit': '1926 (Baujahre 1926–1927)', 'Ausmusterung': 'Plandienst bis 1977', 'Einsatz': 'schwere Güterzüge' },
+    specOrder: ['Hersteller', 'Achsfolge', 'Antrieb', 'Spurweite', 'Stromsystem', 'Länge', 'Gewicht', 'Leistung', 'Höchstgeschwindigkeit', 'Nummern', 'Anzahl', 'In Betrieb seit', 'Ausmusterung', 'Einsatz'],
+    abschnitte: [
+      { titel: 'Geschichte und Einsatz', p: ['Die Serie war für schwere Güterzüge am Gotthard, auf den Zufahrtslinien und im Flachland vorgesehen.', 'Ab 1956 wurden die Lokomotiven schneller übersetzt und als Be 6/8 III bezeichnet. Der Plandienst endete 1977.'] },
+      { titel: 'Erhaltung', p: ['Die Ce 6/8 III 14305 ist als historisches Fahrzeug erhalten. Sie steht beispielhaft für die weltbekannte Krokodil-Bauform der SBB.'] }
+    ],
+    quellen: ['Wikipedia – SBB Ce 6/8 III: Technik und Umzeichnung', 'SBB Archiv – Ce 6/8 III 14305: historisches Fahrzeugporträt'],
     art: { typ: 'lok', form: 'kantig', farbe: '#5B4A2F', panto: true }, bilder: [
       { src: 'bilder/h-ce68iii-c1.jpg', titel: 'Ce 6/8 III 14305', foto: 'nzsteam', lizenz: 'CC BY 2.0', lizenzUrl: 'https://creativecommons.org/licenses/by/2.0', quelle: 'https://commons.wikimedia.org/wiki/File:SBB_Ce_6_8_III_14305_2019-10-19_01.jpg' },
       { src: 'bilder/h-ce68iii-c2.jpg', titel: 'Ce 6/8 III bei einer Fahrt von SBB Historic', foto: 'GoodRJ', lizenz: 'CC BY-SA 3.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/3.0', quelle: 'https://commons.wikimedia.org/wiki/File:CH_SBB_Historische_Fahrzeuge-2.jpg' },
@@ -844,9 +1198,17 @@ const ZUEGE = [
       { src: 'bilder/h-ce68iii-c4.jpg', titel: 'Ce 6/8 III 14305 zu Besuch in Malmö (2015)', foto: 'Philaweb', lizenz: 'CC BY-SA 3.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/3.0', quelle: 'https://commons.wikimedia.org/wiki/File:Crocodile_14305_in_Malm%C3%B6_2015.jpg' },
       { src: 'bilder/h-ce68iii-c5.jpg', titel: 'Fabrikschild der Ce 6/8 III 14305', foto: 'Joachim Seyferth', lizenz: 'CC BY 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:Detailansicht_mit_Fabrikschild_der_Schweizer_SBB-Lokomotive_Ce_6-8_III_14305.jpg' }
     ] },
-  { id: 'h-ae66', kat: 'historisch', name: 'Ae 6/6', beiname: 'Kantonslok', typ: 'Elektrische Gebirgslokomotive (historisch)',
-    text: ['Die Ae 6/6 wurde für schwere Züge am Gotthard gebaut. Viele Loks trugen das Wappen eines Kantons oder einer Stadt, daher der Name «Kantonslok».'],
-    daten: { 'Achsfolge': 'Co′Co′', 'Antrieb': 'elektrisch', 'Höchstgeschwindigkeit': '125 km/h', 'Anzahl': '120', 'In Betrieb seit': '1952', 'Einsatz': 'Gotthard, schwere Reise- und Güterzüge' },
+  { id: 'h-ae66', kat: 'historisch', name: 'Ae 6/6', beiname: 'Kantonslok', typ: 'Kantonslokomotive und Gotthard-Ikone (historisch)', vorlaeufig: false,
+    nummern: [[11401, 11520]],
+    text: ['Die Ae 6/6 war über Jahrzehnte das Kraftpaket der SBB am Gotthard.', 'Die ersten 25 Maschinen trugen Kantonswappen und Chromzierleisten; spätere Lokomotiven erhielten die Wappen von Schweizer Städten und Gemeinden.'],
+    kennzahlen: [['120', 'Lokomotiven'], ['125 km/h', 'Höchstgeschwindigkeit'], ['1952', 'erste Inbetriebnahme'], ['4300 kW', 'Dauerleistung']],
+    daten: { 'Hersteller': 'SLM, BBC, MFO', 'Achsfolge': 'Co′Co′', 'Spurweite': 'Normalspur, 1435 mm', 'Stromsystem': '15 kV 16,7 Hz AC', 'Länge': '18,40 m', 'Gewicht': '120 t (Prototypen 124 t)', 'Leistung': '4300 kW Dauerleistung', 'Anfahrzugkraft': '392 kN', 'Höchstgeschwindigkeit': '125 km/h', 'Nummern': '11401–11520', 'Anzahl': '120', 'In Betrieb seit': '1952 (Serie 1955–1966)', 'Ausmusterung': '2002–2013', 'Einsatz': 'Gotthard, schwere Reise- und Güterzüge' },
+    specOrder: ['Hersteller', 'Achsfolge', 'Spurweite', 'Stromsystem', 'Länge', 'Gewicht', 'Leistung', 'Anfahrzugkraft', 'Höchstgeschwindigkeit', 'Nummern', 'Anzahl', 'In Betrieb seit', 'Ausmusterung', 'Einsatz'],
+    abschnitte: [
+      { titel: 'Geschichte und Einsatz', p: ['Zunächst prägte die Ae 6/6 den Schnell- und Güterverkehr am Gotthard. Mit moderneren Lokomotiven verlagerte sich ihr Einsatz zunehmend in den Güterverkehr und ins Mittelland.'] },
+      { titel: 'Erhaltung', p: ['Mehrere Ae 6/6 blieben erhalten. Die Ae 6/6 11421 «Graubünden» gehört zum Bestand von SBB Historic und hält die Epoche der Kantonslokomotiven lebendig.'] }
+    ],
+    quellen: ['Wikipedia – SBB Ae 6/6: Technik, Wappen und Einsatzgeschichte', 'SBB Archiv – Ae 6/6 11421: historisches Fahrzeugporträt'],
     art: { typ: 'lok', form: 'kantig', achsen: 6, farbe: '#3E5A3B', panto: true }, bilder: [
       { src: 'bilder/h-ae66-c1.jpg', titel: 'Ae 6/6 11413 «Schaffhausen»', foto: 'kitmasterbloke', lizenz: 'CC BY 2.0', lizenzUrl: 'https://creativecommons.org/licenses/by/2.0', quelle: 'https://commons.wikimedia.org/wiki/File:11413_%22Schauffenhausen%22_Ae_6_6_Electric_loco_1952.jpg' },
       { src: 'bilder/h-ae66-c2.jpg', titel: 'Ae 6/6 im Verkehrshaus Luzern', foto: 'Andrew Bossi', lizenz: 'CC BY-SA 2.5', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/2.5', quelle: 'https://commons.wikimedia.org/wiki/File:6247_-_Luzern_-_Verkehrshaus_-_SBB-CFF-FFS_Ae_6-6.JPG' },
@@ -864,9 +1226,17 @@ const ZUEGE = [
       { src: 'bilder/h-ae47-c4.jpg', titel: 'Ae 4/7 mit Güterzug', foto: 'Kabelleger / David Gubler', lizenz: 'CC BY-SA 3.0', lizenzUrl: 'http://creativecommons.org/licenses/by-sa/3.0/', quelle: 'https://commons.wikimedia.org/wiki/File:Ae4-7.jpg' },
       { src: 'bilder/h-ae47-c5.jpg', titel: 'Ae 4/7 bei Salgesch', foto: 'Kabelleger / David Gubler (http://www.bahnbilder.ch)', lizenz: 'CC BY-SA 3.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/3.0', quelle: 'https://commons.wikimedia.org/wiki/File:SBB_Ae_4-7_Salgesch.jpg' }
     ] },
-  { id: 'h-ae36i', kat: 'historisch', name: 'Ae 3/6 I', beiname: '', typ: 'Elektrische Schnellzuglokomotive (historisch)',
-    text: ['Frühe elektrische Schnellzuglok der SBB aus der Zeit der ersten grossen Elektrifizierung.'],
-    daten: { 'Antrieb': 'elektrisch, Buchli-Antrieb', 'In Betrieb seit': '1921', 'Einsatz': 'Schnellzüge im Flachland' },
+  { id: 'h-ae36i', kat: 'historisch', name: 'Ae 3/6 I', beiname: '', typ: 'Buchli-Lokomotive für das elektrifizierte Mittelland (historisch)', vorlaeufig: false,
+    nummern: [[10601, 10714]],
+    text: ['Die Ae 3/6 I war eine der wichtigsten frühen Elektrolokomotiven der SBB.', 'Der markante Buchli-Einzelachsantrieb und ihre lange Einsatzdauer machten die Serie zu einem Symbol der Elektrifizierung des Mittellands.'],
+    kennzahlen: [['114', 'Lokomotiven'], ['110 km/h', 'spätere Höchstgeschwindigkeit'], ['1921', 'erste Inbetriebnahme'], ['73 Jahre', 'Einsatz bis 1994']],
+    daten: { 'Hersteller': 'SLM, BBC, MFO, SAAS', 'Achsfolge': '2′Co1′', 'Antrieb': 'Buchli-Einzelachsantrieb', 'Spurweite': 'Normalspur, 1435 mm', 'Stromsystem': '15 kV 16,7 Hz AC', 'Länge': '14,76 m', 'Gewicht': '92–96 t Dienstmasse', 'Leistung': '1470–1635 kW Stundenleistung', 'Höchstgeschwindigkeit': '100 / 110 km/h', 'Nummern': '10601–10714', 'Anzahl': '114', 'In Betrieb seit': '1921 (Baujahre 1920–1929)', 'Ausmusterung': 'bis 1994', 'Einsatz': 'Personen-, Schnell- und Güterzüge' },
+    specOrder: ['Hersteller', 'Achsfolge', 'Antrieb', 'Spurweite', 'Stromsystem', 'Länge', 'Gewicht', 'Leistung', 'Höchstgeschwindigkeit', 'Nummern', 'Anzahl', 'In Betrieb seit', 'Ausmusterung', 'Einsatz'],
+    abschnitte: [
+      { titel: 'Geschichte und Einsatz', p: ['Die grosse Serie wurde in mehreren Baulosen beschafft und im Personen-, Schnell- und Güterverkehr eingesetzt. Verbesserungen während der Bauzeit führten zu Unterschieden bei Leistung und Geschwindigkeit innerhalb der Flotte.'] },
+      { titel: 'Bedeutung und Erhaltung', p: ['Mit Einsätzen von 1921 bis 1994 zählt die Ae 3/6 I zu den langlebigsten SBB-Lokomotivserien. Mehrere Lokomotiven blieben als Museums- und Vereinsfahrzeuge erhalten, darunter die 10700 im Umfeld von SBB Historic.'] }
+    ],
+    quellen: ['Wikipedia – SBB Ae 3/6 I: Technik, Baulose und Einsatz', 'SBB Archiv – Ae 3/6 I 10700: historisches Fahrzeugporträt'],
     art: { typ: 'lok', form: 'kantig', farbe: '#3E5A3B', panto: true }, bilder: [
       { src: 'bilder/h-ae36i-c1.jpg', titel: 'Ae 3/6 I 10700', foto: 'Mrangel44', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:Ae_3-6_I_10700.jpg' },
       { src: 'bilder/h-ae36i-c2.jpg', titel: 'Ae 3/6 I mit Buchli-Antrieb', foto: 'David Gubler', lizenz: 'CC BY-SA 3.0', lizenzUrl: 'http://creativecommons.org/licenses/by-sa/3.0/', quelle: 'https://commons.wikimedia.org/wiki/File:Ae_3-6-I_buchli.jpg' },
@@ -874,9 +1244,17 @@ const ZUEGE = [
       { src: 'bilder/h-ae36i-c4.jpg', titel: 'Ae 3/6 I 10712 in Biel/Bienne (1988)', foto: 'Phil Richards from London, UK', lizenz: 'CC BY-SA 2.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/2.0', quelle: 'https://commons.wikimedia.org/wiki/File:05.08.88_Biel_Bienne_SBB_Ae_3_6%C2%B9_10712_(54325862482).jpg' },
       { src: 'bilder/h-ae36i-c5.jpg', titel: 'Ae 3/6 I 10638', foto: 'Unknown authorUnknown author', lizenz: 'Public domain', lizenzUrl: '', quelle: 'https://commons.wikimedia.org/wiki/File:SBB_Ae_3-6_I_10638.jpg' }
     ] },
-  { id: 'h-ae814', kat: 'historisch', name: 'Ae 8/14', beiname: 'Landi-Lok', typ: 'Elektrische Doppellokomotive (historisch)',
-    text: ['Die Ae 8/14 sind riesige Doppellokomotiven für den Gotthard. Es entstanden nur drei Stück; die Nummer 11852 wurde an der Landesausstellung 1939 gezeigt und heisst deshalb «Landi-Lok».'],
-    daten: { 'Antrieb': 'elektrisch', 'Anzahl': '3 (11801, 11851, 11852)', 'In Betrieb seit': '1931', 'Einsatz': 'Gotthard' },
+  { id: 'h-ae814', kat: 'historisch', name: 'Ae 8/14', beiname: 'Landi-Lok', typ: 'Drei einzigartige Doppellokomotiven für den Gotthard (historisch)', vorlaeufig: false,
+    nummern: [[11801, 11801], [11851, 11852]],
+    text: ['Die Bezeichnung Ae 8/14 umfasst drei einzeln entwickelte Doppellokomotiven.', 'Sie sollten schwere Gotthardzüge ohne Vorspann- oder Schiebelokomotive befördern und galten bei ihrer Entstehung als aussergewöhnlich leistungsfähig.'],
+    kennzahlen: [['3', 'Prototypen'], ['1931', 'erste Inbetriebnahme'], ['bis 110 km/h', 'Höchstgeschwindigkeit'], ['8162 kW', 'maximale Stundenleistung']],
+    daten: { 'Hersteller': 'SLM, BBC bzw. MFO', 'Achsfolge': 'je nach Lokomotive verschieden', 'Spurweite': 'Normalspur, 1435 mm', 'Stromsystem': '15 kV 16,7 Hz AC', 'Länge': 'rund 34 m', 'Gewicht': '235,7–246 t Dienstmasse', 'Leistung': '5514–8162 kW Stundenleistung', 'Höchstgeschwindigkeit': '100 / 100 / 110 km/h', 'Nummern': '11801, 11851, 11852', 'Anzahl': '3', 'In Betrieb seit': '1931 (Baujahre 1931, 1932, 1938/40)', 'Einsatz': 'schwere Gotthardzüge' },
+    specOrder: ['Hersteller', 'Achsfolge', 'Spurweite', 'Stromsystem', 'Länge', 'Gewicht', 'Leistung', 'Höchstgeschwindigkeit', 'Nummern', 'Anzahl', 'In Betrieb seit', 'Einsatz'],
+    abschnitte: [
+      { titel: 'Drei unterschiedliche Einzelstücke', p: ['Die 11801, 11851 und 11852 unterschieden sich in Antrieb, Leistung und Aufbau.', 'Die 11852 entstand zur Landesausstellung 1939 und wurde als «Landi-Lok» bekannt. Mit über 8 MW war sie lange die leistungsstärkste Lokomotive der Welt.'] },
+      { titel: 'Erhaltung', p: ['Die Ae 8/14 11852 ist bei SBB Historic in Erstfeld erhalten. Sie ist derzeit nicht betriebsfähig, kann aber als historisches Schlüsselstück besichtigt werden.'] }
+    ],
+    quellen: ['Wikipedia – SBB Ae 8/14: drei Prototypen und technische Varianten', 'SBB Archiv – Ae 8/14 11852: Porträt der Landi-Lok'],
     art: { typ: 'lok', form: 'kantig', achsen: 6, farbe: '#3E5A3B', panto: true }, bilder: [
       { src: 'bilder/h-ae814-c1.jpg', titel: 'Ae 8/14 11801 in Biasca', foto: 'NAC', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:11_FFS_Ae_8-14_11801_Biasca_170417.jpg' },
       { src: 'bilder/h-ae814-c2.jpg', titel: 'Ae 8/14 11852 «Landi-Lok» im Verkehrshaus', foto: 'Falk2', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:C2.06a_Lokomotive_Ae_8-14_11852.jpg' },
@@ -884,9 +1262,17 @@ const ZUEGE = [
       { src: 'bilder/h-ae814-c4.jpg', titel: 'Ae 8/14 11801 bei einer Sonderfahrt', foto: 'Peter Alder', lizenz: 'Public domain', lizenzUrl: '', quelle: 'https://commons.wikimedia.org/wiki/File:SBB_Ae_8_14_11801_Rail_Top.jpg' },
       { src: 'bilder/h-ae814-c5.jpg', titel: 'Ae 8/14 11801 in Bellinzona', foto: 'JoachimKohler-HB', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:SBB_Ae_8-14_Nr._11801_in_Bellinzona.jpg' }
     ] },
-  { id: 'h-be46', kat: 'historisch', name: 'Be 4/6', beiname: '', typ: 'Frühe elektrische Lokomotive (historisch)',
-    text: ['Eine der ersten elektrischen Streckenlokomotiven der SBB für die Gotthardlinie.'],
-    daten: { 'Antrieb': 'elektrisch, Stangenantrieb', 'In Betrieb seit': '1920', 'Einsatz': 'Gotthard' },
+  { id: 'h-be46', kat: 'historisch', name: 'Be 4/6', beiname: 'Rehbock', typ: 'Frühe elektrische Gotthardlokomotive (historisch)', vorlaeufig: false,
+    nummern: [[12303, 12342]],
+    text: ['Die Be 4/6 gehörte zur ersten Generation elektrischer Gotthardlokomotiven.', 'Wegen ihrer markanten Bauform erhielt sie den Übernamen «Rehbock» und führte zunächst schwere Schnellzüge auf der Bergstrecke.'],
+    kennzahlen: [['40', 'Lokomotiven'], ['75 km/h', 'Höchstgeschwindigkeit'], ['1920', 'erste Inbetriebnahme'], ['107–110 t', 'Dienstmasse']],
+    daten: { 'Hersteller': 'SLM, BBC', 'Achsfolge': '1′Bo1′Bo′', 'Spurweite': 'Normalspur, 1435 mm', 'Stromsystem': '15 kV 16,7 Hz AC', 'Länge': '16,50 m', 'Gewicht': '107–110 t Dienstmasse', 'Leistung': 'bis 1500 kW Stundenleistung', 'Höchstgeschwindigkeit': '75 km/h', 'Nummern': '12303–12342', 'Anzahl': '40', 'In Betrieb seit': '1920 (Baujahre 1920–1923)', 'Ausmusterung': 'bis 1976', 'Einsatz': 'Schnell- und Güterzüge' },
+    specOrder: ['Hersteller', 'Achsfolge', 'Spurweite', 'Stromsystem', 'Länge', 'Gewicht', 'Leistung', 'Höchstgeschwindigkeit', 'Nummern', 'Anzahl', 'In Betrieb seit', 'Ausmusterung', 'Einsatz'],
+    abschnitte: [
+      { titel: 'Geschichte und Einsatz', p: ['Die SBB bestellte die Serie für den elektrischen Betrieb am Gotthard. Mit zunehmender Zugmasse wurden die Maschinen von stärkeren Bauarten verdrängt und später im Mittelland und in untergeordneten Diensten eingesetzt.'] },
+      { titel: 'Erhaltung', p: ['Die Be 4/6 12320 gehört zum historischen Fahrzeugbestand. Sie erinnert an die Pionierzeit der elektrischen Zugförderung auf der Gotthardbahn.'] }
+    ],
+    quellen: ['Wikipedia – SBB Be 4/6: technische Daten und Geschichte', 'SBB Archiv – Be 4/6 12320: historisches Fahrzeugporträt'],
     art: { typ: 'lok', form: 'kantig', farbe: '#3E5A3B', panto: true }, bilder: [
       { src: 'bilder/h-be46-c1.jpg', titel: 'Be 4/6 12320 neben dem RAe TEE II 1053', foto: 'Fabien Perissinotto', lizenz: 'CC BY-SA 3.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/3.0', quelle: 'https://commons.wikimedia.org/wiki/File:SBB_Be_4-6_12320_and_RAe_TEE_II_1053.JPG' },
       { src: 'bilder/h-be46-c2.jpg', titel: 'Be 4/6 von SBB Historic zwischen Rämismühle-Zell und Rikon', foto: 'Kabelleger / David Gubler (http://www.bahnbilder.ch)', lizenz: 'CC BY-SA 3.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/3.0', quelle: 'https://commons.wikimedia.org/wiki/File:SBB_Historic_Be_4-6_zwischen_R%C3%A4mism%C3%BChle-Zell_und_Rikon.jpg' },
@@ -894,9 +1280,17 @@ const ZUEGE = [
       { src: 'bilder/h-be46-c4.jpg', titel: 'Be 4/6 bei Rämismühle', foto: 'SchmalspurDVZO', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:Be_4-6_Rehbock_R%C3%A4mism%C3%BChle.jpg' },
       { src: 'bilder/h-be46-c5.jpg', titel: 'Be 4/6 12339', foto: 'Davide Oliva', lizenz: 'CC BY-SA 2.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/2.0', quelle: 'https://commons.wikimedia.org/wiki/File:SBB_Be_4_6_12339.jpg' }
     ] },
-  { id: 'h-re44i', kat: 'historisch', name: 'Re 4/4 I', beiname: '', typ: 'Leichte elektrische Schnellzuglokomotive (historisch)',
-    text: ['Die Re 4/4 I war eine leichte, schnelle Lok für Schnell- und Pendelzüge. Später zog sie oft Regionalzüge.'],
-    daten: { 'Achsfolge': 'Bo′Bo′', 'Antrieb': 'elektrisch', 'Höchstgeschwindigkeit': '125 km/h', 'Anzahl': '50', 'In Betrieb seit': '1946' },
+  { id: 'h-re44i', kat: 'historisch', name: 'Re 4/4 I', beiname: '', typ: 'Leichte Schnellzuglokomotive der Nachkriegszeit (historisch)', vorlaeufig: false,
+    nummern: [[10001, 10050]],
+    text: ['Die Re 4/4 I war die erste Drehgestelllokomotive der SBB.', 'Sie war auf schnelle, leichte Züge abgestimmt und prägte zusammen mit den Leichtstahlwagen den hochwertigen Verkehr im Mittelland.'],
+    kennzahlen: [['50', 'Lokomotiven'], ['125 km/h', 'Höchstgeschwindigkeit'], ['1946', 'erste Inbetriebnahme'], ['57 t', 'Dienstmasse']],
+    daten: { 'Hersteller': 'SLM, BBC, MFO, SAAS', 'Achsfolge': 'Bo′Bo′', 'Spurweite': 'Normalspur, 1435 mm', 'Stromsystem': '15 kV 16,7 Hz AC', 'Länge': '14,7 / 14,9 m (je Serie)', 'Gewicht': '57 t Dienstmasse', 'Leistung': '1850 / 1900 kW Stundenleistung', 'Anfahrzugkraft': '135 kN', 'Höchstgeschwindigkeit': '125 km/h', 'Nummern': '10001–10050 (früher 401–450)', 'Anzahl': '50', 'In Betrieb seit': '1946 (Baujahre 1946–1951)', 'Ausmusterung': '1996–1998', 'Einsatz': 'Schnell- und Pendelzüge, später Regionalzüge' },
+    specOrder: ['Hersteller', 'Achsfolge', 'Spurweite', 'Stromsystem', 'Länge', 'Gewicht', 'Leistung', 'Anfahrzugkraft', 'Höchstgeschwindigkeit', 'Nummern', 'Anzahl', 'In Betrieb seit', 'Ausmusterung', 'Einsatz'],
+    abschnitte: [
+      { titel: 'Geschichte und Einsatz', p: ['Die Lokomotiven entstanden in zwei Serien. Ihr geringes Gewicht, die gute Laufruhe und 125 km/h Höchstgeschwindigkeit machten sie ideal für Schnell- und Pendlerzüge.', 'Später wechselten sie in Regional- und Verstärkungsdienste.'] },
+      { titel: 'Erhaltung', p: ['Die planmässige Ausmusterung erfolgte 1996 bis 1998. Die Re 4/4 I 10001 ist als historische Lokomotive bei SBB Historic erhalten.'] }
+    ],
+    quellen: ['Wikipedia – SBB Re 4/4 I: Serien, Technik und Einsatz', 'SBB Archiv – Re 4/4 I 10001: historisches Fahrzeugporträt'],
     art: { typ: 'lok', form: 'kantig', kurz: true, farbe: '#3E5A3B', panto: true }, bilder: [
       { src: 'bilder/h-re44i-c1.jpg', titel: 'Re 4/4 I 10029 in Stein am Rhein (1991)', foto: 'Phil Richards from London, UK', lizenz: 'CC BY-SA 2.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/2.0', quelle: 'https://commons.wikimedia.org/wiki/File:10.02.91_Stein_am_Rhein_SBB_Re4_4%C2%B9_10029_(5943276027).jpg' },
       { src: 'bilder/h-re44i-c2.jpg', titel: 'Re 4/4 I 10019', foto: 'MPW57 at de.wikipedia', lizenz: 'Public domain', lizenzUrl: '', quelle: 'https://commons.wikimedia.org/wiki/File:4_I_10019.jpg' },
@@ -904,9 +1298,16 @@ const ZUEGE = [
       { src: 'bilder/h-re44i-c4.jpg', titel: 'Re 4/4 I 10019 in Basel Badischer Bahnhof', foto: 'Fabien Perissinotto', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:CBB_Re_4-4_I_10019_-_Basel_Badischer_Bahnhof,_27th_May_2012.JPG' },
       { src: 'bilder/h-re44i-c5.jpg', titel: 'Re 4/4 I 10032 in České Velenice', foto: 'Bernhard Graf ÖMT', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:2023-05-28_Cesk%C3%A9_Velenice_SBB_Re_4%274_10032.jpg' }
     ] },
-  { id: 'h-tee', kat: 'historisch', name: 'RAe TEE II', beiname: 'Gottardo', typ: 'Vierstrom-Triebzug für den TEE-Verkehr (historisch)',
-    text: ['Elegante Triebzüge für den internationalen Trans-Europ-Express, unter anderem als «Gottardo» zwischen Basel/Zürich und Mailand. Sie fuhren unter vier Stromsystemen.'],
-    daten: { 'Antrieb': 'elektrisch, vier Stromsysteme', 'Anzahl': '5', 'In Betrieb seit': '1961', 'Einsatz': 'Trans-Europ-Express' },
+  { id: 'h-tee', kat: 'historisch', name: 'RAe TEE II', beiname: 'Gottardo', typ: 'Vierstrom-Triebzug für den internationalen Spitzenverkehr (historisch)', vorlaeufig: false,
+    text: ['Der RAe TEE II verband die Schweiz ohne Lokwechsel mit Deutschland, Frankreich, Italien und den Niederlanden.', 'Seine Vierstromtechnik machte ihn zu einem der technisch anspruchsvollsten europäischen Triebzüge seiner Zeit.'],
+    kennzahlen: [['5', 'Triebzüge'], ['160 km/h', 'technische Höchstgeschwindigkeit'], ['1961', 'erste Inbetriebnahme'], ['4', 'Stromsysteme']],
+    daten: { 'Hersteller': 'SIG, MFO', 'Zugbildung': 'sechsteilig', 'Spurweite': 'Normalspur, 1435 mm', 'Stromsystem': '15 kV und 25 kV AC, 1,5 kV und 3 kV DC', 'Länge': '149,76 m', 'Gewicht': 'ca. 309 t Dienstmasse', 'Leistung': 'ca. 2310 kW', 'Höchstgeschwindigkeit': '140 km/h betrieblich, 160 km/h technisch', 'Nummern': '1051–1055', 'Anzahl': '5', 'In Betrieb seit': '1961 (fünfter Zug 1967)', 'Einsatz': 'Trans-Europ-Express, später EuroCity' },
+    specOrder: ['Hersteller', 'Zugbildung', 'Spurweite', 'Stromsystem', 'Länge', 'Gewicht', 'Leistung', 'Höchstgeschwindigkeit', 'Nummern', 'Anzahl', 'In Betrieb seit', 'Einsatz'],
+    abschnitte: [
+      { titel: 'Geschichte und Einsatz', p: ['Vier Einheiten wurden 1961 abgeliefert, der fünfte Zug folgte 1967. Die eleganten Triebzüge liefen unter anderem als TEE Gottardo, Cisalpin, Edelweiss und Roland.', 'Ab 1988 fuhren sie als graue RABe EC im EuroCity-Verkehr.'] },
+      { titel: 'Erhaltung', p: ['Der Zug RAe TEE II 1053 blieb erhalten. SBB Historic versetzte ihn wieder in den rot-beigen TEE-Zustand; seit 2003 fährt er bei historischen Sonderfahrten.'] }
+    ],
+    quellen: ['Wikipedia – SBB RAe TEE II: Bau, Technik und Einsatzgeschichte', 'SBB Archiv – RAe TEE II 1053: historisches Fahrzeugporträt'],
     art: { typ: 'triebzug', nase: 'lang', farbe: '#C9C2B0', akzent: '#7A1F1F', tuer: '#7A1F1F', panto: true }, bilder: [
       { src: 'bilder/h-tee-c1.jpg', titel: 'RAe TEE II am Bahnsteig', foto: 'Lord Koxinga', lizenz: 'CC BY-SA 3.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/3.0', quelle: 'https://commons.wikimedia.org/wiki/File:2007_0606_125GOT_SBB_00043.jpg' },
       { src: 'bilder/h-tee-c2.jpg', titel: 'RAe TEE II in Zürich HB, 1963', foto: 'Heinz Baumann', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:ETH-BIB_Com_C12-127-001-003_FFS_RAe_TEE_II_Zuerich_HB_1963.jpg' },
@@ -914,21 +1315,42 @@ const ZUEGE = [
       { src: 'bilder/h-tee-c4.jpg', titel: 'RAe TEE II unterwegs', foto: 'Lord Koxinga', lizenz: 'CC BY-SA 3.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/3.0', quelle: 'https://commons.wikimedia.org/wiki/File:2007_0606_125GOT_SBB_00089.jpg' },
       { src: 'bilder/h-tee-c5.jpg', titel: 'RAe TEE II in Zürich HB, 1963', foto: 'Heinz Baumann', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:ETH-BIB_Com_C12-127-001-006_FFS_RAe_TEE_II_Zuerich_HB_1963.jpg' }
     ] },
-  { id: 'h-roterpfeil', kat: 'historisch', name: 'RCe 2/4', beiname: 'Roter Pfeil', typ: 'Leichttriebwagen (historisch)',
-    text: ['Die «Roten Pfeile» waren schnelle Leichttriebwagen der 1930er-Jahre, später beliebt für Ausflugs- und Extrafahrten.'],
-    daten: { 'Antrieb': 'elektrisch', 'In Betrieb seit': '1935', 'Einsatz': 'Schnelle Verbindungen, später Ausflugsfahrten' },
+  { id: 'h-roterpfeil', kat: 'historisch', name: 'RCe 2/4', beiname: 'Roter Pfeil', typ: 'Elektrischer Leichttriebwagen für Ausflugs- und Schnellfahrten (historisch)', vorlaeufig: false,
+    text: ['Die eleganten Leichttriebwagen wurden 1935 als CLe 2/4 geliefert und später zu RCe 2/4 umgezeichnet.', 'Ihre rote Stromlinienform machte sie zu einem der bekanntesten Symbole der modernen SBB der 1930er-Jahre.'],
+    kennzahlen: [['7', 'elektrische Grundfahrzeuge'], ['125 km/h', 'Höchstgeschwindigkeit'], ['1935', 'erste Inbetriebnahme'], ['70', 'Sitzplätze']],
+    daten: { 'Hersteller': 'SLM, MFO, BBC, SAAS', 'Achsfolge': 'Bo′2′', 'Spurweite': 'Normalspur, 1435 mm', 'Stromsystem': '15 kV 16,7 Hz AC', 'Länge': '22,40 m', 'Gewicht': 'ca. 38 t Dienstmasse', 'Leistung': '404 kW Stundenleistung, 315 kW Dauerleistung', 'Höchstgeschwindigkeit': '125 km/h', 'Sitzplätze': '70', 'Nummern': '201–207, später 601–607', 'Anzahl': '7', 'In Betrieb seit': '1935', 'Spätere Bezeichnung': 'RBe 2/4', 'Ausmusterung': '1967–1984', 'Einsatz': 'Ausflugs- und Gesellschaftsfahrten, schnelle Sonderleistungen' },
+    specOrder: ['Hersteller', 'Achsfolge', 'Spurweite', 'Stromsystem', 'Länge', 'Gewicht', 'Leistung', 'Höchstgeschwindigkeit', 'Sitzplätze', 'Nummern', 'Anzahl', 'In Betrieb seit', 'Spätere Bezeichnung', 'Ausmusterung', 'Einsatz'],
+    abschnitte: [
+      { titel: 'Bezeichnungen und Umbauten', p: ['Aus den sieben elektrischen CLe 2/4 entstanden ab 1944 RCe 2/4. Zwei Fahrzeuge wurden 1952/53 zu RAe 2/4 mit Polstersitzen umgebaut.', 'Deshalb unterscheiden sich Bestandsangaben je nach Bezeichnung und Zeitspanne.'] },
+      { titel: 'Einsatz und Bedeutung', p: ['Die Roten Pfeile dienten Ausflugsfahrten, Gesellschaftsreisen und schnellen Sonderleistungen. Ihr geringes Gewicht und die aerodynamische Form verkörperten den technischen Aufbruch der Zwischenkriegszeit.'] }
+    ],
+    quellen: ['Wikipedia – SBB CLe 2/4 und RCe 2/4: Bau, Umbauten und technische Daten', 'SBB Historic – Fahrzeugsammlung und historische Rote Pfeile'],
     art: { typ: 'triebzug', nase: 'lang', farbe: RED, akzent: '#F3F4F2', tuer: '#8E1A1F', panto: true }, bilder: [
       { src: 'bilder/h-roterpfeil-c2.jpg', titel: 'Roter Pfeil RCe 2/4 203', foto: 'Martin Sauter', lizenz: 'CC BY-SA 3.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/3.0', quelle: 'https://commons.wikimedia.org/wiki/File:SBB_RCe_2-4_203_Roter_Pfeil_02.jpg' }
     ] },
-  { id: 'h-a35', kat: 'historisch', name: 'A 3/5', beiname: '', typ: 'Dampf-Schnellzuglokomotive (historisch)',
-    text: ['Schnellzug-Dampflokomotive aus der Anfangszeit der SBB.'],
-    daten: { 'Antrieb': 'Dampf', 'Einsatz': 'Schnellzüge' },
+  { id: 'h-a35', kat: 'historisch', name: 'A 3/5', beiname: '', typ: 'Schnellzug-Dampflokomotive der Serie 701–809 (historisch)', vorlaeufig: false,
+    text: ['Die Bezeichnung A 3/5 wurde bei der SBB für mehrere Bauarten verwendet.', 'Diese Seite behandelt die bekannte JS/SBB-Serie 701–809, zu der auch die erhaltene A 3/5 705 gehört.'],
+    kennzahlen: [['109', 'Lokomotiven der Serie'], ['100 km/h', 'Höchstgeschwindigkeit'], ['1902', 'erste Inbetriebnahme'], ['920 kW', 'indizierte Leistung']],
+    daten: { 'Hersteller': 'SLM Winterthur', 'Bauart': '2′C n4v / 2′C h4v', 'Spurweite': 'Normalspur, 1435 mm', 'Länge': '18,60 m mit Tender', 'Gewicht': '106–107 t Dienstmasse mit Tender', 'Leistung': '920 kW (indiziert)', 'Anfahrzugkraft': 'ca. 75 kN', 'Höchstgeschwindigkeit': '100 km/h', 'Nummern': '701–809', 'Anzahl': '109', 'In Betrieb seit': '1902 (Baujahre 1902–1909)', 'Ausmusterung': '1926–1964', 'Einsatz': 'Schnellzüge' },
+    specOrder: ['Hersteller', 'Bauart', 'Spurweite', 'Länge', 'Gewicht', 'Leistung', 'Anfahrzugkraft', 'Höchstgeschwindigkeit', 'Nummern', 'Anzahl', 'In Betrieb seit', 'Ausmusterung', 'Einsatz'],
+    abschnitte: [
+      { titel: 'Geschichte und Einsatz', p: ['Die Lokomotiven wurden noch von der Jura-Simplon-Bahn bestellt und von der SBB übernommen. 68 Maschinen erhielten Heissdampftechnik.', 'Sie führten hochwertige Schnellzüge, bis stärkere und später elektrische Lokomotiven sie verdrängten.'] },
+      { titel: 'Erhaltung', p: ['Die A 3/5 705 blieb betriebsfähig erhalten. Sie wird von der Dampfgruppe Zürich betreut und vertritt den Schnellzugdampf der frühen SBB-Zeit.'] }
+    ],
+    quellen: ['Wikipedia – JS A 3/5: Serie 701–809 und technische Daten', 'Dampfgruppe Zürich – A 3/5 705: Geschichte der erhaltenen Lokomotive'],
     art: { typ: 'lok', form: 'kantig', farbe: '#1C1F22', panto: false }, bilder: [
       { src: 'bilder/h-a35-c1.jpg', titel: 'A 3/5 705 neben der Ae 3/6 I 10694 in Arnex-sur-Orbe, 1967', foto: 'Hans-Peter Bärtschi', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:ETH-BIB_SIK_01-003226_FFS_A_3-5_705_Ae_3-6_I_10694_Arnex-sur-Orbe_230967.jpg' }
     ] },
-  { id: 'h-c56', kat: 'historisch', name: 'C 5/6', beiname: 'Elefant', typ: 'Dampf-Güterzuglokomotive (historisch)',
-    text: ['Die «Elefanten» waren die stärksten Dampflokomotiven der SBB und zogen schwere Güterzüge am Gotthard.'],
-    daten: { 'Antrieb': 'Dampf', 'In Betrieb seit': '1913', 'Einsatz': 'Güterzüge am Gotthard' },
+  { id: 'h-c56', kat: 'historisch', name: 'C 5/6', beiname: 'Elefant', typ: 'Dampflokomotive für schwere Gotthardzüge (historisch)', vorlaeufig: false,
+    text: ['Die C 5/6 war die grösste Dampflokomotivserie der SBB und zugleich ihre letzte normalspurige Dampflok-Neubeschaffung.', 'Der Übername «Elefant» verweist auf die mächtige Erscheinung und die hohe Zugkraft.'],
+    kennzahlen: [['28', 'Serienlokomotiven'], ['65 km/h', 'Höchstgeschwindigkeit'], ['1913', 'erste Inbetriebnahme'], ['128 t', 'mit Tender']],
+    daten: { 'Hersteller': 'SLM Winterthur', 'Bauart': '1′E h4v', 'Spurweite': 'Normalspur, 1435 mm', 'Länge': '19,195 m mit Tender', 'Gewicht': '128 t mit Tender', 'Leistung': 'ca. 1190 kW (indiziert)', 'Kesseldruck': '15 bar', 'Höchstgeschwindigkeit': '65 km/h', 'Nummern': '2951–2978', 'Anzahl': '28', 'In Betrieb seit': '1913 (Baujahre 1913–1917)', 'Ausmusterung': 'bis 1968', 'Einsatz': 'schwere Güterzüge' },
+    specOrder: ['Hersteller', 'Bauart', 'Spurweite', 'Länge', 'Gewicht', 'Leistung', 'Kesseldruck', 'Höchstgeschwindigkeit', 'Nummern', 'Anzahl', 'In Betrieb seit', 'Ausmusterung', 'Einsatz'],
+    abschnitte: [
+      { titel: 'Geschichte und Einsatz', p: ['Die C 5/6 wurde für den schweren Verkehr am Gotthard entwickelt. Nach der Elektrifizierung wechselte sie ins Mittelland, auf die Strecke Bellinzona–Luino und in Rangierdienste.', 'Die 2969 führte 1968 den letzten offiziellen SBB-Dampfzug.'] },
+      { titel: 'Erhaltung', p: ['Mehrere Exemplare blieben erhalten. Die C 5/6 2978, die letzte Lok der Serie, gehört zum historischen SBB-Fahrzeugbestand.'] }
+    ],
+    quellen: ['Wikipedia – SBB C 5/6: Technik und Einsatz des Elefanten', 'SBB Archiv – C 5/6 2978: historisches Fahrzeugporträt'],
     art: { typ: 'lok', form: 'kantig', farbe: '#1C1F22', panto: false }, bilder: [
       { src: 'bilder/h-c56-c1.jpg', titel: 'C 5/6 2958 im Locorama', foto: 'Plutowiki', lizenz: 'CC0', lizenzUrl: 'http://creativecommons.org/publicdomain/zero/1.0/deed.en', quelle: 'https://commons.wikimedia.org/wiki/File:C_5-6_2958_Locorama.jpg' },
       { src: 'bilder/h-c56-c2.jpg', titel: 'C 5/6 2965 von 1916', foto: 'kitmasterbloke', lizenz: 'CC BY 2.0', lizenzUrl: 'https://creativecommons.org/licenses/by/2.0', quelle: 'https://commons.wikimedia.org/wiki/File:1916_2-10-0_Erstfeld_No_2965.jpg' },
@@ -936,9 +1358,16 @@ const ZUEGE = [
       { src: 'bilder/h-c56-c4.jpg', titel: 'C 5/6 «Elefant» im Detail', foto: 'Lord Koxinga', lizenz: 'CC BY-SA 3.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/3.0', quelle: 'https://commons.wikimedia.org/wiki/File:2007_0606_125GOT_SBB_00023.jpg' },
       { src: 'bilder/h-c56-c5.jpg', titel: 'Schilder der C 5/6 2965 «Erstfeld»', foto: 'kitmasterbloke', lizenz: 'CC BY 2.0', lizenzUrl: 'https://creativecommons.org/licenses/by/2.0', quelle: 'https://commons.wikimedia.org/wiki/File:2965_Erstfeld_plates.jpg' }
     ] },
-  { id: 'h-eb35', kat: 'historisch', name: 'Eb 3/5', beiname: 'Habersack', typ: 'Dampf-Tenderlokomotive (historisch)',
-    text: ['Tenderlokomotive für Personenzüge im Regionalverkehr, wegen ihrer Form «Habersack» genannt.'],
-    daten: { 'Antrieb': 'Dampf', 'Einsatz': 'Personenzüge im Regionalverkehr' },
+  { id: 'h-eb35', kat: 'historisch', name: 'Eb 3/5', beiname: 'Habersack', typ: 'Vielseitige Tenderlokomotive (historisch)', vorlaeufig: false,
+    text: ['Die Eb 3/5 war eine kräftige Tenderlokomotive für Personen-, Güter- und Rangierdienste.', 'Ihre gedrungene Form brachte ihr den volkstümlichen Übernamen «Habersack» ein.'],
+    kennzahlen: [['34', 'Lokomotiven'], ['75 km/h', 'Höchstgeschwindigkeit'], ['1911', 'erste Inbetriebnahme'], ['74–74,9 t', 'Dienstmasse']],
+    daten: { 'Hersteller': 'SLM Winterthur', 'Bauart': '1′C1′ Tenderlokomotive', 'Spurweite': 'Normalspur, 1435 mm', 'Gewicht': '57,6–58,8 t leer, 74–74,9 t Dienstmasse', 'Treibraddurchmesser': '1520 mm', 'Kesseldruck': 'rund 12 bar', 'Vorräte': '7,7 m³ Wasser, 2,5 t Kohle', 'Höchstgeschwindigkeit': '75 km/h', 'Nummern': '5801–5834', 'Anzahl': '34', 'In Betrieb seit': '1911 (Baujahre 1911–1916)', 'Ausmusterung': '1953–1965', 'Einsatz': 'Regionalzüge, Nebenbahnen, Stationsdienst' },
+    specOrder: ['Hersteller', 'Bauart', 'Spurweite', 'Gewicht', 'Treibraddurchmesser', 'Kesseldruck', 'Vorräte', 'Höchstgeschwindigkeit', 'Nummern', 'Anzahl', 'In Betrieb seit', 'Ausmusterung', 'Einsatz'],
+    abschnitte: [
+      { titel: 'Geschichte und Einsatz', p: ['Die symmetrische Achsfolge erlaubte gute Fahreigenschaften in beiden Richtungen, ohne dass die Lokomotive gewendet werden musste.', 'Damit eignete sich die Eb 3/5 besonders für Nebenbahnen, Regionalzüge und vielseitige Stationsdienste.'] },
+      { titel: 'Erhaltung', p: ['Einzelne Lokomotiven der Serie blieben bei Museums- und historischen Bahnen erhalten. Sie zeigen die letzte Generation universeller SBB-Tenderdampfloks.'] }
+    ],
+    quellen: ['Wikipedia – SBB Eb 3/5: Bestand, Technik und Einsatz', 'SBB Historic – Sammlung und Archiv der historischen SBB-Fahrzeuge'],
     art: { typ: 'lok', form: 'kantig', kurz: true, farbe: '#1C1F22', panto: false }, bilder: [
       { src: 'bilder/h-eb35-c1.jpg', titel: 'Eb 3/5 in Bremgarten West', foto: 'Bobo11', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:Bremgarten_West_SBB_Eb_3-5_P6A7389.JPG' },
       { src: 'bilder/h-eb35-c2.jpg', titel: 'Eb 3/5 5810 (2018)', foto: 'Markus Eigenheer', lizenz: 'CC BY-SA 2.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/2.0', quelle: 'https://commons.wikimedia.org/wiki/File:SBB_Eb_3_5_5810_2018-09-09.jpg' },
@@ -946,9 +1375,16 @@ const ZUEGE = [
       { src: 'bilder/h-eb35-c4.jpg', titel: 'Eb 3/5 «Habersack»', foto: 'user:bobo11', lizenz: 'CC BY-SA 3.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/3.0', quelle: 'https://commons.wikimedia.org/wiki/File:SBB-Eb3-5-U163278.JPG' },
       { src: 'bilder/h-eb35-c5.jpg', titel: 'Eb 3/5 im Fahrzeugporträt', foto: 'Unknown authorUnknown author', lizenz: 'Public domain', lizenzUrl: '', quelle: 'https://commons.wikimedia.org/wiki/File:BT-Eb-3-5Nr9.jpg' }
     ] },
-  { id: 'h-mirage', kat: 'historisch', name: 'RABDe 12/12', beiname: 'Mirage', typ: 'Elektrischer Triebzug (historisch)',
-    text: ['Die «Mirage» war ein dreiteiliger Triebzug für den Vorortsverkehr am rechten Zürichseeufer.'],
-    daten: { 'Antrieb': 'elektrisch', 'Einsatz': 'Vorortsverkehr Zürich' },
+  { id: 'h-mirage', kat: 'historisch', name: 'RABDe 12/12', beiname: 'Mirage', typ: 'Goldküstenexpress der Zürcher Vororte (historisch)', vorlaeufig: false,
+    text: ['Beim dreiteiligen RABDe 12/12 waren alle zwölf Achsen angetrieben.', 'Die enorme Beschleunigung passte zum dichten Vorortsverkehr am rechten Zürichseeufer und führte zum Übernamen «Mirage».'],
+    kennzahlen: [['20', 'Triebzüge'], ['125 km/h', 'Höchstgeschwindigkeit'], ['1967', 'erste Inbetriebnahme'], ['2444 kW', 'Stundenleistung']],
+    daten: { 'Hersteller': 'SWP, FFA, BBC, SAAS', 'Zugbildung': 'dreiteilig', 'Achsfolge': 'alle 12 Achsen angetrieben', 'Spurweite': 'Normalspur, 1435 mm', 'Länge': '73,30 m', 'Gewicht': 'ca. 170 t leer', 'Leistung': '2444 kW Stundenleistung', 'Anfahrzugkraft': '239 kN', 'Höchstgeschwindigkeit': '125 km/h', 'Sitzplätze': '200', 'Nummern': '1101–1120', 'Anzahl': '20', 'In Betrieb seit': '1967 (Baujahre 1965–1967)', 'Spätere Bezeichnung': 'RABDe 510', 'Ausmusterung': 'bis 2008, zerlegt bis 2010', 'Einsatz': 'Vorortsverkehr am rechten Zürichseeufer' },
+    specOrder: ['Hersteller', 'Zugbildung', 'Achsfolge', 'Spurweite', 'Länge', 'Gewicht', 'Leistung', 'Anfahrzugkraft', 'Höchstgeschwindigkeit', 'Sitzplätze', 'Nummern', 'Anzahl', 'In Betrieb seit', 'Spätere Bezeichnung', 'Ausmusterung', 'Einsatz'],
+    abschnitte: [
+      { titel: 'Geschichte und Einsatz', p: ['Die Züge wurden für den halbstündlichen Vorortsverkehr auf der rechtsufrigen Zürichseebahn beschafft und als «Goldküstenexpress» bekannt. Später fuhren sie auch auf weiteren Regional- und S-Bahn-Linien.'] },
+      { titel: 'Modernisierung und Ende', p: ['Nach Umbauten trugen die Fahrzeuge die Bezeichnung RABDe 510. Der reguläre Einsatz endete 2008; bis 2010 wurden die letzten Einheiten zerlegt. Ein vollständiger Zug blieb nicht erhalten.'] }
+    ],
+    quellen: ['Wikipedia – SBB RABDe 12/12: Technik, Einsatz und Verbleib', 'SBB Historic – Archiv und Sammlung zur Geschichte der SBB'],
     art: { typ: 'triebzug', nase: 'kurz', farbe: '#3E5A3B', akzent: '#C9C2B0', tuer: '#2E3338', panto: true }, bilder: [
       { src: 'bilder/h-mirage-c1.jpg', titel: 'RABDe 12/12 «Mirage» in Rot', foto: 'Peter Alder', lizenz: 'Public domain', lizenzUrl: '', quelle: 'https://commons.wikimedia.org/wiki/File:Swiss_Rail_SBB_RABDe_12_12_Mirage.jpg' },
       { src: 'bilder/h-mirage-c2.jpg', titel: 'RABDe 12/12 «Mirage» im Jahr 1983', foto: 'ETH-Bibliothek Zürich, Bildarchiv / Fotograf: Comet Photo AG (Zürich) / Com_LC1943-001-021 / CC BY-SA 4.0', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:SBB_multiple_unit_RABDe_12-12_in_1983_(Com_LC1943-001-021).jpg' },
@@ -956,14 +1392,22 @@ const ZUEGE = [
       { src: 'bilder/h-mirage-c4.jpg', titel: '«Mirage» als RABDe 510', foto: 'Kabelleger / David Gubler (http://www.bahnbilder.ch)', lizenz: 'Public domain', lizenzUrl: '', quelle: 'https://commons.wikimedia.org/wiki/File:SBB_RABDe_510.jpg' },
       { src: 'bilder/h-mirage-c5.jpg', titel: 'Zwei «Mirage» an der Goldküste am Zürichsee', foto: 'Kabelleger / David Gubler (http://www.bahnbilder.ch)', lizenz: 'Public domain', lizenzUrl: '', quelle: 'https://commons.wikimedia.org/wiki/File:Mirages_an_der_Goldk%C3%BCste.jpg' }
     ] },
-  { id: 'h-rbe540', kat: 'historisch', name: 'RBe 540', beiname: 'RBe 4/4', typ: 'Elektrischer Triebwagen (historisch)',
-    text: ['Vierachsiger Triebwagen, der mit Steuerwagen als Pendelzug im Regionalverkehr fuhr.'],
-    daten: { 'Achsfolge': 'Bo′Bo′', 'Antrieb': 'elektrisch', 'Einsatz': 'Regionalverkehr, Pendelzüge' },
+  { id: 'h-rbe540', kat: 'historisch', name: 'RBe 540', beiname: 'RBe 4/4', typ: 'Modernisierter Hochleistungstriebwagen für Pendelzüge (historisch)', vorlaeufig: false,
+    nummern: [[540006, 540079]],
+    text: ['Der RBe 540 entstand aus der Modernisierung der RBe 4/4.', 'Die kräftigen Triebwagen führten zunächst Schnellzüge und später vor allem Regional- und S-Bahn-Pendelzüge.'],
+    kennzahlen: [['82', 'RBe 4/4 gebaut'], ['125 km/h', 'Höchstgeschwindigkeit'], ['1959', 'erste Prototypen'], ['1988 kW', 'Stundenleistung']],
+    daten: { 'Hersteller': 'SIG, BBC, MFO', 'Achsfolge': 'Bo′Bo′', 'Spurweite': 'Normalspur, 1435 mm', 'Länge': '23,70 m', 'Gewicht': '68 t, nach Umbau R4 72 t', 'Leistung': '1988 kW Stundenleistung', 'Anfahrzugkraft': '167 kN', 'Höchstgeschwindigkeit': '125 km/h', 'Sitzplätze': '64, nach Umbau R4 60', 'Nummern': 'ursprünglich 1401–1482, als RBe 540 006–079', 'Anzahl': '82 RBe 4/4', 'In Betrieb seit': '1959 (Baujahre 1959–1966)', 'Modernisierung': '1993–1998 (Programm R4)', 'Ausmusterung': 'letzte Planeinsätze 2014', 'Einsatz': 'Schnellzüge, später Regional- und S-Bahn-Pendelzüge' },
+    specOrder: ['Hersteller', 'Achsfolge', 'Spurweite', 'Länge', 'Gewicht', 'Leistung', 'Anfahrzugkraft', 'Höchstgeschwindigkeit', 'Sitzplätze', 'Nummern', 'Anzahl', 'In Betrieb seit', 'Modernisierung', 'Ausmusterung', 'Einsatz'],
+    abschnitte: [
+      { titel: 'Geschichte und Einsatz', p: ['Die RBe 4/4 waren stark genug, einen Schnellzug zu führen, und boten zugleich einen Fahrgastraum.', 'Beim Umbauprogramm R4 erhielten sie neue Führerstände, Türen und Innenräume sowie die Bezeichnung RBe 540.'] },
+      { titel: 'Ausmusterung und Erhaltung', p: ['Die letzten planmässigen Einsätze endeten 2014. Einzelne Fahrzeuge blieben historisch erhalten, darunter die bei der Oensingen-Balsthal-Bahn eingesetzte RBe 540 074.'] }
+    ],
+    quellen: ['Wikipedia – SBB RBe 4/4 und RBe 540: Bau, Umbau und Einsatz', 'OeBB Historic – RBe 540 074: Fahrzeugdatenblatt'],
     art: { typ: 'triebzug', nase: 'kurz', farbe: '#3E5A3B', akzent: '#C9C2B0', tuer: '#2E3338', panto: true }, bilder: [
       { src: 'bilder/h-rbe540-c1.jpg', titel: 'RBe 540 007', foto: 'Lord Koxinga', lizenz: 'CC BY-SA 3.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/3.0', quelle: 'https://commons.wikimedia.org/wiki/File:2012_08_16_RBe_540_007.jpg' },
       { src: 'bilder/h-rbe540-c2.jpg', titel: 'RBe 540 060 in Chur', foto: 'NAC', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:FFS_RBe_540_060-1_Chur_120513_IC10792_Ch-Zue.jpg' },
       { src: 'bilder/h-rbe540-c3.jpg', titel: 'RBe 4/4 in grüner Farbe bei Tägerwilen', foto: 'Plutowiki', lizenz: 'CC0', lizenzUrl: 'http://creativecommons.org/publicdomain/zero/1.0/deed.en', quelle: 'https://commons.wikimedia.org/wiki/File:DSF_RBe_4-4_T%C3%A4gerwilen.jpg' },
       { src: 'bilder/h-rbe540-c4.jpg', titel: 'RBe 540 neben einer Re 4/4 II in Winterthur', foto: 'JoachimKohler-HB', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:Bahnhof_Winterthur_mit_SBB_RBe_540_%26_Re_4-4_II_(2010).jpg' },
       { src: 'bilder/h-rbe540-c5.jpg', titel: 'RBe 540 020 in Zürich HB', foto: 'NAC', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:FFS_RBe_540020-5_ZuerichHB_211214.jpg' }
-    ] }
+    ] },
 ];

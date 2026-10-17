@@ -154,9 +154,21 @@ function artSpezial(a) {
 }
 // wagons without own drive: hopper for ballast, flat wagon with rails or cable drums, crew coach, passenger coach
 function artWagen(a) {
-  const bot = 112, x0 = 70, x1 = 570;
+  // zweiachs: shorter wagon on two single axles instead of bogies
+  const bot = 112, x0 = a.zweiachs ? 130 : 70, x1 = a.zweiachs ? 510 : 570;
   let s = `<rect x="${x0}" y="${bot}" width="${x1 - x0}" height="8" fill="${DK}"/>` + buffers(x0, x1, bot + 2);
-  if (a.var === 'schotter') {
+  if (a.var === 'mulde') {
+    // flat wagon carrying a row of open containers on side rails
+    s += `<rect x="${x0}" y="${bot - 12}" width="${x1 - x0}" height="12" fill="${DK}"/><rect x="${x0 + 6}" y="${bot - 20}" width="${x1 - x0 - 12}" height="5" fill="#9AA1A8"/>`;
+    const n = 7, w = (x1 - x0 - 24) / n;
+    for (let i = 0; i < n; i++) { const x = x0 + 12 + i * w; s += `<path d="M${x + 2} 58H${x + w - 2}L${x + w - 6} ${bot - 22}H${x + 6}Z" fill="${a.farbe}"/><path d="M${x + 4} 58Q${x + w / 2} 48 ${x + w - 4} 58Z" fill="#8E8A84"/>`; }
+  } else if (a.var === 'kipp') {
+    // tipping box, slightly raised on one side
+    s += `<rect x="${x0}" y="${bot - 10}" width="${x1 - x0}" height="10" fill="${DK}"/>`;
+    s += `<path d="M${x0 + 8} 54L${x1 - 8} 48V${bot - 14}H${x0 + 8}Z" fill="${a.farbe}"/><path d="M${x0 + 8} 54L${x1 - 8} 48" stroke="rgba(0,0,0,.25)" stroke-width="3"/>`;
+    for (let x = x0 + 60; x < x1 - 40; x += 70) s += `<path d="M${x} 58V${bot - 18}" stroke="rgba(0,0,0,.18)" stroke-width="3"/>`;
+    if (a.band) s += `<path d="M${x1 - 30} ${bot - 16}L${x1 + 6} 40" stroke="${DK}" stroke-width="7" stroke-linecap="round"/>`;
+  } else if (a.var === 'schotter') {
     s += `<path d="M${x0 + 10} 52H${x1 - 10}L${x1 - 40} ${bot - 6}H${x0 + 40}Z" fill="${a.farbe}"/>`;
     for (let x = x0 + 60; x < x1 - 50; x += 50) s += `<path d="M${x} 56V${bot - 10}" stroke="rgba(0,0,0,.22)" stroke-width="3"/>`;
     s += `<path d="M${x0 + 14} 52Q${(x0 + x1) / 2} 34 ${x1 - 14} 52Z" fill="#8E8A84"/>`;
@@ -165,6 +177,9 @@ function artWagen(a) {
     s += `<rect x="${x0}" y="${bot - 14}" width="${x1 - x0}" height="14" fill="${a.farbe}"/>`;
     for (let x = x0 + 30; x < x1 - 20; x += 80) s += `<rect x="${x}" y="${bot - 46}" width="6" height="32" fill="${DK}"/>`;
     s += `<rect x="${x0 + 10}" y="${bot - 26}" width="${x1 - x0 - 20}" height="5" fill="#9AA1A8"/><rect x="${x0 + 10}" y="${bot - 38}" width="${x1 - x0 - 20}" height="5" fill="#9AA1A8"/>`;
+    // small loading cranes (STE) or a loader portal (SILAD)
+    if (a.kran) for (const cx of [x0 + 70, x1 - 70]) s += `<rect x="${cx - 4}" y="${bot - 70}" width="8" height="56" fill="${DK}"/><path d="M${cx} ${bot - 66}H${cx + 54}" stroke="${DK}" stroke-width="6" stroke-linecap="round"/><path d="M${cx + 50} ${bot - 64}V${bot - 44}" stroke="${DK}" stroke-width="2"/>`;
+    if (a.portal) s += `<path d="M${x0 + 150} ${bot - 14}V36H${x1 - 150}V${bot - 14}" fill="none" stroke="${a.akzent || DK}" stroke-width="9"/><rect x="${(x0 + x1) / 2 - 26}" y="40" width="52" height="16" fill="${DK}"/>`;
   } else if (a.var === 'kabel') {
     s += `<rect x="${x0}" y="${bot - 14}" width="${x1 - x0}" height="14" fill="${a.farbe}"/>`;
     for (const cx of [170, 320, 470]) s += `<circle cx="${cx}" cy="${bot - 46}" r="32" fill="#7A5A3C"/><circle cx="${cx}" cy="${bot - 46}" r="26" fill="#2E3338"/><circle cx="${cx}" cy="${bot - 46}" r="8" fill="#9AA1A8"/>`;
@@ -174,9 +189,15 @@ function artWagen(a) {
     s += `<path d="M${x0} ${bot}V${top + 10}Q${x0} ${top} ${x0 + 10} ${top}H${x1 - 10}Q${x1} ${top} ${x1} ${top + 10}V${bot}Z" fill="${a.farbe}"/>`;
     if (a.akzent) s += `<rect x="${x0}" y="${bot - 18}" width="${x1 - x0}" height="6" fill="${a.akzent}"/>`;
     const rows = a.dd ? [42, 78] : [64];
-    for (const y of rows) for (let x = x0 + 40; x < x1 - 50; x += 44) s += `<rect x="${x}" y="${y}" width="32" height="20" rx="4" fill="#27313B"/>`;
+    // geschlossen: covered work wagon with sliding doors instead of a row of windows
+    if (a.geschlossen) {
+      for (const x of [x0 + 70, x1 - 130]) s += `<rect x="${x}" y="${top + 14}" width="60" height="${bot - top - 22}" fill="none" stroke="rgba(0,0,0,.3)" stroke-width="2"/>`;
+      s += `<rect x="${(x0 + x1) / 2 - 22}" y="${top + 14}" width="44" height="18" rx="3" fill="#27313B"/>`;
+    } else for (const y of rows) for (let x = x0 + 40; x < x1 - 50; x += 44) s += `<rect x="${x}" y="${y}" width="32" height="20" rx="4" fill="#27313B"/>`;
+    if (a.buehne) s += `<path d="M${x0 + 60} ${top}L${x0 + 110} ${top - 22}H${x0 + 190}" fill="none" stroke="${DK}" stroke-width="5"/><rect x="${x0 + 180}" y="${top - 30}" width="40" height="10" fill="${DK}"/>`;
     s += `<rect x="${x0 + 12}" y="${top + 16}" width="18" height="${bot - top - 24}" rx="2" fill="none" stroke="rgba(0,0,0,.3)" stroke-width="1.5"/><rect x="${x1 - 30}" y="${top + 16}" width="18" height="${bot - top - 24}" rx="2" fill="none" stroke="rgba(0,0,0,.3)" stroke-width="1.5"/>`;
   }
+  if (a.zweiachs) return s + `<rect x="${x0 + 50}" y="${R - 25}" width="40" height="9" rx="3" fill="${DK}"/><rect x="${x1 - 90}" y="${R - 25}" width="40" height="9" rx="3" fill="${DK}"/>` + wheel(x0 + 70, 13) + wheel(x1 - 70, 13);
   return s + bogie(150) + bogie(490);
 }
 function art(z) {

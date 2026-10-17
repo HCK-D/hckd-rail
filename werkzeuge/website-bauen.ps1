@@ -3,8 +3,8 @@
 #   - index.html und einer eigenen HTML-Datei pro Fahrzeug, Kategorie, Impressum, Datenschutz und Vergleich
 #     (z. B. re-460.html), jede mit eigenem Titel, Beschreibung und Vorschaubild für Google und Messenger
 #   - css, js, bilder und der selbst gehosteten Schrift (keine Verbindung zu Google Fonts)
-#   - sitemap.xml, robots.txt, 404.html und .nojekyll
-# Die Adresse der Website steht in werkzeuge\website-adresse.txt (z. B. https://name.github.io/hckd-rail/).
+#   - sitemap.xml, robots.txt, 404.html, .nojekyll und bei eigener Domain die Datei CNAME
+# Die Adresse der Website steht in werkzeuge\website-adresse.txt (z. B. https://name.github.io/hckd-rail/ oder https://www.meine-domain.ch/).
 # Aufruf im Projektordner:  powershell -ExecutionPolicy Bypass -File werkzeuge\website-bauen.ps1
 $ErrorActionPreference = 'Stop'
 $root = Split-Path $PSScriptRoot -Parent
@@ -48,7 +48,7 @@ foreach ($m in [regex]::Matches($daten, "\{ id: '([^']+)', code: '[^']*', name: 
   $katName[$m.Groups[1].Value] = $m.Groups[2].Value
   [void]$seiten.Add([pscustomobject]@{ id = $m.Groups[1].Value; titel = $m.Groups[2].Value; text = $m.Groups[3].Value; bild = ''; prio = '0.8' })
 }
-$zm = [regex]::Matches($daten, "\{ id: '([^']+)', kat: '([^']+)', name: '([^']+)', beiname: '([^']*)', typ: '([^']*)'")
+$zm = [regex]::Matches($daten, "\{ id: '([^']+)', kat: '([^']+)',(?: gruppe: '[^']*',)? name: '([^']+)', beiname: '([^']*)', typ: '([^']*)'")
 for ($i = 0; $i -lt $zm.Count; $i++) {
   $m = $zm[$i]
   $ende = if ($i + 1 -lt $zm.Count) { $zm[$i + 1].Index } else { $daten.Length }
@@ -94,6 +94,8 @@ $logo = [regex]::Match($body, '<symbol id="logo" viewBox="([^"]+)">([\s\S]*?)</s
 if ($logo.Success) { Write-Utf8 (Join-Path $out 'favicon.svg') "<svg xmlns=`"http://www.w3.org/2000/svg`" viewBox=`"$($logo.Groups[1].Value)`">$($logo.Groups[2].Value.Trim())</svg>`n" }
 # GitHub Pages: Dateien unverändert ausliefern
 Write-Utf8 (Join-Path $out '.nojekyll') ''
+# Eigene Domain: GitHub Pages braucht die Datei CNAME im docs-Ordner (bei *.github.io nicht)
+if ($base -match '^https?://([^/]+)/' -and $Matches[1] -notmatch '\.github\.io$') { Write-Utf8 (Join-Path $out 'CNAME') ($Matches[1] + "`n") }
 
 # ---------- 404, sitemap, robots ----------
 $startUrl = if ($base) { $base } else { './' }

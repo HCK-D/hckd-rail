@@ -1,3 +1,4 @@
 # Adresse der fertigen Website, eine Zeile, mit / am Ende.
-# GitHub-Benutzer HCK-D, Repository hckd-rail
-https://hck-d.github.io/hckd-rail/
+# Eigene Domain hckd-rail.ch (GitHub-Benutzer HCK-D, Repository hckd-rail).
+# Ohne eigene Domain wäre es: https://hck-d.github.io/hckd-rail/
+https://hckd-rail.ch/

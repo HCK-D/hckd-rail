@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://hck-d.github.io/hckd-rail/sitemap.xml
+Sitemap: https://hckd-rail.ch/sitemap.xml

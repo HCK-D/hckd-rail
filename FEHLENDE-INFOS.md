@@ -1,69 +1,58 @@
 # HCKD RAIL – Züge mit fehlenden Infos
 
-Stand: 17. Oktober 2026 (66 Fahrzeuge, 244 Fotos). «Vorläufig» heisst: Es gibt noch kein Katalogblatt (Word-Dokument) für diesen Zug, die Seite zeigt nur wenige Grunddaten.
+Stand: 17. Oktober 2026 (83 Fahrzeuge, davon 3 vorläufig, 269 Fotos). «Vorläufig» heisst: Es gibt noch kein Katalogblatt (Word-Dokument) für diesen Zug, die Seite zeigt nur wenige Grunddaten.
 
 ## 1. Noch ganz vorläufig: dafür brauche ich ein Word-Dokument
 
 | Bereich | Fahrzeug | Fotos schon drin |
 |---|---|---|
-| SBB Personenverkehr | RABe 503 «Astoro» | 5 |
 | SBB Personenverkehr | Re 450 (DPZ) | 5 |
-| SBB Personenverkehr | RABe 512 «KISS» | 5 |
-| SBB Personenverkehr | RABe 520 «GTW» | 5 |
-| SBB Personenverkehr | RABe 521, RABe 522 (FLIRT) | je 5 |
-| SBB Personenverkehr | RABe 524 «FLIRT TILO» | 4 |
-| SBB Personenverkehr | IC2000 Doppelstockwagen | 5 |
-| SBB Personenverkehr | EW IV (Einheitswagen IV) | 4 |
-| SBB Cargo | Re 421 | 5 |
-| Infrastruktur, Wagen und Bauzüge | Schotterwagen, Schienentransportwagen, Mannschaftswagen | 0 |
 | Historisch | Ce 6/8 II «Krokodil» | 5 |
-| Historisch | Ce 6/8 III «Krokodil» | 5 |
-| Historisch | Ae 6/6 «Kantonslok» | 5 |
 | Historisch | Ae 4/7 | 5 |
-| Historisch | Ae 3/6 I | 5 |
-| Historisch | Ae 8/14 «Landi-Lok» | 5 |
-| Historisch | Be 4/6 | 5 |
-| Historisch | Re 4/4 I | 5 |
-| Historisch | RAe TEE II «Gottardo» | 5 |
-| Historisch | RCe 2/4 «Roter Pfeil» | 1 |
-| Historisch | A 3/5 (Dampf) | 1 |
-| Historisch | C 5/6 «Elefant» (Dampf) | 5 |
-| Historisch | Eb 3/5 «Habersack» (Dampf) | 5 |
-| Historisch | RABDe 12/12 «Mirage» | 5 |
-| Historisch | RBe 540 (RBe 4/4) | 5 |
+
+Mit TRT.zip vollständig geworden (22 Fahrzeuge): Re 421, EW IV, IC2000, RABe 503 «Astoro», RABe 512 «IR-Dosto», RABe 520, RABe 521, RABe 522, RABe 524 sowie die historischen RAe TEE II, Re 4/4 I, Be 4/6, Ae 8/14, Ae 3/6 I, Ae 6/6, Ce 6/8 III, RCe 2/4, A 3/5 (Serie 701–809), C 5/6, Eb 3/5, RABDe 12/12 und RBe 540.
 
 Die Ee 3/3 (2020 ausgemustert) steht jetzt ebenfalls unter «Historische Fahrzeuge»; ihr Katalogblatt ist schon vollständig.
 ## 2. Katalogblatt vorhanden, aber einzelne Werte fehlen
 
 | Fahrzeug | Fehlende Werte |
 |---|---|
-| RABe 502 «FV-Dosto» | Gewicht (steht nur in der Tabelle der Ausführungen) |
-| RABe 511 «KISS», RABe 514 «DTZ» | Leistung, Gewicht |
-| RABe 523 «FLIRT» | Leistung, Länge, Gewicht, Anzahl (bewusst offen, siehe Seite) |
-| Tm 234 «Ameise» | Jahr der ersten Inbetriebnahme |
-| Kirow KRC 250 | Anzahl und Jahr (laut Blatt nicht publiziert) |
-| Kirow KRC 1100 | Eigenmasse (laut Blatt nicht publiziert) |
-| Bendini | Anzahl, Jahr |
+| Kirow KRC 250 | genaue Anzahl und Beschaffungsjahr (nur «mindestens 1, spätestens 2005» belegt) |
+| Bendini | genaue Gesamtzahl (nur «mehrere, 1980er-Jahre» belegt) |
 | Fahrleitungsfahrzeuge | technische Werte (Gruppe, keine einzelne Baureihe) |
+| PWFZ | alle technischen Daten (Projekt, laut Blatt noch nicht publiziert) |
+| Kirow-Mannschaftswagen | Länge und Gewicht des Wagens allein (nur Werte des ganzen Kranverbands publiziert) |
+| STE kurz, STE lang | Länge, Höchstgeschwindigkeit (nur Schulungsstand 2022) |
+
+Mit 1train.zip ergänzt: Gewicht beim RABe 502, Leistung und Gewicht beim RABe 511 und RABe 514, Leistung, Länge, Gewicht und Anzahl (98, aus den Nummernreihen hergeleitet) beim RABe 523, erstes Einsatzjahr 1999 beim Tm 234 und 112 t Transportgewicht beim Kirow KRC 1100.
 
 ## 3. Vollständig
 
-Alle anderen 35 Fahrzeuge, darunter neu aus ZUG.zip: Re 474, Re 482, Re 484, Re 193, Ee 922, Eem 923, Bm 4/4, Tm 232, Ee 3/3, Tmf 232, LRZ 04, 08, 14, 18, Schneeschleudern, Diagnosefahrzeug ROGER 1000 und die Kirow-Krane.
+Alle übrigen Fahrzeuge mit Katalogblatt, darunter aus ZUG.zip: Re 474, Re 482, Re 484, Re 193, Ee 922, Eem 923, Bm 4/4, Tm 232, Ee 3/3, Tmf 232, LRZ 04, 08, 14, 18, Schneeschleudern, Diagnosefahrzeug ROGER 1000 und die Kirow-Krane.
+
+Neu aus Train In.zip (Gruppe «Infrastruktur», ersetzt die drei Platzhalter Schotterwagen, Schienentransportwagen und Mannschaftswagen):
+- **Schotter- und Kippwagen:** Fans-u, Xans 37, Xans 74, Xas 53, Xas 62, Xas 62 mit Förderband, Xas 73, Xns 39, Xns 60, Xs 72
+- **Schienentransport:** SILAD 1–3, SILAD 4, SILAD Reserve, STE kurz, STE lang
+- **Werkstatt- und Mannschaftswagen:** Xs 45, Xs 48, Xs Mannschaftswagen, Kirow-Mannschaftswagen, PWFZ
 ## 4. Fahrzeuge mit weniger als 5 Fotos
 
 Auf Wikimedia Commons gab es für diese Fahrzeuge keine oder zu wenige eindeutige, frei lizenzierte Fotos:
 
 | Fahrzeug | Fotos | Bemerkung |
 |---|---|---|
-| Re 474, Am 841, Bm 4/4 | je 4 | ein 5. Foto war gefunden, Wikimedia hat den Download gesperrt (zu viele Anfragen); später nochmals versuchen |
-| LRZ 14 | 2 | |
-| LRZ 18, LRZ 08 | je 1 | viele LRZ-Fotos auf Commons sagen nicht, welche Generation abgebildet ist |
-| Diagnosefahrzeug | 1 | Messtriebwagen von MerMec |
-| LRZ 04 | 0 | |
+| Re 474, Bm 4/4, LRZ 08 | je 4 | ein 5. Foto ist gefunden, Wikimedia sperrt den Download im Moment (zu viele Anfragen); später nochmals versuchen |
+| RCe 2/4 «Roter Pfeil» | 1 | wie oben, ein weiteres Foto gefunden |
+| LRZ 14 | 4 | |
+| LRZ 04, Fahrleitungsfahrzeuge, Xans 74 | je 3 | |
+| Diagnosefahrzeug | 2 | |
+| A 3/5 | 1 | nur Fotos der Serie 701–809; das Foto der Gotthardbahn-A 3/5 931 wurde wieder entfernt |
+| Xas 53, Xs 48 | je 1 | Zuordnung über die Wagennummer (98 53 bzw. 95 48) |
 | Am 842, Tmf 232 | 0 | keine Fotos auf Commons gefunden |
 | Re 193 | 0 | die gefundenen Fotos zeigen Vectron von SBB Cargo International, nicht die 35 gemieteten Vectron AC von SBB Cargo Schweiz |
-| Kirow KRC 1100, Kirow 800, Kirow 250, Kirow KRC 100, Bendini | 0 | keine Fotos auf Commons gefunden |
-| Fahrleitungsfahrzeug | 0 | zuerst festlegen, welches Fahrzeug gemeint ist |
+| Kirow KRC 1100, Kirow 800, Kirow 250, Kirow KRC 100, Bendini | 0 | auf Commons nur Kirow-Krane anderer Bahnen |
+| übrige 16 Infrastruktur-Wagen und PWFZ | 0 | auf Commons kaum eindeutig beschriftet; PWFZ existiert noch nicht |
+
+Mit der Fotosuche vom 17. Oktober 2026 neu dazugekommen: RABe 524, EW IV, Am 841 (jetzt je 5 oder mehr), LRZ 18 (jetzt 5) sowie Fotos für LRZ 04, LRZ 08, LRZ 14, Diagnosefahrzeug, Fahrleitungsfahrzeuge, Xans 74, Xas 53, Xs 48. Die ganze Liste gibt es auch als Word-Dokument: HCKD-RAIL-Fehlende-Infos.docx.
 
 Für diese Fahrzeuge lohnt es sich, Fotografen direkt zu fragen oder selbst zu fotografieren.
 
@@ -81,7 +70,6 @@ Für diese Fahrzeuge lohnt es sich, Fotografen direkt zu fragen oder selbst zu f
 | Personenverkehr | IC2000 Doppelstockwagen | Fahrzeugart, ab 1997, Einsatz |
 | Personenverkehr | EW IV (Einheitswagen IV) | Fahrzeugart, Einsatz |
 | SBB Cargo | Re 421 | Umbau aus Re 420 für Deutschland |
-| Infrastruktur, Wagen und Bauzüge | Schotterwagen, Schienentransportwagen, Mannschaftswagen | kurze Beschreibung |
 
 ### Noch nicht angelegt (Vorschläge, bitte bestätigen)
 
@@ -99,4 +87,4 @@ Für diese Fahrzeuge lohnt es sich, Fotografen direkt zu fragen oder selbst zu f
 - **Historische Reisezugwagen**, z. B. Leichtstahlwagen.
 ## Tipp
 
-Am meisten bringt ein Katalogblatt für die vier Cargo-Loks (Re 474, Re 482, Re 484, Re 193) und die fünf Rangierfahrzeuge. Beim Diagnose- und beim Fahrleitungsfahrzeug wäre es gut, ein bestimmtes Fahrzeug zu wählen, z. B. den Diagnosezug gDFZ oder einen bestimmten Fahrleitungs-Montagezug.
+Am meisten bringt jetzt ein Katalogblatt für die Personenverkehrs-Züge aus Abschnitt 1 (z. B. RABe 503, RABe 512, IC2000). Beim Diagnose- und beim Fahrleitungsfahrzeug wäre es gut, ein bestimmtes Fahrzeug zu wählen, z. B. den Diagnosezug gDFZ oder einen bestimmten Fahrleitungs-Montagezug.
