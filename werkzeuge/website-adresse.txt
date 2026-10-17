@@ -1,4 +1,5 @@
 # Adresse der fertigen Website, eine Zeile, mit / am Ende.
-# Eigene Domain hckd-rail.ch (GitHub-Benutzer HCK-D, Repository hckd-rail).
-# Ohne eigene Domain wäre es: https://hck-d.github.io/hckd-rail/
-https://hckd-rail.ch/
+# GitHub-Benutzer HCK-D, Repository hckd-rail.
+# Sobald die Domain hckd-rail.ch bei Infomaniak aktiv ist, hier https://hckd-rail.ch/ eintragen
+# (das Bau-Skript legt dann automatisch die Datei CNAME an).
+https://hck-d.github.io/hckd-rail/
