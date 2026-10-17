@@ -110,7 +110,7 @@ uebZug('h-re44i', {
 uebZug('h-tee', {
   typ: 'Four-system multiple unit for top international services (historic)',
   text: ['The RAe TEE II linked Switzerland with Germany, France, Italy and the Netherlands without changing locomotives.', 'Its four-system technology made it one of the most technically demanding European multiple units of its time.'],
-  kennzahlen: [['5', 'train sets'], ['160 km/h', 'technical top speed'], ['1961', 'first entry into service'], ['4', 'power systems']],
+  kennzahlen: [['5', 'train sets'], ['140 km/h', 'in service · technically 160 km/h'], ['1961', 'first entry into service'], ['4', 'power systems']],
   daten: { 'Zugbildung': 'six cars', 'Stromsystem': '15 kV and 25 kV AC, 1.5 kV and 3 kV DC', 'Gewicht': 'approx. 309 t service weight', 'Leistung': 'approx. 2310 kW', 'Höchstgeschwindigkeit': '140 km/h in service, 160 km/h technical', 'In Betrieb seit': '1961 (fifth set 1967)', 'Einsatz': 'Trans-Europ-Express, later EuroCity' },
   abschnitte: [
     { titel: 'History and service', p: ['Four units were delivered in 1961, the fifth set followed in 1967. The elegant trains ran as the TEE Gottardo, Cisalpin, Edelweiss and Roland, among others.', 'From 1988 they ran in grey as RABe EC in EuroCity service.'] },

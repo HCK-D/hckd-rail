@@ -679,6 +679,98 @@ uebDict({
   'Damit die Website auch als App schnell startet und ohne Internet funktioniert, legt dein Browser besuchte Seiten, Bilder und Skripte in einem Zwischenspeicher auf deinem Gerät ab. Darin stehen nur Inhalte dieser Website, keine Angaben über dich.': 'So that the website starts quickly as an app and works without internet, your browser keeps visited pages, pictures and scripts in a cache on your device. It contains only content from this website, no information about you.'
 });
 
+/* ---- 05-funktionen.js ---- */
+/* English – menu, profile sheets, sightings, what's new, telling trains apart */
+uebDict({
+  // menu
+  'Hauptmenü': 'Main menu',
+  'Menü': 'Menu',
+  'Entdecken': 'Explore',
+  'Neu und aktualisiert': 'New and updated',
+  'Züge unterscheiden': 'Telling trains apart',
+  'Über HCKD': 'About HCKD',
+  // cards and profile sheet
+  'Seit': 'Since',
+  '1980er': '1980s',
+  'Datenstand: {d}': 'Data as of {d}',
+  'Oktober 2026': 'October 2026',
+  '© 2026 HCKD · Fahrzeugdaten: Stand Oktober 2026 · Netzkarte: Stand Juli 2021 ·': '© 2026 HCKD · Vehicle data: October 2026 · Network map: July 2021 ·',
+  'Kartendaten: Stand Juli 2021': 'Map data: July 2021',
+  'Steckbrief (PDF)': 'Profile sheet (PDF)',
+  'Öffnet die Druckansicht. Dort «Als PDF speichern» wählen.': 'Opens the print view. Choose «Save as PDF» there.',
+  'Steckbrief': 'Profile sheet',
+  'Kurz erklärt': 'In brief',
+  // sightings
+  'Meine Sichtungen': 'My sightings',
+  'Meine Sichtungen ({n})': 'My sightings ({n})',
+  '+ Sichtung eintragen': '+ Add a sighting',
+  'Datum': 'Date',
+  'Ort': 'Place',
+  'Fahrzeugnummer': 'Vehicle number',
+  'Notiz': 'Note',
+  'z. B. Bern, Gleis 5': 'e.g. Bern, platform 5',
+  'z. B. 460 058': 'e.g. 460 058',
+  'Speichern': 'Save',
+  'Nr.': 'No.',
+  'Sichtung vom {d} löschen': 'Delete the sighting of {d}',
+  '1 Sichtung': '1 sighting',
+  '{s} Sichtungen': '{s} sightings',
+  'Sammlung sichern (Datei)': 'Save collection (file)',
+  'Als Tabelle (CSV)': 'As a table (CSV)',
+  'Sammlung laden': 'Load a collection',
+  'Fahrzeug': 'Vehicle',
+  'Gesichert: {n} Fahrzeuge, {s} Sichtungen.': 'Saved: {n} vehicles, {s} sightings.',
+  'Geladen: {n} Fahrzeuge, {s} neue Sichtungen.': 'Loaded: {n} vehicles, {s} new sightings.',
+  'Diese Datei kann nicht gelesen werden. Wähle eine Datei, die mit «Sammlung sichern» erstellt wurde.': 'This file cannot be read. Choose a file created with «Save collection».',
+  'Auch deine Sichtungen (Datum, Ort, Fahrzeugnummer und Notiz) bleiben nur in deinem Browser. Mit «Sammlung sichern» lädst du sie als Datei auf dein Gerät herunter; diese Datei kannst du später mit «Sammlung laden» wieder einlesen. Dabei wird nichts an uns geschickt.': 'Your sightings (date, place, vehicle number and note) also stay only in your browser. With «Save collection» you download them as a file to your device; you can read that file back in later with «Load a collection». Nothing is sent to us.',
+  // what's new
+  'Was ist neu?': 'What’s new?',
+  'Die letzten Ergänzungen auf einen Blick: neue Fahrzeuge, neue Fotos und neue Funktionen.': 'The latest additions at a glance: new vehicles, new photos and new features.',
+  'Alle anzeigen': 'Show all',
+  'Neu': 'New',
+  'Aktualisiert': 'Updated',
+  'Ansehen': 'View',
+  'Sichtungen mit Datum, Ort und Fahrzeugnummer eintragen und die Sammlung als Datei sichern.': 'Record sightings with date, place and vehicle number and save the collection as a file.',
+  'Steckbrief jedes Fahrzeugs als PDF und ein Vergleich der FLIRT-Baureihen 521 bis 524.': 'A PDF profile sheet for every vehicle and a comparison of the FLIRT classes 521 to 524.',
+  'Höchstgeschwindigkeit im Betrieb und gebaute Höchstgeschwindigkeit stehen jetzt direkt zusammen.': 'Top speed in service and design top speed are now shown side by side.',
+  'Die Website lässt sich als App aufs Handy installieren.': 'The website can be installed as an app on your phone.',
+  'Abfahrtstafel mit Knopf «In meiner Nähe»; Start-Bahnhof ist neu Bern.': 'Departure board with a «Near me» button; the start station is now Bern.',
+  'Die ganze Website auf Französisch, Italienisch und Englisch; dazu das Bahn-ABC auf der Startseite.': 'The whole website in French, Italian and English, plus the railway ABC on the home page.',
+  '20 Bauzug- und Dienstwagen von SBB Infrastruktur neu im Katalog.': '20 engineering train and service wagons of SBB Infrastructure new in the catalogue.',
+  'Neue Fotos der Lösch- und Rettungszüge, Fahrleitungsfahrzeuge und weiterer Baureihen.': 'New photos of the fire-fighting and rescue trains, overhead line vehicles and other classes.',
+  'Technische Daten und Texte vieler Fahrzeuge ergänzt und geprüft.': 'Technical data and texts of many vehicles completed and checked.',
+  // telling trains apart
+  'FLIRT 521, 522, 523 oder 524?': 'FLIRT 521, 522, 523 or 524?',
+  'Die vierteiligen FLIRT der SBB sehen sich zum Verwechseln ähnlich. Am sichersten hilft die Nummer an der Front: Die ersten drei Ziffern sind die Baureihe. Dazu verraten Strom, Farben und Einsatzgebiet viel.': 'SBB’s four-car FLIRT look almost identical. The surest clue is the number on the front: the first three digits are the class. Power system, colours and area of service also tell you a lot.',
+  'Wagen': 'Cars',
+  'Unterwegs': 'Where',
+  'Nummer an der Front: 521 012': 'Number on the front: 521 012',
+  'Léman-Express-Farben: blau, weiss und rot': 'Léman Express colours: blue, white and red',
+  'Nummer an der Front: 523 001': 'Number on the front: 523 001',
+  'Schriftzug der Stadtbahn Zug, wo der RABe 523 zuerst fuhr': 'Lettering of the Stadtbahn Zug, where the RABe 523 ran first',
+  'Nummer an der Front: 524 303': 'Number on the front: 524 303',
+  'TILO-Logo und Farben rot, blau und grün': 'TILO logo and red, blue and green colours',
+  'Italienische Bezeichnung «ETR 524»': 'Italian designation «ETR 524»',
+  'Nummer 521 001–030 oder 521 201–209': 'Numbers 521 001–030 or 521 201–209',
+  'Strom 15 kV 16,7 Hz – derselbe wie in Deutschland, darum fährt er über die Grenze': 'Power 15 kV 16.7 Hz – the same as in Germany, so it crosses the border',
+  'Unterwegs bei der S-Bahn Basel und im Seehas am Bodensee': 'Runs on the Basel S-Bahn and the Seehas on Lake Constance',
+  'Nummer 522 201–232': 'Numbers 522 201–232',
+  'Zweisystem: 15 kV und 25 kV für Frankreich': 'Dual-system: 15 kV and 25 kV for France',
+  'Etwas länger: 75,0 m statt 74,1 m': 'Slightly longer: 75.0 m instead of 74.1 m',
+  'Unterwegs beim Léman Express rund um Genève und im Raum Basel': 'Runs on the Léman Express around Geneva and in the Basel area',
+  'Nummer 523 001–073, 101–114 oder 501–511': 'Numbers 523 001–073, 101–114 or 501–511',
+  'Nur 15 kV: bleibt in der Schweiz': 'Only 15 kV: stays in Switzerland',
+  'Unterwegs bei vielen S-Bahnen, z. B. in Zug, Luzern, Aargau, Freiburg und Waadt': 'Runs on many S-Bahn networks, e.g. in Zug, Lucerne, Aargau, Fribourg and Vaud',
+  'Nummer 524 …; die neueren Züge (FLIRT TSI) tragen 524 3…': 'Numbers 524 …; the newer trains (FLIRT TSI) carry 524 3…',
+  'Mehrsystem: 15 kV und 3 kV Gleichstrom für Italien': 'Multi-system: 15 kV and 3 kV direct current for Italy',
+  'Mit 4 oder 6 Wagen': 'With 4 or 6 cars',
+  'Unterwegs bei TILO im Tessin und in der Lombardei bis Milano': 'Runs for TILO in Ticino and Lombardy as far as Milan',
+  'Basel, Deutschland': 'Basel, Germany',
+  'Genève, Frankreich, Basel': 'Geneva, France, Basel',
+  'ganze Schweiz': 'all of Switzerland',
+  'Tessin, Lombardei': 'Ticino, Lombardy'
+});
+
 /* ---- 20-personenverkehr.js ---- */
 /* English – SBB Passenger vehicles */
 uebDict({ 'ja': 'yes', 'nein': 'no' });
@@ -817,8 +909,8 @@ uebZug('rbde-560', {
 uebZug('re-460', {
   typ: 'Electric universal locomotive',
   text: ['The Re 460, often called «Lok 2000», is a four-axle high-performance universal locomotive used by SBB for fast passenger services.', 'It is the backbone of long-distance travel in Switzerland, hauling the double-deck IC2000 trains and InterCity sets with standard coaches, among others.'],
-  kennzahlen: [['119', 'SBB locomotives'], ['230 km/h', 'top speed'], ['18.5 m', 'length'], ['6100 kW', 'continuous power'], ['1992', 'first in service with SBB']],
-  daten: { 'Fahrzeugart': 'electric universal locomotive', 'Höchstgeschwindigkeit': '230 km/h (max. 200 km/h in service)', 'Leistung': '6100 kW continuous', 'Gewicht': '84 t in working order', 'In Betrieb seit': '1992 (first in service with SBB)', 'Anzahl': '119 locomotives', 'Status': 'in service (modernised in the Refit programme)' },
+  kennzahlen: [['119', 'SBB locomotives'], ['200 km/h', 'in service · built for 230 km/h'], ['18.5 m', 'length'], ['6100 kW', 'continuous power'], ['1992', 'first in service with SBB']],
+  daten: { 'Fahrzeugart': 'electric universal locomotive', 'Höchstgeschwindigkeit': '200 km/h in service, built for 230 km/h', 'Leistung': '6100 kW continuous', 'Gewicht': '84 t in working order', 'In Betrieb seit': '1992 (first in service with SBB)', 'Anzahl': '119 locomotives', 'Status': 'in service (modernised in the Refit programme)' },
   abschnitte: [
     { titel: 'Vehicle components', tabelle: { kopf: ['Vehicle', 'Role', 'Length', 'Weight in working order', 'Drive'], zeilen: [
       ['Re 460', 'electric universal locomotive', '18.5 m', '84.0 t', '6100 kW / 300 kN']] } },
@@ -838,7 +930,7 @@ uebZug('re-460', {
 uebZug('rabe-503', {
   typ: 'Multi-system tilting train for international services',
   text: ['The Astoro is a seven-car electric multi-system tilting train from Alstom’s Pendolino family (ETR 610).', 'SBB uses it on EuroCity services between Germany, Switzerland and Italy.'],
-  kennzahlen: [['19', 'trains in the SBB fleet'], ['250 km/h', 'design top speed'], ['2009', 'first in service with SBB'], ['187.4 m', 'length']],
+  kennzahlen: [['19', 'trains in the SBB fleet'], ['200 km/h', 'in Switzerland · built for 250 km/h'], ['2009', 'first in service with SBB'], ['187.4 m', 'length']],
   daten: { 'Hersteller': 'Alstom (Pendolino family, ETR 610)', 'Zugbildung': '7 cars', 'Stromsystem': '15 kV and 25 kV AC, 3 kV DC', 'Gewicht': '418 t empty (FOS), 466 t loaded', 'Höchstgeschwindigkeit': '250 km/h (vehicle), 200 km/h in the Swiss train type', 'Neigetechnik': 'active', 'Einsatz': 'EuroCity Germany–Switzerland–Italy' },
   specNote: 'SBB gives 250 km/h as the top speed of the vehicle; the train type catalogue lists 200 km/h for the Swiss train type.',
   abschnitte: [
@@ -1736,7 +1828,7 @@ uebZug('h-re44i', {
 uebZug('h-tee', {
   typ: 'Four-system multiple unit for top international services (historic)',
   text: ['The RAe TEE II linked Switzerland with Germany, France, Italy and the Netherlands without changing locomotives.', 'Its four-system technology made it one of the most technically demanding European multiple units of its time.'],
-  kennzahlen: [['5', 'train sets'], ['160 km/h', 'technical top speed'], ['1961', 'first entry into service'], ['4', 'power systems']],
+  kennzahlen: [['5', 'train sets'], ['140 km/h', 'in service · technically 160 km/h'], ['1961', 'first entry into service'], ['4', 'power systems']],
   daten: { 'Zugbildung': 'six cars', 'Stromsystem': '15 kV and 25 kV AC, 1.5 kV and 3 kV DC', 'Gewicht': 'approx. 309 t service weight', 'Leistung': 'approx. 2310 kW', 'Höchstgeschwindigkeit': '140 km/h in service, 160 km/h technical', 'In Betrieb seit': '1961 (fifth set 1967)', 'Einsatz': 'Trans-Europ-Express, later EuroCity' },
   abschnitte: [
     { titel: 'History and service', p: ['Four units were delivered in 1961, the fifth set followed in 1967. The elegant trains ran as the TEE Gottardo, Cisalpin, Edelweiss and Roland, among others.', 'From 1988 they ran in grey as RABe EC in EuroCity service.'] },

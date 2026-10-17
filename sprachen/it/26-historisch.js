@@ -110,7 +110,7 @@ uebZug('h-re44i', {
 uebZug('h-tee', {
   typ: 'Elettrotreno quadritensione per il traffico internazionale di punta (storico)',
   text: ['Il RAe TEE II collegava la Svizzera senza cambio di locomotiva con Germania, Francia, Italia e Paesi Bassi.', 'La sua tecnica quadritensione ne fece uno degli elettrotreni europei tecnicamente più complessi della sua epoca.'],
-  kennzahlen: [['5', 'elettrotreni'], ['160 km/h', 'velocità massima tecnica'], ['1961', 'prima messa in servizio'], ['4', 'sistemi di corrente']],
+  kennzahlen: [['5', 'elettrotreni'], ['140 km/h', 'in esercizio · tecnica 160 km/h'], ['1961', 'prima messa in servizio'], ['4', 'sistemi di corrente']],
   daten: { 'Zugbildung': 'a sei elementi', 'Stromsystem': '15 kV e 25 kV CA, 1,5 kV e 3 kV CC', 'Gewicht': 'circa 309 t in servizio', 'Leistung': 'circa 2310 kW', 'Höchstgeschwindigkeit': '140 km/h in esercizio, 160 km/h tecnica', 'In Betrieb seit': '1961 (quinto treno 1967)', 'Einsatz': 'Trans-Europ-Express, poi EuroCity' },
   abschnitte: [
     { titel: 'Storia e impiego', p: ['Quattro unità furono consegnate nel 1961, il quinto treno seguì nel 1967. Gli eleganti elettrotreni circolarono tra l’altro come TEE Gottardo, Cisalpin, Edelweiss e Roland.', 'Dal 1988 viaggiarono in grigio come RABe EC nel traffico EuroCity.'] },

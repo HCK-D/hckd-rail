@@ -197,8 +197,8 @@ const ZUEGE = [
   { id: 're-460', kat: 'personenverkehr', name: 'Re 460', beiname: 'Lok 2000', typ: 'Elektrische Universallokomotive', vorlaeufig: false,
     text: ['Die Re 460, oft «Lok 2000» genannt, ist eine vierachsige Hochleistungs-Universallokomotive der SBB für den schnellen Personenverkehr.', 'Sie bildet das Rückgrat des Fernverkehrs in der Schweiz und zieht unter anderem die zweistöckigen IC2000-Züge sowie InterCity-Kompositionen mit Einheitswagen.'],
     nummern: [[460000, 460118]],
-    kennzahlen: [['119', 'SBB-Lokomotiven'], ['230 km/h', 'Höchstgeschwindigkeit'], ['18,5 m', 'Länge'], ['6100 kW', 'Dauerleistung'], ['1992', 'erster SBB-Einsatz']],
-    daten: { 'Fahrzeugart': 'Elektrische Universallokomotive', 'Betreiber': 'SBB', 'Achsanordnung': "Bo'Bo'", 'Stromsystem': '15 kV, 16,7 Hz AC', 'Spurweite': 'Normalspur, 1435 mm', 'Höchstgeschwindigkeit': '230 km/h (im Betrieb max. 200 km/h)', 'Leistung': '6100 kW Dauerleistung', 'Anfahrzugkraft': '300 kN', 'Länge': '18,5 m', 'Gewicht': '84 t Dienstgewicht', 'Hersteller': 'SLM / ABB', 'In Betrieb seit': '1992 (erster SBB-Einsatz)', 'Anzahl': '119 Lokomotiven', 'Status': 'im Einsatz (Refit modernisiert)' },
+    kennzahlen: [['119', 'SBB-Lokomotiven'], ['200 km/h', 'im Betrieb · gebaut für 230 km/h'], ['18,5 m', 'Länge'], ['6100 kW', 'Dauerleistung'], ['1992', 'erster SBB-Einsatz']],
+    daten: { 'Fahrzeugart': 'Elektrische Universallokomotive', 'Betreiber': 'SBB', 'Achsanordnung': "Bo'Bo'", 'Stromsystem': '15 kV, 16,7 Hz AC', 'Spurweite': 'Normalspur, 1435 mm', 'Höchstgeschwindigkeit': '200 km/h im Betrieb, gebaut für 230 km/h', 'Leistung': '6100 kW Dauerleistung', 'Anfahrzugkraft': '300 kN', 'Länge': '18,5 m', 'Gewicht': '84 t Dienstgewicht', 'Hersteller': 'SLM / ABB', 'In Betrieb seit': '1992 (erster SBB-Einsatz)', 'Anzahl': '119 Lokomotiven', 'Status': 'im Einsatz (Refit modernisiert)' },
     specOrder: ['Fahrzeugart', 'Betreiber', 'Achsanordnung', 'Stromsystem', 'Spurweite', 'Höchstgeschwindigkeit', 'Leistung', 'Anfahrzugkraft', 'Länge', 'Gewicht', 'Hersteller', 'In Betrieb seit', 'Anzahl', 'Status'],
     abschnitte: [
       { titel: 'Fahrzeugkomponenten und Baugruppen', tabelle: { kopf: ['Fahrzeugteil', 'Funktion', 'Länge', 'Dienstgewicht', 'Antrieb'], zeilen: [
@@ -236,7 +236,7 @@ const ZUEGE = [
   // ---------- Neu angelegt, Katalogblatt folgt ----------
   { id: 'rabe-503', kat: 'personenverkehr', name: 'RABe 503', beiname: 'Astoro', typ: 'Mehrsystem-Neigezug für den internationalen Verkehr', vorlaeufig: false,
     text: ['Der Astoro ist ein siebenteiliger elektrischer Mehrsystem-Neigezug aus der Pendolino-Familie von Alstom (ETR 610).', 'Die SBB setzt ihn im EuroCity-Verkehr zwischen Deutschland, der Schweiz und Italien ein.'],
-    kennzahlen: [['19', 'Züge in der SBB-Flotte'], ['250 km/h', 'konstruktive Höchstgeschwindigkeit'], ['2009', 'erster SBB-Einsatz'], ['187,4 m', 'Länge']],
+    kennzahlen: [['19', 'Züge in der SBB-Flotte'], ['200 km/h', 'in der Schweiz · gebaut für 250 km/h'], ['2009', 'erster SBB-Einsatz'], ['187,4 m', 'Länge']],
     daten: { 'Hersteller': 'Alstom (Pendolino-Familie, ETR 610)', 'Zugbildung': '7 Wagen', 'Spurweite': 'Normalspur, 1435 mm', 'Stromsystem': '15 kV und 25 kV AC, 3 kV DC', 'Länge': '187,4 m', 'Gewicht': '418 t leer (FOS), 466 t beladen', 'Leistung': '5500 kW', 'Anfahrzugkraft': '226 kN', 'Höchstgeschwindigkeit': '250 km/h (Fahrzeug), 200 km/h im Schweizer Fahrtyp', 'Neigetechnik': 'aktiv', 'Sitzplätze': '402', 'Niederflureinstieg': 'nein', 'Anzahl': '19', 'In Betrieb seit': '2009', 'Einsatz': 'EuroCity Deutschland–Schweiz–Italien' },
     specOrder: ['Hersteller', 'Zugbildung', 'Spurweite', 'Stromsystem', 'Länge', 'Gewicht', 'Leistung', 'Anfahrzugkraft', 'Höchstgeschwindigkeit', 'Neigetechnik', 'Sitzplätze', 'Niederflureinstieg', 'Anzahl', 'In Betrieb seit', 'Einsatz'],
     specNote: 'Die SBB nennt 250 km/h als Höchstgeschwindigkeit des Fahrzeugs; im Fahrtypenkatalog ist für den Schweizer Fahrtyp 200 km/h hinterlegt.',
@@ -1300,7 +1300,7 @@ const ZUEGE = [
     ] },
   { id: 'h-tee', kat: 'historisch', name: 'RAe TEE II', beiname: 'Gottardo', typ: 'Vierstrom-Triebzug für den internationalen Spitzenverkehr (historisch)', vorlaeufig: false,
     text: ['Der RAe TEE II verband die Schweiz ohne Lokwechsel mit Deutschland, Frankreich, Italien und den Niederlanden.', 'Seine Vierstromtechnik machte ihn zu einem der technisch anspruchsvollsten europäischen Triebzüge seiner Zeit.'],
-    kennzahlen: [['5', 'Triebzüge'], ['160 km/h', 'technische Höchstgeschwindigkeit'], ['1961', 'erste Inbetriebnahme'], ['4', 'Stromsysteme']],
+    kennzahlen: [['5', 'Triebzüge'], ['140 km/h', 'im Betrieb · technisch 160 km/h'], ['1961', 'erste Inbetriebnahme'], ['4', 'Stromsysteme']],
     daten: { 'Hersteller': 'SIG, MFO', 'Zugbildung': 'sechsteilig', 'Spurweite': 'Normalspur, 1435 mm', 'Stromsystem': '15 kV und 25 kV AC, 1,5 kV und 3 kV DC', 'Länge': '149,76 m', 'Gewicht': 'ca. 309 t Dienstmasse', 'Leistung': 'ca. 2310 kW', 'Höchstgeschwindigkeit': '140 km/h betrieblich, 160 km/h technisch', 'Nummern': '1051–1055', 'Anzahl': '5', 'In Betrieb seit': '1961 (fünfter Zug 1967)', 'Einsatz': 'Trans-Europ-Express, später EuroCity' },
     specOrder: ['Hersteller', 'Zugbildung', 'Spurweite', 'Stromsystem', 'Länge', 'Gewicht', 'Leistung', 'Höchstgeschwindigkeit', 'Nummern', 'Anzahl', 'In Betrieb seit', 'Einsatz'],
     abschnitte: [

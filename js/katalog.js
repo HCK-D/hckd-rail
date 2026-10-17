@@ -170,13 +170,29 @@ document.addEventListener('keydown', e => {
    ===================================================================== */
 const katQ = $('#kat-q');
 let curKat = null;
+/* Cards always show the same three short fields: speed, power, year of entry into service.
+   The short value is taken from the technical data (first speed, first power, first year);
+   KARTE holds the vehicles where that rule would pick the wrong number. Explanations stay
+   on the vehicle page. */
+// month of the last check of the vehicle data (shown on every vehicle page and in the footer)
+const DATENSTAND = 'Oktober 2026';
+const KARTE = {
+  'tm-232': { tempo: '60–80 km/h' }, 'ee-33': { tempo: '50 km/h' }, 'tmf-232': { tempo: '60 km/h' },
+  'h-ae36i': { tempo: '110 km/h' }, 'h-ae814': { tempo: '110 km/h' }, 'h-ce68iii': { tempo: '75 km/h' },
+  'h-tee': { tempo: '140 km/h' }, 'rabe-503': { tempo: '200 km/h' }, 'eem-923': { tempo: '120 km/h' },
+  'aem-940': { leistung: '2000 kW' }, 'bendini': { seit: '1980er' }
+};
+function kurzDaten(z) {
+  const d = z.daten, k = KARTE[z.id] || {};
+  const tempo = k.tempo || ((d['Höchstgeschwindigkeit'] || '').match(/\d+(?:–\d+)?\s*km\/h/) || [''])[0];
+  const leistung = k.leistung || ((d['Leistung'] || '').match(/(?:\d+\s*×\s*)?\d+(?:–\d+)?\s*kW/) || [''])[0];
+  const j = jahrOf(z);
+  return { tempo, leistung, seit: k.seit ? tr(k.seit) : isNaN(j) ? '' : String(j) };
+}
 function cardFacts(z) {
-  const d = z.daten, out = [];
-  if (d['Höchstgeschwindigkeit']) out.push(['Vmax', zd(z, 'Höchstgeschwindigkeit')]);
-  if (d['Leistung']) out.push(['', zd(z, 'Leistung')]);
-  if (d['In Betrieb seit']) out.push([tr('seit'), zd(z, 'In Betrieb seit')]);
-  if (!out.length && d['Antrieb']) out.push(['', zd(z, 'Antrieb')]);
-  return out.map(([l, v]) => `<li>${l ? esc(l) + ' ' : ''}<b>${esc(v)}</b></li>`).join('');
+  const k = kurzDaten(z);
+  return [['Tempo', k.tempo], ['Leistung', k.leistung], ['Seit', k.seit]]
+    .map(([l, v]) => `<li><span>${esc(tr(l))}</span><b>${v ? esc(v) : '–'}</b></li>`).join('');
 }
 // first number in a value like "6100 kW" or "ca. 80–85 t"; year = first 4-digit year
 const zahl = s => { const m = String(s || '').replace(/['’\s](?=\d{3})/g, '').match(/\d+(?:[.,]\d+)?/); return m ? parseFloat(m[0].replace(',', '.')) : NaN; };
@@ -339,9 +355,12 @@ function renderZug(z) {
   $('#zug-specs').innerHTML = keys.map(key => {
     const v = zd(z, key);
     return `<div class="spec"><dt>${esc(tr(key))}</dt><dd class="${v ? '' : 'tbd'}">${v ? esc(v) : esc(tr('folgt'))}</dd></div>`;
-  }).join('') + (zt(z, 'specNote') ? `<p class="hinweis" style="margin:0;padding:10px 20px 4px;font-size:13px;color:var(--fg-3)">${esc(zt(z, 'specNote'))}</p>` : '');
+  }).join('') + (zt(z, 'specNote') ? `<p class="hinweis" style="margin:0;padding:10px 20px 4px;font-size:13px;color:var(--fg-3)">${esc(zt(z, 'specNote'))}</p>` : '')
+    // data status right at the data (vehicles with their own «Datenstand» show it in the table)
+    + (z.daten['Datenstand'] ? '' : `<p class="spec-stand">${esc(tr('Datenstand: {d}', { d: tr(DATENSTAND) }))}</p>`);
   $('#zug-text').innerHTML = zt(z, 'text').map((p, i) => `<p class="${i ? '' : 'lead'}">${esc(p)}</p>`).join('');
   einsatzKarte(z); // map «Wo fährt er?» (einsatz.js)
+  sichtRender(); // my sightings of this vehicle (extras.js)
   const secs = (zt(z, 'abschnitte') || []).map(a => `<section class="blk"><h2>${esc(a.titel)}</h2>` +
     (a.liste ? `<ul class="ausst">${a.liste.map(x => `<li>${esc(x)}</li>`).join('')}</ul>` : '') +
     (a.tabelle ? `<div class="tbl-wrap"><table class="tbl"><thead><tr>${a.tabelle.kopf.map(h => `<th scope="col">${esc(h)}</th>`).join('')}</tr></thead><tbody>${a.tabelle.zeilen.map(r => `<tr>${r.map(c => `<td>${esc(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>` : '') +
@@ -400,8 +419,10 @@ document.addEventListener('keydown', e => {
 /* =====================================================================
    ROUTER (#start, #<kategorie>, #<fahrzeug>, #kategorien, #spurweite)
    ===================================================================== */
-const views = { home: $('#v-home'), kat: $('#v-kat'), zug: $('#v-zug'), text: $('#v-text'), vergleich: $('#v-vergleich') };
+const views = { home: $('#v-home'), kat: $('#v-kat'), zug: $('#v-zug'), text: $('#v-text'), vergleich: $('#v-vergleich'), entdecken: $('#v-entdecken') };
 const TEXTSEITEN = { impressum: 'Impressum', datenschutz: 'Datenschutz' };
+// pages that are only reached through the menu «Entdecken», not shown on the start page
+const ENTDECKEN = { neu: 'Neu und aktualisiert', erkennen: 'Züge unterscheiden' };
 let curView = 'home';
 function show(name) {
   for (const [n, el] of Object.entries(views)) el.hidden = n !== name;
@@ -418,6 +439,10 @@ function route() {
   else if (TEXTSEITEN[h]) {
     show('text'); $$('#v-text [data-seite]').forEach(s => { s.hidden = s.dataset.seite !== h; });
     scrollTo(0, 0); document.title = tr(TEXTSEITEN[h]) + ' · HCKD RAIL';
+  }
+  else if (ENTDECKEN[h]) {
+    show('entdecken'); $$('#v-entdecken [data-seite]').forEach(s => { s.hidden = s.dataset.seite !== h; });
+    scrollTo(0, 0); document.title = tr(ENTDECKEN[h]) + ' · HCKD RAIL';
   }
   else if (h === 'vergleich') { show('vergleich'); renderVergleich(); scrollTo(0, 0); document.title = tr('Vergleich') + ' · HCKD RAIL'; }
   else {
@@ -438,7 +463,7 @@ addEventListener('hashchange', route);
    re-460.html, the start page to ./ and sections of the start page to ./#netz.
    Other languages have their own files: re-460.fr.html, index.fr.html#netz … */
 const SEITEN = !!window.HCKD_SEITEN;
-const istSeite = id => !!(katOf(id) || zugOf(id) || TEXTSEITEN[id] || id === 'vergleich');
+const istSeite = id => !!(katOf(id) || zugOf(id) || TEXTSEITEN[id] || ENTDECKEN[id] || id === 'vergleich');
 const seitenUrl = id => !id || id === 'start' ? spracheUrl(LANG, '') : istSeite(id) ? spracheUrl(LANG, id) : spracheUrl(LANG, '') + '#' + id;
 function gehe(id) { if (SEITEN) location.href = seitenUrl(id); else location.hash = id; }
 if (SEITEN) {

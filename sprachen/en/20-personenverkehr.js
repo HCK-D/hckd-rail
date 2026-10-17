@@ -135,8 +135,8 @@ uebZug('rbde-560', {
 uebZug('re-460', {
   typ: 'Electric universal locomotive',
   text: ['The Re 460, often called «Lok 2000», is a four-axle high-performance universal locomotive used by SBB for fast passenger services.', 'It is the backbone of long-distance travel in Switzerland, hauling the double-deck IC2000 trains and InterCity sets with standard coaches, among others.'],
-  kennzahlen: [['119', 'SBB locomotives'], ['230 km/h', 'top speed'], ['18.5 m', 'length'], ['6100 kW', 'continuous power'], ['1992', 'first in service with SBB']],
-  daten: { 'Fahrzeugart': 'electric universal locomotive', 'Höchstgeschwindigkeit': '230 km/h (max. 200 km/h in service)', 'Leistung': '6100 kW continuous', 'Gewicht': '84 t in working order', 'In Betrieb seit': '1992 (first in service with SBB)', 'Anzahl': '119 locomotives', 'Status': 'in service (modernised in the Refit programme)' },
+  kennzahlen: [['119', 'SBB locomotives'], ['200 km/h', 'in service · built for 230 km/h'], ['18.5 m', 'length'], ['6100 kW', 'continuous power'], ['1992', 'first in service with SBB']],
+  daten: { 'Fahrzeugart': 'electric universal locomotive', 'Höchstgeschwindigkeit': '200 km/h in service, built for 230 km/h', 'Leistung': '6100 kW continuous', 'Gewicht': '84 t in working order', 'In Betrieb seit': '1992 (first in service with SBB)', 'Anzahl': '119 locomotives', 'Status': 'in service (modernised in the Refit programme)' },
   abschnitte: [
     { titel: 'Vehicle components', tabelle: { kopf: ['Vehicle', 'Role', 'Length', 'Weight in working order', 'Drive'], zeilen: [
       ['Re 460', 'electric universal locomotive', '18.5 m', '84.0 t', '6100 kW / 300 kN']] } },
@@ -156,7 +156,7 @@ uebZug('re-460', {
 uebZug('rabe-503', {
   typ: 'Multi-system tilting train for international services',
   text: ['The Astoro is a seven-car electric multi-system tilting train from Alstom’s Pendolino family (ETR 610).', 'SBB uses it on EuroCity services between Germany, Switzerland and Italy.'],
-  kennzahlen: [['19', 'trains in the SBB fleet'], ['250 km/h', 'design top speed'], ['2009', 'first in service with SBB'], ['187.4 m', 'length']],
+  kennzahlen: [['19', 'trains in the SBB fleet'], ['200 km/h', 'in Switzerland · built for 250 km/h'], ['2009', 'first in service with SBB'], ['187.4 m', 'length']],
   daten: { 'Hersteller': 'Alstom (Pendolino family, ETR 610)', 'Zugbildung': '7 cars', 'Stromsystem': '15 kV and 25 kV AC, 3 kV DC', 'Gewicht': '418 t empty (FOS), 466 t loaded', 'Höchstgeschwindigkeit': '250 km/h (vehicle), 200 km/h in the Swiss train type', 'Neigetechnik': 'active', 'Einsatz': 'EuroCity Germany–Switzerland–Italy' },
   specNote: 'SBB gives 250 km/h as the top speed of the vehicle; the train type catalogue lists 200 km/h for the Swiss train type.',
   abschnitte: [

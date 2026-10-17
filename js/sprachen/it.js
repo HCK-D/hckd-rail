@@ -680,6 +680,99 @@ uebDict({
   'Damit die Website auch als App schnell startet und ohne Internet funktioniert, legt dein Browser besuchte Seiten, Bilder und Skripte in einem Zwischenspeicher auf deinem Gerät ab. Darin stehen nur Inhalte dieser Website, keine Angaben über dich.': 'Affinché il sito si avvii rapidamente come app e funzioni anche senza Internet, il tuo browser conserva pagine, immagini e script visitati in una memoria cache sul tuo dispositivo. Contiene solo contenuti di questo sito, nessuna informazione su di te.'
 });
 
+/* ---- 05-funktionen.js ---- */
+/* Italiano – menu, schede, avvistamenti, novità, riconoscere i treni */
+uebDict({
+  // menu
+  'Hauptmenü': 'Menu principale',
+  'Menü': 'Menu',
+  'Entdecken': 'Scoprire',
+  'Neu und aktualisiert': 'Novità e aggiornamenti',
+  'Züge unterscheiden': 'Distinguere i treni',
+  'Über HCKD': 'Su HCKD',
+  // schede
+  'Seit': 'Dal',
+  '1980er': 'anni 1980',
+  'Datenstand: {d}': 'Stato dei dati: {d}',
+  'Oktober 2026': 'ottobre 2026',
+  '© 2026 HCKD · Fahrzeugdaten: Stand Oktober 2026 · Netzkarte: Stand Juli 2021 ·': '© 2026 HCKD · Dati dei veicoli: ottobre 2026 · Carta della rete: luglio 2021 ·',
+  'Kartendaten: Stand Juli 2021': 'Dati cartografici: luglio 2021',
+  'Steckbrief (PDF)': 'Scheda (PDF)',
+  'Öffnet die Druckansicht. Dort «Als PDF speichern» wählen.': 'Apre l’anteprima di stampa. Lì scegli «Salva come PDF».',
+  'Steckbrief': 'Scheda',
+  'Kurz erklärt': 'In breve',
+  // avvistamenti
+  'Meine Sichtungen': 'I miei avvistamenti',
+  'Meine Sichtungen ({n})': 'I miei avvistamenti ({n})',
+  '+ Sichtung eintragen': '+ Aggiungi un avvistamento',
+  'Datum': 'Data',
+  'Ort': 'Luogo',
+  'Fahrzeugnummer': 'Numero del veicolo',
+  'Notiz': 'Nota',
+  'z. B. Bern, Gleis 5': 'p. es. Berna, binario 5',
+  'z. B. 460 058': 'p. es. 460 058',
+  'Speichern': 'Salva',
+  'Nr.': 'n.',
+  'Sichtung vom {d} löschen': 'Elimina l’avvistamento del {d}',
+  '1 Sichtung': '1 avvistamento',
+  '{s} Sichtungen': '{s} avvistamenti',
+  'Sammlung sichern (Datei)': 'Salva la collezione (file)',
+  'Als Tabelle (CSV)': 'Come tabella (CSV)',
+  'Sammlung laden': 'Carica una collezione',
+  'Fahrzeug': 'Veicolo',
+  'Gesichert: {n} Fahrzeuge, {s} Sichtungen.': 'Salvato: {n} veicoli, {s} avvistamenti.',
+  'Geladen: {n} Fahrzeuge, {s} neue Sichtungen.': 'Caricato: {n} veicoli, {s} nuovi avvistamenti.',
+  'Diese Datei kann nicht gelesen werden. Wähle eine Datei, die mit «Sammlung sichern» erstellt wurde.': 'Questo file non può essere letto. Scegli un file creato con «Salva la collezione».',
+  'Auch deine Sichtungen (Datum, Ort, Fahrzeugnummer und Notiz) bleiben nur in deinem Browser. Mit «Sammlung sichern» lädst du sie als Datei auf dein Gerät herunter; diese Datei kannst du später mit «Sammlung laden» wieder einlesen. Dabei wird nichts an uns geschickt.': 'Anche i tuoi avvistamenti (data, luogo, numero del veicolo e nota) restano solo nel tuo browser. Con «Salva la collezione» li scarichi come file sul tuo dispositivo; potrai poi rileggerlo con «Carica una collezione». Non ci viene inviato nulla.',
+  // novità
+  'Was ist neu?': 'Che cosa c’è di nuovo?',
+  'Die letzten Ergänzungen auf einen Blick: neue Fahrzeuge, neue Fotos und neue Funktionen.': 'Le ultime aggiunte in breve: nuovi veicoli, nuove foto e nuove funzioni.',
+  'Alle anzeigen': 'Mostra tutto',
+  'Neu': 'Nuovo',
+  'Aktualisiert': 'Aggiornato',
+  'Ansehen': 'Vedi',
+  'Sichtungen mit Datum, Ort und Fahrzeugnummer eintragen und die Sammlung als Datei sichern.': 'Registrare avvistamenti con data, luogo e numero del veicolo e salvare la collezione come file.',
+  'Steckbrief jedes Fahrzeugs als PDF und ein Vergleich der FLIRT-Baureihen 521 bis 524.': 'Scheda di ogni veicolo in PDF e confronto delle serie FLIRT da 521 a 524.',
+  'Höchstgeschwindigkeit im Betrieb und gebaute Höchstgeschwindigkeit stehen jetzt direkt zusammen.': 'La velocità massima in esercizio e quella di progetto ora sono indicate insieme.',
+  'Die Website lässt sich als App aufs Handy installieren.': 'Il sito si può installare come app sul telefono.',
+  'Abfahrtstafel mit Knopf «In meiner Nähe»; Start-Bahnhof ist neu Bern.': 'Tabellone delle partenze con il pulsante «Vicino a me»; la stazione iniziale ora è Berna.',
+  'Die ganze Website auf Französisch, Italienisch und Englisch; dazu das Bahn-ABC auf der Startseite.': 'Tutto il sito in francese, italiano e inglese; in più l’ABC della ferrovia sulla pagina iniziale.',
+  '20 Bauzug- und Dienstwagen von SBB Infrastruktur neu im Katalog.': '20 carri per treni cantiere e di servizio di FFS Infrastruttura nuovi nel catalogo.',
+  'Neue Fotos der Lösch- und Rettungszüge, Fahrleitungsfahrzeuge und weiterer Baureihen.': 'Nuove foto dei treni di spegnimento e salvataggio, dei veicoli per la linea di contatto e di altre serie.',
+  'Technische Daten und Texte vieler Fahrzeuge ergänzt und geprüft.': 'Dati tecnici e testi di molti veicoli completati e verificati.',
+  // riconoscere i treni
+  'FLIRT 521, 522, 523 oder 524?': 'FLIRT 521, 522, 523 o 524?',
+  'Die vierteiligen FLIRT der SBB sehen sich zum Verwechseln ähnlich. Am sichersten hilft die Nummer an der Front: Die ersten drei Ziffern sind die Baureihe. Dazu verraten Strom, Farben und Einsatzgebiet viel.': 'I FLIRT a quattro casse delle FFS si somigliano moltissimo. La cosa più sicura è il numero sul frontale: le prime tre cifre indicano la serie. Anche corrente, colori e zona d’impiego dicono molto.',
+  'Wagen': 'Casse',
+  'Unterwegs': 'Dove',
+  'Nummer an der Front: 521 012': 'Numero sul frontale: 521 012',
+  'Léman-Express-Farben: blau, weiss und rot': 'Colori del Léman Express: blu, bianco e rosso',
+  'Nummer an der Front: 523 001': 'Numero sul frontale: 523 001',
+  'Schriftzug der Stadtbahn Zug, wo der RABe 523 zuerst fuhr': 'Scritta della Stadtbahn Zug, dove il RABe 523 ha circolato per primo',
+  'Nummer an der Front: 524 303': 'Numero sul frontale: 524 303',
+  'TILO-Logo und Farben rot, blau und grün': 'Logo TILO e colori rosso, blu e verde',
+  'Italienische Bezeichnung «ETR 524»': 'Designazione italiana «ETR 524»',
+  'Nummer 521 001–030 oder 521 201–209': 'Numeri 521 001–030 o 521 201–209',
+  'Strom 15 kV 16,7 Hz – derselbe wie in Deutschland, darum fährt er über die Grenze': 'Corrente 15 kV 16,7 Hz – la stessa della Germania, per questo passa il confine',
+  'Unterwegs bei der S-Bahn Basel und im Seehas am Bodensee': 'In servizio sulla S-Bahn di Basilea e sul Seehas al lago di Costanza',
+  'Nummer 522 201–232': 'Numeri 522 201–232',
+  'Zweisystem: 15 kV und 25 kV für Frankreich': 'Bitensione: 15 kV e 25 kV per la Francia',
+  'Etwas länger: 75,0 m statt 74,1 m': 'Un po’ più lungo: 75,0 m invece di 74,1 m',
+  'Unterwegs beim Léman Express rund um Genève und im Raum Basel': 'In servizio sul Léman Express intorno a Ginevra e nella regione di Basilea',
+  'Nummer 523 001–073, 101–114 oder 501–511': 'Numeri 523 001–073, 101–114 o 501–511',
+  'Nur 15 kV: bleibt in der Schweiz': 'Solo 15 kV: resta in Svizzera',
+  'Unterwegs bei vielen S-Bahnen, z. B. in Zug, Luzern, Aargau, Freiburg und Waadt': 'In servizio su molte S-Bahn, p. es. a Zugo, Lucerna, in Argovia, a Friburgo e nel Vaud',
+  'Nummer 524 …; die neueren Züge (FLIRT TSI) tragen 524 3…': 'Numeri 524 …; i treni più recenti (FLIRT TSI) portano 524 3…',
+  'Mehrsystem: 15 kV und 3 kV Gleichstrom für Italien': 'Multisistema: 15 kV e 3 kV corrente continua per l’Italia',
+  'Mit 4 oder 6 Wagen': 'Con 4 o 6 casse',
+  'Unterwegs bei TILO im Tessin und in der Lombardei bis Milano': 'In servizio con TILO in Ticino e in Lombardia fino a Milano',
+  '15 kV + 3 kV DC': '15 kV + 3 kV CC',
+  'Basel, Deutschland': 'Basilea, Germania',
+  'Genève, Frankreich, Basel': 'Ginevra, Francia, Basilea',
+  'ganze Schweiz': 'tutta la Svizzera',
+  'Tessin, Lombardei': 'Ticino, Lombardia'
+});
+
 /* ---- 20-personenverkehr.js ---- */
 /* Italiano – veicoli FFS Viaggiatori */
 uebDict({ 'ja': 'sì', 'nein': 'no', 'SBB': 'FFS' });
@@ -818,8 +911,8 @@ uebZug('rbde-560', {
 uebZug('re-460', {
   typ: 'Locomotiva elettrica universale',
   text: ['La Re 460, spesso chiamata «Loc 2000», è una locomotiva universale a quattro assi ad alte prestazioni delle FFS per il traffico viaggiatori veloce.', 'È la spina dorsale della lunga percorrenza in Svizzera e traina tra l’altro i treni a due piani IC2000 e composizioni InterCity con carrozze unificate.'],
-  kennzahlen: [['119', 'locomotive FFS'], ['230 km/h', 'velocità massima'], ['18,5 m', 'lunghezza'], ['6100 kW', 'potenza continuativa'], ['1992', 'primo impiego alle FFS']],
-  daten: { 'Fahrzeugart': 'locomotiva elettrica universale', 'Höchstgeschwindigkeit': '230 km/h (in esercizio max. 200 km/h)', 'Leistung': '6100 kW continuativi', 'Gewicht': '84 t in servizio', 'In Betrieb seit': '1992 (primo impiego alle FFS)', 'Anzahl': '119 locomotive', 'Status': 'in servizio (ammodernata con il Refit)' },
+  kennzahlen: [['119', 'locomotive FFS'], ['200 km/h', 'in esercizio · costruita per 230 km/h'], ['18,5 m', 'lunghezza'], ['6100 kW', 'potenza continuativa'], ['1992', 'primo impiego alle FFS']],
+  daten: { 'Fahrzeugart': 'locomotiva elettrica universale', 'Höchstgeschwindigkeit': '200 km/h in esercizio, costruita per 230 km/h', 'Leistung': '6100 kW continuativi', 'Gewicht': '84 t in servizio', 'In Betrieb seit': '1992 (primo impiego alle FFS)', 'Anzahl': '119 locomotive', 'Status': 'in servizio (ammodernata con il Refit)' },
   abschnitte: [
     { titel: 'Componenti del veicolo', tabelle: { kopf: ['Veicolo', 'Funzione', 'Lunghezza', 'Peso in servizio', 'Trazione'], zeilen: [
       ['Re 460', 'locomotiva elettrica universale', '18,5 m', '84,0 t', '6100 kW / 300 kN']] } },
@@ -839,7 +932,7 @@ uebZug('re-460', {
 uebZug('rabe-503', {
   typ: 'Treno multisistema ad assetto variabile per il traffico internazionale',
   text: ['L’Astoro è un treno elettrico multisistema ad assetto variabile a sette casse della famiglia Pendolino di Alstom (ETR 610).', 'Le FFS lo impiegano nel traffico EuroCity tra Germania, Svizzera e Italia.'],
-  kennzahlen: [['19', 'treni nella flotta FFS'], ['250 km/h', 'velocità massima di progetto'], ['2009', 'primo impiego alle FFS'], ['187,4 m', 'lunghezza']],
+  kennzahlen: [['19', 'treni nella flotta FFS'], ['200 km/h', 'in Svizzera · costruito per 250 km/h'], ['2009', 'primo impiego alle FFS'], ['187,4 m', 'lunghezza']],
   daten: { 'Hersteller': 'Alstom (famiglia Pendolino, ETR 610)', 'Zugbildung': '7 carrozze', 'Stromsystem': '15 kV e 25 kV CA, 3 kV CC', 'Gewicht': '418 t a vuoto (FOS), 466 t a pieno carico', 'Höchstgeschwindigkeit': '250 km/h (veicolo), 200 km/h nel tipo di marcia svizzero', 'Neigetechnik': 'attivo', 'Einsatz': 'EuroCity Germania–Svizzera–Italia' },
   specNote: 'Le FFS indicano 250 km/h come velocità massima del veicolo; nel catalogo dei tipi di marcia è registrato 200 km/h per il tipo svizzero.',
   abschnitte: [
@@ -1739,7 +1832,7 @@ uebZug('h-re44i', {
 uebZug('h-tee', {
   typ: 'Elettrotreno quadritensione per il traffico internazionale di punta (storico)',
   text: ['Il RAe TEE II collegava la Svizzera senza cambio di locomotiva con Germania, Francia, Italia e Paesi Bassi.', 'La sua tecnica quadritensione ne fece uno degli elettrotreni europei tecnicamente più complessi della sua epoca.'],
-  kennzahlen: [['5', 'elettrotreni'], ['160 km/h', 'velocità massima tecnica'], ['1961', 'prima messa in servizio'], ['4', 'sistemi di corrente']],
+  kennzahlen: [['5', 'elettrotreni'], ['140 km/h', 'in esercizio · tecnica 160 km/h'], ['1961', 'prima messa in servizio'], ['4', 'sistemi di corrente']],
   daten: { 'Zugbildung': 'a sei elementi', 'Stromsystem': '15 kV e 25 kV CA, 1,5 kV e 3 kV CC', 'Gewicht': 'circa 309 t in servizio', 'Leistung': 'circa 2310 kW', 'Höchstgeschwindigkeit': '140 km/h in esercizio, 160 km/h tecnica', 'In Betrieb seit': '1961 (quinto treno 1967)', 'Einsatz': 'Trans-Europ-Express, poi EuroCity' },
   abschnitte: [
     { titel: 'Storia e impiego', p: ['Quattro unità furono consegnate nel 1961, il quinto treno seguì nel 1967. Gli eleganti elettrotreni circolarono tra l’altro come TEE Gottardo, Cisalpin, Edelweiss e Roland.', 'Dal 1988 viaggiarono in grigio come RABe EC nel traffico EuroCity.'] },

@@ -111,7 +111,7 @@ uebZug('h-re44i', {
 uebZug('h-tee', {
   typ: 'Rame automotrice quadricourant pour le trafic international haut de gamme (historique)',
   text: ['Le RAe TEE II reliait la Suisse sans changement de locomotive à l’Allemagne, la France, l’Italie et les Pays-Bas.', 'Sa technique quadricourant en a fait l’une des rames automotrices européennes les plus exigeantes techniquement de son époque.'],
-  kennzahlen: [['5', 'rames'], ['160 km/h', 'vitesse maximale technique'], ['1961', 'première mise en service'], ['4', 'systèmes de courant']],
+  kennzahlen: [['5', 'rames'], ['140 km/h', 'en exploitation · technique 160 km/h'], ['1961', 'première mise en service'], ['4', 'systèmes de courant']],
   daten: { 'Zugbildung': 'à six éléments', 'Stromsystem': '15 kV et 25 kV CA, 1,5 kV et 3 kV CC', 'Gewicht': 'env. 309 t en service', 'Leistung': 'env. 2310 kW', 'Höchstgeschwindigkeit': '140 km/h en exploitation, 160 km/h technique', 'In Betrieb seit': '1961 (cinquième rame 1967)', 'Einsatz': 'Trans-Europ-Express, plus tard EuroCity' },
   abschnitte: [
     { titel: 'Histoire et service', p: ['Quatre unités ont été livrées en 1961, la cinquième a suivi en 1967. Ces élégantes rames ont circulé notamment comme TEE Gottardo, Cisalpin, Edelweiss et Roland.', 'Dès 1988, elles ont roulé en gris comme RABe EC dans le trafic EuroCity.'] },

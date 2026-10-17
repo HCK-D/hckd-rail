@@ -114,6 +114,12 @@ let seenIds = (() => {
   try { const a = JSON.parse(localStorage.getItem(SEEN_KEY) || '[]'); return Array.isArray(a) ? a.filter(id => zugOf(id)) : []; }
   catch (e) { return []; }
 })();
+const SICHT_KEY = 'hckd-sichtungen';
+let sicht = (() => {
+  try { const o = JSON.parse(localStorage.getItem(SICHT_KEY) || '{}'); return o && typeof o === 'object' && !Array.isArray(o) ? o : {}; }
+  catch (e) { return {}; }
+})();
+const sichtAnzahl = () => Object.values(sicht).reduce((n, l) => n + (Array.isArray(l) ? l.length : 0), 0);
 const seenBtn = $('#zug-seen');
 function istGesehen(id) { return seenIds.includes(id); }
 function albumSync() {
@@ -121,18 +127,113 @@ function albumSync() {
   seenBtn.setAttribute('aria-pressed', on ? 'true' : 'false');
   $('span', seenBtn).textContent = on ? tr('Gesehen') : tr('Hab ich gesehen');
   const n = seenIds.length, total = ZUEGE.length;
-  $('#album-n').textContent = tr('{n} von {total} gesehen', { n, total });
+  const s = sichtAnzahl();
+  $('#album-n').textContent = tr('{n} von {total} gesehen', { n, total }) + (s ? ' · ' + (s === 1 ? tr('1 Sichtung') : tr('{s} Sichtungen', { s })) : '');
   $('#album-bar').style.width = (total ? n / total * 100 : 0) + '%';
   $$('[data-seen-kat]').forEach(el => {
     const k = inKat(el.dataset.seenKat).filter(z => istGesehen(z.id)).length;
     el.textContent = k ? ' · ' + tr('{n} gesehen', { n: k }) : '';
   });
 }
+function seenSpeichern() {
+  try { localStorage.setItem(SEEN_KEY, JSON.stringify(seenIds)); } catch (e) { /* private window: keep it for this visit */ }
+}
 seenBtn.addEventListener('click', () => {
   if (!curZug) return;
   seenIds = istGesehen(curZug.id) ? seenIds.filter(id => id !== curZug.id) : seenIds.concat(curZug.id);
-  try { localStorage.setItem(SEEN_KEY, JSON.stringify(seenIds)); } catch (e) { /* private window: keep it for this visit */ }
+  seenSpeichern();
   albumSync();
+});
+
+/* ---------- Sichtungen: wann, wo, welche Nummer, Notiz (nur im Browser) ----------
+   hckd-sichtungen = { "re-460": [{ d: "2026-10-18", ort, nr, notiz, t }] }; t = time of entry, keeps entries apart.
+   Saving a sighting also marks the vehicle as seen. */
+const sichtForm = $('#sicht-form'), sichtNeu = $('#sicht-neu');
+const heute = () => { const d = new Date(); return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'); };
+const datumText = s => { const d = new Date(s + 'T12:00:00'); return isNaN(d) ? s : d.toLocaleDateString(LOCALE, { day: 'numeric', month: 'long', year: 'numeric' }); };
+function sichtSpeichern() {
+  try { localStorage.setItem(SICHT_KEY, JSON.stringify(sicht)); } catch (e) { /* private window: keep it for this visit */ }
+}
+function sichtRender() {
+  if (!curZug) return;
+  const list = (sicht[curZug.id] || []).slice().sort((a, b) => (b.d || '').localeCompare(a.d || '') || b.t - a.t);
+  $('#sicht-list').innerHTML = list.map(s => `<li><span class="sl-d">${esc(datumText(s.d))}</span>${s.ort ? `<span class="sl-ort">${esc(s.ort)}</span>` : ''}${s.nr ? `<span class="sl-nr">${esc(tr('Nr.'))} ${esc(s.nr)}</span>` : ''}${s.notiz ? `<span class="sl-notiz">${esc(s.notiz)}</span>` : ''}<button type="button" class="sl-del" data-sicht-del="${s.t}" aria-label="${esc(tr('Sichtung vom {d} löschen', { d: datumText(s.d) }))}">×</button></li>`).join('');
+  $('#sicht-titel').textContent = list.length ? tr('Meine Sichtungen ({n})', { n: list.length }) : tr('Meine Sichtungen');
+}
+function sichtFormZu() { sichtForm.hidden = true; sichtNeu.setAttribute('aria-expanded', 'false'); }
+sichtNeu.addEventListener('click', () => {
+  const auf = sichtForm.hidden;
+  sichtForm.hidden = !auf; sichtNeu.setAttribute('aria-expanded', String(auf));
+  if (auf) { sichtForm.reset(); sichtForm.elements.d.value = heute(); sichtForm.elements.ort.focus(); }
+});
+$('#sicht-abbruch').addEventListener('click', sichtFormZu);
+sichtForm.addEventListener('submit', e => {
+  e.preventDefault();
+  if (!curZug) return;
+  const f = sichtForm.elements, txt = el => el.value.trim().slice(0, +el.maxLength > 0 ? +el.maxLength : 200);
+  (sicht[curZug.id] = sicht[curZug.id] || []).push({ d: f.d.value || heute(), ort: txt(f.ort), nr: txt(f.nr), notiz: txt(f.notiz), t: Date.now() });
+  sichtSpeichern();
+  if (!istGesehen(curZug.id)) { seenIds = seenIds.concat(curZug.id); seenSpeichern(); }
+  sichtFormZu(); sichtRender(); albumSync();
+});
+$('#sicht-list').addEventListener('click', e => {
+  const b = e.target.closest('[data-sicht-del]'); if (!b || !curZug) return;
+  sicht[curZug.id] = (sicht[curZug.id] || []).filter(s => String(s.t) !== b.dataset.sichtDel);
+  if (!sicht[curZug.id].length) delete sicht[curZug.id];
+  sichtSpeichern(); sichtRender(); albumSync();
+});
+// another page: close the form (renderZug shows the sightings of the new vehicle)
+addEventListener('hashchange', sichtFormZu);
+
+/* ---------- Sammlung sichern und laden ---------- */
+function datei(name, inhalt, typ) {
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob([inhalt], { type: typ }));
+  a.download = name;
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+}
+const albumMsg = t => { $('#album-msg').textContent = t; };
+$('#album-export').addEventListener('click', () => {
+  const daten = { app: 'HCKD RAIL', version: 1, exportiert: new Date().toISOString(), gesehen: seenIds, sichtungen: sicht };
+  datei('hckd-rail-sammlung-' + heute() + '.json', JSON.stringify(daten, null, 2), 'application/json');
+  albumMsg(tr('Gesichert: {n} Fahrzeuge, {s} Sichtungen.', { n: seenIds.length, s: sichtAnzahl() }));
+});
+$('#album-csv').addEventListener('click', () => {
+  const zelle = v => '"' + String(v == null ? '' : v).replace(/"/g, '""') + '"';
+  const zeilen = [[tr('Fahrzeug'), tr('Kategorie'), tr('Datum'), tr('Ort'), tr('Fahrzeugnummer'), tr('Notiz')]];
+  for (const id of seenIds) {
+    const z = zugOf(id), list = sicht[id] || [];
+    if (!list.length) zeilen.push([fullName(z), tr(katOf(z.kat).name), '', '', '', '']);
+    for (const s of list) zeilen.push([fullName(z), tr(katOf(z.kat).name), s.d, s.ort, s.nr, s.notiz]);
+  }
+  // semicolons and a BOM so that Excel in Switzerland opens it correctly
+  datei('hckd-rail-sammlung-' + heute() + '.csv', '﻿' + zeilen.map(r => r.map(zelle).join(';')).join('\r\n'), 'text/csv;charset=utf-8');
+});
+$('#album-import').addEventListener('change', async e => {
+  const f = e.target.files && e.target.files[0]; e.target.value = '';
+  if (!f) return;
+  try {
+    const o = JSON.parse(await f.text());
+    if (!o || o.app !== 'HCKD RAIL' || !Array.isArray(o.gesehen)) throw new Error('format');
+    // merge: nothing that is already here gets lost
+    seenIds = seenIds.concat(o.gesehen.filter(id => typeof id === 'string' && zugOf(id) && !seenIds.includes(id)));
+    let neu = 0;
+    for (const [id, list] of Object.entries(o.sichtungen || {})) {
+      if (!zugOf(id) || !Array.isArray(list)) continue;
+      const da = sicht[id] = sicht[id] || [];
+      for (const s of list) {
+        if (!s || typeof s.d !== 'string' || da.some(x => x.t === s.t && x.d === s.d)) continue;
+        da.push({ d: s.d.slice(0, 10), ort: String(s.ort || '').slice(0, 80), nr: String(s.nr || '').slice(0, 40), notiz: String(s.notiz || '').slice(0, 200), t: +s.t || Date.now() + neu });
+        neu++;
+      }
+      if (!seenIds.includes(id)) seenIds.push(id);
+    }
+    seenSpeichern(); sichtSpeichern(); albumSync(); sichtRender();
+    albumMsg(tr('Geladen: {n} Fahrzeuge, {s} neue Sichtungen.', { n: seenIds.length, s: neu }));
+  } catch (err) {
+    albumMsg(tr('Diese Datei kann nicht gelesen werden. Wähle eine Datei, die mit «Sammlung sichern» erstellt wurde.'));
+  }
 });
 
 /* =====================================================================

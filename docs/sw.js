@@ -1,6 +1,6 @@
 /* HCKD RAIL – Service Worker (automatisch erzeugt von werkzeuge\website-bauen.ps1) */
 'use strict';
-const V = 'hckd-20261018011741';
+const V = 'hckd-20261018015823';
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(V).then(c => c.addAll(['./', 'index.html', 'manifest.webmanifest'])).then(() => self.skipWaiting()));
 });

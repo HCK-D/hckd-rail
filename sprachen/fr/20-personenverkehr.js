@@ -135,8 +135,8 @@ uebZug('rbde-560', {
 uebZug('re-460', {
   typ: 'Locomotive électrique universelle',
   text: ['La Re 460, souvent appelée « Loc 2000 », est une locomotive universelle à quatre essieux et haute puissance des CFF pour le trafic voyageurs rapide.', 'Elle est l’épine dorsale des grandes lignes en Suisse et tire notamment les trains à deux niveaux IC2000 ainsi que des compositions InterCity avec voitures unifiées.'],
-  kennzahlen: [['119', 'locomotives CFF'], ['230 km/h', 'vitesse maximale'], ['18,5 m', 'longueur'], ['6100 kW', 'puissance continue'], ['1992', 'première mise en service aux CFF']],
-  daten: { 'Fahrzeugart': 'locomotive électrique universelle', 'Höchstgeschwindigkeit': '230 km/h (max. 200 km/h en exploitation)', 'Leistung': '6100 kW en continu', 'Gewicht': '84 t en service', 'In Betrieb seit': '1992 (première mise en service aux CFF)', 'Anzahl': '119 locomotives', 'Status': 'en service (modernisée par le Refit)' },
+  kennzahlen: [['119', 'locomotives CFF'], ['200 km/h', 'en exploitation · construite pour 230 km/h'], ['18,5 m', 'longueur'], ['6100 kW', 'puissance continue'], ['1992', 'première mise en service aux CFF']],
+  daten: { 'Fahrzeugart': 'locomotive électrique universelle', 'Höchstgeschwindigkeit': '200 km/h en exploitation, construite pour 230 km/h', 'Leistung': '6100 kW en continu', 'Gewicht': '84 t en service', 'In Betrieb seit': '1992 (première mise en service aux CFF)', 'Anzahl': '119 locomotives', 'Status': 'en service (modernisée par le Refit)' },
   abschnitte: [
     { titel: 'Composants du véhicule', tabelle: { kopf: ['Véhicule', 'Fonction', 'Longueur', 'Poids en service', 'Traction'], zeilen: [
       ['Re 460', 'locomotive électrique universelle', '18,5 m', '84,0 t', '6100 kW / 300 kN']] } },
@@ -156,7 +156,7 @@ uebZug('re-460', {
 uebZug('rabe-503', {
   typ: 'Train pendulaire multisystème pour le trafic international',
   text: ['L’Astoro est un train pendulaire électrique multisystème de sept caisses de la famille Pendolino d’Alstom (ETR 610).', 'Les CFF l’engagent en trafic EuroCity entre l’Allemagne, la Suisse et l’Italie.'],
-  kennzahlen: [['19', 'rames dans la flotte CFF'], ['250 km/h', 'vitesse maximale de construction'], ['2009', 'première mise en service aux CFF'], ['187,4 m', 'longueur']],
+  kennzahlen: [['19', 'rames dans la flotte CFF'], ['200 km/h', 'en Suisse · construite pour 250 km/h'], ['2009', 'première mise en service aux CFF'], ['187,4 m', 'longueur']],
   daten: { 'Hersteller': 'Alstom (famille Pendolino, ETR 610)', 'Zugbildung': '7 voitures', 'Stromsystem': '15 kV et 25 kV CA, 3 kV CC', 'Gewicht': '418 t à vide (FOS), 466 t en charge', 'Höchstgeschwindigkeit': '250 km/h (véhicule), 200 km/h dans le type de marche suisse', 'Neigetechnik': 'active', 'Einsatz': 'EuroCity Allemagne–Suisse–Italie' },
   specNote: 'Les CFF indiquent 250 km/h comme vitesse maximale du véhicule ; le catalogue des types de marche retient 200 km/h pour le type suisse.',
   abschnitte: [

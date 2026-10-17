@@ -58,6 +58,25 @@
       <svg class="mark" aria-hidden="true"><use href="#logo"/></svg>
       <span class="brand-txt"><span class="wm">HCKD <em>RAIL</em></span><span class="brand-sub">Train Database</span></span>
     </a>
+    <nav class="topnav" id="topnav" aria-label="Hauptmenü">
+      <a href="#kategorien">Fahrzeuge</a>
+      <details class="nav-dd">
+        <summary>Entdecken</summary>
+        <ul>
+          <li><a href="#neu">Neu und aktualisiert</a></li>
+          <li><a href="#abfahrten">Abfahrten</a></li>
+          <li><a href="#bahn-abc">Bahn-ABC</a></li>
+          <li><a href="#erkennen">Züge unterscheiden</a></li>
+          <li><a href="#netz">Bahnnetz Schweiz</a></li>
+          <li><a href="#zeitstrahl">Zeitstrahl</a></li>
+          <li><a href="#spurweite">Spurweite</a></li>
+          <li><a href="#quiz">Quiz</a></li>
+          <li><a href="#album">Sammelalbum</a></li>
+        </ul>
+      </details>
+      <a href="#vergleich">Vergleich</a>
+      <a href="#impressum">Über HCKD</a>
+    </nav>
     <div class="hclock" aria-label="Schweizer Zeit">
       <svg class="clock" id="clock" viewBox="0 0 200 200" role="img" aria-label="Schweizer Zeit">
         <defs>
@@ -94,6 +113,9 @@
     <button class="donate" type="button" data-donate aria-haspopup="dialog">
       <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7.5-4.6-7.5-10.2A4.2 4.2 0 0 1 12 7.2a4.2 4.2 0 0 1 7.5 2.6C19.5 15.4 12 20 12 20z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></svg>
       <span>Spenden</span>
+    </button>
+    <button class="menu-btn" type="button" id="menu-btn" aria-expanded="false" aria-controls="topnav" aria-label="Menü" title="Menü">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
   </div>
 </header>
@@ -154,6 +176,12 @@
             <span>Tippe auf einer Fahrzeugseite auf «Hab ich gesehen». Die Liste bleibt in deinem Browser.</span>
           </div>
           <div class="album-bar" aria-hidden="true"><i id="album-bar"></i></div>
+          <div class="album-tools">
+            <button class="report-btn" type="button" id="album-export">Sammlung sichern (Datei)</button>
+            <button class="report-btn" type="button" id="album-csv">Als Tabelle (CSV)</button>
+            <label class="report-btn album-import"><input type="file" id="album-import" accept="application/json,.json"><span>Sammlung laden</span></label>
+            <span class="album-msg" id="album-msg" aria-live="polite"></span>
+          </div>
         </div>
       </div>
     </section>
@@ -365,6 +393,7 @@
           <span class="kicker">Bahnnetz Schweiz</span>
           <h2 class="h2">Alle Bahnstrecken der Schweiz</h2>
           <p class="sec-lede">SBB, Privatbahnen, Meterspur und Bergbahnen auf einer Karte. Tippe auf eine Strecke für Betreiber, Spurweite, Gleise und Stromsystem.</p>
+          <p class="stand-badge">Kartendaten: Stand Juli 2021</p>
         </div>
         <div class="map-card">
           <div class="map-tools" id="map-legend" aria-label="Kategorien ein- und ausblenden"></div>
@@ -449,6 +478,21 @@
             <button class="cmp-toggle seen-toggle" type="button" id="zug-seen" aria-pressed="false"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Hab ich gesehen</span></button>
             <button class="cmp-toggle" type="button" id="zug-cmp" aria-pressed="false"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h7v12H4zM13 6h7v12h-7z"/></svg><span>Zum Vergleich</span></button>
             <button class="cmp-toggle" type="button" id="zug-share"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V4M8 8l4-4 4 4M5 13v5a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-5"/></svg><span>Teilen</span></button>
+            <button class="cmp-toggle" type="button" id="zug-pdf" title="Öffnet die Druckansicht. Dort «Als PDF speichern» wählen."><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 13h6M9 17h6"/></svg><span>Steckbrief (PDF)</span></button>
+          </div>
+          <div class="sicht" id="zug-sicht">
+            <div class="sicht-head">
+              <b id="sicht-titel">Meine Sichtungen</b>
+              <button class="report-btn" type="button" id="sicht-neu" aria-expanded="false" aria-controls="sicht-form">+ Sichtung eintragen</button>
+            </div>
+            <ul class="sicht-list" id="sicht-list"></ul>
+            <form class="sicht-form" id="sicht-form" hidden autocomplete="off">
+              <label><span>Datum</span><input type="date" name="d" required></label>
+              <label><span>Ort</span><input type="text" name="ort" maxlength="80" placeholder="z. B. Bern, Gleis 5"></label>
+              <label><span>Fahrzeugnummer</span><input type="text" name="nr" maxlength="40" placeholder="z. B. 460 058"></label>
+              <label><span>Notiz</span><input type="text" name="notiz" maxlength="200" placeholder="freiwillig"></label>
+              <div class="sicht-btns"><button class="qz-btn" type="submit">Speichern</button><button class="qz-btn ghost" type="button" id="sicht-abbruch">Abbrechen</button></div>
+            </form>
           </div>
           <ul class="kz" id="zug-kz"></ul>
         </div>
@@ -504,6 +548,37 @@
     </section>
   </div>
 
+  <!-- ===== ENTDECKEN: eigene Seiten, nur über das Menü erreichbar ===== -->
+  <div id="v-entdecken" class="view" hidden>
+    <section class="section" data-seite="neu">
+      <div class="wrap">
+        <ol class="crumbs"><li><a href="#start">Start</a></li><li aria-current="page">Neu und aktualisiert</li></ol>
+        <div class="page-head">
+          <div>
+            <span class="kicker">Neu und aktualisiert</span>
+            <h1>Was ist neu?</h1>
+            <p>Die letzten Ergänzungen auf einen Blick: neue Fahrzeuge, neue Fotos und neue Funktionen.</p>
+          </div>
+        </div>
+        <ol class="neu-list" id="neu-list"></ol>
+      </div>
+    </section>
+    <section class="section" data-seite="erkennen" hidden>
+      <div class="wrap">
+        <ol class="crumbs"><li><a href="#start">Start</a></li><li aria-current="page">Züge unterscheiden</li></ol>
+        <div class="page-head">
+          <div>
+            <span class="kicker">Züge unterscheiden</span>
+            <h1>FLIRT 521, 522, 523 oder 524?</h1>
+            <p>Die vierteiligen FLIRT der SBB sehen sich zum Verwechseln ähnlich. Am sichersten hilft die Nummer an der Front: Die ersten drei Ziffern sind die Baureihe. Dazu verraten Strom, Farben und Einsatzgebiet viel.</p>
+          </div>
+        </div>
+        <div class="tbl-wrap erk-tbl-wrap"><table class="tbl erk-tbl" id="erkennen-tbl"></table></div>
+        <ul class="erk-grid" id="erkennen-grid"></ul>
+      </div>
+    </section>
+  </div>
+
   <!-- ===== IMPRESSUM / DATENSCHUTZ ===== -->
   <div id="v-text" class="view" hidden>
     <section class="section">
@@ -548,6 +623,7 @@
           <p>Um zu sehen, welche Seiten gefragt sind, nutzen wir GoatCounter (goatcounter.com). GoatCounter setzt keine Cookies und speichert keine IP-Adressen. Erfasst werden die aufgerufene Seite, die Seite, von der du kommst, Browser und Betriebssystem, Bildschirmgrösse und das Land. Daraus lässt sich nicht ablesen, wer du bist. Die Zahlen sehen nur wir. Die Daten können ausserhalb der Schweiz verarbeitet werden.</p>
           <h2>Speicher im Browser</h2>
           <p>Dein Browser merkt sich im lokalen Speicher (localStorage), welche Fahrzeuge du für den Vergleich ausgewählt und im Sammelalbum als gesehen markiert hast, sowie dein bestes Quiz-Ergebnis pro Level, deine Sprache und ob du die Seite hell oder dunkel möchtest. Zum Schutz vor Spam merkt er sich ausserdem für 10 Minuten, wann du eine Meldung geschickt hast. Diese Angaben verlassen dein Gerät nicht. Du kannst sie löschen, indem du die Websitedaten im Browser löschst.</p>
+          <p>Auch deine Sichtungen (Datum, Ort, Fahrzeugnummer und Notiz) bleiben nur in deinem Browser. Mit «Sammlung sichern» lädst du sie als Datei auf dein Gerät herunter; diese Datei kannst du später mit «Sammlung laden» wieder einlesen. Dabei wird nichts an uns geschickt.</p>
           <p>Damit die Website auch als App schnell startet und ohne Internet funktioniert, legt dein Browser besuchte Seiten, Bilder und Skripte in einem Zwischenspeicher auf deinem Gerät ab. Darin stehen nur Inhalte dieser Website, keine Angaben über dich.</p>
           <h2>Abfahrtstafel</h2>
           <p>Für die Abfahrtstafel fragt dein Browser den Fahrplan direkt bei transport.opendata.ch (Opendata.ch) ab. Dabei werden der gesuchte Bahnhof und, wie bei jedem Seitenaufruf, deine IP-Adresse übermittelt. Die Tafel lädt nur, solange sie auf dem Bildschirm sichtbar ist. Den zuletzt gewählten Bahnhof merkt sich dein Browser im lokalen Speicher.</p>
@@ -586,7 +662,7 @@
       <p>Train Database von HCKD. Fahrzeuge der Schweizer Bahn, sortiert nach Bereich, mit Daten und Bildern.</p>
     </div>
     <ul class="foot-links" id="foot-links"></ul>
-    <div class="foot-bottom">© 2026 HCKD · Stand der Daten: Oktober 2026 · <button class="foot-donate" type="button" data-report="allg" aria-haspopup="dialog">Fehler melden</button> · <button class="foot-donate" type="button" data-fotos="allg" aria-haspopup="dialog">Fotos einsenden</button> ·<button class="foot-donate" type="button" data-donate aria-haspopup="dialog">Spenden</button></div>
+    <div class="foot-bottom">© 2026 HCKD · Fahrzeugdaten: Stand Oktober 2026 · Netzkarte: Stand Juli 2021 ·<button class="foot-donate" type="button" data-report="allg" aria-haspopup="dialog">Fehler melden</button> · <button class="foot-donate" type="button" data-fotos="allg" aria-haspopup="dialog">Fotos einsenden</button> ·<button class="foot-donate" type="button" data-donate aria-haspopup="dialog">Spenden</button></div>
     <div class="foot-app">
       <button class="qz-btn ghost app-install" id="app-install" type="button" hidden>
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M12 7v7M9 11l3 3 3-3"/></svg>
@@ -699,7 +775,13 @@
 <script src="js/karte.js"></script>
 <script src="js/melden.js"></script>
 <script src="js/fotos.js"></script>
+<script src="js/steckbrief.js"></script>
+<script src="js/daten/erkennen.js"></script>
+<script src="js/erkennen.js"></script>
+<script src="js/daten/neu.js"></script>
+<script src="js/neu.js"></script>
 <script src="js/start.js"></script>
+<script src="js/menue.js"></script>
 <script src="js/app.js"></script>
 </body>
 </html>

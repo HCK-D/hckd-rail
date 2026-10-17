@@ -116,6 +116,98 @@ body.has-cmp .footer{padding-bottom:76px}
 .album-bar{height:10px;border-radius:99px;background:var(--surface-2);overflow:hidden}
 .album-bar i{display:block;width:0;height:100%;border-radius:inherit;background:var(--best);transition:width .6s var(--ease-out)}
 @media (min-width:760px){.album{grid-template-columns:minmax(0,1fr) minmax(220px,38%);align-items:center}}
+.album-tools{display:flex;flex-wrap:wrap;align-items:center;gap:8px;grid-column:1/-1}
+.album-import{position:relative;overflow:hidden}
+.album-import input{position:absolute;inset:0;opacity:0;cursor:pointer}
+.album-import:focus-within{outline:2px solid var(--accent);outline-offset:2px}
+.album-msg{font-size:14px;color:var(--fg-2)}
+
+/* ---------- Steckbrief (only for printing / PDF) ---------- */
+#steckbrief{display:none}
+@media print{
+  @page{size:A4;margin:12mm}
+  html.druck-steckbrief body>*:not(#steckbrief){display:none!important}
+  html.druck-steckbrief,html.druck-steckbrief body{background:#fff!important;color:#202326!important}
+  html.druck-steckbrief #steckbrief{display:block;font:10.5pt/1.4 var(--body);color:#202326;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  #steckbrief .sb-kopf{display:flex;align-items:center;gap:10px;padding-bottom:8px;border-bottom:2px solid #D71920}
+  #steckbrief .sb-logo{width:34px;height:auto}
+  #steckbrief .sb-kopf div{display:grid;line-height:1.1}
+  #steckbrief .sb-kopf b{font:800 15pt/1 var(--display);letter-spacing:.04em}
+  #steckbrief .sb-kopf em{font-style:normal;color:#D71920}
+  #steckbrief .sb-kopf span{font-size:8.5pt;color:#626971;text-transform:uppercase;letter-spacing:.12em}
+  #steckbrief .sb-typ{margin:12px 0 0;font:600 8.5pt/1.2 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:#626971}
+  #steckbrief h1{margin:2px 0 10px;font:800 24pt/1.05 var(--display)}
+  #steckbrief figure{margin:0 0 10px}
+  #steckbrief img{display:block;width:100%;max-height:78mm;object-fit:cover;border-radius:3mm}
+  #steckbrief figcaption{margin-top:3px;font-size:7.5pt;color:#626971}
+  #steckbrief .sb-kz{display:flex;flex-wrap:wrap;gap:4mm 9mm;margin:0 0 10px;padding:0;list-style:none}
+  #steckbrief .sb-kz li{display:grid}
+  #steckbrief .sb-kz b{font:800 15pt/1.1 var(--display)}
+  #steckbrief .sb-kz span{font:600 7pt/1.2 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:#626971}
+  #steckbrief .sb-spalten{display:grid;grid-template-columns:1.15fr 1fr;gap:8mm}
+  #steckbrief h2{margin:0 0 4px;font:700 11pt/1.2 var(--body);color:#D71920}
+  #steckbrief dl{margin:0}
+  #steckbrief dl div{display:grid;grid-template-columns:34% 1fr;gap:3mm;padding:3px 0;border-bottom:1px solid #E3E6E9;break-inside:avoid}
+  #steckbrief dt{color:#626971;font-size:9pt}
+  #steckbrief dd{margin:0;font-size:9.5pt}
+  #steckbrief section p{margin:0 0 6px}
+  #steckbrief .sb-note{font-size:8.5pt;color:#626971}
+  #steckbrief .sb-fuss{margin-top:10px;padding-top:6px;border-top:1px solid #E3E6E9;font-size:7.5pt;color:#626971}
+}
+
+/* ---------- «Züge unterscheiden» ---------- */
+.erk-tbl-wrap{margin-bottom:18px}
+.erk-tbl th[scope="row"]{font:700 15px/1.3 var(--body);letter-spacing:0;text-transform:none}
+.erk-tbl th,.erk-tbl td{vertical-align:top}
+.erk-tbl th[scope="row"] a{color:var(--fg);font-weight:700;text-decoration:none;white-space:nowrap}
+.erk-tbl th[scope="row"] a:hover{color:var(--accent-ink)}
+.erk-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:16px;margin:0;padding:0;list-style:none}
+.erk-card{display:flex;flex-direction:column;border-radius:22px;overflow:hidden;background:var(--surface);box-shadow:var(--shadow)}
+.erk-foto{position:relative;aspect-ratio:3/2;background:var(--surface-2)}
+.erk-foto img{display:block;width:100%;height:100%;object-fit:cover}
+.erk-punkt{position:absolute;display:grid;place-items:center;width:26px;height:26px;margin:-13px 0 0 -13px;border:2px solid #fff;border-radius:50%;background:#D71920;color:#fff;font:800 13px/1 var(--body);box-shadow:0 0 0 3px rgba(215,25,32,.35),0 2px 8px rgba(0,0,0,.4)}
+.erk-credit{margin:0;padding:6px 16px 0;font-size:11.5px;color:var(--fg-3)}
+.erk-body{display:grid;gap:10px;padding:12px 18px 18px}
+.erk-body h3{margin:0;font:800 21px/1.15 var(--display)}
+.erk-body h3 a{color:inherit;text-decoration:none}
+.erk-body h3 small{display:block;margin-top:3px;font:600 14px/1.3 var(--body);color:var(--fg-2)}
+.erk-marken{display:grid;gap:6px;margin:0;padding:0;list-style:none;counter-reset:erk}
+.erk-marken li{position:relative;padding-left:30px;font-size:15px;counter-increment:erk}
+.erk-marken li::before{content:counter(erk);position:absolute;left:0;top:-1px;display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:#D71920;color:#fff;font:800 12px/1 var(--body)}
+.erk-merkmale{display:grid;gap:5px;margin:0;padding:10px 0 0 18px;border-top:1px solid var(--line);font-size:15px;color:var(--fg-2)}
+
+/* ---------- «Neu und aktualisiert» ---------- */
+.neu-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr));gap:14px;margin:0;padding:0;list-style:none}
+.neu-item{display:grid;align-content:start;gap:8px;padding:16px 18px;border-radius:var(--r-md);background:var(--surface);box-shadow:var(--shadow)}
+.neu-top{display:flex;align-items:center;gap:10px;font-size:13.5px;color:var(--fg-3)}
+.neu-art{padding:4px 9px;border-radius:999px;font:700 11px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase}
+.neu-art.neu{background:var(--accent-soft);color:var(--accent-ink)}
+.neu-art.upd{background:var(--surface-2);color:var(--fg-2)}
+.neu-item p{margin:0;font-size:16px;line-height:1.45}
+.neu-link{white-space:nowrap;font-weight:600;color:var(--accent-ink)}
+.neu-chips{display:flex;flex-wrap:wrap;gap:6px;margin:0;padding:0;list-style:none}
+.neu-chips a,.neu-n{display:inline-block;padding:5px 10px;border-radius:999px;background:var(--surface-2);color:var(--fg);font:600 13px/1.2 var(--body);text-decoration:none}
+.neu-chips a:hover{background:var(--accent-soft);color:var(--accent-ink)}
+.neu-n{background:transparent;color:var(--fg-3)}
+
+/* ---------- sightings on the vehicle page ---------- */
+.sicht{display:grid;gap:10px;margin-top:6px;padding:14px 16px;border-radius:var(--r-md);background:var(--surface);box-shadow:var(--shadow);max-width:720px}
+.sicht-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px}
+.sicht-head b{font:700 16px/1.2 var(--body)}
+.sicht-list{display:grid;gap:6px;margin:0;padding:0;list-style:none}
+.sicht-list:empty{display:none}
+.sicht-list li{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;padding:8px 36px 8px 12px;border-radius:10px;background:var(--surface-2);position:relative;font-size:15px}
+.sl-d{font-weight:700}
+.sl-ort,.sl-nr{color:var(--fg-2)}
+.sl-nr{font-family:var(--mono);font-size:13.5px}
+.sl-notiz{flex-basis:100%;color:var(--fg-2);font-size:14px}
+.sl-del{position:absolute;top:6px;right:6px;width:26px;height:26px;padding:0;border:0;border-radius:50%;background:transparent;color:var(--fg-3);font-size:18px;line-height:1;cursor:pointer}
+.sl-del:hover{background:var(--accent-soft);color:var(--accent-ink)}
+.sicht-form{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.sicht-form label{display:grid;gap:5px;font:600 13px/1.2 var(--body);color:var(--fg-2)}
+.sicht-form input{height:42px;padding:0 12px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--fg);font:16px/1.2 var(--body)}
+.sicht-btns{display:flex;flex-wrap:wrap;gap:8px;grid-column:1/-1}
+.sicht-btns .qz-btn{height:40px;font-size:15px}
 .seen-n{color:var(--best);font-weight:700}
 .seen-badge{position:absolute;left:10px;top:10px;z-index:1;padding:5px 10px 5px 8px;border-radius:99px;background:var(--best);color:#fff;font:700 12px/1 var(--body);box-shadow:0 2px 6px rgba(0,0,0,.18)}
 .seen-badge::before{content:"✓ "}
@@ -145,6 +237,7 @@ body.has-cmp .footer{padding-bottom:76px}
 .board-form{display:flex;gap:10px}
 .board-form .filter{flex:1}
 .board-form .qz-btn{height:48px;flex:none}
+.stand-badge{display:inline-block;margin:10px 0 0;padding:5px 10px;border-radius:999px;background:var(--surface-2);color:var(--fg-2);font:600 11px/1.2 var(--mono);letter-spacing:.06em;text-transform:uppercase}
 .foot-app{display:grid;gap:10px;justify-items:start}
 .foot-app:not(:has(:not([hidden]))){display:none}
 .app-install{display:inline-flex;align-items:center;gap:8px;height:42px;padding:0 18px;font-size:15px}
