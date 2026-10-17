@@ -16,7 +16,7 @@
   input.value = station;
   let timer = 0, sichtbar = false, laden = null;
 
-  const zeit = s => { const d = new Date(s); return isNaN(d) ? '' : d.toLocaleTimeString('de-CH', { hour: '2-digit', minute: '2-digit' }); };
+  const zeit = s => { const d = new Date(s); return isNaN(d) ? '' : d.toLocaleTimeString(LOCALE, { hour: '2-digit', minute: '2-digit' }); };
   // "S" + "30" -> S30; night trains carry the train number instead of a line, then only the category
   const linie = c => {
     const cat = c.category || '', nr = String(c.number || '');
@@ -27,15 +27,15 @@
   async function lade() {
     if (laden) laden.abort();
     laden = new AbortController();
-    say(rows.children.length ? '' : 'Lade Abfahrten …');
+    say(rows.children.length ? '' : tr('Lade Abfahrten …'));
     try {
       const res = await fetch(API + 'stationboard?limit=12&station=' + encodeURIComponent(station), { signal: laden.signal });
       if (!res.ok) throw new Error('http ' + res.status);
       const data = await res.json();
       const st = data.station && data.station.name;
       const deps = (data.stationboard || []).filter(c => c.stop && c.stop.departure);
-      $('#board-station').textContent = st ? 'Abfahrt ' + st : 'Abfahrt';
-      if (!st) { rows.innerHTML = ''; say('Diesen Bahnhof gibt es nicht. Versuche einen anderen Namen, z. B. «Bern».', 'err'); return; }
+      $('#board-station').textContent = st ? tr('Abfahrt') + ' ' + st : tr('Abfahrt');
+      if (!st) { rows.innerHTML = ''; say(tr('Diesen Bahnhof gibt es nicht. Versuche einen anderen Namen, z. B. «Bern».'), 'err'); return; }
       zuege = deps;
       rows.innerHTML = deps.map((c, i) => {
         const s = c.stop, delay = +s.delay || 0, plat = (s.prognosis && s.prognosis.platform) || s.platform || '';
@@ -46,33 +46,33 @@
         return `<tr class="b-row" data-i="${i}">
           <td class="b-time">${zeit(s.departure)}</td>
           <td><span class="b-line ${typ}">${esc(linie(c))}</span></td>
-          <td class="b-to">${stops ? `<button class="b-open" type="button" aria-expanded="false" aria-label="Halte von ${esc(linie(c))} nach ${esc(c.to || '')} anzeigen"><span>${esc(c.to || '')}</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>` : esc(c.to || '')}</td>
+          <td class="b-to">${stops ? `<button class="b-open" type="button" aria-expanded="false" aria-label="${esc(tr('Halte von {linie} nach {ziel} anzeigen', { linie: linie(c), ziel: c.to || '' }))}"><span>${esc(c.to || '')}</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>` : esc(c.to || '')}</td>
           <td class="b-pl${neu ? ' neu' : ''}">${esc(plat)}</td>
           <td class="b-delay">${delay > 0 ? '+' + delay + '′' : ''}</td>
         </tr>`;
       }).join('');
       // keep an open train open after the refresh
       if (offen) { const i = deps.findIndex(c => schluessel(c) === offen); if (i >= 0) aufklappen(i); else offen = ''; }
-      say(deps.length ? 'Stand ' + new Date().toLocaleTimeString('de-CH', { hour: '2-digit', minute: '2-digit' }) : 'Im Moment keine Abfahrten.');
+      say(deps.length ? tr('Stand') + ' ' + new Date().toLocaleTimeString(LOCALE, { hour: '2-digit', minute: '2-digit' }) : tr('Im Moment keine Abfahrten.'));
     } catch (e) {
       if (e && e.name === 'AbortError') return;
-      say('Die Abfahrten können gerade nicht geladen werden. Auf der fertigen Website funktioniert die Tafel; in der Vorschau sind Verbindungen nach aussen gesperrt.', 'err');
+      say(tr('Die Abfahrten können gerade nicht geladen werden. Auf der fertigen Website funktioniert die Tafel; in der Vorschau sind Verbindungen nach aussen gesperrt.'), 'err');
     }
   }
   /* ---------- route of a train: tap a destination to see all stops ---------- */
   let zuege = [], offen = '';
   const schluessel = c => (c.category || '') + (c.number || '') + (c.stop && c.stop.departure);
   function aufklappen(i) {
-    const c = zuege[i], tr = $(`tr.b-row[data-i="${i}"]`, rows);
-    if (!c || !tr) return;
+    const c = zuege[i], row = $(`tr.b-row[data-i="${i}"]`, rows);
+    if (!c || !row) return;
     const halte = (c.passList || []).slice(1).filter(p => p.station && p.station.name);
     const html = halte.map((p, k) => {
       const t = p.arrival || p.departure, d = +p.delay || 0, letzter = k === halte.length - 1;
-      return `<li${letzter ? ' class="end"' : ''}><span class="bs-time">${zeit(t)}${d > 0 ? ` <em>+${d}′</em>` : ''}</span><span class="bs-name">${esc(p.station.name)}</span>${p.platform ? `<span class="bs-pl">Gl. ${esc(p.platform)}</span>` : ''}</li>`;
+      return `<li${letzter ? ' class="end"' : ''}><span class="bs-time">${zeit(t)}${d > 0 ? ` <em>+${d}′</em>` : ''}</span><span class="bs-name">${esc(p.station.name)}</span>${p.platform ? `<span class="bs-pl">${esc(tr('Gl.'))} ${esc(p.platform)}</span>` : ''}</li>`;
     }).join('');
-    tr.insertAdjacentHTML('afterend', `<tr class="b-detail"><td colspan="5"><ol class="b-stops">${html}</ol></td></tr>`);
-    tr.classList.add('open');
-    $('.b-open', tr).setAttribute('aria-expanded', 'true');
+    row.insertAdjacentHTML('afterend', `<tr class="b-detail"><td colspan="5"><ol class="b-stops">${html}</ol></td></tr>`);
+    row.classList.add('open');
+    $('.b-open', row).setAttribute('aria-expanded', 'true');
   }
   function zuklappen() {
     $$('.b-detail', rows).forEach(r => r.remove());
@@ -122,7 +122,7 @@
 
   // small station clock in the header of the board
   const clock = $('#board-clock');
-  const tick = () => { clock.textContent = new Date().toLocaleTimeString('de-CH', { hour: '2-digit', minute: '2-digit' }); };
+  const tick = () => { clock.textContent = new Date().toLocaleTimeString(LOCALE, { hour: '2-digit', minute: '2-digit' }); };
   tick(); setInterval(tick, 10000);
 
   document.addEventListener('visibilitychange', plane);

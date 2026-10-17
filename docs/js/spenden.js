@@ -21,9 +21,9 @@ dnAmounts.innerHTML = [5, 10, 20, 50].map(a => `<button class="amt" type="button
 function dnRender() {
   $$('.amt', dnAmounts).forEach(b => b.setAttribute('aria-checked', +b.dataset.a === dnAmt ? 'true' : 'false'));
   const ref = 'Spende HCKD RAIL · CHF ' + dnAmt;
-  const row = (lbl, val, key) => `<div class="bank-row"><div><small>${lbl}</small><b class="${val ? '' : 'tbd'}">${val ? esc(val) : 'wird ergänzt'}</b></div><button class="copy" type="button" data-copy="${key}" ${val ? '' : 'disabled'}>Kopieren</button></div>`;
+  const row = (lbl, val, key) => `<div class="bank-row"><div><small>${esc(tr(lbl))}</small><b class="${val ? '' : 'tbd'}">${val ? esc(val) : esc(tr('wird ergänzt'))}</b></div><button class="copy" type="button" data-copy="${key}" ${val ? '' : 'disabled'}>${esc(tr('Kopieren'))}</button></div>`;
   dnBank.innerHTML = row('Empfänger', SPENDE.empfaenger, 'empfaenger') + (SPENDE.twint ? row('TWINT', SPENDE.twint, 'twint') : '') + (SPENDE.iban ? row('IBAN', SPENDE.iban, 'iban') : '') + row('Mitteilung', ref, 'ref');
-  $('#dn-note').textContent = 'Bitte gib die Mitteilung bei der Zahlung an. Vielen Dank!';
+  $('#dn-note').textContent = tr('Bitte gib die Mitteilung bei der Zahlung an. Vielen Dank!');
 }
 function dnOpen(from) { dnReturn = from; dnRender(); dn.hidden = false; $('.dlg-x', dn).focus(); }
 function dnClose() { dn.hidden = true; if (dnReturn) dnReturn.focus(); }
@@ -34,7 +34,7 @@ dn.addEventListener('click', e => {
   const cp = e.target.closest('[data-copy]');
   if (cp) {
     const k = cp.dataset.copy, val = k === 'ref' ? 'Spende HCKD RAIL · CHF ' + dnAmt : SPENDE[k];
-    const done = () => { cp.textContent = 'Kopiert'; setTimeout(() => { cp.textContent = 'Kopieren'; }, 1400); };
+    const done = () => { cp.textContent = tr('Kopiert'); setTimeout(() => { cp.textContent = tr('Kopieren'); }, 1400); };
     const sel = () => { const r = document.createRange(); r.selectNodeContents(cp.previousElementSibling.querySelector('b')); const s = getSelection(); s.removeAllRanges(); s.addRange(r); };
     try { navigator.clipboard.writeText(val).then(done, sel); } catch (err) { sel(); }
   }

@@ -16,9 +16,29 @@ a{display:inline-block;padding:12px 20px;border-radius:12px;background:var(--acc
 </head>
 <body>
 <main>
-<h1>Gleis nicht gefunden</h1>
-<p>Diese Seite gibt es bei HCKD RAIL nicht (mehr).</p>
-<a href="https://hck-d.github.io/hckd-rail/">Zur Startseite</a>
+<h1 id="t">Gleis nicht gefunden</h1>
+<p id="p">Diese Seite gibt es bei HCKD RAIL nicht (mehr).</p>
+<a id="a" href="https://hck-d.github.io/hckd-rail/">Zur Startseite</a>
 </main>
+<script>
+(function () {
+  var T = {
+    fr: ['Voie introuvable', 'Cette page n’existe pas (ou plus) sur HCKD RAIL.', 'Vers l’accueil', 'fr-CH'],
+    it: ['Binario non trovato', 'Questa pagina non esiste (più) su HCKD RAIL.', 'Alla pagina iniziale', 'it-CH'],
+    en: ['Track not found', 'This page does not exist (any more) on HCKD RAIL.', 'Go to the home page', 'en']
+  };
+  var l = '';
+  try { l = localStorage.getItem('hckd-lang') || ''; } catch (e) {}
+  if (!T[l]) { var n = (navigator.language || '').slice(0, 2); if (T[n]) l = n; }
+  if (!T[l]) return;
+  document.documentElement.lang = T[l][3];
+  document.title = T[l][0] + ' · HCKD RAIL';
+  document.getElementById('t').textContent = T[l][0];
+  document.getElementById('p').textContent = T[l][1];
+  var a = document.getElementById('a');
+  a.textContent = T[l][2];
+  a.href = a.getAttribute('href').replace(/\/?$/, '/') + 'index.' + l + '.html';
+})();
+</script>
 </body>
 </html>

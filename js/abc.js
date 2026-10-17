@@ -23,34 +23,51 @@
     const m = String(text).trim().replace(/\s+/g, ' ').match(/^([A-Z]+)([a-z]*)\s*(?:(\d+)\s*\/\s*(\d+)\s*([IVX]+)?|(\d{3}))?$/);
     if (!m) return null;
     const [, gross, klein, an, alle, serie, reihe] = m, teile = [];
-    if (gross.length === 1 && LOK[gross]) teile.push([gross, LOK[gross]]);
+    if (gross.length === 1 && LOK[gross]) teile.push([gross, tr(LOK[gross])]);
     else {
       let rest = gross;
-      if (rest[0] === 'R' && rest.length > 1) { teile.push(['R', 'Triebzug oder Triebwagen mit höherer Kurvengeschwindigkeit, mindestens 110 km/h']); rest = rest.slice(1); }
-      else teile.push(['', 'Triebwagen oder Triebzug mit Fahrgastraum']);
-      for (const ch of rest) { if (!ABTEIL[ch]) return null; teile.push([ch, ABTEIL[ch]]); }
+      if (rest[0] === 'R' && rest.length > 1) { teile.push(['R', tr('Triebzug oder Triebwagen mit höherer Kurvengeschwindigkeit, mindestens 110 km/h')]); rest = rest.slice(1); }
+      else teile.push(['', tr('Triebwagen oder Triebzug mit Fahrgastraum')]);
+      for (const ch of rest) { if (!ABTEIL[ch]) return null; teile.push([ch, tr(ABTEIL[ch])]); }
     }
-    if (!klein) teile.push(['–', 'kein Kleinbuchstabe: Dampf']);
-    for (const ch of klein) { if (!ANTRIEB[ch]) return null; teile.push([ch, ANTRIEB[ch]]); }
+    if (!klein) teile.push(['–', tr('kein Kleinbuchstabe: Dampf')]);
+    for (const ch of klein) { if (!ANTRIEB[ch]) return null; teile.push([ch, tr(ANTRIEB[ch])]); }
     if (an) {
-      teile.push([an + '/' + alle, +an === +alle ? `${alle} Achsen, alle angetrieben` : `${an} von ${alle} Achsen angetrieben`]);
-      if (serie) teile.push([serie, ROEM[serie] ? ROEM[serie] + '. Serie mit dieser Bezeichnung' : 'Serie']);
+      teile.push([an + '/' + alle, +an === +alle ? tr('{n} Achsen, alle angetrieben', { n: alle }) : tr('{a} von {n} Achsen angetrieben', { a: an, n: alle })]);
+      if (serie) teile.push([serie, ROEM[serie] ? tr('{n}. Serie mit dieser Bezeichnung', { n: ROEM[serie] }) : tr('Serie')]);
     }
     if (reihe) {
       const z = ZUEGE.find(x => (x.name.match(/\d{3}/) || [])[0] === reihe);
-      teile.push([reihe, 'Baureihe im neuen System (seit 1989)' + (z ? ` · <a href="#${z.id}">${esc(fullName(z))} ansehen</a>` : '')]);
+      teile.push([reihe, esc(tr('Baureihe im neuen System (seit 1989)')) + (z ? ` · <a href="#${z.id}">${esc(tr('{name} ansehen', { name: fullName(z) }))}</a>` : ''), true]);
     }
     return teile;
   }
   function zeige() {
     const t = deute(input.value);
     if (!input.value.trim()) { out.innerHTML = ''; return; }
+    // third entry true = the text is already HTML (with a link)
     out.innerHTML = t
-      ? t.map(([k, v]) => `<li><b>${esc(k)}</b><span>${v.includes('<a ') ? v : esc(v)}</span></li>`).join('')
-      : '<li class="abc-none"><span>Das kann ich nicht lesen. Achte auf Gross- und Kleinschreibung, z. B. «Re 4/4 II» oder «RABe 523».</span></li>';
+      ? t.map(([k, v, html]) => `<li><b>${esc(k)}</b><span>${html ? v : esc(v)}</span></li>`).join('')
+      : `<li class="abc-none"><span>${esc(tr('Das kann ich nicht lesen. Achte auf Gross- und Kleinschreibung, z. B. «Re 4/4 II» oder «RABe 523».'))}</span></li>`;
   }
   $('#abc-chips').innerHTML = BEISPIELE.map(b => `<button type="button" data-abc="${esc(b)}">${esc(b)}</button>`).join('');
   $('#abc-chips').addEventListener('click', e => { const b = e.target.closest('[data-abc]'); if (b) { input.value = b.dataset.abc; zeige(); } });
   input.addEventListener('input', zeige);
   zeige();
+
+  // the full list opens with the button, and by itself when the page is opened with #bahn-abc
+  const mehr = $('#abc-mehr'), knopf = $('#abc-toggle');
+  function oeffne(auf) {
+    mehr.hidden = !auf;
+    knopf.setAttribute('aria-expanded', auf ? 'true' : 'false');
+    knopf.textContent = auf ? tr('Weniger anzeigen') : tr('Ganzes Bahn-ABC anzeigen');
+  }
+  knopf.addEventListener('click', () => {
+    const auf = mehr.hidden;
+    oeffne(auf);
+    if (!auf) $('#bahn-abc').scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+  });
+  const vomLink = () => { if (decodeURIComponent(location.hash.slice(1)) === 'bahn-abc') oeffne(true); };
+  addEventListener('hashchange', vomLink);
+  vomLink();
 })();

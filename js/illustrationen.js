@@ -202,7 +202,7 @@ function artWagen(a) {
 }
 function art(z) {
   const a = z.art;
-  let s = `<svg class="art" viewBox="0 0 640 170" preserveAspectRatio="xMidYMax meet" role="img" aria-label="Illustration ${esc(fullName(z))}">`;
+  let s = `<svg class="art" viewBox="0 0 640 170" preserveAspectRatio="xMidYMax meet" role="img" aria-label="${esc(tr('Illustration'))} ${esc(fullName(z))}">`;
   s += `<rect x="0" y="${R + 4}" width="640" height="${170 - R - 4}" fill="var(--art-ground)"/>`;
   for (let x = 4; x < 640; x += 22) s += `<rect x="${x}" y="${R + 4}" width="12" height="5" fill="var(--art-sleeper)"/>`;
   s += `<rect x="0" y="${R}" width="640" height="4" fill="var(--art-rail)"/>`;

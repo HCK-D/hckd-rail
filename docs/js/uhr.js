@@ -26,7 +26,7 @@ function calcOffset() {
 const ZETA = 0.45, OMEGA = 16, WD = OMEGA * Math.sqrt(1 - ZETA * ZETA);
 const springE = u => 1 - Math.exp(-ZETA * OMEGA * u) * (Math.cos(WD * u) + (ZETA * OMEGA / WD) * Math.sin(WD * u));
 function clockDateText() {
-  try { return new Intl.DateTimeFormat('de-CH', { weekday: 'long', day: 'numeric', month: 'long', timeZone: 'Europe/Zurich' }).format(new Date()); }
+  try { return new Intl.DateTimeFormat(LOCALE, { weekday: 'long', day: 'numeric', month: 'long', timeZone: 'Europe/Zurich' }).format(new Date()); }
   catch (e) { return new Date().toLocaleDateString(); }
 }
 function clockFrame() {
@@ -45,7 +45,7 @@ function clockFrame() {
     clockTime.textContent = p2(h) + ':' + p2(m) + ':' + p2(s);
     if (m !== lastMinShown) {
       lastMinShown = m;
-      clockSvg.setAttribute('aria-label', 'Schweizer Zeit ' + p2(h) + ':' + p2(m));
+      clockSvg.setAttribute('aria-label', tr('Schweizer Zeit') + ' ' + p2(h) + ':' + p2(m));
       clockDate.textContent = clockDateText();
     }
   }

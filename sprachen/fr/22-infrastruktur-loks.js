@@ -1,0 +1,90 @@
+/* Français – CFF Infrastructure : locomotives et tracteurs */
+uebZug('aem-940', {
+  typ: 'Locomotive bimode',
+  text: ['L’Aem 940 est une locomotive bimode à quatre essieux d’Alstom pour CFF Infrastructure. Elle roule à l’électricité sous la ligne de contact et, sur les voies non électrifiées, avec deux groupes diesel-générateurs.', 'Elle convient ainsi aux trains de travaux et aux manœuvres lourdes.'],
+  kennzahlen: [['47', 'locomotives commandées'], ['120 km/h', 'vitesse maximale'], ['2000 kW', 'puissance électrique'], ['2018', 'début des essais']],
+  daten: { 'Länge': '18,75 m hors tampons', 'Gewicht': '84 t ; 90 t avec lest', 'Antrieb': 'électrique, avec deux groupes diesel-générateurs', 'Leistung': '2000 kW en électrique, 900 kW en diesel', 'Mehrfachtraktion': 'jusqu’à 4 locomotives', 'Anzahl': '47 commandées', 'In Betrieb seit': '2018 (essais), série dès 2019' },
+  specNote: 'Valeurs techniques selon la présentation d’Alstom de 2016. Les puissances électrique et diesel s’appliquent à des modes d’exploitation différents.',
+  abschnitte: [
+    { titel: 'Acquisition et utilisation', p: ['Les CFF ont commandé 47 locomotives pour CFF Infrastructure. Les cinq premières ont été testées à partir de 2018 ; le début des livraisons en série était prévu pour l’automne 2019.', 'Les CFF citent comme domaines d’utilisation les gares de triage de Limmattal et de Lausanne Triage ainsi que les trains de travaux pour l’entretien et l’extension dans toute la Suisse.'] },
+    { titel: 'Traction bimode et commande', p: ['Sous la ligne de contact, la locomotive utilise la traction électrique. Sans fil de contact, deux moteurs diesel plus petits produisent l’énergie pour les moteurs de traction électriques.', 'Les CFF décrivent l’utilisation de l’ETCS niveau 2 et un mode de télécommande particulier à la butte de débranchement de Limmattal, où la mécanicienne ou le mécanicien reste dans la cabine.'] }
+  ]
+});
+
+uebZug('am-843', {
+  typ: 'Locomotive diesel-hydraulique pour la manœuvre et la ligne',
+  text: ['L’Am 843 est une locomotive diesel-hydraulique à quatre essieux de Vossloh. Elle a été acquise pour les manœuvres lourdes et les trajets en ligne.', 'CFF Cargo, CFF Infrastructure et le trafic voyageurs ont utilisé la série pour diverses tâches.'],
+  kennzahlen: [['59', 'commandées à l’origine pour CFF Cargo'], ['1500 kW', 'puissance du moteur diesel'], ['100 km/h', 'vitesse en ligne'], ['2004', 'introduite chez CFF Cargo']],
+  daten: { 'Antrieb': 'diesel-hydraulique', 'Gewicht': '80 t en service', 'Rangiergang': 'jusqu’à 40 km/h', 'Streckengang': 'jusqu’à 100 km/h', 'Anzahl': '59 commandées pour CFF Cargo', 'In Betrieb seit': '2004 (CFF Cargo)' },
+  specNote: 'Les deux rapports de la transmission sont conçus pour un effort de traction élevé à faible vitesse de manœuvre et pour des trajets jusqu’à 100 km/h en ligne.',
+  abschnitte: [
+    { titel: 'Acquisition et utilisation', p: ['CFF Cargo a commandé 59 Am 843 chez Vossloh à Kiel et a présenté les premières locomotives en 2004. Ce chiffre désigne l’acquisition de Cargo de l’époque, et non toute la série CFF ni un effectif actuel.', 'Cargo engage l’Am 843 surtout pour la manœuvre et la desserte. Chez CFF Infrastructure, les manœuvres et les trains de travaux font partie de ses tâches.'] },
+    { titel: 'Technique et évolution', p: ['Les locomotives de CFF Cargo ont été équipées de filtres à particules diesel.', 'En octobre 2025, CFF Cargo a annoncé l’acquisition de nouvelles locomotives de manœuvre hybrides pour remplacer à terme les Am 843. Un effectif actuel de toute la série n’est pas indiqué séparément sur les pages CFF utilisées.'] }
+  ],
+  bilder: ['Am 843 084 de CFF Cargo à Steinen', 'Am 843 092', 'Am 843 à Bâle', 'Am 843 076 de CFF Cargo', 'Am 843 075']
+});
+
+uebZug('tm-234', {
+  typ: 'Tracteur de service',
+  text: ['Le Tm 234 « Ameise » est un tracteur diesel à deux essieux pour la construction et l’entretien des installations ferroviaires. Selon la version, il possède un pont de chargement avec grue ou une nacelle de travail.', 'Cette page traite de l’ancienne « Ameise », et non du Tm 234-4 de Windhoff, plus récent.'],
+  kennzahlen: [['125', 'commandés en trois séries'], ['550 kW', 'puissance du moteur diesel'], ['80 km/h', 'vitesse en ligne'], ['124', 'effectif CFF en 2019']],
+  daten: { 'Hersteller': 'Stadler Winterthour et partenaires', 'Bauart': 'tracteur diesel à deux essieux', 'Gewicht': '30 t en service, au maximum 37 t', 'Antrieb': 'hydrostatique, moteur diesel MTU', 'Anfahrzugkraft': 'env. 81 kN', 'Zuladung': '7 t ; version à nacelle 0,5 t', 'Arbeitsmodus': 'jusqu’à 20 km/h, avec la grue jusqu’à 4 km/h', 'Anzahl': '125 commandés (1997, 2000, 2005)', 'In Betrieb seit': '1999 (première série commandée en 1997)', 'Einsatz': 'entretien de la voie, de la ligne de contact et des signaux' },
+  specNote: 'La fiche du constructeur et une étude préliminaire du DLR et des CFF décrivent les différentes versions.',
+  abschnitte: [
+    { titel: 'Séries et utilisation', p: ['Les CFF ont commandé 50 véhicules en 1997 et en 2000, puis 25 de plus en 2005. La livraison et la mise en service de la première série ont commencé en 1999. Stadler a annoncé la livraison des 25 derniers en 2007.', 'Les tracteurs servent à l’entretien de la voie, de la ligne de contact et des signaux, transportent du matériel et peuvent déplacer ou manœuvrer des trains de travaux.'] },
+    { titel: 'Effectif et délimitation', p: ['En 2019, CFF Infrastructure indiquait un effectif de 124 anciens Tm 234 « Ameise ». Il s’agit d’un état historique et non d’une indication sur la flotte en octobre 2026.', 'Le tracteur de service plus récent, également appelé Tm 234-4, provient de Windhoff et relève d’une autre acquisition.'] }
+  ],
+  bilder: ['Tm 234 109 « Ameise »', 'Tm 234 004 à Neuhausen SH', 'Tm 234 139 à Winterthour', 'Tm 234 « Ameise » avec grue de chargement', 'Tm 234 090']
+});
+
+uebZug('am-841', {
+  typ: 'Locomotive diesel-électrique pour trains de travaux et service léger en ligne',
+  text: ['L’Am 841 est une locomotive diesel-électrique à quatre essieux de GEC Alsthom.', 'Elle a été acquise pour les trains de travaux lourds, les manœuvres et les trains de marchandises légers en ligne.'],
+  kennzahlen: [['40', 'acquises à l’origine'], ['920 kW', 'puissance du moteur diesel'], ['80 km/h', 'vitesse maximale'], ['1996–1997', 'années de construction de la série CFF']],
+  daten: { 'Antrieb': 'diesel-électrique', 'Gewicht': '73 t en service', 'Anzahl': '40 acquises (30 + 10)', 'In Betrieb seit': '1996–1997 (années de construction)' },
+  specNote: 'Les valeurs de dynamique de marche suivent le catalogue des types de marche 2026 des CFF ; des sources historiques indiquent des masses légèrement différentes selon l’équipement.',
+  abschnitte: [
+    { titel: 'Acquisition et utilisation', p: ['Les CFF ont d’abord commandé 30 locomotives, puis ont complété la commande de dix véhicules.', 'La série comblait un vide entre les petits tracteurs de manœuvre et les lourdes locomotives diesel et était surtout prévue pour les trains de travaux et la desserte.'] },
+    { titel: 'Modernisation et avenir', p: ['Un programme de développement transforme cinq Am 841 en Aeam 841 avec pantographe, batterie et moteur diesel. Les documents indiquent la période de 2024 à 2026.', 'En parallèle, CFF Infrastructure mène un projet de flotte pour remplacer les anciennes Am 841 et Am 842.'] }
+  ],
+  bilder: ['Am 841', 'Am 841 014', 'Trois Am 841 à Frauenfeld', 'Am 841 017', 'Am 841 002 à Küsnacht ZH']
+});
+
+uebZug('am-842', {
+  typ: 'Locomotive diesel-hydraulique pour manœuvres lourdes et service léger en ligne',
+  text: ['Aux CFF, la désignation Am 842 a été utilisée pour différentes locomotives diesel à quatre essieux.', 'Cette page traite du type MaK G 1204 BB, mentionné comme actif dans le catalogue des types de marche 2026 des CFF.'],
+  kennzahlen: [['2', 'reprises de Sersa en 1993'], ['1120 kW', 'puissance du moteur diesel'], ['80 km/h', 'vitesse maximale'], ['12,5 m', 'longueur hors tampons']],
+  daten: { 'Antrieb': 'diesel-hydraulique', 'Gewicht': '80 t en service aux CFF', 'Anzahl': '2 (Am 842 000 et 001)', 'In Betrieb seit': '1993 aux CFF' },
+  specNote: 'Les valeurs de 80 t et de 255 kN sont les paramètres du type de marche actif enregistrés dans le catalogue des types de marche des CFF.',
+  abschnitte: [
+    { titel: 'Reprise et utilisation', p: ['Deux MaK G 1204 BB sont passées de Sersa aux CFF en 1993 et ont été immatriculées Am 842 000 et 001.', 'Ces puissantes locomotives de manœuvre conviennent aux manœuvres lourdes et aux trajets plus courts en ligne.'] },
+    { titel: 'Délimitation de la série', p: ['Plus tard, trois Vossloh G 1000 BB de CFF Cargo ont aussi porté les numéros Am 842 011 à 013. Leurs caractéristiques diffèrent du type MaK ; les indications sur l’Am 842 se rapportent donc toujours au groupe de numéros concerné.'] }
+  ]
+});
+
+uebZug('tmf-232', {
+  typ: 'Tracteur de service modernisé avec radiocommande',
+  text: ['Le Tmf 232 est issu de la modernisation de tracteurs de service Tm IV. En 2013, CFF Infrastructure a commandé la transformation de 15 véhicules.', 'Le « f » de la désignation signifie radiocommande (Funkfernsteuerung).'],
+  kennzahlen: [['15', 'véhicules dans la commande de transformation'], ['2013', 'commande de modernisation'], ['280 kW', 'puissance diesel'], ['60 km/h', 'vitesse maximale par ses propres moyens']],
+  daten: { 'Umbau': 'ORTICS, dans l’atelier industriel CFF de Bienne', 'Antrieb': 'diesel-hydraulique, moteur Caterpillar', 'Länge': '7,67 m hors tampons', 'Gewicht': 'environ 30 t', 'Höchstgeschwindigkeit': '60 km/h par ses propres moyens, 90 km/h remorqué', 'Steuerung': 'radiocommande et commande multiple', 'In Betrieb seit': '2013 (commande de transformation)', 'Einsatz': 'service de construction et de manœuvre' },
+  specNote: '2013 est l’année attestée de la commande de modernisation, et non l’année de construction d’origine des Tm IV donneurs.',
+  abschnitte: [
+    { titel: 'Modernisation', p: ['En 2013, ORTICS a reçu de CFF Infrastructure le mandat de moderniser 15 Tm IV. Le châssis, les superstructures, les essieux et la transmission ont été en grande partie conservés ; le moteur, la commande et la technique de sécurité ont été renouvelés et une radiocommande installée.'] },
+    { titel: 'Utilisation', p: ['Le Tmf 232 déplace des trains de travaux, manœuvre des véhicules et soutient les travaux sur les chantiers. Pour un effort de traction élevé, il dispose d’un rapport de manœuvre jusqu’à 30 km/h, pour les trajets en ligne d’un rapport jusqu’à 60 km/h.', 'La vitesse de remorquage plus élevée de 90 km/h s’applique sans traction propre dans un train.'] }
+  ]
+});
+
+uebZug('tm-234-4', {
+  typ: 'Tracteur de service de Windhoff',
+  text: ['Le Tm 234-4 est un tracteur de service à deux essieux avec plateau de chargement et grue. DART signifie tracteur diesel de travail et de manœuvre.', 'CFF Infrastructure l’a acquis pour l’entretien, le transport de matériel, les manœuvres et les interventions sur les installations de voie, de signalisation et de câbles.'],
+  kennzahlen: [['35', 'véhicules dans le projet CFF'], ['651 kW', 'puissance totale installée'], ['100 km/h', 'vitesse maximale'], ['14,24 m', 'longueur hors tampons']],
+  daten: { 'Länge': '14,24 m hors tampons', 'Gewicht': 'env. 37,3 t en service', 'Leistung': '651 kW installés (522 kW moteur principal + 129 kW moteur de travail)', 'Motor': 'Caterpillar C18 et C4.4', 'Antrieb': 'hydrodynamique et hydrostatique', 'Anfahrzugkraft': 'env. 100–105 kN', 'Ladeplattform': 'jusqu’à 3200 kg', 'Ladekran': 'Palfinger PR220 HPLS, portée jusqu’à 11 m', 'Anzahl': '35 prévus', 'In Betrieb seit': '2019 (présérie)' },
+  specNote: 'La puissance installée comprend le moteur principal et le moteur de travail ; le type de marche CFF retient une puissance maximale plus faible pour la dynamique de marche.',
+  abschnitte: [
+    { titel: 'Acquisition et remplacement', p: ['Les CFF ont attribué la commande en 2015. À partir de 2019, cinq véhicules de présérie ont d’abord été testés ; au total, 35 tracteurs étaient prévus pour remplacer 51 anciens Tm 232.'] },
+    { titel: 'Travail et circulation', p: ['Le moteur principal entraîne la transmission hydrodynamique rapide, le moteur de travail supplémentaire alimente les équipements hydrauliques.', 'La combinaison de la grue, du plateau de chargement et de l’autorisation à 100 km/h permet des transports de matériel et des trains de travaux sans véhicule de travail séparé.'] }
+  ],
+  bilder: ['Tracteur de service Windhoff avec grue de chargement', 'Tracteur de service Windhoff, autre côté', 'Tm 234 413 avec grue de chargement à Weinfelden', 'Tm 234 413 à Weinfelden, côté grue', 'Tm 234 435 à Kreuzlingen']
+});
+
+uebDict({ 'Aem 940 018 in Biasca': 'Aem 940 018 à Biasca' });

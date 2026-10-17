@@ -32,7 +32,7 @@
   const flip = y => by1 - y;
   const segs = N.segs.map(([oi, gi, ei, tr, li, len, d]) => ({ oi, gi, ei, tr, li, len, pts: dec(d).map(([x, y]) => [x, flip(y)]), cat: catOf(oi, gi) }));
   const km = {}; for (const s of segs) km[s.cat] = (km[s.cat] || 0) + s.len / 1000;
-  const fmtKm = v => Math.round(v).toLocaleString('de-CH') + ' km';
+  const fmtKm = v => Math.round(v).toLocaleString(LOCALE) + ' km';
 
   // static layers
   const el = (tag, attrs) => { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); return e; };
@@ -63,7 +63,7 @@
 
   // legend
   const legend = $('#map-legend');
-  legend.innerHTML = CATS.map(c => `<button class="lg" type="button" data-c="${c.id}" aria-pressed="${c.on}"><i style="background:${c.col}"></i>${esc(c.name)} <small>${fmtKm(km[c.id] || 0)}</small></button>`).join('');
+  legend.innerHTML = CATS.map(c => `<button class="lg" type="button" data-c="${c.id}" aria-pressed="${c.on}"><i style="background:${c.col}"></i>${esc(tr(c.name))} <small>${fmtKm(km[c.id] || 0)}</small></button>`).join('');
   legend.addEventListener('click', e => {
     const b = e.target.closest('.lg'); if (!b) return;
     const c = CATS.find(x => x.id === b.dataset.c); c.on = !c.on;
@@ -71,7 +71,7 @@
     hideTip();
   });
   const total = ['sbb', 'ns', 'ms', 'spec'].reduce((a, k) => a + (km[k] || 0), 0);
-  $('#map-src').textContent = `Rund ${fmtKm(total)} Bahnstrecke ohne Tram, ${segs.length.toLocaleString('de-CH')} Abschnitte. Daten: Bundesamt für Verkehr (BAV), Schienennetz, Stand 6. Juli 2021. Landesgrenze: swisstopo.`;
+  $('#map-src').textContent = tr('Rund {km} Bahnstrecke ohne Tram, {n} Abschnitte. Daten: Bundesamt für Verkehr (BAV), Schienennetz, Stand 6. Juli 2021. Landesgrenze: swisstopo.', { km: fmtKm(total), n: segs.length.toLocaleString(LOCALE) });
 
   // view: viewBox with zoom and pan
   const pad = 300, full = { x: bx0 - pad, y: 0 - pad, w: bx1 - bx0 + 2 * pad, h: by1 - by0 + 2 * pad };
@@ -149,11 +149,11 @@
     const s = segs[i], op = N.ops[s.oi], line = s.li >= 0 ? N.lines[s.li] : '';
     const m = /^(\S+)\s+(.*)$/.exec(line);
     hl.setAttribute('d', pathD(s.pts));
-    tip.innerHTML = `<b>${m ? esc(m[2].replace(/ - /g, ' – ')) : 'Streckenabschnitt'}</b><dl>` +
-      (m ? `<dt>Linie</dt><dd>${esc(m[1])}</dd>` : '') +
-      `<dt>Betreiber</dt><dd>${esc(OPN[op] || op)}</dd><dt>Spurweite</dt><dd>${esc(GAUGE[N.gauges[s.gi]] || N.gauges[s.gi])}</dd>` +
-      `<dt>Gleise</dt><dd>${s.tr >= 2 ? (s.tr === 2 ? 'Doppelspur' : s.tr + ' Gleise') : 'Einspur'}</dd><dt>Strom</dt><dd>${esc(ELEC[N.elec[s.ei]] || N.elec[s.ei])}</dd>` +
-      `<dt>Abschnitt</dt><dd>${(s.len / 1000).toLocaleString('de-CH', { maximumFractionDigits: 1 })} km</dd></dl>`;
+    tip.innerHTML = `<b>${m ? esc(m[2].replace(/ - /g, ' – ')) : esc(tr('Streckenabschnitt'))}</b><dl>` +
+      (m ? `<dt>${esc(tr('Linie'))}</dt><dd>${esc(m[1])}</dd>` : '') +
+      `<dt>${esc(tr('Betreiber'))}</dt><dd>${esc(tr(OPN[op] || op))}</dd><dt>${esc(tr('Spurweite'))}</dt><dd>${esc(tr(GAUGE[N.gauges[s.gi]] || N.gauges[s.gi]))}</dd>` +
+      `<dt>${esc(tr('Gleise'))}</dt><dd>${esc(s.tr >= 2 ? (s.tr === 2 ? tr('Doppelspur') : tr('{n} Gleise', { n: s.tr })) : tr('Einspur'))}</dd><dt>${esc(tr('Strom'))}</dt><dd>${esc(tr(ELEC[N.elec[s.ei]] || N.elec[s.ei]))}</dd>` +
+      `<dt>${esc(tr('Abschnitt'))}</dt><dd>${(s.len / 1000).toLocaleString(LOCALE, { maximumFractionDigits: 1 })} km</dd></dl>`;
     tip.hidden = false;
     const tw = tip.offsetWidth, th = tip.offsetHeight;
     let tx = clientX - r.left + 14, ty = clientY - r.top + 14;

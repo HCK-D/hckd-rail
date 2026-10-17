@@ -23,11 +23,12 @@ let rpCtx = { id: 'allgemein', name: 'HCKD RAIL allgemein' }, rpReturn = null;
 const rpSay = (t, kind) => { rpMsg.textContent = t; rpMsg.className = 'rp-msg' + (kind ? ' ' + kind : ''); };
 function rpOpen(from) {
   const kind = from.dataset.report;
-  rpCtx = kind === 'zug' && curZug ? { id: curZug.id, name: fullName(curZug) }
-    : kind === 'kat' && curKat ? { id: curKat.id, name: curKat.name }
-    : { id: 'allgemein', name: 'HCKD RAIL allgemein' };
-  $('#rp-target').textContent = rpCtx.name;
-  rpSay(''); rpSend.disabled = false; rpSend.textContent = 'Meldung senden';
+  // name: German, for the mail; anzeige: in the chosen language, for the dialog
+  rpCtx = kind === 'zug' && curZug ? { id: curZug.id, name: fullNameDe(curZug), anzeige: fullName(curZug) }
+    : kind === 'kat' && curKat ? { id: curKat.id, name: curKat.name, anzeige: tr(curKat.name) }
+    : { id: 'allgemein', name: 'HCKD RAIL allgemein', anzeige: tr('HCKD RAIL allgemein') };
+  $('#rp-target').textContent = rpCtx.anzeige;
+  rpSay(''); rpSend.disabled = false; rpSend.textContent = tr('Meldung senden');
   rpReturn = from; rp.hidden = false; rpText.focus();
   rpOpenedAt = Date.now();
 }
@@ -62,6 +63,7 @@ async function sendMail(r) {
     Art: r.art,
     Beschreibung: r.text,
     Kontakt: contact || '(keine Angabe)',
+    Sprache: SPRACHEN[LANG],
     Seite: location.href.split('?')[0],
     botcheck: rpTrap.checked
   };
@@ -91,12 +93,12 @@ async function saveInStore(r) {
 rpForm.addEventListener('submit', async e => {
   e.preventDefault();
   const text = rpText.value.trim();
-  if (text.length < 5) { rpSay('Bitte beschreibe kurz, was nicht stimmt.', 'err'); rpText.focus(); return; }
-  if (rpLinks(text) + rpLinks(rpContact.value) > 1) { rpSay('Bitte höchstens einen Link angeben.', 'err'); rpText.focus(); return; }
-  if (rpRecent().length >= RP_MAX) { rpSay('Du hast in kurzer Zeit schon mehrere Meldungen geschickt. Bitte warte ein paar Minuten. Danke!', 'err'); return; }
+  if (text.length < 5) { rpSay(tr('Bitte beschreibe kurz, was nicht stimmt.'), 'err'); rpText.focus(); return; }
+  if (rpLinks(text) + rpLinks(rpContact.value) > 1) { rpSay(tr('Bitte höchstens einen Link angeben.'), 'err'); rpText.focus(); return; }
+  if (rpRecent().length >= RP_MAX) { rpSay(tr('Du hast in kurzer Zeit schon mehrere Meldungen geschickt. Bitte warte ein paar Minuten. Danke!'), 'err'); return; }
   // bots: hidden field filled in or sent right after opening. They see "sent", but nothing goes out
   const bot = rpTrap.checked || Date.now() - rpOpenedAt < RP_MIN_MS;
-  rpSend.disabled = true; rpSend.textContent = 'Wird gesendet …'; rpSay('');
+  rpSend.disabled = true; rpSend.textContent = tr('Wird gesendet …'); rpSay('');
   const r = {
     id: Date.now().toString(36) + Math.random().toString(36).slice(2, 7), at: new Date().toISOString(),
     ziel: rpCtx.id, zielName: rpCtx.name, art: rpKind.value, text: text.slice(0, 2000),
@@ -106,11 +108,11 @@ rpForm.addEventListener('submit', async e => {
   if (ok) {
     if (!bot) rpRemember();
     rpText.value = ''; rpContact.value = '';
-    rpSend.textContent = 'Gesendet';
-    rpSay('Danke! Deine Meldung ist angekommen und wird geprüft.', 'ok');
+    rpSend.textContent = tr('Gesendet');
+    rpSay(tr('Danke! Deine Meldung ist angekommen und wird geprüft.'), 'ok');
     setTimeout(() => { if (!rp.hidden) rpClose(); }, 1800);
   } else {
-    rpSend.disabled = false; rpSend.textContent = 'Meldung senden';
-    rpSay('Senden hat nicht geklappt. Bitte versuche es in einem Moment nochmals. Dein Text bleibt erhalten.', 'err');
+    rpSend.disabled = false; rpSend.textContent = tr('Meldung senden');
+    rpSay(tr('Senden hat nicht geklappt. Bitte versuche es in einem Moment nochmals. Dein Text bleibt erhalten.'), 'err');
   }
 });

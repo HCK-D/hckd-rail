@@ -8,7 +8,7 @@
    ===================================================================== */
 (() => {
   const KEY = 'hckd-theme', btn = $('#theme-btn');
-  const NAMEN = { auto: 'automatisch', light: 'hell', dark: 'dunkel' };
+  const NAMEN = { auto: tr('automatisch'), light: tr('hell'), dark: tr('dunkel') };
   const NEXT = { auto: 'light', light: 'dark', dark: 'auto' };
   const aktuell = () => root.getAttribute('data-theme') || 'auto';
   function setze(t) {
@@ -17,7 +17,7 @@
     zeige();
   }
   function zeige() {
-    const t = aktuell(), label = 'Darstellung: ' + NAMEN[t] + ' (wechseln zu ' + NAMEN[NEXT[t]] + ')';
+    const t = aktuell(), label = tr('Darstellung: {jetzt} (wechseln zu {neu})', { jetzt: NAMEN[t], neu: NAMEN[NEXT[t]] });
     btn.dataset.mode = t;
     btn.setAttribute('aria-label', label);
     btn.title = label;

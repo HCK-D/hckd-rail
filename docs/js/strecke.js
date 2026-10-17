@@ -146,7 +146,7 @@ const COURSE_M = makeCourse({
     if (w >= 615 && w < 740) return 'Zurück auf Gleis 1';
     return null;
   },
-  caption: '<b>Meterspur, 1000 mm.</b> Halt am Signal, die Weiche wird umgestellt, dann über die Weichenverbindung und durch den Bahnhof Lindmatt. Typisch für Bahnen wie RhB, MGB oder zb.'
+  caption: tr('<b>Meterspur, 1000 mm.</b> Halt am Signal, die Weiche wird umgestellt, dann über die Weichenverbindung und durch den Bahnhof Lindmatt. Typisch für Bahnen wie RhB, MGB oder zb.')
 });
 
 /* ---------- Normalspur: Tunnel, Durchfahrt Erlenried, Halt in Sonnwil ---------- */
@@ -208,7 +208,7 @@ const COURSE_N = makeCourse({
     return null;
   }
 });
-COURSE_N.caption = `<b>Normalspur, 1435 mm.</b> Mit 200 km/h durch den Tunnel, Durchfahrt in Erlenried, dann Halt in Sonnwil auf Gleis 1. Unterwegs liegen ${COURSE_N.switches} Weichen, dazu Abstellgleise mit Prellbock und eine Passerelle.`;
+COURSE_N.caption = tr('<b>Normalspur, 1435 mm.</b> Mit 200 km/h durch den Tunnel, Durchfahrt in Erlenried, dann Halt in Sonnwil auf Gleis 1. Unterwegs liegen {n} Weichen, dazu Abstellgleise mit Prellbock und eine Passerelle.', { n: COURSE_N.switches });
 const COURSES = { n: COURSE_N, m: COURSE_M };
 
 // parts that can be labelled
@@ -830,7 +830,7 @@ function draw() {
   const kmh = labelsOn ? 0 : Math.round(now.v * 3.6);
   if (kmh !== lastSpd) { lastSpd = kmh; gSpdEl.textContent = kmh; }
   updateLive(now, kmh);
-  const sk = labelsOn ? 'Bauteile beschriftet · Fahrt pausiert' : c.status(rt, now.z);
+  const st = labelsOn ? 'Bauteile beschriftet · Fahrt pausiert' : c.status(rt, now.z), sk = st && tr(st);
   if (sk !== lastStat) {
     lastStat = sk;
     if (sk) { gStatT.textContent = sk; gStatEl.classList.add('on'); } else gStatEl.classList.remove('on');
@@ -904,7 +904,7 @@ stage.addEventListener('pointerleave', () => { if (!labelsOn) camTarget = 0; kic
 function setPlaying(on) {
   playing = on;
   pauseBtn.setAttribute('aria-pressed', on ? 'false' : 'true');
-  pauseBtn.setAttribute('aria-label', on ? 'Animation pausieren' : 'Animation abspielen');
+  pauseBtn.setAttribute('aria-label', on ? tr('Animation pausieren') : tr('Animation abspielen'));
   $('#ico-pause').toggleAttribute('hidden', !on);
   $('#ico-play').toggleAttribute('hidden', on);
   kick();
@@ -916,8 +916,8 @@ const seg = $('#seg'), segBtns = $$('button', seg), caption = $('#caption');
 // live ride data beside the stage: distance, speed, ride time, next point
 const lvDist = $('#lv-dist'), lvSpeed = $('#lv-speed'), lvTime = $('#lv-time'), lvBar = $('#lv-bar'), lvNext = $('#lv-next');
 const lcKmh = $('#lc-kmh'), lcS = $('#lc-s'), lc10 = $('#lc-10'), lcM = $('#lc-m'), lcH = $('#lc-h'), lcF = $('#lc-f');
-const fmtDec = (v, dec) => v.toLocaleString('de-CH', { minimumFractionDigits: dec, maximumFractionDigits: dec }).replace('.', ',');
-const fmtM = m => Math.round(m).toLocaleString('de-CH') + ' m';
+const fmtDec = (v, dec) => zahlText(v, { minimumFractionDigits: dec, maximumFractionDigits: dec });
+const fmtM = m => Math.round(m).toLocaleString(LOCALE) + ' m';
 let lvKey = '';
 function liveSetup() {
   const c = CO, z0 = c.ride.Z0;
@@ -934,22 +934,22 @@ function updateLive(now, kmh) {
   lvTime.textContent = Math.floor(t / 60) + ':' + String(t % 60).padStart(2, '0');
   lvBar.style.width = (d / c.LOOP * 100).toFixed(2) + '%';
   const next = c.wp.find(p => p.z - z0 > d + 1);
-  lvNext.innerHTML = next ? `Nächster Punkt: <b>${esc(next.t)}</b> in ${fmtM(next.z - z0 - d)}` : `Gleich ist die Runde komplett: noch ${fmtM(c.LOOP - d)}`;
+  lvNext.innerHTML = next ? tr('Nächster Punkt: <b>{p}</b> in {m}', { p: esc(tr(next.t)), m: fmtM(next.z - z0 - d) }) : esc(tr('Gleich ist die Runde komplett: noch {m}', { m: fmtM(c.LOOP - d) }));
   // distance covered at the current speed: km/h ÷ 3,6 = m/s
   const ms = kmh / 3.6;
   lcKmh.textContent = kmh + ' km/h';
   lcS.textContent = fmtDec(ms, 1) + ' m';
-  lc10.textContent = Math.round(ms * 10).toLocaleString('de-CH') + ' m';
-  lcM.textContent = Math.round(ms * 60).toLocaleString('de-CH') + ' m';
-  lcH.textContent = kmh.toLocaleString('de-CH') + ' km';
-  lcF.textContent = kmh ? `Rechnung: ${kmh} km/h ÷ 3,6 = ${fmtDec(ms, 1)} m pro Sekunde` : 'Der Zug steht: 0 m pro Sekunde.';
+  lc10.textContent = Math.round(ms * 10).toLocaleString(LOCALE) + ' m';
+  lcM.textContent = Math.round(ms * 60).toLocaleString(LOCALE) + ' m';
+  lcH.textContent = kmh.toLocaleString(LOCALE) + ' km';
+  lcF.textContent = kmh ? tr('Rechnung: {kmh} km/h ÷ 3,6 = {ms} m pro Sekunde', { kmh, ms: fmtDec(ms, 1) }) : tr('Der Zug steht: 0 m pro Sekunde.');
 }
 function gaugeTexts() {
   liveSetup();
   caption.innerHTML = CO.caption;
   canvas.setAttribute('aria-label', CO.id === 'n'
-    ? 'Führerstandsfahrt auf Normalspur, 1435 mm: Tunnel, Durchfahrt Erlenried, Halt in Sonnwil'
-    : 'Führerstandsfahrt auf Meterspur, 1000 mm: Weichenverbindung und Bahnhof Lindmatt');
+    ? tr('Führerstandsfahrt auf Normalspur, 1435 mm: Tunnel, Durchfahrt Erlenried, Halt in Sonnwil')
+    : tr('Führerstandsfahrt auf Meterspur, 1000 mm: Weichenverbindung und Bahnhof Lindmatt'));
 }
 function selectGauge(btn, focus) {
   segBtns.forEach(b => { const on = b === btn; b.setAttribute('aria-checked', on ? 'true' : 'false'); b.tabIndex = on ? 0 : -1; });

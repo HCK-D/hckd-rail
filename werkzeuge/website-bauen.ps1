@@ -2,6 +2,7 @@
 # Erzeugt den Ordner "docs" mit:
 #   - index.html und einer eigenen HTML-Datei pro Fahrzeug, Kategorie, Impressum, Datenschutz und Vergleich
 #     (z. B. re-460.html), jede mit eigenem Titel, Beschreibung und Vorschaubild für Google und Messenger
+#   - dieselben Seiten auf Französisch, Italienisch und Englisch (re-460.fr.html, index.it.html, ...)
 #   - css, js, bilder und der selbst gehosteten Schrift (keine Verbindung zu Google Fonts)
 #   - sitemap.xml, robots.txt, 404.html, .nojekyll und bei eigener Domain die Datei CNAME
 # Die Adresse der Website steht in werkzeuge\website-adresse.txt (z. B. https://name.github.io/hckd-rail/ oder https://www.meine-domain.ch/).
@@ -19,6 +20,51 @@ $base = ''
 if (Test-Path $adrFile) { $base = ((Get-Content $adrFile -Encoding UTF8) | Where-Object { $_ -match '^\s*https?://' } | Select-Object -First 1) }
 if ($base) { $base = $base.Trim(); if (-not $base.EndsWith('/')) { $base += '/' } }
 if ($base -match 'BENUTZERNAME') { $base = '' }
+
+# ---------- Sprachen ----------
+# Zuerst die Übersetzungen zusammensetzen (sprachen\xx\*.js -> js\sprachen\xx.js)
+& (Join-Path $PSScriptRoot 'sprachen-bauen.ps1') -Projekt $root | Out-Null
+$sprachen = 'de', 'fr', 'it', 'en'
+$hreflang = @{ de = 'de-CH'; fr = 'fr-CH'; it = 'it-CH'; en = 'en' }
+$ogLocale = @{ de = 'de_CH'; fr = 'fr_CH'; it = 'it_CH'; en = 'en_GB' }
+# Texte, die nur in den Seitenköpfen stehen (Titel und Beschreibung für Google und Messenger)
+$fix = @{
+  de = @{ start = 'HCKD RAIL – Train Database für SBB Personenverkehr, Cargo, Infrastruktur, Rangier- sowie Dienst- und Spezialfahrzeuge.'; zug = 'Technische Daten, Geschichte und Bilder.'
+          impressum = 'Impressum'; impressumText = 'Impressum, Haftung und Bildnachweis von HCKD RAIL.'
+          datenschutz = 'Datenschutz'; datenschutzText = 'Datenschutzerklärung von HCKD RAIL: keine Cookies, keine Werbung, nur anonyme Besucherzählung.'
+          vergleich = 'Fahrzeuge vergleichen'; vergleichText = 'Bis zu drei Schweizer Bahnfahrzeuge nebeneinander vergleichen.' }
+  fr = @{ start = 'HCKD RAIL – Train Database des CFF : voyageurs, Cargo, infrastructure, véhicules de manœuvre, de service et spéciaux.'; zug = 'Caractéristiques techniques, histoire et images.'
+          impressum = 'Mentions légales'; impressumText = 'Mentions légales, responsabilité et crédits photo de HCKD RAIL.'
+          datenschutz = 'Protection des données'; datenschutzText = 'Protection des données chez HCKD RAIL : pas de cookies, pas de publicité, seulement un comptage anonyme des visites.'
+          vergleich = 'Comparer des véhicules'; vergleichText = "Comparer jusqu’à trois véhicules ferroviaires suisses côte à côte." }
+  it = @{ start = 'HCKD RAIL – Train Database delle FFS: viaggiatori, Cargo, infrastruttura, veicoli di manovra, di servizio e speciali.'; zug = 'Dati tecnici, storia e immagini.'
+          impressum = 'Note legali'; impressumText = 'Note legali, responsabilità e crediti fotografici di HCKD RAIL.'
+          datenschutz = 'Protezione dei dati'; datenschutzText = 'Protezione dei dati su HCKD RAIL: nessun cookie, nessuna pubblicità, solo un conteggio anonimo delle visite.'
+          vergleich = 'Confronta veicoli'; vergleichText = "Confronta fino a tre veicoli ferroviari svizzeri uno accanto all’altro." }
+  en = @{ start = 'HCKD RAIL – Train Database for SBB passenger, Cargo, infrastructure, shunting, service and special vehicles.'; zug = 'Technical data, history and pictures.'
+          impressum = 'Legal notice'; impressumText = 'Legal notice, liability and picture credits of HCKD RAIL.'
+          datenschutz = 'Privacy'; datenschutzText = 'HCKD RAIL privacy policy: no cookies, no advertising, only anonymous visitor counting.'
+          vergleich = 'Compare vehicles'; vergleichText = 'Compare up to three Swiss railway vehicles side by side.' }
+}
+# Übersetzte Kategorienamen und Fahrzeugtypen aus js\sprachen\xx.js lesen
+$jsStr = '''((?:[^''\\]|\\.)*)'''
+function Unjs([string]$s) { $s.Replace("\'", "'").Replace('\\', '\') }
+$uebDict = @{}; $uebZug = @{}
+foreach ($l in $sprachen) {
+  $d = New-Object Collections.Hashtable ([StringComparer]::Ordinal); $z = @{}
+  if ($l -ne 'de') {
+    $js = [IO.File]::ReadAllText((Join-Path $root "js\sprachen\$l.js"), [Text.Encoding]::UTF8)
+    foreach ($m in [regex]::Matches($js, "$jsStr\s*:\s*$jsStr")) { $k = Unjs $m.Groups[1].Value; if (-not $d.ContainsKey($k)) { $d[$k] = Unjs $m.Groups[2].Value } }
+    foreach ($m in [regex]::Matches($js, "uebZug\('([^']+)', \{\s*(?:beiname: $jsStr,\s*)?typ: $jsStr")) {
+      $z[$m.Groups[1].Value] = [pscustomobject]@{ bei = if ($m.Groups[2].Success) { Unjs $m.Groups[2].Value } else { $null }; typ = Unjs $m.Groups[3].Value }
+    }
+  }
+  $uebDict[$l] = $d; $uebZug[$l] = $z
+}
+function Tr([string]$l, [string]$s) { if ($uebDict[$l].ContainsKey($s)) { $uebDict[$l][$s] } else { $s } }
+# Dateiname einer Seite: re-460.html (Deutsch), re-460.fr.html, index.it.html ...
+function Datei([string]$l, [string]$id) { $suf = if ($l -eq 'de') { '' } else { ".$l" }; if ($id) { "$id$suf.html" } else { "index$suf.html" } }
+function Adresse([string]$l, [string]$id) { if (-not $id -and $l -eq 'de') { $base } else { $base + (Datei $l $id) } }
 
 if (Test-Path $out) { Remove-Item -Recurse -Force $out }
 New-Item -ItemType Directory $out | Out-Null
@@ -46,7 +92,7 @@ $seiten = New-Object System.Collections.ArrayList
 $katName = @{}
 foreach ($m in [regex]::Matches($daten, "\{ id: '([^']+)', code: '[^']*', name: '([^']+)', text: '([^']*)'")) {
   $katName[$m.Groups[1].Value] = $m.Groups[2].Value
-  [void]$seiten.Add([pscustomobject]@{ id = $m.Groups[1].Value; titel = $m.Groups[2].Value; text = $m.Groups[3].Value; bild = ''; prio = '0.8' })
+  [void]$seiten.Add([pscustomobject]@{ art = 'kat'; id = $m.Groups[1].Value; name = $m.Groups[2].Value; text = $m.Groups[3].Value; bild = ''; prio = '0.8' })
 }
 $zm = [regex]::Matches($daten, "\{ id: '([^']+)', kat: '([^']+)',(?: gruppe: '[^']*',)? name: '([^']+)', beiname: '([^']*)', typ: '([^']*)'")
 for ($i = 0; $i -lt $zm.Count; $i++) {
@@ -54,38 +100,56 @@ for ($i = 0; $i -lt $zm.Count; $i++) {
   $ende = if ($i + 1 -lt $zm.Count) { $zm[$i + 1].Index } else { $daten.Length }
   $chunk = $daten.Substring($m.Index, $ende - $m.Index)
   $bild = [regex]::Match($chunk, "src: '(bilder/[^']+)'").Groups[1].Value
-  $name = $m.Groups[3].Value; $bei = $m.Groups[4].Value; $typ = $m.Groups[5].Value
-  $titel = if ($bei) { "$name «$bei»" } else { $name }
-  $text = "$titel`: $typ ($($katName[$m.Groups[2].Value])). Technische Daten, Geschichte und Bilder."
-  [void]$seiten.Add([pscustomobject]@{ id = $m.Groups[1].Value; titel = $titel; text = $text; bild = $bild; prio = '0.7' })
+  [void]$seiten.Add([pscustomobject]@{ art = 'zug'; id = $m.Groups[1].Value; kat = $m.Groups[2].Value; name = $m.Groups[3].Value; bei = $m.Groups[4].Value; typ = $m.Groups[5].Value; bild = $bild; prio = '0.7' })
 }
-[void]$seiten.Add([pscustomobject]@{ id = 'bahn-abc'; titel = 'Bahn-ABC'; text = 'Was bedeuten RABDe, Re 4/4 II oder Bo''Bo''? Schweizer Fahrzeugbezeichnungen einfach erklärt, mit Entschlüssler.'; bild = ''; prio = '0.6' })
-[void]$seiten.Add([pscustomobject]@{ id = 'impressum'; titel = 'Impressum'; text = 'Impressum, Haftung und Bildnachweis von HCKD RAIL.'; bild = ''; prio = '0.2' })
-[void]$seiten.Add([pscustomobject]@{ id = 'datenschutz'; titel = 'Datenschutz'; text = 'Datenschutzerklärung von HCKD RAIL: keine Cookies, keine Werbung, nur anonyme Besucherzählung.'; bild = ''; prio = '0.2' })
-[void]$seiten.Add([pscustomobject]@{ id = 'vergleich'; titel = 'Fahrzeuge vergleichen'; text = 'Bis zu drei Schweizer Bahnfahrzeuge nebeneinander vergleichen.'; bild = ''; prio = '' })
+[void]$seiten.Add([pscustomobject]@{ art = 'fix'; id = 'impressum'; bild = ''; prio = '0.2' })
+[void]$seiten.Add([pscustomobject]@{ art = 'fix'; id = 'datenschutz'; bild = ''; prio = '0.2' })
+[void]$seiten.Add([pscustomobject]@{ art = 'fix'; id = 'vergleich'; bild = ''; prio = '' })
+
+# Titel und Beschreibung einer Seite in einer Sprache
+function Kopf([string]$l, $s) {
+  switch ($s.art) {
+    'kat' { return @((Tr $l $s.name), (Tr $l $s.text)) }
+    'zug' {
+      $u = $uebZug[$l][$s.id]
+      $bei = if ($u -and $null -ne $u.bei) { $u.bei } else { Tr $l $s.bei }
+      $typ = if ($u) { $u.typ } else { $s.typ }
+      $titel = if ($bei) { "$($s.name) «$bei»" } else { $s.name }
+      return @($titel, "$titel`: $typ ($(Tr $l $katName[$s.kat])). $($fix[$l].zug)")
+    }
+    default { return @($fix[$l][$s.id], $fix[$l][$s.id + 'Text']) }
+  }
+}
 
 # ---------- HTML-Dateien schreiben ----------
-$startText = 'HCKD RAIL – Train Database für SBB Personenverkehr, Cargo, Infrastruktur, Rangier- sowie Dienst- und Spezialfahrzeuge.'
-function Build-Page([string]$datei, [string]$start, [string]$titel, [string]$text, [string]$bild) {
+function Build-Page([string]$l, [string]$start, [string]$titel, [string]$text, [string]$bild) {
+  $datei = Datei $l $start
   $meta = "<title>$(Esc $titel)</title>`n<meta name=`"description`" content=`"$(Esc $text)`">`n"
-  $meta += "<meta property=`"og:site_name`" content=`"HCKD RAIL`">`n<meta property=`"og:type`" content=`"website`">`n<meta property=`"og:locale`" content=`"de_CH`">`n"
+  $meta += "<meta property=`"og:site_name`" content=`"HCKD RAIL`">`n<meta property=`"og:type`" content=`"website`">`n<meta property=`"og:locale`" content=`"$($ogLocale[$l])`">`n"
   $meta += "<meta property=`"og:title`" content=`"$(Esc $titel)`">`n<meta property=`"og:description`" content=`"$(Esc $text)`">`n"
   if ($base) {
-    $url = if ($datei -eq 'index.html') { $base } else { $base + $datei }
+    $url = Adresse $l $start
     $meta += "<link rel=`"canonical`" href=`"$url`">`n<meta property=`"og:url`" content=`"$url`">`n"
+    # dieselbe Seite in den anderen Sprachen (für Google)
+    foreach ($a in $sprachen) { $meta += "<link rel=`"alternate`" hreflang=`"$($hreflang[$a])`" href=`"$(Adresse $a $start)`">`n" }
+    $meta += "<link rel=`"alternate`" hreflang=`"x-default`" href=`"$(Adresse 'de' $start)`">`n"
     $img = if ($bild) { $bild } else { 'bilder/slides/slide-01.jpg' }
     $meta += "<meta property=`"og:image`" content=`"$base$img`">`n<meta name=`"twitter:card`" content=`"summary_large_image`">`n"
   }
   if ($start -eq 'vergleich') { $meta += "<meta name=`"robots`" content=`"noindex`">`n" }
   $meta += "<link rel=`"icon`" href=`"favicon.svg`" type=`"image/svg+xml`">`n"
-  # sagt dem Router, welche Ansicht ohne # gezeigt wird
   # HCKD_SEITEN: Links zeigen auf die einzelnen Dateien (re-460.html statt #re-460)
-  $meta += if ($start) { "<script>window.HCKD_SEITEN=true;window.HCKD_START='$start';</script>`n" } else { "<script>window.HCKD_SEITEN=true;</script>`n" }
-  $html = "<!doctype html>`n<html lang=`"de-CH`">`n<head>`n<meta charset=`"utf-8`">`n<meta name=`"viewport`" content=`"width=device-width,initial-scale=1,viewport-fit=cover`">`n<style>$reset</style>`n$meta$head`n</head>`n<body>`n$body`n</body>`n</html>`n"
+  # HCKD_START: welche Ansicht ohne # gezeigt wird; HCKD_LANG: Sprache dieser Datei
+  $js = "window.HCKD_SEITEN=true;window.HCKD_LANG='$l';"
+  if ($start) { $js += "window.HCKD_START='$start';" }
+  $meta += "<script>$js</script>`n"
+  $html = "<!doctype html>`n<html lang=`"$($hreflang[$l])`">`n<head>`n<meta charset=`"utf-8`">`n<meta name=`"viewport`" content=`"width=device-width,initial-scale=1,viewport-fit=cover`">`n<style>$reset</style>`n$meta$head`n</head>`n<body>`n$body`n</body>`n</html>`n"
   Write-Utf8 (Join-Path $out $datei) $html
 }
-Build-Page 'index.html' '' 'HCKD RAIL – Train Database' $startText ''
-foreach ($s in $seiten) { Build-Page "$($s.id).html" $s.id "$($s.titel) · HCKD RAIL" $s.text $s.bild }
+foreach ($l in $sprachen) {
+  Build-Page $l '' 'HCKD RAIL – Train Database' $fix[$l].start ''
+  foreach ($s in $seiten) { $k = Kopf $l $s; Build-Page $l $s.id "$($k[0]) · HCKD RAIL" $k[1] $s.bild }
+}
 
 # ---------- Dateien kopieren ----------
 foreach ($d in 'css', 'js', 'bilder', 'schrift') { Copy-Item -Recurse (Join-Path $root $d) (Join-Path $out $d) }
@@ -118,10 +182,30 @@ a{display:inline-block;padding:12px 20px;border-radius:12px;background:var(--acc
 </head>
 <body>
 <main>
-<h1>Gleis nicht gefunden</h1>
-<p>Diese Seite gibt es bei HCKD RAIL nicht (mehr).</p>
-<a href="$startUrl">Zur Startseite</a>
+<h1 id="t">Gleis nicht gefunden</h1>
+<p id="p">Diese Seite gibt es bei HCKD RAIL nicht (mehr).</p>
+<a id="a" href="$startUrl">Zur Startseite</a>
 </main>
+<script>
+(function () {
+  var T = {
+    fr: ['Voie introuvable', 'Cette page n’existe pas (ou plus) sur HCKD RAIL.', 'Vers l’accueil', 'fr-CH'],
+    it: ['Binario non trovato', 'Questa pagina non esiste (più) su HCKD RAIL.', 'Alla pagina iniziale', 'it-CH'],
+    en: ['Track not found', 'This page does not exist (any more) on HCKD RAIL.', 'Go to the home page', 'en']
+  };
+  var l = '';
+  try { l = localStorage.getItem('hckd-lang') || ''; } catch (e) {}
+  if (!T[l]) { var n = (navigator.language || '').slice(0, 2); if (T[n]) l = n; }
+  if (!T[l]) return;
+  document.documentElement.lang = T[l][3];
+  document.title = T[l][0] + ' · HCKD RAIL';
+  document.getElementById('t').textContent = T[l][0];
+  document.getElementById('p').textContent = T[l][1];
+  var a = document.getElementById('a');
+  a.textContent = T[l][2];
+  a.href = a.getAttribute('href').replace(/\/?$/, '/') + 'index.' + l + '.html';
+})();
+</script>
 </body>
 </html>
 "@
@@ -129,8 +213,11 @@ Write-Utf8 (Join-Path $out '404.html') $p404
 
 if ($base) {
   $heute = Get-Date -Format 'yyyy-MM-dd'
-  $urls = @("  <url><loc>$base</loc><lastmod>$heute</lastmod><priority>1.0</priority></url>")
-  foreach ($s in $seiten) { if ($s.prio) { $urls += "  <url><loc>$base$($s.id).html</loc><lastmod>$heute</lastmod><priority>$($s.prio)</priority></url>" } }
+  $urls = @()
+  foreach ($l in $sprachen) {
+    $urls += "  <url><loc>$(Adresse $l '')</loc><lastmod>$heute</lastmod><priority>1.0</priority></url>"
+    foreach ($s in $seiten) { if ($s.prio) { $urls += "  <url><loc>$(Adresse $l $s.id)</loc><lastmod>$heute</lastmod><priority>$($s.prio)</priority></url>" } }
+  }
   Write-Utf8 (Join-Path $out 'sitemap.xml') ("<?xml version=`"1.0`" encoding=`"UTF-8`"?>`n<urlset xmlns=`"http://www.sitemaps.org/schemas/sitemap/0.9`">`n" + ($urls -join "`n") + "`n</urlset>`n")
   Write-Utf8 (Join-Path $out 'robots.txt') "User-agent: *`nAllow: /`n`nSitemap: ${base}sitemap.xml`n"
 } else {
@@ -140,7 +227,7 @@ if ($base) {
 # ---------- Zusammenfassung ----------
 $n = (Get-ChildItem $out -Recurse -File -Force | Measure-Object).Count
 $mb = [Math]::Round(((Get-ChildItem $out -Recurse -File -Force | Measure-Object Length -Sum).Sum / 1MB), 1)
-Write-Host "Fertig: $out  ($n Dateien, $mb MB, $($seiten.Count + 1) HTML-Seiten)"
+Write-Host "Fertig: $out  ($n Dateien, $mb MB, $(($seiten.Count + 1) * $sprachen.Count) HTML-Seiten in $($sprachen.Count) Sprachen)"
 if (-not $base) { Write-Host "Hinweis: Keine Adresse in werkzeuge\website-adresse.txt. Ohne sie fehlen sitemap.xml, Vorschaubilder und Canonical-Links." }
 $key = Select-String -Path (Join-Path $root 'js\melden.js') -Pattern "web3formsKey: ''" -Quiet
 if ($key) { Write-Host "Hinweis: In js\melden.js ist noch kein Web3Forms-Schlüssel eingetragen. Ohne ihn kommen keine Mails an." }

@@ -82,7 +82,7 @@ const einsatzKarte = (() => {
     for (const [name, r, label] of e.gebiete || []) {
       const n = node(name); if (!n) continue;
       svg.appendChild(el('circle', { cx: n[1], cy: G.flip(n[2]), r: r * KM, class: 'ez-area' }));
-      marken.push([label || name, n[1], n[2], true]);
+      marken.push([label ? tr(label) : name, n[1], n[2], true]);
     }
     const ids = new Set();
     for (const list of e.strecken || []) {
@@ -105,7 +105,7 @@ const einsatzKarte = (() => {
       if (!gebiet) svg.appendChild(el('circle', { cx: x, cy, r: ort ? 260 : 190, class: ort ? 'ez-ort' : 'ez-dot' }));
       svg.appendChild(el('text', { x: x + (gebiet ? 0 : 340), y: cy + (gebiet ? 130 : 130), class: 'ez-label' + (gebiet ? ' mid' : '') }, name));
     }
-    txt.textContent = e.text || '';
+    txt.textContent = UEB_EINSATZ[z.id] || tr(e.text || '');
   }
   return zeige;
 })();
