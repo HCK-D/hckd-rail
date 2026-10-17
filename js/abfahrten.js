@@ -9,7 +9,7 @@
    ===================================================================== */
 (() => {
   const API = 'https://transport.opendata.ch/v1/';
-  const START = 'Fribourg/Freiburg', KEY = 'hckd-bahnhof';
+  const START = 'Bern', KEY = 'hckd-bahnhof';
   const form = $('#board-form'), input = $('#board-q'), list = $('#board-list'), rows = $('#board-rows'), msg = $('#board-msg');
   let station = START;
   try { station = localStorage.getItem(KEY) || START; } catch (e) { /* private window */ }
@@ -119,6 +119,34 @@
   });
   // a station chosen from the list loads right away
   input.addEventListener('change', () => { if ([...list.options].some(o => o.value === input.value)) form.requestSubmit(); });
+
+  /* ---------- «In meiner Nähe»: nearest station from the location ----------
+     The browser asks for permission only when the button is tapped. The
+     position is rounded to about 100 m and only sent to transport.opendata.ch,
+     which returns the 10 nearest stops; a railway station is preferred. */
+  const near = $('#board-near');
+  if (!navigator.geolocation) near.hidden = true;
+  near.addEventListener('click', () => {
+    near.disabled = true;
+    say(tr('Suche den nächsten Bahnhof …'));
+    navigator.geolocation.getCurrentPosition(async pos => {
+      try {
+        const x = pos.coords.latitude.toFixed(3), y = pos.coords.longitude.toFixed(3);
+        const res = await fetch(API + 'locations?type=station&x=' + x + '&y=' + y);
+        if (!res.ok) throw new Error('http ' + res.status);
+        const halte = ((await res.json()).stations || []).filter(s => s.id && s.name);
+        const ziel = halte.find(s => s.icon === 'train') || halte[0];
+        if (!ziel) { say(tr('Kein Halt in der Nähe gefunden. Tippe einen Bahnhof ein.'), 'err'); return; }
+        input.value = ziel.name;
+        form.requestSubmit();
+      } catch (e) {
+        say(tr('Die Abfahrten können gerade nicht geladen werden. Auf der fertigen Website funktioniert die Tafel; in der Vorschau sind Verbindungen nach aussen gesperrt.'), 'err');
+      } finally { near.disabled = false; }
+    }, err => {
+      near.disabled = false;
+      say(err.code === 1 ? tr('Standort nicht erlaubt. Du kannst den Bahnhof auch eintippen.') : tr('Standort nicht gefunden. Tippe einen Bahnhof ein.'), 'err');
+    }, { timeout: 15000, maximumAge: 300000 });
+  });
 
   // small station clock in the header of the board
   const clock = $('#board-clock');

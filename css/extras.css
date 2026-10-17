@@ -145,6 +145,8 @@ body.has-cmp .footer{padding-bottom:76px}
 .board-form{display:flex;gap:10px}
 .board-form .filter{flex:1}
 .board-form .qz-btn{height:48px;flex:none}
+.board-near{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:0 18px}
+.board-near:disabled{opacity:.6}
 .board-panel{border-radius:var(--r-md);background:#0B1F44;color:#fff;box-shadow:var(--shadow-lift);overflow:hidden}
 .board-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 18px;border-bottom:1px solid rgba(255,255,255,.14)}
 .board-head b{font:800 19px/1.2 var(--display)}
@@ -167,7 +169,7 @@ body.has-cmp .footer{padding-bottom:76px}
 .board-msg:empty{display:none}
 .board-msg.err{color:#FFB4B4}
 .board-src{margin:0;font-size:13.5px;color:var(--fg-3)}
-@media (max-width:520px){.board-form{flex-direction:column}.board-tbl{font-size:15px}.board-tbl td,.board-tbl th{padding-inline:10px}}
+@media (max-width:520px){.board-form{flex-direction:column}.board-form .filter{flex:none;min-height:48px}.board-tbl{font-size:15px}.board-tbl td,.board-tbl th{padding-inline:10px}}
 
 /* ---------- Hell/Dunkel-Schalter ---------- */
 :root[data-theme="dark"]{color-scheme:dark}
