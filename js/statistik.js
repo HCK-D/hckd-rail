@@ -8,7 +8,7 @@
    Statistik ansehen: https://hckd-rail.goatcounter.com (mit dem GoatCounter-Login).
    Leer lassen = kein Zähler.
    Eigene Besuche nicht zählen: auf jedem eigenen Gerät einmal
-   https://hckd-rail.ch/#toggle-goatcounter öffnen.
+   https://railbase.ch/#toggle-goatcounter öffnen.
    Die Sprachen erscheinen getrennt: /re-460 (Deutsch), /fr/re-460, /it/re-460, /en/re-460.
    ===================================================================== */
 const STATISTIK = {

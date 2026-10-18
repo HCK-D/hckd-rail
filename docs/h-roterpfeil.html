@@ -11,14 +11,14 @@
 <meta property="og:locale" content="de_CH">
 <meta property="og:title" content="RCe 2/4 «Roter Pfeil» · RailBase">
 <meta property="og:description" content="RCe 2/4 «Roter Pfeil»: Elektrischer Leichttriebwagen für Ausflugs- und Schnellfahrten (historisch) (Historische Fahrzeuge). Technische Daten, Geschichte und Bilder.">
-<link rel="canonical" href="https://hckd-rail.ch/h-roterpfeil.html">
-<meta property="og:url" content="https://hckd-rail.ch/h-roterpfeil.html">
-<link rel="alternate" hreflang="de-CH" href="https://hckd-rail.ch/h-roterpfeil.html">
-<link rel="alternate" hreflang="fr-CH" href="https://hckd-rail.ch/h-roterpfeil.fr.html">
-<link rel="alternate" hreflang="it-CH" href="https://hckd-rail.ch/h-roterpfeil.it.html">
-<link rel="alternate" hreflang="en" href="https://hckd-rail.ch/h-roterpfeil.en.html">
-<link rel="alternate" hreflang="x-default" href="https://hckd-rail.ch/h-roterpfeil.html">
-<meta property="og:image" content="https://hckd-rail.ch/bilder/h-roterpfeil-c2.jpg">
+<link rel="canonical" href="https://railbase.ch/h-roterpfeil.html">
+<meta property="og:url" content="https://railbase.ch/h-roterpfeil.html">
+<link rel="alternate" hreflang="de-CH" href="https://railbase.ch/h-roterpfeil.html">
+<link rel="alternate" hreflang="fr-CH" href="https://railbase.ch/h-roterpfeil.fr.html">
+<link rel="alternate" hreflang="it-CH" href="https://railbase.ch/h-roterpfeil.it.html">
+<link rel="alternate" hreflang="en" href="https://railbase.ch/h-roterpfeil.en.html">
+<link rel="alternate" hreflang="x-default" href="https://railbase.ch/h-roterpfeil.html">
+<meta property="og:image" content="https://railbase.ch/bilder/h-roterpfeil-c2.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="manifest" href="manifest.webmanifest">
@@ -27,7 +27,23 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="RailBase">
 <script>window.HCKD_SEITEN=true;window.HCKD_LANG='de';window.HCKD_START='h-roterpfeil';</script>
-<script>try{var t=localStorage.getItem('hckd-theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script>
+/* Umzug von hckd-rail.ch: die alte Adresse schickt Sammlung und Einstellungen als #umzug=… mit.
+   Fehlendes wird übernommen; gesehene Fahrzeuge und Sichtungen werden zusammengeführt. */
+(function(){try{
+  var m=/^#umzug=([A-Za-z0-9_-]*)(?:&h=(.*))?$/.exec(location.hash);if(!m)return;
+  history.replaceState(null,'',location.pathname+location.search+(m[2]?'#'+decodeURIComponent(m[2]):''));
+  var b=atob(m[1].replace(/-/g,'+').replace(/_/g,'/')),u=new Uint8Array(b.length);for(var i=0;i<b.length;i++)u[i]=b.charCodeAt(i);
+  var alt=JSON.parse(new TextDecoder().decode(u));
+  Object.keys(alt).forEach(function(k){
+    var v=alt[k];if(!/^hckd-/.test(k)||typeof v!=='string')return;
+    var jetzt=localStorage.getItem(k);
+    if(jetzt===null){localStorage.setItem(k,v);return}
+    if(k==='hckd-gesehen'){var a=JSON.parse(jetzt),n=JSON.parse(v);if(Array.isArray(a)&&Array.isArray(n))localStorage.setItem(k,JSON.stringify(a.concat(n.filter(function(x){return a.indexOf(x)<0}))))}
+    if(k==='hckd-sichtungen'){var s=JSON.parse(jetzt),t=JSON.parse(v);if(s&&t&&typeof s==='object'&&typeof t==='object'){Object.keys(t).forEach(function(id){if(!Array.isArray(t[id]))return;var l=Array.isArray(s[id])?s[id]:[];t[id].forEach(function(e){if(!l.some(function(x){return x&&e&&x.t===e.t}))l.push(e)});s[id]=l});localStorage.setItem(k,JSON.stringify(s))}}
+  });
+}catch(e){}})();
+try{var t=localStorage.getItem('hckd-theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
 <link rel="preload" href="schrift/source-sans-3-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="css/schrift.css">
 <link rel="stylesheet" href="css/basis.css">

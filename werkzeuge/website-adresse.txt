@@ -1,5 +1,6 @@
 # Adresse der fertigen Website, eine Zeile, mit / am Ende.
 # GitHub-Benutzer HCK-D, Repository hckd-rail.
-# Eigene Domain seit Oktober 2026 (DNS bei Infomaniak: 4 A-Einträge auf GitHub Pages, www als CNAME auf hck-d.github.io).
+# Eigene Domain railbase.ch seit Oktober 2026 (DNS bei Infomaniak: 4 A-Einträge auf GitHub Pages, www als CNAME auf hck-d.github.io).
+# Die alte Adresse hckd-rail.ch leitet über das Repository hckd-rail-weiterleitung hierher weiter.
 # Das Bau-Skript legt dafür automatisch die Datei docs\CNAME an.
-https://hckd-rail.ch/
+https://railbase.ch/
