@@ -1,19 +1,19 @@
 /* Italiano – locomotive di manovra */
 uebZug('ee-922', {
   typ: 'Locomotiva elettrica di manovra per stazioni viaggiatori',
-  text: ['La Ee 922 è una compatta locomotiva elettrica di manovra di Stadler.', 'Le FFS l’hanno acquistata per preparare i treni viaggiatori e aggiungere carrozze supplementari nelle grandi stazioni.'],
+  text: ['L’Ee 922 è una compatta locomotiva elettrica di manovra di Stadler.', 'Le FFS l’hanno acquistata per preparare i treni viaggiatori e aggiungere carrozze supplementari nelle grandi stazioni.'],
   kennzahlen: [['21', 'locomotive ordinate'], ['750 kW', 'potenza massima'], ['45 t', 'massa a vuoto'], ['2009–2010', 'consegna']],
   daten: { 'Spurweite': 'scartamento normale, 1435 mm', 'Stromsystem': '15 kV 16,7 Hz e 25 kV 50 Hz', 'Gewicht': '45 t a vuoto', 'Bedienung': 'radiocomando', 'Einsatz': 'manovra traffico viaggiatori' },
   abschnitte: [
     { titel: 'Acquisto', p: ['Le FFS hanno ordinato le 21 locomotive nel dicembre 2007. Stadler ha consegnato il primo veicolo nel luglio 2009; entro la fine del 2010 dovevano essere equipaggiate sette grandi stazioni.'] },
-    { titel: 'Concetto d’impiego', p: ['La Ee 922 ha sostituito le vecchie Ee 3/3 nel traffico viaggiatori. Il suo equipaggiamento bifrequenza ne permette l’impiego anche nelle stazioni di confine con linea di contatto a 25 kV.'] }
+    { titel: 'Concetto d’impiego', p: ['L’Ee 922 ha sostituito le vecchie Ee 3/3 nel traffico viaggiatori. Il suo equipaggiamento bifrequenza ne permette l’impiego anche nelle stazioni di confine con linea di contatto a 25 kV.'] }
   ],
   bilder: ['Ee 922 011', 'Ee 922 012', 'Ee 922 021 a Briga', 'Ee 922 006 a Basilea', 'Ee 922 002 a Romanshorn']
 });
 
 uebZug('eem-923', {
   typ: 'Locomotiva di manovra bimodale di FFS Cargo',
-  text: ['La Eem 923 è una locomotiva elettrica compatta con motore diesel ausiliario della piattaforma Butler di Stadler.', 'FFS Cargo la impiega in manovra, nella distribuzione e nel servizio leggero di linea; senza linea di contatto il diesel ausiliario fornisce l’energia.'],
+  text: ['L’Eem 923 è una locomotiva elettrica compatta con motore diesel ausiliario della piattaforma Butler di Stadler.', 'FFS Cargo la impiega in manovra, nella distribuzione e nel servizio leggero di linea; senza linea di contatto il diesel ausiliario fornisce l’energia.'],
   kennzahlen: [['30', 'locomotive ordinate'], ['1500 kW', 'potenza elettrica'], ['45 t', 'massa a vuoto'], ['2012–2013', 'introduzione della flotta']],
   daten: { 'Plattform': 'Butler', 'Spurweite': 'scartamento normale, 1435 mm', 'Gewicht': '45 t a vuoto', 'Antrieb': 'elettrica, con motore diesel ausiliario per l’ultimo miglio', 'Leistung': '1500 kW elettrica', 'Höchstgeschwindigkeit': '120 km/h (FOS 2026), 100 km/h all’introduzione', 'Einsatz': 'FFS Cargo, manovra e distribuzione' },
   specNote: 'La diversa velocità massima proviene da due stati delle fonti ufficiali: 100 km/h all’introduzione e 120 km/h nel catalogo dei tipi di marcia 2026.',

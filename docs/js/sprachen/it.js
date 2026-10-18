@@ -820,6 +820,17 @@ uebDict({
   'Entdecker-Abzeichen und die Seite «Meine Sammlung» mit allen gesehenen Fahrzeugen.': 'Distintivi da esploratore e la pagina «La mia collezione» con tutti i veicoli visti.'
 });
 
+/* ---- 08-pruefbericht.js ---- */
+/* Italiano – complementi dopo il rapporto di controllo del 18.10.2026 */
+uebDict({
+  'Korrekturen nach einer Inhaltsprüfung, unter anderem bei RABe 521, Ae 6/6, Be 4/6, Ce 6/8 III, Rotem Pfeil und LRZ 14.': 'Correzioni dopo un controllo dei contenuti, tra l’altro per RABe 521, Ae 6/6, Be 4/6, Ce 6/8 III, Freccia rossa e TSS 14.',
+  'ein Wagen': 'una carrozza',
+  'Umbauauftrag': 'Ordine di trasformazione',
+  'z. B. Re 4/4 II': 'ad es. Re 4/4 II',
+  'ältere Bezeichnung einer Dampflok; die Buchstaben folgen einem früheren Schema und werden hier nicht einzeln erklärt': 'vecchia designazione di una locomotiva a vapore; le lettere seguono uno schema precedente e qui non sono spiegate singolarmente',
+  'Diese Bezeichnung kann ich (noch) nicht entschlüsseln. Probiere zum Beispiel «Re 4/4 II» oder «RABe 523»; Gross- und Kleinbuchstaben haben dabei eine eigene Bedeutung.': 'Questa designazione non riesco (ancora) a decifrarla. Prova per esempio «Re 4/4 II» o «RABe 523»; maiuscole e minuscole hanno ciascuna un proprio significato.'
+});
+
 /* ---- 20-personenverkehr.js ---- */
 /* Italiano – veicoli FFS Viaggiatori */
 uebDict({ 'ja': 'sì', 'nein': 'no', 'SBB': 'FFS' });
@@ -1022,7 +1033,7 @@ uebZug('rabe-520', {
 });
 
 uebZug('rabe-521', {
-  typ: 'FLIRT bicorrente per Germania e Svizzera',
+  typ: 'FLIRT monotensione omologato in Svizzera e in Germania',
   text: ['Il RABe 521 è un FLIRT a quattro casse per i collegamenti regionali transfrontalieri tra la Svizzera nord-occidentale e la Germania.', 'Costituisce una parte importante della S-Bahn trinazionale di Basilea e circola anche sul Seehas.'],
   kennzahlen: [['39', 'treni'], ['160 km/h', 'velocità massima'], ['2004', 'primo impiego'], ['74,08 m', 'lunghezza']],
   daten: { 'Zugbildung': '4 carrozze', 'Gewicht': '120 t a vuoto, 152 t a pieno carico', 'Leistung': '2656 kW (valore del tipo di marcia FOS)', 'Nummern': '521 001–030 e 201–209', 'Einsatz': 'S-Bahn di Basilea, Seehas, Svizzera–Germania' },
@@ -1133,12 +1144,12 @@ uebZug('re-420', {
 
 uebZug('re-620', {
   typ: 'Locomotiva di linea a sei assi',
-  text: ['La Re 620, un tempo Re 6/6, è stata sviluppata per treni viaggiatori e merci pesanti sulle linee del San Gottardo e del Sempione.', 'I suoi tre carrelli a due assi uniscono un elevato sforzo di trazione all’autorizzazione per le velocità in curva più elevate della serie di treni R.'],
+  text: ['La Re 620, un tempo Re 6/6, è stata sviluppata per treni viaggiatori e merci pesanti sulle linee del San Gottardo e del Sempione.', 'I suoi tre carrelli a due assi uniscono un elevato sforzo di trazione all’autorizzazione per le velocità in curva più elevate della categoria di treno R.'],
   kennzahlen: [['89', 'locomotive costruite'], ['7832 kW', 'potenza oraria alla ruota'], ['140 km/h', 'velocità massima'], ['1972–1980', 'periodo di costruzione']],
   daten: { 'Achsfolge': 'Bo′Bo′Bo′, 6 assi motori', 'Länge': '19,31 m fuori respingenti', 'Gewicht': '120 t in servizio', 'Leistung': '7244 kW continuativi alla ruota (7832 kW orari)', 'Elektrische Bremse': 'a recupero', 'In Betrieb seit': '1972; serie 1975–1980', 'Hersteller': 'parte meccanica SLM Winterthur; parte elettrica e montaggio BBC, in parte SAAS' },
   abschnitte: [
     { titel: 'Origine e tecnica', p: ['Quattro prototipi apparvero nel 1972, seguiti da 85 locomotive di serie. SLM costruì cassa e telaio, BBC fornì l’equipaggiamento elettrico.', 'Il montaggio finale avvenne soprattutto presso BBC a Oerlikon e, per i numeri 11635–11654, presso SAAS a Ginevra. I primi due prototipi avevano una cassa in due parti, gli altri una cassa in un pezzo unico.'] },
-    { titel: 'Impiego e sviluppo', p: ['Le locomotive trainarono dapprima treni viaggiatori e merci pesanti. In comando multiplo con una Re 4/4 II o III formavano per i treni merci pesanti la combinazione nota come «Re 10/10». Dopo la divisionalizzazione delle FFS le Re 6/6 furono assegnate a FFS Cargo.', 'FFS Cargo offre ancora la Re 620 a noleggio per la Svizzera; l’effettivo reale cambia con le demolizioni.', 'Dal 2007, 63 locomotive hanno ricevuto l’ETCS livello 2. SBB Historic indica l’inizio delle demolizioni per anzianità nel febbraio 2021.'],
+    { titel: 'Impiego e sviluppo', p: ['Le locomotive trainarono dapprima treni viaggiatori e merci pesanti. In comando multiplo con una Re 4/4 II o III formavano per i treni merci pesanti la combinazione nota come «Re 10/10». Dopo la divisionalizzazione delle FFS le Re 6/6 furono assegnate a FFS Cargo.', 'FFS Cargo offre ancora la Re 620 a noleggio per la Svizzera; l’effettivo reale cambia con i ritiri dal servizio.', 'Dal 2007, 63 locomotive hanno ricevuto l’ETCS livello 2. SBB Historic indica l’inizio dei ritiri dal servizio per anzianità nel febbraio 2021.'],
       hinweis: 'Il numero 89 indica la serie costruita storicamente e non l’effettivo oggi in esercizio.' }
   ],
   bilder: ['Re 620 nei colori Cargo con carri cisterna sul lago', '«Re 10/10»: Re 620 e Re 420 in testa a un treno merci', 'Re 620 nei colori Cargo con carri silo', 'Re 620 con treno di carri cisterna', 'Re 620 con treno cantiere, mucche in primo piano', 'Re 620 nei colori Cargo in stazione', 'Re 620 con treno di carri cisterna (foto: music4life / Pixabay)']
@@ -1217,7 +1228,7 @@ uebZug('tm-234', {
   daten: { 'Hersteller': 'Stadler Winterthur e partner', 'Bauart': 'trattore diesel a due assi', 'Gewicht': '30 t in servizio, al massimo 37 t', 'Antrieb': 'idrostatica, motore diesel MTU', 'Anfahrzugkraft': 'circa 81 kN', 'Zuladung': '7 t; versione con cestello 0,5 t', 'Arbeitsmodus': 'fino a 20 km/h, con la gru fino a 4 km/h', 'Anzahl': '125 ordinati (1997, 2000, 2005)', 'In Betrieb seit': '1999 (prima serie ordinata nel 1997)', 'Einsatz': 'manutenzione di binari, linea di contatto e segnali' },
   specNote: 'La scheda del costruttore e uno studio preliminare del DLR e delle FFS descrivono le diverse versioni.',
   abschnitte: [
-    { titel: 'Serie e impiego', p: ['Le FFS hanno ordinato 50 veicoli nel 1997 e nel 2000 e altri 25 nel 2005. Consegna e messa in servizio della prima serie sono iniziate nel 1999. Stadler ha annunciato la consegna degli ultimi 25 nel 2007.', 'I trattori servono alla manutenzione di binari, linea di contatto e segnali, trasportano materiale e possono muovere o manovrare treni cantiere.'] },
+    { titel: 'Serie e impiego', p: ['Le FFS hanno ordinato 50 veicoli nel 1997, altri 50 nel 2000 e ulteriori 25 nel 2005. Consegna e messa in servizio della prima serie sono iniziate nel 1999. Stadler ha annunciato la consegna degli ultimi 25 nel 2007.', 'I trattori servono alla manutenzione di binari, linea di contatto e segnali, trasportano materiale e possono muovere o manovrare treni cantiere.'] },
     { titel: 'Effettivo e delimitazione', p: ['Nel 2019 FFS Infrastruttura indicava un effettivo di 124 vecchi Tm 234 «Ameise». È un dato storico e non un’indicazione sulla flotta di ottobre 2026.', 'Il più recente trattore di servizio, anch’esso chiamato Tm 234-4, proviene da Windhoff e appartiene a un altro acquisto.'] }
   ],
   bilder: ['Tm 234 109 «Ameise»', 'Tm 234 004 a Neuhausen SH', 'Tm 234 139 a Winterthur', 'Tm 234 «Ameise» con gru di carico', 'Tm 234 090']
@@ -1252,7 +1263,7 @@ uebZug('tmf-232', {
   typ: 'Trattore di servizio ammodernato con radiocomando',
   text: ['Il Tmf 232 è nato dall’ammodernamento di trattori di servizio Tm IV. Nel 2013 FFS Infrastruttura ha commissionato la trasformazione di 15 veicoli.', 'La «f» nella sigla sta per radiocomando (Funkfernsteuerung).'],
   kennzahlen: [['15', 'veicoli nell’ordine di trasformazione'], ['2013', 'ordine di ammodernamento'], ['280 kW', 'potenza diesel'], ['60 km/h', 'velocità massima con mezzi propri']],
-  daten: { 'Umbau': 'ORTICS, nell’officina industriale FFS di Bienne', 'Antrieb': 'diesel-idraulica, motore Caterpillar', 'Länge': '7,67 m fuori respingenti', 'Gewicht': 'circa 30 t', 'Höchstgeschwindigkeit': '60 km/h con mezzi propri, 90 km/h al traino', 'Steuerung': 'radiocomando e comando multiplo', 'In Betrieb seit': '2013 (ordine di trasformazione)', 'Einsatz': 'servizio di cantiere e di manovra' },
+  daten: { 'Umbau': 'ORTICS, nell’officina industriale FFS di Bienne', 'Antrieb': 'diesel-idraulica, motore Caterpillar', 'Länge': '7,67 m fuori respingenti', 'Gewicht': 'circa 30 t', 'Höchstgeschwindigkeit': '60 km/h con mezzi propri, 90 km/h al traino', 'Steuerung': 'radiocomando e comando multiplo', 'Umbauauftrag': '2013 (prima messa in servizio dopo la trasformazione non documentata)', 'Einsatz': 'servizio di cantiere e di manovra' },
   specNote: 'Il 2013 è l’anno documentato dell’ordine di ammodernamento, non l’anno di costruzione originale dei Tm IV donatori.',
   abschnitte: [
     { titel: 'Ammodernamento', p: ['Nel 2013 ORTICS ha ricevuto da FFS Infrastruttura l’incarico di ammodernare 15 Tm IV. Telaio, sovrastrutture, sale e trasmissione sono stati in gran parte mantenuti; motore, comando e tecnica di sicurezza sono stati rinnovati ed è stato installato un radiocomando.'] },
@@ -1338,7 +1349,7 @@ uebZug('xas-53', {
   typ: 'Carro porta-cassoni con guide di scorrimento laterali',
   text: ['Lo Xas 53 trasporta cassoni intercambiabili per pietrisco, residui di vagliatura e materiale PSS.', 'Guide di scorrimento laterali permettono di spostare i cassoni insieme alle macchine per binari.'],
   kennzahlen: [['100 km/h', 'velocità massima'], ['19,9 m', 'lunghezza'], ['31,0 t', 'peso a vuoto'], ['7', 'cassoni per carro']],
-  daten: { 'Fahrzeugart': 'carro porta-cassoni', 'Gewicht': '31,0 t a vuoto, 78 t a pieno carico', 'Nutzlast': 'fino a circa 46,6 t (calcolato)', 'Behälter': '7 cassoni da circa 4 m³ ciascuno', 'Ausrüstung': 'guide di scorrimento laterali, teloni possibili', 'Einsatz': 'treni di vagliatura e cantiere' },
+  daten: { 'Fahrzeugart': 'carro porta-cassoni', 'Gewicht': '31,0 t a vuoto, 78 t a pieno carico', 'Nutzlast': 'nessun valore ufficiale (78 t − 31 t danno circa 47 t)', 'Behälter': '7 cassoni da circa 4 m³ ciascuno', 'Ausrüstung': 'guide di scorrimento laterali, teloni possibili', 'Einsatz': 'treni di vagliatura e cantiere' },
   specNote: 'Il catalogo dei tipi di marcia indica 77,6 t per la dinamica di marcia. La pianificazione della flotta prevede la sostituzione della famiglia Xans/Xas 52/53.',
   abschnitte: [
     { titel: 'Logistica dei cassoni', p: ['I cassoni possono essere spostati, riempiti e svuotati nel punto adatto all’interno di una catena di lavoro. Questo accelera l’asportazione continua del materiale durante la pulizia della massicciata e il rinnovo dei binari.'] },
@@ -1445,6 +1456,7 @@ uebZug('silad-4', {
 });
 
 uebZug('silad-reserve', {
+  name: 'SILAD di riserva',
   typ: 'Unità compatta di carico rotaie di riserva',
   text: ['L’unità di riserva SILAD è disponibile come sostituzione o complemento per i carichi di rotaie.', 'È nettamente più corta e leggera della SILAD 4 ed è registrata come tipo di marcia attivo a sé stante.'],
   kennzahlen: [['90 km/h', 'velocità massima'], ['14,0 m', 'lunghezza'], ['18 t', 'peso a vuoto'], ['attivo', 'stato 2026']],
@@ -1457,6 +1469,7 @@ uebZug('silad-reserve', {
 });
 
 uebZug('ste-kurz', {
+  name: 'STE corta',
   typ: 'Unità di trasporto rotaie con due gru per rotaie da 12 a 36 m',
   text: ['Secondo il documento di formazione l’unità corta di trasporto rotaie (STE) si basa su un carro pianale Xans 51 a quattro assi.', 'Due piccole gru scaricano le rotaie corte direttamente in cantiere.'],
   kennzahlen: [['12–36 m', 'lunghezza delle rotaie'], ['29,5 t', 'peso a vuoto'], ['50 t', 'carico utile secondo la presentazione'], ['2 × 1,5 t', 'gru']],
@@ -1469,6 +1482,7 @@ uebZug('ste-kurz', {
 });
 
 uebZug('ste-lang', {
+  name: 'STE lunga',
   typ: 'Unità di trasporto rotaie in più parti per rotaie fino a 120 m',
   text: ['La STE lunga usa carri Xans 51 dotati di gru per trasportare e scaricare rotaie lunghe.', 'Secondo la presentazione un’unità d’esercizio è composta da sei carri e raggiunge 120 metri di lunghezza.'],
   kennzahlen: [['120 m', 'lunghezza max. delle rotaie'], ['6', 'carri per unità'], ['29,5 t', 'peso a vuoto per carro gru'], ['2 × 1,5 t', 'gru per carro gru']],
@@ -1485,7 +1499,7 @@ uebZug('xs-45', {
   text: ['Lo Xs 45 è un carro coperto per treni cantiere destinato ad attrezzi, pezzi di ricambio e attrezzatura d’officina.', 'Serve allo stesso tempo come spazio di lavoro e di supporto riparato per le squadre di cantiere.'],
   kennzahlen: [['2', 'assi'], ['15,0 m', 'lunghezza'], ['16,5 t', 'peso a vuoto'], ['22 t', 'carico utile secondo la presentazione']],
   daten: { 'Gewicht': '16,5 t a vuoto, circa 38,5 t a pieno carico (calcolato)', 'Nutzlast': '22 t secondo la presentazione' },
-  specNote: 'L’attuale catalogo dei tipi di marcia non elenca lo Xs 45 separatamente; i dati tecnici provengono dal documento di formazione FFS.',
+  specNote: 'Il catalogo dei tipi di marcia 2026 non elenca separatamente lo Xs 45; i valori provengono dal documento di formazione FFS del 2022.',
   abschnitte: [
     { titel: 'Supporto al cantiere', p: ['Attrezzi e piccole macchine vengono trasportati al riparo dalle intemperie e messi a disposizione direttamente sul luogo d’intervento. Il carro completa veicoli motore e carri materiale nel treno cantiere.'] },
     { titel: 'Posizione di marcia', p: ['Prima di ogni movimento porte laterali, attrezzatura mobile e posti di lavoro devono essere assicurati. Le persone possono restare nel carro solo alle condizioni d’esercizio autorizzate.'] }
@@ -1519,10 +1533,11 @@ uebZug('xs-mannschaftswagen', {
 });
 
 uebZug('kirow-mannschaftswagen', {
+  name: 'Carro squadra Kirow',
   typ: 'Carro di accompagnamento dei convogli gru Kirow 250, 800 e 1200',
-  text: ['Le gru Kirow 250, 800 e 1200 delle FFS circolano in convogli fissi con un carro squadra.', 'Il carro di accompagnamento supporta personale, attrezzi e logistica d’intervento della gru ferroviaria.'],
-  kennzahlen: [['3', 'tipi di gru con carro squadra'], ['1', 'carro squadra per convoglio'], ['80 km/h', 'velocità del convoglio'], ['attivo', 'stato dei convogli nel 2026']],
-  daten: { 'Fahrzeugrolle': 'carro di accompagnamento nel convoglio gru', 'Höchstgeschwindigkeit': '80 km/h (intero convoglio)', 'Einzelfahrdaten': 'non pubblicati separatamente', 'Fahrtypen': '5089–5091 (convogli gru completi)' },
+  text: ['Il catalogo dei tipi di marcia 2026 elenca convogli gru Kirow 250, 800 e 1200, ciascuno con un carro squadra.', 'Il carro di accompagnamento supporta personale, attrezzi e logistica d’intervento della gru ferroviaria. Le due KRC 800 delle FFS sono state sostituite nel 2016–2019; una voce nel catalogo non attesta quindi un effettivo attuale.'],
+  kennzahlen: [['3', 'tipi di gru con carro squadra'], ['1', 'carro squadra per convoglio'], ['80 km/h', 'velocità del convoglio'], ['3', 'tipi di marcia nel catalogo 2026']],
+  daten: { 'Fahrzeugrolle': 'carro di accompagnamento nel convoglio gru', 'Höchstgeschwindigkeit': '80 km/h (intero convoglio)', 'Einzelfahrdaten': 'non pubblicati separatamente', 'Fahrtypen': '5089–5091 (convogli gru completi)', 'Status': 'tipi di marcia attivi nel catalogo 2026; KRC 800 sostituite alle FFS nel 2016–2019' },
   specNote: 'Nel catalogo dei tipi di marcia le FFS pubblicano solo i valori complessivi dei convogli gru inseparabili, non le dimensioni del solo carro squadra.',
   abschnitte: [
     { titel: 'Assegnazione ai convogli gru', tabelle: { kopf: ['Gru', 'Formazione', 'Convoglio lunghezza / peso'], zeilen: [
@@ -1551,19 +1566,19 @@ uebZug('pwfz', {
 /* Italiano – locomotive di manovra */
 uebZug('ee-922', {
   typ: 'Locomotiva elettrica di manovra per stazioni viaggiatori',
-  text: ['La Ee 922 è una compatta locomotiva elettrica di manovra di Stadler.', 'Le FFS l’hanno acquistata per preparare i treni viaggiatori e aggiungere carrozze supplementari nelle grandi stazioni.'],
+  text: ['L’Ee 922 è una compatta locomotiva elettrica di manovra di Stadler.', 'Le FFS l’hanno acquistata per preparare i treni viaggiatori e aggiungere carrozze supplementari nelle grandi stazioni.'],
   kennzahlen: [['21', 'locomotive ordinate'], ['750 kW', 'potenza massima'], ['45 t', 'massa a vuoto'], ['2009–2010', 'consegna']],
   daten: { 'Spurweite': 'scartamento normale, 1435 mm', 'Stromsystem': '15 kV 16,7 Hz e 25 kV 50 Hz', 'Gewicht': '45 t a vuoto', 'Bedienung': 'radiocomando', 'Einsatz': 'manovra traffico viaggiatori' },
   abschnitte: [
     { titel: 'Acquisto', p: ['Le FFS hanno ordinato le 21 locomotive nel dicembre 2007. Stadler ha consegnato il primo veicolo nel luglio 2009; entro la fine del 2010 dovevano essere equipaggiate sette grandi stazioni.'] },
-    { titel: 'Concetto d’impiego', p: ['La Ee 922 ha sostituito le vecchie Ee 3/3 nel traffico viaggiatori. Il suo equipaggiamento bifrequenza ne permette l’impiego anche nelle stazioni di confine con linea di contatto a 25 kV.'] }
+    { titel: 'Concetto d’impiego', p: ['L’Ee 922 ha sostituito le vecchie Ee 3/3 nel traffico viaggiatori. Il suo equipaggiamento bifrequenza ne permette l’impiego anche nelle stazioni di confine con linea di contatto a 25 kV.'] }
   ],
   bilder: ['Ee 922 011', 'Ee 922 012', 'Ee 922 021 a Briga', 'Ee 922 006 a Basilea', 'Ee 922 002 a Romanshorn']
 });
 
 uebZug('eem-923', {
   typ: 'Locomotiva di manovra bimodale di FFS Cargo',
-  text: ['La Eem 923 è una locomotiva elettrica compatta con motore diesel ausiliario della piattaforma Butler di Stadler.', 'FFS Cargo la impiega in manovra, nella distribuzione e nel servizio leggero di linea; senza linea di contatto il diesel ausiliario fornisce l’energia.'],
+  text: ['L’Eem 923 è una locomotiva elettrica compatta con motore diesel ausiliario della piattaforma Butler di Stadler.', 'FFS Cargo la impiega in manovra, nella distribuzione e nel servizio leggero di linea; senza linea di contatto il diesel ausiliario fornisce l’energia.'],
   kennzahlen: [['30', 'locomotive ordinate'], ['1500 kW', 'potenza elettrica'], ['45 t', 'massa a vuoto'], ['2012–2013', 'introduzione della flotta']],
   daten: { 'Plattform': 'Butler', 'Spurweite': 'scartamento normale, 1435 mm', 'Gewicht': '45 t a vuoto', 'Antrieb': 'elettrica, con motore diesel ausiliario per l’ultimo miglio', 'Leistung': '1500 kW elettrica', 'Höchstgeschwindigkeit': '120 km/h (FOS 2026), 100 km/h all’introduzione', 'Einsatz': 'FFS Cargo, manovra e distribuzione' },
   specNote: 'La diversa velocità massima proviene da due stati delle fonti ufficiali: 100 km/h all’introduzione e 120 km/h nel catalogo dei tipi di marcia 2026.',
@@ -1636,7 +1651,7 @@ uebZug('lrz-14', {
   abschnitte: [
     { titel: 'Acquisto', p: ['Le due composizioni sono state acquistate dal 2012 e rese operative prima della messa in servizio della galleria di base del San Gottardo.'] },
     { titel: 'Due unità di salvataggio', p: ['Ogni veicolo di salvataggio offre posto a circa 60 persone, oppure a 40 persone e sei barelle. I locali pressurizzati, le chiuse e gli attacchi medici permettono evacuazioni da tratti di galleria invasi dal fumo.'] },
-    { titel: 'Profilo di prestazioni', p: ['La composizione a quattro elementi offre più agente estinguente, aria respirabile e capacità di salvataggio delle generazioni precedenti. Più veicoli motorizzati assicurano elevato sforzo di trazione e ridondanza.'] }
+    { titel: 'Profilo di prestazioni', p: ['Grazie al secondo veicolo di salvataggio, la composizione a quattro elementi offre più capacità di salvataggio e più aria respirabile delle generazioni precedenti. Più veicoli motorizzati assicurano elevato sforzo di trazione e ridondanza.'] }
   ],
   bilder: ['Nuovo TSS 14 al centro di manutenzione e intervento di Erstfeld', 'TSS 14 «Uri» nella stazione di Erstfeld', 'TSS 14 «Uri» dei pompieri aziendali di Erstfeld', 'TSS 14 a Erstfeld']
 });
@@ -1669,6 +1684,7 @@ uebZug('lrz-04', {
 });
 
 uebZug('xrotm', {
+  name: 'Frese da neve',
   typ: 'Veicoli speciali per lo sgombero della neve',
   text: ['FFS Infrastruttura utilizza diversi tipi di frese da neve semoventi.', 'Il regolamento d’esercizio distingue quattro serie, che svolgono compiti diversi secondo la quantità di neve, la linea e il luogo d’impiego.'],
   kennzahlen: [['4', 'serie nel regolamento'], ['17', 'veicoli secondo i campi di numerazione'], ['60–80 km/h', 'Vmax dei tipi grandi'], ['95–115', 'numeri d’esercizio']],
@@ -1682,6 +1698,7 @@ uebZug('xrotm', {
 });
 
 uebZug('diagnose', {
+  name: 'Veicolo diagnostico',
   typ: 'Veicolo diagnostico semovente Mermec Xtmass',
   text: ['Il veicolo diagnostico semovente Xtmass ROGER 1000 controlla lo stato dell’infrastruttura ferroviaria ad alta velocità.', 'Sistemi di misura rilevano binario, linea di contatto e altri impianti senza interrompere inutilmente l’esercizio regolare.'],
   kennzahlen: [['160 km/h', 'velocità massima'], ['672 kW', 'potenza massima'], ['64 t', 'massa a vuoto'], ['23,9 m', 'lunghezza del veicolo']],
@@ -1733,7 +1750,7 @@ uebZug('kirow-krc-100', {
   typ: 'Gru ferroviaria girevole compatta per costruzione e intervento',
   text: ['La Kirow KRC 100 è una gru ferroviaria girevole compatta delle FFS. Dodici veicoli sono stati consegnati nel 2006 e nel 2007.', 'Il piccolo raggio posteriore e il contrappeso fisso permettono di lavorare influenzando poco i binari vicini.'],
   kennzahlen: [['12', 'gru consegnate'], ['2006–2007', 'consegna'], ['70 t', 'massa in servizio della gru'], ['120 km/h', 'ammessa al traino']],
-  daten: { 'Länge': '11,0 m respingenti compresi', 'Gewicht': '70 t in servizio', 'Tragfähigkeit': 'fino a circa 20 t, secondo lo sbraccio', 'Höchstgeschwindigkeit': '120 km/h al traino', 'Gegengewicht': 'fisso', 'In Betrieb seit': '2006–2007 (dic. 2006 – ott. 2007)', 'Einsatz': 'costruzione di binari, posa di pali, intervento' },
+  daten: { 'Länge': '11,0 m respingenti compresi', 'Gewicht': '70 t in servizio', 'Tragfähigkeit': 'secondo lo sbraccio, portata massima non documentata', 'Höchstgeschwindigkeit': '120 km/h al traino', 'Gegengewicht': 'fisso', 'In Betrieb seit': '2006–2007 (dic. 2006 – ott. 2007)', 'Einsatz': 'costruzione di binari, posa di pali, intervento' },
   specNote: 'La portata delle gru ferroviarie dipende fortemente da sbraccio, stabilizzatori e posizione del binario.',
   abschnitte: [
     { titel: 'Acquisto', p: ['Kirow ha consegnato dodici KRC 100 tra dicembre 2006 e ottobre 2007. La serie è stata acquistata per interventi decentralizzati di costruzione e soccorso.'] },
@@ -1754,6 +1771,7 @@ uebZug('bendini', {
 });
 
 uebZug('fahrleitung', {
+  name: 'Veicoli per la linea di contatto',
   typ: 'Veicoli di servizio per la costruzione e la manutenzione della linea di contatto',
   text: ['I veicoli per la linea di contatto portano personale, attrezzi e materiale direttamente alla linea aerea.', 'FFS Infrastruttura usa a tale scopo diverse serie e versioni; esempi citati pubblicamente sono Hubi, Krani e Combi 4A.'],
   kennzahlen: [['diversi', 'serie e versioni'], ['Hubi', 'esempio di veicolo'], ['Krani', 'esempio di veicolo'], ['Combi 4A', 'esempio di veicolo']],
@@ -1775,7 +1793,7 @@ uebDict({
 
 uebZug('ee-33', {
   typ: 'Locomotiva elettrica di manovra di costruzione classica FFS (storica)',
-  text: ['La Ee 3/3 è stata per decenni la classica locomotiva elettrica di manovra delle FFS.', 'Tra il 1928 e il 1966 nacquero diverse serie che, nonostante l’evoluzione tecnica, mantennero il concetto di base con tre assi accoppiati.'],
+  text: ['L’Ee 3/3 è stata per decenni la classica locomotiva elettrica di manovra delle FFS.', 'Tra il 1928 e il 1966 nacquero diverse serie che, nonostante l’evoluzione tecnica, mantennero il concetto di base con tre assi accoppiati.'],
   kennzahlen: [['136', 'locomotive costruite'], ['500 kW', 'versione recente'], ['50 km/h', 'versione recente'], ['1928–1966', 'anni di costruzione della serie']],
   daten: { 'Hersteller': 'SLM con BBC, MFO o SAAS', 'Länge': '9,51 m (serie recente)', 'Gewicht': '45 t a vuoto (serie recente)', 'Leistung': '500 kW (serie recente)', 'Höchstgeschwindigkeit': 'secondo la serie, da ultimo 50 km/h', 'Einsatz': 'manovra leggera e media', 'Status': 'ultima locomotiva FFS ritirata nel 2020' },
   specNote: 'Potenza, massa e lunghezza valgono per la versione recente descritta nel catalogo dei tipi di marcia 2026; le serie più vecchie differiscono.',
@@ -1801,7 +1819,7 @@ uebZug('h-ce68iii', {
   kennzahlen: [['18', 'locomotive'], ['1926', 'prima messa in servizio'], ['75 km/h', 'dopo la trasformazione'], ['131 t', 'massa in servizio']],
   daten: { 'Hersteller': 'SLM, MFO', 'Antrieb': 'bielle oblique', 'Gewicht': '131 t in servizio', 'Leistung': '1810 kW potenza oraria', 'Höchstgeschwindigkeit': '65 km/h, poi 75 km/h', 'Nummern': '14301–14318, dal 1956 Be 6/8 III 13301–13318', 'In Betrieb seit': '1926 (costruite 1926–1927)', 'Ausmusterung': 'servizio regolare fino al 1977', 'Einsatz': 'treni merci pesanti' },
   abschnitte: [
-    { titel: 'Storia e impiego', p: ['La serie era prevista per i treni merci pesanti sul San Gottardo, sulle linee d’accesso e in pianura.', 'Dal 1956 le locomotive ricevettero un rapporto di trasmissione più veloce e furono designate Be 6/8 III. Il servizio regolare terminò nel 1977.'] },
+    { titel: 'Storia e impiego', p: ['La serie era prevista per i treni merci pesanti sul San Gottardo, sulle linee d’accesso e in pianura.', 'Nel 1956 la velocità massima ammessa fu aumentata a 75 km/h e la serie fu ridenominata Be 6/8 III. Il servizio regolare terminò nel 1977.'] },
     { titel: 'Conservazione', p: ['La Ce 6/8 III 14305 è conservata come veicolo storico. Rappresenta la forma a Coccodrillo delle FFS, nota in tutto il mondo.'] }
   ],
   bilder: ['Ce 6/8 III 14305', 'Ce 6/8 III durante una corsa di FFS Historic', 'Ce 6/8 III 14305 di lato', 'Ce 6/8 III 14305 in visita a Malmö (2015)', 'Targa del costruttore della Ce 6/8 III 14305']
@@ -1810,31 +1828,31 @@ uebZug('h-ce68iii', {
 uebZug('h-ae66', {
   beiname: 'Locomotiva dei cantoni',
   typ: 'Locomotiva dei cantoni e icona del San Gottardo (storica)',
-  text: ['La Ae 6/6 è stata per decenni la locomotiva di potenza delle FFS sul San Gottardo.', 'Le prime 25 macchine portavano gli stemmi cantonali e modanature cromate; le successive ricevettero gli stemmi di città e comuni svizzeri.'],
-  kennzahlen: [['120', 'locomotive'], ['125 km/h', 'velocità massima'], ['1952', 'prima messa in servizio'], ['4300 kW', 'potenza continuativa']],
-  daten: { 'Gewicht': '120 t (prototipi 124 t)', 'Leistung': '4300 kW potenza continuativa', 'In Betrieb seit': '1952 (serie 1955–1966)', 'Einsatz': 'San Gottardo, treni viaggiatori e merci pesanti' },
+  text: ['L’Ae 6/6 è stata per decenni la locomotiva di potenza delle FFS sul San Gottardo.', 'Le prime 25 macchine portavano gli stemmi cantonali e modanature cromate; le successive ricevettero gli stemmi di città e comuni svizzeri.'],
+  kennzahlen: [['120', 'locomotive'], ['125 km/h', 'velocità massima'], ['1952', 'prima messa in servizio'], ['4300 kW', 'potenza oraria']],
+  daten: { 'Gewicht': '120 t (prototipi 124 t)', 'Leistung': 'circa 4300 kW potenza oraria alla ruota', 'In Betrieb seit': '1952 (serie 1955–1966)', 'Einsatz': 'San Gottardo, treni viaggiatori e merci pesanti' },
   abschnitte: [
-    { titel: 'Storia e impiego', p: ['Dapprima la Ae 6/6 ha segnato il traffico diretto e merci sul San Gottardo. Con locomotive più moderne il suo impiego si è spostato sempre più verso il traffico merci e l’Altopiano.'] },
-    { titel: 'Conservazione', p: ['Diverse Ae 6/6 sono state conservate. La Ae 6/6 11421 «Graubünden» fa parte della collezione di FFS Historic e mantiene viva l’epoca delle locomotive dei cantoni.'] }
+    { titel: 'Storia e impiego', p: ['Dapprima l’Ae 6/6 ha segnato il traffico diretto e merci sul San Gottardo. Con locomotive più moderne il suo impiego si è spostato sempre più verso il traffico merci e l’Altopiano.'] },
+    { titel: 'Conservazione', p: ['Diverse Ae 6/6 sono state conservate. L’Ae 6/6 11421 «Graubünden» fa parte della collezione di FFS Historic e mantiene viva l’epoca delle locomotive dei cantoni.'] }
   ],
   bilder: ['Ae 6/6 11413 «Schaffhausen»', 'Ae 6/6 al Museo svizzero dei trasporti di Lucerna', 'Ae 6/6 in livrea rossa a Renens', 'Ae 6/6 di fronte', 'Ae 6/6 in verde con modanature cromate']
 });
 
 uebZug('h-ae47', {
   typ: 'Locomotiva elettrica con trasmissione Buchli (storica)',
-  text: ['La Ae 4/7 è stata per decenni una delle principali locomotive di linea delle FFS, riconoscibile dalla trasmissione Buchli su un solo lato.'],
+  text: ['L’Ae 4/7 è stata per decenni una delle principali locomotive di linea delle FFS, riconoscibile dalla trasmissione Buchli su un solo lato.'],
   daten: { 'Antrieb': 'elettrica, trasmissione Buchli' },
   bilder: ['Ae 4/7 11026 a Brugg', 'Ae 4/7 10997 a Mendrisio', 'Ae 4/7 11026 a Bauma', 'Ae 4/7 con treno merci', 'Ae 4/7 presso Salgesch']
 });
 
 uebZug('h-ae36i', {
   typ: 'Locomotiva Buchli per l’Altopiano elettrificato (storica)',
-  text: ['La Ae 3/6 I è stata una delle prime importanti locomotive elettriche delle FFS.', 'La caratteristica trasmissione individuale Buchli e la lunga carriera hanno fatto della serie un simbolo dell’elettrificazione dell’Altopiano.'],
+  text: ['L’Ae 3/6 I è stata una delle prime importanti locomotive elettriche delle FFS.', 'La caratteristica trasmissione individuale Buchli e la lunga carriera hanno fatto della serie un simbolo dell’elettrificazione dell’Altopiano.'],
   kennzahlen: [['114', 'locomotive'], ['110 km/h', 'velocità massima successiva'], ['1921', 'prima messa in servizio'], ['73 anni', 'in servizio fino al 1994']],
   daten: { 'Antrieb': 'trasmissione individuale Buchli', 'Gewicht': '92–96 t in servizio', 'Leistung': '1470–1635 kW potenza oraria', 'In Betrieb seit': '1921 (costruite 1920–1929)', 'Ausmusterung': 'fino al 1994', 'Einsatz': 'treni viaggiatori, diretti e merci' },
   abschnitte: [
     { titel: 'Storia e impiego', p: ['La grande serie fu acquistata in più lotti e impiegata nel traffico viaggiatori, diretto e merci. Le migliorie introdotte durante la costruzione crearono differenze di potenza e velocità all’interno della flotta.'] },
-    { titel: 'Importanza e conservazione', p: ['Con un servizio dal 1921 al 1994 la Ae 3/6 I è tra le serie di locomotive FFS più longeve. Diverse locomotive sono state conservate da musei e associazioni, tra cui la 10700 nell’ambito di FFS Historic.'] }
+    { titel: 'Importanza e conservazione', p: ['Con un servizio dal 1921 al 1994 l’Ae 3/6 I è tra le serie di locomotive FFS più longeve. Diverse locomotive sono state conservate da musei e associazioni, tra cui la 10700 nell’ambito di FFS Historic.'] }
   ],
   bilder: ['Ae 3/6 I 10700', 'Ae 3/6 I con trasmissione Buchli', 'Ae 3/6 I 10650 a Brugg (2012)', 'Ae 3/6 I 10712 a Biel/Bienne (1988)', 'Ae 3/6 I 10638']
 });
@@ -1847,16 +1865,16 @@ uebZug('h-ae814', {
   daten: { 'Hersteller': 'SLM, BBC o MFO', 'Achsfolge': 'diverso secondo la locomotiva', 'Länge': 'circa 34 m', 'Gewicht': '235,7–246 t in servizio', 'Leistung': '5514–8162 kW potenza oraria', 'In Betrieb seit': '1931 (costruite 1931, 1932, 1938/40)', 'Einsatz': 'treni pesanti del San Gottardo' },
   abschnitte: [
     { titel: 'Tre pezzi unici diversi', p: ['La 11801, la 11851 e la 11852 differivano per trasmissione, potenza e costruzione.', 'La 11852 fu costruita per l’Esposizione nazionale del 1939 e divenne famosa come «Landi-Lok». Con oltre 8 MW è stata a lungo la locomotiva più potente del mondo.'] },
-    { titel: 'Conservazione', p: ['La Ae 8/14 11852 è conservata da FFS Historic a Erstfeld. Attualmente non è in grado di circolare, ma può essere visitata come pezzo storico di primo piano.'] }
+    { titel: 'Conservazione', p: ['L’Ae 8/14 11852 è conservata da FFS Historic a Erstfeld. Attualmente non è in grado di circolare, ma può essere visitata come pezzo storico di primo piano.'] }
   ],
   bilder: ['Ae 8/14 11801 a Biasca', 'Ae 8/14 11852 «Landi-Lok» al Museo svizzero dei trasporti', 'Ae 8/14 11851 nuova di fabbrica sul ponte del Kerstelenbach, 1932', 'Ae 8/14 11801 durante una corsa speciale', 'Ae 8/14 11801 a Bellinzona']
 });
 
 uebZug('h-be46', {
-  typ: 'Prima locomotiva elettrica del San Gottardo (storica)',
+  typ: 'Locomotiva della prima generazione elettrica del San Gottardo (storica)',
   text: ['La Be 4/6 faceva parte della prima generazione di locomotive elettriche del San Gottardo.', 'Per la sua forma caratteristica ricevette il soprannome di «Rehbock» (capriolo) e trainò dapprima i pesanti treni diretti sulla linea di montagna.'],
   kennzahlen: [['40', 'locomotive'], ['75 km/h', 'velocità massima'], ['1920', 'prima messa in servizio'], ['107–110 t', 'massa in servizio']],
-  daten: { 'Gewicht': '107–110 t in servizio', 'Leistung': 'fino a 1500 kW potenza oraria', 'In Betrieb seit': '1920 (costruite 1920–1923)', 'Ausmusterung': 'fino al 1976', 'Einsatz': 'treni diretti e merci' },
+  daten: { 'Achsfolge': '6 assi, di cui 4 motori e 2 portanti; trasmissione a bielle', 'Gewicht': '107–110 t in servizio', 'Leistung': 'fino a 1500 kW potenza oraria', 'In Betrieb seit': '1920 (costruite 1920–1923)', 'Ausmusterung': 'fino al 1976', 'Einsatz': 'treni diretti e merci' },
   abschnitte: [
     { titel: 'Storia e impiego', p: ['Le FFS ordinarono la serie per l’esercizio elettrico sul San Gottardo. Con l’aumento della massa dei treni le macchine furono soppiantate da tipi più potenti e impiegate in seguito sull’Altopiano e in servizi secondari.'] },
     { titel: 'Conservazione', p: ['La Be 4/6 12320 fa parte del parco veicoli storico. Ricorda l’epoca pionieristica della trazione elettrica sulla linea del San Gottardo.'] }
@@ -1880,9 +1898,9 @@ uebZug('h-tee', {
   typ: 'Elettrotreno quadritensione per il traffico internazionale di punta (storico)',
   text: ['Il RAe TEE II collegava la Svizzera senza cambio di locomotiva con Germania, Francia, Italia e Paesi Bassi.', 'La sua tecnica quadritensione ne fece uno degli elettrotreni europei tecnicamente più complessi della sua epoca.'],
   kennzahlen: [['5', 'elettrotreni'], ['140 km/h', 'in esercizio · tecnica 160 km/h'], ['1961', 'prima messa in servizio'], ['4', 'sistemi di corrente']],
-  daten: { 'Zugbildung': 'a sei elementi', 'Stromsystem': '15 kV e 25 kV CA, 1,5 kV e 3 kV CC', 'Gewicht': 'circa 309 t in servizio', 'Leistung': 'circa 2310 kW', 'Höchstgeschwindigkeit': '140 km/h in esercizio, 160 km/h tecnica', 'In Betrieb seit': '1961 (quinto treno 1967)', 'Einsatz': 'Trans-Europ-Express, poi EuroCity' },
+  daten: { 'Zugbildung': 'a sei elementi (stato conservato; i primi quattro treni erano in origine a cinque elementi)', 'Stromsystem': '15 kV e 25 kV CA, 1,5 kV e 3 kV CC', 'Gewicht': 'circa 309 t in servizio', 'Leistung': 'circa 2310 kW', 'Höchstgeschwindigkeit': '140 km/h in esercizio, 160 km/h tecnica', 'In Betrieb seit': '1961 (quinto treno 1967)', 'Einsatz': 'Trans-Europ-Express, poi EuroCity' },
   abschnitte: [
-    { titel: 'Storia e impiego', p: ['Quattro unità furono consegnate nel 1961, il quinto treno seguì nel 1967. Gli eleganti elettrotreni circolarono tra l’altro come TEE Gottardo, Cisalpin, Edelweiss e Roland.', 'Dal 1988 viaggiarono in grigio come RABe EC nel traffico EuroCity.'] },
+    { titel: 'Storia e impiego', p: ['Quattro unità furono consegnate nel 1961 a cinque elementi e poi allungate con una carrozza intermedia; il quinto treno seguì nel 1967. Gli eleganti elettrotreni circolarono tra l’altro come TEE Gottardo, Cisalpin, Edelweiss e Roland.', 'Dal 1988 viaggiarono in grigio come RABe EC nel traffico EuroCity.'] },
     { titel: 'Conservazione', p: ['Il treno RAe TEE II 1053 è stato conservato. FFS Historic lo ha riportato allo stato TEE rosso e beige; dal 2003 circola in corse speciali storiche.'] }
   ],
   bilder: ['RAe TEE II al marciapiede', 'RAe TEE II a Zurigo HB, 1963', 'Testata del RAe TEE II', 'RAe TEE II in viaggio', 'RAe TEE II a Zurigo HB, 1963']
@@ -1891,11 +1909,11 @@ uebZug('h-tee', {
 uebZug('h-roterpfeil', {
   beiname: 'Freccia rossa',
   typ: 'Automotrice elettrica leggera per gite e corse veloci (storica)',
-  text: ['Le eleganti automotrici leggere furono consegnate nel 1935 come CLe 2/4 e in seguito ridenominate RCe 2/4.', 'La loro forma aerodinamica rossa ne fece uno dei simboli più noti delle moderne FFS degli anni Trenta.'],
+  text: ['Le sette Frecce rosse elettriche furono consegnate tra il 1935 e il 1938 come CLe 2/4 e in seguito ridenominate più volte.', 'La loro forma aerodinamica rossa ne fece uno dei simboli più noti delle moderne FFS degli anni Trenta.'],
   kennzahlen: [['7', 'veicoli elettrici di base'], ['125 km/h', 'velocità massima'], ['1935', 'prima messa in servizio'], ['70', 'posti a sedere']],
   daten: { 'Gewicht': 'circa 38 t in servizio', 'Leistung': '404 kW potenza oraria, 315 kW potenza continuativa', 'Nummern': '201–207, poi 601–607', 'Einsatz': 'gite e viaggi di gruppo, prestazioni speciali veloci' },
   abschnitte: [
-    { titel: 'Designazioni e trasformazioni', p: ['Dal 1944 le sette CLe 2/4 elettriche divennero RCe 2/4. Due veicoli furono trasformati nel 1952/53 in RAe 2/4 con sedili imbottiti.', 'Per questo i dati sull’effettivo variano secondo la designazione e il periodo.'] },
+    { titel: 'Designazioni e trasformazioni', p: ['Le vetture 201 e 202 furono consegnate nel 1935, le 203–206 nel 1936 e la 207 nel 1938. In seguito portarono tra l’altro la designazione RCe 2/4. Le vetture 201 e 206 furono allungate nel 1952 e nel 1953 e trasformate per la 1a classe (RAe 2/4); altre portarono da ultimo la designazione RBe 2/4.', 'Per questo i dati sull’effettivo variano secondo la designazione e il periodo.'] },
     { titel: 'Impiego e importanza', p: ['Le Frecce rosse servivano per gite, viaggi di gruppo e prestazioni speciali veloci. Il peso ridotto e la forma aerodinamica incarnavano lo slancio tecnico del periodo tra le due guerre.'] }
   ],
   bilder: ['Freccia rossa RCe 2/4 203']
@@ -1903,19 +1921,19 @@ uebZug('h-roterpfeil', {
 
 uebZug('h-a35', {
   typ: 'Locomotiva a vapore per treni diretti della serie 701–809 (storica)',
-  text: ['Alle FFS la designazione A 3/5 è stata usata per diversi tipi costruttivi.', 'Questa pagina tratta la nota serie JS/FFS 701–809, a cui appartiene anche la A 3/5 705 conservata.'],
+  text: ['Alle FFS la designazione A 3/5 è stata usata per diversi tipi costruttivi.', 'Questa pagina tratta la nota serie JS/FFS 701–809, a cui appartiene anche l’A 3/5 705 conservata.'],
   kennzahlen: [['109', 'locomotive della serie'], ['100 km/h', 'velocità massima'], ['1902', 'prima messa in servizio'], ['920 kW', 'potenza indicata']],
   daten: { 'Länge': '18,60 m con tender', 'Gewicht': '106–107 t in servizio con tender', 'Leistung': '920 kW (indicata)', 'Anfahrzugkraft': 'circa 75 kN', 'In Betrieb seit': '1902 (costruite 1902–1909)', 'Einsatz': 'treni diretti' },
   abschnitte: [
     { titel: 'Storia e impiego', p: ['Le locomotive erano state ancora ordinate dalla Ferrovia Giura-Sempione e furono rilevate dalle FFS. 68 macchine ricevettero la tecnica del vapore surriscaldato.', 'Trainarono treni diretti di qualità finché locomotive più potenti e poi elettriche le soppiantarono.'] },
-    { titel: 'Conservazione', p: ['La A 3/5 705 è stata conservata in grado di circolare. È curata dalla Dampfgruppe Zürich e rappresenta il vapore dei treni diretti dei primi anni delle FFS.'] }
+    { titel: 'Conservazione', p: ['L’A 3/5 705 è stata conservata in grado di circolare. È curata dalla Dampfgruppe Zürich e rappresenta il vapore dei treni diretti dei primi anni delle FFS.'] }
   ],
-  bilder: ['A 3/5 705 accanto alla Ae 3/6 I 10694 ad Arnex-sur-Orbe, 1967']
+  bilder: ['A 3/5 705 accanto all’Ae 3/6 I 10694 ad Arnex-sur-Orbe, 1967']
 });
 
 uebZug('h-c56', {
   typ: 'Locomotiva a vapore per i pesanti treni del San Gottardo (storica)',
-  text: ['La C 5/6 era la più grande serie di locomotive a vapore delle FFS e al tempo stesso il loro ultimo acquisto di locomotive a vapore nuove a scartamento normale.', 'Il soprannome «Elefant» (elefante) rimanda all’aspetto imponente e al grande sforzo di trazione.'],
+  text: ['La C 5/6 era tra le locomotive a vapore più grandi e potenti delle FFS. Fu anche il loro ultimo acquisto di locomotive a vapore nuove a scartamento normale.', 'Il soprannome «Elefant» (elefante) rimanda all’aspetto imponente e al grande sforzo di trazione.'],
   kennzahlen: [['28', 'locomotive di serie'], ['65 km/h', 'velocità massima'], ['1913', 'prima messa in servizio'], ['128 t', 'con tender']],
   daten: { 'Länge': '19,195 m con tender', 'Gewicht': '128 t con tender', 'Leistung': 'circa 1190 kW (indicata)', 'In Betrieb seit': '1913 (costruite 1913–1917)', 'Ausmusterung': 'fino al 1968', 'Einsatz': 'treni merci pesanti' },
   abschnitte: [
@@ -1927,11 +1945,11 @@ uebZug('h-c56', {
 
 uebZug('h-eb35', {
   typ: 'Locomotiva-tender versatile (storica)',
-  text: ['La Eb 3/5 era una robusta locomotiva-tender per servizi viaggiatori, merci e di manovra.', 'La sua forma tozza le valse il soprannome popolare di «Habersack».'],
+  text: ['L’Eb 3/5 era una robusta locomotiva-tender per servizi viaggiatori, merci e di manovra.', 'La sua forma tozza le valse il soprannome popolare di «Habersack».'],
   kennzahlen: [['34', 'locomotive'], ['75 km/h', 'velocità massima'], ['1911', 'prima messa in servizio'], ['74–74,9 t', 'massa in servizio']],
-  daten: { 'Bauart': 'locomotiva-tender 1′C1′', 'Gewicht': '57,6–58,8 t a vuoto, 74–74,9 t in servizio', 'Kesseldruck': 'circa 12 bar', 'Vorräte': '7,7 m³ d’acqua, 2,5 t di carbone', 'In Betrieb seit': '1911 (costruite 1911–1916)', 'Einsatz': 'treni regionali, linee secondarie, servizio di stazione' },
+  daten: { 'Bauart': 'locomotiva-tender 1′C1′', 'Länge': '12,74 m respingenti compresi (Eb 3/5 5819)', 'Gewicht': '57,6–58,8 t a vuoto, 74–74,9 t in servizio', 'Kesseldruck': 'circa 12 bar', 'Vorräte': '7,7 m³ d’acqua, 2,5 t di carbone', 'In Betrieb seit': '1911 (costruite 1911–1916)', 'Einsatz': 'treni regionali, linee secondarie, servizio di stazione' },
   abschnitte: [
-    { titel: 'Storia e impiego', p: ['La disposizione simmetrica degli assi consentiva buone qualità di marcia in entrambe le direzioni senza dover girare la locomotiva.', 'La Eb 3/5 era quindi particolarmente adatta a linee secondarie, treni regionali e servizi di stazione variati.'] },
+    { titel: 'Storia e impiego', p: ['La disposizione simmetrica degli assi consentiva buone qualità di marcia in entrambe le direzioni senza dover girare la locomotiva.', 'L’Eb 3/5 era quindi particolarmente adatta a linee secondarie, treni regionali e servizi di stazione variati.'] },
     { titel: 'Conservazione', p: ['Singole locomotive della serie sono state conservate da musei e ferrovie storiche. Mostrano l’ultima generazione di locomotive-tender a vapore universali delle FFS.'] }
   ],
   bilder: ['Eb 3/5 a Bremgarten West', 'Eb 3/5 5810 (2018)', 'Eb 3/5 5885', 'Eb 3/5 «Habersack»', 'Eb 3/5 in ritratto']
@@ -2038,7 +2056,7 @@ uebQuiz('normal', [
   { f: 'Attraverso quale galleria passa il Giruno da Zurigo a Milano?', a: ['Galleria di base del San Gottardo', 'Galleria di base del Lötschberg', 'Galleria del Sempione', 'Galleria della Vereina'] },
   { f: 'Quale treno deve sostituire il Domino alle FFS dal 2028?', a: ['FLIRT Evo', 'Giruno', 'KISS', 'ICN'] },
   { f: 'Chi ha costruito il FV-Dosto?', a: ['Bombardier (oggi Alstom)', 'Stadler', 'Siemens', 'SLM Winterthur'] },
-  { f: 'Quale locomotiva va a corrente e ha in più un motore diesel per i cantieri?', a: ['Aem 940', 'Re 460', 'Ee 922', 'Re 482'] },
+  { f: 'Quale locomotiva va a corrente e ha in più due gruppi diesel-generatori per i cantieri?', a: ['Aem 940', 'Re 460', 'Ee 922', 'Re 482'] },
   { f: 'Quanti posti a sedere ha un Giruno?', a: ['405', '172', '682', '1000'], info: 'A questi si aggiungono 17 posti nel ristorante.' },
   { f: 'Che treno è questo?', a: ['RABe 503 «Astoro»', 'RABe 501 «Giruno»', 'RABDe 500 «ICN»', 'RBDe 560 «Domino»'] },
   { f: 'Questa locomotiva è una Re 465. Quale ferrovia la impiega?', a: ['BLS', 'FFS Cargo', 'Ferrovia retica', 'Südostbahn'], info: 'La Re 465 è la sorella più potente della Re 460.' },

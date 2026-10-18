@@ -19,8 +19,24 @@
   const ANTRIEB = { e: 'elektrisch', m: 'Verbrennungsmotor (meist Diesel)', a: 'Batterie (Akku)', h: 'Zahnradantrieb', f: 'funkferngesteuert' };
   const ROEM = { I: 1, II: 2, III: 3, IV: 4, V: 5, VI: 6, VII: 7, VIII: 8 };
 
+  // older designations of steam tank locomotives such as «Eb 3/5» follow a different letter scheme:
+  // only the axle numbers are explained, plus a link to the vehicle page
+  function historisch(text) {
+    const t = text.toLowerCase(), z = ZUEGE.find(x => x.name.replace(/\s+/g, ' ').toLowerCase() === t);
+    const m = text.match(/^([A-Z][a-z]+)\s*(\d+)\s*\/\s*(\d+)/);
+    if (!z || !m || !/^h-/.test(z.id)) return null;
+    const [, buch, an, alle] = m;
+    return [
+      [buch, tr('ältere Bezeichnung einer Dampflok; die Buchstaben folgen einem früheren Schema und werden hier nicht einzeln erklärt')],
+      [an + '/' + alle, +an === +alle ? tr('{n} Achsen, alle angetrieben', { n: alle }) : tr('{a} von {n} Achsen angetrieben', { a: an, n: alle })],
+      ['→', `<a href="#${z.id}">${esc(tr('{name} ansehen', { name: fullName(z) }))}</a>`, true]
+    ];
+  }
   function deute(text) {
-    const m = String(text).trim().replace(/\s+/g, ' ').match(/^([A-Z]+)([a-z]*)\s*(?:(\d+)\s*\/\s*(\d+)\s*([IVX]+)?|(\d{3}))?$/);
+    text = String(text).trim().replace(/\s+/g, ' ');
+    const alt = historisch(text);
+    if (alt) return alt;
+    const m = text.match(/^([A-Z]+)([a-z]*)\s*(?:(\d+)\s*\/\s*(\d+)\s*([IVX]+)?|(\d{3}))?$/);
     if (!m) return null;
     const [, gross, klein, an, alle, serie, reihe] = m, teile = [];
     if (gross.length === 1 && LOK[gross]) teile.push([gross, tr(LOK[gross])]);
@@ -48,7 +64,7 @@
     // third entry true = the text is already HTML (with a link)
     out.innerHTML = t
       ? t.map(([k, v, html]) => `<li><b>${esc(k)}</b><span>${html ? v : esc(v)}</span></li>`).join('')
-      : `<li class="abc-none"><span>${esc(tr('Das kann ich nicht lesen. Achte auf Gross- und Kleinschreibung, z. B. «Re 4/4 II» oder «RABe 523».'))}</span></li>`;
+      : `<li class="abc-none"><span>${esc(tr('Diese Bezeichnung kann ich (noch) nicht entschlüsseln. Probiere zum Beispiel «Re 4/4 II» oder «RABe 523»; Gross- und Kleinbuchstaben haben dabei eine eigene Bedeutung.'))}</span></li>`;
   }
   $('#abc-chips').innerHTML = BEISPIELE.map(b => `<button type="button" data-abc="${esc(b)}">${esc(b)}</button>`).join('');
   $('#abc-chips').addEventListener('click', e => { const b = e.target.closest('[data-abc]'); if (b) { input.value = b.dataset.abc; zeige(); } });

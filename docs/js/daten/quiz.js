@@ -57,7 +57,7 @@ const QUIZ = {
     { f: 'Durch welchen Tunnel fährt der Giruno von Zürich nach Mailand?', zug: 'rabe-501', a: ['Gotthard-Basistunnel', 'Lötschberg-Basistunnel', 'Simplontunnel', 'Vereinatunnel'] },
     { f: 'Welcher Zug soll bei der SBB ab 2028 den Domino ablösen?', zug: 'rbde-560', a: ['FLIRT Evo', 'Giruno', 'KISS', 'ICN'] },
     { f: 'Wer baute den FV-Dosto?', zug: 'rabe-502', a: ['Bombardier (heute Alstom)', 'Stadler', 'Siemens', 'SLM Winterthur'] },
-    { f: 'Welche Lok fährt mit Strom und hat für Baustellen zusätzlich einen Dieselmotor?', zug: 'aem-940', a: ['Aem 940', 'Re 460', 'Ee 922', 'Re 482'] },
+    { f: 'Welche Lok fährt mit Strom und hat für Baustellen zusätzlich zwei Dieselgeneratoren?', zug: 'aem-940', a: ['Aem 940', 'Re 460', 'Ee 922', 'Re 482'] },
     { f: 'Wie viele Sitzplätze hat ein Giruno?', zug: 'rabe-501', a: ['405', '172', '682', '1000'], info: 'Dazu kommen 17 Plätze im Restaurant.' },
     { f: 'Welcher Zug ist das?', bild: 'bilder/slides/slide-04.jpg', a: ['RABe 503 «Astoro»', 'RABe 501 «Giruno»', 'RABDe 500 «ICN»', 'RBDe 560 «Domino»'] },
     { f: 'Diese Lok ist eine Re 465. Welche Bahn fährt sie?', bild: 'bilder/slides/slide-08.jpg', a: ['BLS', 'SBB Cargo', 'Rhätische Bahn', 'Südostbahn'], info: 'Die Re 465 ist die stärkere Schwester der Re 460.' },

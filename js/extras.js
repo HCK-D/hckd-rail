@@ -26,7 +26,7 @@ function cmpSync() {
   $('span', cmpBtn).textContent = on ? tr('Im Vergleich') : full ? tr('Vergleich ist voll (3)') : tr('Zum Vergleich');
   $('#cmp-chips').innerHTML = cmpIds.map(id => {
     const z = zugOf(id);
-    return `<li><a href="#${id}">${esc(z.name)}</a><button type="button" data-cmp-del="${id}" aria-label="${esc(tr('{name} aus dem Vergleich entfernen', { name: z.name }))}">×</button></li>`;
+    return `<li><a href="#${id}">${esc(zn(z))}</a><button type="button" data-cmp-del="${id}" aria-label="${esc(tr('{name} aus dem Vergleich entfernen', { name: zn(z) }))}">×</button></li>`;
   }).join('');
   const bar = cmpIds.length > 0 && curView !== 'vergleich';
   cmpBar.hidden = !bar;
@@ -73,7 +73,7 @@ function renderVergleich() {
   const rows = CMP_ROWS.filter(key => list.some(z => cmpVal(z, key)));
   const head = list.map(z => `<th scope="col"><div class="cmp-head">
       <a class="cmp-pic" href="#${z.id}">${z.bilder && z.bilder.length ? `<img src="${esc(klein(z.bilder[0].src))}" alt="" loading="lazy">` : art(z)}</a>
-      <a class="cmp-name" href="#${z.id}">${esc(z.name)}${zt(z, 'beiname') ? `<small>${esc(zt(z, 'beiname'))}</small>` : ''}</a>
+      <a class="cmp-name" href="#${z.id}">${esc(zn(z))}${zt(z, 'beiname') ? `<small>${esc(zt(z, 'beiname'))}</small>` : ''}</a>
       <button class="cmp-del" type="button" data-cmp-del="${z.id}">${esc(tr('Entfernen'))}</button>
     </div></th>`).join('');
   const body = rows.map(key => {
@@ -97,9 +97,16 @@ function laengen(list) {
   const l = list.map(z => ({ z, m: zahl(z.daten['Länge']) }));
   const max = Math.max(...l.map(o => o.m).filter(m => !isNaN(m)));
   if (!isFinite(max) || l.filter(o => !isNaN(o.m)).length < 1) return '';
+  // what the length refers to: a single coach («je Wagen») or the variant named first, e.g. «(4-teilig)»
+  const bezug = z => {
+    const de = z.daten['Länge'] || '';
+    if (/je Wagen/.test(de)) return tr('ein Wagen');
+    const v = (String(zd(z, 'Länge')).match(/^[^(]*\(([^)]+)\)/) || [])[1];
+    return v || '';
+  };
   return `<div class="cmp-len">
     <h2>${esc(tr('Länge im Massstab'))}</h2>
-    <ul>${l.map(({ z, m }) => `<li><span class="cl-name">${esc(z.name)}</span>${isNaN(m)
+    <ul>${l.map(({ z, m }) => `<li><span class="cl-name">${esc(zn(z))}${bezug(z) ? `<small> · ${esc(bezug(z))}</small>` : ''}</span>${isNaN(m)
       ? `<span class="cl-none">${esc(tr('Länge folgt'))}</span>`
       : `<span class="cl-track" style="--tick:${(10 / max * 100).toFixed(3)}%"><i style="width:${(m / max * 100).toFixed(2)}%"></i></span><span class="cl-m">${esc(zahlText(m))} m</span>`}</li>`).join('')}</ul>
     <p>${esc(l.some(o => /\*|ca\./.test(o.z.daten['Länge'] || '')) ? tr('Ein Strich = 10 m, ungefähre Werte.') : tr('Ein Strich = 10 m.'))}</p>
@@ -292,7 +299,7 @@ document.addEventListener('click', e => {
   $('#heute-card').innerHTML = `<a class="heute-pic" href="#${z.id}" tabindex="-1" aria-hidden="true">${pic}</a>
     <div class="heute-body">
       <span class="kicker">${esc(tr('Fahrzeug des Tages'))} · ${esc(datum)}</span>
-      <h2 id="heute-h"><a href="#${z.id}">${esc(z.name)}${bei ? ` <small>«${esc(bei)}»</small>` : ''}</a></h2>
+      <h2 id="heute-h"><a href="#${z.id}">${esc(zn(z))}${bei ? ` <small>«${esc(bei)}»</small>` : ''}</a></h2>
       <p class="heute-typ">${esc(zt(z, 'typ'))} · ${esc(tr(k.name))}</p>
       <p class="heute-text">${esc(zt(z, 'text')[0])}</p>
       ${kz.length ? `<ul class="kz">${kz.slice(0, 3).map(([v, l]) => `<li><b>${esc(v)}</b><span>${esc(l)}</span></li>`).join('')}</ul>` : ''}
@@ -310,7 +317,7 @@ document.addEventListener('click', e => {
   list.innerHTML = items.map(({ z, j }, i) => `<li${i && items[i - 1].j === j ? ' class="same"' : ''}><a class="zs-item" href="#${z.id}">
       <span class="zs-jahr">${j}</span><span class="zs-dot" aria-hidden="true"></span>
       <span class="zs-card"><span class="zs-pic">${z.bilder && z.bilder.length ? `<img src="${esc(klein(z.bilder[0].src))}" alt="" loading="lazy" draggable="false">` : art(z)}</span>
-        <b>${esc(z.name)}</b>${zt(z, 'beiname') ? `<small>${esc(zt(z, 'beiname'))}</small>` : ''}<span class="zs-kat">${esc(tr(katOf(z.kat).name))}</span></span>
+        <b>${esc(zn(z))}</b>${zt(z, 'beiname') ? `<small>${esc(zt(z, 'beiname'))}</small>` : ''}<span class="zs-kat">${esc(tr(katOf(z.kat).name))}</span></span>
     </a></li>`).join('');
   // arrows for mouse users; touch and trackpads scroll natively
   const wrap = list.parentElement;

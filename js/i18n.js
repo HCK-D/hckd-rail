@@ -45,6 +45,8 @@ const UEB_QUIZ = {};     // quiz questions per level, same order as js/daten/qui
 const UEB_EINSATZ = {};  // text under the map «Wo fährt er?» by id
 function uebDict(o) { Object.assign(UEB, o); }
 function uebZug(id, o) { UEB_Z[id] = o; }
+// display name: descriptive German names such as «Schneeschleudern» are translated, class codes stay
+function zn(z) { const o = UEB_Z[z.id]; return (o && o.name) || z.name; }
 function uebQuiz(level, list) { UEB_QUIZ[level] = list; }
 function uebEinsatz(o) { Object.assign(UEB_EINSATZ, o); }
 if (LANG !== 'de') document.write('<script src="js/sprachen/' + LANG + '.js"><\/script>');
@@ -67,7 +69,7 @@ const zd = (z, key) => {
 };
 const zb = (z, i) => {
   const o = UEB_Z[z.id], b = (z.bilder || [])[i];
-  return o && o.bilder && o.bilder[i] ? o.bilder[i] : (b && b.titel) || z.name;
+  return o && o.bilder && o.bilder[i] ? o.bilder[i] : (b && b.titel) || zn(z);
 };
 // numbers like 26,4 (German and French with a decimal comma, as everywhere on the site)
 const zahlText = (n, opt) => { const s = Number(n).toLocaleString(LOCALE, opt); return LANG === 'de' ? s.replace('.', ',') : s; };

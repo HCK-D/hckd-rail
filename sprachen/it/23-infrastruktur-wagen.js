@@ -60,7 +60,7 @@ uebZug('xas-53', {
   typ: 'Carro porta-cassoni con guide di scorrimento laterali',
   text: ['Lo Xas 53 trasporta cassoni intercambiabili per pietrisco, residui di vagliatura e materiale PSS.', 'Guide di scorrimento laterali permettono di spostare i cassoni insieme alle macchine per binari.'],
   kennzahlen: [['100 km/h', 'velocità massima'], ['19,9 m', 'lunghezza'], ['31,0 t', 'peso a vuoto'], ['7', 'cassoni per carro']],
-  daten: { 'Fahrzeugart': 'carro porta-cassoni', 'Gewicht': '31,0 t a vuoto, 78 t a pieno carico', 'Nutzlast': 'fino a circa 46,6 t (calcolato)', 'Behälter': '7 cassoni da circa 4 m³ ciascuno', 'Ausrüstung': 'guide di scorrimento laterali, teloni possibili', 'Einsatz': 'treni di vagliatura e cantiere' },
+  daten: { 'Fahrzeugart': 'carro porta-cassoni', 'Gewicht': '31,0 t a vuoto, 78 t a pieno carico', 'Nutzlast': 'nessun valore ufficiale (78 t − 31 t danno circa 47 t)', 'Behälter': '7 cassoni da circa 4 m³ ciascuno', 'Ausrüstung': 'guide di scorrimento laterali, teloni possibili', 'Einsatz': 'treni di vagliatura e cantiere' },
   specNote: 'Il catalogo dei tipi di marcia indica 77,6 t per la dinamica di marcia. La pianificazione della flotta prevede la sostituzione della famiglia Xans/Xas 52/53.',
   abschnitte: [
     { titel: 'Logistica dei cassoni', p: ['I cassoni possono essere spostati, riempiti e svuotati nel punto adatto all’interno di una catena di lavoro. Questo accelera l’asportazione continua del materiale durante la pulizia della massicciata e il rinnovo dei binari.'] },
@@ -167,6 +167,7 @@ uebZug('silad-4', {
 });
 
 uebZug('silad-reserve', {
+  name: 'SILAD di riserva',
   typ: 'Unità compatta di carico rotaie di riserva',
   text: ['L’unità di riserva SILAD è disponibile come sostituzione o complemento per i carichi di rotaie.', 'È nettamente più corta e leggera della SILAD 4 ed è registrata come tipo di marcia attivo a sé stante.'],
   kennzahlen: [['90 km/h', 'velocità massima'], ['14,0 m', 'lunghezza'], ['18 t', 'peso a vuoto'], ['attivo', 'stato 2026']],
@@ -179,6 +180,7 @@ uebZug('silad-reserve', {
 });
 
 uebZug('ste-kurz', {
+  name: 'STE corta',
   typ: 'Unità di trasporto rotaie con due gru per rotaie da 12 a 36 m',
   text: ['Secondo il documento di formazione l’unità corta di trasporto rotaie (STE) si basa su un carro pianale Xans 51 a quattro assi.', 'Due piccole gru scaricano le rotaie corte direttamente in cantiere.'],
   kennzahlen: [['12–36 m', 'lunghezza delle rotaie'], ['29,5 t', 'peso a vuoto'], ['50 t', 'carico utile secondo la presentazione'], ['2 × 1,5 t', 'gru']],
@@ -191,6 +193,7 @@ uebZug('ste-kurz', {
 });
 
 uebZug('ste-lang', {
+  name: 'STE lunga',
   typ: 'Unità di trasporto rotaie in più parti per rotaie fino a 120 m',
   text: ['La STE lunga usa carri Xans 51 dotati di gru per trasportare e scaricare rotaie lunghe.', 'Secondo la presentazione un’unità d’esercizio è composta da sei carri e raggiunge 120 metri di lunghezza.'],
   kennzahlen: [['120 m', 'lunghezza max. delle rotaie'], ['6', 'carri per unità'], ['29,5 t', 'peso a vuoto per carro gru'], ['2 × 1,5 t', 'gru per carro gru']],
@@ -207,7 +210,7 @@ uebZug('xs-45', {
   text: ['Lo Xs 45 è un carro coperto per treni cantiere destinato ad attrezzi, pezzi di ricambio e attrezzatura d’officina.', 'Serve allo stesso tempo come spazio di lavoro e di supporto riparato per le squadre di cantiere.'],
   kennzahlen: [['2', 'assi'], ['15,0 m', 'lunghezza'], ['16,5 t', 'peso a vuoto'], ['22 t', 'carico utile secondo la presentazione']],
   daten: { 'Gewicht': '16,5 t a vuoto, circa 38,5 t a pieno carico (calcolato)', 'Nutzlast': '22 t secondo la presentazione' },
-  specNote: 'L’attuale catalogo dei tipi di marcia non elenca lo Xs 45 separatamente; i dati tecnici provengono dal documento di formazione FFS.',
+  specNote: 'Il catalogo dei tipi di marcia 2026 non elenca separatamente lo Xs 45; i valori provengono dal documento di formazione FFS del 2022.',
   abschnitte: [
     { titel: 'Supporto al cantiere', p: ['Attrezzi e piccole macchine vengono trasportati al riparo dalle intemperie e messi a disposizione direttamente sul luogo d’intervento. Il carro completa veicoli motore e carri materiale nel treno cantiere.'] },
     { titel: 'Posizione di marcia', p: ['Prima di ogni movimento porte laterali, attrezzatura mobile e posti di lavoro devono essere assicurati. Le persone possono restare nel carro solo alle condizioni d’esercizio autorizzate.'] }
@@ -241,10 +244,11 @@ uebZug('xs-mannschaftswagen', {
 });
 
 uebZug('kirow-mannschaftswagen', {
+  name: 'Carro squadra Kirow',
   typ: 'Carro di accompagnamento dei convogli gru Kirow 250, 800 e 1200',
-  text: ['Le gru Kirow 250, 800 e 1200 delle FFS circolano in convogli fissi con un carro squadra.', 'Il carro di accompagnamento supporta personale, attrezzi e logistica d’intervento della gru ferroviaria.'],
-  kennzahlen: [['3', 'tipi di gru con carro squadra'], ['1', 'carro squadra per convoglio'], ['80 km/h', 'velocità del convoglio'], ['attivo', 'stato dei convogli nel 2026']],
-  daten: { 'Fahrzeugrolle': 'carro di accompagnamento nel convoglio gru', 'Höchstgeschwindigkeit': '80 km/h (intero convoglio)', 'Einzelfahrdaten': 'non pubblicati separatamente', 'Fahrtypen': '5089–5091 (convogli gru completi)' },
+  text: ['Il catalogo dei tipi di marcia 2026 elenca convogli gru Kirow 250, 800 e 1200, ciascuno con un carro squadra.', 'Il carro di accompagnamento supporta personale, attrezzi e logistica d’intervento della gru ferroviaria. Le due KRC 800 delle FFS sono state sostituite nel 2016–2019; una voce nel catalogo non attesta quindi un effettivo attuale.'],
+  kennzahlen: [['3', 'tipi di gru con carro squadra'], ['1', 'carro squadra per convoglio'], ['80 km/h', 'velocità del convoglio'], ['3', 'tipi di marcia nel catalogo 2026']],
+  daten: { 'Fahrzeugrolle': 'carro di accompagnamento nel convoglio gru', 'Höchstgeschwindigkeit': '80 km/h (intero convoglio)', 'Einzelfahrdaten': 'non pubblicati separatamente', 'Fahrtypen': '5089–5091 (convogli gru completi)', 'Status': 'tipi di marcia attivi nel catalogo 2026; KRC 800 sostituite alle FFS nel 2016–2019' },
   specNote: 'Nel catalogo dei tipi di marcia le FFS pubblicano solo i valori complessivi dei convogli gru inseparabili, non le dimensioni del solo carro squadra.',
   abschnitte: [
     { titel: 'Assegnazione ai convogli gru', tabelle: { kopf: ['Gru', 'Formazione', 'Convoglio lunghezza / peso'], zeilen: [

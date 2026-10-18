@@ -41,7 +41,7 @@ uebZug('re-420', {
 
 uebZug('re-620', {
   typ: 'Locomotive de ligne à six essieux',
-  text: ['La Re 620, autrefois Re 6/6, a été développée pour les trains voyageurs et marchandises lourds sur les lignes du Saint-Gothard et du Simplon.', 'Ses trois bogies à deux essieux allient un effort de traction élevé à l’autorisation pour les vitesses en courbe plus élevées de la série de trains R.'],
+  text: ['La Re 620, autrefois Re 6/6, a été développée pour les trains voyageurs et marchandises lourds sur les lignes du Saint-Gothard et du Simplon.', 'Ses trois bogies à deux essieux allient un effort de traction élevé à l’autorisation pour les vitesses en courbe plus élevées de la catégorie de train R.'],
   kennzahlen: [['89', 'locomotives construites'], ['7832 kW', 'puissance unihoraire à la jante'], ['140 km/h', 'vitesse maximale'], ['1972–1980', 'période de construction']],
   daten: { 'Achsfolge': 'Bo′Bo′Bo′, 6 essieux moteurs', 'Länge': '19,31 m hors tampons', 'Gewicht': '120 t en service', 'Leistung': '7244 kW en continu à la jante (7832 kW unihoraire)', 'Elektrische Bremse': 'récupération', 'In Betrieb seit': '1972 ; série 1975–1980', 'Hersteller': 'partie mécanique SLM Winterthour ; électrique et montage BBC, en partie SAAS' },
   abschnitte: [

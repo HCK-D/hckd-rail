@@ -60,7 +60,7 @@ uebZug('xas-53', {
   typ: 'Container wagon with side running rails',
   text: ['The Xas 53 carries interchangeable containers for ballast, screening waste and PSS material.', 'Side running rails allow the containers to be moved together with track machines.'],
   kennzahlen: [['100 km/h', 'top speed'], ['19.9 m', 'length'], ['31.0 t', 'empty weight'], ['7', 'containers per wagon']],
-  daten: { 'Fahrzeugart': 'container wagon', 'Gewicht': '31.0 t empty, 78 t loaded', 'Nutzlast': 'up to approx. 46.6 t (calculated)', 'Behälter': '7 containers of approx. 4 m³ each', 'Ausrüstung': 'side running rails, covers possible', 'Einsatz': 'screening and engineering trains' },
+  daten: { 'Fahrzeugart': 'container wagon', 'Gewicht': '31.0 t empty, 78 t loaded', 'Nutzlast': 'no official figure (78 t − 31 t gives approx. 47 t)', 'Behälter': '7 containers of approx. 4 m³ each', 'Ausrüstung': 'side running rails, covers possible', 'Einsatz': 'screening and engineering trains' },
   specNote: 'The train type catalogue gives 77.6 t for running dynamics. Fleet planning includes replacing the Xans/Xas 52/53 family.',
   abschnitte: [
     { titel: 'Container logistics', p: ['The containers can be moved, filled and emptied at a suitable point within a work chain. This speeds up the continuous removal of material during ballast cleaning and track renewal.'] },
@@ -167,6 +167,7 @@ uebZug('silad-4', {
 });
 
 uebZug('silad-reserve', {
+  name: 'SILAD reserve unit',
   typ: 'Compact reserve rail loading unit',
   text: ['The SILAD reserve unit is available as a replacement or addition for rail loading work.', 'It is much shorter and lighter than SILAD 4 and is listed as a separate active train type.'],
   kennzahlen: [['90 km/h', 'top speed'], ['14.0 m', 'length'], ['18 t', 'empty weight'], ['active', 'status 2026']],
@@ -179,6 +180,7 @@ uebZug('silad-reserve', {
 });
 
 uebZug('ste-kurz', {
+  name: 'Short STE',
   typ: 'Rail transport unit with two cranes for rails of 12 to 36 m',
   text: ['According to the training document, the short rail transport unit (STE) is based on a four-axle Xans 51 flat wagon.', 'Two small cranes unload short rails directly on site.'],
   kennzahlen: [['12–36 m', 'rail length'], ['29.5 t', 'empty weight'], ['50 t', 'payload according to the slide'], ['2 × 1.5 t', 'cranes']],
@@ -191,6 +193,7 @@ uebZug('ste-kurz', {
 });
 
 uebZug('ste-lang', {
+  name: 'Long STE',
   typ: 'Multi-part rail transport unit for rails up to 120 m',
   text: ['The long STE uses crane-equipped Xans 51 wagons to carry and unload long rails.', 'According to the presentation, one operating unit consists of six wagons and is 120 metres long.'],
   kennzahlen: [['120 m', 'max. rail length'], ['6', 'wagons per unit'], ['29.5 t', 'empty weight per crane wagon'], ['2 × 1.5 t', 'cranes per crane wagon']],
@@ -207,7 +210,7 @@ uebZug('xs-45', {
   text: ['The Xs 45 is a covered engineering train wagon for tools, spare parts and workshop equipment.', 'It also serves as a sheltered work and support space for construction crews.'],
   kennzahlen: [['2', 'axles'], ['15.0 m', 'length'], ['16.5 t', 'empty weight'], ['22 t', 'payload according to the slide']],
   daten: { 'Gewicht': '16.5 t empty, approx. 38.5 t loaded (calculated)', 'Nutzlast': '22 t according to the slide' },
-  specNote: 'The current train type catalogue does not list the Xs 45 separately; the technical values come from the SBB training document.',
+  specNote: 'The 2026 train type catalogue does not list the Xs 45 separately; the values come from the 2022 SBB training document.',
   abschnitte: [
     { titel: 'Supporting the site', p: ['Tools and small machines are carried protected from the weather and made available directly at the work site. The wagon complements traction units and material wagons in the engineering train.'] },
     { titel: 'Running position', p: ['Before every movement, side doors, loose equipment and workplaces must be secured. People may only stay in the wagon under the approved operating conditions.'] }
@@ -241,10 +244,11 @@ uebZug('xs-mannschaftswagen', {
 });
 
 uebZug('kirow-mannschaftswagen', {
+  name: 'Kirow crew wagon',
   typ: 'Support wagon of the Kirow 250, 800 and 1200 crane sets',
-  text: ['The SBB Kirow 250, 800 and 1200 cranes run in fixed sets with a crew wagon.', 'The support wagon backs up the staff, tools and operational logistics of the railway crane.'],
-  kennzahlen: [['3', 'crane types with crew wagon'], ['1', 'crew wagon per set'], ['80 km/h', 'set speed'], ['active', 'status of the sets in 2026']],
-  daten: { 'Fahrzeugrolle': 'support wagon in the crane set', 'Höchstgeschwindigkeit': '80 km/h (whole set)', 'Einzelfahrdaten': 'not published separately', 'Fahrtypen': '5089–5091 (complete crane sets)' },
+  text: ['The 2026 train type catalogue lists Kirow 250, 800 and 1200 crane sets, each with a crew wagon.', 'The support wagon backs up the staff, tools and operational logistics of the railway crane. SBB’s two KRC 800 were replaced in 2016–2019, so a catalogue entry does not prove a current fleet.'],
+  kennzahlen: [['3', 'crane types with crew wagon'], ['1', 'crew wagon per set'], ['80 km/h', 'set speed'], ['3', 'train types in the 2026 catalogue']],
+  daten: { 'Fahrzeugrolle': 'support wagon in the crane set', 'Höchstgeschwindigkeit': '80 km/h (whole set)', 'Einzelfahrdaten': 'not published separately', 'Fahrtypen': '5089–5091 (complete crane sets)', 'Status': 'train types active in the 2026 catalogue; KRC 800 replaced at SBB in 2016–2019' },
   specNote: 'In the train type catalogue SBB only publishes the totals of the inseparable crane sets, not separate dimensions for the crew wagon.',
   abschnitte: [
     { titel: 'Assignment to the crane sets', tabelle: { kopf: ['Crane', 'Formation', 'Set length / weight'], zeilen: [

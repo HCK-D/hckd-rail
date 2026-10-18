@@ -12,7 +12,7 @@
   const tag = s => { const d = new Date(s + 'T12:00:00'); return isNaN(d) ? s : d.toLocaleDateString(LOCALE, { day: 'numeric', month: 'long', year: 'numeric' }); };
   box.innerHTML = NEU.map(e => {
     const ids = (e.ids || []).filter(id => zugOf(id));
-    const chips = ids.slice(0, CHIPS).map(id => `<li><a href="#${id}">${esc(zugOf(id).name)}</a></li>`).join('')
+    const chips = ids.slice(0, CHIPS).map(id => `<li><a href="#${id}">${esc(zn(zugOf(id)))}</a></li>`).join('')
       + (ids.length > CHIPS ? `<li class="neu-n">${esc(tr('+{n} weitere', { n: ids.length - CHIPS }))}</li>` : '');
     return `<li class="neu-item">
       <div class="neu-top"><span class="neu-art ${e.art === 'neu' ? 'neu' : 'upd'}">${esc(e.art === 'neu' ? tr('Neu') : tr('Aktualisiert'))}</span><time datetime="${esc(e.datum)}">${esc(tag(e.datum))}</time></div>

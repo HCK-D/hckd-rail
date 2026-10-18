@@ -199,7 +199,7 @@ uebZug('rabe-520', {
 });
 
 uebZug('rabe-521', {
-  typ: 'FLIRT bicourant pour l’Allemagne et la Suisse',
+  typ: 'FLIRT monocourant homologué en Suisse et en Allemagne',
   text: ['Le RABe 521 est un FLIRT de quatre caisses pour les liaisons régionales transfrontalières entre le nord-ouest de la Suisse et l’Allemagne.', 'Il constitue une part importante du RER trinational de Bâle et circule aussi sur le Seehas.'],
   kennzahlen: [['39', 'rames'], ['160 km/h', 'vitesse maximale'], ['2004', 'première mise en service'], ['74,08 m', 'longueur']],
   daten: { 'Zugbildung': '4 voitures', 'Gewicht': '120 t à vide, 152 t en charge', 'Leistung': '2656 kW (valeur du type de marche FOS)', 'Nummern': '521 001–030 et 201–209', 'Einsatz': 'RER de Bâle, Seehas, Suisse–Allemagne' },

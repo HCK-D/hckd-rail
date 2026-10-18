@@ -13,7 +13,7 @@ uebDict({
 uebZug('lrz-18', {
   beiname: 'Train d’extinction et de sauvetage',
   typ: 'Train d’extinction et de sauvetage de la génération 2018',
-  text: ['La génération TES 18 comprend six trains d’extinction et de sauvetage modernes et autonomes. Les CFF les ont commandés en deux lots de trois rames ; tous étaient livrés fin 2018.', 'Selon le site, la composition comprend un wagon-citerne d’extinction, un véhicule de matériel et un ou deux véhicules de sauvetage.'],
+  text: ['La génération TES 18 comprend six trains d’extinction et de sauvetage modernes et automoteurs. Les CFF les ont commandés en deux lots de trois rames ; tous étaient livrés fin 2018.', 'Selon le site, la composition comprend un wagon-citerne d’extinction, un véhicule de matériel et un ou deux véhicules de sauvetage.'],
   kennzahlen: [['6', 'rames'], ['2018', 'livraison complète'], ['6 × 390 kW', 'traction de la version à quatre éléments'], ['100 km/h', 'vitesse maximale']],
   daten: { 'Hersteller': 'Windhoff / Dräger (installation d’extinction Vogt)', 'Ausführungen': 'à 3 ou 4 éléments', 'Länge': '83,22 m (quatre éléments)', 'Gewicht': 'env. 326 t (quatre éléments)', 'Leistung': '6 × 390 kW (quatre éléments)', 'Pumpenleistung': 'jusqu’à 6000 l/min à 10 bar', 'Rettungskapazität': 'jusqu’à 60 personnes par véhicule de sauvetage', 'Schleppleistung': 'jusqu’à 1600 t en tunnel', 'Autonomer Betrieb': 'env. 4–5 heures', 'Anzahl': '6 rames (2 lots de 3)' },
   specNote: 'Longueur, masse et puissance valent pour le TES 18 à quatre éléments ; les trains à trois éléments sont plus courts et plus légers.',
@@ -34,7 +34,7 @@ uebZug('lrz-14', {
   abschnitte: [
     { titel: 'Acquisition', p: ['Les deux rames ont été acquises à partir de 2012 et rendues opérationnelles avant la mise en service du tunnel de base du Gothard.'] },
     { titel: 'Deux unités de sauvetage', p: ['Chaque véhicule de sauvetage offre de la place à environ 60 personnes, ou à 40 personnes et six civières. Les espaces pressurisés, les sas et les raccordements médicaux permettent des évacuations depuis des tronçons de tunnel enfumés.'] },
-    { titel: 'Profil de performance', p: ['La composition à quatre éléments offre plus d’agent d’extinction, d’air respirable et de capacité de sauvetage que les générations précédentes. Plusieurs véhicules motorisés assurent un effort de traction élevé et la redondance.'] }
+    { titel: 'Profil de performance', p: ['Grâce au deuxième véhicule de sauvetage, la composition à quatre éléments offre plus de capacité de sauvetage et plus d’air respirable que les générations précédentes. Plusieurs véhicules motorisés assurent un effort de traction élevé et la redondance.'] }
   ],
   bilder: ['Nouveau TES 14 au centre d’entretien et d’intervention d’Erstfeld', 'TES 14 «Uri» en gare d’Erstfeld', 'TES 14 «Uri» des sapeurs-pompiers d’entreprise d’Erstfeld', 'TES 14 à Erstfeld']
 });
@@ -55,10 +55,10 @@ uebZug('lrz-08', {
 uebZug('lrz-04', {
   beiname: 'Train d’extinction et de sauvetage',
   typ: 'Train d’extinction et de sauvetage de la génération 2004',
-  text: ['Le TES 04 était la première génération récente du train d’extinction et de sauvetage des CFF et a marqué le passage du train remorqué par une locomotive au train autonome.', 'L’unique rame réunit agents d’extinction, espace de sauvetage et traction propre pour les interventions sur les lignes et en tunnel.'],
+  text: ['Le TES 04 était la première génération récente du train d’extinction et de sauvetage des CFF et a marqué le passage du train remorqué par une locomotive au train automoteur.', 'L’unique rame réunit agents d’extinction, espace de sauvetage et traction propre pour les interventions sur les lignes et en tunnel.'],
   kennzahlen: [['1', 'rame de cette génération'], ['2004', 'mise en service'], ['4 × 315 kW', 'puissance de traction installée'], ['100 km/h', 'vitesse maximale']],
   daten: { 'Gewicht': 'env. 210 t', 'Atemluft': 'env. 1,44 mio de l', 'Anzahl': '1 rame', 'Einsatz': 'éteindre, sauver, dégager' },
-  specNote: 'Le nombre et l’année se rapportent à la génération autonome TES 04. Les générations suivantes sont comptées séparément.',
+  specNote: 'Le nombre et l’année se rapportent à la génération distincte TES 04. Les générations suivantes sont comptées séparément.',
   abschnitte: [
     { titel: 'Construction', p: ['Les véhicules transportent eau, mousse, matériel de sauvetage et de relevage. Le véhicule de matériel et le véhicule de sauvetage ont chacun deux groupes motopropulseurs ; le train n’a donc pas besoin d’une locomotive auxiliaire.', 'Le véhicule de sauvetage possède un espace intérieur protégé, alimenté en air respirable, pour les évacuations depuis des tunnels enfumés.'] },
     { titel: 'Engagement', p: ['Le train intervient lors d’événements sur le réseau ferroviaire, en particulier dans les longs tunnels et sur les tronçons difficiles d’accès.'] }
@@ -67,8 +67,9 @@ uebZug('lrz-04', {
 });
 
 uebZug('xrotm', {
+  name: 'Fraises à neige',
   typ: 'Véhicules spéciaux de déneigement',
-  text: ['CFF Infrastructure utilise plusieurs types de fraises à neige autonomes.', 'Le règlement d’exploitation distingue quatre séries, qui remplissent des tâches différentes selon la quantité de neige, la ligne et le lieu d’intervention.'],
+  text: ['CFF Infrastructure utilise plusieurs types de fraises à neige automotrices.', 'Le règlement d’exploitation distingue quatre séries, qui remplissent des tâches différentes selon la quantité de neige, la ligne et le lieu d’intervention.'],
   kennzahlen: [['4', 'séries dans le règlement'], ['17', 'véhicules selon les plages de numéros'], ['60–80 km/h', 'Vmax des grands types'], ['95–115', 'numéros d’exploitation']],
   daten: { 'Xrotm 4/4': 'n° 95–96, 2 véhicules, 80 km/h', 'Xrotm 2/3': 'n° 97, 1 véhicule, 60 km/h', 'XTm': 'n° 102–109, 8 véhicules, 45 km/h (100 km/h remorqué)', 'Xrotm ex Tm 232': 'n° 110–115, 6 véhicules, 80 km/h (90 km/h remorqué)', 'Anzahl': '17 selon les plages de numéros', 'Einsatz': 'déblaiement de la neige et des congères' },
   specNote: 'Le nombre résulte des plages de numéros publiées dans le règlement d’exploitation des CFF et n’est pas un effectif confirmé séparément.',
@@ -80,10 +81,11 @@ uebZug('xrotm', {
 });
 
 uebZug('diagnose', {
-  typ: 'Véhicule de diagnostic autonome Mermec Xtmass',
-  text: ['Le véhicule de diagnostic autonome Xtmass ROGER 1000 contrôle l’état de l’infrastructure ferroviaire à grande vitesse.', 'Des systèmes de mesure relèvent la voie, la caténaire et d’autres installations sans interrompre inutilement l’exploitation régulière.'],
+  name: 'Véhicule de diagnostic',
+  typ: 'Véhicule de diagnostic automoteur Mermec Xtmass',
+  text: ['Le véhicule de diagnostic automoteur Xtmass ROGER 1000 contrôle l’état de l’infrastructure ferroviaire à grande vitesse.', 'Des systèmes de mesure relèvent la voie, la caténaire et d’autres installations sans interrompre inutilement l’exploitation régulière.'],
   kennzahlen: [['160 km/h', 'vitesse maximale'], ['672 kW', 'puissance maximale'], ['64 t', 'masse à vide'], ['23,9 m', 'longueur du véhicule']],
-  daten: { 'Fahrzeugart': 'véhicule de diagnostic autonome', 'Gewicht': '64 t à vide, au maximum 66 t', 'Einsatz': 'mesure de la voie et de la caténaire' },
+  daten: { 'Fahrzeugart': 'véhicule de diagnostic automoteur', 'Gewicht': '64 t à vide, au maximum 66 t', 'Einsatz': 'mesure de la voie et de la caténaire' },
   abschnitte: [
     { titel: 'Tâches de mesure', p: ['ROGER 1000 réunit plusieurs systèmes de mesure et de diagnostic dans un seul véhicule. Sa vitesse élevée permet des contrôles sur les lignes principales en perturbant peu l’horaire.'] },
     { titel: 'Engagement au-delà de la Suisse', p: ['Mermec documente une campagne de mesure du véhicule CFF sur une ligne à grande vitesse allemande. Cela montre son aptitude aux courses de mesure sur des réseaux performants.'] }
@@ -131,7 +133,7 @@ uebZug('kirow-krc-100', {
   typ: 'Grue ferroviaire pivotante compacte pour construction et intervention',
   text: ['La Kirow KRC 100 est une grue ferroviaire pivotante compacte des CFF. Douze véhicules ont été livrés en 2006 et 2007.', 'Son faible rayon arrière et son contrepoids fixe permettent de travailler en influençant peu les voies voisines.'],
   kennzahlen: [['12', 'grues livrées'], ['2006–2007', 'livraison'], ['70 t', 'masse en service de la grue'], ['120 km/h', 'admis en remorque']],
-  daten: { 'Länge': '11,0 m hors tampons', 'Gewicht': '70 t en service', 'Tragfähigkeit': 'jusqu’à env. 20 t, selon la portée', 'Höchstgeschwindigkeit': '120 km/h remorquée', 'Gegengewicht': 'fixe', 'In Betrieb seit': '2006–2007 (déc. 2006 à oct. 2007)', 'Einsatz': 'construction de voies, pose de mâts, intervention' },
+  daten: { 'Länge': '11,0 m hors tampons', 'Gewicht': '70 t en service', 'Tragfähigkeit': 'selon la portée, charge maximale non attestée', 'Höchstgeschwindigkeit': '120 km/h remorquée', 'Gegengewicht': 'fixe', 'In Betrieb seit': '2006–2007 (déc. 2006 à oct. 2007)', 'Einsatz': 'construction de voies, pose de mâts, intervention' },
   specNote: 'La capacité de levage des grues ferroviaires dépend fortement de la portée, du calage et de la position de la voie.',
   abschnitte: [
     { titel: 'Acquisition', p: ['Kirow a livré douze KRC 100 entre décembre 2006 et octobre 2007. La série a été acquise pour des interventions décentralisées de construction et de secours.'] },
@@ -152,6 +154,7 @@ uebZug('bendini', {
 });
 
 uebZug('fahrleitung', {
+  name: 'Véhicules pour la ligne de contact',
   typ: 'Véhicules de service pour la construction et l’entretien de la caténaire',
   text: ['Les véhicules caténaire amènent le personnel, les outils et le matériel directement à la caténaire.', 'CFF Infrastructure utilise pour cela plusieurs séries et versions ; Hubi, Krani et Combi 4A en sont des exemples cités publiquement.'],
   kennzahlen: [['plusieurs', 'séries et versions'], ['Hubi', 'exemple de véhicule'], ['Krani', 'exemple de véhicule'], ['Combi 4A', 'exemple de véhicule']],

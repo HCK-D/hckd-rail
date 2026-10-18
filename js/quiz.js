@@ -103,7 +103,7 @@
           <p class="qz-la">${esc(tr('Deine Antwort:'))} <b>${esc(q.opts[wahl[i]])}</b></p>
           ${ok ? '' : `<p class="qz-la">${esc(tr('Richtig wäre:'))} <b>${esc(q.opts[q.ok])}</b></p>`}
           ${q.info ? `<p class="qz-info">${esc(q.info)}</p>` : ''}
-          ${z ? `<a class="qz-link" href="#${z.id}">${esc(tr('Mehr zu {name}', { name: z.name }))} ${arrow}</a>` : ''}
+          ${z ? `<a class="qz-link" href="#${z.id}">${esc(tr('Mehr zu {name}', { name: zn(z) }))} ${arrow}</a>` : ''}
         </li>`;
       }).join('')}</ol>
     </div>`;

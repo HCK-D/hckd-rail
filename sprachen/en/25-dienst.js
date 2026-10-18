@@ -32,7 +32,7 @@ uebZug('lrz-14', {
   abschnitte: [
     { titel: 'Procurement', p: ['The two sets were procured from 2012 and made ready for service before the Gotthard Base Tunnel opened.'] },
     { titel: 'Two rescue units', p: ['Each rescue vehicle has room for about 60 people, or 40 people and six stretchers. Pressurised compartments, airlocks and medical connections allow evacuations from smoke-filled tunnel sections.'] },
-    { titel: 'Performance profile', p: ['The four-car formation offers more extinguishing agent, breathing air and rescue capacity than earlier generations. Several powered vehicles provide high tractive effort and redundancy.'] }
+    { titel: 'Performance profile', p: ['With its second rescue vehicle, the four-car formation offers more rescue capacity and more breathing air than earlier generations. Several powered vehicles provide high tractive effort and redundancy.'] }
   ],
   bilder: ['New LRZ 14 at the Erstfeld maintenance and intervention centre', 'LRZ 14 «Uri» at Erstfeld station', 'LRZ 14 «Uri» of the Erstfeld company fire brigade', 'LRZ 14 in Erstfeld']
 });
@@ -65,6 +65,7 @@ uebZug('lrz-04', {
 });
 
 uebZug('xrotm', {
+  name: 'Rotary snow ploughs',
   typ: 'Special vehicles for snow clearing',
   text: ['SBB Infrastructure uses several types of self-propelled rotary snow ploughs.', 'The operating regulations distinguish four series that take on different tasks depending on the amount of snow, the line and the location.'],
   kennzahlen: [['4', 'series in the regulations'], ['17', 'vehicles by number ranges'], ['60–80 km/h', 'top speed of the large types'], ['95–115', 'operating numbers']],
@@ -78,6 +79,7 @@ uebZug('xrotm', {
 });
 
 uebZug('diagnose', {
+  name: 'Diagnostic vehicle',
   typ: 'Mermec Xtmass self-propelled diagnostic vehicle',
   text: ['The self-propelled diagnostic vehicle Xtmass ROGER 1000 checks the condition of the railway infrastructure at high speed.', 'Measuring systems record track, overhead line and other installations without unnecessarily interrupting regular services.'],
   kennzahlen: [['160 km/h', 'top speed'], ['672 kW', 'maximum power'], ['64 t', 'empty weight'], ['23.9 m', 'vehicle length']],
@@ -129,7 +131,7 @@ uebZug('kirow-krc-100', {
   typ: 'Compact slewing railway crane for construction and recovery',
   text: ['The Kirow KRC 100 is a compact SBB slewing railway crane. Twelve vehicles were delivered in 2006 and 2007.', 'Its small tail radius and fixed counterweight allow work with little effect on adjacent tracks.'],
   kennzahlen: [['12', 'cranes delivered'], ['2006–2007', 'delivery'], ['70 t', 'crane service weight'], ['120 km/h', 'permitted when hauled']],
-  daten: { 'Länge': '11.0 m over buffers', 'Gewicht': '70 t in service', 'Tragfähigkeit': 'up to approx. 20 t, depending on outreach', 'Höchstgeschwindigkeit': '120 km/h hauled', 'Gegengewicht': 'fixed', 'In Betrieb seit': '2006–2007 (Dec. 2006 to Oct. 2007)', 'Einsatz': 'track construction, mast erection, recovery' },
+  daten: { 'Länge': '11.0 m over buffers', 'Gewicht': '70 t in service', 'Tragfähigkeit': 'depends on outreach, maximum load not documented', 'Höchstgeschwindigkeit': '120 km/h hauled', 'Gegengewicht': 'fixed', 'In Betrieb seit': '2006–2007 (Dec. 2006 to Oct. 2007)', 'Einsatz': 'track construction, mast erection, recovery' },
   specNote: 'The lifting capacity of railway cranes depends heavily on outreach, outriggers and track geometry.',
   abschnitte: [
     { titel: 'Procurement', p: ['Kirow delivered twelve KRC 100 between December 2006 and October 2007. The series was procured for decentralised construction and recovery work.'] },
@@ -150,6 +152,7 @@ uebZug('bendini', {
 });
 
 uebZug('fahrleitung', {
+  name: 'Overhead line vehicles',
   typ: 'Service vehicles for building and maintaining the overhead line',
   text: ['Overhead line vehicles bring staff, tools and material directly to the overhead line.', 'SBB Infrastructure uses several series and versions for this; publicly named examples are Hubi, Krani and Combi 4A.'],
   kennzahlen: [['several', 'series and versions'], ['Hubi', 'vehicle example'], ['Krani', 'vehicle example'], ['Combi 4A', 'vehicle example']],

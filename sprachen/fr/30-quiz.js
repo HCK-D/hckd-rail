@@ -46,7 +46,7 @@ uebQuiz('normal', [
   { f: 'Par quel tunnel le Giruno passe-t-il de Zurich à Milan ?', a: ['Tunnel de base du Gothard', 'Tunnel de base du Lötschberg', 'Tunnel du Simplon', 'Tunnel de la Vereina'] },
   { f: 'Quel train doit remplacer le Domino aux CFF à partir de 2028 ?', a: ['FLIRT Evo', 'Giruno', 'KISS', 'ICN'] },
   { f: 'Qui a construit le FV-Dosto ?', a: ['Bombardier (aujourd’hui Alstom)', 'Stadler', 'Siemens', 'SLM Winterthur'] },
-  { f: 'Quelle locomotive roule à l’électricité et possède en plus un moteur diesel pour les chantiers ?', a: ['Aem 940', 'Re 460', 'Ee 922', 'Re 482'] },
+  { f: 'Quelle locomotive roule à l’électricité et possède en plus deux groupes diesel-générateurs pour les chantiers ?', a: ['Aem 940', 'Re 460', 'Ee 922', 'Re 482'] },
   { f: 'Combien de places assises compte un Giruno ?', a: ['405', '172', '682', '1000'], info: 'S’y ajoutent 17 places au restaurant.' },
   { f: 'Quel est ce train ?', a: ['RABe 503 «Astoro»', 'RABe 501 «Giruno»', 'RABDe 500 «ICN»', 'RBDe 560 «Domino»'] },
   { f: 'Cette locomotive est une Re 465. Quel chemin de fer l’exploite ?', a: ['BLS', 'CFF Cargo', 'Chemins de fer rhétiques', 'Südostbahn'], info: 'La Re 465 est la sœur plus puissante de la Re 460.' },

@@ -820,6 +820,17 @@ uebDict({
   'Entdecker-Abzeichen und die Seite «Meine Sammlung» mit allen gesehenen Fahrzeugen.': 'Badges d’explorateur et la page « Ma collection » avec tous les véhicules vus.'
 });
 
+/* ---- 08-pruefbericht.js ---- */
+/* Français – compléments après le rapport de contrôle du 18.10.2026 */
+uebDict({
+  'Korrekturen nach einer Inhaltsprüfung, unter anderem bei RABe 521, Ae 6/6, Be 4/6, Ce 6/8 III, Rotem Pfeil und LRZ 14.': 'Corrections après un contrôle du contenu, notamment pour le RABe 521, l’Ae 6/6, la Be 4/6, la Ce 6/8 III, la Flèche rouge et le TES 14.',
+  'ein Wagen': 'une voiture',
+  'Umbauauftrag': 'Commande de transformation',
+  'z. B. Re 4/4 II': 'p. ex. Re 4/4 II',
+  'ältere Bezeichnung einer Dampflok; die Buchstaben folgen einem früheren Schema und werden hier nicht einzeln erklärt': 'ancienne désignation d’une locomotive à vapeur ; les lettres suivent un schéma plus ancien et ne sont pas expliquées ici une par une',
+  'Diese Bezeichnung kann ich (noch) nicht entschlüsseln. Probiere zum Beispiel «Re 4/4 II» oder «RABe 523»; Gross- und Kleinbuchstaben haben dabei eine eigene Bedeutung.': 'Je ne sais pas (encore) déchiffrer cette désignation. Essaie par exemple « Re 4/4 II » ou « RABe 523 » ; les majuscules et les minuscules ont chacune leur signification.'
+});
+
 /* ---- 20-personenverkehr.js ---- */
 /* Français – véhicules CFF Voyageurs */
 uebDict({ 'ja': 'oui', 'nein': 'non', 'SBB': 'CFF' });
@@ -1022,7 +1033,7 @@ uebZug('rabe-520', {
 });
 
 uebZug('rabe-521', {
-  typ: 'FLIRT bicourant pour l’Allemagne et la Suisse',
+  typ: 'FLIRT monocourant homologué en Suisse et en Allemagne',
   text: ['Le RABe 521 est un FLIRT de quatre caisses pour les liaisons régionales transfrontalières entre le nord-ouest de la Suisse et l’Allemagne.', 'Il constitue une part importante du RER trinational de Bâle et circule aussi sur le Seehas.'],
   kennzahlen: [['39', 'rames'], ['160 km/h', 'vitesse maximale'], ['2004', 'première mise en service'], ['74,08 m', 'longueur']],
   daten: { 'Zugbildung': '4 voitures', 'Gewicht': '120 t à vide, 152 t en charge', 'Leistung': '2656 kW (valeur du type de marche FOS)', 'Nummern': '521 001–030 et 201–209', 'Einsatz': 'RER de Bâle, Seehas, Suisse–Allemagne' },
@@ -1133,7 +1144,7 @@ uebZug('re-420', {
 
 uebZug('re-620', {
   typ: 'Locomotive de ligne à six essieux',
-  text: ['La Re 620, autrefois Re 6/6, a été développée pour les trains voyageurs et marchandises lourds sur les lignes du Saint-Gothard et du Simplon.', 'Ses trois bogies à deux essieux allient un effort de traction élevé à l’autorisation pour les vitesses en courbe plus élevées de la série de trains R.'],
+  text: ['La Re 620, autrefois Re 6/6, a été développée pour les trains voyageurs et marchandises lourds sur les lignes du Saint-Gothard et du Simplon.', 'Ses trois bogies à deux essieux allient un effort de traction élevé à l’autorisation pour les vitesses en courbe plus élevées de la catégorie de train R.'],
   kennzahlen: [['89', 'locomotives construites'], ['7832 kW', 'puissance unihoraire à la jante'], ['140 km/h', 'vitesse maximale'], ['1972–1980', 'période de construction']],
   daten: { 'Achsfolge': 'Bo′Bo′Bo′, 6 essieux moteurs', 'Länge': '19,31 m hors tampons', 'Gewicht': '120 t en service', 'Leistung': '7244 kW en continu à la jante (7832 kW unihoraire)', 'Elektrische Bremse': 'récupération', 'In Betrieb seit': '1972 ; série 1975–1980', 'Hersteller': 'partie mécanique SLM Winterthour ; électrique et montage BBC, en partie SAAS' },
   abschnitte: [
@@ -1217,7 +1228,7 @@ uebZug('tm-234', {
   daten: { 'Hersteller': 'Stadler Winterthour et partenaires', 'Bauart': 'tracteur diesel à deux essieux', 'Gewicht': '30 t en service, au maximum 37 t', 'Antrieb': 'hydrostatique, moteur diesel MTU', 'Anfahrzugkraft': 'env. 81 kN', 'Zuladung': '7 t ; version à nacelle 0,5 t', 'Arbeitsmodus': 'jusqu’à 20 km/h, avec la grue jusqu’à 4 km/h', 'Anzahl': '125 commandés (1997, 2000, 2005)', 'In Betrieb seit': '1999 (première série commandée en 1997)', 'Einsatz': 'entretien de la voie, de la ligne de contact et des signaux' },
   specNote: 'La fiche du constructeur et une étude préliminaire du DLR et des CFF décrivent les différentes versions.',
   abschnitte: [
-    { titel: 'Séries et utilisation', p: ['Les CFF ont commandé 50 véhicules en 1997 et en 2000, puis 25 de plus en 2005. La livraison et la mise en service de la première série ont commencé en 1999. Stadler a annoncé la livraison des 25 derniers en 2007.', 'Les tracteurs servent à l’entretien de la voie, de la ligne de contact et des signaux, transportent du matériel et peuvent déplacer ou manœuvrer des trains de travaux.'] },
+    { titel: 'Séries et utilisation', p: ['Les CFF ont commandé 50 véhicules en 1997, 50 autres en 2000 et 25 supplémentaires en 2005. La livraison et la mise en service de la première série ont commencé en 1999. Stadler a annoncé la livraison des 25 derniers en 2007.', 'Les tracteurs servent à l’entretien de la voie, de la ligne de contact et des signaux, transportent du matériel et peuvent déplacer ou manœuvrer des trains de travaux.'] },
     { titel: 'Effectif et délimitation', p: ['En 2019, CFF Infrastructure indiquait un effectif de 124 anciens Tm 234 « Ameise ». Il s’agit d’un état historique et non d’une indication sur la flotte en octobre 2026.', 'Le tracteur de service plus récent, également appelé Tm 234-4, provient de Windhoff et relève d’une autre acquisition.'] }
   ],
   bilder: ['Tm 234 109 « Ameise »', 'Tm 234 004 à Neuhausen SH', 'Tm 234 139 à Winterthour', 'Tm 234 « Ameise » avec grue de chargement', 'Tm 234 090']
@@ -1252,7 +1263,7 @@ uebZug('tmf-232', {
   typ: 'Tracteur de service modernisé avec radiocommande',
   text: ['Le Tmf 232 est issu de la modernisation de tracteurs de service Tm IV. En 2013, CFF Infrastructure a commandé la transformation de 15 véhicules.', 'Le « f » de la désignation signifie radiocommande (Funkfernsteuerung).'],
   kennzahlen: [['15', 'véhicules dans la commande de transformation'], ['2013', 'commande de modernisation'], ['280 kW', 'puissance diesel'], ['60 km/h', 'vitesse maximale par ses propres moyens']],
-  daten: { 'Umbau': 'ORTICS, dans l’atelier industriel CFF de Bienne', 'Antrieb': 'diesel-hydraulique, moteur Caterpillar', 'Länge': '7,67 m hors tampons', 'Gewicht': 'environ 30 t', 'Höchstgeschwindigkeit': '60 km/h par ses propres moyens, 90 km/h remorqué', 'Steuerung': 'radiocommande et commande multiple', 'In Betrieb seit': '2013 (commande de transformation)', 'Einsatz': 'service de construction et de manœuvre' },
+  daten: { 'Umbau': 'ORTICS, dans l’atelier industriel CFF de Bienne', 'Antrieb': 'diesel-hydraulique, moteur Caterpillar', 'Länge': '7,67 m hors tampons', 'Gewicht': 'environ 30 t', 'Höchstgeschwindigkeit': '60 km/h par ses propres moyens, 90 km/h remorqué', 'Steuerung': 'radiocommande et commande multiple', 'Umbauauftrag': '2013 (première mise en service après transformation non attestée)', 'Einsatz': 'service de construction et de manœuvre' },
   specNote: '2013 est l’année attestée de la commande de modernisation, et non l’année de construction d’origine des Tm IV donneurs.',
   abschnitte: [
     { titel: 'Modernisation', p: ['En 2013, ORTICS a reçu de CFF Infrastructure le mandat de moderniser 15 Tm IV. Le châssis, les superstructures, les essieux et la transmission ont été en grande partie conservés ; le moteur, la commande et la technique de sécurité ont été renouvelés et une radiocommande installée.'] },
@@ -1339,7 +1350,7 @@ uebZug('xas-53', {
   typ: 'Wagon porte-bennes avec rails de roulement latéraux',
   text: ['Le Xas 53 transporte des bennes interchangeables pour le ballast, les résidus de criblage et le matériau PSS.', 'Des rails de roulement latéraux permettent de déplacer les bennes en liaison avec les machines de voie.'],
   kennzahlen: [['100 km/h', 'vitesse maximale'], ['19,9 m', 'longueur'], ['31,0 t', 'poids à vide'], ['7', 'bennes par wagon']],
-  daten: { 'Fahrzeugart': 'wagon porte-bennes', 'Gewicht': '31,0 t à vide, 78 t en charge', 'Nutzlast': 'jusqu’à env. 46,6 t (calculée)', 'Behälter': '7 bennes d’env. 4 m³ chacune', 'Ausrüstung': 'rails de roulement latéraux, bâches possibles', 'Einsatz': 'trains de criblage et de travaux' },
+  daten: { 'Fahrzeugart': 'wagon porte-bennes', 'Gewicht': '31,0 t à vide, 78 t en charge', 'Nutzlast': 'pas de valeur officielle (78 t − 31 t donnent env. 47 t)', 'Behälter': '7 bennes d’env. 4 m³ chacune', 'Ausrüstung': 'rails de roulement latéraux, bâches possibles', 'Einsatz': 'trains de criblage et de travaux' },
   specNote: 'Le catalogue des types de marche indique 77,6 t pour la dynamique de marche. La planification de la flotte prévoit le remplacement de la famille Xans/Xas 52/53.',
   abschnitte: [
     { titel: 'Logistique des bennes', p: ['Les bennes peuvent être déplacées, remplies et vidées à un endroit approprié au sein d’une chaîne de travail. Cela accélère l’évacuation continue des matériaux lors du dégarnissage et du renouvellement de voie.'] },
@@ -1446,6 +1457,7 @@ uebZug('silad-4', {
 });
 
 uebZug('silad-reserve', {
+  name: 'SILAD de réserve',
   beiname: '',
   typ: 'Unité compacte de chargement de rails de réserve',
   text: ['L’unité de réserve SILAD est disponible pour remplacer ou compléter les unités lors des chargements de rails.', 'Elle est nettement plus courte et plus légère que la SILAD 4 et est inscrite comme type de marche actif à part entière.'],
@@ -1459,6 +1471,7 @@ uebZug('silad-reserve', {
 });
 
 uebZug('ste-kurz', {
+  name: 'STE courte',
   beiname: 'Xans 51',
   typ: 'Unité de transport de rails avec deux grues pour rails de 12 à 36 m',
   text: ['Selon le document de formation, l’unité courte de transport de rails (STE) est basée sur un wagon plat Xans 51 à quatre essieux.', 'Deux petites grues déchargent les rails courts directement sur le chantier.'],
@@ -1472,6 +1485,7 @@ uebZug('ste-kurz', {
 });
 
 uebZug('ste-lang', {
+  name: 'STE longue',
   beiname: 'Xans 51',
   typ: 'Unité de transport de rails en plusieurs parties pour rails jusqu’à 120 m',
   text: ['La STE longue utilise des wagons Xans 51 équipés de grues pour transporter et décharger de longs rails.', 'Selon la présentation, une unité d’exploitation se compose de six wagons et atteint 120 mètres de long.'],
@@ -1489,7 +1503,7 @@ uebZug('xs-45', {
   text: ['Le Xs 45 est un wagon couvert de train de travaux pour l’outillage, les pièces de rechange et l’équipement d’atelier.', 'Il sert en même temps d’espace de travail et de soutien abrité pour les équipes de chantier.'],
   kennzahlen: [['2', 'essieux'], ['15,0 m', 'longueur'], ['16,5 t', 'poids à vide'], ['22 t', 'charge utile selon la présentation']],
   daten: { 'Gewicht': '16,5 t à vide, env. 38,5 t en charge (calculé)', 'Nutzlast': '22 t selon la présentation' },
-  specNote: 'Le catalogue actuel des types de marche ne mentionne pas le Xs 45 séparément ; les valeurs techniques proviennent du document de formation des CFF.',
+  specNote: 'Le catalogue des types de marche 2026 ne mentionne pas le Xs 45 séparément ; les valeurs proviennent du document de formation des CFF de 2022.',
   abschnitte: [
     { titel: 'Soutien du chantier', p: ['Les outils et les petites machines sont transportés à l’abri des intempéries et mis à disposition directement sur le lieu d’intervention. Le wagon complète les véhicules moteurs et les wagons de matériel du train de travaux.'] },
     { titel: 'Position de marche', p: ['Avant tout mouvement, les portes latérales, l’équipement mobile et les postes de travail doivent être assurés. Les personnes ne peuvent se trouver dans le wagon que dans les conditions d’exploitation autorisées.'] }
@@ -1523,11 +1537,12 @@ uebZug('xs-mannschaftswagen', {
 });
 
 uebZug('kirow-mannschaftswagen', {
+  name: 'Wagon d’équipe Kirow',
   beiname: '',
   typ: 'Wagon d’accompagnement des convois de grues Kirow 250, 800 et 1200',
-  text: ['Les grues Kirow 250, 800 et 1200 des CFF circulent en convois fixes avec un wagon d’équipe.', 'Ce wagon d’accompagnement soutient le personnel, l’outillage et la logistique d’intervention de la grue ferroviaire.'],
-  kennzahlen: [['3', 'types de grues avec wagon d’équipe'], ['1', 'wagon d’équipe par convoi'], ['80 km/h', 'vitesse du convoi'], ['actif', 'statut des convois en 2026']],
-  daten: { 'Fahrzeugrolle': 'wagon d’accompagnement dans le convoi de grue', 'Höchstgeschwindigkeit': '80 km/h (convoi entier)', 'Einzelfahrdaten': 'non publiées séparément', 'Fahrtypen': '5089–5091 (convois de grues entiers)' },
+  text: ['Le catalogue des types de marche 2026 recense des convois de grues Kirow 250, 800 et 1200, chacun avec un wagon d’équipe.', 'Ce wagon d’accompagnement soutient le personnel, l’outillage et la logistique d’intervention de la grue ferroviaire. Les deux KRC 800 des CFF ont été remplacées en 2016–2019 ; une entrée au catalogue ne prouve donc pas un effectif actuel.'],
+  kennzahlen: [['3', 'types de grues avec wagon d’équipe'], ['1', 'wagon d’équipe par convoi'], ['80 km/h', 'vitesse du convoi'], ['3', 'types de marche au catalogue 2026']],
+  daten: { 'Fahrzeugrolle': 'wagon d’accompagnement dans le convoi de grue', 'Höchstgeschwindigkeit': '80 km/h (convoi entier)', 'Einzelfahrdaten': 'non publiées séparément', 'Fahrtypen': '5089–5091 (convois de grues entiers)', 'Status': 'types de marche actifs au catalogue 2026 ; KRC 800 remplacées aux CFF en 2016–2019' },
   specNote: 'Dans le catalogue des types de marche, les CFF ne publient que les valeurs globales des convois de grues indissociables, et non les dimensions du wagon d’équipe seul.',
   abschnitte: [
     { titel: 'Attribution aux convois de grues', tabelle: { kopf: ['Grue', 'Formation', 'Convoi longueur / poids'], zeilen: [
@@ -1622,7 +1637,7 @@ uebDict({
 uebZug('lrz-18', {
   beiname: 'Train d’extinction et de sauvetage',
   typ: 'Train d’extinction et de sauvetage de la génération 2018',
-  text: ['La génération TES 18 comprend six trains d’extinction et de sauvetage modernes et autonomes. Les CFF les ont commandés en deux lots de trois rames ; tous étaient livrés fin 2018.', 'Selon le site, la composition comprend un wagon-citerne d’extinction, un véhicule de matériel et un ou deux véhicules de sauvetage.'],
+  text: ['La génération TES 18 comprend six trains d’extinction et de sauvetage modernes et automoteurs. Les CFF les ont commandés en deux lots de trois rames ; tous étaient livrés fin 2018.', 'Selon le site, la composition comprend un wagon-citerne d’extinction, un véhicule de matériel et un ou deux véhicules de sauvetage.'],
   kennzahlen: [['6', 'rames'], ['2018', 'livraison complète'], ['6 × 390 kW', 'traction de la version à quatre éléments'], ['100 km/h', 'vitesse maximale']],
   daten: { 'Hersteller': 'Windhoff / Dräger (installation d’extinction Vogt)', 'Ausführungen': 'à 3 ou 4 éléments', 'Länge': '83,22 m (quatre éléments)', 'Gewicht': 'env. 326 t (quatre éléments)', 'Leistung': '6 × 390 kW (quatre éléments)', 'Pumpenleistung': 'jusqu’à 6000 l/min à 10 bar', 'Rettungskapazität': 'jusqu’à 60 personnes par véhicule de sauvetage', 'Schleppleistung': 'jusqu’à 1600 t en tunnel', 'Autonomer Betrieb': 'env. 4–5 heures', 'Anzahl': '6 rames (2 lots de 3)' },
   specNote: 'Longueur, masse et puissance valent pour le TES 18 à quatre éléments ; les trains à trois éléments sont plus courts et plus légers.',
@@ -1643,7 +1658,7 @@ uebZug('lrz-14', {
   abschnitte: [
     { titel: 'Acquisition', p: ['Les deux rames ont été acquises à partir de 2012 et rendues opérationnelles avant la mise en service du tunnel de base du Gothard.'] },
     { titel: 'Deux unités de sauvetage', p: ['Chaque véhicule de sauvetage offre de la place à environ 60 personnes, ou à 40 personnes et six civières. Les espaces pressurisés, les sas et les raccordements médicaux permettent des évacuations depuis des tronçons de tunnel enfumés.'] },
-    { titel: 'Profil de performance', p: ['La composition à quatre éléments offre plus d’agent d’extinction, d’air respirable et de capacité de sauvetage que les générations précédentes. Plusieurs véhicules motorisés assurent un effort de traction élevé et la redondance.'] }
+    { titel: 'Profil de performance', p: ['Grâce au deuxième véhicule de sauvetage, la composition à quatre éléments offre plus de capacité de sauvetage et plus d’air respirable que les générations précédentes. Plusieurs véhicules motorisés assurent un effort de traction élevé et la redondance.'] }
   ],
   bilder: ['Nouveau TES 14 au centre d’entretien et d’intervention d’Erstfeld', 'TES 14 «Uri» en gare d’Erstfeld', 'TES 14 «Uri» des sapeurs-pompiers d’entreprise d’Erstfeld', 'TES 14 à Erstfeld']
 });
@@ -1664,10 +1679,10 @@ uebZug('lrz-08', {
 uebZug('lrz-04', {
   beiname: 'Train d’extinction et de sauvetage',
   typ: 'Train d’extinction et de sauvetage de la génération 2004',
-  text: ['Le TES 04 était la première génération récente du train d’extinction et de sauvetage des CFF et a marqué le passage du train remorqué par une locomotive au train autonome.', 'L’unique rame réunit agents d’extinction, espace de sauvetage et traction propre pour les interventions sur les lignes et en tunnel.'],
+  text: ['Le TES 04 était la première génération récente du train d’extinction et de sauvetage des CFF et a marqué le passage du train remorqué par une locomotive au train automoteur.', 'L’unique rame réunit agents d’extinction, espace de sauvetage et traction propre pour les interventions sur les lignes et en tunnel.'],
   kennzahlen: [['1', 'rame de cette génération'], ['2004', 'mise en service'], ['4 × 315 kW', 'puissance de traction installée'], ['100 km/h', 'vitesse maximale']],
   daten: { 'Gewicht': 'env. 210 t', 'Atemluft': 'env. 1,44 mio de l', 'Anzahl': '1 rame', 'Einsatz': 'éteindre, sauver, dégager' },
-  specNote: 'Le nombre et l’année se rapportent à la génération autonome TES 04. Les générations suivantes sont comptées séparément.',
+  specNote: 'Le nombre et l’année se rapportent à la génération distincte TES 04. Les générations suivantes sont comptées séparément.',
   abschnitte: [
     { titel: 'Construction', p: ['Les véhicules transportent eau, mousse, matériel de sauvetage et de relevage. Le véhicule de matériel et le véhicule de sauvetage ont chacun deux groupes motopropulseurs ; le train n’a donc pas besoin d’une locomotive auxiliaire.', 'Le véhicule de sauvetage possède un espace intérieur protégé, alimenté en air respirable, pour les évacuations depuis des tunnels enfumés.'] },
     { titel: 'Engagement', p: ['Le train intervient lors d’événements sur le réseau ferroviaire, en particulier dans les longs tunnels et sur les tronçons difficiles d’accès.'] }
@@ -1676,8 +1691,9 @@ uebZug('lrz-04', {
 });
 
 uebZug('xrotm', {
+  name: 'Fraises à neige',
   typ: 'Véhicules spéciaux de déneigement',
-  text: ['CFF Infrastructure utilise plusieurs types de fraises à neige autonomes.', 'Le règlement d’exploitation distingue quatre séries, qui remplissent des tâches différentes selon la quantité de neige, la ligne et le lieu d’intervention.'],
+  text: ['CFF Infrastructure utilise plusieurs types de fraises à neige automotrices.', 'Le règlement d’exploitation distingue quatre séries, qui remplissent des tâches différentes selon la quantité de neige, la ligne et le lieu d’intervention.'],
   kennzahlen: [['4', 'séries dans le règlement'], ['17', 'véhicules selon les plages de numéros'], ['60–80 km/h', 'Vmax des grands types'], ['95–115', 'numéros d’exploitation']],
   daten: { 'Xrotm 4/4': 'n° 95–96, 2 véhicules, 80 km/h', 'Xrotm 2/3': 'n° 97, 1 véhicule, 60 km/h', 'XTm': 'n° 102–109, 8 véhicules, 45 km/h (100 km/h remorqué)', 'Xrotm ex Tm 232': 'n° 110–115, 6 véhicules, 80 km/h (90 km/h remorqué)', 'Anzahl': '17 selon les plages de numéros', 'Einsatz': 'déblaiement de la neige et des congères' },
   specNote: 'Le nombre résulte des plages de numéros publiées dans le règlement d’exploitation des CFF et n’est pas un effectif confirmé séparément.',
@@ -1689,10 +1705,11 @@ uebZug('xrotm', {
 });
 
 uebZug('diagnose', {
-  typ: 'Véhicule de diagnostic autonome Mermec Xtmass',
-  text: ['Le véhicule de diagnostic autonome Xtmass ROGER 1000 contrôle l’état de l’infrastructure ferroviaire à grande vitesse.', 'Des systèmes de mesure relèvent la voie, la caténaire et d’autres installations sans interrompre inutilement l’exploitation régulière.'],
+  name: 'Véhicule de diagnostic',
+  typ: 'Véhicule de diagnostic automoteur Mermec Xtmass',
+  text: ['Le véhicule de diagnostic automoteur Xtmass ROGER 1000 contrôle l’état de l’infrastructure ferroviaire à grande vitesse.', 'Des systèmes de mesure relèvent la voie, la caténaire et d’autres installations sans interrompre inutilement l’exploitation régulière.'],
   kennzahlen: [['160 km/h', 'vitesse maximale'], ['672 kW', 'puissance maximale'], ['64 t', 'masse à vide'], ['23,9 m', 'longueur du véhicule']],
-  daten: { 'Fahrzeugart': 'véhicule de diagnostic autonome', 'Gewicht': '64 t à vide, au maximum 66 t', 'Einsatz': 'mesure de la voie et de la caténaire' },
+  daten: { 'Fahrzeugart': 'véhicule de diagnostic automoteur', 'Gewicht': '64 t à vide, au maximum 66 t', 'Einsatz': 'mesure de la voie et de la caténaire' },
   abschnitte: [
     { titel: 'Tâches de mesure', p: ['ROGER 1000 réunit plusieurs systèmes de mesure et de diagnostic dans un seul véhicule. Sa vitesse élevée permet des contrôles sur les lignes principales en perturbant peu l’horaire.'] },
     { titel: 'Engagement au-delà de la Suisse', p: ['Mermec documente une campagne de mesure du véhicule CFF sur une ligne à grande vitesse allemande. Cela montre son aptitude aux courses de mesure sur des réseaux performants.'] }
@@ -1740,7 +1757,7 @@ uebZug('kirow-krc-100', {
   typ: 'Grue ferroviaire pivotante compacte pour construction et intervention',
   text: ['La Kirow KRC 100 est une grue ferroviaire pivotante compacte des CFF. Douze véhicules ont été livrés en 2006 et 2007.', 'Son faible rayon arrière et son contrepoids fixe permettent de travailler en influençant peu les voies voisines.'],
   kennzahlen: [['12', 'grues livrées'], ['2006–2007', 'livraison'], ['70 t', 'masse en service de la grue'], ['120 km/h', 'admis en remorque']],
-  daten: { 'Länge': '11,0 m hors tampons', 'Gewicht': '70 t en service', 'Tragfähigkeit': 'jusqu’à env. 20 t, selon la portée', 'Höchstgeschwindigkeit': '120 km/h remorquée', 'Gegengewicht': 'fixe', 'In Betrieb seit': '2006–2007 (déc. 2006 à oct. 2007)', 'Einsatz': 'construction de voies, pose de mâts, intervention' },
+  daten: { 'Länge': '11,0 m hors tampons', 'Gewicht': '70 t en service', 'Tragfähigkeit': 'selon la portée, charge maximale non attestée', 'Höchstgeschwindigkeit': '120 km/h remorquée', 'Gegengewicht': 'fixe', 'In Betrieb seit': '2006–2007 (déc. 2006 à oct. 2007)', 'Einsatz': 'construction de voies, pose de mâts, intervention' },
   specNote: 'La capacité de levage des grues ferroviaires dépend fortement de la portée, du calage et de la position de la voie.',
   abschnitte: [
     { titel: 'Acquisition', p: ['Kirow a livré douze KRC 100 entre décembre 2006 et octobre 2007. La série a été acquise pour des interventions décentralisées de construction et de secours.'] },
@@ -1761,6 +1778,7 @@ uebZug('bendini', {
 });
 
 uebZug('fahrleitung', {
+  name: 'Véhicules pour la ligne de contact',
   typ: 'Véhicules de service pour la construction et l’entretien de la caténaire',
   text: ['Les véhicules caténaire amènent le personnel, les outils et le matériel directement à la caténaire.', 'CFF Infrastructure utilise pour cela plusieurs séries et versions ; Hubi, Krani et Combi 4A en sont des exemples cités publiquement.'],
   kennzahlen: [['plusieurs', 'séries et versions'], ['Hubi', 'exemple de véhicule'], ['Krani', 'exemple de véhicule'], ['Combi 4A', 'exemple de véhicule']],
@@ -1809,7 +1827,7 @@ uebZug('h-ce68iii', {
   kennzahlen: [['18', 'locomotives'], ['1926', 'première mise en service'], ['75 km/h', 'après transformation'], ['131 t', 'masse en service']],
   daten: { 'Hersteller': 'SLM, MFO', 'Antrieb': 'bielles obliques', 'Gewicht': '131 t en service', 'Leistung': '1810 kW puissance unihoraire', 'Höchstgeschwindigkeit': '65 km/h, plus tard 75 km/h', 'Nummern': '14301–14318, dès 1956 Be 6/8 III 13301–13318', 'In Betrieb seit': '1926 (construites 1926–1927)', 'Ausmusterung': 'service régulier jusqu’en 1977', 'Einsatz': 'trains marchandises lourds' },
   abschnitte: [
-    { titel: 'Histoire et service', p: ['La série était prévue pour les trains marchandises lourds au Gothard, sur les lignes d’accès et en plaine.', 'Dès 1956, les locomotives ont reçu un rapport de transmission plus rapide et ont été désignées Be 6/8 III. Le service régulier a pris fin en 1977.'] },
+    { titel: 'Histoire et service', p: ['La série était prévue pour les trains marchandises lourds au Gothard, sur les lignes d’accès et en plaine.', 'En 1956, la vitesse maximale autorisée a été portée à 75 km/h et la série a été redésignée Be 6/8 III. Le service régulier a pris fin en 1977.'] },
     { titel: 'Conservation', p: ['La Ce 6/8 III 14305 est conservée comme véhicule historique. Elle illustre la forme Crocodile des CFF, connue dans le monde entier.'] }
   ],
   bilder: ['Ce 6/8 III 14305', 'Ce 6/8 III lors d’une course de CFF Historic', 'Ce 6/8 III 14305 de côté', 'Ce 6/8 III 14305 en visite à Malmö (2015)', 'Plaque de constructeur de la Ce 6/8 III 14305']
@@ -1819,8 +1837,8 @@ uebZug('h-ae66', {
   beiname: 'Locomotive des cantons',
   typ: 'Locomotive des cantons et icône du Gothard (historique)',
   text: ['L’Ae 6/6 a été pendant des décennies la locomotive de puissance des CFF au Gothard.', 'Les 25 premières machines portaient les armoiries des cantons et des baguettes chromées ; les suivantes ont reçu les armoiries de villes et communes suisses.'],
-  kennzahlen: [['120', 'locomotives'], ['125 km/h', 'vitesse maximale'], ['1952', 'première mise en service'], ['4300 kW', 'puissance continue']],
-  daten: { 'Gewicht': '120 t (prototypes 124 t)', 'Leistung': '4300 kW puissance continue', 'In Betrieb seit': '1952 (série 1955–1966)', 'Einsatz': 'Gothard, trains voyageurs et marchandises lourds' },
+  kennzahlen: [['120', 'locomotives'], ['125 km/h', 'vitesse maximale'], ['1952', 'première mise en service'], ['4300 kW', 'puissance unihoraire']],
+  daten: { 'Gewicht': '120 t (prototypes 124 t)', 'Leistung': 'env. 4300 kW puissance unihoraire à la jante', 'In Betrieb seit': '1952 (série 1955–1966)', 'Einsatz': 'Gothard, trains voyageurs et marchandises lourds' },
   abschnitte: [
     { titel: 'Histoire et service', p: ['L’Ae 6/6 a d’abord marqué le trafic rapide et marchandises au Gothard. Avec l’arrivée de locomotives plus modernes, son service s’est déplacé de plus en plus vers le trafic marchandises et le Plateau.'] },
     { titel: 'Conservation', p: ['Plusieurs Ae 6/6 ont été conservées. L’Ae 6/6 11421 «Graubünden» fait partie de la collection de CFF Historic et maintient vivante l’époque des locomotives des cantons.'] }
@@ -1861,10 +1879,10 @@ uebZug('h-ae814', {
 });
 
 uebZug('h-be46', {
-  typ: 'Première locomotive électrique du Gothard (historique)',
+  typ: 'Locomotive de la première génération électrique du Gothard (historique)',
   text: ['La Be 4/6 faisait partie de la première génération de locomotives électriques du Gothard.', 'Sa forme caractéristique lui a valu le surnom de «Rehbock» (chevreuil) ; elle a d’abord tiré les lourds trains rapides sur la ligne de montagne.'],
   kennzahlen: [['40', 'locomotives'], ['75 km/h', 'vitesse maximale'], ['1920', 'première mise en service'], ['107–110 t', 'masse en service']],
-  daten: { 'Gewicht': '107–110 t en service', 'Leistung': 'jusqu’à 1500 kW puissance unihoraire', 'In Betrieb seit': '1920 (construites 1920–1923)', 'Ausmusterung': 'jusqu’en 1976', 'Einsatz': 'trains rapides et marchandises' },
+  daten: { 'Achsfolge': '6 essieux, dont 4 moteurs et 2 porteurs ; transmission par bielles', 'Gewicht': '107–110 t en service', 'Leistung': 'jusqu’à 1500 kW puissance unihoraire', 'In Betrieb seit': '1920 (construites 1920–1923)', 'Ausmusterung': 'jusqu’en 1976', 'Einsatz': 'trains rapides et marchandises' },
   abschnitte: [
     { titel: 'Histoire et service', p: ['Les CFF ont commandé la série pour l’exploitation électrique du Gothard. Avec l’augmentation de la masse des trains, les machines ont été évincées par des types plus puissants et engagées plus tard sur le Plateau et dans des services secondaires.'] },
     { titel: 'Conservation', p: ['La Be 4/6 12320 fait partie du parc de véhicules historiques. Elle rappelle l’époque pionnière de la traction électrique sur la ligne du Gothard.'] }
@@ -1888,9 +1906,9 @@ uebZug('h-tee', {
   typ: 'Rame automotrice quadricourant pour le trafic international haut de gamme (historique)',
   text: ['Le RAe TEE II reliait la Suisse sans changement de locomotive à l’Allemagne, la France, l’Italie et les Pays-Bas.', 'Sa technique quadricourant en a fait l’une des rames automotrices européennes les plus exigeantes techniquement de son époque.'],
   kennzahlen: [['5', 'rames'], ['140 km/h', 'en exploitation · technique 160 km/h'], ['1961', 'première mise en service'], ['4', 'systèmes de courant']],
-  daten: { 'Zugbildung': 'à six éléments', 'Stromsystem': '15 kV et 25 kV CA, 1,5 kV et 3 kV CC', 'Gewicht': 'env. 309 t en service', 'Leistung': 'env. 2310 kW', 'Höchstgeschwindigkeit': '140 km/h en exploitation, 160 km/h technique', 'In Betrieb seit': '1961 (cinquième rame 1967)', 'Einsatz': 'Trans-Europ-Express, plus tard EuroCity' },
+  daten: { 'Zugbildung': 'à six éléments (état conservé ; les quatre premières rames étaient d’abord à cinq éléments)', 'Stromsystem': '15 kV et 25 kV CA, 1,5 kV et 3 kV CC', 'Gewicht': 'env. 309 t en service', 'Leistung': 'env. 2310 kW', 'Höchstgeschwindigkeit': '140 km/h en exploitation, 160 km/h technique', 'In Betrieb seit': '1961 (cinquième rame 1967)', 'Einsatz': 'Trans-Europ-Express, plus tard EuroCity' },
   abschnitte: [
-    { titel: 'Histoire et service', p: ['Quatre unités ont été livrées en 1961, la cinquième a suivi en 1967. Ces élégantes rames ont circulé notamment comme TEE Gottardo, Cisalpin, Edelweiss et Roland.', 'Dès 1988, elles ont roulé en gris comme RABe EC dans le trafic EuroCity.'] },
+    { titel: 'Histoire et service', p: ['Quatre unités ont été livrées en 1961 à cinq éléments, puis allongées d’une voiture intermédiaire ; la cinquième a suivi en 1967. Ces élégantes rames ont circulé notamment comme TEE Gottardo, Cisalpin, Edelweiss et Roland.', 'Dès 1988, elles ont roulé en gris comme RABe EC dans le trafic EuroCity.'] },
     { titel: 'Conservation', p: ['La rame RAe TEE II 1053 a été conservée. CFF Historic l’a remise dans son état TEE rouge et crème ; depuis 2003, elle circule lors de courses spéciales historiques.'] }
   ],
   bilder: ['RAe TEE II à quai', 'RAe TEE II à Zurich HB, 1963', 'Avant du RAe TEE II', 'RAe TEE II en route', 'RAe TEE II à Zurich HB, 1963']
@@ -1899,11 +1917,11 @@ uebZug('h-tee', {
 uebZug('h-roterpfeil', {
   beiname: 'Flèche rouge',
   typ: 'Automotrice électrique légère pour excursions et courses rapides (historique)',
-  text: ['Les élégantes automotrices légères ont été livrées en 1935 comme CLe 2/4, puis redésignées RCe 2/4.', 'Leur forme aérodynamique rouge en a fait l’un des symboles les plus connus des CFF modernes des années 1930.'],
+  text: ['Les sept Flèches rouges électriques ont été livrées entre 1935 et 1938 sous la désignation CLe 2/4, puis redésignées plusieurs fois.', 'Leur forme aérodynamique rouge en a fait l’un des symboles les plus connus des CFF modernes des années 1930.'],
   kennzahlen: [['7', 'véhicules électriques de base'], ['125 km/h', 'vitesse maximale'], ['1935', 'première mise en service'], ['70', 'places assises']],
   daten: { 'Gewicht': 'env. 38 t en service', 'Leistung': '404 kW puissance unihoraire, 315 kW puissance continue', 'Nummern': '201–207, plus tard 601–607', 'Einsatz': 'excursions et voyages de groupe, prestations spéciales rapides' },
   abschnitte: [
-    { titel: 'Désignations et transformations', p: ['Dès 1944, les sept CLe 2/4 électriques sont devenues des RCe 2/4. Deux véhicules ont été transformés en 1952/53 en RAe 2/4 avec sièges rembourrés.', 'C’est pourquoi les indications d’effectif varient selon la désignation et la période.'] },
+    { titel: 'Désignations et transformations', p: ['Les voitures 201 et 202 ont été livrées en 1935, les 203 à 206 en 1936 et la 207 en 1938. Elles ont ensuite porté entre autres la désignation RCe 2/4. Les voitures 201 et 206 ont été allongées en 1952 et 1953 et transformées pour la 1re classe (RAe 2/4) ; d’autres ont porté en dernier la désignation RBe 2/4.', 'C’est pourquoi les indications d’effectif varient selon la désignation et la période.'] },
     { titel: 'Service et importance', p: ['Les Flèches rouges servaient aux excursions, aux voyages de groupe et aux prestations spéciales rapides. Leur faible poids et leur forme aérodynamique incarnaient l’élan technique de l’entre-deux-guerres.'] }
   ],
   bilder: ['Flèche rouge RCe 2/4 203']
@@ -1923,7 +1941,7 @@ uebZug('h-a35', {
 
 uebZug('h-c56', {
   typ: 'Locomotive à vapeur pour les lourds trains du Gothard (historique)',
-  text: ['La C 5/6 était la plus grande série de locomotives à vapeur des CFF et en même temps leur dernière acquisition de locomotives à vapeur neuves à voie normale.', 'Le surnom «Elefant» (éléphant) renvoie à son allure imposante et à son grand effort de traction.'],
+  text: ['La C 5/6 comptait parmi les plus grandes et les plus puissantes locomotives à vapeur des CFF. Elle a aussi été leur dernière acquisition de locomotives à vapeur neuves à voie normale.', 'Le surnom «Elefant» (éléphant) renvoie à son allure imposante et à son grand effort de traction.'],
   kennzahlen: [['28', 'locomotives de série'], ['65 km/h', 'vitesse maximale'], ['1913', 'première mise en service'], ['128 t', 'avec tender']],
   daten: { 'Länge': '19,195 m avec tender', 'Gewicht': '128 t avec tender', 'Leistung': 'env. 1190 kW (indiquée)', 'In Betrieb seit': '1913 (construites 1913–1917)', 'Ausmusterung': 'jusqu’en 1968', 'Einsatz': 'trains marchandises lourds' },
   abschnitte: [
@@ -1937,7 +1955,7 @@ uebZug('h-eb35', {
   typ: 'Locomotive-tender polyvalente (historique)',
   text: ['L’Eb 3/5 était une puissante locomotive-tender pour les services voyageurs, marchandises et de manœuvre.', 'Sa forme trapue lui a valu le surnom populaire de «Habersack».'],
   kennzahlen: [['34', 'locomotives'], ['75 km/h', 'vitesse maximale'], ['1911', 'première mise en service'], ['74–74,9 t', 'masse en service']],
-  daten: { 'Bauart': 'locomotive-tender 1′C1′', 'Gewicht': '57,6–58,8 t à vide, 74–74,9 t en service', 'Kesseldruck': 'env. 12 bar', 'Vorräte': '7,7 m³ d’eau, 2,5 t de charbon', 'In Betrieb seit': '1911 (construites 1911–1916)', 'Einsatz': 'trains régionaux, lignes secondaires, service de gare' },
+  daten: { 'Bauart': 'locomotive-tender 1′C1′', 'Länge': '12,74 m hors tampons (Eb 3/5 5819)', 'Gewicht': '57,6–58,8 t à vide, 74–74,9 t en service', 'Kesseldruck': 'env. 12 bar', 'Vorräte': '7,7 m³ d’eau, 2,5 t de charbon', 'In Betrieb seit': '1911 (construites 1911–1916)', 'Einsatz': 'trains régionaux, lignes secondaires, service de gare' },
   abschnitte: [
     { titel: 'Histoire et service', p: ['La disposition d’essieux symétrique offrait de bonnes qualités de roulement dans les deux sens, sans devoir tourner la locomotive.', 'L’Eb 3/5 convenait ainsi particulièrement aux lignes secondaires, aux trains régionaux et aux services de gare variés.'] },
     { titel: 'Conservation', p: ['Quelques locomotives de la série ont été conservées par des musées et des chemins de fer historiques. Elles montrent la dernière génération de locomotives-tender à vapeur universelles des CFF.'] }
@@ -2046,7 +2064,7 @@ uebQuiz('normal', [
   { f: 'Par quel tunnel le Giruno passe-t-il de Zurich à Milan ?', a: ['Tunnel de base du Gothard', 'Tunnel de base du Lötschberg', 'Tunnel du Simplon', 'Tunnel de la Vereina'] },
   { f: 'Quel train doit remplacer le Domino aux CFF à partir de 2028 ?', a: ['FLIRT Evo', 'Giruno', 'KISS', 'ICN'] },
   { f: 'Qui a construit le FV-Dosto ?', a: ['Bombardier (aujourd’hui Alstom)', 'Stadler', 'Siemens', 'SLM Winterthur'] },
-  { f: 'Quelle locomotive roule à l’électricité et possède en plus un moteur diesel pour les chantiers ?', a: ['Aem 940', 'Re 460', 'Ee 922', 'Re 482'] },
+  { f: 'Quelle locomotive roule à l’électricité et possède en plus deux groupes diesel-générateurs pour les chantiers ?', a: ['Aem 940', 'Re 460', 'Ee 922', 'Re 482'] },
   { f: 'Combien de places assises compte un Giruno ?', a: ['405', '172', '682', '1000'], info: 'S’y ajoutent 17 places au restaurant.' },
   { f: 'Quel est ce train ?', a: ['RABe 503 «Astoro»', 'RABe 501 «Giruno»', 'RABDe 500 «ICN»', 'RBDe 560 «Domino»'] },
   { f: 'Cette locomotive est une Re 465. Quel chemin de fer l’exploite ?', a: ['BLS', 'CFF Cargo', 'Chemins de fer rhétiques', 'Südostbahn'], info: 'La Re 465 est la sœur plus puissante de la Re 460.' },

@@ -299,7 +299,7 @@ const ZUEGE = [
       { src: 'bilder/rabe-520-c4.jpg', titel: 'RABe 520 am Bahnübergang in Beinwil am See', foto: 'Smiley.toerist', lizenz: 'CC BY-SA 3.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/3.0', quelle: 'https://commons.wikimedia.org/wiki/File:Beinwil_am_See_crossing.jpg' },
       { src: 'bilder/rabe-520-c5.jpg', titel: 'RABe 520 als S28 bei Hunzenschwil', foto: 'TracksOnWax', lizenz: 'CC BY-SA 3.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/3.0', quelle: 'https://commons.wikimedia.org/wiki/File:SBB_S28_Hunzenschwil_Suhr.JPG' }
     ] },
-  { id: 'rabe-521', kat: 'personenverkehr', name: 'RABe 521', beiname: 'FLIRT', typ: 'Zweisystem-FLIRT für Deutschland und die Schweiz', vorlaeufig: false,
+  { id: 'rabe-521', kat: 'personenverkehr', name: 'RABe 521', beiname: 'FLIRT', typ: 'Einsystem-FLIRT mit Zulassung für die Schweiz und Deutschland', vorlaeufig: false,
     nummern: [[521001, 521030], [521201, 521209]],
     text: ['Der RABe 521 ist ein vierteiliger FLIRT für grenzüberschreitende Regionalverbindungen zwischen der Nordwestschweiz und Deutschland.', 'Er bildet einen wichtigen Teil der Regio-S-Bahn Basel und fährt auch im Seehas-Verkehr.'],
     kennzahlen: [['39', 'Züge'], ['160 km/h', 'Höchstgeschwindigkeit'], ['2004', 'erster Einsatz'], ['74,08 m', 'Länge']],
@@ -616,8 +616,8 @@ const ZUEGE = [
     nummern: [[232301, 232315]],
     text: ['Der Tmf 232 entstand durch die Modernisierung von Tm-IV-Baudiensttraktoren. SBB Infrastruktur beauftragte 2013 den Umbau von 15 Fahrzeugen.', 'Das «f» in der Bezeichnung steht für die Funkfernsteuerung.'],
     kennzahlen: [['15', 'Fahrzeuge im Umbauauftrag'], ['2013', 'Auftrag zur Modernisierung'], ['280 kW', 'Dieselleistung'], ['60 km/h', 'Höchstgeschwindigkeit aus eigener Kraft']],
-    daten: { 'Umbau': 'ORTICS, im SBB Industriewerk Biel', 'Ursprungsbaureihe': 'Tm IV', 'Achsfolge': 'B', 'Spurweite': 'Normalspur, 1435 mm', 'Antrieb': 'dieselhydraulisch, Caterpillar-Motor', 'Leistung': '280 kW', 'Länge': '7,67 m über Puffer', 'Gewicht': 'rund 30 t', 'Anfahrzugkraft': '90 kN', 'Höchstgeschwindigkeit': '60 km/h aus eigener Kraft, 90 km/h geschleppt', 'Steuerung': 'Funkfern- und Vielfachsteuerung', 'Zugbeeinflussung': 'ETM-S', 'Anzahl': '15 (Tmf 232 301–315)', 'In Betrieb seit': '2013 (Umbauauftrag)', 'Einsatz': 'Bau- und Rangierdienst' },
-    specOrder: ['Umbau', 'Ursprungsbaureihe', 'Achsfolge', 'Spurweite', 'Antrieb', 'Leistung', 'Länge', 'Gewicht', 'Anfahrzugkraft', 'Höchstgeschwindigkeit', 'Steuerung', 'Zugbeeinflussung', 'Anzahl', 'In Betrieb seit', 'Einsatz'],
+    daten: { 'Umbau': 'ORTICS, im SBB Industriewerk Biel', 'Ursprungsbaureihe': 'Tm IV', 'Achsfolge': 'B', 'Spurweite': 'Normalspur, 1435 mm', 'Antrieb': 'dieselhydraulisch, Caterpillar-Motor', 'Leistung': '280 kW', 'Länge': '7,67 m über Puffer', 'Gewicht': 'rund 30 t', 'Anfahrzugkraft': '90 kN', 'Höchstgeschwindigkeit': '60 km/h aus eigener Kraft, 90 km/h geschleppt', 'Steuerung': 'Funkfern- und Vielfachsteuerung', 'Zugbeeinflussung': 'ETM-S', 'Anzahl': '15 (Tmf 232 301–315)', 'Umbauauftrag': '2013 (erster Einsatz nach dem Umbau nicht belegt)', 'Einsatz': 'Bau- und Rangierdienst' },
+    specOrder: ['Umbau', 'Ursprungsbaureihe', 'Achsfolge', 'Spurweite', 'Antrieb', 'Leistung', 'Länge', 'Gewicht', 'Anfahrzugkraft', 'Höchstgeschwindigkeit', 'Steuerung', 'Zugbeeinflussung', 'Anzahl', 'Umbauauftrag', 'Einsatz'],
     specNote: '2013 ist das belegte Auftragsjahr der Modernisierung, nicht das ursprüngliche Baujahr der Tm-IV-Spenderfahrzeuge.',
     abschnitte: [
       { titel: 'Modernisierung', p: ['ORTICS erhielt 2013 von SBB Infrastruktur den Auftrag, 15 Tm IV zu modernisieren. Rahmen, Aufbauten, Radsätze und Fahrantrieb blieben weitgehend erhalten; Motor, Steuerungs- und Sicherheitstechnik wurden erneuert und eine Funkfernsteuerung eingebaut.'] },
@@ -688,7 +688,7 @@ const ZUEGE = [
   { id: 'xas-53', kat: 'infrastruktur', gruppe: 'Schotter- und Kippwagen', name: 'Xas 53', beiname: '', typ: 'Muldentransportwagen mit seitlichen Laufschienen', vorlaeufig: false,
     text: ['Der Xas 53 transportiert austauschbare Mulden für Schotter, Siebrückstände und PSS-Material.', 'Seitliche Laufschienen erlauben es, die Behälter im Verbund mit Gleisbaumaschinen zu verschieben.'],
     kennzahlen: [['100 km/h', 'Höchstgeschwindigkeit'], ['19,9 m', 'Länge'], ['31,0 t', 'Leergewicht'], ['7', 'Mulden je Wagen']],
-    daten: { 'Fahrtyp': '5113', 'Fahrzeugart': 'Muldentransportwagen', 'Achsen': '4, auf 2 Drehgestellen', 'Spurweite': 'Normalspur, 1435 mm', 'Länge': '19,9 m', 'Gewicht': '31,0 t leer, 78 t beladen', 'Nutzlast': 'rechnerisch bis ca. 46,6 t', 'Behälter': '7 Mulden zu je ca. 4 m³', 'Ausrüstung': 'seitliche Laufschienen, Planen möglich', 'Eigener Fahrantrieb': 'nein', 'Höchstgeschwindigkeit': '100 km/h', 'Status': 'aktiv (Fahrtypenkatalog 2026)', 'Einsatz': 'Sieb- und Bauzüge' },
+    daten: { 'Fahrtyp': '5113', 'Fahrzeugart': 'Muldentransportwagen', 'Achsen': '4, auf 2 Drehgestellen', 'Spurweite': 'Normalspur, 1435 mm', 'Länge': '19,9 m', 'Gewicht': '31,0 t leer, 78 t beladen', 'Nutzlast': 'keine offizielle Angabe (78 t − 31 t ergibt rund 47 t)', 'Behälter': '7 Mulden zu je ca. 4 m³', 'Ausrüstung': 'seitliche Laufschienen, Planen möglich', 'Eigener Fahrantrieb': 'nein', 'Höchstgeschwindigkeit': '100 km/h', 'Status': 'aktiv (Fahrtypenkatalog 2026)', 'Einsatz': 'Sieb- und Bauzüge' },
     specOrder: ['Fahrtyp', 'Fahrzeugart', 'Achsen', 'Spurweite', 'Länge', 'Gewicht', 'Nutzlast', 'Behälter', 'Ausrüstung', 'Eigener Fahrantrieb', 'Höchstgeschwindigkeit', 'Status', 'Einsatz'],
     specNote: 'Der Fahrtypenkatalog nennt 77,6 t Fahrdynamikgewicht. Die Flottenplanung sieht einen Ersatz der Xans/Xas-52/53-Familie vor.',
     abschnitte: [
@@ -872,9 +872,9 @@ const ZUEGE = [
     quellen: ['SBB Infrastruktur – Ausbildungspräsentation «Wagon de chantier», 15.09.2022, Folie Xs', 'SBB Infrastruktur – Fahrtypenkatalog 2026, Verzeichnis und Erläuterung der Fahrtypen', 'SBB Infrastruktur – Flottenmanagement Schienenfahrzeuge, Präsentation 04.06.2025, PWFZ-Projekt, S. 20'],
     art: { typ: 'wagen', geschlossen: true, zweiachs: true, farbe: YEL, akzent: '#2E3338' }, bilder: [] },
   { id: 'kirow-mannschaftswagen', kat: 'infrastruktur', gruppe: 'Werkstatt- und Mannschaftswagen', name: 'Kirow-Mannschaftswagen', beiname: '', typ: 'Begleitwagen der Kirow-Kranverbände 250, 800 und 1200', vorlaeufig: false,
-    text: ['Die SBB-Krane Kirow 250, 800 und 1200 verkehren in festen Verbänden mit einem Mannschaftswagen.', 'Der Begleitwagen unterstützt Personal, Werkzeug und Einsatzlogistik des Eisenbahnkrans.'],
-    kennzahlen: [['3', 'Krantypen mit Mannschaftswagen'], ['1', 'Mannschaftswagen je Verband'], ['80 km/h', 'Verbandsgeschwindigkeit'], ['aktiv', 'Status der Verbände 2026']],
-    daten: { 'Fahrzeugrolle': 'Begleitwagen im Kranverband', 'Spurweite': 'Normalspur, 1435 mm', 'Höchstgeschwindigkeit': '80 km/h (ganzer Verband)', 'Eigener Fahrantrieb': 'nein', 'Einzelfahrdaten': 'nicht separat publiziert', 'Betreiber': 'SBB Infrastruktur', 'Fahrtypen': '5089–5091 (ganze Kranverbände)', 'Status': 'aktiv (Fahrtypenkatalog 2026)' },
+    text: ['Der Fahrtypenkatalog 2026 führt Kranverbände Kirow 250, 800 und 1200, jeweils mit einem Mannschaftswagen.', 'Der Begleitwagen unterstützt Personal, Werkzeug und Einsatzlogistik des Eisenbahnkrans. Die beiden KRC 800 der SBB wurden 2016–2019 ersetzt; ein Eintrag im Katalog belegt deshalb keinen aktuellen Bestand.'],
+    kennzahlen: [['3', 'Krantypen mit Mannschaftswagen'], ['1', 'Mannschaftswagen je Verband'], ['80 km/h', 'Verbandsgeschwindigkeit'], ['3', 'Fahrtypen im Katalog 2026']],
+    daten: { 'Fahrzeugrolle': 'Begleitwagen im Kranverband', 'Spurweite': 'Normalspur, 1435 mm', 'Höchstgeschwindigkeit': '80 km/h (ganzer Verband)', 'Eigener Fahrantrieb': 'nein', 'Einzelfahrdaten': 'nicht separat publiziert', 'Betreiber': 'SBB Infrastruktur', 'Fahrtypen': '5089–5091 (ganze Kranverbände)', 'Status': 'Fahrtypen aktiv im Katalog 2026; KRC 800 bei der SBB 2016–2019 ersetzt' },
     specOrder: ['Fahrzeugrolle', 'Spurweite', 'Höchstgeschwindigkeit', 'Eigener Fahrantrieb', 'Einzelfahrdaten', 'Betreiber', 'Fahrtypen', 'Status'],
     specNote: 'Die SBB veröffentlicht im Fahrtypenkatalog nur Gesamtwerte der untrennbaren Kranverbände, keine separaten Masse des Mannschaftswagens.',
     abschnitte: [
@@ -1020,7 +1020,7 @@ const ZUEGE = [
     abschnitte: [
       { titel: 'Beschaffung', p: ['Die zwei Garnituren wurden ab 2012 beschafft und vor der Inbetriebnahme des Gotthard-Basistunnels einsatzbereit gemacht.'] },
       { titel: 'Zwei Rettungseinheiten', p: ['Jedes Rettungsfahrzeug bietet etwa 60 Personen Platz oder 40 Personen und sechs Liegen. Die druckgeschützten Räume, Schleusen und medizinischen Anschlüsse erlauben Evakuierungen aus verrauchten Tunnelabschnitten.'] },
-      { titel: 'Leistungsprofil', p: ['Die vierteilige Formation bietet mehr Löschmittel, Atemluft und Rettungskapazität als frühere Generationen. Mehrere angetriebene Fahrzeuge sorgen für hohe Zugkraft und Redundanz.'] }
+      { titel: 'Leistungsprofil', p: ['Mit dem zweiten Rettungsfahrzeug bietet die vierteilige Formation mehr Rettungskapazität und mehr Atemluft als frühere Generationen. Mehrere angetriebene Fahrzeuge sorgen für hohe Zugkraft und Redundanz.'] }
     ],
     quellen: ['SBB Infrastruktur – Übersicht und Datenblatt LRZ 14', 'SBB – Faktenblatt Lösch- und Rettungszug 2014, technische Daten', 'SBB Infrastruktur – Fahrtypenkatalog 2026, Fahrzeuggruppe LRZ'],
     art: { typ: 'spezial', var: 'loesch', farbe: YEL, akzent: CRED }, bilder: [
@@ -1132,7 +1132,7 @@ const ZUEGE = [
   { id: 'kirow-krc-100', kat: 'dienst', name: 'Kirow KRC 100', beiname: 'Multi Tasker', typ: 'Kompakter Eisenbahndrehkran für Bau und Intervention', vorlaeufig: false,
     text: ['Der Kirow KRC 100 ist ein kompakter Eisenbahndrehkran der SBB. Zwölf Fahrzeuge wurden 2006 und 2007 geliefert.', 'Sein kleiner Heckradius und das feste Gegengewicht erlauben Arbeiten mit geringem Einfluss auf benachbarte Gleise.'],
     kennzahlen: [['12', 'Krane geliefert'], ['2006–2007', 'Ablieferung'], ['70 t', 'Dienstmasse des Krans'], ['120 km/h', 'zulässig geschleppt']],
-    daten: { 'Hersteller': 'Kirow Leipzig', 'Typ': 'Multi Tasker KRC 100', 'Wagengattung': 'XTmaas', 'Fahrzeugnummern': '99 85 92 19 000–011', 'Länge': '11,0 m über Puffer', 'Gewicht': '70 t Dienstmasse', 'Tragfähigkeit': 'bis etwa 20 t, ausladungsabhängig', 'Höchstgeschwindigkeit': '120 km/h geschleppt', 'Gegengewicht': 'fest', 'Betreiber': 'SBB Infrastruktur', 'Anzahl': '12', 'In Betrieb seit': '2006–2007 (Dez. 2006 bis Okt. 2007)', 'Einsatz': 'Gleisbau, Masten setzen, Intervention' },
+    daten: { 'Hersteller': 'Kirow Leipzig', 'Typ': 'Multi Tasker KRC 100', 'Wagengattung': 'XTmaas', 'Fahrzeugnummern': '99 85 92 19 000–011', 'Länge': '11,0 m über Puffer', 'Gewicht': '70 t Dienstmasse', 'Tragfähigkeit': 'ausladungsabhängig, Höchstlast nicht belegt', 'Höchstgeschwindigkeit': '120 km/h geschleppt', 'Gegengewicht': 'fest', 'Betreiber': 'SBB Infrastruktur', 'Anzahl': '12', 'In Betrieb seit': '2006–2007 (Dez. 2006 bis Okt. 2007)', 'Einsatz': 'Gleisbau, Masten setzen, Intervention' },
     specOrder: ['Hersteller', 'Typ', 'Wagengattung', 'Fahrzeugnummern', 'Länge', 'Gewicht', 'Tragfähigkeit', 'Höchstgeschwindigkeit', 'Gegengewicht', 'Betreiber', 'Anzahl', 'In Betrieb seit', 'Einsatz'],
     specNote: 'Tragfähigkeiten von Eisenbahnkranen hängen stark von Ausladung, Abstützung und Gleislage ab.',
     abschnitte: [
@@ -1187,7 +1187,7 @@ const ZUEGE = [
     daten: { 'Hersteller': 'SLM, MFO', 'Achsfolge': '(1′C)(C1′)', 'Antrieb': 'Schrägstangen', 'Spurweite': 'Normalspur, 1435 mm', 'Stromsystem': '15 kV 16,7 Hz AC', 'Länge': '20,06 m', 'Gewicht': '131 t Dienstmasse', 'Leistung': '1810 kW Stundenleistung', 'Höchstgeschwindigkeit': '65 km/h, später 75 km/h', 'Nummern': '14301–14318, ab 1956 Be 6/8 III 13301–13318', 'Anzahl': '18', 'In Betrieb seit': '1926 (Baujahre 1926–1927)', 'Ausmusterung': 'Plandienst bis 1977', 'Einsatz': 'schwere Güterzüge' },
     specOrder: ['Hersteller', 'Achsfolge', 'Antrieb', 'Spurweite', 'Stromsystem', 'Länge', 'Gewicht', 'Leistung', 'Höchstgeschwindigkeit', 'Nummern', 'Anzahl', 'In Betrieb seit', 'Ausmusterung', 'Einsatz'],
     abschnitte: [
-      { titel: 'Geschichte und Einsatz', p: ['Die Serie war für schwere Güterzüge am Gotthard, auf den Zufahrtslinien und im Flachland vorgesehen.', 'Ab 1956 wurden die Lokomotiven schneller übersetzt und als Be 6/8 III bezeichnet. Der Plandienst endete 1977.'] },
+      { titel: 'Geschichte und Einsatz', p: ['Die Serie war für schwere Güterzüge am Gotthard, auf den Zufahrtslinien und im Flachland vorgesehen.', '1956 wurde die zulässige Höchstgeschwindigkeit auf 75 km/h erhöht; die Bezeichnung änderte sich zu Be 6/8 III. Der Plandienst endete 1977.'] },
       { titel: 'Erhaltung', p: ['Die Ce 6/8 III 14305 ist als historisches Fahrzeug erhalten. Sie steht beispielhaft für die weltbekannte Krokodil-Bauform der SBB.'] }
     ],
     quellen: ['Wikipedia – SBB Ce 6/8 III: Technik und Umzeichnung', 'SBB Archiv – Ce 6/8 III 14305: historisches Fahrzeugporträt'],
@@ -1201,8 +1201,8 @@ const ZUEGE = [
   { id: 'h-ae66', kat: 'historisch', name: 'Ae 6/6', beiname: 'Kantonslok', typ: 'Kantonslokomotive und Gotthard-Ikone (historisch)', vorlaeufig: false,
     nummern: [[11401, 11520]],
     text: ['Die Ae 6/6 war über Jahrzehnte das Kraftpaket der SBB am Gotthard.', 'Die ersten 25 Maschinen trugen Kantonswappen und Chromzierleisten; spätere Lokomotiven erhielten die Wappen von Schweizer Städten und Gemeinden.'],
-    kennzahlen: [['120', 'Lokomotiven'], ['125 km/h', 'Höchstgeschwindigkeit'], ['1952', 'erste Inbetriebnahme'], ['4300 kW', 'Dauerleistung']],
-    daten: { 'Hersteller': 'SLM, BBC, MFO', 'Achsfolge': 'Co′Co′', 'Spurweite': 'Normalspur, 1435 mm', 'Stromsystem': '15 kV 16,7 Hz AC', 'Länge': '18,40 m', 'Gewicht': '120 t (Prototypen 124 t)', 'Leistung': '4300 kW Dauerleistung', 'Anfahrzugkraft': '392 kN', 'Höchstgeschwindigkeit': '125 km/h', 'Nummern': '11401–11520', 'Anzahl': '120', 'In Betrieb seit': '1952 (Serie 1955–1966)', 'Ausmusterung': '2002–2013', 'Einsatz': 'Gotthard, schwere Reise- und Güterzüge' },
+    kennzahlen: [['120', 'Lokomotiven'], ['125 km/h', 'Höchstgeschwindigkeit'], ['1952', 'erste Inbetriebnahme'], ['4300 kW', 'Stundenleistung']],
+    daten: { 'Hersteller': 'SLM, BBC, MFO', 'Achsfolge': 'Co′Co′', 'Spurweite': 'Normalspur, 1435 mm', 'Stromsystem': '15 kV 16,7 Hz AC', 'Länge': '18,40 m', 'Gewicht': '120 t (Prototypen 124 t)', 'Leistung': 'rund 4300 kW Stundenleistung am Rad', 'Anfahrzugkraft': '392 kN', 'Höchstgeschwindigkeit': '125 km/h', 'Nummern': '11401–11520', 'Anzahl': '120', 'In Betrieb seit': '1952 (Serie 1955–1966)', 'Ausmusterung': '2002–2013', 'Einsatz': 'Gotthard, schwere Reise- und Güterzüge' },
     specOrder: ['Hersteller', 'Achsfolge', 'Spurweite', 'Stromsystem', 'Länge', 'Gewicht', 'Leistung', 'Anfahrzugkraft', 'Höchstgeschwindigkeit', 'Nummern', 'Anzahl', 'In Betrieb seit', 'Ausmusterung', 'Einsatz'],
     abschnitte: [
       { titel: 'Geschichte und Einsatz', p: ['Zunächst prägte die Ae 6/6 den Schnell- und Güterverkehr am Gotthard. Mit moderneren Lokomotiven verlagerte sich ihr Einsatz zunehmend in den Güterverkehr und ins Mittelland.'] },
@@ -1266,7 +1266,7 @@ const ZUEGE = [
     nummern: [[12303, 12342]],
     text: ['Die Be 4/6 gehörte zur ersten Generation elektrischer Gotthardlokomotiven.', 'Wegen ihrer markanten Bauform erhielt sie den Übernamen «Rehbock» und führte zunächst schwere Schnellzüge auf der Bergstrecke.'],
     kennzahlen: [['40', 'Lokomotiven'], ['75 km/h', 'Höchstgeschwindigkeit'], ['1920', 'erste Inbetriebnahme'], ['107–110 t', 'Dienstmasse']],
-    daten: { 'Hersteller': 'SLM, BBC', 'Achsfolge': '1′Bo1′Bo′', 'Spurweite': 'Normalspur, 1435 mm', 'Stromsystem': '15 kV 16,7 Hz AC', 'Länge': '16,50 m', 'Gewicht': '107–110 t Dienstmasse', 'Leistung': 'bis 1500 kW Stundenleistung', 'Höchstgeschwindigkeit': '75 km/h', 'Nummern': '12303–12342', 'Anzahl': '40', 'In Betrieb seit': '1920 (Baujahre 1920–1923)', 'Ausmusterung': 'bis 1976', 'Einsatz': 'Schnell- und Güterzüge' },
+    daten: { 'Hersteller': 'SLM, BBC', 'Achsfolge': '6 Achsen, davon 4 Triebachsen und 2 Laufachsen; Stangenantrieb', 'Spurweite': 'Normalspur, 1435 mm', 'Stromsystem': '15 kV 16,7 Hz AC', 'Länge': '16,50 m', 'Gewicht': '107–110 t Dienstmasse', 'Leistung': 'bis 1500 kW Stundenleistung', 'Höchstgeschwindigkeit': '75 km/h', 'Nummern': '12303–12342', 'Anzahl': '40', 'In Betrieb seit': '1920 (Baujahre 1920–1923)', 'Ausmusterung': 'bis 1976', 'Einsatz': 'Schnell- und Güterzüge' },
     specOrder: ['Hersteller', 'Achsfolge', 'Spurweite', 'Stromsystem', 'Länge', 'Gewicht', 'Leistung', 'Höchstgeschwindigkeit', 'Nummern', 'Anzahl', 'In Betrieb seit', 'Ausmusterung', 'Einsatz'],
     abschnitte: [
       { titel: 'Geschichte und Einsatz', p: ['Die SBB bestellte die Serie für den elektrischen Betrieb am Gotthard. Mit zunehmender Zugmasse wurden die Maschinen von stärkeren Bauarten verdrängt und später im Mittelland und in untergeordneten Diensten eingesetzt.'] },
@@ -1301,10 +1301,10 @@ const ZUEGE = [
   { id: 'h-tee', kat: 'historisch', name: 'RAe TEE II', beiname: 'Gottardo', typ: 'Vierstrom-Triebzug für den internationalen Spitzenverkehr (historisch)', vorlaeufig: false,
     text: ['Der RAe TEE II verband die Schweiz ohne Lokwechsel mit Deutschland, Frankreich, Italien und den Niederlanden.', 'Seine Vierstromtechnik machte ihn zu einem der technisch anspruchsvollsten europäischen Triebzüge seiner Zeit.'],
     kennzahlen: [['5', 'Triebzüge'], ['140 km/h', 'im Betrieb · technisch 160 km/h'], ['1961', 'erste Inbetriebnahme'], ['4', 'Stromsysteme']],
-    daten: { 'Hersteller': 'SIG, MFO', 'Zugbildung': 'sechsteilig', 'Spurweite': 'Normalspur, 1435 mm', 'Stromsystem': '15 kV und 25 kV AC, 1,5 kV und 3 kV DC', 'Länge': '149,76 m', 'Gewicht': 'ca. 309 t Dienstmasse', 'Leistung': 'ca. 2310 kW', 'Höchstgeschwindigkeit': '140 km/h betrieblich, 160 km/h technisch', 'Nummern': '1051–1055', 'Anzahl': '5', 'In Betrieb seit': '1961 (fünfter Zug 1967)', 'Einsatz': 'Trans-Europ-Express, später EuroCity' },
+    daten: { 'Hersteller': 'SIG, MFO', 'Zugbildung': 'sechsteilig (erhaltener Zustand; die ersten vier Züge waren ursprünglich fünfteilig)', 'Spurweite': 'Normalspur, 1435 mm', 'Stromsystem': '15 kV und 25 kV AC, 1,5 kV und 3 kV DC', 'Länge': '149,76 m', 'Gewicht': 'ca. 309 t Dienstmasse', 'Leistung': 'ca. 2310 kW', 'Höchstgeschwindigkeit': '140 km/h betrieblich, 160 km/h technisch', 'Nummern': '1051–1055', 'Anzahl': '5', 'In Betrieb seit': '1961 (fünfter Zug 1967)', 'Einsatz': 'Trans-Europ-Express, später EuroCity' },
     specOrder: ['Hersteller', 'Zugbildung', 'Spurweite', 'Stromsystem', 'Länge', 'Gewicht', 'Leistung', 'Höchstgeschwindigkeit', 'Nummern', 'Anzahl', 'In Betrieb seit', 'Einsatz'],
     abschnitte: [
-      { titel: 'Geschichte und Einsatz', p: ['Vier Einheiten wurden 1961 abgeliefert, der fünfte Zug folgte 1967. Die eleganten Triebzüge liefen unter anderem als TEE Gottardo, Cisalpin, Edelweiss und Roland.', 'Ab 1988 fuhren sie als graue RABe EC im EuroCity-Verkehr.'] },
+      { titel: 'Geschichte und Einsatz', p: ['Vier Einheiten wurden 1961 fünfteilig abgeliefert und später um einen Zwischenwagen verlängert; der fünfte Zug folgte 1967. Die eleganten Triebzüge liefen unter anderem als TEE Gottardo, Cisalpin, Edelweiss und Roland.', 'Ab 1988 fuhren sie als graue RABe EC im EuroCity-Verkehr.'] },
       { titel: 'Erhaltung', p: ['Der Zug RAe TEE II 1053 blieb erhalten. SBB Historic versetzte ihn wieder in den rot-beigen TEE-Zustand; seit 2003 fährt er bei historischen Sonderfahrten.'] }
     ],
     quellen: ['Wikipedia – SBB RAe TEE II: Bau, Technik und Einsatzgeschichte', 'SBB Archiv – RAe TEE II 1053: historisches Fahrzeugporträt'],
@@ -1316,12 +1316,12 @@ const ZUEGE = [
       { src: 'bilder/h-tee-c5.jpg', titel: 'RAe TEE II in Zürich HB, 1963', foto: 'Heinz Baumann', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:ETH-BIB_Com_C12-127-001-006_FFS_RAe_TEE_II_Zuerich_HB_1963.jpg' }
     ] },
   { id: 'h-roterpfeil', kat: 'historisch', name: 'RCe 2/4', beiname: 'Roter Pfeil', typ: 'Elektrischer Leichttriebwagen für Ausflugs- und Schnellfahrten (historisch)', vorlaeufig: false,
-    text: ['Die eleganten Leichttriebwagen wurden 1935 als CLe 2/4 geliefert und später zu RCe 2/4 umgezeichnet.', 'Ihre rote Stromlinienform machte sie zu einem der bekanntesten Symbole der modernen SBB der 1930er-Jahre.'],
+    text: ['Die sieben elektrischen Roten Pfeile wurden zwischen 1935 und 1938 als CLe 2/4 geliefert und später mehrmals umgezeichnet.', 'Ihre rote Stromlinienform machte sie zu einem der bekanntesten Symbole der modernen SBB der 1930er-Jahre.'],
     kennzahlen: [['7', 'elektrische Grundfahrzeuge'], ['125 km/h', 'Höchstgeschwindigkeit'], ['1935', 'erste Inbetriebnahme'], ['70', 'Sitzplätze']],
     daten: { 'Hersteller': 'SLM, MFO, BBC, SAAS', 'Achsfolge': 'Bo′2′', 'Spurweite': 'Normalspur, 1435 mm', 'Stromsystem': '15 kV 16,7 Hz AC', 'Länge': '22,40 m', 'Gewicht': 'ca. 38 t Dienstmasse', 'Leistung': '404 kW Stundenleistung, 315 kW Dauerleistung', 'Höchstgeschwindigkeit': '125 km/h', 'Sitzplätze': '70', 'Nummern': '201–207, später 601–607', 'Anzahl': '7', 'In Betrieb seit': '1935', 'Spätere Bezeichnung': 'RBe 2/4', 'Ausmusterung': '1967–1984', 'Einsatz': 'Ausflugs- und Gesellschaftsfahrten, schnelle Sonderleistungen' },
     specOrder: ['Hersteller', 'Achsfolge', 'Spurweite', 'Stromsystem', 'Länge', 'Gewicht', 'Leistung', 'Höchstgeschwindigkeit', 'Sitzplätze', 'Nummern', 'Anzahl', 'In Betrieb seit', 'Spätere Bezeichnung', 'Ausmusterung', 'Einsatz'],
     abschnitte: [
-      { titel: 'Bezeichnungen und Umbauten', p: ['Aus den sieben elektrischen CLe 2/4 entstanden ab 1944 RCe 2/4. Zwei Fahrzeuge wurden 1952/53 zu RAe 2/4 mit Polstersitzen umgebaut.', 'Deshalb unterscheiden sich Bestandsangaben je nach Bezeichnung und Zeitspanne.'] },
+      { titel: 'Bezeichnungen und Umbauten', p: ['Geliefert wurden die Wagen 201 und 202 im Jahr 1935, 203–206 im Jahr 1936 und 207 im Jahr 1938. Später trugen sie unter anderem die Bezeichnung RCe 2/4. Die Wagen 201 und 206 wurden 1952 und 1953 verlängert und für die 1. Klasse umgebaut (RAe 2/4); andere trugen zuletzt die Bezeichnung RBe 2/4.', 'Deshalb unterscheiden sich Bestandsangaben je nach Bezeichnung und Zeitspanne.'] },
       { titel: 'Einsatz und Bedeutung', p: ['Die Roten Pfeile dienten Ausflugsfahrten, Gesellschaftsreisen und schnellen Sonderleistungen. Ihr geringes Gewicht und die aerodynamische Form verkörperten den technischen Aufbruch der Zwischenkriegszeit.'] }
     ],
     quellen: ['Wikipedia – SBB CLe 2/4 und RCe 2/4: Bau, Umbauten und technische Daten', 'SBB Historic – Fahrzeugsammlung und historische Rote Pfeile'],
@@ -1342,7 +1342,7 @@ const ZUEGE = [
       { src: 'bilder/h-a35-c1.jpg', titel: 'A 3/5 705 neben der Ae 3/6 I 10694 in Arnex-sur-Orbe, 1967', foto: 'Hans-Peter Bärtschi', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:ETH-BIB_SIK_01-003226_FFS_A_3-5_705_Ae_3-6_I_10694_Arnex-sur-Orbe_230967.jpg' }
     ] },
   { id: 'h-c56', kat: 'historisch', name: 'C 5/6', beiname: 'Elefant', typ: 'Dampflokomotive für schwere Gotthardzüge (historisch)', vorlaeufig: false,
-    text: ['Die C 5/6 war die grösste Dampflokomotivserie der SBB und zugleich ihre letzte normalspurige Dampflok-Neubeschaffung.', 'Der Übername «Elefant» verweist auf die mächtige Erscheinung und die hohe Zugkraft.'],
+    text: ['Die C 5/6 gehörte zu den grössten und leistungsfähigsten Dampflokomotiven der SBB. Sie war zugleich die letzte normalspurige Dampflok-Neubeschaffung.', 'Der Übername «Elefant» verweist auf die mächtige Erscheinung und die hohe Zugkraft.'],
     kennzahlen: [['28', 'Serienlokomotiven'], ['65 km/h', 'Höchstgeschwindigkeit'], ['1913', 'erste Inbetriebnahme'], ['128 t', 'mit Tender']],
     daten: { 'Hersteller': 'SLM Winterthur', 'Bauart': '1′E h4v', 'Spurweite': 'Normalspur, 1435 mm', 'Länge': '19,195 m mit Tender', 'Gewicht': '128 t mit Tender', 'Leistung': 'ca. 1190 kW (indiziert)', 'Kesseldruck': '15 bar', 'Höchstgeschwindigkeit': '65 km/h', 'Nummern': '2951–2978', 'Anzahl': '28', 'In Betrieb seit': '1913 (Baujahre 1913–1917)', 'Ausmusterung': 'bis 1968', 'Einsatz': 'schwere Güterzüge' },
     specOrder: ['Hersteller', 'Bauart', 'Spurweite', 'Länge', 'Gewicht', 'Leistung', 'Kesseldruck', 'Höchstgeschwindigkeit', 'Nummern', 'Anzahl', 'In Betrieb seit', 'Ausmusterung', 'Einsatz'],
@@ -1361,7 +1361,7 @@ const ZUEGE = [
   { id: 'h-eb35', kat: 'historisch', name: 'Eb 3/5', beiname: 'Habersack', typ: 'Vielseitige Tenderlokomotive (historisch)', vorlaeufig: false,
     text: ['Die Eb 3/5 war eine kräftige Tenderlokomotive für Personen-, Güter- und Rangierdienste.', 'Ihre gedrungene Form brachte ihr den volkstümlichen Übernamen «Habersack» ein.'],
     kennzahlen: [['34', 'Lokomotiven'], ['75 km/h', 'Höchstgeschwindigkeit'], ['1911', 'erste Inbetriebnahme'], ['74–74,9 t', 'Dienstmasse']],
-    daten: { 'Hersteller': 'SLM Winterthur', 'Bauart': '1′C1′ Tenderlokomotive', 'Spurweite': 'Normalspur, 1435 mm', 'Gewicht': '57,6–58,8 t leer, 74–74,9 t Dienstmasse', 'Treibraddurchmesser': '1520 mm', 'Kesseldruck': 'rund 12 bar', 'Vorräte': '7,7 m³ Wasser, 2,5 t Kohle', 'Höchstgeschwindigkeit': '75 km/h', 'Nummern': '5801–5834', 'Anzahl': '34', 'In Betrieb seit': '1911 (Baujahre 1911–1916)', 'Ausmusterung': '1953–1965', 'Einsatz': 'Regionalzüge, Nebenbahnen, Stationsdienst' },
+    daten: { 'Hersteller': 'SLM Winterthur', 'Bauart': '1′C1′ Tenderlokomotive', 'Spurweite': 'Normalspur, 1435 mm', 'Länge': '12,74 m über Puffer (Eb 3/5 5819)', 'Gewicht': '57,6–58,8 t leer, 74–74,9 t Dienstmasse', 'Treibraddurchmesser': '1520 mm', 'Kesseldruck': 'rund 12 bar', 'Vorräte': '7,7 m³ Wasser, 2,5 t Kohle', 'Höchstgeschwindigkeit': '75 km/h', 'Nummern': '5801–5834', 'Anzahl': '34', 'In Betrieb seit': '1911 (Baujahre 1911–1916)', 'Ausmusterung': '1953–1965', 'Einsatz': 'Regionalzüge, Nebenbahnen, Stationsdienst' },
     specOrder: ['Hersteller', 'Bauart', 'Spurweite', 'Gewicht', 'Treibraddurchmesser', 'Kesseldruck', 'Vorräte', 'Höchstgeschwindigkeit', 'Nummern', 'Anzahl', 'In Betrieb seit', 'Ausmusterung', 'Einsatz'],
     abschnitte: [
       { titel: 'Geschichte und Einsatz', p: ['Die symmetrische Achsfolge erlaubte gute Fahreigenschaften in beiden Richtungen, ohne dass die Lokomotive gewendet werden musste.', 'Damit eignete sich die Eb 3/5 besonders für Nebenbahnen, Regionalzüge und vielseitige Stationsdienste.'] },

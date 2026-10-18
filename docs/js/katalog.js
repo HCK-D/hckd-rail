@@ -10,7 +10,7 @@ const katOf = id => KATS.find(k => k.id === id);
 const klein = src => window.HCKD_SEITEN ? String(src).replace(/^bilder\//, 'bilder/klein/') : String(src);
 const zugOf = id => ZUEGE.find(z => z.id === id);
 const inKat = id => ZUEGE.filter(z => z.kat === id);
-const fullName = z => { const b = zt(z, 'beiname'); return z.name + (b ? ' «' + b + '»' : ''); };
+const fullName = z => { const b = zt(z, 'beiname'); return zn(z) + (b ? ' «' + b + '»' : ''); };
 // German name for reports by mail (the mailbox is German)
 const fullNameDe = z => z.name + (z.beiname ? ' «' + z.beiname + '»' : '');
 // photo caption of a vehicle photo found by its file (cover photos of the categories)
@@ -111,7 +111,7 @@ $('#kat-grid').innerHTML = KATS.map(k => {
       <span class="kat-code">${esc(tr('Kategorie'))} ${k.code}</span>
       <h3 class="kat-title">${esc(tr(k.name))}</h3>
       <p class="kat-text">${esc(tr(k.text))}</p>
-      <ul class="names" aria-label="${esc(tr('Fahrzeuge'))}">${shown.map(z => `<li>${esc(z.name)}</li>`).join('')}${list.length > shown.length ? `<li class="more-n">${esc(tr('+{n} weitere', { n: list.length - shown.length }))}</li>` : ''}</ul>
+      <ul class="names" aria-label="${esc(tr('Fahrzeuge'))}">${shown.map(z => `<li>${esc(zn(z))}</li>`).join('')}${list.length > shown.length ? `<li class="more-n">${esc(tr('+{n} weitere', { n: list.length - shown.length }))}</li>` : ''}</ul>
       <div class="kat-foot"><span class="count">${esc(tr('{n} Fahrzeuge', { n: list.length }))}<span class="seen-n" data-seen-kat="${k.id}"></span></span><span class="go">${esc(tr('Öffnen'))} ${arrow}</span></div>
     </div></a></li>`;
 }).join('');
@@ -120,7 +120,7 @@ $('#kat-grid').innerHTML = KATS.map(k => {
 const q = $('#q'), results = $('#results');
 const norm = s => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, '');
 // German and translated names both count, so «Krokodil» and «Crocodile» both find the Ce 6/8
-const hay = ZUEGE.map(z => ({ z, h: norm([z.name, z.beiname, z.typ, katOf(z.kat).name, z.daten['Hersteller'] || '', zt(z, 'beiname'), zt(z, 'typ'), tr(katOf(z.kat).name)].join(' ')) }));
+const hay = ZUEGE.map(z => ({ z, h: norm([z.name, zn(z), z.beiname, z.typ, katOf(z.kat).name, z.daten['Hersteller'] || '', zt(z, 'beiname'), zt(z, 'typ'), tr(katOf(z.kat).name)].join(' ')) }));
 let sel = 0, hits = [], nrHit = null;
 // vehicle number: "460 058", "460058-6", the full number "91 85 4460 058-0" or an old one like "11108"
 function loknummer(text) {
@@ -224,11 +224,11 @@ function sortiert(list) {
 katSort.addEventListener('change', () => renderKatList());
 function renderKatList() {
   const v = norm(katQ.value);
-  const list = sortiert(inKat(curKat.id).filter(z => !v || norm(z.name + z.beiname + z.typ + zt(z, 'beiname') + zt(z, 'typ')).includes(v)));
+  const list = sortiert(inKat(curKat.id).filter(z => !v || norm(z.name + zn(z) + z.beiname + z.typ + zt(z, 'beiname') + zt(z, 'typ')).includes(v)));
   const card = z => `<li><a class="card" href="#${z.id}">
     <div class="art-panel">${z.bilder && z.bilder.length ? `<img class="photo" src="${esc(klein(z.bilder[0].src))}" alt="" loading="lazy">` : art(z)}${istGesehen(z.id) ? `<span class="seen-badge">${esc(tr('Gesehen'))}</span>` : ''}</div>
     <div class="card-body">
-      <h2 class="card-name">${esc(z.name)}${zt(z, 'beiname') ? ` <small>«${esc(zt(z, 'beiname'))}»</small>` : ''}</h2>
+      <h2 class="card-name">${esc(zn(z))}${zt(z, 'beiname') ? ` <small>«${esc(zt(z, 'beiname'))}»</small>` : ''}</h2>
       <p class="card-typ">${esc(zt(z, 'typ'))}</p>
       <ul class="facts">${cardFacts(z)}</ul>
     </div></a></li>`;
@@ -332,15 +332,15 @@ const gal = makeSlider(slidesEl, $('#sl-prev'), $('#sl-next'), i => {
 function slideInner(z, m, i) {
   if (m.src) return `<img src="${esc(m.src)}" alt="${esc(m.titel)}" ${i > 0 ? 'loading="lazy"' : ''} draggable="false">`;
   if (m.art) return art(z);
-  return `<div class="ph-box"><b>${esc(tr('{t} folgt', { t: m.titel }))}</b><span>${esc(tr('Noch kein Foto von {name}. Hast du eines?', { name: z.name }))}</span><button class="report-btn" type="button" data-fotos="zug">${esc(tr('Foto einsenden'))}</button></div>`;
+  return `<div class="ph-box"><b>${esc(tr('{t} folgt', { t: m.titel }))}</b><span>${esc(tr('Noch kein Foto von {name}. Hast du eines?', { name: zn(z) }))}</span><button class="report-btn" type="button" data-fotos="zug">${esc(tr('Foto einsenden'))}</button></div>`;
 }
 function renderZug(z) {
   curZug = z;
   const k = katOf(z.kat), list = inKat(k.id), idx = list.indexOf(z);
-  $('#zug-crumbs').innerHTML = `<li><a href="#start">${esc(tr('Start'))}</a></li><li><a href="#${k.id}">${esc(tr(k.name))}</a></li><li aria-current="page">${esc(z.name)}</li>`;
+  $('#zug-crumbs').innerHTML = `<li><a href="#start">${esc(tr('Start'))}</a></li><li><a href="#${k.id}">${esc(tr(k.name))}</a></li><li aria-current="page">${esc(zn(z))}</li>`;
   $('#zug-typ').textContent = zt(z, 'typ');
   const bei = zt(z, 'beiname');
-  $('#zug-title').innerHTML = esc(z.name) + (bei ? ` <span class="beiname">«${esc(bei)}»</span>` : '');
+  $('#zug-title').innerHTML = esc(zn(z)) + (bei ? ` <span class="beiname">«${esc(bei)}»</span>` : '');
   $('#zug-pill').hidden = z.vorlaeufig === false;
   const kz = $('#zug-kz'), kzl = zt(z, 'kennzahlen') || [];
   kz.innerHTML = kzl.map(([v, l]) => `<li><b>${esc(v)}</b><span>${esc(l)}</span></li>`).join('');
@@ -371,8 +371,8 @@ function renderZug(z) {
   $('#zug-secs').innerHTML = secs + qu;
   const prev = list[idx - 1], next = list[idx + 1];
   $('#zug-pager').innerHTML =
-    (prev ? `<a href="#${prev.id}"><small>${esc(tr('Vorheriges'))}</small><b>${esc(prev.name)}</b></a>` : `<a class="blank" aria-hidden="true" tabindex="-1"><small>&nbsp;</small><b>&nbsp;</b></a>`) +
-    (next ? `<a class="next" href="#${next.id}"><small>${esc(tr('Nächstes'))}</small><b>${esc(next.name)}</b></a>` : `<a class="next" href="#${k.id}"><small>${esc(tr('Zurück zu'))}</small><b>${esc(tr(k.name))}</b></a>`);
+    (prev ? `<a href="#${prev.id}"><small>${esc(tr('Vorheriges'))}</small><b>${esc(zn(prev))}</b></a>` : `<a class="blank" aria-hidden="true" tabindex="-1"><small>&nbsp;</small><b>&nbsp;</b></a>`) +
+    (next ? `<a class="next" href="#${next.id}"><small>${esc(tr('Nächstes'))}</small><b>${esc(zn(next))}</b></a>` : `<a class="next" href="#${k.id}"><small>${esc(tr('Zurück zu'))}</small><b>${esc(tr(k.name))}</b></a>`);
 }
 $('#zug-thumbs').addEventListener('click', e => { const b = e.target.closest('.thumb'); if (b) gal.go(+b.dataset.i); });
 

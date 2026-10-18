@@ -32,7 +32,7 @@ uebZug('lrz-14', {
   abschnitte: [
     { titel: 'Acquisto', p: ['Le due composizioni sono state acquistate dal 2012 e rese operative prima della messa in servizio della galleria di base del San Gottardo.'] },
     { titel: 'Due unità di salvataggio', p: ['Ogni veicolo di salvataggio offre posto a circa 60 persone, oppure a 40 persone e sei barelle. I locali pressurizzati, le chiuse e gli attacchi medici permettono evacuazioni da tratti di galleria invasi dal fumo.'] },
-    { titel: 'Profilo di prestazioni', p: ['La composizione a quattro elementi offre più agente estinguente, aria respirabile e capacità di salvataggio delle generazioni precedenti. Più veicoli motorizzati assicurano elevato sforzo di trazione e ridondanza.'] }
+    { titel: 'Profilo di prestazioni', p: ['Grazie al secondo veicolo di salvataggio, la composizione a quattro elementi offre più capacità di salvataggio e più aria respirabile delle generazioni precedenti. Più veicoli motorizzati assicurano elevato sforzo di trazione e ridondanza.'] }
   ],
   bilder: ['Nuovo TSS 14 al centro di manutenzione e intervento di Erstfeld', 'TSS 14 «Uri» nella stazione di Erstfeld', 'TSS 14 «Uri» dei pompieri aziendali di Erstfeld', 'TSS 14 a Erstfeld']
 });
@@ -65,6 +65,7 @@ uebZug('lrz-04', {
 });
 
 uebZug('xrotm', {
+  name: 'Frese da neve',
   typ: 'Veicoli speciali per lo sgombero della neve',
   text: ['FFS Infrastruttura utilizza diversi tipi di frese da neve semoventi.', 'Il regolamento d’esercizio distingue quattro serie, che svolgono compiti diversi secondo la quantità di neve, la linea e il luogo d’impiego.'],
   kennzahlen: [['4', 'serie nel regolamento'], ['17', 'veicoli secondo i campi di numerazione'], ['60–80 km/h', 'Vmax dei tipi grandi'], ['95–115', 'numeri d’esercizio']],
@@ -78,6 +79,7 @@ uebZug('xrotm', {
 });
 
 uebZug('diagnose', {
+  name: 'Veicolo diagnostico',
   typ: 'Veicolo diagnostico semovente Mermec Xtmass',
   text: ['Il veicolo diagnostico semovente Xtmass ROGER 1000 controlla lo stato dell’infrastruttura ferroviaria ad alta velocità.', 'Sistemi di misura rilevano binario, linea di contatto e altri impianti senza interrompere inutilmente l’esercizio regolare.'],
   kennzahlen: [['160 km/h', 'velocità massima'], ['672 kW', 'potenza massima'], ['64 t', 'massa a vuoto'], ['23,9 m', 'lunghezza del veicolo']],
@@ -129,7 +131,7 @@ uebZug('kirow-krc-100', {
   typ: 'Gru ferroviaria girevole compatta per costruzione e intervento',
   text: ['La Kirow KRC 100 è una gru ferroviaria girevole compatta delle FFS. Dodici veicoli sono stati consegnati nel 2006 e nel 2007.', 'Il piccolo raggio posteriore e il contrappeso fisso permettono di lavorare influenzando poco i binari vicini.'],
   kennzahlen: [['12', 'gru consegnate'], ['2006–2007', 'consegna'], ['70 t', 'massa in servizio della gru'], ['120 km/h', 'ammessa al traino']],
-  daten: { 'Länge': '11,0 m respingenti compresi', 'Gewicht': '70 t in servizio', 'Tragfähigkeit': 'fino a circa 20 t, secondo lo sbraccio', 'Höchstgeschwindigkeit': '120 km/h al traino', 'Gegengewicht': 'fisso', 'In Betrieb seit': '2006–2007 (dic. 2006 – ott. 2007)', 'Einsatz': 'costruzione di binari, posa di pali, intervento' },
+  daten: { 'Länge': '11,0 m respingenti compresi', 'Gewicht': '70 t in servizio', 'Tragfähigkeit': 'secondo lo sbraccio, portata massima non documentata', 'Höchstgeschwindigkeit': '120 km/h al traino', 'Gegengewicht': 'fisso', 'In Betrieb seit': '2006–2007 (dic. 2006 – ott. 2007)', 'Einsatz': 'costruzione di binari, posa di pali, intervento' },
   specNote: 'La portata delle gru ferroviarie dipende fortemente da sbraccio, stabilizzatori e posizione del binario.',
   abschnitte: [
     { titel: 'Acquisto', p: ['Kirow ha consegnato dodici KRC 100 tra dicembre 2006 e ottobre 2007. La serie è stata acquistata per interventi decentralizzati di costruzione e soccorso.'] },
@@ -150,6 +152,7 @@ uebZug('bendini', {
 });
 
 uebZug('fahrleitung', {
+  name: 'Veicoli per la linea di contatto',
   typ: 'Veicoli di servizio per la costruzione e la manutenzione della linea di contatto',
   text: ['I veicoli per la linea di contatto portano personale, attrezzi e materiale direttamente alla linea aerea.', 'FFS Infrastruttura usa a tale scopo diverse serie e versioni; esempi citati pubblicamente sono Hubi, Krani e Combi 4A.'],
   kennzahlen: [['diversi', 'serie e versioni'], ['Hubi', 'esempio di veicolo'], ['Krani', 'esempio di veicolo'], ['Combi 4A', 'esempio di veicolo']],

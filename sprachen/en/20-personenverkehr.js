@@ -199,7 +199,7 @@ uebZug('rabe-520', {
 });
 
 uebZug('rabe-521', {
-  typ: 'Dual-system FLIRT for Germany and Switzerland',
+  typ: 'Single-system FLIRT approved for Switzerland and Germany',
   text: ['The RABe 521 is a four-car FLIRT for cross-border regional services between north-western Switzerland and Germany.', 'It is an important part of the Basel regional S-Bahn and also runs on the Seehas service.'],
   kennzahlen: [['39', 'trains'], ['160 km/h', 'top speed'], ['2004', 'first in service'], ['74.08 m', 'length']],
   daten: { 'Zugbildung': '4 cars', 'Gewicht': '120 t empty, 152 t loaded', 'Leistung': '2656 kW (FOS train type value)', 'Nummern': '521 001–030 and 201–209', 'Einsatz': 'Basel S-Bahn, Seehas, Switzerland–Germany' },

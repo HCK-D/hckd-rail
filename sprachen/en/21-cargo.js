@@ -41,7 +41,7 @@ uebZug('re-420', {
 
 uebZug('re-620', {
   typ: 'Six-axle mainline locomotive',
-  text: ['The Re 620, formerly Re 6/6, was developed for heavy passenger and freight trains on the Gotthard and Simplon routes.', 'Its three two-axle bogies combine high tractive effort with approval for the higher curve speeds of train series R.'],
+  text: ['The Re 620, formerly Re 6/6, was developed for heavy passenger and freight trains on the Gotthard and Simplon routes.', 'Its three two-axle bogies combine high tractive effort with approval for the higher curve speeds of train category R.'],
   kennzahlen: [['89', 'locomotives built'], ['7832 kW', 'one-hour rating at the wheel'], ['140 km/h', 'top speed'], ['1972–1980', 'construction period']],
   daten: { 'Achsfolge': 'Bo′Bo′Bo′, 6 driven axles', 'Länge': '19.31 m over buffers', 'Gewicht': '120 t in working order', 'Leistung': '7244 kW continuous at the wheel (7832 kW one-hour rating)', 'Elektrische Bremse': 'regenerative', 'In Betrieb seit': '1972; series 1975–1980', 'Hersteller': 'mechanical part SLM Winterthur; electrical part and assembly BBC, partly SAAS' },
   abschnitte: [

@@ -67,8 +67,11 @@ foreach ($l in $sprachen) {
   if ($l -ne 'de') {
     $js = [IO.File]::ReadAllText((Join-Path $root "js\sprachen\$l.js"), [Text.Encoding]::UTF8)
     foreach ($m in [regex]::Matches($js, "$jsStr\s*:\s*$jsStr")) { $k = Unjs $m.Groups[1].Value; if (-not $d.ContainsKey($k)) { $d[$k] = Unjs $m.Groups[2].Value } }
-    foreach ($m in [regex]::Matches($js, "uebZug\('([^']+)', \{\s*(?:beiname: $jsStr,\s*)?typ: $jsStr")) {
-      $z[$m.Groups[1].Value] = [pscustomobject]@{ bei = if ($m.Groups[2].Success) { Unjs $m.Groups[2].Value } else { $null }; typ = Unjs $m.Groups[3].Value }
+    foreach ($m in [regex]::Matches($js, "uebZug\('([^']+)', \{\s*(?:name: $jsStr,\s*)?(?:beiname: $jsStr,\s*)?typ: $jsStr")) {
+      $z[$m.Groups[1].Value] = [pscustomobject]@{
+        name = if ($m.Groups[2].Success) { Unjs $m.Groups[2].Value } else { $null }
+        bei = if ($m.Groups[3].Success) { Unjs $m.Groups[3].Value } else { $null }
+        typ = Unjs $m.Groups[4].Value }
     }
   }
   $uebDict[$l] = $d; $uebZug[$l] = $z
@@ -129,7 +132,8 @@ function Kopf([string]$l, $s) {
       $u = $uebZug[$l][$s.id]
       $bei = if ($u -and $null -ne $u.bei) { $u.bei } else { Tr $l $s.bei }
       $typ = if ($u) { $u.typ } else { $s.typ }
-      $titel = if ($bei) { "$($s.name) «$bei»" } else { $s.name }
+      $name = if ($u -and $u.name) { $u.name } else { $s.name }
+      $titel = if ($bei) { "$name «$bei»" } else { $name }
       return @($titel, "$titel`: $typ ($(Tr $l $katName[$s.kat])). $($fix[$l].zug)")
     }
     default { return @($fix[$l][$s.id], $fix[$l][$s.id + 'Text']) }

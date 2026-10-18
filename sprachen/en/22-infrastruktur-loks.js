@@ -66,7 +66,7 @@ uebZug('tmf-232', {
   typ: 'Modernised engineering tractor with radio remote control',
   text: ['The Tmf 232 was created by modernising Tm IV engineering tractors. In 2013 SBB Infrastructure ordered the conversion of 15 vehicles.', 'The «f» in the designation stands for radio remote control (Funkfernsteuerung).'],
   kennzahlen: [['15', 'vehicles in the conversion order'], ['2013', 'modernisation order'], ['280 kW', 'diesel power'], ['60 km/h', 'top speed under own power']],
-  daten: { 'Umbau': 'ORTICS, at the SBB industrial works in Biel', 'Antrieb': 'diesel-hydraulic, Caterpillar engine', 'Länge': '7.67 m over buffers', 'Gewicht': 'around 30 t', 'Höchstgeschwindigkeit': '60 km/h under own power, 90 km/h when hauled', 'Steuerung': 'radio remote control and multiple-unit control', 'In Betrieb seit': '2013 (conversion order)', 'Einsatz': 'engineering and shunting work' },
+  daten: { 'Umbau': 'ORTICS, at the SBB industrial works in Biel', 'Antrieb': 'diesel-hydraulic, Caterpillar engine', 'Länge': '7.67 m over buffers', 'Gewicht': 'around 30 t', 'Höchstgeschwindigkeit': '60 km/h under own power, 90 km/h when hauled', 'Steuerung': 'radio remote control and multiple-unit control', 'Umbauauftrag': '2013 (first use after conversion not documented)', 'Einsatz': 'engineering and shunting work' },
   specNote: '2013 is the documented year of the modernisation order, not the original year of construction of the donor Tm IV.',
   abschnitte: [
     { titel: 'Modernisation', p: ['In 2013 ORTICS was commissioned by SBB Infrastructure to modernise 15 Tm IV. Frame, bodywork, wheelsets and transmission were largely retained; the engine, control and safety systems were renewed and a radio remote control installed.'] },

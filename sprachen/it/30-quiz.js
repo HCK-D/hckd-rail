@@ -46,7 +46,7 @@ uebQuiz('normal', [
   { f: 'Attraverso quale galleria passa il Giruno da Zurigo a Milano?', a: ['Galleria di base del San Gottardo', 'Galleria di base del Lötschberg', 'Galleria del Sempione', 'Galleria della Vereina'] },
   { f: 'Quale treno deve sostituire il Domino alle FFS dal 2028?', a: ['FLIRT Evo', 'Giruno', 'KISS', 'ICN'] },
   { f: 'Chi ha costruito il FV-Dosto?', a: ['Bombardier (oggi Alstom)', 'Stadler', 'Siemens', 'SLM Winterthur'] },
-  { f: 'Quale locomotiva va a corrente e ha in più un motore diesel per i cantieri?', a: ['Aem 940', 'Re 460', 'Ee 922', 'Re 482'] },
+  { f: 'Quale locomotiva va a corrente e ha in più due gruppi diesel-generatori per i cantieri?', a: ['Aem 940', 'Re 460', 'Ee 922', 'Re 482'] },
   { f: 'Quanti posti a sedere ha un Giruno?', a: ['405', '172', '682', '1000'], info: 'A questi si aggiungono 17 posti nel ristorante.' },
   { f: 'Che treno è questo?', a: ['RABe 503 «Astoro»', 'RABe 501 «Giruno»', 'RABDe 500 «ICN»', 'RBDe 560 «Domino»'] },
   { f: 'Questa locomotiva è una Re 465. Quale ferrovia la impiega?', a: ['BLS', 'FFS Cargo', 'Ferrovia retica', 'Südostbahn'], info: 'La Re 465 è la sorella più potente della Re 460.' },

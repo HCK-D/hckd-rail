@@ -61,7 +61,7 @@ uebZug('xas-53', {
   typ: 'Wagon porte-bennes avec rails de roulement latéraux',
   text: ['Le Xas 53 transporte des bennes interchangeables pour le ballast, les résidus de criblage et le matériau PSS.', 'Des rails de roulement latéraux permettent de déplacer les bennes en liaison avec les machines de voie.'],
   kennzahlen: [['100 km/h', 'vitesse maximale'], ['19,9 m', 'longueur'], ['31,0 t', 'poids à vide'], ['7', 'bennes par wagon']],
-  daten: { 'Fahrzeugart': 'wagon porte-bennes', 'Gewicht': '31,0 t à vide, 78 t en charge', 'Nutzlast': 'jusqu’à env. 46,6 t (calculée)', 'Behälter': '7 bennes d’env. 4 m³ chacune', 'Ausrüstung': 'rails de roulement latéraux, bâches possibles', 'Einsatz': 'trains de criblage et de travaux' },
+  daten: { 'Fahrzeugart': 'wagon porte-bennes', 'Gewicht': '31,0 t à vide, 78 t en charge', 'Nutzlast': 'pas de valeur officielle (78 t − 31 t donnent env. 47 t)', 'Behälter': '7 bennes d’env. 4 m³ chacune', 'Ausrüstung': 'rails de roulement latéraux, bâches possibles', 'Einsatz': 'trains de criblage et de travaux' },
   specNote: 'Le catalogue des types de marche indique 77,6 t pour la dynamique de marche. La planification de la flotte prévoit le remplacement de la famille Xans/Xas 52/53.',
   abschnitte: [
     { titel: 'Logistique des bennes', p: ['Les bennes peuvent être déplacées, remplies et vidées à un endroit approprié au sein d’une chaîne de travail. Cela accélère l’évacuation continue des matériaux lors du dégarnissage et du renouvellement de voie.'] },
@@ -168,6 +168,7 @@ uebZug('silad-4', {
 });
 
 uebZug('silad-reserve', {
+  name: 'SILAD de réserve',
   beiname: '',
   typ: 'Unité compacte de chargement de rails de réserve',
   text: ['L’unité de réserve SILAD est disponible pour remplacer ou compléter les unités lors des chargements de rails.', 'Elle est nettement plus courte et plus légère que la SILAD 4 et est inscrite comme type de marche actif à part entière.'],
@@ -181,6 +182,7 @@ uebZug('silad-reserve', {
 });
 
 uebZug('ste-kurz', {
+  name: 'STE courte',
   beiname: 'Xans 51',
   typ: 'Unité de transport de rails avec deux grues pour rails de 12 à 36 m',
   text: ['Selon le document de formation, l’unité courte de transport de rails (STE) est basée sur un wagon plat Xans 51 à quatre essieux.', 'Deux petites grues déchargent les rails courts directement sur le chantier.'],
@@ -194,6 +196,7 @@ uebZug('ste-kurz', {
 });
 
 uebZug('ste-lang', {
+  name: 'STE longue',
   beiname: 'Xans 51',
   typ: 'Unité de transport de rails en plusieurs parties pour rails jusqu’à 120 m',
   text: ['La STE longue utilise des wagons Xans 51 équipés de grues pour transporter et décharger de longs rails.', 'Selon la présentation, une unité d’exploitation se compose de six wagons et atteint 120 mètres de long.'],
@@ -211,7 +214,7 @@ uebZug('xs-45', {
   text: ['Le Xs 45 est un wagon couvert de train de travaux pour l’outillage, les pièces de rechange et l’équipement d’atelier.', 'Il sert en même temps d’espace de travail et de soutien abrité pour les équipes de chantier.'],
   kennzahlen: [['2', 'essieux'], ['15,0 m', 'longueur'], ['16,5 t', 'poids à vide'], ['22 t', 'charge utile selon la présentation']],
   daten: { 'Gewicht': '16,5 t à vide, env. 38,5 t en charge (calculé)', 'Nutzlast': '22 t selon la présentation' },
-  specNote: 'Le catalogue actuel des types de marche ne mentionne pas le Xs 45 séparément ; les valeurs techniques proviennent du document de formation des CFF.',
+  specNote: 'Le catalogue des types de marche 2026 ne mentionne pas le Xs 45 séparément ; les valeurs proviennent du document de formation des CFF de 2022.',
   abschnitte: [
     { titel: 'Soutien du chantier', p: ['Les outils et les petites machines sont transportés à l’abri des intempéries et mis à disposition directement sur le lieu d’intervention. Le wagon complète les véhicules moteurs et les wagons de matériel du train de travaux.'] },
     { titel: 'Position de marche', p: ['Avant tout mouvement, les portes latérales, l’équipement mobile et les postes de travail doivent être assurés. Les personnes ne peuvent se trouver dans le wagon que dans les conditions d’exploitation autorisées.'] }
@@ -245,11 +248,12 @@ uebZug('xs-mannschaftswagen', {
 });
 
 uebZug('kirow-mannschaftswagen', {
+  name: 'Wagon d’équipe Kirow',
   beiname: '',
   typ: 'Wagon d’accompagnement des convois de grues Kirow 250, 800 et 1200',
-  text: ['Les grues Kirow 250, 800 et 1200 des CFF circulent en convois fixes avec un wagon d’équipe.', 'Ce wagon d’accompagnement soutient le personnel, l’outillage et la logistique d’intervention de la grue ferroviaire.'],
-  kennzahlen: [['3', 'types de grues avec wagon d’équipe'], ['1', 'wagon d’équipe par convoi'], ['80 km/h', 'vitesse du convoi'], ['actif', 'statut des convois en 2026']],
-  daten: { 'Fahrzeugrolle': 'wagon d’accompagnement dans le convoi de grue', 'Höchstgeschwindigkeit': '80 km/h (convoi entier)', 'Einzelfahrdaten': 'non publiées séparément', 'Fahrtypen': '5089–5091 (convois de grues entiers)' },
+  text: ['Le catalogue des types de marche 2026 recense des convois de grues Kirow 250, 800 et 1200, chacun avec un wagon d’équipe.', 'Ce wagon d’accompagnement soutient le personnel, l’outillage et la logistique d’intervention de la grue ferroviaire. Les deux KRC 800 des CFF ont été remplacées en 2016–2019 ; une entrée au catalogue ne prouve donc pas un effectif actuel.'],
+  kennzahlen: [['3', 'types de grues avec wagon d’équipe'], ['1', 'wagon d’équipe par convoi'], ['80 km/h', 'vitesse du convoi'], ['3', 'types de marche au catalogue 2026']],
+  daten: { 'Fahrzeugrolle': 'wagon d’accompagnement dans le convoi de grue', 'Höchstgeschwindigkeit': '80 km/h (convoi entier)', 'Einzelfahrdaten': 'non publiées séparément', 'Fahrtypen': '5089–5091 (convois de grues entiers)', 'Status': 'types de marche actifs au catalogue 2026 ; KRC 800 remplacées aux CFF en 2016–2019' },
   specNote: 'Dans le catalogue des types de marche, les CFF ne publient que les valeurs globales des convois de grues indissociables, et non les dimensions du wagon d’équipe seul.',
   abschnitte: [
     { titel: 'Attribution aux convois de grues', tabelle: { kopf: ['Grue', 'Formation', 'Convoi longueur / poids'], zeilen: [

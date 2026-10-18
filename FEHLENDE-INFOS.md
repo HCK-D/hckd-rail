@@ -88,3 +88,19 @@ Für diese Fahrzeuge lohnt es sich, Fotografen direkt zu fragen oder selbst zu f
 ## Tipp
 
 Am meisten bringt jetzt ein Katalogblatt für die Personenverkehrs-Züge aus Abschnitt 1 (z. B. RABe 503, RABe 512, IC2000). Beim Diagnose- und beim Fahrleitungsfahrzeug wäre es gut, ein bestimmtes Fahrzeug zu wählen, z. B. den Diagnosezug gDFZ oder einen bestimmten Fahrleitungs-Montagezug.
+
+## Offene Punkte aus dem Prüfbericht vom 18.10.2026
+
+Korrigiert wurden T01–T11 (ohne die unbelegte Dauerleistung der Ae 6/6), P05, P06, P08, L01–L10, G03, G04 und G05.
+Noch offen, weil dafür neue Belege nötig sind:
+
+- **P01 RABe 521:** erster Fahrgasteinsatz belegen (Wiesental ab 2005, Seehas ab 2006?). Auf der Seite steht weiter 2004.
+- **P02 Kirow KRC 100:** Länge 11,0 m mit Herstellerzeichnung belegen oder den abweichenden Katalogwert nennen.
+- **P03 Kirow KRC 100:** Höchstlast mit Traglastdiagramm belegen (die 20 t wurden entfernt).
+- **P04 Re 450, Ce 6/8 II, Ae 4/7:** Steckbriefe mit Quellen vervollständigen.
+- **P07 Anzahl:** überall klar zwischen gebaut, bestellt, umgebaut und aktuellem Bestand unterscheiden.
+- **T02 Ae 6/6:** Dauerleistung (laut Bericht rund 3860 kW am Rad) nur mit eigenem Beleg ergänzen.
+- **T09 Tmf 232:** Datum des ersten Einsatzes nach dem Umbau suchen.
+- **G01 Quellen:** zu jeder Quelle Link, Herausgeber, Datum und Seite ergänzen.
+- **G02 Leistung:** Leistungsart (Stunden-, Dauer-, Maximalleistung) und Messort einheitlich angeben.
+- **Netzkarte:** Daten sind von Juli 2021; bei Gelegenheit den neuen BAV-Datensatz einspielen.

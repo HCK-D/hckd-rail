@@ -33,7 +33,7 @@ uebZug('h-ce68iii', {
   kennzahlen: [['18', 'locomotives'], ['1926', 'première mise en service'], ['75 km/h', 'après transformation'], ['131 t', 'masse en service']],
   daten: { 'Hersteller': 'SLM, MFO', 'Antrieb': 'bielles obliques', 'Gewicht': '131 t en service', 'Leistung': '1810 kW puissance unihoraire', 'Höchstgeschwindigkeit': '65 km/h, plus tard 75 km/h', 'Nummern': '14301–14318, dès 1956 Be 6/8 III 13301–13318', 'In Betrieb seit': '1926 (construites 1926–1927)', 'Ausmusterung': 'service régulier jusqu’en 1977', 'Einsatz': 'trains marchandises lourds' },
   abschnitte: [
-    { titel: 'Histoire et service', p: ['La série était prévue pour les trains marchandises lourds au Gothard, sur les lignes d’accès et en plaine.', 'Dès 1956, les locomotives ont reçu un rapport de transmission plus rapide et ont été désignées Be 6/8 III. Le service régulier a pris fin en 1977.'] },
+    { titel: 'Histoire et service', p: ['La série était prévue pour les trains marchandises lourds au Gothard, sur les lignes d’accès et en plaine.', 'En 1956, la vitesse maximale autorisée a été portée à 75 km/h et la série a été redésignée Be 6/8 III. Le service régulier a pris fin en 1977.'] },
     { titel: 'Conservation', p: ['La Ce 6/8 III 14305 est conservée comme véhicule historique. Elle illustre la forme Crocodile des CFF, connue dans le monde entier.'] }
   ],
   bilder: ['Ce 6/8 III 14305', 'Ce 6/8 III lors d’une course de CFF Historic', 'Ce 6/8 III 14305 de côté', 'Ce 6/8 III 14305 en visite à Malmö (2015)', 'Plaque de constructeur de la Ce 6/8 III 14305']
@@ -43,8 +43,8 @@ uebZug('h-ae66', {
   beiname: 'Locomotive des cantons',
   typ: 'Locomotive des cantons et icône du Gothard (historique)',
   text: ['L’Ae 6/6 a été pendant des décennies la locomotive de puissance des CFF au Gothard.', 'Les 25 premières machines portaient les armoiries des cantons et des baguettes chromées ; les suivantes ont reçu les armoiries de villes et communes suisses.'],
-  kennzahlen: [['120', 'locomotives'], ['125 km/h', 'vitesse maximale'], ['1952', 'première mise en service'], ['4300 kW', 'puissance continue']],
-  daten: { 'Gewicht': '120 t (prototypes 124 t)', 'Leistung': '4300 kW puissance continue', 'In Betrieb seit': '1952 (série 1955–1966)', 'Einsatz': 'Gothard, trains voyageurs et marchandises lourds' },
+  kennzahlen: [['120', 'locomotives'], ['125 km/h', 'vitesse maximale'], ['1952', 'première mise en service'], ['4300 kW', 'puissance unihoraire']],
+  daten: { 'Gewicht': '120 t (prototypes 124 t)', 'Leistung': 'env. 4300 kW puissance unihoraire à la jante', 'In Betrieb seit': '1952 (série 1955–1966)', 'Einsatz': 'Gothard, trains voyageurs et marchandises lourds' },
   abschnitte: [
     { titel: 'Histoire et service', p: ['L’Ae 6/6 a d’abord marqué le trafic rapide et marchandises au Gothard. Avec l’arrivée de locomotives plus modernes, son service s’est déplacé de plus en plus vers le trafic marchandises et le Plateau.'] },
     { titel: 'Conservation', p: ['Plusieurs Ae 6/6 ont été conservées. L’Ae 6/6 11421 «Graubünden» fait partie de la collection de CFF Historic et maintient vivante l’époque des locomotives des cantons.'] }
@@ -85,10 +85,10 @@ uebZug('h-ae814', {
 });
 
 uebZug('h-be46', {
-  typ: 'Première locomotive électrique du Gothard (historique)',
+  typ: 'Locomotive de la première génération électrique du Gothard (historique)',
   text: ['La Be 4/6 faisait partie de la première génération de locomotives électriques du Gothard.', 'Sa forme caractéristique lui a valu le surnom de «Rehbock» (chevreuil) ; elle a d’abord tiré les lourds trains rapides sur la ligne de montagne.'],
   kennzahlen: [['40', 'locomotives'], ['75 km/h', 'vitesse maximale'], ['1920', 'première mise en service'], ['107–110 t', 'masse en service']],
-  daten: { 'Gewicht': '107–110 t en service', 'Leistung': 'jusqu’à 1500 kW puissance unihoraire', 'In Betrieb seit': '1920 (construites 1920–1923)', 'Ausmusterung': 'jusqu’en 1976', 'Einsatz': 'trains rapides et marchandises' },
+  daten: { 'Achsfolge': '6 essieux, dont 4 moteurs et 2 porteurs ; transmission par bielles', 'Gewicht': '107–110 t en service', 'Leistung': 'jusqu’à 1500 kW puissance unihoraire', 'In Betrieb seit': '1920 (construites 1920–1923)', 'Ausmusterung': 'jusqu’en 1976', 'Einsatz': 'trains rapides et marchandises' },
   abschnitte: [
     { titel: 'Histoire et service', p: ['Les CFF ont commandé la série pour l’exploitation électrique du Gothard. Avec l’augmentation de la masse des trains, les machines ont été évincées par des types plus puissants et engagées plus tard sur le Plateau et dans des services secondaires.'] },
     { titel: 'Conservation', p: ['La Be 4/6 12320 fait partie du parc de véhicules historiques. Elle rappelle l’époque pionnière de la traction électrique sur la ligne du Gothard.'] }
@@ -112,9 +112,9 @@ uebZug('h-tee', {
   typ: 'Rame automotrice quadricourant pour le trafic international haut de gamme (historique)',
   text: ['Le RAe TEE II reliait la Suisse sans changement de locomotive à l’Allemagne, la France, l’Italie et les Pays-Bas.', 'Sa technique quadricourant en a fait l’une des rames automotrices européennes les plus exigeantes techniquement de son époque.'],
   kennzahlen: [['5', 'rames'], ['140 km/h', 'en exploitation · technique 160 km/h'], ['1961', 'première mise en service'], ['4', 'systèmes de courant']],
-  daten: { 'Zugbildung': 'à six éléments', 'Stromsystem': '15 kV et 25 kV CA, 1,5 kV et 3 kV CC', 'Gewicht': 'env. 309 t en service', 'Leistung': 'env. 2310 kW', 'Höchstgeschwindigkeit': '140 km/h en exploitation, 160 km/h technique', 'In Betrieb seit': '1961 (cinquième rame 1967)', 'Einsatz': 'Trans-Europ-Express, plus tard EuroCity' },
+  daten: { 'Zugbildung': 'à six éléments (état conservé ; les quatre premières rames étaient d’abord à cinq éléments)', 'Stromsystem': '15 kV et 25 kV CA, 1,5 kV et 3 kV CC', 'Gewicht': 'env. 309 t en service', 'Leistung': 'env. 2310 kW', 'Höchstgeschwindigkeit': '140 km/h en exploitation, 160 km/h technique', 'In Betrieb seit': '1961 (cinquième rame 1967)', 'Einsatz': 'Trans-Europ-Express, plus tard EuroCity' },
   abschnitte: [
-    { titel: 'Histoire et service', p: ['Quatre unités ont été livrées en 1961, la cinquième a suivi en 1967. Ces élégantes rames ont circulé notamment comme TEE Gottardo, Cisalpin, Edelweiss et Roland.', 'Dès 1988, elles ont roulé en gris comme RABe EC dans le trafic EuroCity.'] },
+    { titel: 'Histoire et service', p: ['Quatre unités ont été livrées en 1961 à cinq éléments, puis allongées d’une voiture intermédiaire ; la cinquième a suivi en 1967. Ces élégantes rames ont circulé notamment comme TEE Gottardo, Cisalpin, Edelweiss et Roland.', 'Dès 1988, elles ont roulé en gris comme RABe EC dans le trafic EuroCity.'] },
     { titel: 'Conservation', p: ['La rame RAe TEE II 1053 a été conservée. CFF Historic l’a remise dans son état TEE rouge et crème ; depuis 2003, elle circule lors de courses spéciales historiques.'] }
   ],
   bilder: ['RAe TEE II à quai', 'RAe TEE II à Zurich HB, 1963', 'Avant du RAe TEE II', 'RAe TEE II en route', 'RAe TEE II à Zurich HB, 1963']
@@ -123,11 +123,11 @@ uebZug('h-tee', {
 uebZug('h-roterpfeil', {
   beiname: 'Flèche rouge',
   typ: 'Automotrice électrique légère pour excursions et courses rapides (historique)',
-  text: ['Les élégantes automotrices légères ont été livrées en 1935 comme CLe 2/4, puis redésignées RCe 2/4.', 'Leur forme aérodynamique rouge en a fait l’un des symboles les plus connus des CFF modernes des années 1930.'],
+  text: ['Les sept Flèches rouges électriques ont été livrées entre 1935 et 1938 sous la désignation CLe 2/4, puis redésignées plusieurs fois.', 'Leur forme aérodynamique rouge en a fait l’un des symboles les plus connus des CFF modernes des années 1930.'],
   kennzahlen: [['7', 'véhicules électriques de base'], ['125 km/h', 'vitesse maximale'], ['1935', 'première mise en service'], ['70', 'places assises']],
   daten: { 'Gewicht': 'env. 38 t en service', 'Leistung': '404 kW puissance unihoraire, 315 kW puissance continue', 'Nummern': '201–207, plus tard 601–607', 'Einsatz': 'excursions et voyages de groupe, prestations spéciales rapides' },
   abschnitte: [
-    { titel: 'Désignations et transformations', p: ['Dès 1944, les sept CLe 2/4 électriques sont devenues des RCe 2/4. Deux véhicules ont été transformés en 1952/53 en RAe 2/4 avec sièges rembourrés.', 'C’est pourquoi les indications d’effectif varient selon la désignation et la période.'] },
+    { titel: 'Désignations et transformations', p: ['Les voitures 201 et 202 ont été livrées en 1935, les 203 à 206 en 1936 et la 207 en 1938. Elles ont ensuite porté entre autres la désignation RCe 2/4. Les voitures 201 et 206 ont été allongées en 1952 et 1953 et transformées pour la 1re classe (RAe 2/4) ; d’autres ont porté en dernier la désignation RBe 2/4.', 'C’est pourquoi les indications d’effectif varient selon la désignation et la période.'] },
     { titel: 'Service et importance', p: ['Les Flèches rouges servaient aux excursions, aux voyages de groupe et aux prestations spéciales rapides. Leur faible poids et leur forme aérodynamique incarnaient l’élan technique de l’entre-deux-guerres.'] }
   ],
   bilder: ['Flèche rouge RCe 2/4 203']
@@ -147,7 +147,7 @@ uebZug('h-a35', {
 
 uebZug('h-c56', {
   typ: 'Locomotive à vapeur pour les lourds trains du Gothard (historique)',
-  text: ['La C 5/6 était la plus grande série de locomotives à vapeur des CFF et en même temps leur dernière acquisition de locomotives à vapeur neuves à voie normale.', 'Le surnom «Elefant» (éléphant) renvoie à son allure imposante et à son grand effort de traction.'],
+  text: ['La C 5/6 comptait parmi les plus grandes et les plus puissantes locomotives à vapeur des CFF. Elle a aussi été leur dernière acquisition de locomotives à vapeur neuves à voie normale.', 'Le surnom «Elefant» (éléphant) renvoie à son allure imposante et à son grand effort de traction.'],
   kennzahlen: [['28', 'locomotives de série'], ['65 km/h', 'vitesse maximale'], ['1913', 'première mise en service'], ['128 t', 'avec tender']],
   daten: { 'Länge': '19,195 m avec tender', 'Gewicht': '128 t avec tender', 'Leistung': 'env. 1190 kW (indiquée)', 'In Betrieb seit': '1913 (construites 1913–1917)', 'Ausmusterung': 'jusqu’en 1968', 'Einsatz': 'trains marchandises lourds' },
   abschnitte: [
@@ -161,7 +161,7 @@ uebZug('h-eb35', {
   typ: 'Locomotive-tender polyvalente (historique)',
   text: ['L’Eb 3/5 était une puissante locomotive-tender pour les services voyageurs, marchandises et de manœuvre.', 'Sa forme trapue lui a valu le surnom populaire de «Habersack».'],
   kennzahlen: [['34', 'locomotives'], ['75 km/h', 'vitesse maximale'], ['1911', 'première mise en service'], ['74–74,9 t', 'masse en service']],
-  daten: { 'Bauart': 'locomotive-tender 1′C1′', 'Gewicht': '57,6–58,8 t à vide, 74–74,9 t en service', 'Kesseldruck': 'env. 12 bar', 'Vorräte': '7,7 m³ d’eau, 2,5 t de charbon', 'In Betrieb seit': '1911 (construites 1911–1916)', 'Einsatz': 'trains régionaux, lignes secondaires, service de gare' },
+  daten: { 'Bauart': 'locomotive-tender 1′C1′', 'Länge': '12,74 m hors tampons (Eb 3/5 5819)', 'Gewicht': '57,6–58,8 t à vide, 74–74,9 t en service', 'Kesseldruck': 'env. 12 bar', 'Vorräte': '7,7 m³ d’eau, 2,5 t de charbon', 'In Betrieb seit': '1911 (construites 1911–1916)', 'Einsatz': 'trains régionaux, lignes secondaires, service de gare' },
   abschnitte: [
     { titel: 'Histoire et service', p: ['La disposition d’essieux symétrique offrait de bonnes qualités de roulement dans les deux sens, sans devoir tourner la locomotive.', 'L’Eb 3/5 convenait ainsi particulièrement aux lignes secondaires, aux trains régionaux et aux services de gare variés.'] },
     { titel: 'Conservation', p: ['Quelques locomotives de la série ont été conservées par des musées et des chemins de fer historiques. Elles montrent la dernière génération de locomotives-tender à vapeur universelles des CFF.'] }

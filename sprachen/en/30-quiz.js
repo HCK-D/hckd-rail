@@ -46,7 +46,7 @@ uebQuiz('normal', [
   { f: 'Which tunnel does the Giruno use from Zurich to Milan?', a: ['Gotthard Base Tunnel', 'Lötschberg Base Tunnel', 'Simplon Tunnel', 'Vereina Tunnel'] },
   { f: 'Which train is to replace the Domino at SBB from 2028?', a: ['FLIRT Evo', 'Giruno', 'KISS', 'ICN'] },
   { f: 'Who built the FV-Dosto?', a: ['Bombardier (now Alstom)', 'Stadler', 'Siemens', 'SLM Winterthur'] },
-  { f: 'Which locomotive runs on electricity and also has a diesel engine for construction sites?', a: ['Aem 940', 'Re 460', 'Ee 922', 'Re 482'] },
+  { f: 'Which locomotive runs on electricity and also has two diesel generator sets for construction sites?', a: ['Aem 940', 'Re 460', 'Ee 922', 'Re 482'] },
   { f: 'How many seats does a Giruno have?', a: ['405', '172', '682', '1000'], info: 'Plus 17 seats in the restaurant.' },
   { f: 'Which train is this?', a: ['RABe 503 «Astoro»', 'RABe 501 «Giruno»', 'RABDe 500 «ICN»', 'RBDe 560 «Domino»'] },
   { f: 'This locomotive is a Re 465. Which railway runs it?', a: ['BLS', 'SBB Cargo', 'Rhaetian Railway', 'Südostbahn'], info: 'The Re 465 is the more powerful sister of the Re 460.' },

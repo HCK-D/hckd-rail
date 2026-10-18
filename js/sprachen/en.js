@@ -818,6 +818,17 @@ uebDict({
   'Entdecker-Abzeichen und die Seite «Meine Sammlung» mit allen gesehenen Fahrzeugen.': 'Explorer badges and the «My collection» page with all the vehicles you have seen.'
 });
 
+/* ---- 08-pruefbericht.js ---- */
+/* English – additions after the review report of 18.10.2026 */
+uebDict({
+  'Korrekturen nach einer Inhaltsprüfung, unter anderem bei RABe 521, Ae 6/6, Be 4/6, Ce 6/8 III, Rotem Pfeil und LRZ 14.': 'Corrections after a content review, including the RABe 521, Ae 6/6, Be 4/6, Ce 6/8 III, Red Arrow and LRZ 14.',
+  'ein Wagen': 'one coach',
+  'Umbauauftrag': 'Conversion order',
+  'z. B. Re 4/4 II': 'e.g. Re 4/4 II',
+  'ältere Bezeichnung einer Dampflok; die Buchstaben folgen einem früheren Schema und werden hier nicht einzeln erklärt': 'older designation of a steam locomotive; the letters follow an earlier scheme and are not explained one by one here',
+  'Diese Bezeichnung kann ich (noch) nicht entschlüsseln. Probiere zum Beispiel «Re 4/4 II» oder «RABe 523»; Gross- und Kleinbuchstaben haben dabei eine eigene Bedeutung.': 'I can’t decode this designation (yet). Try for example «Re 4/4 II» or «RABe 523»; capital and lower-case letters each have their own meaning.'
+});
+
 /* ---- 20-personenverkehr.js ---- */
 /* English – SBB Passenger vehicles */
 uebDict({ 'ja': 'yes', 'nein': 'no' });
@@ -1020,7 +1031,7 @@ uebZug('rabe-520', {
 });
 
 uebZug('rabe-521', {
-  typ: 'Dual-system FLIRT for Germany and Switzerland',
+  typ: 'Single-system FLIRT approved for Switzerland and Germany',
   text: ['The RABe 521 is a four-car FLIRT for cross-border regional services between north-western Switzerland and Germany.', 'It is an important part of the Basel regional S-Bahn and also runs on the Seehas service.'],
   kennzahlen: [['39', 'trains'], ['160 km/h', 'top speed'], ['2004', 'first in service'], ['74.08 m', 'length']],
   daten: { 'Zugbildung': '4 cars', 'Gewicht': '120 t empty, 152 t loaded', 'Leistung': '2656 kW (FOS train type value)', 'Nummern': '521 001–030 and 201–209', 'Einsatz': 'Basel S-Bahn, Seehas, Switzerland–Germany' },
@@ -1131,7 +1142,7 @@ uebZug('re-420', {
 
 uebZug('re-620', {
   typ: 'Six-axle mainline locomotive',
-  text: ['The Re 620, formerly Re 6/6, was developed for heavy passenger and freight trains on the Gotthard and Simplon routes.', 'Its three two-axle bogies combine high tractive effort with approval for the higher curve speeds of train series R.'],
+  text: ['The Re 620, formerly Re 6/6, was developed for heavy passenger and freight trains on the Gotthard and Simplon routes.', 'Its three two-axle bogies combine high tractive effort with approval for the higher curve speeds of train category R.'],
   kennzahlen: [['89', 'locomotives built'], ['7832 kW', 'one-hour rating at the wheel'], ['140 km/h', 'top speed'], ['1972–1980', 'construction period']],
   daten: { 'Achsfolge': 'Bo′Bo′Bo′, 6 driven axles', 'Länge': '19.31 m over buffers', 'Gewicht': '120 t in working order', 'Leistung': '7244 kW continuous at the wheel (7832 kW one-hour rating)', 'Elektrische Bremse': 'regenerative', 'In Betrieb seit': '1972; series 1975–1980', 'Hersteller': 'mechanical part SLM Winterthur; electrical part and assembly BBC, partly SAAS' },
   abschnitte: [
@@ -1250,7 +1261,7 @@ uebZug('tmf-232', {
   typ: 'Modernised engineering tractor with radio remote control',
   text: ['The Tmf 232 was created by modernising Tm IV engineering tractors. In 2013 SBB Infrastructure ordered the conversion of 15 vehicles.', 'The «f» in the designation stands for radio remote control (Funkfernsteuerung).'],
   kennzahlen: [['15', 'vehicles in the conversion order'], ['2013', 'modernisation order'], ['280 kW', 'diesel power'], ['60 km/h', 'top speed under own power']],
-  daten: { 'Umbau': 'ORTICS, at the SBB industrial works in Biel', 'Antrieb': 'diesel-hydraulic, Caterpillar engine', 'Länge': '7.67 m over buffers', 'Gewicht': 'around 30 t', 'Höchstgeschwindigkeit': '60 km/h under own power, 90 km/h when hauled', 'Steuerung': 'radio remote control and multiple-unit control', 'In Betrieb seit': '2013 (conversion order)', 'Einsatz': 'engineering and shunting work' },
+  daten: { 'Umbau': 'ORTICS, at the SBB industrial works in Biel', 'Antrieb': 'diesel-hydraulic, Caterpillar engine', 'Länge': '7.67 m over buffers', 'Gewicht': 'around 30 t', 'Höchstgeschwindigkeit': '60 km/h under own power, 90 km/h when hauled', 'Steuerung': 'radio remote control and multiple-unit control', 'Umbauauftrag': '2013 (first use after conversion not documented)', 'Einsatz': 'engineering and shunting work' },
   specNote: '2013 is the documented year of the modernisation order, not the original year of construction of the donor Tm IV.',
   abschnitte: [
     { titel: 'Modernisation', p: ['In 2013 ORTICS was commissioned by SBB Infrastructure to modernise 15 Tm IV. Frame, bodywork, wheelsets and transmission were largely retained; the engine, control and safety systems were renewed and a radio remote control installed.'] },
@@ -1334,7 +1345,7 @@ uebZug('xas-53', {
   typ: 'Container wagon with side running rails',
   text: ['The Xas 53 carries interchangeable containers for ballast, screening waste and PSS material.', 'Side running rails allow the containers to be moved together with track machines.'],
   kennzahlen: [['100 km/h', 'top speed'], ['19.9 m', 'length'], ['31.0 t', 'empty weight'], ['7', 'containers per wagon']],
-  daten: { 'Fahrzeugart': 'container wagon', 'Gewicht': '31.0 t empty, 78 t loaded', 'Nutzlast': 'up to approx. 46.6 t (calculated)', 'Behälter': '7 containers of approx. 4 m³ each', 'Ausrüstung': 'side running rails, covers possible', 'Einsatz': 'screening and engineering trains' },
+  daten: { 'Fahrzeugart': 'container wagon', 'Gewicht': '31.0 t empty, 78 t loaded', 'Nutzlast': 'no official figure (78 t − 31 t gives approx. 47 t)', 'Behälter': '7 containers of approx. 4 m³ each', 'Ausrüstung': 'side running rails, covers possible', 'Einsatz': 'screening and engineering trains' },
   specNote: 'The train type catalogue gives 77.6 t for running dynamics. Fleet planning includes replacing the Xans/Xas 52/53 family.',
   abschnitte: [
     { titel: 'Container logistics', p: ['The containers can be moved, filled and emptied at a suitable point within a work chain. This speeds up the continuous removal of material during ballast cleaning and track renewal.'] },
@@ -1441,6 +1452,7 @@ uebZug('silad-4', {
 });
 
 uebZug('silad-reserve', {
+  name: 'SILAD reserve unit',
   typ: 'Compact reserve rail loading unit',
   text: ['The SILAD reserve unit is available as a replacement or addition for rail loading work.', 'It is much shorter and lighter than SILAD 4 and is listed as a separate active train type.'],
   kennzahlen: [['90 km/h', 'top speed'], ['14.0 m', 'length'], ['18 t', 'empty weight'], ['active', 'status 2026']],
@@ -1453,6 +1465,7 @@ uebZug('silad-reserve', {
 });
 
 uebZug('ste-kurz', {
+  name: 'Short STE',
   typ: 'Rail transport unit with two cranes for rails of 12 to 36 m',
   text: ['According to the training document, the short rail transport unit (STE) is based on a four-axle Xans 51 flat wagon.', 'Two small cranes unload short rails directly on site.'],
   kennzahlen: [['12–36 m', 'rail length'], ['29.5 t', 'empty weight'], ['50 t', 'payload according to the slide'], ['2 × 1.5 t', 'cranes']],
@@ -1465,6 +1478,7 @@ uebZug('ste-kurz', {
 });
 
 uebZug('ste-lang', {
+  name: 'Long STE',
   typ: 'Multi-part rail transport unit for rails up to 120 m',
   text: ['The long STE uses crane-equipped Xans 51 wagons to carry and unload long rails.', 'According to the presentation, one operating unit consists of six wagons and is 120 metres long.'],
   kennzahlen: [['120 m', 'max. rail length'], ['6', 'wagons per unit'], ['29.5 t', 'empty weight per crane wagon'], ['2 × 1.5 t', 'cranes per crane wagon']],
@@ -1481,7 +1495,7 @@ uebZug('xs-45', {
   text: ['The Xs 45 is a covered engineering train wagon for tools, spare parts and workshop equipment.', 'It also serves as a sheltered work and support space for construction crews.'],
   kennzahlen: [['2', 'axles'], ['15.0 m', 'length'], ['16.5 t', 'empty weight'], ['22 t', 'payload according to the slide']],
   daten: { 'Gewicht': '16.5 t empty, approx. 38.5 t loaded (calculated)', 'Nutzlast': '22 t according to the slide' },
-  specNote: 'The current train type catalogue does not list the Xs 45 separately; the technical values come from the SBB training document.',
+  specNote: 'The 2026 train type catalogue does not list the Xs 45 separately; the values come from the 2022 SBB training document.',
   abschnitte: [
     { titel: 'Supporting the site', p: ['Tools and small machines are carried protected from the weather and made available directly at the work site. The wagon complements traction units and material wagons in the engineering train.'] },
     { titel: 'Running position', p: ['Before every movement, side doors, loose equipment and workplaces must be secured. People may only stay in the wagon under the approved operating conditions.'] }
@@ -1515,10 +1529,11 @@ uebZug('xs-mannschaftswagen', {
 });
 
 uebZug('kirow-mannschaftswagen', {
+  name: 'Kirow crew wagon',
   typ: 'Support wagon of the Kirow 250, 800 and 1200 crane sets',
-  text: ['The SBB Kirow 250, 800 and 1200 cranes run in fixed sets with a crew wagon.', 'The support wagon backs up the staff, tools and operational logistics of the railway crane.'],
-  kennzahlen: [['3', 'crane types with crew wagon'], ['1', 'crew wagon per set'], ['80 km/h', 'set speed'], ['active', 'status of the sets in 2026']],
-  daten: { 'Fahrzeugrolle': 'support wagon in the crane set', 'Höchstgeschwindigkeit': '80 km/h (whole set)', 'Einzelfahrdaten': 'not published separately', 'Fahrtypen': '5089–5091 (complete crane sets)' },
+  text: ['The 2026 train type catalogue lists Kirow 250, 800 and 1200 crane sets, each with a crew wagon.', 'The support wagon backs up the staff, tools and operational logistics of the railway crane. SBB’s two KRC 800 were replaced in 2016–2019, so a catalogue entry does not prove a current fleet.'],
+  kennzahlen: [['3', 'crane types with crew wagon'], ['1', 'crew wagon per set'], ['80 km/h', 'set speed'], ['3', 'train types in the 2026 catalogue']],
+  daten: { 'Fahrzeugrolle': 'support wagon in the crane set', 'Höchstgeschwindigkeit': '80 km/h (whole set)', 'Einzelfahrdaten': 'not published separately', 'Fahrtypen': '5089–5091 (complete crane sets)', 'Status': 'train types active in the 2026 catalogue; KRC 800 replaced at SBB in 2016–2019' },
   specNote: 'In the train type catalogue SBB only publishes the totals of the inseparable crane sets, not separate dimensions for the crew wagon.',
   abschnitte: [
     { titel: 'Assignment to the crane sets', tabelle: { kopf: ['Crane', 'Formation', 'Set length / weight'], zeilen: [
@@ -1632,7 +1647,7 @@ uebZug('lrz-14', {
   abschnitte: [
     { titel: 'Procurement', p: ['The two sets were procured from 2012 and made ready for service before the Gotthard Base Tunnel opened.'] },
     { titel: 'Two rescue units', p: ['Each rescue vehicle has room for about 60 people, or 40 people and six stretchers. Pressurised compartments, airlocks and medical connections allow evacuations from smoke-filled tunnel sections.'] },
-    { titel: 'Performance profile', p: ['The four-car formation offers more extinguishing agent, breathing air and rescue capacity than earlier generations. Several powered vehicles provide high tractive effort and redundancy.'] }
+    { titel: 'Performance profile', p: ['With its second rescue vehicle, the four-car formation offers more rescue capacity and more breathing air than earlier generations. Several powered vehicles provide high tractive effort and redundancy.'] }
   ],
   bilder: ['New LRZ 14 at the Erstfeld maintenance and intervention centre', 'LRZ 14 «Uri» at Erstfeld station', 'LRZ 14 «Uri» of the Erstfeld company fire brigade', 'LRZ 14 in Erstfeld']
 });
@@ -1665,6 +1680,7 @@ uebZug('lrz-04', {
 });
 
 uebZug('xrotm', {
+  name: 'Rotary snow ploughs',
   typ: 'Special vehicles for snow clearing',
   text: ['SBB Infrastructure uses several types of self-propelled rotary snow ploughs.', 'The operating regulations distinguish four series that take on different tasks depending on the amount of snow, the line and the location.'],
   kennzahlen: [['4', 'series in the regulations'], ['17', 'vehicles by number ranges'], ['60–80 km/h', 'top speed of the large types'], ['95–115', 'operating numbers']],
@@ -1678,6 +1694,7 @@ uebZug('xrotm', {
 });
 
 uebZug('diagnose', {
+  name: 'Diagnostic vehicle',
   typ: 'Mermec Xtmass self-propelled diagnostic vehicle',
   text: ['The self-propelled diagnostic vehicle Xtmass ROGER 1000 checks the condition of the railway infrastructure at high speed.', 'Measuring systems record track, overhead line and other installations without unnecessarily interrupting regular services.'],
   kennzahlen: [['160 km/h', 'top speed'], ['672 kW', 'maximum power'], ['64 t', 'empty weight'], ['23.9 m', 'vehicle length']],
@@ -1729,7 +1746,7 @@ uebZug('kirow-krc-100', {
   typ: 'Compact slewing railway crane for construction and recovery',
   text: ['The Kirow KRC 100 is a compact SBB slewing railway crane. Twelve vehicles were delivered in 2006 and 2007.', 'Its small tail radius and fixed counterweight allow work with little effect on adjacent tracks.'],
   kennzahlen: [['12', 'cranes delivered'], ['2006–2007', 'delivery'], ['70 t', 'crane service weight'], ['120 km/h', 'permitted when hauled']],
-  daten: { 'Länge': '11.0 m over buffers', 'Gewicht': '70 t in service', 'Tragfähigkeit': 'up to approx. 20 t, depending on outreach', 'Höchstgeschwindigkeit': '120 km/h hauled', 'Gegengewicht': 'fixed', 'In Betrieb seit': '2006–2007 (Dec. 2006 to Oct. 2007)', 'Einsatz': 'track construction, mast erection, recovery' },
+  daten: { 'Länge': '11.0 m over buffers', 'Gewicht': '70 t in service', 'Tragfähigkeit': 'depends on outreach, maximum load not documented', 'Höchstgeschwindigkeit': '120 km/h hauled', 'Gegengewicht': 'fixed', 'In Betrieb seit': '2006–2007 (Dec. 2006 to Oct. 2007)', 'Einsatz': 'track construction, mast erection, recovery' },
   specNote: 'The lifting capacity of railway cranes depends heavily on outreach, outriggers and track geometry.',
   abschnitte: [
     { titel: 'Procurement', p: ['Kirow delivered twelve KRC 100 between December 2006 and October 2007. The series was procured for decentralised construction and recovery work.'] },
@@ -1750,6 +1767,7 @@ uebZug('bendini', {
 });
 
 uebZug('fahrleitung', {
+  name: 'Overhead line vehicles',
   typ: 'Service vehicles for building and maintaining the overhead line',
   text: ['Overhead line vehicles bring staff, tools and material directly to the overhead line.', 'SBB Infrastructure uses several series and versions for this; publicly named examples are Hubi, Krani and Combi 4A.'],
   kennzahlen: [['several', 'series and versions'], ['Hubi', 'vehicle example'], ['Krani', 'vehicle example'], ['Combi 4A', 'vehicle example']],
@@ -1797,7 +1815,7 @@ uebZug('h-ce68iii', {
   kennzahlen: [['18', 'locomotives'], ['1926', 'first entry into service'], ['75 km/h', 'after rebuilding'], ['131 t', 'service weight']],
   daten: { 'Hersteller': 'SLM, MFO', 'Antrieb': 'inclined rods', 'Gewicht': '131 t service weight', 'Leistung': '1810 kW one-hour rating', 'Höchstgeschwindigkeit': '65 km/h, later 75 km/h', 'Nummern': '14301–14318, from 1956 Be 6/8 III 13301–13318', 'In Betrieb seit': '1926 (built 1926–1927)', 'Ausmusterung': 'scheduled service until 1977', 'Einsatz': 'heavy freight trains' },
   abschnitte: [
-    { titel: 'History and service', p: ['The series was intended for heavy freight trains on the Gotthard, on the approach lines and in the lowlands.', 'From 1956 the locomotives were given faster gearing and renamed Be 6/8 III. Scheduled service ended in 1977.'] },
+    { titel: 'History and service', p: ['The series was intended for heavy freight trains on the Gotthard, on the approach lines and in the lowlands.', 'In 1956 the permitted maximum speed was raised to 75 km/h and the class was redesignated Be 6/8 III. Scheduled service ended in 1977.'] },
     { titel: 'Preservation', p: ['Ce 6/8 III 14305 is preserved as a historic vehicle. It represents SBB’s world-famous Crocodile design.'] }
   ],
   bilder: ['Ce 6/8 III 14305', 'Ce 6/8 III on an SBB Historic run', 'Ce 6/8 III 14305 from the side', 'Ce 6/8 III 14305 visiting Malmö (2015)', 'Builder’s plate of Ce 6/8 III 14305']
@@ -1807,8 +1825,8 @@ uebZug('h-ae66', {
   beiname: 'Canton locomotive',
   typ: 'Canton locomotive and Gotthard icon (historic)',
   text: ['For decades the Ae 6/6 was SBB’s powerhouse on the Gotthard.', 'The first 25 machines carried cantonal coats of arms and chrome trim; later locomotives received the arms of Swiss towns and municipalities.'],
-  kennzahlen: [['120', 'locomotives'], ['125 km/h', 'top speed'], ['1952', 'first entry into service'], ['4300 kW', 'continuous rating']],
-  daten: { 'Gewicht': '120 t (prototypes 124 t)', 'Leistung': '4300 kW continuous rating', 'In Betrieb seit': '1952 (series 1955–1966)', 'Einsatz': 'Gotthard, heavy passenger and freight trains' },
+  kennzahlen: [['120', 'locomotives'], ['125 km/h', 'top speed'], ['1952', 'first entry into service'], ['4300 kW', 'one-hour rating']],
+  daten: { 'Gewicht': '120 t (prototypes 124 t)', 'Leistung': 'approx. 4300 kW one-hour rating at the wheel', 'In Betrieb seit': '1952 (series 1955–1966)', 'Einsatz': 'Gotthard, heavy passenger and freight trains' },
   abschnitte: [
     { titel: 'History and service', p: ['At first the Ae 6/6 shaped express and freight traffic on the Gotthard. As more modern locomotives arrived, its work shifted increasingly to freight and the Swiss Plateau.'] },
     { titel: 'Preservation', p: ['Several Ae 6/6 have been preserved. Ae 6/6 11421 «Graubünden» belongs to the SBB Historic collection and keeps the era of the canton locomotives alive.'] }
@@ -1852,7 +1870,7 @@ uebZug('h-be46', {
   typ: 'Early electric Gotthard locomotive (historic)',
   text: ['The Be 4/6 belonged to the first generation of electric Gotthard locomotives.', 'Its distinctive shape earned it the nickname «Rehbock» (roebuck), and it initially hauled heavy express trains on the mountain line.'],
   kennzahlen: [['40', 'locomotives'], ['75 km/h', 'top speed'], ['1920', 'first entry into service'], ['107–110 t', 'service weight']],
-  daten: { 'Gewicht': '107–110 t service weight', 'Leistung': 'up to 1500 kW one-hour rating', 'In Betrieb seit': '1920 (built 1920–1923)', 'Ausmusterung': 'until 1976', 'Einsatz': 'express and freight trains' },
+  daten: { 'Achsfolge': '6 axles, comprising 4 powered and 2 carrying axles; rod drive', 'Gewicht': '107–110 t service weight', 'Leistung': 'up to 1500 kW one-hour rating', 'In Betrieb seit': '1920 (built 1920–1923)', 'Ausmusterung': 'until 1976', 'Einsatz': 'express and freight trains' },
   abschnitte: [
     { titel: 'History and service', p: ['SBB ordered the class for electric operation on the Gotthard. As train weights grew, the machines were displaced by more powerful types and later used on the Swiss Plateau and in secondary duties.'] },
     { titel: 'Preservation', p: ['Be 4/6 12320 is part of the historic fleet. It recalls the pioneering era of electric traction on the Gotthard line.'] }
@@ -1876,9 +1894,9 @@ uebZug('h-tee', {
   typ: 'Four-system multiple unit for top international services (historic)',
   text: ['The RAe TEE II linked Switzerland with Germany, France, Italy and the Netherlands without changing locomotives.', 'Its four-system technology made it one of the most technically demanding European multiple units of its time.'],
   kennzahlen: [['5', 'train sets'], ['140 km/h', 'in service · technically 160 km/h'], ['1961', 'first entry into service'], ['4', 'power systems']],
-  daten: { 'Zugbildung': 'six cars', 'Stromsystem': '15 kV and 25 kV AC, 1.5 kV and 3 kV DC', 'Gewicht': 'approx. 309 t service weight', 'Leistung': 'approx. 2310 kW', 'Höchstgeschwindigkeit': '140 km/h in service, 160 km/h technical', 'In Betrieb seit': '1961 (fifth set 1967)', 'Einsatz': 'Trans-Europ-Express, later EuroCity' },
+  daten: { 'Zugbildung': 'six cars (preserved condition; the first four sets originally had five cars)', 'Stromsystem': '15 kV and 25 kV AC, 1.5 kV and 3 kV DC', 'Gewicht': 'approx. 309 t service weight', 'Leistung': 'approx. 2310 kW', 'Höchstgeschwindigkeit': '140 km/h in service, 160 km/h technical', 'In Betrieb seit': '1961 (fifth set 1967)', 'Einsatz': 'Trans-Europ-Express, later EuroCity' },
   abschnitte: [
-    { titel: 'History and service', p: ['Four units were delivered in 1961, the fifth set followed in 1967. The elegant trains ran as the TEE Gottardo, Cisalpin, Edelweiss and Roland, among others.', 'From 1988 they ran in grey as RABe EC in EuroCity service.'] },
+    { titel: 'History and service', p: ['Four units were delivered in 1961 with five cars and later lengthened by an intermediate car; the fifth set followed in 1967. The elegant trains ran as the TEE Gottardo, Cisalpin, Edelweiss and Roland, among others.', 'From 1988 they ran in grey as RABe EC in EuroCity service.'] },
     { titel: 'Preservation', p: ['Set RAe TEE II 1053 was preserved. SBB Historic restored it to its red and cream TEE condition; since 2003 it has run on historic special trips.'] }
   ],
   bilder: ['RAe TEE II at the platform', 'RAe TEE II at Zurich HB, 1963', 'Front of the RAe TEE II', 'RAe TEE II on the move', 'RAe TEE II at Zurich HB, 1963']
@@ -1887,11 +1905,11 @@ uebZug('h-tee', {
 uebZug('h-roterpfeil', {
   beiname: 'Red Arrow',
   typ: 'Light electric railcar for excursions and fast runs (historic)',
-  text: ['The elegant lightweight railcars were delivered in 1935 as CLe 2/4 and later reclassified as RCe 2/4.', 'Their red streamlined shape made them one of the best-known symbols of the modern SBB of the 1930s.'],
+  text: ['The seven electric Red Arrows were delivered between 1935 and 1938 as CLe 2/4 and later reclassified several times.', 'Their red streamlined shape made them one of the best-known symbols of the modern SBB of the 1930s.'],
   kennzahlen: [['7', 'electric base vehicles'], ['125 km/h', 'top speed'], ['1935', 'first entry into service'], ['70', 'seats']],
   daten: { 'Gewicht': 'approx. 38 t service weight', 'Leistung': '404 kW one-hour rating, 315 kW continuous rating', 'Nummern': '201–207, later 601–607', 'Einsatz': 'excursions and group trips, fast special services' },
   abschnitte: [
-    { titel: 'Designations and conversions', p: ['From 1944 the seven electric CLe 2/4 became RCe 2/4. Two vehicles were converted in 1952/53 into RAe 2/4 with upholstered seats.', 'Fleet figures therefore differ depending on designation and period.'] },
+    { titel: 'Designations and conversions', p: ['Cars 201 and 202 were delivered in 1935, 203–206 in 1936 and 207 in 1938. Later they carried, among others, the designation RCe 2/4. Cars 201 and 206 were lengthened in 1952 and 1953 and converted for 1st class (RAe 2/4); others last carried the designation RBe 2/4.', 'Fleet figures therefore differ depending on designation and period.'] },
     { titel: 'Service and significance', p: ['The Red Arrows were used for excursions, group travel and fast special services. Their low weight and aerodynamic shape embodied the technical optimism of the inter-war years.'] }
   ],
   bilder: ['Red Arrow RCe 2/4 203']
@@ -1911,7 +1929,7 @@ uebZug('h-a35', {
 
 uebZug('h-c56', {
   typ: 'Steam locomotive for heavy Gotthard trains (historic)',
-  text: ['The C 5/6 was SBB’s largest steam locomotive class and at the same time its last new standard-gauge steam locomotive procurement.', 'The nickname «Elefant» (elephant) refers to its mighty appearance and high tractive effort.'],
+  text: ['The C 5/6 was one of SBB’s largest and most powerful steam locomotives. It was also SBB’s last new standard-gauge steam locomotive procurement.', 'The nickname «Elefant» (elephant) refers to its mighty appearance and high tractive effort.'],
   kennzahlen: [['28', 'series locomotives'], ['65 km/h', 'top speed'], ['1913', 'first entry into service'], ['128 t', 'with tender']],
   daten: { 'Länge': '19.195 m with tender', 'Gewicht': '128 t with tender', 'Leistung': 'approx. 1190 kW (indicated)', 'In Betrieb seit': '1913 (built 1913–1917)', 'Ausmusterung': 'until 1968', 'Einsatz': 'heavy freight trains' },
   abschnitte: [
@@ -1925,7 +1943,7 @@ uebZug('h-eb35', {
   typ: 'Versatile tank locomotive (historic)',
   text: ['The Eb 3/5 was a strong tank locomotive for passenger, freight and shunting duties.', 'Its stocky shape earned it the popular nickname «Habersack».'],
   kennzahlen: [['34', 'locomotives'], ['75 km/h', 'top speed'], ['1911', 'first entry into service'], ['74–74.9 t', 'service weight']],
-  daten: { 'Bauart': '1′C1′ tank locomotive', 'Gewicht': '57.6–58.8 t empty, 74–74.9 t service weight', 'Kesseldruck': 'around 12 bar', 'Vorräte': '7.7 m³ water, 2.5 t coal', 'In Betrieb seit': '1911 (built 1911–1916)', 'Einsatz': 'regional trains, branch lines, station duties' },
+  daten: { 'Bauart': '1′C1′ tank locomotive', 'Länge': '12.74 m over buffers (Eb 3/5 5819)', 'Gewicht': '57.6–58.8 t empty, 74–74.9 t service weight', 'Kesseldruck': 'around 12 bar', 'Vorräte': '7.7 m³ water, 2.5 t coal', 'In Betrieb seit': '1911 (built 1911–1916)', 'Einsatz': 'regional trains, branch lines, station duties' },
   abschnitte: [
     { titel: 'History and service', p: ['The symmetrical wheel arrangement gave good running in both directions without the locomotive having to be turned.', 'This made the Eb 3/5 particularly suitable for branch lines, regional trains and varied station duties.'] },
     { titel: 'Preservation', p: ['Individual locomotives of the class have been preserved by museums and heritage railways. They show the last generation of SBB’s universal steam tank locomotives.'] }
@@ -2034,7 +2052,7 @@ uebQuiz('normal', [
   { f: 'Which tunnel does the Giruno use from Zurich to Milan?', a: ['Gotthard Base Tunnel', 'Lötschberg Base Tunnel', 'Simplon Tunnel', 'Vereina Tunnel'] },
   { f: 'Which train is to replace the Domino at SBB from 2028?', a: ['FLIRT Evo', 'Giruno', 'KISS', 'ICN'] },
   { f: 'Who built the FV-Dosto?', a: ['Bombardier (now Alstom)', 'Stadler', 'Siemens', 'SLM Winterthur'] },
-  { f: 'Which locomotive runs on electricity and also has a diesel engine for construction sites?', a: ['Aem 940', 'Re 460', 'Ee 922', 'Re 482'] },
+  { f: 'Which locomotive runs on electricity and also has two diesel generator sets for construction sites?', a: ['Aem 940', 'Re 460', 'Ee 922', 'Re 482'] },
   { f: 'How many seats does a Giruno have?', a: ['405', '172', '682', '1000'], info: 'Plus 17 seats in the restaurant.' },
   { f: 'Which train is this?', a: ['RABe 503 «Astoro»', 'RABe 501 «Giruno»', 'RABDe 500 «ICN»', 'RBDe 560 «Domino»'] },
   { f: 'This locomotive is a Re 465. Which railway runs it?', a: ['BLS', 'SBB Cargo', 'Rhaetian Railway', 'Südostbahn'], info: 'The Re 465 is the more powerful sister of the Re 460.' },
