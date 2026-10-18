@@ -210,7 +210,8 @@ $sw = @'
 'use strict';
 const V = 'hckd-__VERSION__';
 self.addEventListener('install', e => {
-  e.waitUntil(caches.open(V).then(c => c.addAll(['./', 'index.html', 'manifest.webmanifest'])).then(() => self.skipWaiting()));
+  // cache: 'reload' = directly from the server, never an older copy from the browser cache
+  e.waitUntil(caches.open(V).then(c => c.addAll(['./', 'index.html', 'manifest.webmanifest'].map(u => new Request(u, { cache: 'reload' })))).then(() => self.skipWaiting()));
 });
 self.addEventListener('activate', e => {
   e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k !== V).map(k => caches.delete(k)))).then(() => self.clients.claim()));
@@ -224,7 +225,8 @@ self.addEventListener('fetch', e => {
       .catch(() => caches.match(req, { ignoreSearch: true }).then(m => m || caches.match('index.html'))));
     return;
   }
-  e.respondWith(caches.match(req).then(m => m || fetch(req).then(res => merke(req, res))));
+  // first use after an update: ask the server whether the file is new (no-cache), so no outdated copy is kept
+  e.respondWith(caches.match(req).then(m => m || fetch(new Request(req, { cache: 'no-cache' })).then(res => merke(req, res))));
 });
 '@
 Write-Utf8 (Join-Path $out 'sw.js') $sw.Replace('__VERSION__', (Get-Date -Format 'yyyyMMddHHmmss'))
