@@ -23,6 +23,10 @@
 .copy{flex:none;height:32px;padding:0 12px;border:0;border-radius:999px;background:var(--surface-2);color:var(--fg);font:600 13px/1 var(--body);cursor:pointer}
 .copy:disabled{opacity:.4;cursor:default}
 .d-note{font-size:13.5px!important;color:var(--fg-3)!important}
+.dn-danke{display:flex;gap:12px;align-items:flex-start;margin-top:14px;padding:14px 16px;border-radius:14px;background:var(--accent-soft);color:var(--accent-ink)}
+.dn-danke svg{flex:none;margin-top:2px}
+.dn-danke p{margin:0!important;font-size:14.5px!important;line-height:1.5;color:var(--fg)!important}
+.dn-danke b{color:var(--accent-ink)}
 
 
 /* ---------- report form and inbox ---------- */

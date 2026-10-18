@@ -831,6 +831,14 @@ uebDict({
   'Diese Bezeichnung kann ich (noch) nicht entschlüsseln. Probiere zum Beispiel «Re 4/4 II» oder «RABe 523»; Gross- und Kleinbuchstaben haben dabei eine eigene Bedeutung.': 'Questa designazione non riesco (ancora) a decifrarla. Prova per esempio «Re 4/4 II» o «RABe 523»; maiuscole e minuscole hanno ciascuna un proprio significato.'
 });
 
+/* ---- 09-spenden.js ---- */
+/* Italiano – donazioni con bonifico bancario */
+uebDict({
+  '<b>Danke für deine Unterstützung!</b> Jeder Franken fliesst direkt in HCKD RAIL: in neue Fahrzeugporträts, mehr Fotos, genaue Recherche und den Betrieb der Website. So bleibt die Train Database für alle kostenlos und ohne Werbung. Ob gross oder klein, jede Spende bedeutet mir viel.': '<b>Grazie per il tuo sostegno!</b> Ogni franco va direttamente a HCKD RAIL: nuovi ritratti di veicoli, più foto, ricerche accurate e la gestione del sito. Così la Train Database resta gratuita e senza pubblicità per tutti. Piccola o grande, ogni donazione significa molto per me.',
+  'Spenden laufen per Banküberweisung direkt über deine Bank. Die Website verarbeitet dabei keine Zahlungsdaten; IBAN und Name im Spenden-Fenster sind nur zum Kopieren da.': 'Le donazioni avvengono con bonifico bancario, direttamente tramite la tua banca. Il sito non tratta alcun dato di pagamento; IBAN e nome nella finestra delle donazioni servono solo da copiare.',
+  'Eigene Adresse hckd-rail.ch und Spenden per Banküberweisung. Danke für jede Unterstützung!': 'Indirizzo proprio hckd-rail.ch e donazioni con bonifico bancario. Grazie per ogni sostegno!'
+});
+
 /* ---- 20-personenverkehr.js ---- */
 /* Italiano – veicoli FFS Viaggiatori */
 uebDict({ 'ja': 'sì', 'nein': 'no', 'SBB': 'FFS' });

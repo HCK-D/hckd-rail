@@ -6,7 +6,8 @@
    Angaben hier eintragen, z. B. twint: '079 123 45 67' (TWINT-Nummer) und/oder iban: 'CH12 …'.
    Solange beide leer sind, ist der Spenden-Knopf auf der ganzen Seite ausgeblendet.
    ===================================================================== */
-const SPENDE = { empfaenger: 'HCKD', iban: '', twint: '' };
+// empfaenger: genau der Name, auf den das Konto lautet (Banken vergleichen Name und IBAN)
+const SPENDE = { empfaenger: 'Kevin Kouasmi', iban: 'CH34 0618 6560 0743 8090 2', twint: '' };
 if (!SPENDE.iban && !SPENDE.twint) {
   $$('[data-donate]').forEach(b => {
     // also remove the « · » in front of the button in the footer
@@ -33,7 +34,8 @@ dn.addEventListener('click', e => {
   const a = e.target.closest('.amt'); if (a) { dnAmt = +a.dataset.a; dnRender(); return; }
   const cp = e.target.closest('[data-copy]');
   if (cp) {
-    const k = cp.dataset.copy, val = k === 'ref' ? 'Spende HCKD RAIL · CHF ' + dnAmt : SPENDE[k];
+    // the IBAN is copied without spaces, so every banking app accepts it
+    const k = cp.dataset.copy, val = k === 'ref' ? 'Spende HCKD RAIL · CHF ' + dnAmt : k === 'iban' ? SPENDE.iban.replace(/\s/g, '') : SPENDE[k];
     const done = () => { cp.textContent = tr('Kopiert'); setTimeout(() => { cp.textContent = tr('Kopieren'); }, 1400); };
     const sel = () => { const r = document.createRange(); r.selectNodeContents(cp.previousElementSibling.querySelector('b')); const s = getSelection(); s.removeAllRanges(); s.addRange(r); };
     try { navigator.clipboard.writeText(val).then(done, sel); } catch (err) { sel(); }
