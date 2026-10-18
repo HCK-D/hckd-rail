@@ -27,23 +27,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="RailBase">
 <script>window.HCKD_SEITEN=true;window.HCKD_LANG='it';window.HCKD_START='historisch';</script>
-<script>
-/* Umzug von hckd-rail.ch: die alte Adresse schickt Sammlung und Einstellungen als #umzug=… mit.
-   Fehlendes wird übernommen; gesehene Fahrzeuge und Sichtungen werden zusammengeführt. */
-(function(){try{
-  var m=/^#umzug=([A-Za-z0-9_-]*)(?:&h=(.*))?$/.exec(location.hash);if(!m)return;
-  history.replaceState(null,'',location.pathname+location.search+(m[2]?'#'+decodeURIComponent(m[2]):''));
-  var b=atob(m[1].replace(/-/g,'+').replace(/_/g,'/')),u=new Uint8Array(b.length);for(var i=0;i<b.length;i++)u[i]=b.charCodeAt(i);
-  var alt=JSON.parse(new TextDecoder().decode(u));
-  Object.keys(alt).forEach(function(k){
-    var v=alt[k];if(!/^hckd-/.test(k)||typeof v!=='string')return;
-    var jetzt=localStorage.getItem(k);
-    if(jetzt===null){localStorage.setItem(k,v);return}
-    if(k==='hckd-gesehen'){var a=JSON.parse(jetzt),n=JSON.parse(v);if(Array.isArray(a)&&Array.isArray(n))localStorage.setItem(k,JSON.stringify(a.concat(n.filter(function(x){return a.indexOf(x)<0}))))}
-    if(k==='hckd-sichtungen'){var s=JSON.parse(jetzt),t=JSON.parse(v);if(s&&t&&typeof s==='object'&&typeof t==='object'){Object.keys(t).forEach(function(id){if(!Array.isArray(t[id]))return;var l=Array.isArray(s[id])?s[id]:[];t[id].forEach(function(e){if(!l.some(function(x){return x&&e&&x.t===e.t}))l.push(e)});s[id]=l});localStorage.setItem(k,JSON.stringify(s))}}
-  });
-}catch(e){}})();
-try{var t=localStorage.getItem('hckd-theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script>try{var t=localStorage.getItem('hckd-theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
 <link rel="preload" href="schrift/source-sans-3-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="css/schrift.css">
 <link rel="stylesheet" href="css/basis.css">
