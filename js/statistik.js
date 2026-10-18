@@ -5,13 +5,14 @@
    BESUCHERZÄHLER
    GoatCounter zählt Seitenaufrufe ohne Cookies. Die Zahlen sieht nur,
    wer sich bei goatcounter.com mit deinem Konto anmeldet.
-   Code hier eintragen: bei https://hckd-rail.goatcounter.com ist es 'hckd-rail'.
+   Statistik ansehen: https://hckd-rail.goatcounter.com (mit dem GoatCounter-Login).
    Leer lassen = kein Zähler.
-   Eigene Besuche nicht zählen: deine Website einmal mit #toggle-goatcounter am Ende öffnen
-   (z. B. https://name.github.io/hckd-rail/#toggle-goatcounter), siehe ANLEITUNG-GITHUB.md
+   Eigene Besuche nicht zählen: auf jedem eigenen Gerät einmal
+   https://hckd-rail.ch/#toggle-goatcounter öffnen.
+   Die Sprachen erscheinen getrennt: /re-460 (Deutsch), /fr/re-460, /it/re-460, /en/re-460.
    ===================================================================== */
 const STATISTIK = {
-  goatcounter: ''
+  goatcounter: 'hckd-rail'
 };
 
 (() => {
@@ -22,7 +23,7 @@ const STATISTIK = {
   // one path per page: /re-460, /cargo, /impressum …; sections of the start page count as /start
   const pfad = () => {
     const id = decodeURIComponent(location.hash.slice(1)) || window.HCKD_START || 'start';
-    return '/' + (istSeite(id) ? id : 'start');
+    return (LANG === 'de' ? '' : '/' + LANG) + '/' + (istSeite(id) ? id : 'start');
   };
   let last = '';
   const zaehle = () => {
