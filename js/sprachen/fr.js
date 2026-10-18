@@ -860,7 +860,8 @@ uebDict({
   'Bahnfotograf · Fotos von Zügen für RailBase': 'Photographe ferroviaire · photos de trains pour RailBase',
   'Selbst mithelfen': 'Aider toi aussi',
   'Du fotografierst auch Züge oder hast einen Fehler entdeckt? Jede Hilfe macht RailBase besser. Schick uns deine Fotos mit deinem Namen. Wir zeigen sie gerne auf der Website und nennen dich hier und unter dem Bild.': 'Tu photographies aussi des trains ou tu as trouvé une erreur ? Chaque aide rend RailBase meilleur. Envoie-nous tes photos avec ton nom. Nous les montrerons volontiers sur le site et te citerons ici et sous l’image.',
-  'Neue Seite «Danke»: ein Dankeschön an die Bahnfotografen, die Fotos für RailBase gemacht haben.': 'Nouvelle page «Merci» : un grand merci aux photographes ferroviaires qui ont pris des photos pour RailBase.'
+  'Neue Seite «Danke»: ein Dankeschön an die Bahnfotografen, die Fotos für RailBase gemacht haben.': 'Nouvelle page «Merci» : un grand merci aux photographes ferroviaires qui ont pris des photos pour RailBase.',
+  'Instagram von Alessandro Antonazzo (öffnet in neuem Fenster)': 'Instagram d’Alessandro Antonazzo (s’ouvre dans une nouvelle fenêtre)'
 });
 
 /* ---- 12-international.js ---- */

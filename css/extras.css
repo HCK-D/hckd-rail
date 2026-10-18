@@ -225,6 +225,8 @@ body.has-cmp .footer{padding-bottom:76px}
 .danke-karte div{display:grid;gap:4px;min-width:0}
 .danke-karte b{font:800 18px/1.2 var(--display)}
 .danke-karte div span{font-size:14.5px;color:var(--fg-2)}
+.danke-link{display:inline-flex;align-items:center;gap:6px;width:fit-content;margin-top:4px;font:600 14.5px/1.2 var(--body);color:var(--accent-ink);text-decoration:none}
+.danke-link:hover{text-decoration:underline;text-underline-offset:3px}
 
 /* ---------- sightings on the vehicle page ---------- */
 .sicht{display:grid;gap:10px;margin-top:6px;padding:14px 16px;border-radius:var(--r-md);background:var(--surface);box-shadow:var(--shadow);max-width:720px}
