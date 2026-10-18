@@ -10,7 +10,8 @@
    link   Bereich der Startseite, z. B. 'abfahrten' (optional)
    ===================================================================== */
 const NEU = [
-  { datum: '2026-10-18', art: 'neu', text: 'Sichtungen mit Datum, Ort und Fahrzeugnummer eintragen und die Sammlung als Datei sichern.', link: 'album' },
+  { datum: '2026-10-18', art: 'neu', text: 'Entdecker-Abzeichen und die Seite «Meine Sammlung» mit allen gesehenen Fahrzeugen.', link: 'sammlung' },
+  { datum: '2026-10-18', art: 'neu', text: 'Sichtungen mit Datum, Ort und Fahrzeugnummer eintragen und die Sammlung als Datei sichern.', link: 'sammlung' },
   { datum: '2026-10-18', art: 'neu', text: 'Steckbrief jedes Fahrzeugs als PDF und ein Vergleich der FLIRT-Baureihen 521 bis 524.', link: 'erkennen' },
   { datum: '2026-10-18', art: 'update', text: 'Höchstgeschwindigkeit im Betrieb und gebaute Höchstgeschwindigkeit stehen jetzt direkt zusammen.', ids: ['re-460', 'rabe-503', 'h-tee'] },
   { datum: '2026-10-18', art: 'neu', text: 'Die Website lässt sich als App aufs Handy installieren.' },

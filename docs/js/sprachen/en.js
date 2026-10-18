@@ -771,6 +771,53 @@ uebDict({
   'Tessin, Lombardei': 'Ticino, Lombardy'
 });
 
+/* ---- 07-sammlung.js ---- */
+/* English – "My collection" and explorer badges */
+uebDict({
+  'Meine Sammlung ansehen': 'View my collection',
+  'Meine Sammlung': 'My collection',
+  'Alle Fahrzeuge, die du gesehen hast, deine Sichtungen und deine Entdecker-Abzeichen. Alles bleibt in deinem Browser.': 'All the vehicles you have seen, your sightings and your explorer badges. Everything stays in your browser.',
+  'Entdecker-Abzeichen': 'Explorer badges',
+  'Gesehene Fahrzeuge': 'Vehicles seen',
+  'Sammlung sichern': 'Save the collection',
+  'Die Sammlung ist nur in diesem Browser gespeichert. Sichere sie als Datei, damit sie nicht verloren geht oder um sie auf ein anderes Gerät zu holen.': 'The collection is only stored in this browser. Save it as a file so it doesn’t get lost, or to move it to another device.',
+  '1 Abzeichen': '1 badge',
+  '{n} Abzeichen': '{n} badges',
+  'Erreicht': 'Earned',
+  '{a} von {b}': '{a} of {b}',
+  'zuletzt {d}': 'last on {d}',
+  'Du hast noch kein Fahrzeug als gesehen markiert. Öffne eine Fahrzeugseite und tippe auf «Hab ich gesehen» oder trage eine Sichtung ein.': 'You haven’t marked any vehicle as seen yet. Open a vehicle page and tap «I’ve seen it» or add a sighting.',
+  'Erste Entdeckung': 'First discovery',
+  '1 Fahrzeug gesehen': '1 vehicle seen',
+  '{n} Fahrzeuge gesehen': '{n} vehicles seen',
+  'Zehner-Sammler': 'Collector of ten',
+  'Bahnkenner': 'Rail connoisseur',
+  'Bahnexperte': 'Rail expert',
+  'Ganzer Katalog': 'Complete catalogue',
+  'Alle {n} Fahrzeuge gesehen': 'All {n} vehicles seen',
+  'Reiseprofi': 'Travel pro',
+  'Alle Fahrzeuge im Personenverkehr gesehen': 'All passenger vehicles seen',
+  'Güterverkehr-Kenner': 'Freight expert',
+  'Alle Lokomotiven von SBB Cargo gesehen': 'All SBB Cargo locomotives seen',
+  'Infrastruktur-Profi': 'Infrastructure pro',
+  'Alle Fahrzeuge von SBB Infrastruktur gesehen': 'All SBB Infrastructure vehicles seen',
+  'Rangiermeister': 'Shunting master',
+  'Alle Rangierfahrzeuge gesehen': 'All shunting vehicles seen',
+  'Spezialisten-Blick': 'Specialist’s eye',
+  'Alle Dienst- und Spezialfahrzeuge gesehen': 'All service and special vehicles seen',
+  'Zeitreisender': 'Time traveller',
+  'Alle historischen Fahrzeuge entdeckt': 'All historic vehicles discovered',
+  'FLIRT-Kenner': 'FLIRT expert',
+  'Die FLIRT 521, 522, 523 und 524 gesehen': 'Seen the FLIRT 521, 522, 523 and 524',
+  'Krokodil-Jäger': 'Crocodile hunter',
+  'Beide Krokodile Ce 6/8 II und Ce 6/8 III gesehen': 'Seen both Crocodiles Ce 6/8 II and Ce 6/8 III',
+  'Notizbuch': 'Notebook',
+  'Erste Sichtung eingetragen': 'First sighting recorded',
+  'Bahnbeobachter': 'Rail spotter',
+  '{n} Sichtungen eingetragen': '{n} sightings recorded',
+  'Entdecker-Abzeichen und die Seite «Meine Sammlung» mit allen gesehenen Fahrzeugen.': 'Explorer badges and the «My collection» page with all the vehicles you have seen.'
+});
+
 /* ---- 20-personenverkehr.js ---- */
 /* English – SBB Passenger vehicles */
 uebDict({ 'ja': 'yes', 'nein': 'no' });

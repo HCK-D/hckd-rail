@@ -45,7 +45,7 @@
           <li><a href="#zeitstrahl">Zeitstrahl</a></li>
           <li><a href="#spurweite">Spurweite</a></li>
           <li><a href="#quiz">Quiz</a></li>
-          <li><a href="#album">Sammelalbum</a></li>
+          <li><a href="#sammlung">Meine Sammlung</a></li>
         </ul>
       </details>
       <a href="#vergleich">Vergleich</a>
@@ -150,11 +150,9 @@
             <span>Tippe auf einer Fahrzeugseite auf «Hab ich gesehen». Die Liste bleibt in deinem Browser.</span>
           </div>
           <div class="album-bar" aria-hidden="true"><i id="album-bar"></i></div>
-          <div class="album-tools">
-            <button class="report-btn" type="button" id="album-export">Sammlung sichern (Datei)</button>
-            <button class="report-btn" type="button" id="album-csv">Als Tabelle (CSV)</button>
-            <label class="report-btn album-import"><input type="file" id="album-import" accept="application/json,.json"><span>Sammlung laden</span></label>
-            <span class="album-msg" id="album-msg" aria-live="polite"></span>
+          <div class="album-go">
+            <a class="qz-btn ghost album-link" href="#sammlung">Meine Sammlung ansehen</a>
+            <span class="album-badges" id="album-badges"></span>
           </div>
         </div>
       </div>
@@ -551,6 +549,35 @@
         <ul class="erk-grid" id="erkennen-grid"></ul>
       </div>
     </section>
+    <section class="section" data-seite="sammlung" hidden>
+      <div class="wrap">
+        <ol class="crumbs"><li><a href="#start">Start</a></li><li aria-current="page">Meine Sammlung</li></ol>
+        <div class="page-head">
+          <div>
+            <span class="kicker">Sammelalbum</span>
+            <h1>Meine Sammlung</h1>
+            <p>Alle Fahrzeuge, die du gesehen hast, deine Sichtungen und deine Entdecker-Abzeichen. Alles bleibt in deinem Browser.</p>
+          </div>
+        </div>
+        <div class="sam-stand">
+          <b id="sam-n"></b>
+          <div class="album-bar" aria-hidden="true"><i id="sam-bar"></i></div>
+        </div>
+        <h2 class="sam-h">Entdecker-Abzeichen</h2>
+        <ul class="badges" id="sam-badges"></ul>
+        <h2 class="sam-h">Gesehene Fahrzeuge</h2>
+        <div id="sam-list"></div>
+        <h2 class="sam-h">Sammlung sichern</h2>
+        <p class="sam-hint">Die Sammlung ist nur in diesem Browser gespeichert. Sichere sie als Datei, damit sie nicht verloren geht oder um sie auf ein anderes Gerät zu holen.</p>
+        <div class="album-tools">
+          <button class="report-btn" type="button" id="album-export">Sammlung sichern (Datei)</button>
+          <button class="report-btn" type="button" id="album-csv">Als Tabelle (CSV)</button>
+          <button class="report-btn" type="button" id="album-import-btn">Sammlung laden</button>
+          <input type="file" id="album-import" accept="application/json,.json" class="sr-only" tabindex="-1" aria-hidden="true">
+          <span class="album-msg" id="album-msg" aria-live="polite"></span>
+        </div>
+      </div>
+    </section>
   </div>
 
   <!-- ===== IMPRESSUM / DATENSCHUTZ ===== -->
@@ -750,6 +777,7 @@
 <script src="js/melden.js"></script>
 <script src="js/fotos.js"></script>
 <script src="js/steckbrief.js"></script>
+<script src="js/sammlung.js"></script>
 <script src="js/daten/erkennen.js"></script>
 <script src="js/erkennen.js"></script>
 <script src="js/daten/neu.js"></script>

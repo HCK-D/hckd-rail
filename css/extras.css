@@ -116,11 +116,40 @@ body.has-cmp .footer{padding-bottom:76px}
 .album-bar{height:10px;border-radius:99px;background:var(--surface-2);overflow:hidden}
 .album-bar i{display:block;width:0;height:100%;border-radius:inherit;background:var(--best);transition:width .6s var(--ease-out)}
 @media (min-width:760px){.album{grid-template-columns:minmax(0,1fr) minmax(220px,38%);align-items:center}}
-.album-tools{display:flex;flex-wrap:wrap;align-items:center;gap:8px;grid-column:1/-1}
-.album-import{position:relative;overflow:hidden}
-.album-import input{position:absolute;inset:0;opacity:0;cursor:pointer}
-.album-import:focus-within{outline:2px solid var(--accent);outline-offset:2px}
+.album-go{display:flex;flex-wrap:wrap;align-items:center;gap:12px;grid-column:1/-1}
+.album-link{display:inline-flex;align-items:center;text-decoration:none}
+.album-badges{font-weight:600;color:var(--accent-ink)}
+.album-tools{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
 .album-msg{font-size:14px;color:var(--fg-2)}
+
+/* ---------- «Meine Sammlung» ---------- */
+.sam-stand{display:grid;gap:10px;max-width:640px;padding:18px 20px;border-radius:var(--r-md);background:var(--surface);box-shadow:var(--shadow)}
+.sam-stand b{font:800 clamp(22px,2.6vw,28px)/1.1 var(--display)}
+.sam-h{margin:34px 0 14px;font:800 clamp(20px,2.4vw,24px)/1.2 var(--display)}
+.sam-hint{max-width:60ch;margin:0 0 12px;color:var(--fg-2)}
+.badges{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,250px),1fr));gap:12px;margin:0;padding:0;list-style:none}
+.badge{display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:var(--r-md);background:var(--surface);box-shadow:var(--shadow)}
+.badge>div{display:grid;gap:3px;min-width:0}
+.badge b{font:700 16px/1.2 var(--body)}
+.badge div>span{font-size:14px;color:var(--fg-2)}
+.badge em{font:700 11px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;font-style:normal;color:var(--best)}
+.badge small{font-size:12.5px;color:var(--fg-3)}
+.medal{flex:none;display:grid;place-items:center;width:52px;height:52px;border-radius:50%;background:var(--surface-2);color:var(--fg-3);font:800 17px/1 var(--display);border:3px dashed var(--line)}
+.badge.on .medal{background:radial-gradient(circle at 35% 30%,#FF6B70,#D71920 60%,#A3121A);color:#fff;border:3px solid #F2C14E;box-shadow:0 3px 10px rgba(215,25,32,.35)}
+.badge:not(.on) b{color:var(--fg-2)}
+.b-prog{display:block;height:6px;margin-top:4px;border-radius:99px;background:var(--surface-2);overflow:hidden}
+.b-prog i{display:block;height:100%;border-radius:inherit;background:var(--best)}
+.sam-kat{margin-bottom:20px}
+.sam-kat h3{margin:0 0 10px;font:700 17px/1.2 var(--body)}
+.sam-kat h3 small{font-weight:500;color:var(--fg-3)}
+.sam-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,260px),1fr));gap:10px;margin:0;padding:0;list-style:none}
+.sam-card{display:flex;align-items:center;gap:12px;padding:8px;border-radius:14px;background:var(--surface);box-shadow:var(--shadow);color:var(--fg);text-decoration:none}
+.sam-card:hover{box-shadow:var(--shadow-lift)}
+.sam-pic{flex:none;width:84px;aspect-ratio:4/3;border-radius:10px;overflow:hidden;background:var(--surface-2)}
+.sam-pic img,.sam-pic svg{display:block;width:100%;height:100%;object-fit:cover}
+.sam-txt{display:grid;gap:3px;min-width:0}
+.sam-txt b{font-size:15.5px;line-height:1.25}
+.sam-txt small{font-size:13px;color:var(--fg-2)}
 
 /* ---------- Steckbrief (only for printing / PDF) ---------- */
 #steckbrief{display:none}

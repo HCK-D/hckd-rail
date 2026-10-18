@@ -422,7 +422,7 @@ document.addEventListener('keydown', e => {
 const views = { home: $('#v-home'), kat: $('#v-kat'), zug: $('#v-zug'), text: $('#v-text'), vergleich: $('#v-vergleich'), entdecken: $('#v-entdecken') };
 const TEXTSEITEN = { impressum: 'Impressum', datenschutz: 'Datenschutz' };
 // pages that are only reached through the menu «Entdecken», not shown on the start page
-const ENTDECKEN = { neu: 'Neu und aktualisiert', erkennen: 'Züge unterscheiden' };
+const ENTDECKEN = { neu: 'Neu und aktualisiert', erkennen: 'Züge unterscheiden', sammlung: 'Meine Sammlung' };
 let curView = 'home';
 function show(name) {
   for (const [n, el] of Object.entries(views)) el.hidden = n !== name;
@@ -442,6 +442,7 @@ function route() {
   }
   else if (ENTDECKEN[h]) {
     show('entdecken'); $$('#v-entdecken [data-seite]').forEach(s => { s.hidden = s.dataset.seite !== h; });
+    if (h === 'sammlung') sammlungRender(); // sammlung.js
     scrollTo(0, 0); document.title = tr(ENTDECKEN[h]) + ' · HCKD RAIL';
   }
   else if (h === 'vergleich') { show('vergleich'); renderVergleich(); scrollTo(0, 0); document.title = tr('Vergleich') + ' · HCKD RAIL'; }

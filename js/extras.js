@@ -130,6 +130,7 @@ function albumSync() {
   const s = sichtAnzahl();
   $('#album-n').textContent = tr('{n} von {total} gesehen', { n, total }) + (s ? ' · ' + (s === 1 ? tr('1 Sichtung') : tr('{s} Sichtungen', { s })) : '');
   $('#album-bar').style.width = (total ? n / total * 100 : 0) + '%';
+  if (typeof sammlungRender === 'function') sammlungRender(); // page «Meine Sammlung» and the badges (sammlung.js)
   $$('[data-seen-kat]').forEach(el => {
     const k = inKat(el.dataset.seenKat).filter(z => istGesehen(z.id)).length;
     el.textContent = k ? ' · ' + tr('{n} gesehen', { n: k }) : '';
@@ -210,6 +211,7 @@ $('#album-csv').addEventListener('click', () => {
   // semicolons and a BOM so that Excel in Switzerland opens it correctly
   datei('hckd-rail-sammlung-' + heute() + '.csv', '﻿' + zeilen.map(r => r.map(zelle).join(';')).join('\r\n'), 'text/csv;charset=utf-8');
 });
+$('#album-import-btn').addEventListener('click', () => $('#album-import').click());
 $('#album-import').addEventListener('change', async e => {
   const f = e.target.files && e.target.files[0]; e.target.value = '';
   if (!f) return;

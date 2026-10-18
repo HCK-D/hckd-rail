@@ -773,6 +773,53 @@ uebDict({
   'Tessin, Lombardei': 'Tessin, Lombardie'
 });
 
+/* ---- 07-sammlung.js ---- */
+/* Français – « Ma collection » et badges d’explorateur */
+uebDict({
+  'Meine Sammlung ansehen': 'Voir ma collection',
+  'Meine Sammlung': 'Ma collection',
+  'Alle Fahrzeuge, die du gesehen hast, deine Sichtungen und deine Entdecker-Abzeichen. Alles bleibt in deinem Browser.': 'Tous les véhicules que tu as vus, tes observations et tes badges d’explorateur. Tout reste dans ton navigateur.',
+  'Entdecker-Abzeichen': 'Badges d’explorateur',
+  'Gesehene Fahrzeuge': 'Véhicules vus',
+  'Sammlung sichern': 'Sauvegarder la collection',
+  'Die Sammlung ist nur in diesem Browser gespeichert. Sichere sie als Datei, damit sie nicht verloren geht oder um sie auf ein anderes Gerät zu holen.': 'La collection n’est enregistrée que dans ce navigateur. Sauvegarde-la comme fichier pour ne pas la perdre ou pour la reprendre sur un autre appareil.',
+  '1 Abzeichen': '1 badge',
+  '{n} Abzeichen': '{n} badges',
+  'Erreicht': 'Obtenu',
+  '{a} von {b}': '{a} sur {b}',
+  'zuletzt {d}': 'dernière fois le {d}',
+  'Du hast noch kein Fahrzeug als gesehen markiert. Öffne eine Fahrzeugseite und tippe auf «Hab ich gesehen» oder trage eine Sichtung ein.': 'Tu n’as encore marqué aucun véhicule comme vu. Ouvre la page d’un véhicule et touche « Je l’ai vu » ou ajoute une observation.',
+  'Erste Entdeckung': 'Première découverte',
+  '1 Fahrzeug gesehen': '1 véhicule vu',
+  '{n} Fahrzeuge gesehen': '{n} véhicules vus',
+  'Zehner-Sammler': 'Collectionneur de dix',
+  'Bahnkenner': 'Connaisseur du rail',
+  'Bahnexperte': 'Expert du rail',
+  'Ganzer Katalog': 'Catalogue complet',
+  'Alle {n} Fahrzeuge gesehen': 'Les {n} véhicules vus',
+  'Reiseprofi': 'Pro du voyage',
+  'Alle Fahrzeuge im Personenverkehr gesehen': 'Tous les véhicules du trafic voyageurs vus',
+  'Güterverkehr-Kenner': 'Connaisseur du fret',
+  'Alle Lokomotiven von SBB Cargo gesehen': 'Toutes les locomotives de CFF Cargo vues',
+  'Infrastruktur-Profi': 'Pro de l’infrastructure',
+  'Alle Fahrzeuge von SBB Infrastruktur gesehen': 'Tous les véhicules de CFF Infrastructure vus',
+  'Rangiermeister': 'Maître de la manœuvre',
+  'Alle Rangierfahrzeuge gesehen': 'Tous les véhicules de manœuvre vus',
+  'Spezialisten-Blick': 'Œil de spécialiste',
+  'Alle Dienst- und Spezialfahrzeuge gesehen': 'Tous les véhicules de service et spéciaux vus',
+  'Zeitreisender': 'Voyageur dans le temps',
+  'Alle historischen Fahrzeuge entdeckt': 'Tous les véhicules historiques découverts',
+  'FLIRT-Kenner': 'Connaisseur FLIRT',
+  'Die FLIRT 521, 522, 523 und 524 gesehen': 'Les FLIRT 521, 522, 523 et 524 vus',
+  'Krokodil-Jäger': 'Chasseur de Crocodiles',
+  'Beide Krokodile Ce 6/8 II und Ce 6/8 III gesehen': 'Les deux Crocodiles Ce 6/8 II et Ce 6/8 III vus',
+  'Notizbuch': 'Carnet de notes',
+  'Erste Sichtung eingetragen': 'Première observation enregistrée',
+  'Bahnbeobachter': 'Observateur du rail',
+  '{n} Sichtungen eingetragen': '{n} observations enregistrées',
+  'Entdecker-Abzeichen und die Seite «Meine Sammlung» mit allen gesehenen Fahrzeugen.': 'Badges d’explorateur et la page « Ma collection » avec tous les véhicules vus.'
+});
+
 /* ---- 20-personenverkehr.js ---- */
 /* Français – véhicules CFF Voyageurs */
 uebDict({ 'ja': 'oui', 'nein': 'non', 'SBB': 'CFF' });

@@ -34,25 +34,29 @@ $fix = @{
           datenschutz = 'Datenschutz'; datenschutzText = 'Datenschutzerklärung von HCKD RAIL: keine Cookies, keine Werbung, nur anonyme Besucherzählung.'
           vergleich = 'Fahrzeuge vergleichen'; vergleichText = 'Bis zu drei Schweizer Bahnfahrzeuge nebeneinander vergleichen.'
           neu = 'Neu und aktualisiert'; neuText = 'Die letzten Ergänzungen bei HCKD RAIL: neue Fahrzeuge, neue Fotos und neue Funktionen.'
-          erkennen = 'FLIRT 521, 522, 523 oder 524?'; erkennenText = 'So unterscheidest du die FLIRT-Baureihen 521, 522, 523 und 524 der SBB: Nummer, Strom, Farben und Einsatzgebiet.' }
+          sammlung = 'Meine Sammlung'; sammlungText = 'Gesehene Fahrzeuge, Sichtungen und Entdecker-Abzeichen bei HCKD RAIL.'
+          erkennen = 'FLIRT 521, 522, 523 oder 524?';erkennenText = 'So unterscheidest du die FLIRT-Baureihen 521, 522, 523 und 524 der SBB: Nummer, Strom, Farben und Einsatzgebiet.' }
   fr = @{ start = 'HCKD RAIL – Train Database des CFF : voyageurs, Cargo, infrastructure, véhicules de manœuvre, de service et spéciaux.'; zug = 'Caractéristiques techniques, histoire et images.'
           impressum = 'Mentions légales'; impressumText = 'Mentions légales, responsabilité et crédits photo de HCKD RAIL.'
           datenschutz = 'Protection des données'; datenschutzText = 'Protection des données chez HCKD RAIL : pas de cookies, pas de publicité, seulement un comptage anonyme des visites.'
           vergleich = 'Comparer des véhicules'; vergleichText = "Comparer jusqu’à trois véhicules ferroviaires suisses côte à côte."
           neu = 'Nouveautés et mises à jour'; neuText = 'Les derniers ajouts sur HCKD RAIL : nouveaux véhicules, nouvelles photos et nouvelles fonctions.'
-          erkennen = 'FLIRT 521, 522, 523 ou 524 ?'; erkennenText = "Comment distinguer les séries FLIRT 521, 522, 523 et 524 des CFF : numéro, courant, couleurs et région d’engagement." }
+          sammlung = 'Ma collection'; sammlungText = "Véhicules vus, observations et badges d’explorateur sur HCKD RAIL."
+          erkennen = 'FLIRT 521, 522, 523 ou 524 ?';erkennenText = "Comment distinguer les séries FLIRT 521, 522, 523 et 524 des CFF : numéro, courant, couleurs et région d’engagement." }
   it = @{ start = 'HCKD RAIL – Train Database delle FFS: viaggiatori, Cargo, infrastruttura, veicoli di manovra, di servizio e speciali.'; zug = 'Dati tecnici, storia e immagini.'
           impressum = 'Note legali'; impressumText = 'Note legali, responsabilità e crediti fotografici di HCKD RAIL.'
           datenschutz = 'Protezione dei dati'; datenschutzText = 'Protezione dei dati su HCKD RAIL: nessun cookie, nessuna pubblicità, solo un conteggio anonimo delle visite.'
           vergleich = 'Confronta veicoli'; vergleichText = "Confronta fino a tre veicoli ferroviari svizzeri uno accanto all’altro."
           neu = 'Novità e aggiornamenti'; neuText = 'Le ultime aggiunte su HCKD RAIL: nuovi veicoli, nuove foto e nuove funzioni.'
-          erkennen = 'FLIRT 521, 522, 523 o 524?'; erkennenText = "Come distinguere le serie FLIRT 521, 522, 523 e 524 delle FFS: numero, corrente, colori e zona d’impiego." }
+          sammlung = 'La mia collezione'; sammlungText = 'Veicoli visti, avvistamenti e distintivi da esploratore su HCKD RAIL.'
+          erkennen = 'FLIRT 521, 522, 523 o 524?';erkennenText = "Come distinguere le serie FLIRT 521, 522, 523 e 524 delle FFS: numero, corrente, colori e zona d’impiego." }
   en = @{ start = 'HCKD RAIL – Train Database for SBB passenger, Cargo, infrastructure, shunting, service and special vehicles.'; zug = 'Technical data, history and pictures.'
           impressum = 'Legal notice'; impressumText = 'Legal notice, liability and picture credits of HCKD RAIL.'
           datenschutz = 'Privacy'; datenschutzText = 'HCKD RAIL privacy policy: no cookies, no advertising, only anonymous visitor counting.'
           vergleich = 'Compare vehicles'; vergleichText = 'Compare up to three Swiss railway vehicles side by side.'
           neu = 'New and updated'; neuText = 'The latest additions to HCKD RAIL: new vehicles, new photos and new features.'
-          erkennen = 'FLIRT 521, 522, 523 or 524?'; erkennenText = 'How to tell the SBB FLIRT classes 521, 522, 523 and 524 apart: number, power system, colours and area of service.' }
+          sammlung = 'My collection'; sammlungText = 'Vehicles seen, sightings and explorer badges on HCKD RAIL.'
+          erkennen = 'FLIRT 521, 522, 523 or 524?';erkennenText = 'How to tell the SBB FLIRT classes 521, 522, 523 and 524 apart: number, power system, colours and area of service.' }
 }
 # Übersetzte Kategorienamen und Fahrzeugtypen aus js\sprachen\xx.js lesen
 $jsStr = '''((?:[^''\\]|\\.)*)'''
@@ -114,6 +118,7 @@ for ($i = 0; $i -lt $zm.Count; $i++) {
 [void]$seiten.Add([pscustomobject]@{ art = 'fix'; id = 'datenschutz'; bild = ''; prio = '0.2' })
 [void]$seiten.Add([pscustomobject]@{ art = 'fix'; id = 'vergleich'; bild = ''; prio = '' })
 [void]$seiten.Add([pscustomobject]@{ art = 'fix'; id = 'neu'; bild = ''; prio = '0.5' })
+[void]$seiten.Add([pscustomobject]@{ art = 'fix'; id = 'sammlung'; bild = ''; prio = '' })
 [void]$seiten.Add([pscustomobject]@{ art = 'fix'; id = 'erkennen'; bild = 'bilder/rabe-523-c1.jpg'; prio = '0.6' })
 
 # Titel und Beschreibung einer Seite in einer Sprache
@@ -146,7 +151,7 @@ function Build-Page([string]$l, [string]$start, [string]$titel, [string]$text, [
     $img = if ($bild) { $bild } else { 'bilder/slides/slide-01.jpg' }
     $meta += "<meta property=`"og:image`" content=`"$base$img`">`n<meta name=`"twitter:card`" content=`"summary_large_image`">`n"
   }
-  if ($start -eq 'vergleich') { $meta += "<meta name=`"robots`" content=`"noindex`">`n" }
+  if ($start -eq 'vergleich' -or $start -eq 'sammlung') { $meta +="<meta name=`"robots`" content=`"noindex`">`n" }
   $meta += "<link rel=`"icon`" href=`"favicon.svg`" type=`"image/svg+xml`">`n"
   # als App installierbar (manifest.webmanifest, sw.js und js/app.js)
   $meta += "<link rel=`"manifest`" href=`"manifest.webmanifest`">`n<meta name=`"theme-color`" content=`"#D71920`">`n"
