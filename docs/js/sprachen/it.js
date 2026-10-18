@@ -878,6 +878,46 @@ uebDict({
   'Als EuroCity in Richtung Amsterdam, Hamburg, Berlin und Wien, dazu bis Graz und Jarosław in Polen.': 'Come EuroCity in direzione di Amsterdam, Amburgo, Berlino e Vienna, e fino a Graz e Jarosław in Polonia.'
 });
 
+/* ---- 13-einsatz-neu.js ---- */
+/* Italiano – «Dove circola?» per gli altri veicoli */
+uebDict({
+  'S-Bahn Basel': 'S-Bahn di Basilea',
+  'Léman Express': 'Léman Express',
+  'Raum Basel': 'Regione di Basilea',
+  'Auf der trinationalen S-Bahn Basel und grenzüberschreitend nach Deutschland, dazu im Seehas-Verkehr ab Konstanz.': 'Sulla S-Bahn trinazionale di Basilea e in traffico transfrontaliero verso la Germania, oltre che sul Seehas da Costanza.',
+  'Im Léman-Express-Netz rund um Genf und auf grenznahen Regionalverbindungen im Raum Basel.': 'Sulla rete Léman Express attorno a Ginevra e su collegamenti regionali di confine nella regione di Basilea.',
+  'Im TILO-Netz im Tessin und grenzüberschreitend in die Lombardei.': 'Sulla rete TILO in Ticino e in traffico transfrontaliero verso la Lombardia.',
+  'Vor allem für Güterzüge von der Schweiz nach Deutschland.': 'Soprattutto per treni merci dalla Svizzera verso la Germania.',
+  'Im Rangierdienst des Personenverkehrs in grösseren Bahnhöfen; dank zwei Stromsystemen auch in Grenzbahnhöfen.': 'In servizio di manovra del traffico viaggiatori nelle stazioni maggiori; grazie a due sistemi di corrente anche nelle stazioni di confine.',
+  'Bei SBB Cargo im Rangier- und Zustelldienst; ohne Fahrleitung fährt sie mit dem Hilfsdiesel.': 'Presso FFS Cargo in servizio di manovra e di consegna; senza linea di contatto viaggia con il diesel ausiliario.',
+  'Früher im schweren Rangierdienst in grossen Bahnhöfen, unabhängig von der Fahrleitung.': 'Un tempo in servizio di manovra pesante nelle grandi stazioni, indipendente dalla linea di contatto.',
+  'Im leichten Rangier- und Baudienst im ganzen SBB-Netz.': 'In servizio di manovra leggera e di cantiere su tutta la rete FFS.',
+  'Über Jahrzehnte im Rangierdienst in Bahnhöfen und Depots im ganzen SBB-Netz.': 'Per decenni in servizio di manovra nelle stazioni e nei depositi di tutta la rete FFS.',
+  'Im Bau-, Rangier- und Zustelldienst im ganzen SBB-Netz, je nach Baustelle.': 'In servizio di cantiere, manovra e consegna su tutta la rete FFS, a seconda dei cantieri.',
+  'Geplant für Baustellen im ganzen SBB-Normalspurnetz.': 'Previsto per i cantieri di tutta la rete FFS a scartamento normale.',
+  'Für die Gotthardachse mit dem Gotthard-Basistunnel und das Tunnelnetz beschafft.': 'Acquistato per l’asse del San Gottardo con la galleria di base e per la rete di gallerie.',
+  'Für schnelle Einsätze auf dem offenen Netz und in Tunneln im ganzen SBB-Netz.': 'Per interventi rapidi in linea e nelle gallerie di tutta la rete FFS.',
+  'Für Ereignisse auf dem Bahnnetz, besonders in längeren Tunneln und an schwer zugänglichen Strecken.': 'Per gli eventi sulla rete ferroviaria, soprattutto nelle gallerie lunghe e sulle tratte difficili da raggiungere.',
+  'Bei starkem Schneefall auf Strecken und in Bahnhöfen, unter anderem auf der Gotthard-Panoramastrecke.': 'In caso di forti nevicate sulle linee e nelle stazioni, tra l’altro sulla linea panoramica del San Gottardo.',
+  'Für Messfahrten auf den Hauptstrecken im ganzen SBB-Netz.': 'Per corse di misurazione sulle linee principali di tutta la rete FFS.',
+  'Für Unterhalt, Montage und Ereignisse im ganzen SBB-Normalspurnetz.': 'Per manutenzione, montaggio ed eventi su tutta la rete FFS a scartamento normale.',
+  'Früher vor allem vor Güterzügen am Gotthard.': 'Un tempo soprattutto in testa a treni merci sul San Gottardo.',
+  'Früher vor schweren Güterzügen am Gotthard, auf den Zufahrtslinien und im Flachland.': 'Un tempo in testa a pesanti treni merci sul San Gottardo, sulle linee di accesso e in pianura.',
+  'Früher das Kraftpaket am Gotthard, später vor allem im Güterverkehr und im Mittelland.': 'Un tempo la forza trainante del San Gottardo, più tardi soprattutto nel traffico merci e sull’Altopiano.',
+  'Früher als eine der wichtigsten Streckenloks der SBB im ganzen Netz unterwegs.': 'Un tempo una delle principali locomotive di linea delle FFS, su tutta la rete.',
+  'Früher vor Personen-, Schnell- und Güterzügen, vor allem im Mittelland.': 'Un tempo in testa a treni viaggiatori, diretti e merci, soprattutto sull’Altopiano.',
+  'Früher vor schweren Gotthardzügen. Die Ae 8/14 11852 steht heute bei SBB Historic in Erstfeld.': 'Un tempo in testa ai pesanti treni del San Gottardo. L’Ae 8/14 11852 si trova oggi presso FFS Historic a Erstfeld.',
+  'Früher vor Schnellzügen auf der Gotthard-Bergstrecke, später im Mittelland.': 'Un tempo in testa a treni diretti sulla linea di montagna del San Gottardo, più tardi sull’Altopiano.',
+  'Früher vor schnellen, leichten Zügen im Mittelland, später im Regionalverkehr.': 'Un tempo in testa a treni veloci e leggeri sull’Altopiano, più tardi nel traffico regionale.',
+  'Als TEE «Gottardo» durch den Gotthard; der Zug verband die Schweiz mit Deutschland, Frankreich, Italien und den Niederlanden.': 'Come TEE «Gottardo» attraverso il San Gottardo; il treno collegava la Svizzera con Germania, Francia, Italia e Paesi Bassi.',
+  'Früher auf Ausflugs- und Gesellschaftsfahrten im ganzen Netz unterwegs.': 'Un tempo in gite e viaggi di gruppo su tutta la rete.',
+  'Früher vor Schnellzügen; heute betreut die Dampfgruppe Zürich die erhaltene A 3/5 705.': 'Un tempo in testa a treni diretti; oggi la Dampfgruppe Zürich si occupa dell’A 3/5 705 conservata.',
+  'Früher vor schweren Güterzügen am Gotthard, später im Mittelland, auf Bellinzona–Luino und im Rangierdienst.': 'Un tempo in testa a pesanti treni merci sul San Gottardo, più tardi sull’Altopiano, sulla Bellinzona–Luino e in manovra.',
+  'Früher vor Regionalzügen, auf Nebenbahnen und im Stationsdienst.': 'Un tempo in testa a treni regionali, su linee secondarie e in servizio di stazione.',
+  'Früher im Vorortsverkehr am rechten Zürichseeufer, bekannt als «Goldküstenexpress».': 'Un tempo nel traffico suburbano sulla riva destra del lago di Zurigo, noto come «Goldküstenexpress».',
+  'Früher vor Schnellzügen, später vor Regional- und S-Bahn-Pendelzügen. Die RBe 540 074 fährt heute bei der Oensingen-Balsthal-Bahn.': 'Un tempo in testa a treni diretti, più tardi a navette regionali e S-Bahn. La RBe 540 074 circola oggi sulla Oensingen-Balsthal-Bahn.'
+});
+
 /* ---- 20-personenverkehr.js ---- */
 /* Italiano – veicoli FFS Viaggiatori */
 uebDict({ 'ja': 'sì', 'nein': 'no', 'SBB': 'FFS' });

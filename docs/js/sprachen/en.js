@@ -876,6 +876,46 @@ uebDict({
   'Als EuroCity in Richtung Amsterdam, Hamburg, Berlin und Wien, dazu bis Graz und Jarosław in Polen.': 'As EuroCity towards Amsterdam, Hamburg, Berlin and Vienna, and as far as Graz and Jarosław in Poland.'
 });
 
+/* ---- 13-einsatz-neu.js ---- */
+/* English – «Where does it run?» for the other vehicles */
+uebDict({
+  'S-Bahn Basel': 'Basel S-Bahn',
+  'Léman Express': 'Léman Express',
+  'Raum Basel': 'Basel area',
+  'Auf der trinationalen S-Bahn Basel und grenzüberschreitend nach Deutschland, dazu im Seehas-Verkehr ab Konstanz.': 'On the trinational Basel S-Bahn and across the border to Germany, plus on the Seehas service from Konstanz.',
+  'Im Léman-Express-Netz rund um Genf und auf grenznahen Regionalverbindungen im Raum Basel.': 'On the Léman Express network around Geneva and on cross-border regional services around Basel.',
+  'Im TILO-Netz im Tessin und grenzüberschreitend in die Lombardei.': 'On the TILO network in Ticino and across the border into Lombardy.',
+  'Vor allem für Güterzüge von der Schweiz nach Deutschland.': 'Mainly for freight trains from Switzerland to Germany.',
+  'Im Rangierdienst des Personenverkehrs in grösseren Bahnhöfen; dank zwei Stromsystemen auch in Grenzbahnhöfen.': 'Shunting passenger trains in larger stations; with two power systems also in border stations.',
+  'Bei SBB Cargo im Rangier- und Zustelldienst; ohne Fahrleitung fährt sie mit dem Hilfsdiesel.': 'With SBB Cargo for shunting and local deliveries; without overhead line it runs on its auxiliary diesel.',
+  'Früher im schweren Rangierdienst in grossen Bahnhöfen, unabhängig von der Fahrleitung.': 'Formerly in heavy shunting at large stations, independent of the overhead line.',
+  'Im leichten Rangier- und Baudienst im ganzen SBB-Netz.': 'In light shunting and works service across the SBB network.',
+  'Über Jahrzehnte im Rangierdienst in Bahnhöfen und Depots im ganzen SBB-Netz.': 'For decades shunting in stations and depots across the SBB network.',
+  'Im Bau-, Rangier- und Zustelldienst im ganzen SBB-Netz, je nach Baustelle.': 'In works, shunting and delivery service across the SBB network, depending on the construction site.',
+  'Geplant für Baustellen im ganzen SBB-Normalspurnetz.': 'Planned for construction sites across the SBB standard-gauge network.',
+  'Für die Gotthardachse mit dem Gotthard-Basistunnel und das Tunnelnetz beschafft.': 'Bought for the Gotthard axis with the Gotthard Base Tunnel and for the tunnel network.',
+  'Für schnelle Einsätze auf dem offenen Netz und in Tunneln im ganzen SBB-Netz.': 'For fast call-outs on open lines and in tunnels across the SBB network.',
+  'Für Ereignisse auf dem Bahnnetz, besonders in längeren Tunneln und an schwer zugänglichen Strecken.': 'For incidents on the railway network, especially in long tunnels and on hard-to-reach lines.',
+  'Bei starkem Schneefall auf Strecken und in Bahnhöfen, unter anderem auf der Gotthard-Panoramastrecke.': 'During heavy snowfall on lines and in stations, among others on the Gotthard panorama line.',
+  'Für Messfahrten auf den Hauptstrecken im ganzen SBB-Netz.': 'For measuring runs on the main lines across the SBB network.',
+  'Für Unterhalt, Montage und Ereignisse im ganzen SBB-Normalspurnetz.': 'For maintenance, assembly work and incidents across the SBB standard-gauge network.',
+  'Früher vor allem vor Güterzügen am Gotthard.': 'Formerly mainly hauling freight trains on the Gotthard.',
+  'Früher vor schweren Güterzügen am Gotthard, auf den Zufahrtslinien und im Flachland.': 'Formerly hauling heavy freight trains on the Gotthard, its access lines and in the lowlands.',
+  'Früher das Kraftpaket am Gotthard, später vor allem im Güterverkehr und im Mittelland.': 'Formerly the powerhouse of the Gotthard, later mainly in freight and on the Swiss plateau.',
+  'Früher als eine der wichtigsten Streckenloks der SBB im ganzen Netz unterwegs.': 'Formerly one of the most important SBB mainline locomotives, all over the network.',
+  'Früher vor Personen-, Schnell- und Güterzügen, vor allem im Mittelland.': 'Formerly hauling passenger, express and freight trains, mainly on the Swiss plateau.',
+  'Früher vor schweren Gotthardzügen. Die Ae 8/14 11852 steht heute bei SBB Historic in Erstfeld.': 'Formerly hauling heavy Gotthard trains. Ae 8/14 11852 is kept today by SBB Historic in Erstfeld.',
+  'Früher vor Schnellzügen auf der Gotthard-Bergstrecke, später im Mittelland.': 'Formerly hauling express trains on the Gotthard mountain line, later on the Swiss plateau.',
+  'Früher vor schnellen, leichten Zügen im Mittelland, später im Regionalverkehr.': 'Formerly hauling fast, light trains on the Swiss plateau, later in regional service.',
+  'Als TEE «Gottardo» durch den Gotthard; der Zug verband die Schweiz mit Deutschland, Frankreich, Italien und den Niederlanden.': 'As the TEE «Gottardo» through the Gotthard; the train linked Switzerland with Germany, France, Italy and the Netherlands.',
+  'Früher auf Ausflugs- und Gesellschaftsfahrten im ganzen Netz unterwegs.': 'Formerly on excursions and charter trips all over the network.',
+  'Früher vor Schnellzügen; heute betreut die Dampfgruppe Zürich die erhaltene A 3/5 705.': 'Formerly hauling express trains; today the Dampfgruppe Zürich looks after the preserved A 3/5 705.',
+  'Früher vor schweren Güterzügen am Gotthard, später im Mittelland, auf Bellinzona–Luino und im Rangierdienst.': 'Formerly hauling heavy freight trains on the Gotthard, later on the Swiss plateau, on Bellinzona–Luino and in shunting.',
+  'Früher vor Regionalzügen, auf Nebenbahnen und im Stationsdienst.': 'Formerly hauling regional trains, on branch lines and in station service.',
+  'Früher im Vorortsverkehr am rechten Zürichseeufer, bekannt als «Goldküstenexpress».': 'Formerly in commuter service on the right shore of Lake Zurich, known as the «Goldküstenexpress».',
+  'Früher vor Schnellzügen, später vor Regional- und S-Bahn-Pendelzügen. Die RBe 540 074 fährt heute bei der Oensingen-Balsthal-Bahn.': 'Formerly hauling express trains, later regional and S-Bahn push-pull trains. RBe 540 074 runs today on the Oensingen-Balsthal-Bahn.'
+});
+
 /* ---- 20-personenverkehr.js ---- */
 /* English – SBB Passenger vehicles */
 uebDict({ 'ja': 'yes', 'nein': 'no' });

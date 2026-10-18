@@ -114,8 +114,9 @@ const einsatzKarte = (() => {
         // name in the middle of the area, or above it when a station dot sits in the middle
         const besetzt = radius && punkteAlle.some(([px, py]) => Math.hypot(px - x, py - cy) < radius * .5);
         const gy = besetzt ? cy - radius - fs * .25 : ty;
-        boxen.push([x - w / 2, gy - auf, x + w / 2, gy + ab]);
-        svg.appendChild(el('text', { x, y: gy, class: 'ez-label mid' }, name));
+        const gx = Math.min(Math.max(x, vx + w / 2 + fs * .3), vx + vw - w / 2 - fs * .3); // stays inside the map near the border
+        boxen.push([gx - w / 2, gy - auf, gx + w / 2, gy + ab]);
+        svg.appendChild(el('text', { x: gx, y: gy, class: 'ez-label mid' }, name));
         continue;
       }
       svg.appendChild(el('circle', { cx: x, cy, r: (ort ? 260 : 190) * s, class: ort ? 'ez-ort' : 'ez-dot' }));

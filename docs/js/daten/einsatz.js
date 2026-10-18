@@ -117,5 +117,68 @@ const INTERNATIONAL = {
 };
 
 // infrastructure wagons: no fixed routes, they go wherever a construction site is
-for (const id of ['fans-u', 'xans-37', 'xans-74', 'xas-53', 'xas-62', 'xas-62-fb', 'xas-73', 'xns-39', 'xns-60', 'silad-1-3', 'silad-4', 'silad-reserve', 'kirow-mannschaftswagen'])
+for (const id of ['fans-u', 'xans-37', 'xans-74', 'xas-53', 'xas-62', 'xas-62-fb', 'xas-73', 'xns-39', 'xns-60', 'silad-1-3', 'silad-4', 'silad-reserve', 'kirow-mannschaftswagen',
+  'xs-72', 'ste-kurz', 'ste-lang', 'xs-45', 'xs-48', 'xs-mannschaftswagen'])
   EINSATZ[id] = { netz: true, text: 'Mit Bauzügen auf Baustellen im ganzen SBB-Normalspurnetz, je nach Bauprogramm.' };
+
+/* =====================================================================
+   Weitere Fahrzeuge (Oktober 2026): Orte und Strecken nur so weit, wie sie in den
+   Fahrzeugtexten von RailBase belegt sind. Ohne feste Strecke: ganzes Netz.
+   ===================================================================== */
+const GOTTHARD_BERG = ['Arth-Goldau', 'Erstfeld', 'Göschenen', 'Airolo', 'Bellinzona', 'Chiasso'];
+const MITTELLAND = ['Genève', 'Lausanne', 'Fribourg/Freiburg', 'Bern', 'Olten', 'Zürich HB', 'Winterthur', 'St. Gallen'];
+Object.assign(BAHNHOF_EXTRA, { 'Meilen': [2691184, 1236087] });
+Object.assign(EINSATZ, {
+  // Personenverkehr und Cargo
+  'rabe-521': { gebiete: [['Basel SBB', 14, 'S-Bahn Basel']], strecken: [['Basel SBB', 'Basel Bad Bf']], orte: [['Seehas Konstanz–Engen', 2730596, 1280110]],
+    text: 'Auf der trinationalen S-Bahn Basel und grenzüberschreitend nach Deutschland, dazu im Seehas-Verkehr ab Konstanz.' },
+  'rabe-522': { gebiete: [['Genève', 14, 'Léman Express'], ['Basel SBB', 12, 'Raum Basel']],
+    text: 'Im Léman-Express-Netz rund um Genf und auf grenznahen Regionalverbindungen im Raum Basel.' },
+  'rabe-524': { strecken: [['Bellinzona', 'Lugano', 'Chiasso'], ['Bellinzona', 'Locarno']],
+    text: 'Im TILO-Netz im Tessin und grenzüberschreitend in die Lombardei.' },
+  're-421': { strecken: [['Basel SBB', 'Basel Bad Bf']],
+    text: 'Vor allem für Güterzüge von der Schweiz nach Deutschland.' },
+  // Rangierfahrzeuge
+  'ee-922': { netz: true, text: 'Im Rangierdienst des Personenverkehrs in grösseren Bahnhöfen; dank zwei Stromsystemen auch in Grenzbahnhöfen.' },
+  'eem-923': { netz: true, text: 'Bei SBB Cargo im Rangier- und Zustelldienst; ohne Fahrleitung fährt sie mit dem Hilfsdiesel.' },
+  'bm-44': { netz: true, text: 'Früher im schweren Rangierdienst in grossen Bahnhöfen, unabhängig von der Fahrleitung.' },
+  'tm-232': { netz: true, text: 'Im leichten Rangier- und Baudienst im ganzen SBB-Netz.' },
+  'ee-33': { netz: true, text: 'Über Jahrzehnte im Rangierdienst in Bahnhöfen und Depots im ganzen SBB-Netz.' },
+  // Infrastruktur: Lokomotiven und Traktoren
+  'am-841': { netz: true, text: 'Im Bau-, Rangier- und Zustelldienst im ganzen SBB-Netz, je nach Baustelle.' },
+  'am-842': { netz: true, text: 'Im Bau-, Rangier- und Zustelldienst im ganzen SBB-Netz, je nach Baustelle.' },
+  'tmf-232': { netz: true, text: 'Im Bau-, Rangier- und Zustelldienst im ganzen SBB-Netz, je nach Baustelle.' },
+  'tm-234-4': { netz: true, text: 'Im Bau-, Rangier- und Zustelldienst im ganzen SBB-Netz, je nach Baustelle.' },
+  'pwfz': { netz: true, text: 'Geplant für Baustellen im ganzen SBB-Normalspurnetz.' },
+  // Dienst- und Spezialfahrzeuge
+  'lrz-14': { strecken: [['Arth-Goldau', 'Erstfeld', 'Bellinzona'], GOTTHARD_BERG],
+    text: 'Für die Gotthardachse mit dem Gotthard-Basistunnel und das Tunnelnetz beschafft.' },
+  'lrz-08': { netz: true, text: 'Für schnelle Einsätze auf dem offenen Netz und in Tunneln im ganzen SBB-Netz.' },
+  'lrz-04': { netz: true, text: 'Für Ereignisse auf dem Bahnnetz, besonders in längeren Tunneln und an schwer zugänglichen Strecken.' },
+  'xrotm': { netz: true, strecken: [GOTTHARD_BERG],
+    text: 'Bei starkem Schneefall auf Strecken und in Bahnhöfen, unter anderem auf der Gotthard-Panoramastrecke.' },
+  'diagnose': { netz: true, text: 'Für Messfahrten auf den Hauptstrecken im ganzen SBB-Netz.' },
+  'kirow-800': { netz: true, text: 'Für Unterhalt, Montage und Ereignisse im ganzen SBB-Normalspurnetz.' },
+  'kirow-250': { netz: true, text: 'Für Unterhalt, Montage und Ereignisse im ganzen SBB-Normalspurnetz.' },
+  'kirow-krc-100': { netz: true, text: 'Für Unterhalt, Montage und Ereignisse im ganzen SBB-Normalspurnetz.' },
+  'bendini': { netz: true, text: 'Für Unterhalt, Montage und Ereignisse im ganzen SBB-Normalspurnetz.' },
+  'fahrleitung': { netz: true, text: 'Für Unterhalt, Montage und Ereignisse im ganzen SBB-Normalspurnetz.' },
+  // Historische Fahrzeuge: wo sie früher fuhren
+  'h-ce68ii': { strecken: [GOTTHARD_BERG], text: 'Früher vor allem vor Güterzügen am Gotthard.' },
+  'h-ce68iii': { strecken: [GOTTHARD_BERG], text: 'Früher vor schweren Güterzügen am Gotthard, auf den Zufahrtslinien und im Flachland.' },
+  'h-ae66': { strecken: [['Zürich HB', 'Zug', ...GOTTHARD_BERG]], text: 'Früher das Kraftpaket am Gotthard, später vor allem im Güterverkehr und im Mittelland.' },
+  'h-ae47': { netz: true, text: 'Früher als eine der wichtigsten Streckenloks der SBB im ganzen Netz unterwegs.' },
+  'h-ae36i': { strecken: [MITTELLAND, ['Basel SBB', 'Olten']], text: 'Früher vor Personen-, Schnell- und Güterzügen, vor allem im Mittelland.' },
+  'h-ae814': { strecken: [GOTTHARD_BERG], orte: [['Erstfeld']], text: 'Früher vor schweren Gotthardzügen. Die Ae 8/14 11852 steht heute bei SBB Historic in Erstfeld.' },
+  'h-be46': { strecken: [GOTTHARD_BERG], text: 'Früher vor Schnellzügen auf der Gotthard-Bergstrecke, später im Mittelland.' },
+  'h-re44i': { strecken: [MITTELLAND, ['Basel SBB', 'Olten']], text: 'Früher vor schnellen, leichten Zügen im Mittelland, später im Regionalverkehr.' },
+  'h-tee': { strecken: [['Zürich HB', 'Zug', ...GOTTHARD_BERG]],
+    text: 'Als TEE «Gottardo» durch den Gotthard; der Zug verband die Schweiz mit Deutschland, Frankreich, Italien und den Niederlanden.' },
+  'h-roterpfeil': { netz: true, text: 'Früher auf Ausflugs- und Gesellschaftsfahrten im ganzen Netz unterwegs.' },
+  'h-a35': { orte: [['Dampfgruppe Zürich', 2683100, 1247900]], text: 'Früher vor Schnellzügen; heute betreut die Dampfgruppe Zürich die erhaltene A 3/5 705.' },
+  'h-c56': { strecken: [GOTTHARD_BERG], text: 'Früher vor schweren Güterzügen am Gotthard, später im Mittelland, auf Bellinzona–Luino und im Rangierdienst.' },
+  'h-eb35': { netz: true, text: 'Früher vor Regionalzügen, auf Nebenbahnen und im Stationsdienst.' },
+  'h-mirage': { strecken: [['Zürich HB', 'Meilen', 'Rapperswil SG']], text: 'Früher im Vorortsverkehr am rechten Zürichseeufer, bekannt als «Goldküstenexpress».' },
+  'h-rbe540': { netz: true, orte: [['Oensingen-Balsthal-Bahn', 2619225, 1240567]],
+    text: 'Früher vor Schnellzügen, später vor Regional- und S-Bahn-Pendelzügen. Die RBe 540 074 fährt heute bei der Oensingen-Balsthal-Bahn.' }
+});
