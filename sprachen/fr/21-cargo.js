@@ -36,7 +36,7 @@ uebZug('re-420', {
     { titel: 'Utilisation et variantes', p: ['La Re 4/4 II a été engagée en trafic voyageurs et marchandises, notamment en tête de trains rapides en plaine et sur les rampes d’accès au Saint-Gothard et au Simplon. Une partie est passée à CFF Cargo.', 'La variante Re 421 est née de transformations pour l’Allemagne ; 30 locomotives ont été modernisées de 2011 à 2016 sous le nom « LION » pour les trains de renfort du RER zurichois. CFF Cargo propose toujours la Re 420 dans son offre de location en Suisse.'],
       hinweis: 'Nombre : SBB Historic indique 276 Re 4/4 II acquises pour les CFF, un ancien magazine Cargo 277 locomotives livrées. Cette page suit SBB Historic ; aucun des deux chiffres ne correspond à l’effectif actuel.' }
   ],
-  bilder: ['« Re 10/10 » : Re 620 et Re 420 en tête d’un train de marchandises', 'Re 420 331-1 en automne', 'Re 420 de WRS avec un train de bois', 'Re 420 de CFF Cargo avec un train de marchandises (photo : hpgruesen / Pixabay)', 'Re 420 avec des wagons jaunes dans les vignes au bord du lac', 'Re 420 avec un train de marchandises entre vignes et champs', 'Re 420 en livrée bleue avec des wagons-citernes en gare de triage']
+  bilder: ['« Re 10/10 » : Re 620 et Re 420 en tête d’un train de marchandises', 'Re 420 331-1 en automne', 'Re 420 de WRS avec un train de bois', 'Re 420 de CFF Cargo avec un train de marchandises', 'Re 420 avec des wagons jaunes dans les vignes au bord du lac', 'Re 420 avec un train de marchandises entre vignes et champs', 'Re 420 en livrée bleue avec des wagons-citernes en gare de triage']
 });
 
 uebZug('re-620', {
@@ -49,7 +49,7 @@ uebZug('re-620', {
     { titel: 'Utilisation et évolution', p: ['Les locomotives ont d’abord tracté des trains voyageurs et marchandises lourds. En commande multiple avec une Re 4/4 II ou III, elles formaient pour les trains de marchandises lourds la combinaison connue sous le nom de « Re 10/10 ». Après la divisionnalisation des CFF, les Re 6/6 ont été attribuées à CFF Cargo.', 'CFF Cargo propose toujours la Re 620 dans son offre de location pour la Suisse ; l’effectif réel diminue au fil des retraits.', 'À partir de 2007, 63 locomotives ont reçu l’ETCS niveau 2. SBB Historic situe le début des retraits liés à l’âge en février 2021.'],
       hinweis: 'Le chiffre de 89 désigne la série construite historiquement et non l’effectif aujourd’hui en état de marche.' }
   ],
-  bilder: ['Re 620 aux couleurs Cargo avec des wagons-citernes au bord du lac', '« Re 10/10 » : Re 620 et Re 420 en tête d’un train de marchandises', 'Re 620 aux couleurs Cargo avec des wagons-silos', 'Re 620 avec un train de wagons-citernes', 'Re 620 avec un train de travaux, des vaches au premier plan', 'Re 620 aux couleurs Cargo en gare', 'Re 620 avec un train de wagons-citernes (photo : music4life / Pixabay)']
+  bilder: ['Re 620 aux couleurs Cargo avec des wagons-citernes au bord du lac', '« Re 10/10 » : Re 620 et Re 420 en tête d’un train de marchandises', 'Re 620 aux couleurs Cargo avec des wagons-silos', 'Re 620 avec un train de wagons-citernes', 'Re 620 avec un train de travaux, des vaches au premier plan', 'Re 620 aux couleurs Cargo en gare', 'Re 620 avec un train de wagons-citernes']
 });
 
 uebZug('re-474', {

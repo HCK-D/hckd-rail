@@ -36,7 +36,7 @@ uebZug('re-420', {
     { titel: 'Impiego e varianti', p: ['La Re 4/4 II è stata impiegata nel traffico viaggiatori e merci, tra l’altro in testa ai treni veloci in pianura e sulle rampe d’accesso al San Gottardo e al Sempione. Una parte è passata a FFS Cargo.', 'La variante Re 421 è nata da trasformazioni per la Germania; 30 locomotive sono state ammodernate nel 2011–2016 come «LION» per i treni di rinforzo della S-Bahn di Zurigo. FFS Cargo offre ancora la Re 420 a noleggio in Svizzera.'],
       hinweis: 'Numero: SBB Historic indica 276 Re 4/4 II acquistate per le FFS, una vecchia rivista Cargo 277 locomotive consegnate. Questa pagina segue SBB Historic; nessuno dei due numeri è l’effettivo attuale.' }
   ],
-  bilder: ['«Re 10/10»: Re 620 e Re 420 in testa a un treno merci', 'Re 420 331-1 in autunno', 'Re 420 di WRS con treno di legname', 'Re 420 di FFS Cargo con treno merci (foto: hpgruesen / Pixabay)', 'Re 420 con carri gialli tra i vigneti sul lago', 'Re 420 con treno merci tra vigneti e campi', 'Re 420 in livrea blu con carri cisterna nello scalo di smistamento']
+  bilder: ['«Re 10/10»: Re 620 e Re 420 in testa a un treno merci', 'Re 420 331-1 in autunno', 'Re 420 di WRS con treno di legname', 'Re 420 di FFS Cargo con treno merci', 'Re 420 con carri gialli tra i vigneti sul lago', 'Re 420 con treno merci tra vigneti e campi', 'Re 420 in livrea blu con carri cisterna nello scalo di smistamento']
 });
 
 uebZug('re-620', {
@@ -49,7 +49,7 @@ uebZug('re-620', {
     { titel: 'Impiego e sviluppo', p: ['Le locomotive trainarono dapprima treni viaggiatori e merci pesanti. In comando multiplo con una Re 4/4 II o III formavano per i treni merci pesanti la combinazione nota come «Re 10/10». Dopo la divisionalizzazione delle FFS le Re 6/6 furono assegnate a FFS Cargo.', 'FFS Cargo offre ancora la Re 620 a noleggio per la Svizzera; l’effettivo reale cambia con i ritiri dal servizio.', 'Dal 2007, 63 locomotive hanno ricevuto l’ETCS livello 2. SBB Historic indica l’inizio dei ritiri dal servizio per anzianità nel febbraio 2021.'],
       hinweis: 'Il numero 89 indica la serie costruita storicamente e non l’effettivo oggi in esercizio.' }
   ],
-  bilder: ['Re 620 nei colori Cargo con carri cisterna sul lago', '«Re 10/10»: Re 620 e Re 420 in testa a un treno merci', 'Re 620 nei colori Cargo con carri silo', 'Re 620 con treno di carri cisterna', 'Re 620 con treno cantiere, mucche in primo piano', 'Re 620 nei colori Cargo in stazione', 'Re 620 con treno di carri cisterna (foto: music4life / Pixabay)']
+  bilder: ['Re 620 nei colori Cargo con carri cisterna sul lago', '«Re 10/10»: Re 620 e Re 420 in testa a un treno merci', 'Re 620 nei colori Cargo con carri silo', 'Re 620 con treno di carri cisterna', 'Re 620 con treno cantiere, mucche in primo piano', 'Re 620 nei colori Cargo in stazione', 'Re 620 con treno di carri cisterna']
 });
 
 uebZug('re-474', {

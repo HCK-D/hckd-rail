@@ -39,20 +39,20 @@ $('#foot-links').innerHTML = KATS.map(k => `<li><a href="#${k.id}">${esc(tr(k.na
 /* ---------- slideshow beside the search ---------- */
 (() => {
   const S = [
-    ['slide-01', 'Regionalzug über einem Bergsee', 'Pixabay'],
-    ['slide-02', 'FV-Dosto (RABe 502) in den Bergen', 'Pixabay', 'rabe-502'],
-    ['slide-03', 'Re 460 in einer Bahnhofshalle', 'daigdude / Pixabay', 're-460'],
-    ['slide-04', 'RABe 503 «Astoro» am Perron', 'dankernmedia / Pixabay'],
-    ['slide-05', 'BLS-Triebzüge in Burgdorf', 'emmentalerhousi / Pixabay'],
-    ['slide-06', 'Regionalzug im Schnee', 'ewirz / Pixabay'],
-    ['slide-07', 'Re 420 von SBB Cargo mit Güterzug', 'hpgruesen / Pixabay', 're-420'],
-    ['slide-08', 'BLS Re 465 mit Autozug', 'hpgruesen / Pixabay'],
-    ['slide-09', 'Re 460 mit IC2000 bei der Einfahrt', 'hpgruesen / Pixabay', 're-460'],
-    ['slide-10', 'Rhätische Bahn in Tirano', 'hpgruesen / Pixabay'],
-    ['slide-11', 'Bahnhofsuhr und SBB-Logo', 'markus53 / Pixabay'],
-    ['slide-12', 'Re 620 mit Kesselwagenzug', 'music4life / Pixabay', 're-620'],
-    ['slide-13', 'Triebzug über die Weichen', 'ramboldheiner / Pixabay'],
-    ['slide-14', 'Postwagen in der Bahnhofshalle', 'slpix / Pixabay']
+    ['slide-01', 'Regionalzug über einem Bergsee'],
+    ['slide-02', 'FV-Dosto (RABe 502) in den Bergen', 'rabe-502'],
+    ['slide-03', 'Re 460 in einer Bahnhofshalle', 're-460'],
+    ['slide-04', 'RABe 503 «Astoro» am Perron'],
+    ['slide-05', 'BLS-Triebzüge in Burgdorf'],
+    ['slide-06', 'Regionalzug im Schnee'],
+    ['slide-07', 'Re 420 von SBB Cargo mit Güterzug', 're-420'],
+    ['slide-08', 'BLS Re 465 mit Autozug'],
+    ['slide-09', 'Re 460 mit IC2000 bei der Einfahrt', 're-460'],
+    ['slide-10', 'Rhätische Bahn in Tirano'],
+    ['slide-11', 'Bahnhofsuhr und SBB-Logo'],
+    ['slide-12', 'Re 620 mit Kesselwagenzug', 're-620'],
+    ['slide-13', 'Triebzug über die Weichen'],
+    ['slide-14', 'Postwagen in der Bahnhofshalle']
   ];
   const show = $('#hero-show'), list = $('#hs-slides'), dots = $('#hs-dots'), cap = $('#hs-cap'), playBtn = $('#hs-play');
   S.forEach(s => { s[1] = tr(s[1]); });
@@ -66,8 +66,8 @@ $('#foot-links').innerHTML = KATS.map(k => `<li><a href="#${k.id}">${esc(tr(k.na
     items[cur].classList.remove('on'); items[cur].setAttribute('aria-hidden', 'true'); dotBtns[cur].setAttribute('aria-selected', 'false');
     cur = i; load(i); load(i + 1);
     items[cur].classList.add('on'); items[cur].setAttribute('aria-hidden', 'false'); dotBtns[cur].setAttribute('aria-selected', 'true');
-    const [, t, cr, link] = S[cur];
-    cap.innerHTML = `<b>${esc(t)}</b>${link ? `<a href="#${link}">${esc(tr('Zum Fahrzeug'))}</a>` : ''}<small>${esc(tr('Foto:'))} ${esc(cr)}</small>`;
+    const [, t, link] = S[cur];
+    cap.innerHTML = `<b>${esc(t)}</b>${link ? `<a href="#${link}">${esc(tr('Zum Fahrzeug'))}</a>` : ''}`;
     arm();
   }
   function arm() { clearTimeout(timer); if (auto && !hover && inView && !document.hidden) timer = setTimeout(() => go(cur + 1), 5500); }

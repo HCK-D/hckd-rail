@@ -38,7 +38,6 @@
 .hs-bar{position:absolute;left:12px;right:12px;bottom:12px;display:flex;align-items:flex-end;justify-content:space-between;gap:10px}
 .hs-cap{min-width:0;display:grid;gap:2px;padding:9px 13px;border-radius:12px;background:var(--glass);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);color:var(--fg)}
 .hs-cap b{font-size:15.5px;line-height:1.25}
-.hs-cap small{font-size:12px;color:var(--fg-2)}
 .hs-cap a{font-size:13.5px;font-weight:600;color:var(--accent-ink);text-decoration:none}
 .hs-ctl{flex:none;display:flex;gap:6px}
 .hs-ctl button{width:36px;height:36px;border:0;border-radius:50%;background:var(--glass);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);color:var(--fg);display:grid;place-items:center;cursor:pointer}

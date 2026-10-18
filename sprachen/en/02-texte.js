@@ -101,7 +101,6 @@ uebDict({
   'Bildnachweis und Rechte': 'Picture credits and rights',
   'Eigene und zugeschickte Fotos auf den Fahrzeugseiten: mit Erlaubnis der Fotografinnen und Fotografen verwendet. Weiterverwendung nur mit deren Zustimmung.': 'Our own and submitted photos on the vehicle pages: used with the photographers’ permission. Further use only with their consent.',
   'Fotos von Wikimedia Commons: unter freien Lizenzen (CC0, CC BY, CC BY-SA), für die Website verkleinert. Fotograf, Lizenz und Link stehen unter jedem Bild und in der Liste unten. Für diese Fotos gilt die jeweilige Lizenz, nicht das Urheberrecht von RailBase.': 'Photos from Wikimedia Commons: under free licences (CC0, CC BY, CC BY-SA), resized for the website. Photographer, licence and link are shown under each picture and in the list below. These photos are covered by their respective licence, not by RailBase’s copyright.',
-  'Diashow auf der Startseite: Pixabay, verwendet nach der Pixabay-Inhaltslizenz. Die Namen stehen in der Bildunterschrift.': 'Home page slideshow: Pixabay, used under the Pixabay Content License. The names are given in the caption.',
   'Illustrationen, Streckenmodell und Gestaltung: HCKD.': 'Illustrations, line model and design: HCKD.',
   'Kartendaten: Bundesamt für Verkehr (BAV), Datensatz Schienennetz. Landesgrenze: swisstopo.': 'Map data: Federal Office of Transport (FOT), rail network dataset. National border: swisstopo.',
   'Schrift: Source Sans 3 von Adobe, SIL Open Font License 1.1.': 'Font: Source Sans 3 by Adobe, SIL Open Font License 1.1.',

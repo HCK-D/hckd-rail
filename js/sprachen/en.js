@@ -497,7 +497,6 @@ uebDict({
   'Bildnachweis und Rechte': 'Picture credits and rights',
   'Eigene und zugeschickte Fotos auf den Fahrzeugseiten: mit Erlaubnis der Fotografinnen und Fotografen verwendet. Weiterverwendung nur mit deren Zustimmung.': 'Our own and submitted photos on the vehicle pages: used with the photographers’ permission. Further use only with their consent.',
   'Fotos von Wikimedia Commons: unter freien Lizenzen (CC0, CC BY, CC BY-SA), für die Website verkleinert. Fotograf, Lizenz und Link stehen unter jedem Bild und in der Liste unten. Für diese Fotos gilt die jeweilige Lizenz, nicht das Urheberrecht von RailBase.': 'Photos from Wikimedia Commons: under free licences (CC0, CC BY, CC BY-SA), resized for the website. Photographer, licence and link are shown under each picture and in the list below. These photos are covered by their respective licence, not by RailBase’s copyright.',
-  'Diashow auf der Startseite: Pixabay, verwendet nach der Pixabay-Inhaltslizenz. Die Namen stehen in der Bildunterschrift.': 'Home page slideshow: Pixabay, used under the Pixabay Content License. The names are given in the caption.',
   'Illustrationen, Streckenmodell und Gestaltung: HCKD.': 'Illustrations, line model and design: HCKD.',
   'Kartendaten: Bundesamt für Verkehr (BAV), Datensatz Schienennetz. Landesgrenze: swisstopo.': 'Map data: Federal Office of Transport (FOT), rail network dataset. National border: swisstopo.',
   'Schrift: Source Sans 3 von Adobe, SIL Open Font License 1.1.': 'Font: Source Sans 3 by Adobe, SIL Open Font License 1.1.',
@@ -1225,7 +1224,7 @@ uebZug('re-420', {
     { titel: 'Service and variants', p: ['The Re 4/4 II was used in passenger and freight service, including on fast trains in the lowlands and on the approaches to the Gotthard and Simplon. Some passed to SBB Cargo.', 'The Re 421 variant was created by conversions for Germany; 30 locomotives were modernised in 2011–2016 as «LION» for extra trains of the Zurich S-Bahn. SBB Cargo still lists the Re 420 in its Swiss rental offer.'],
       hinweis: 'Numbers: SBB Historic gives 276 Re 4/4 II procured for SBB, an older Cargo magazine 277 locomotives delivered. This page follows SBB Historic; neither figure is the current fleet size.' }
   ],
-  bilder: ['«Re 10/10»: Re 620 and Re 420 at the head of a freight train', 'Re 420 331-1 in autumn', 'WRS Re 420 with a timber train', 'SBB Cargo Re 420 with a freight train (photo: hpgruesen / Pixabay)', 'Re 420 with yellow wagons in the vineyards by the lake', 'Re 420 with a freight train between vineyards and fields', 'Re 420 in blue livery with tank wagons in a marshalling yard']
+  bilder: ['«Re 10/10»: Re 620 and Re 420 at the head of a freight train', 'Re 420 331-1 in autumn', 'WRS Re 420 with a timber train', 'SBB Cargo Re 420 with a freight train', 'Re 420 with yellow wagons in the vineyards by the lake', 'Re 420 with a freight train between vineyards and fields', 'Re 420 in blue livery with tank wagons in a marshalling yard']
 });
 
 uebZug('re-620', {
@@ -1238,7 +1237,7 @@ uebZug('re-620', {
     { titel: 'Service and further development', p: ['The locomotives first hauled heavy passenger and freight trains. In multiple with a Re 4/4 II or III they formed the combination known as the «Re 10/10» for heavy freight trains. After SBB was split into divisions, the Re 6/6 were assigned to SBB Cargo.', 'SBB Cargo still lists the Re 620 in its rental offer for Switzerland; the actual fleet is shrinking due to withdrawals.', 'From 2007, 63 locomotives received ETCS Level 2. SBB Historic dates the start of age-related withdrawals to February 2021.'],
       hinweis: 'The figure of 89 refers to the series as built and not to today’s operational fleet.' }
   ],
-  bilder: ['Re 620 in Cargo colours with tank wagons by the lake', '«Re 10/10»: Re 620 and Re 420 at the head of a freight train', 'Re 620 in Cargo colours with silo wagons', 'Re 620 with a train of tank wagons', 'Re 620 with an engineering train, cows in the foreground', 'Re 620 in Cargo colours in a station', 'Re 620 with a train of tank wagons (photo: music4life / Pixabay)']
+  bilder: ['Re 620 in Cargo colours with tank wagons by the lake', '«Re 10/10»: Re 620 and Re 420 at the head of a freight train', 'Re 620 in Cargo colours with silo wagons', 'Re 620 with a train of tank wagons', 'Re 620 with an engineering train, cows in the foreground', 'Re 620 in Cargo colours in a station', 'Re 620 with a train of tank wagons']
 });
 
 uebZug('re-474', {
