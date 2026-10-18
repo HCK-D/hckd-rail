@@ -148,6 +148,8 @@ button{font:inherit}
 .footer{background:var(--foot-bg);color:var(--foot-fg)}
 .footer .wrap{display:grid;gap:22px;padding-block:44px calc(44px + env(safe-area-inset-bottom,0px))}
 .foot-brand{display:flex;align-items:center;gap:12px}
+.footer .foot-besuche{display:inline-flex;align-items:center;gap:8px;margin:0;font:600 14px/1.2 var(--body);color:var(--foot-fg);font-variant-numeric:tabular-nums}
+.footer .foot-besuche::before{content:"";width:8px;height:8px;border-radius:50%;background:#2DBE60;box-shadow:0 0 0 3px rgba(45,190,96,.25)}
 .foot-brand .wm{color:var(--foot-fg)}
 .footer p{margin:0;max-width:40em;color:var(--foot-dim);font-size:15px}
 .foot-links{display:flex;flex-wrap:wrap;gap:8px 18px;margin:0;padding:0;list-style:none}

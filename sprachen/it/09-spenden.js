@@ -1,5 +1,6 @@
 /* Italiano – donazioni con bonifico bancario */
 uebDict({
+  '{n} Besuche': '{n} visite',
   'Namen anzeigen': 'Mostra il nome',
   'Eigener Betrag': 'Importo libero',
   'z. B. 15': 'p. es. 15',

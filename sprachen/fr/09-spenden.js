@@ -1,5 +1,6 @@
 /* Français – dons par virement bancaire */
 uebDict({
+  '{n} Besuche': '{n} visites',
   'Namen anzeigen': 'Afficher le nom',
   'Eigener Betrag': 'Montant libre',
   'z. B. 15': 'p. ex. 15',

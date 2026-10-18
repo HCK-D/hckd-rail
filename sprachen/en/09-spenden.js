@@ -1,5 +1,6 @@
 /* English – donations by bank transfer */
 uebDict({
+  '{n} Besuche': '{n} visits',
   'Namen anzeigen': 'Show name',
   'Eigener Betrag': 'Your own amount',
   'z. B. 15': 'e.g. 15',
