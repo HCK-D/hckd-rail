@@ -33,6 +33,25 @@ const einsatzKarte = (() => {
       const p = pos.get(ks[i]), q = pos.get(ks[j]), dd = Math.hypot(p[0] - q[0], p[1] - q[1]);
       if (dd > 0 && dd <= 3) { adj.get(ks[i]).push({ to: ks[j], i: -1, w: dd * N.unit }); adj.get(ks[j]).push({ to: ks[i], i: -1, w: dd * N.unit }); }
     }
+    // gaps in the map data (e.g. Aarau–Olten): a track that simply stops is joined to the next corner
+    // up to 800 m away, but only straight ahead (within 35°), so real terminus stations stay ends
+    for (const k of ks) {
+      if (adj.get(k).length !== 1) continue;
+      const e = adj.get(k)[0], s = segs[e.i], p = pos.get(k);
+      const nb = key(s.pts[0]) === k ? s.pts[1] : s.pts[s.pts.length - 2];
+      const dx = p[0] - nb[0], dy = p[1] - nb[1], dl = Math.hypot(dx, dy) || 1;
+      let best = null, bd = Infinity;
+      for (const q of ks) {
+        if (q === k || q === e.to) continue;
+        const r = pos.get(q), vx = r[0] - p[0], vy = r[1] - p[1], d = Math.hypot(vx, vy);
+        if (d <= 3 || d > 40 || d >= bd) continue;
+        if ((dx * vx + dy * vy) / (dl * d) < Math.cos(35 * Math.PI / 180)) continue;
+        best = q; bd = d;
+      }
+      if (!best) continue;
+      const i = segs.push({ len: bd * N.unit, pts: [p, pos.get(best)], sbb: s.sbb }) - 1;
+      adj.get(k).push({ to: best, i, w: bd * N.unit }); adj.get(best).push({ to: k, i, w: bd * N.unit });
+    }
     const pathD = pts => 'M' + pts.map(([x, y]) => x + ' ' + flip(y)).join('L');
     G = {
       segs, adj, pos, flip, pathD,
@@ -97,13 +116,44 @@ const einsatzKarte = (() => {
       if (n) marken.push([name, n[1], n[2], false, true]);
       else if (E != null) marken.push([name, (E - N.x0) / N.unit, (Nn - N.y0) / N.unit, false, true]);
     }
-    // labels: each place once
+    // labels: each place once, on the side where it hides the least of the red route and of other labels
+    const probe = svg.appendChild(el('text', { class: 'ez-label' }, 'x'));
+    const fs = parseFloat(getComputedStyle(probe).fontSize) || 400; probe.remove();
+    const rot = []; // points along the red route, in drawing coordinates
+    const routeSegs = e.netz ? G.segs.filter(s => s.sbb) : [...ids].map(i => G.segs[i]);
+    for (const s of routeSegs) s.pts.forEach((b, j) => {
+      const a = s.pts[j - 1], n = a ? Math.ceil(Math.hypot(b[0] - a[0], b[1] - a[1]) / 150) : 1;
+      for (let t = 1; t <= n; t++) rot.push(a ? [a[0] + (b[0] - a[0]) * t / n, G.flip(a[1] + (b[1] - a[1]) * t / n)] : [b[0], G.flip(b[1])]);
+    });
+    const [vx, vy, vw, vh] = G.vb, boxen = [];
+    const kosten = ([x0, y0, x1, y1]) => {
+      const h = fs * .3; let c = 0;
+      for (const [px, py] of rot) if (px > x0 - h && px < x1 + h && py > y0 - h && py < y1 + h) c++;
+      for (const [a0, b0, a1, b1] of boxen) if (x0 < a1 && x1 > a0 && y0 < b1 && y1 > b0) c += 1000;
+      if (x0 < vx || x1 > vx + vw || y0 < vy || y1 > vy + vh) c += 500;
+      return c;
+    };
     const seen = new Set();
-    for (const [name, x, y, gebiet, ort] of marken) {
+    const ordnung = [...marken.filter(m => m[3]), ...marken.filter(m => !m[3])]; // areas first, they cannot move
+    for (const [name, x, y, gebiet, ort] of ordnung) {
       if (seen.has(name)) continue; seen.add(name);
-      const cy = G.flip(y);
-      if (!gebiet) svg.appendChild(el('circle', { cx: x, cy, r: ort ? 260 : 190, class: ort ? 'ez-ort' : 'ez-dot' }));
-      svg.appendChild(el('text', { x: x + (gebiet ? 0 : 340), y: cy + (gebiet ? 130 : 130), class: 'ez-label' + (gebiet ? ' mid' : '') }, name));
+      const cy = G.flip(y), w = name.length * fs * .56, auf = fs * .75, ab = fs * .2, gap = fs * .85;
+      if (gebiet) {
+        const ty = cy + fs * .33;
+        boxen.push([x - w / 2, ty - auf, x + w / 2, ty + ab]);
+        svg.appendChild(el('text', { x, y: ty, class: 'ez-label mid' }, name));
+        continue;
+      }
+      svg.appendChild(el('circle', { cx: x, cy, r: ort ? 260 : 190, class: ort ? 'ez-ort' : 'ez-dot' }));
+      const ty = cy + fs * .33;
+      const wahl = [
+        [x + gap, ty, '', [x + gap, ty - auf, x + gap + w, ty + ab]],
+        [x - gap, ty, ' end', [x - gap - w, ty - auf, x - gap, ty + ab]],
+        [x, cy - gap, ' mid', [x - w / 2, cy - gap - auf, x + w / 2, cy - gap + ab]],
+        [x, cy + gap + auf, ' mid', [x - w / 2, cy + gap, x + w / 2, cy + gap + auf + ab]]
+      ].map((c, i) => [kosten(c[3]) + i * .5, c]).sort((a, b) => a[0] - b[0])[0][1];
+      boxen.push(wahl[3]);
+      svg.appendChild(el('text', { x: wahl[0], y: wahl[1], class: 'ez-label' + wahl[2] }, name));
     }
     txt.textContent = UEB_EINSATZ[z.id] || tr(e.text || '');
   }

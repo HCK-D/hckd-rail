@@ -407,6 +407,7 @@ body.has-cmp .footer{padding-bottom:76px}
 .ez-ort{fill:var(--accent);stroke:var(--surface);stroke-width:2;vector-effect:non-scaling-stroke}
 .ez-label{font:700 400px/1 var(--body);fill:var(--map-label);paint-order:stroke;stroke:var(--map-halo);stroke-width:130px;stroke-linejoin:round}
 .ez-label.mid{text-anchor:middle}
+.ez-label.end{text-anchor:end}
 .ez-txt{margin:12px 0 0!important;color:var(--fg)!important}
 @media (max-width:600px){.ez-label{font-size:560px;stroke-width:170px}.ez-wrap{padding:6px}}
 
