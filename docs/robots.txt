@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://railbase.ch/sitemap.xml
+Sitemap: https://hckd-rail.ch/sitemap.xml
