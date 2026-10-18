@@ -1,4 +1,4 @@
-/* HCKD RAIL – Steckbrief eines Fahrzeugs als PDF */
+/* RailBase – Steckbrief eines Fahrzeugs als PDF */
 'use strict';
 
 /* =====================================================================
@@ -28,8 +28,8 @@
     const stand = z.daten['Datenstand'] ? zd(z, 'Datenstand') : tr(DATENSTAND);
     return `
       <header class="sb-kopf">
-        <svg class="sb-logo" viewBox="0 0 100 92" aria-hidden="true"><rect width="100" height="92" fill="#D71920"/><path d="M0 32.4H30.5L44 42M56 42L69.5 32.4H100M0 63H30.5L44 53M56 53L69.5 63H100" fill="none" stroke="#fff" stroke-width="8.2"/><rect x="43.6" y="41.4" width="12.8" height="12.2" fill="#D71920" stroke="#fff" stroke-width="3"/></svg>
-        <div><b>HCKD <em>RAIL</em></b><span>${esc(tr('Steckbrief'))} · ${esc(tr(katOf(z.kat).name))}</span></div>
+        <svg class="sb-logo" viewBox="0 0 570 270" aria-hidden="true"><use href="#logo"/></svg>
+        <div><b>Rail<em>Base</em></b><span>${esc(tr('Steckbrief'))} · ${esc(tr(katOf(z.kat).name))}</span></div>
       </header>
       <p class="sb-typ">${esc(zt(z, 'typ'))}</p>
       <h1>${esc(fullName(z))}</h1>
@@ -53,7 +53,7 @@
     const img = $('img', blatt);
     if (img) { try { await Promise.race([img.decode(), new Promise(r => setTimeout(r, 4000))]); } catch (e) { /* print without photo */ } }
     const titel = document.title;
-    document.title = fullName(z) + ' – ' + tr('Steckbrief') + ' · HCKD RAIL'; // suggested file name of the PDF
+    document.title = fullName(z) + ' – ' + tr('Steckbrief') + ' · RailBase'; // suggested file name of the PDF
     print();
     document.title = titel;
     // some phones do not fire afterprint

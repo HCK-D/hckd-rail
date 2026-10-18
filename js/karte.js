@@ -1,4 +1,4 @@
-/* HCKD RAIL – Karte aller Bahnstrecken der Schweiz */
+/* RailBase – Karte aller Bahnstrecken der Schweiz */
 'use strict';
 
 /* =====================================================================

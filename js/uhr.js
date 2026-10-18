@@ -1,4 +1,4 @@
-/* HCKD RAIL – Bahnhofsuhr in der Kopfzeile */
+/* RailBase – Bahnhofsuhr in der Kopfzeile */
 'use strict';
 
 /* =====================================================================

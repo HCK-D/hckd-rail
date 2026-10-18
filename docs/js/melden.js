@@ -1,4 +1,4 @@
-/* HCKD RAIL – Fehler melden */
+/* RailBase – Fehler melden */
 'use strict';
 
 /* =====================================================================
@@ -19,14 +19,14 @@ const capUse = name => {
   catch (e) { return Promise.resolve(null); }
 };
 const rp = $('#report'), rpForm = $('#rp-form'), rpText = $('#rp-text'), rpKind = $('#rp-kind'), rpContact = $('#rp-contact'), rpMsg = $('#rp-msg'), rpSend = $('#rp-send'), rpTrap = $('#rp-botcheck');
-let rpCtx = { id: 'allgemein', name: 'HCKD RAIL allgemein' }, rpReturn = null;
+let rpCtx = { id: 'allgemein', name: 'RailBase allgemein' }, rpReturn = null;
 const rpSay = (t, kind) => { rpMsg.textContent = t; rpMsg.className = 'rp-msg' + (kind ? ' ' + kind : ''); };
 function rpOpen(from) {
   const kind = from.dataset.report;
   // name: German, for the mail; anzeige: in the chosen language, for the dialog
   rpCtx = kind === 'zug' && curZug ? { id: curZug.id, name: fullNameDe(curZug), anzeige: fullName(curZug) }
     : kind === 'kat' && curKat ? { id: curKat.id, name: curKat.name, anzeige: tr(curKat.name) }
-    : { id: 'allgemein', name: 'HCKD RAIL allgemein', anzeige: tr('HCKD RAIL allgemein') };
+    : { id: 'allgemein', name: 'RailBase allgemein', anzeige: tr('RailBase allgemein') };
   $('#rp-target').textContent = rpCtx.anzeige;
   rpSay(''); rpSend.disabled = false; rpSend.textContent = tr('Meldung senden');
   rpReturn = from; rp.hidden = false; rpText.focus();
@@ -57,8 +57,8 @@ async function sendMail(r) {
   const contact = r.kontakt;
   const body = {
     access_key: MELDEN.web3formsKey,
-    subject: 'HCKD RAIL – Fehlermeldung: ' + r.zielName,
-    from_name: 'HCKD RAIL',
+    subject: 'RailBase – Fehlermeldung: ' + r.zielName,
+    from_name: 'RailBase',
     Fahrzeug_oder_Seite: r.zielName,
     Art: r.art,
     Beschreibung: r.text,

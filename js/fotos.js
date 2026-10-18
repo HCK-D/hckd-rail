@@ -1,4 +1,4 @@
-/* HCKD RAIL – Fotos einsenden */
+/* RailBase – Fotos einsenden */
 'use strict';
 
 /* =====================================================================
@@ -11,7 +11,7 @@
 (() => {
   const dlg = $('#fotos'), form = $('#ft-form'), send = $('#ft-send'), msg = $('#ft-msg');
   const f = { link: $('#ft-link'), name: $('#ft-name'), mail: $('#ft-mail'), text: $('#ft-text'), ok: $('#ft-erlaubt'), trap: $('#ft-botcheck') };
-  let ziel = { id: 'allgemein', name: 'HCKD RAIL allgemein' }, zurueck = null, offenSeit = 0;
+  let ziel = { id: 'allgemein', name: 'RailBase allgemein' }, zurueck = null, offenSeit = 0;
   const say = (t, kind) => { msg.textContent = t; msg.className = 'rp-msg' + (kind ? ' ' + kind : ''); };
 
   function oeffnen(btn) {
@@ -46,8 +46,8 @@
           method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
           body: JSON.stringify({
             access_key: MELDEN.web3formsKey,
-            subject: 'HCKD RAIL – Fotos eingesendet: ' + ziel.name,
-            from_name: 'HCKD RAIL', replyto: mail,
+            subject: 'RailBase – Fotos eingesendet: ' + ziel.name,
+            from_name: 'RailBase', replyto: mail,
             Fahrzeug: ziel.name, Link_zu_den_Fotos: link, Fotograf: name, Kontakt: mail,
             Aufnahmeort_und_Datum: text || '(keine Angabe)',
             Erlaubnis: 'Ja: selbst fotografiert, Anzeige mit Namen erlaubt',

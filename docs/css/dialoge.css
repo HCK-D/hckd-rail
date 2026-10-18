@@ -1,4 +1,4 @@
-/* HCKD RAIL – Spenden, Fehler melden, Meldungen */
+/* RailBase – Spenden, Fehler melden, Meldungen */
 
 /* ---------- donate (kept quiet on purpose) ---------- */
 .donate{display:inline-flex;align-items:center;gap:6px;height:32px;margin-left:8px;padding:0 12px 0 10px;border:1px solid var(--line);border-radius:999px;background:transparent;color:var(--fg-3);font:600 13px/1 var(--body);cursor:pointer;-webkit-tap-highlight-color:transparent;transition:color .2s ease,border-color .2s ease,background-color .2s ease}

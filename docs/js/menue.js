@@ -1,4 +1,4 @@
-/* HCKD RAIL – Hauptmenü oben (Fahrzeuge · Entdecken · Vergleich · Über HCKD) */
+/* RailBase – Hauptmenü oben (Fahrzeuge · Entdecken · Vergleich · Über RailBase) */
 'use strict';
 
 /* =====================================================================

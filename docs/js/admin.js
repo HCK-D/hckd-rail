@@ -1,4 +1,4 @@
-/* HCKD RAIL – Admin-Fenster (dreimal auf das Logo in der Fusszeile klicken) */
+/* RailBase – Admin-Fenster (dreimal auf das Logo in der Fusszeile klicken) */
 'use strict';
 
 /* =====================================================================
@@ -99,7 +99,7 @@
     try {
       const res = await fetch('https://api.web3forms.com/submit', {
         method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify({ access_key: MELDEN.web3formsKey, subject: 'HCKD RAIL – Meine Notizen (' + new Date().toLocaleDateString('de-CH') + ')', from_name: 'HCKD RAIL Admin', Notizen: text, Besuche: $('#ad-total').textContent })
+        body: JSON.stringify({ access_key: MELDEN.web3formsKey, subject: 'RailBase – Meine Notizen (' + new Date().toLocaleDateString('de-CH') + ')', from_name: 'RailBase Admin', Notizen: text, Besuche: $('#ad-total').textContent })
       });
       const out = await res.json().catch(() => ({}));
       msg.textContent = res.ok && out.success ? 'Gesendet. Die Notizen sind in deinem Postfach.' : 'Senden hat nicht geklappt. Bitte später nochmals versuchen.';

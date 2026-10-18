@@ -1,4 +1,4 @@
-/* HCKD RAIL – Fahrzeugvergleich und Zeitstrahl */
+/* RailBase – Fahrzeugvergleich und Zeitstrahl */
 'use strict';
 
 /* =====================================================================
@@ -203,7 +203,7 @@ function datei(name, inhalt, typ) {
 }
 const albumMsg = t => { $('#album-msg').textContent = t; };
 $('#album-export').addEventListener('click', () => {
-  const daten = { app: 'HCKD RAIL', version: 1, exportiert: new Date().toISOString(), gesehen: seenIds, sichtungen: sicht };
+  const daten = { app: 'RailBase', version: 1, exportiert: new Date().toISOString(), gesehen: seenIds, sichtungen: sicht };
   datei('hckd-rail-sammlung-' + heute() + '.json', JSON.stringify(daten, null, 2), 'application/json');
   albumMsg(tr('Gesichert: {n} Fahrzeuge, {s} Sichtungen.', { n: seenIds.length, s: sichtAnzahl() }));
 });
@@ -224,7 +224,7 @@ $('#album-import').addEventListener('change', async e => {
   if (!f) return;
   try {
     const o = JSON.parse(await f.text());
-    if (!o || o.app !== 'HCKD RAIL' || !Array.isArray(o.gesehen)) throw new Error('format');
+    if (!o || o.app !== 'RailBase' || !Array.isArray(o.gesehen)) throw new Error('format');
     // merge: nothing that is already here gets lost
     seenIds = seenIds.concat(o.gesehen.filter(id => typeof id === 'string' && zugOf(id) && !seenIds.includes(id)));
     let neu = 0;
@@ -264,7 +264,7 @@ async function teilen(data, label) {
 const shareBtn = $('#zug-share');
 shareBtn.addEventListener('click', () => {
   if (!curZug) return;
-  teilen({ title: fullName(curZug) + ' · HCKD RAIL', text: fullName(curZug) + ': ' + zt(curZug, 'typ'), url: seitenLink(curZug.id) }, $('span', shareBtn));
+  teilen({ title: fullName(curZug) + ' · RailBase', text: fullName(curZug) + ': ' + zt(curZug, 'typ'), url: seitenLink(curZug.id) }, $('span', shareBtn));
 });
 
 /* =====================================================================

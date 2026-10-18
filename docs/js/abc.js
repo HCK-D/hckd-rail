@@ -1,4 +1,4 @@
-/* HCKD RAIL – Bahn-ABC: Bezeichnungen entschlüsseln */
+/* RailBase – Bahn-ABC: Bezeichnungen entschlüsseln */
 'use strict';
 
 /* =====================================================================

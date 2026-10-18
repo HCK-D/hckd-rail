@@ -1,4 +1,4 @@
-/* HCKD RAIL – Kategorie- und Fahrzeugseiten, Galerie, Grossansicht */
+/* RailBase – Kategorie- und Fahrzeugseiten, Galerie, Grossansicht */
 
 /* ---------- category view ---------- */
 .crumbs{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:0 0 18px;padding:0;list-style:none;font-size:14px;color:var(--fg-3)}

@@ -1,4 +1,4 @@
-/* HCKD RAIL – Startseite: «Züge unterscheiden» (FLIRT 521–524) */
+/* RailBase – Startseite: «Züge unterscheiden» (FLIRT 521–524) */
 'use strict';
 
 /* =====================================================================

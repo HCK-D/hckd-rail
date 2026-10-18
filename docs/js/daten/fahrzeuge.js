@@ -1,4 +1,4 @@
-/* HCKD RAIL – Fahrzeugdaten. Neue Züge hier eintragen. */
+/* RailBase – Fahrzeugdaten. Neue Züge hier eintragen. */
 'use strict';
 
 /* =====================================================================
@@ -886,7 +886,7 @@ const ZUEGE = [
       { titel: 'Funktion', p: ['Der Mannschaftswagen stellt dem Kranteam Material, Arbeitsmittel und einen Aufenthaltsraum bereit. Seine Ausrüstung ist auf den jeweiligen Kranverband abgestimmt.'] },
       { titel: 'Fester Verband', p: ['Für Trassenbestellung und Überführung wird die komplette Einheit betrachtet. Änderungen an Formation, Beladung oder Bremse dürfen nur nach den freigegebenen Betriebsunterlagen erfolgen.'] }
     ],
-    quellen: ['SBB Infrastruktur – Fahrtypenkatalog 2026, Fahrtypen 5089–5091, S. 275–277', 'SBB Infrastruktur – Technischer Netzzugang, Rollmaterialdaten und Dienstfahrzeuge', 'HCKD RAIL – Katalogblätter Kirow 250, 800 und 1200, Quellenstand 17.10.2026'],
+    quellen: ['SBB Infrastruktur – Fahrtypenkatalog 2026, Fahrtypen 5089–5091, S. 275–277', 'SBB Infrastruktur – Technischer Netzzugang, Rollmaterialdaten und Dienstfahrzeuge', 'RailBase – Katalogblätter Kirow 250, 800 und 1200, Quellenstand 17.10.2026'],
     art: { typ: 'wagen', farbe: YEL, akzent: '#2E3338' }, bilder: [] },
   { id: 'pwfz', kat: 'infrastruktur', gruppe: 'Werkstatt- und Mannschaftswagen', name: 'PWFZ', beiname: 'Personal Werkstatt Fahrzeug', typ: 'Geplantes Personal- und Werkstattfahrzeug', vorlaeufig: false,
     text: ['Das Personal- und Werkstattfahrzeug PWFZ ist ein geplantes Flottenprojekt der SBB Infrastruktur.', 'Es soll ältere Xs-Werkstatt- und Mannschaftswagen durch eine einheitliche, moderne Serie ersetzen.'],

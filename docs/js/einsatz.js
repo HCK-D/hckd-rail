@@ -1,4 +1,4 @@
-/* HCKD RAIL – Karte «Wo fährt er?» auf den Fahrzeugseiten */
+/* RailBase – Karte «Wo fährt er?» auf den Fahrzeugseiten */
 'use strict';
 
 /* =====================================================================

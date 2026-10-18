@@ -1,4 +1,4 @@
-/* HCKD RAIL – Karte Bahnnetz Schweiz */
+/* RailBase – Karte Bahnnetz Schweiz */
 
 /* ---------- Swiss rail map ---------- */
 .map-card{display:grid;gap:0;overflow:hidden;border-radius:var(--r-lg);background:var(--surface);box-shadow:var(--shadow)}

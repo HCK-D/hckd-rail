@@ -1,4 +1,4 @@
-/* HCKD RAIL – «Züge unterscheiden»: ähnliche Baureihen auseinanderhalten */
+/* RailBase – «Züge unterscheiden»: ähnliche Baureihen auseinanderhalten */
 'use strict';
 
 /* =====================================================================

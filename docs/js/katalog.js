@@ -1,4 +1,4 @@
-/* HCKD RAIL – Startseite, Suche, Slideshow, Kategorien, Fahrzeugseiten, Navigation */
+/* RailBase – Startseite, Suche, Slideshow, Kategorien, Fahrzeugseiten, Navigation */
 'use strict';
 
 uebersetzeSeite(); // fixed texts of index.html in the chosen language (i18n.js)
@@ -434,20 +434,20 @@ function route() {
   const h = decodeURIComponent(location.hash.slice(1)) || window.HCKD_START || '';
   const k = katOf(h), z = zugOf(h);
   if (!lb.hidden) lb.hidden = true;
-  if (z) { show('zug'); renderZug(z); scrollTo(0, 0); document.title = fullName(z) + ' · HCKD RAIL'; }
-  else if (k) { show('kat'); renderKat(k); scrollTo(0, 0); document.title = tr(k.name) + ' · HCKD RAIL'; }
+  if (z) { show('zug'); renderZug(z); scrollTo(0, 0); document.title = fullName(z) + ' · RailBase'; }
+  else if (k) { show('kat'); renderKat(k); scrollTo(0, 0); document.title = tr(k.name) + ' · RailBase'; }
   else if (TEXTSEITEN[h]) {
     show('text'); $$('#v-text [data-seite]').forEach(s => { s.hidden = s.dataset.seite !== h; });
-    scrollTo(0, 0); document.title = tr(TEXTSEITEN[h]) + ' · HCKD RAIL';
+    scrollTo(0, 0); document.title = tr(TEXTSEITEN[h]) + ' · RailBase';
   }
   else if (ENTDECKEN[h]) {
     show('entdecken'); $$('#v-entdecken [data-seite]').forEach(s => { s.hidden = s.dataset.seite !== h; });
     if (h === 'sammlung') sammlungRender(); // sammlung.js
-    scrollTo(0, 0); document.title = tr(ENTDECKEN[h]) + ' · HCKD RAIL';
+    scrollTo(0, 0); document.title = tr(ENTDECKEN[h]) + ' · RailBase';
   }
-  else if (h === 'vergleich') { show('vergleich'); renderVergleich(); scrollTo(0, 0); document.title = tr('Vergleich') + ' · HCKD RAIL'; }
+  else if (h === 'vergleich') { show('vergleich'); renderVergleich(); scrollTo(0, 0); document.title = tr('Vergleich') + ' · RailBase'; }
   else {
-    show('home'); document.title = 'HCKD RAIL';
+    show('home'); document.title = 'RailBase';
     const target = h && document.getElementById(h);
     if (target && h !== 'start') requestAnimationFrame(() => { const y = target.getBoundingClientRect().top + scrollY - 64; scrollTo(0, y); });
     else scrollTo(0, 0);

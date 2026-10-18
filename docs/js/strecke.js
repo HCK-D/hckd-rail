@@ -1,4 +1,4 @@
-/* HCKD RAIL – Führerstandsfahrt Normalspur und Meterspur */
+/* RailBase – Führerstandsfahrt Normalspur und Meterspur */
 'use strict';
 
 /* =====================================================================

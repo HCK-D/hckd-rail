@@ -1,7 +1,7 @@
 /* Français – menus, boutons, page d’accueil, dialogues */
 uebDict({
   // ---------- en-tête et accueil ----------
-  'HCKD RAIL – Startseite': 'HCKD RAIL – Accueil',
+  'RailBase – Startseite': 'RailBase – Accueil',
   'Schweizer Zeit': 'Heure suisse',
   'Darstellung: automatisch': 'Affichage : automatique',
   'Spenden': 'Faire un don',
@@ -191,8 +191,8 @@ uebDict({
   'Gut gemacht!': 'Bien joué !',
   'Nicht schlecht, da geht noch mehr.': 'Pas mal, tu peux faire encore mieux.',
   'Noch etwas üben, dann klappt es.': 'Encore un peu d’entraînement et ça ira.',
-  'Ich habe im HCKD RAIL Bahn-Quiz (Level {lv}) {r} von {n} Fragen richtig, das sind {p} %. Schaffst du mehr?': 'J’ai répondu juste à {r} questions sur {n} au quiz ferroviaire HCKD RAIL (niveau {lv}), soit {p} %. Feras-tu mieux ?',
-  'HCKD RAIL Bahn-Quiz': 'Quiz ferroviaire HCKD RAIL',
+  'Ich habe im RailBase Bahn-Quiz (Level {lv}) {r} von {n} Fragen richtig, das sind {p} %. Schaffst du mehr?': 'J’ai répondu juste à {r} questions sur {n} au quiz ferroviaire RailBase (niveau {lv}), soit {p} %. Feras-tu mieux ?',
+  'RailBase Bahn-Quiz': 'Quiz ferroviaire RailBase',
 
   // ---------- catégories et liste ----------
   'SBB Personenverkehr': 'CFF Voyageurs',
@@ -297,7 +297,7 @@ uebDict({
   'Typ': 'Type',
 
   // ---------- pied de page ----------
-  'Train Database von HCKD. Fahrzeuge der Schweizer Bahn, sortiert nach Bereich, mit Daten und Bildern.': 'Train Database de HCKD. Les véhicules du rail suisse, classés par domaine, avec données et images.',
+  'Die Train Database für die Schweizer Bahn: Fahrzeuge sortiert nach Bereich, mit Daten und Bildern.': 'La Train Database du rail suisse : les véhicules classés par domaine, avec données et images.',
   '© 2026 HCKD · Stand der Daten: Oktober 2026 ·': '© 2026 HCKD · État des données : octobre 2026 ·',
   'Fotos einsenden': 'Envoyer des photos',
 
@@ -321,7 +321,7 @@ uebDict({
   'Name oder E-Mail': 'Nom ou e-mail',
   'Nicht ausfüllen': 'Ne pas remplir',
   'Meldung senden': 'Envoyer le signalement',
-  'HCKD RAIL allgemein': 'HCKD RAIL en général',
+  'RailBase allgemein': 'RailBase en général',
   'Bitte beschreibe kurz, was nicht stimmt.': 'Décris brièvement ce qui ne va pas.',
   'Bitte höchstens einen Link angeben.': 'Indique au maximum un lien.',
   'Du hast in kurzer Zeit schon mehrere Meldungen geschickt. Bitte warte ein paar Minuten. Danke!': 'Tu as déjà envoyé plusieurs signalements en peu de temps. Attends quelques minutes, s’il te plaît. Merci !',
@@ -335,7 +335,7 @@ uebDict({
   'Name für die Bildunterschrift': 'Nom pour la légende',
   'E-Mail für Rückfragen': 'E-mail pour les questions',
   'Wo und wann aufgenommen?': 'Où et quand la photo a-t-elle été prise ?',
-  'Ich habe die Fotos selbst gemacht und erlaube HCKD RAIL, sie mit meinem Namen auf der Website zu zeigen.': 'J’ai pris ces photos moi-même et j’autorise HCKD RAIL à les montrer sur le site avec mon nom.',
+  'Ich habe die Fotos selbst gemacht und erlaube RailBase, sie mit meinem Namen auf der Website zu zeigen.': 'J’ai pris ces photos moi-même et j’autorise RailBase à les montrer sur le site avec mon nom.',
   'Fotos senden': 'Envoyer les photos',
   'beliebiges Fahrzeug (bitte unten angeben)': 'n’importe quel véhicule (à préciser ci-dessous)',
   'Bitte füge den Link zu deinen Fotos ein (beginnt mit https://).': 'Colle le lien vers tes photos (il commence par https://).',
@@ -347,7 +347,7 @@ uebDict({
   'Danke! Wir schauen uns deine Fotos an und melden uns bei Fragen.': 'Merci ! Nous regardons tes photos et te contactons en cas de question.',
   'Senden hat nicht geklappt. Bitte versuche es in einem Moment nochmals.': 'L’envoi n’a pas fonctionné. Réessaie dans un instant.',
   'Unterstützen': 'Soutenir',
-  'HCKD RAIL unterstützen': 'Soutenir HCKD RAIL',
+  'RailBase unterstützen': 'Soutenir RailBase',
   'Die Datenbank ist kostenlos und ohne Werbung. Eine kleine Spende hilft beim Ausbau: mehr Fahrzeuge, mehr Bilder, mehr Strecken.': 'La base de données est gratuite et sans publicité. Un petit don aide à la développer : plus de véhicules, plus d’images, plus de lignes.',
   'Betrag in CHF': 'Montant en CHF',
   'Empfänger': 'Bénéficiaire',

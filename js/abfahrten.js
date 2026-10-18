@@ -1,4 +1,4 @@
-/* HCKD RAIL – Live-Abfahrtstafel */
+/* RailBase – Live-Abfahrtstafel */
 'use strict';
 
 /* =====================================================================

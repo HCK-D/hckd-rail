@@ -1,4 +1,4 @@
-﻿# HCKD RAIL – lokale Vorschau
+﻿# RailBase – lokale Vorschau
 # Startet einen kleinen Webserver unter http://localhost:8765 und liefert index.html samt CSS, JS und Bildern aus.
 # Aufruf im Projektordner:  powershell -ExecutionPolicy Bypass -File werkzeuge\vorschau.ps1
 # Mit -Roh wird die Seite unverändert ausgeliefert (für den gebauten Ordner "website").

@@ -1,4 +1,4 @@
-/* HCKD RAIL – Einsatzgebiete für die Karte «Wo fährt er?». Hier ergänzen. */
+/* RailBase – Einsatzgebiete für die Karte «Wo fährt er?». Hier ergänzen. */
 'use strict';
 
 /* =====================================================================

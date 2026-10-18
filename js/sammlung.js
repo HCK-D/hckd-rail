@@ -1,4 +1,4 @@
-/* HCKD RAIL – «Meine Sammlung» und Entdecker-Abzeichen */
+/* RailBase – «Meine Sammlung» und Entdecker-Abzeichen */
 'use strict';
 
 /* =====================================================================

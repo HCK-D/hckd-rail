@@ -1,4 +1,4 @@
-﻿# HCKD RAIL – neue Fotos für die Website verkleinern
+﻿# RailBase – neue Fotos für die Website verkleinern
 # Speichert jedes JPG/PNG eines Ordners zweimal, die Originale bleiben unverändert:
 #   bilder\<name>-1.jpg        höchstens 1280 Pixel (längste Seite), Qualität 72  -> Galerie und Vollbild
 #   bilder\klein\<name>-1.jpg  höchstens 480 Pixel, Qualität 68                  -> Karten und Vorschaubilder

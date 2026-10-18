@@ -1,4 +1,4 @@
-/* HCKD RAIL – Seite «Neu und aktualisiert» (Menü «Entdecken») */
+/* RailBase – Seite «Neu und aktualisiert» (Menü «Entdecken») */
 'use strict';
 
 /* =====================================================================

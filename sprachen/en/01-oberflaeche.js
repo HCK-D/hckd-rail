@@ -1,7 +1,7 @@
 /* English – menus, buttons, home page, dialogs */
 uebDict({
   // ---------- header and home page ----------
-  'HCKD RAIL – Startseite': 'HCKD RAIL – Home',
+  'RailBase – Startseite': 'RailBase – Home',
   'Schweizer Zeit': 'Swiss time',
   'Darstellung: automatisch': 'Appearance: automatic',
   'Spenden': 'Donate',
@@ -191,8 +191,8 @@ uebDict({
   'Gut gemacht!': 'Well done!',
   'Nicht schlecht, da geht noch mehr.': 'Not bad, you can do even better.',
   'Noch etwas üben, dann klappt es.': 'A bit more practice and you’ll get there.',
-  'Ich habe im HCKD RAIL Bahn-Quiz (Level {lv}) {r} von {n} Fragen richtig, das sind {p} %. Schaffst du mehr?': 'I got {r} of {n} questions right in the HCKD RAIL railway quiz (level {lv}), that’s {p} %. Can you beat it?',
-  'HCKD RAIL Bahn-Quiz': 'HCKD RAIL railway quiz',
+  'Ich habe im RailBase Bahn-Quiz (Level {lv}) {r} von {n} Fragen richtig, das sind {p} %. Schaffst du mehr?': 'I got {r} of {n} questions right in the RailBase railway quiz (level {lv}), that’s {p} %. Can you beat it?',
+  'RailBase Bahn-Quiz': 'RailBase railway quiz',
 
   // ---------- categories and list ----------
   'SBB Personenverkehr': 'SBB Passenger',
@@ -296,7 +296,7 @@ uebDict({
   'Typ': 'Type',
 
   // ---------- footer ----------
-  'Train Database von HCKD. Fahrzeuge der Schweizer Bahn, sortiert nach Bereich, mit Daten und Bildern.': 'Train Database by HCKD. Swiss railway vehicles, sorted by section, with data and pictures.',
+  'Die Train Database für die Schweizer Bahn: Fahrzeuge sortiert nach Bereich, mit Daten und Bildern.': 'The Train Database for Swiss railways: vehicles sorted by section, with data and pictures.',
   '© 2026 HCKD · Stand der Daten: Oktober 2026 ·': '© 2026 HCKD · Data as of October 2026 ·',
   'Fotos einsenden': 'Send photos',
 
@@ -320,7 +320,7 @@ uebDict({
   'Name oder E-Mail': 'Name or e-mail',
   'Nicht ausfüllen': 'Do not fill in',
   'Meldung senden': 'Send report',
-  'HCKD RAIL allgemein': 'HCKD RAIL in general',
+  'RailBase allgemein': 'RailBase in general',
   'Bitte beschreibe kurz, was nicht stimmt.': 'Please briefly describe what is wrong.',
   'Bitte höchstens einen Link angeben.': 'Please give at most one link.',
   'Du hast in kurzer Zeit schon mehrere Meldungen geschickt. Bitte warte ein paar Minuten. Danke!': 'You have already sent several reports in a short time. Please wait a few minutes. Thank you!',
@@ -334,7 +334,7 @@ uebDict({
   'Name für die Bildunterschrift': 'Name for the caption',
   'E-Mail für Rückfragen': 'E-mail for questions',
   'Wo und wann aufgenommen?': 'Where and when was it taken?',
-  'Ich habe die Fotos selbst gemacht und erlaube HCKD RAIL, sie mit meinem Namen auf der Website zu zeigen.': 'I took these photos myself and allow HCKD RAIL to show them on the website with my name.',
+  'Ich habe die Fotos selbst gemacht und erlaube RailBase, sie mit meinem Namen auf der Website zu zeigen.': 'I took these photos myself and allow RailBase to show them on the website with my name.',
   'Fotos senden': 'Send photos',
   'beliebiges Fahrzeug (bitte unten angeben)': 'any vehicle (please specify below)',
   'Bitte füge den Link zu deinen Fotos ein (beginnt mit https://).': 'Please paste the link to your photos (it starts with https://).',
@@ -346,7 +346,7 @@ uebDict({
   'Danke! Wir schauen uns deine Fotos an und melden uns bei Fragen.': 'Thank you! We will look at your photos and get in touch if we have questions.',
   'Senden hat nicht geklappt. Bitte versuche es in einem Moment nochmals.': 'Sending did not work. Please try again in a moment.',
   'Unterstützen': 'Support',
-  'HCKD RAIL unterstützen': 'Support HCKD RAIL',
+  'RailBase unterstützen': 'Support RailBase',
   'Die Datenbank ist kostenlos und ohne Werbung. Eine kleine Spende hilft beim Ausbau: mehr Fahrzeuge, mehr Bilder, mehr Strecken.': 'The database is free and ad-free. A small donation helps it grow: more vehicles, more pictures, more lines.',
   'Betrag in CHF': 'Amount in CHF',
   'Empfänger': 'Recipient',

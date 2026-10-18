@@ -1,4 +1,4 @@
-/* HCKD RAIL – gezeichnete Seitenansichten der Fahrzeuge */
+/* RailBase – gezeichnete Seitenansichten der Fahrzeuge */
 'use strict';
 
 /* =====================================================================

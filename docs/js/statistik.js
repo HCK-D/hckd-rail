@@ -1,4 +1,4 @@
-/* HCKD RAIL – Besucherzähler (GoatCounter) */
+/* RailBase – Besucherzähler (GoatCounter) */
 'use strict';
 
 /* =====================================================================

@@ -1,4 +1,4 @@
-# HCKD RAIL auf GitHub Pages stellen
+# RailBase auf GitHub Pages stellen
 
 Etwa 20 Minuten. Am Ende ist die Seite unter `https://DEINNAME.github.io/hckd-rail/` online, kostenlos.
 

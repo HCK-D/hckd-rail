@@ -1,4 +1,4 @@
-/* HCKD RAIL – Sortierung, Vergleich, Zeitstrahl, Impressum und Datenschutz */
+/* RailBase – Sortierung, Vergleich, Zeitstrahl, Impressum und Datenschutz */
 
 /* green for the best value in the comparison */
 :root{--best:#1C7C45}
@@ -159,9 +159,9 @@ body.has-cmp .footer{padding-bottom:76px}
   html.druck-steckbrief,html.druck-steckbrief body{background:#fff!important;color:#202326!important}
   html.druck-steckbrief #steckbrief{display:block;font:10.5pt/1.4 var(--body);color:#202326;-webkit-print-color-adjust:exact;print-color-adjust:exact}
   #steckbrief .sb-kopf{display:flex;align-items:center;gap:10px;padding-bottom:8px;border-bottom:2px solid #D71920}
-  #steckbrief .sb-logo{width:34px;height:auto}
+  #steckbrief .sb-logo{width:auto;height:24px;aspect-ratio:570/270;color:#202326}
   #steckbrief .sb-kopf div{display:grid;line-height:1.1}
-  #steckbrief .sb-kopf b{font:800 15pt/1 var(--display);letter-spacing:.04em}
+  #steckbrief .sb-kopf b{font:900 15pt/1 var(--display);letter-spacing:-.01em}
   #steckbrief .sb-kopf em{font-style:normal;color:#D71920}
   #steckbrief .sb-kopf span{font-size:8.5pt;color:#626971;text-transform:uppercase;letter-spacing:.12em}
   #steckbrief .sb-typ{margin:12px 0 0;font:600 8.5pt/1.2 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:#626971}

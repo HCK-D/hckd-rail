@@ -1,4 +1,4 @@
-/* HCKD RAIL – Quiz auf der Startseite */
+/* RailBase – Quiz auf der Startseite */
 'use strict';
 
 /* =====================================================================
@@ -133,9 +133,9 @@
     }
     else if (e.target.closest('.qz-share') && run && run.ergebnis) {
       const { pct, richtig, n } = run.ergebnis, lv = levelOf(run.level).name;
-      const text = tr('Ich habe im HCKD RAIL Bahn-Quiz (Level {lv}) {r} von {n} Fragen richtig, das sind {p} %. Schaffst du mehr?', { lv, r: richtig, n, p: pct });
+      const text = tr('Ich habe im RailBase Bahn-Quiz (Level {lv}) {r} von {n} Fragen richtig, das sind {p} %. Schaffst du mehr?', { lv, r: richtig, n, p: pct });
       const url = seitenLink('quiz');
-      teilen({ title: tr('HCKD RAIL Bahn-Quiz'), text, url, kopie: text + ' ' + url }, $('.qz-share span', box));
+      teilen({ title: tr('RailBase Bahn-Quiz'), text, url, kopie: text + ' ' + url }, $('.qz-share span', box));
     }
     else if (e.target.closest('.qz-stop')) { startScreen(); inView(); }
     else if (e.target.closest('[data-again]')) start(e.target.closest('[data-again]').dataset.again);

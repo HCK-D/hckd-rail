@@ -6,7 +6,7 @@ uebDict({
   'Entdecken': 'Explore',
   'Neu und aktualisiert': 'New and updated',
   'Züge unterscheiden': 'Telling trains apart',
-  'Über HCKD': 'About HCKD',
+  'Über RailBase': 'About RailBase',
   // cards and profile sheet
   'Seit': 'Since',
   '1980er': '1980s',

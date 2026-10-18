@@ -6,7 +6,7 @@ uebDict({
   'Entdecken': 'Scoprire',
   'Neu und aktualisiert': 'Novità e aggiornamenti',
   'Züge unterscheiden': 'Distinguere i treni',
-  'Über HCKD': 'Su HCKD',
+  'Über RailBase': 'Su RailBase',
   // schede
   'Seit': 'Dal',
   '1980er': 'anni 1980',

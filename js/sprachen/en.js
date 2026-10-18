@@ -1,11 +1,11 @@
-/* HCKD RAIL - Uebersetzung 'en'. Automatisch zusammengesetzt aus sprachen\en\ (werkzeuge\sprachen-bauen.ps1). Hier nicht bearbeiten. */
+/* RailBase - Uebersetzung 'en'. Automatisch zusammengesetzt aus sprachen\en\ (werkzeuge\sprachen-bauen.ps1). Hier nicht bearbeiten. */
 'use strict';
 
 /* ---- 01-oberflaeche.js ---- */
 /* English – menus, buttons, home page, dialogs */
 uebDict({
   // ---------- header and home page ----------
-  'HCKD RAIL – Startseite': 'HCKD RAIL – Home',
+  'RailBase – Startseite': 'RailBase – Home',
   'Schweizer Zeit': 'Swiss time',
   'Darstellung: automatisch': 'Appearance: automatic',
   'Spenden': 'Donate',
@@ -195,8 +195,8 @@ uebDict({
   'Gut gemacht!': 'Well done!',
   'Nicht schlecht, da geht noch mehr.': 'Not bad, you can do even better.',
   'Noch etwas üben, dann klappt es.': 'A bit more practice and you’ll get there.',
-  'Ich habe im HCKD RAIL Bahn-Quiz (Level {lv}) {r} von {n} Fragen richtig, das sind {p} %. Schaffst du mehr?': 'I got {r} of {n} questions right in the HCKD RAIL railway quiz (level {lv}), that’s {p} %. Can you beat it?',
-  'HCKD RAIL Bahn-Quiz': 'HCKD RAIL railway quiz',
+  'Ich habe im RailBase Bahn-Quiz (Level {lv}) {r} von {n} Fragen richtig, das sind {p} %. Schaffst du mehr?': 'I got {r} of {n} questions right in the RailBase railway quiz (level {lv}), that’s {p} %. Can you beat it?',
+  'RailBase Bahn-Quiz': 'RailBase railway quiz',
 
   // ---------- categories and list ----------
   'SBB Personenverkehr': 'SBB Passenger',
@@ -300,7 +300,7 @@ uebDict({
   'Typ': 'Type',
 
   // ---------- footer ----------
-  'Train Database von HCKD. Fahrzeuge der Schweizer Bahn, sortiert nach Bereich, mit Daten und Bildern.': 'Train Database by HCKD. Swiss railway vehicles, sorted by section, with data and pictures.',
+  'Die Train Database für die Schweizer Bahn: Fahrzeuge sortiert nach Bereich, mit Daten und Bildern.': 'The Train Database for Swiss railways: vehicles sorted by section, with data and pictures.',
   '© 2026 HCKD · Stand der Daten: Oktober 2026 ·': '© 2026 HCKD · Data as of October 2026 ·',
   'Fotos einsenden': 'Send photos',
 
@@ -324,7 +324,7 @@ uebDict({
   'Name oder E-Mail': 'Name or e-mail',
   'Nicht ausfüllen': 'Do not fill in',
   'Meldung senden': 'Send report',
-  'HCKD RAIL allgemein': 'HCKD RAIL in general',
+  'RailBase allgemein': 'RailBase in general',
   'Bitte beschreibe kurz, was nicht stimmt.': 'Please briefly describe what is wrong.',
   'Bitte höchstens einen Link angeben.': 'Please give at most one link.',
   'Du hast in kurzer Zeit schon mehrere Meldungen geschickt. Bitte warte ein paar Minuten. Danke!': 'You have already sent several reports in a short time. Please wait a few minutes. Thank you!',
@@ -338,7 +338,7 @@ uebDict({
   'Name für die Bildunterschrift': 'Name for the caption',
   'E-Mail für Rückfragen': 'E-mail for questions',
   'Wo und wann aufgenommen?': 'Where and when was it taken?',
-  'Ich habe die Fotos selbst gemacht und erlaube HCKD RAIL, sie mit meinem Namen auf der Website zu zeigen.': 'I took these photos myself and allow HCKD RAIL to show them on the website with my name.',
+  'Ich habe die Fotos selbst gemacht und erlaube RailBase, sie mit meinem Namen auf der Website zu zeigen.': 'I took these photos myself and allow RailBase to show them on the website with my name.',
   'Fotos senden': 'Send photos',
   'beliebiges Fahrzeug (bitte unten angeben)': 'any vehicle (please specify below)',
   'Bitte füge den Link zu deinen Fotos ein (beginnt mit https://).': 'Please paste the link to your photos (it starts with https://).',
@@ -350,7 +350,7 @@ uebDict({
   'Danke! Wir schauen uns deine Fotos an und melden uns bei Fragen.': 'Thank you! We will look at your photos and get in touch if we have questions.',
   'Senden hat nicht geklappt. Bitte versuche es in einem Moment nochmals.': 'Sending did not work. Please try again in a moment.',
   'Unterstützen': 'Support',
-  'HCKD RAIL unterstützen': 'Support HCKD RAIL',
+  'RailBase unterstützen': 'Support RailBase',
   'Die Datenbank ist kostenlos und ohne Werbung. Eine kleine Spende hilft beim Ausbau: mehr Fahrzeuge, mehr Bilder, mehr Strecken.': 'The database is free and ad-free. A small donation helps it grow: more vehicles, more pictures, more lines.',
   'Betrag in CHF': 'Amount in CHF',
   'Empfänger': 'Recipient',
@@ -490,13 +490,13 @@ uebDict({
   'Verantwortlich für diese Website': 'Responsible for this website',
   'Kontakt: über das Formular <button class="link-btn" type="button" data-report="allg" aria-haspopup="dialog">Fehler melden</button>. Nachrichten kommen direkt bei uns an.': 'Contact: via the <button class="link-btn" type="button" data-report="allg" aria-haspopup="dialog">Report an error</button> form. Messages reach us directly.',
   'Unabhängiges Projekt': 'Independent project',
-  'HCKD RAIL ist ein privates, nicht kommerzielles Projekt von Bahnfans. Es steht in keiner Verbindung zu den Schweizerischen Bundesbahnen SBB, zu SBB Cargo oder zu anderen Bahnunternehmen. Namen und Marken gehören ihren Inhaberinnen und Inhabern und werden nur zur Beschreibung der Fahrzeuge genannt.': 'HCKD RAIL is a private, non-commercial project by rail fans. It has no connection with Swiss Federal Railways SBB, SBB Cargo or any other railway company. Names and trademarks belong to their owners and are only mentioned to describe the vehicles.',
+  'RailBase by HCKD RAIL ist ein privates, nicht kommerzielles Projekt von Bahnfans. Es steht in keiner Verbindung zu den Schweizerischen Bundesbahnen SBB, zu SBB Cargo oder zu anderen Bahnunternehmen. Namen und Marken gehören ihren Inhaberinnen und Inhabern und werden nur zur Beschreibung der Fahrzeuge genannt.': 'RailBase by HCKD RAIL is a private, non-commercial project by rail fans. It has no connection with Swiss Federal Railways SBB, SBB Cargo or any other railway company. Names and trademarks belong to their owners and are only mentioned to describe the vehicles.',
   'Haftung': 'Liability',
   'Alle Angaben sind sorgfältig zusammengetragen, aber ohne Gewähr. Werte, die als vorläufig oder mit * markiert sind, können abweichen. Wenn dir ein Fehler auffällt, melde ihn bitte über «Fehler melden».': 'All information has been compiled carefully but without guarantee. Values marked as preliminary or with * may differ. If you notice an error, please report it via «Report an error».',
   'Für Inhalte externer Websites, auf die wir verlinken, sind deren Betreiber verantwortlich.': 'The operators of external websites we link to are responsible for their content.',
   'Bildnachweis und Rechte': 'Picture credits and rights',
   'Eigene und zugeschickte Fotos auf den Fahrzeugseiten: mit Erlaubnis der Fotografinnen und Fotografen verwendet. Weiterverwendung nur mit deren Zustimmung.': 'Our own and submitted photos on the vehicle pages: used with the photographers’ permission. Further use only with their consent.',
-  'Fotos von Wikimedia Commons: unter freien Lizenzen (CC0, CC BY, CC BY-SA), für die Website verkleinert. Fotograf, Lizenz und Link stehen unter jedem Bild und in der Liste unten. Für diese Fotos gilt die jeweilige Lizenz, nicht das Urheberrecht von HCKD RAIL.': 'Photos from Wikimedia Commons: under free licences (CC0, CC BY, CC BY-SA), resized for the website. Photographer, licence and link are shown under each picture and in the list below. These photos are covered by their respective licence, not by HCKD RAIL’s copyright.',
+  'Fotos von Wikimedia Commons: unter freien Lizenzen (CC0, CC BY, CC BY-SA), für die Website verkleinert. Fotograf, Lizenz und Link stehen unter jedem Bild und in der Liste unten. Für diese Fotos gilt die jeweilige Lizenz, nicht das Urheberrecht von RailBase.': 'Photos from Wikimedia Commons: under free licences (CC0, CC BY, CC BY-SA), resized for the website. Photographer, licence and link are shown under each picture and in the list below. These photos are covered by their respective licence, not by RailBase’s copyright.',
   'Diashow auf der Startseite: Pixabay, verwendet nach der Pixabay-Inhaltslizenz. Die Namen stehen in der Bildunterschrift.': 'Home page slideshow: Pixabay, used under the Pixabay Content License. The names are given in the caption.',
   'Illustrationen, Streckenmodell und Gestaltung: HCKD.': 'Illustrations, line model and design: HCKD.',
   'Kartendaten: Bundesamt für Verkehr (BAV), Datensatz Schienennetz. Landesgrenze: swisstopo.': 'Map data: Federal Office of Transport (FOT), rail network dataset. National border: swisstopo.',
@@ -675,7 +675,7 @@ uebDict({
 /* English – install as an app */
 uebDict({
   'App installieren': 'Install the app',
-  'Auf dem iPhone: In Safari unten auf «Teilen» tippen, dann «Zum Home-Bildschirm». Danach erscheint HCKD RAIL als App auf deinem Handy.': 'On iPhone: in Safari tap «Share» at the bottom, then «Add to Home Screen». HCKD RAIL then appears as an app on your phone.',
+  'Auf dem iPhone: In Safari unten auf «Teilen» tippen, dann «Zum Home-Bildschirm». Danach erscheint RailBase als App auf deinem Handy.': 'On iPhone: in Safari tap «Share» at the bottom, then «Add to Home Screen». RailBase then appears as an app on your phone.',
   'Damit die Website auch als App schnell startet und ohne Internet funktioniert, legt dein Browser besuchte Seiten, Bilder und Skripte in einem Zwischenspeicher auf deinem Gerät ab. Darin stehen nur Inhalte dieser Website, keine Angaben über dich.': 'So that the website starts quickly as an app and works without internet, your browser keeps visited pages, pictures and scripts in a cache on your device. It contains only content from this website, no information about you.'
 });
 
@@ -688,7 +688,7 @@ uebDict({
   'Entdecken': 'Explore',
   'Neu und aktualisiert': 'New and updated',
   'Züge unterscheiden': 'Telling trains apart',
-  'Über HCKD': 'About HCKD',
+  'Über RailBase': 'About RailBase',
   // cards and profile sheet
   'Seit': 'Since',
   '1980er': '1980s',
@@ -836,9 +836,16 @@ uebDict({
   'Namen anzeigen': 'Show name',
   'Eigener Betrag': 'Your own amount',
   'z. B. 15': 'e.g. 15',
-  '<b>Danke für deine Unterstützung!</b> Jeder Franken fliesst direkt in HCKD RAIL: in neue Fahrzeugporträts, mehr Fotos, genaue Recherche und den Betrieb der Website. So bleibt die Train Database für alle kostenlos und ohne Werbung. Ob gross oder klein, jede Spende bedeutet mir viel.': '<b>Thank you for your support!</b> Every franc goes straight into HCKD RAIL: new vehicle portraits, more photos, careful research and running the website. That keeps the Train Database free and ad-free for everyone. Big or small, every donation means a lot to me.',
+  '<b>Danke für deine Unterstützung!</b> Jeder Franken fliesst direkt in RailBase: in neue Fahrzeugporträts, mehr Fotos, genaue Recherche und den Betrieb der Website. So bleibt die Train Database für alle kostenlos und ohne Werbung. Ob gross oder klein, jede Spende bedeutet mir viel.': '<b>Thank you for your support!</b> Every franc goes straight into RailBase: new vehicle portraits, more photos, careful research and running the website. That keeps the Train Database free and ad-free for everyone. Big or small, every donation means a lot to me.',
   'Spenden laufen per Banküberweisung direkt über deine Bank. Die Website verarbeitet dabei keine Zahlungsdaten; IBAN und Name im Spenden-Fenster sind nur zum Kopieren da.': 'Donations are made by bank transfer, directly through your bank. The website processes no payment data; the IBAN and name in the donation window are only there to be copied.',
   'Eigene Adresse hckd-rail.ch und Spenden per Banküberweisung. Danke für jede Unterstützung!': 'Our own address hckd-rail.ch and donations by bank transfer. Thank you for every bit of support!'
+});
+
+/* ---- 10-railbase.js ---- */
+/* English – new name RailBase */
+uebDict({
+  'Aus HCKD RAIL wird RailBase: neuer Name und neues Logo. Adresse, Sammlung und Sichtungen bleiben, wie sie sind.': 'HCKD RAIL is now RailBase: a new name and a new logo. The address, your collection and your sightings stay just as they are.',
+  'Das neue Logo ist jetzt auch das App-Symbol und das Symbol im Browser-Tab.': 'The new logo is now also the app icon and the icon in the browser tab.'
 });
 
 /* ---- 20-personenverkehr.js ---- */

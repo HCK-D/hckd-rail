@@ -1,4 +1,4 @@
-/* HCKD RAIL – Startbereich, Kategorien, Spurweite, Live-Fahrdaten */
+/* RailBase – Startbereich, Kategorien, Spurweite, Live-Fahrdaten */
 
 /* ---------- hero ---------- */
 .hero{background:var(--hero-bg);color:var(--fg);border-bottom:1px solid var(--line)}

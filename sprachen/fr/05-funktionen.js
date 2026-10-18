@@ -6,7 +6,7 @@ uebDict({
   'Entdecken': 'Découvrir',
   'Neu und aktualisiert': 'Nouveautés et mises à jour',
   'Züge unterscheiden': 'Distinguer les trains',
-  'Über HCKD': 'À propos de HCKD',
+  'Über RailBase': 'À propos de RailBase',
   // cartes et fiche
   'Seit': 'Depuis',
   '1980er': 'années 1980',

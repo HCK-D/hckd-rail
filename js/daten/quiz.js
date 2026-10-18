@@ -1,4 +1,4 @@
-/* HCKD RAIL – Quizfragen. Neue Fragen hier eintragen. */
+/* RailBase – Quizfragen. Neue Fragen hier eintragen. */
 'use strict';
 
 /* =====================================================================

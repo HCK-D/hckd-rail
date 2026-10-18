@@ -1,4 +1,4 @@
-/* HCKD RAIL – Farben, Grundlayout, Kopfzeile, Fusszeile */
+/* RailBase – Farben, Grundlayout, Kopfzeile, Fusszeile */
 
 /* Layout: light, calm catalogue (very light grey ground, white header and cards, anthracite type,
    red only for the search button, chosen categories and small details); sticky header with logo and a small station clock. */
@@ -96,9 +96,10 @@ button{font:inherit}
 .topbar::before{content:"";position:absolute;inset:0;background:var(--surface);border-bottom:1px solid var(--line);pointer-events:none}
 .topbar .wrap{position:relative;display:flex;align-items:center;gap:16px;height:72px}
 .brand{display:flex;align-items:center;gap:12px;color:var(--fg);text-decoration:none;min-width:0}
-.mark{display:block;width:38px;height:auto;aspect-ratio:100/92;border-radius:2px}
+/* RailBase mark (red R over a track); the track takes the text colour */
+.mark{display:block;width:auto;height:30px;aspect-ratio:570/270;flex:none;color:var(--fg)}
 .brand-txt{display:grid;line-height:1}
-.wm{font-family:var(--display);font-weight:800;font-size:25px;letter-spacing:.04em;white-space:nowrap}
+.wm{font-family:var(--display);font-weight:900;font-size:26px;letter-spacing:-.01em;white-space:nowrap}
 .wm em{font-style:normal;color:var(--accent)}
 .brand-sub{margin-top:3px;font:600 10px/1 var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--fg-2);opacity:.75}
 .hclock{display:flex;align-items:center;gap:10px;margin-left:auto}
@@ -114,7 +115,7 @@ button{font:inherit}
   .topbar .wrap{gap:10px;height:64px}
   .hclock-txt{display:none}
   .hclock .clock{width:34px;height:34px}
-  .wm{font-size:20px}.mark{width:30px}.brand{gap:9px}
+  .wm{font-size:21px}.mark{height:22px}.brand{gap:8px}
   .brand-sub{font-size:9px;letter-spacing:.14em}
 }
 @media (max-width:360px){.brand-sub{display:none}}
@@ -158,6 +159,9 @@ button{font:inherit}
 .footer .foot-besuche{display:inline-flex;align-items:center;gap:8px;margin:0;font:600 14px/1.2 var(--body);color:var(--foot-fg);font-variant-numeric:tabular-nums}
 .footer .foot-besuche::before{content:"";width:8px;height:8px;border-radius:50%;background:#2DBE60;box-shadow:0 0 0 3px rgba(45,190,96,.25)}
 .foot-brand .wm{color:var(--foot-fg)}
+.foot-brand .mark{height:34px;color:var(--foot-fg)}
+.foot-wm{display:grid;gap:5px;line-height:1}
+.foot-by{font:600 10.5px/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--foot-dim);opacity:.75}
 .footer p{margin:0;max-width:40em;color:var(--foot-dim);font-size:15px}
 .foot-links{display:flex;flex-wrap:wrap;gap:8px 18px;margin:0;padding:0;list-style:none}
 .foot-links a{color:var(--foot-fg);text-decoration:none;font-weight:600;font-size:15px;opacity:.85}

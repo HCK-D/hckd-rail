@@ -1,4 +1,4 @@
-/* HCKD RAIL – Spenden */
+/* RailBase – Spenden */
 'use strict';
 
 /* =====================================================================
@@ -21,13 +21,13 @@ if (!SPENDE.iban && !SPENDE.twint) {
   });
 }
 const dn = $('#donate'), dnAmounts = $('#dn-amounts'), dnBank = $('#dn-bank');
-// suggested amounts plus a field for any amount; without an amount the reference is just «Spende HCKD RAIL»
+// suggested amounts plus a field for any amount; without an amount the reference is just «Spende RailBase»
 let dnAmt = 20, dnReturn = null;
 dnAmounts.innerHTML = [5, 10, 20, 50].map(a => `<button class="amt" type="button" role="radio" aria-checked="${a === dnAmt}" data-a="${a}">CHF ${a}</button>`).join('')
   + `<label class="amt-eigen"><span>${esc(tr('Eigener Betrag'))}</span><span class="amt-feld"><b>CHF</b><input id="dn-eigen" type="text" inputmode="decimal" autocomplete="off" maxlength="8" placeholder="${esc(tr('z. B. 15'))}"></span></label>`;
 const dnEigen = $('#dn-eigen');
 const chf = n => Number.isInteger(n) ? String(n) : n.toFixed(2);
-const dnRef = () => 'Spende HCKD RAIL' + (dnAmt ? ' · CHF ' + chf(dnAmt) : '');
+const dnRef = () => 'Spende RailBase' + (dnAmt ? ' · CHF ' + chf(dnAmt) : '');
 dnEigen.addEventListener('input', () => {
   const n = parseFloat(dnEigen.value.replace(',', '.').replace(/[^\d.]/g, ''));
   dnAmt = n > 0 && n < 100000 ? Math.round(n * 100) / 100 : 0;

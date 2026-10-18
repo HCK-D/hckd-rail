@@ -1,7 +1,7 @@
 /* Italiano – menu, pulsanti, pagina iniziale, finestre di dialogo */
 uebDict({
   // ---------- intestazione e pagina iniziale ----------
-  'HCKD RAIL – Startseite': 'HCKD RAIL – Pagina iniziale',
+  'RailBase – Startseite': 'RailBase – Pagina iniziale',
   'Schweizer Zeit': 'Ora svizzera',
   'Darstellung: automatisch': 'Aspetto: automatico',
   'Spenden': 'Donare',
@@ -191,8 +191,8 @@ uebDict({
   'Gut gemacht!': 'Ben fatto!',
   'Nicht schlecht, da geht noch mehr.': 'Non male, puoi fare ancora meglio.',
   'Noch etwas üben, dann klappt es.': 'Ancora un po’ di esercizio e ce la farai.',
-  'Ich habe im HCKD RAIL Bahn-Quiz (Level {lv}) {r} von {n} Fragen richtig, das sind {p} %. Schaffst du mehr?': 'Nel quiz ferroviario HCKD RAIL (livello {lv}) ho risposto giusto a {r} domande su {n}, cioè il {p} %. Riesci a fare di più?',
-  'HCKD RAIL Bahn-Quiz': 'Quiz ferroviario HCKD RAIL',
+  'Ich habe im RailBase Bahn-Quiz (Level {lv}) {r} von {n} Fragen richtig, das sind {p} %. Schaffst du mehr?': 'Nel quiz ferroviario RailBase (livello {lv}) ho risposto giusto a {r} domande su {n}, cioè il {p} %. Riesci a fare di più?',
+  'RailBase Bahn-Quiz': 'Quiz ferroviario RailBase',
 
   // ---------- categorie ed elenco ----------
   'SBB Personenverkehr': 'FFS Viaggiatori',
@@ -297,7 +297,7 @@ uebDict({
   'Typ': 'Tipo',
 
   // ---------- piè di pagina ----------
-  'Train Database von HCKD. Fahrzeuge der Schweizer Bahn, sortiert nach Bereich, mit Daten und Bildern.': 'Train Database di HCKD. I veicoli della ferrovia svizzera, ordinati per settore, con dati e immagini.',
+  'Die Train Database für die Schweizer Bahn: Fahrzeuge sortiert nach Bereich, mit Daten und Bildern.': 'La Train Database della ferrovia svizzera: i veicoli ordinati per settore, con dati e immagini.',
   '© 2026 HCKD · Stand der Daten: Oktober 2026 ·': '© 2026 HCKD · Stato dei dati: ottobre 2026 ·',
   'Fotos einsenden': 'Invia foto',
 
@@ -321,7 +321,7 @@ uebDict({
   'Name oder E-Mail': 'Nome o e-mail',
   'Nicht ausfüllen': 'Non compilare',
   'Meldung senden': 'Invia la segnalazione',
-  'HCKD RAIL allgemein': 'HCKD RAIL in generale',
+  'RailBase allgemein': 'RailBase in generale',
   'Bitte beschreibe kurz, was nicht stimmt.': 'Descrivi brevemente che cosa non va.',
   'Bitte höchstens einen Link angeben.': 'Indica al massimo un link.',
   'Du hast in kurzer Zeit schon mehrere Meldungen geschickt. Bitte warte ein paar Minuten. Danke!': 'Hai già inviato diverse segnalazioni in poco tempo. Aspetta qualche minuto, per favore. Grazie!',
@@ -335,7 +335,7 @@ uebDict({
   'Name für die Bildunterschrift': 'Nome per la didascalia',
   'E-Mail für Rückfragen': 'E-mail per domande',
   'Wo und wann aufgenommen?': 'Dove e quando è stata scattata?',
-  'Ich habe die Fotos selbst gemacht und erlaube HCKD RAIL, sie mit meinem Namen auf der Website zu zeigen.': 'Ho scattato io queste foto e permetto a HCKD RAIL di mostrarle sul sito con il mio nome.',
+  'Ich habe die Fotos selbst gemacht und erlaube RailBase, sie mit meinem Namen auf der Website zu zeigen.': 'Ho scattato io queste foto e permetto a RailBase di mostrarle sul sito con il mio nome.',
   'Fotos senden': 'Invia le foto',
   'beliebiges Fahrzeug (bitte unten angeben)': 'qualsiasi veicolo (indicalo qui sotto)',
   'Bitte füge den Link zu deinen Fotos ein (beginnt mit https://).': 'Incolla il link alle tue foto (inizia con https://).',
@@ -347,7 +347,7 @@ uebDict({
   'Danke! Wir schauen uns deine Fotos an und melden uns bei Fragen.': 'Grazie! Guardiamo le tue foto e ti contattiamo in caso di domande.',
   'Senden hat nicht geklappt. Bitte versuche es in einem Moment nochmals.': 'L’invio non è riuscito. Riprova tra un momento.',
   'Unterstützen': 'Sostieni',
-  'HCKD RAIL unterstützen': 'Sostieni HCKD RAIL',
+  'RailBase unterstützen': 'Sostieni RailBase',
   'Die Datenbank ist kostenlos und ohne Werbung. Eine kleine Spende hilft beim Ausbau: mehr Fahrzeuge, mehr Bilder, mehr Strecken.': 'La banca dati è gratuita e senza pubblicità. Una piccola donazione aiuta ad ampliarla: più veicoli, più immagini, più linee.',
   'Betrag in CHF': 'Importo in CHF',
   'Empfänger': 'Beneficiario',

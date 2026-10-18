@@ -1,4 +1,4 @@
-/* HCKD RAIL – Hell/Dunkel-Schalter */
+/* RailBase – Hell/Dunkel-Schalter */
 'use strict';
 
 /* =====================================================================

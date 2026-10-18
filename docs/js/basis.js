@@ -1,4 +1,4 @@
-/* HCKD RAIL – gemeinsame Hilfsfunktionen */
+/* RailBase – gemeinsame Hilfsfunktionen */
 'use strict';
 
 const $ = (s, r = document) => r.querySelector(s);

@@ -1,4 +1,4 @@
-﻿# HCKD RAIL – fertige Website für GitHub Pages bauen
+﻿# RailBase – fertige Website für GitHub Pages bauen
 # Erzeugt den Ordner "docs" mit:
 #   - index.html und einer eigenen HTML-Datei pro Fahrzeug, Kategorie, Impressum, Datenschutz und Vergleich
 #     (z. B. re-460.html), jede mit eigenem Titel, Beschreibung und Vorschaubild für Google und Messenger
@@ -29,33 +29,33 @@ $hreflang = @{ de = 'de-CH'; fr = 'fr-CH'; it = 'it-CH'; en = 'en' }
 $ogLocale = @{ de = 'de_CH'; fr = 'fr_CH'; it = 'it_CH'; en = 'en_GB' }
 # Texte, die nur in den Seitenköpfen stehen (Titel und Beschreibung für Google und Messenger)
 $fix = @{
-  de = @{ start = 'HCKD RAIL – Train Database für SBB Personenverkehr, Cargo, Infrastruktur, Rangier- sowie Dienst- und Spezialfahrzeuge.'; zug = 'Technische Daten, Geschichte und Bilder.'
-          impressum = 'Impressum'; impressumText = 'Impressum, Haftung und Bildnachweis von HCKD RAIL.'
-          datenschutz = 'Datenschutz'; datenschutzText = 'Datenschutzerklärung von HCKD RAIL: keine Cookies, keine Werbung, nur anonyme Besucherzählung.'
+  de = @{ start = 'RailBase – Train Database für SBB Personenverkehr, Cargo, Infrastruktur, Rangier- sowie Dienst- und Spezialfahrzeuge.'; zug = 'Technische Daten, Geschichte und Bilder.'
+          impressum = 'Impressum'; impressumText = 'Impressum, Haftung und Bildnachweis von RailBase.'
+          datenschutz = 'Datenschutz'; datenschutzText = 'Datenschutzerklärung von RailBase: keine Cookies, keine Werbung, nur anonyme Besucherzählung.'
           vergleich = 'Fahrzeuge vergleichen'; vergleichText = 'Bis zu drei Schweizer Bahnfahrzeuge nebeneinander vergleichen.'
-          neu = 'Neu und aktualisiert'; neuText = 'Die letzten Ergänzungen bei HCKD RAIL: neue Fahrzeuge, neue Fotos und neue Funktionen.'
-          sammlung = 'Meine Sammlung'; sammlungText = 'Gesehene Fahrzeuge, Sichtungen und Entdecker-Abzeichen bei HCKD RAIL.'
+          neu = 'Neu und aktualisiert'; neuText = 'Die letzten Ergänzungen bei RailBase: neue Fahrzeuge, neue Fotos und neue Funktionen.'
+          sammlung = 'Meine Sammlung'; sammlungText = 'Gesehene Fahrzeuge, Sichtungen und Entdecker-Abzeichen bei RailBase.'
           erkennen = 'FLIRT 521, 522, 523 oder 524?';erkennenText = 'So unterscheidest du die FLIRT-Baureihen 521, 522, 523 und 524 der SBB: Nummer, Strom, Farben und Einsatzgebiet.' }
-  fr = @{ start = 'HCKD RAIL – Train Database des CFF : voyageurs, Cargo, infrastructure, véhicules de manœuvre, de service et spéciaux.'; zug = 'Caractéristiques techniques, histoire et images.'
-          impressum = 'Mentions légales'; impressumText = 'Mentions légales, responsabilité et crédits photo de HCKD RAIL.'
-          datenschutz = 'Protection des données'; datenschutzText = 'Protection des données chez HCKD RAIL : pas de cookies, pas de publicité, seulement un comptage anonyme des visites.'
+  fr = @{ start = 'RailBase – Train Database des CFF : voyageurs, Cargo, infrastructure, véhicules de manœuvre, de service et spéciaux.'; zug = 'Caractéristiques techniques, histoire et images.'
+          impressum = 'Mentions légales'; impressumText = 'Mentions légales, responsabilité et crédits photo de RailBase.'
+          datenschutz = 'Protection des données'; datenschutzText = 'Protection des données chez RailBase : pas de cookies, pas de publicité, seulement un comptage anonyme des visites.'
           vergleich = 'Comparer des véhicules'; vergleichText = "Comparer jusqu’à trois véhicules ferroviaires suisses côte à côte."
-          neu = 'Nouveautés et mises à jour'; neuText = 'Les derniers ajouts sur HCKD RAIL : nouveaux véhicules, nouvelles photos et nouvelles fonctions.'
-          sammlung = 'Ma collection'; sammlungText = "Véhicules vus, observations et badges d’explorateur sur HCKD RAIL."
+          neu = 'Nouveautés et mises à jour'; neuText = 'Les derniers ajouts sur RailBase : nouveaux véhicules, nouvelles photos et nouvelles fonctions.'
+          sammlung = 'Ma collection'; sammlungText = "Véhicules vus, observations et badges d’explorateur sur RailBase."
           erkennen = 'FLIRT 521, 522, 523 ou 524 ?';erkennenText = "Comment distinguer les séries FLIRT 521, 522, 523 et 524 des CFF : numéro, courant, couleurs et région d’engagement." }
-  it = @{ start = 'HCKD RAIL – Train Database delle FFS: viaggiatori, Cargo, infrastruttura, veicoli di manovra, di servizio e speciali.'; zug = 'Dati tecnici, storia e immagini.'
-          impressum = 'Note legali'; impressumText = 'Note legali, responsabilità e crediti fotografici di HCKD RAIL.'
-          datenschutz = 'Protezione dei dati'; datenschutzText = 'Protezione dei dati su HCKD RAIL: nessun cookie, nessuna pubblicità, solo un conteggio anonimo delle visite.'
+  it = @{ start = 'RailBase – Train Database delle FFS: viaggiatori, Cargo, infrastruttura, veicoli di manovra, di servizio e speciali.'; zug = 'Dati tecnici, storia e immagini.'
+          impressum = 'Note legali'; impressumText = 'Note legali, responsabilità e crediti fotografici di RailBase.'
+          datenschutz = 'Protezione dei dati'; datenschutzText = 'Protezione dei dati su RailBase: nessun cookie, nessuna pubblicità, solo un conteggio anonimo delle visite.'
           vergleich = 'Confronta veicoli'; vergleichText = "Confronta fino a tre veicoli ferroviari svizzeri uno accanto all’altro."
-          neu = 'Novità e aggiornamenti'; neuText = 'Le ultime aggiunte su HCKD RAIL: nuovi veicoli, nuove foto e nuove funzioni.'
-          sammlung = 'La mia collezione'; sammlungText = 'Veicoli visti, avvistamenti e distintivi da esploratore su HCKD RAIL.'
+          neu = 'Novità e aggiornamenti'; neuText = 'Le ultime aggiunte su RailBase: nuovi veicoli, nuove foto e nuove funzioni.'
+          sammlung = 'La mia collezione'; sammlungText = 'Veicoli visti, avvistamenti e distintivi da esploratore su RailBase.'
           erkennen = 'FLIRT 521, 522, 523 o 524?';erkennenText = "Come distinguere le serie FLIRT 521, 522, 523 e 524 delle FFS: numero, corrente, colori e zona d’impiego." }
-  en = @{ start = 'HCKD RAIL – Train Database for SBB passenger, Cargo, infrastructure, shunting, service and special vehicles.'; zug = 'Technical data, history and pictures.'
-          impressum = 'Legal notice'; impressumText = 'Legal notice, liability and picture credits of HCKD RAIL.'
-          datenschutz = 'Privacy'; datenschutzText = 'HCKD RAIL privacy policy: no cookies, no advertising, only anonymous visitor counting.'
+  en = @{ start = 'RailBase – Train Database for SBB passenger, Cargo, infrastructure, shunting, service and special vehicles.'; zug = 'Technical data, history and pictures.'
+          impressum = 'Legal notice'; impressumText = 'Legal notice, liability and picture credits of RailBase.'
+          datenschutz = 'Privacy'; datenschutzText = 'RailBase privacy policy: no cookies, no advertising, only anonymous visitor counting.'
           vergleich = 'Compare vehicles'; vergleichText = 'Compare up to three Swiss railway vehicles side by side.'
-          neu = 'New and updated'; neuText = 'The latest additions to HCKD RAIL: new vehicles, new photos and new features.'
-          sammlung = 'My collection'; sammlungText = 'Vehicles seen, sightings and explorer badges on HCKD RAIL.'
+          neu = 'New and updated'; neuText = 'The latest additions to RailBase: new vehicles, new photos and new features.'
+          sammlung = 'My collection'; sammlungText = 'Vehicles seen, sightings and explorer badges on RailBase.'
           erkennen = 'FLIRT 521, 522, 523 or 524?';erkennenText = 'How to tell the SBB FLIRT classes 521, 522, 523 and 524 apart: number, power system, colours and area of service.' }
 }
 # Übersetzte Kategorienamen und Fahrzeugtypen aus js\sprachen\xx.js lesen
@@ -144,7 +144,7 @@ function Kopf([string]$l, $s) {
 function Build-Page([string]$l, [string]$start, [string]$titel, [string]$text, [string]$bild) {
   $datei = Datei $l $start
   $meta = "<title>$(Esc $titel)</title>`n<meta name=`"description`" content=`"$(Esc $text)`">`n"
-  $meta += "<meta property=`"og:site_name`" content=`"HCKD RAIL`">`n<meta property=`"og:type`" content=`"website`">`n<meta property=`"og:locale`" content=`"$($ogLocale[$l])`">`n"
+  $meta += "<meta property=`"og:site_name`" content=`"RailBase`">`n<meta property=`"og:type`" content=`"website`">`n<meta property=`"og:locale`" content=`"$($ogLocale[$l])`">`n"
   $meta += "<meta property=`"og:title`" content=`"$(Esc $titel)`">`n<meta property=`"og:description`" content=`"$(Esc $text)`">`n"
   if ($base) {
     $url = Adresse $l $start
@@ -159,7 +159,7 @@ function Build-Page([string]$l, [string]$start, [string]$titel, [string]$text, [
   $meta += "<link rel=`"icon`" href=`"favicon.svg`" type=`"image/svg+xml`">`n"
   # als App installierbar (manifest.webmanifest, sw.js und js/app.js)
   $meta += "<link rel=`"manifest`" href=`"manifest.webmanifest`">`n<meta name=`"theme-color`" content=`"#D71920`">`n"
-  $meta += "<link rel=`"apple-touch-icon`" href=`"bilder/app/apple-touch-icon.png`">`n<meta name=`"apple-mobile-web-app-capable`" content=`"yes`">`n<meta name=`"apple-mobile-web-app-title`" content=`"HCKD RAIL`">`n"
+  $meta += "<link rel=`"apple-touch-icon`" href=`"bilder/app/apple-touch-icon.png`">`n<meta name=`"apple-mobile-web-app-capable`" content=`"yes`">`n<meta name=`"apple-mobile-web-app-title`" content=`"RailBase`">`n"
   # HCKD_SEITEN: Links zeigen auf die einzelnen Dateien (re-460.html statt #re-460)
   # HCKD_START: welche Ansicht ohne # gezeigt wird; HCKD_LANG: Sprache dieser Datei
   $js = "window.HCKD_SEITEN=true;window.HCKD_LANG='$l';"
@@ -169,15 +169,18 @@ function Build-Page([string]$l, [string]$start, [string]$titel, [string]$text, [
   Write-Utf8 (Join-Path $out $datei) $html
 }
 foreach ($l in $sprachen) {
-  Build-Page $l '' 'HCKD RAIL – Train Database' $fix[$l].start ''
-  foreach ($s in $seiten) { $k = Kopf $l $s; Build-Page $l $s.id "$($k[0]) · HCKD RAIL" $k[1] $s.bild }
+  Build-Page $l '' 'RailBase – Train Database' $fix[$l].start ''
+  foreach ($s in $seiten) { $k = Kopf $l $s; Build-Page $l $s.id "$($k[0]) · RailBase" $k[1] $s.bild }
 }
 
 # ---------- Dateien kopieren ----------
 foreach ($d in 'css', 'js', 'bilder', 'schrift') { Copy-Item -Recurse (Join-Path $root $d) (Join-Path $out $d) }
-# Browser-Symbol aus dem Logo
+# Browser-Symbol aus dem Logo: quadratisch, weisse Fläche, Gleis dunkel
 $logo = [regex]::Match($body, '<symbol id="logo" viewBox="([^"]+)">([\s\S]*?)</symbol>')
-if ($logo.Success) { Write-Utf8 (Join-Path $out 'favicon.svg') "<svg xmlns=`"http://www.w3.org/2000/svg`" viewBox=`"$($logo.Groups[1].Value)`">$($logo.Groups[2].Value.Trim())</svg>`n" }
+if ($logo.Success) {
+  $pfade = $logo.Groups[2].Value.Trim().Replace('currentColor', '#202326')
+  Write-Utf8 (Join-Path $out 'favicon.svg') "<svg xmlns=`"http://www.w3.org/2000/svg`" viewBox=`"-16 -166 600 600`"><rect x=`"-16`" y=`"-166`" width=`"600`" height=`"600`" rx=`"120`" fill=`"#fff`"/>$pfade</svg>`n"
+}
 # GitHub Pages: Dateien unverändert ausliefern
 Write-Utf8 (Join-Path $out '.nojekyll') ''
 
@@ -186,8 +189,8 @@ Write-Utf8 (Join-Path $out '.nojekyll') ''
 $manifest = @'
 {
   "id": "./",
-  "name": "HCKD RAIL – Train Database",
-  "short_name": "HCKD RAIL",
+  "name": "RailBase – Train Database",
+  "short_name": "RailBase",
   "description": "Schweizer Bahnfahrzeuge: Technik, Geschichte, Bilder, Abfahrten und Quiz.",
   "lang": "de-CH",
   "start_url": "./",
@@ -206,7 +209,7 @@ Write-Utf8 (Join-Path $out 'manifest.webmanifest') $manifest
 # Service Worker: Seiten zuerst aus dem Netz (sonst aus dem Speicher), alles andere aus dem Speicher.
 # Die Version ändert sich bei jedem Bauen; dann wird der alte Speicher gelöscht und alles neu geladen.
 $sw = @'
-/* HCKD RAIL – Service Worker (automatisch erzeugt von werkzeuge\website-bauen.ps1) */
+/* RailBase – Service Worker (automatisch erzeugt von werkzeuge\website-bauen.ps1) */
 'use strict';
 const V = 'hckd-__VERSION__';
 self.addEventListener('install', e => {
@@ -242,7 +245,7 @@ $p404 = @"
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex">
-<title>Seite nicht gefunden · HCKD RAIL</title>
+<title>Seite nicht gefunden · RailBase</title>
 <style>
 :root{color-scheme:light dark;--bg:#F5F6F7;--fg:#202326;--fg2:#626971;--accent:#D71920}
 @media (prefers-color-scheme:dark){:root{--bg:#141618;--fg:#EEF0F2;--fg2:#A3A9B0}}
@@ -255,22 +258,22 @@ a{display:inline-block;padding:12px 20px;border-radius:12px;background:var(--acc
 <body>
 <main>
 <h1 id="t">Gleis nicht gefunden</h1>
-<p id="p">Diese Seite gibt es bei HCKD RAIL nicht (mehr).</p>
+<p id="p">Diese Seite gibt es bei RailBase nicht (mehr).</p>
 <a id="a" href="$startUrl">Zur Startseite</a>
 </main>
 <script>
 (function () {
   var T = {
-    fr: ['Voie introuvable', 'Cette page n’existe pas (ou plus) sur HCKD RAIL.', 'Vers l’accueil', 'fr-CH'],
-    it: ['Binario non trovato', 'Questa pagina non esiste (più) su HCKD RAIL.', 'Alla pagina iniziale', 'it-CH'],
-    en: ['Track not found', 'This page does not exist (any more) on HCKD RAIL.', 'Go to the home page', 'en']
+    fr: ['Voie introuvable', 'Cette page n’existe pas (ou plus) sur RailBase.', 'Vers l’accueil', 'fr-CH'],
+    it: ['Binario non trovato', 'Questa pagina non esiste (più) su RailBase.', 'Alla pagina iniziale', 'it-CH'],
+    en: ['Track not found', 'This page does not exist (any more) on RailBase.', 'Go to the home page', 'en']
   };
   var l = '';
   try { l = localStorage.getItem('hckd-lang') || ''; } catch (e) {}
   if (!T[l]) { var n = (navigator.language || '').slice(0, 2); if (T[n]) l = n; }
   if (!T[l]) return;
   document.documentElement.lang = T[l][3];
-  document.title = T[l][0] + ' · HCKD RAIL';
+  document.title = T[l][0] + ' · RailBase';
   document.getElementById('t').textContent = T[l][0];
   document.getElementById('p').textContent = T[l][1];
   var a = document.getElementById('a');

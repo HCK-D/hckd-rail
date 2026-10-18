@@ -1,4 +1,4 @@
-# HCKD RAIL – Train Database
+# RailBase – Train Database
 
 Veröffentlicht (Vorschau): https://claude.ai/artifact/BGt4rYNXFSPp5q43FqkYYx
 Ins Internet stellen mit GitHub Pages: siehe **ANLEITUNG-GITHUB.md**.

@@ -1,7 +1,7 @@
 {
   "id": "./",
-  "name": "HCKD RAIL – Train Database",
-  "short_name": "HCKD RAIL",
+  "name": "RailBase – Train Database",
+  "short_name": "RailBase",
   "description": "Schweizer Bahnfahrzeuge: Technik, Geschichte, Bilder, Abfahrten und Quiz.",
   "lang": "de-CH",
   "start_url": "./",

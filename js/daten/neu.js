@@ -1,4 +1,4 @@
-/* HCKD RAIL – «Neu und aktualisiert»: Änderungen für wiederkehrende Besucher. Neue Einträge OBEN anfügen. */
+/* RailBase – «Neu und aktualisiert»: Änderungen für wiederkehrende Besucher. Neue Einträge OBEN anfügen. */
 'use strict';
 
 /* =====================================================================
@@ -10,6 +10,8 @@
    link   Bereich der Startseite, z. B. 'abfahrten' (optional)
    ===================================================================== */
 const NEU = [
+  { datum: '2026-10-18', art: 'neu', text: 'Aus HCKD RAIL wird RailBase: neuer Name und neues Logo. Adresse, Sammlung und Sichtungen bleiben, wie sie sind.' },
+  { datum: '2026-10-18', art: 'update', text: 'Das neue Logo ist jetzt auch das App-Symbol und das Symbol im Browser-Tab.' },
   { datum: '2026-10-18', art: 'neu', text: 'Eigene Adresse hckd-rail.ch und Spenden per Banküberweisung. Danke für jede Unterstützung!' },
   { datum: '2026-10-18', art: 'update', text: 'Korrekturen nach einer Inhaltsprüfung, unter anderem bei RABe 521, Ae 6/6, Be 4/6, Ce 6/8 III, Rotem Pfeil und LRZ 14.', ids: ['rabe-521', 'h-ae66', 'h-be46', 'h-ce68iii', 'h-roterpfeil', 'lrz-14', 'h-c56', 'h-tee', 'xas-53', 'tmf-232', 'kirow-mannschaftswagen', 'h-eb35'] },
   { datum: '2026-10-18', art: 'neu', text: 'Entdecker-Abzeichen und die Seite «Meine Sammlung» mit allen gesehenen Fahrzeugen.', link: 'sammlung' },

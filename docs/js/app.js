@@ -1,4 +1,4 @@
-/* HCKD RAIL – als App installieren (PWA) */
+/* RailBase – als App installieren (PWA) */
 'use strict';
 
 /* =====================================================================

@@ -1,4 +1,4 @@
-/* HCKD RAIL – Sprachen (Deutsch, Französisch, Italienisch, Englisch) */
+/* RailBase – Sprachen (Deutsch, Französisch, Italienisch, Englisch) */
 'use strict';
 
 /* =====================================================================
