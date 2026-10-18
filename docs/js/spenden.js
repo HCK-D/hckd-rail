@@ -6,8 +6,12 @@
    Angaben hier eintragen, z. B. twint: '079 123 45 67' (TWINT-Nummer) und/oder iban: 'CH12 …'.
    Solange beide leer sind, ist der Spenden-Knopf auf der ganzen Seite ausgeblendet.
    ===================================================================== */
-// empfaenger: genau der Name, auf den das Konto lautet (Banken vergleichen Name und IBAN)
-const SPENDE = { empfaenger: 'Kevin Kouasmi', iban: 'CH34 0618 6560 0743 8090 2', twint: '' };
+// empfaenger: genau der Name, auf den das Konto lautet (Banken vergleichen Name und IBAN).
+// Er steht hier verschlüsselt (Base64), damit Suchmaschinen und Sammelprogramme ihn nicht einfach im Quelltext finden,
+// und erscheint im Spenden-Fenster erst nach einem Klick auf «Namen anzeigen». Neuer Name: btoa('Vorname Nachname') im Browser.
+const SPENDE = { empfaengerB64: 'S2V2aW4gS291YXNtaQ==', iban: 'CH34 0618 6560 0743 8090 2', twint: '' };
+SPENDE.empfaenger = (() => { try { return decodeURIComponent(escape(atob(SPENDE.empfaengerB64))); } catch (e) { return ''; } })();
+let dnNameSichtbar = false;
 if (!SPENDE.iban && !SPENDE.twint) {
   $$('[data-donate]').forEach(b => {
     // also remove the « · » in front of the button in the footer
@@ -34,15 +38,19 @@ function dnRender() {
   $$('.amt', dnAmounts).forEach(b => b.setAttribute('aria-checked', !eigen && +b.dataset.a === dnAmt ? 'true' : 'false'));
   const ref = dnRef();
   const row = (lbl, val, key) => `<div class="bank-row"><div><small>${esc(tr(lbl))}</small><b class="${val ? '' : 'tbd'}">${val ? esc(val) : esc(tr('wird ergänzt'))}</b></div><button class="copy" type="button" data-copy="${key}" ${val ? '' : 'disabled'}>${esc(tr('Kopieren'))}</button></div>`;
-  dnBank.innerHTML = row('Empfänger', SPENDE.empfaenger, 'empfaenger') + (SPENDE.twint ? row('TWINT', SPENDE.twint, 'twint') : '') + (SPENDE.iban ? row('IBAN', SPENDE.iban, 'iban') : '') + row('Mitteilung', ref, 'ref');
+  // the name only appears after a click on «Namen anzeigen»
+  const name = dnNameSichtbar ? row('Empfänger', SPENDE.empfaenger, 'empfaenger')
+    : `<div class="bank-row"><div><small>${esc(tr('Empfänger'))}</small><button class="name-zeigen" type="button" data-name-zeigen>${esc(tr('Namen anzeigen'))}</button></div><button class="copy" type="button" disabled>${esc(tr('Kopieren'))}</button></div>`;
+  dnBank.innerHTML = name +(SPENDE.twint ? row('TWINT', SPENDE.twint, 'twint') : '') + (SPENDE.iban ? row('IBAN', SPENDE.iban, 'iban') : '') + row('Mitteilung', ref, 'ref');
   $('#dn-note').textContent = tr('Bitte gib die Mitteilung bei der Zahlung an. Vielen Dank!');
 }
 function dnOpen(from) { dnReturn = from; dnRender(); dn.hidden = false; $('.dlg-x', dn).focus(); }
-function dnClose() { dn.hidden = true; if (dnReturn) dnReturn.focus(); }
+function dnClose() { dn.hidden = true; dnNameSichtbar = false; if (dnReturn) dnReturn.focus(); }
 $$('[data-donate]').forEach(b => b.addEventListener('click', () => dnOpen(b)));
 dn.addEventListener('click', e => {
   if (e.target === dn || e.target.closest('[data-close]')) return dnClose();
   const a = e.target.closest('.amt'); if (a) { dnAmt = +a.dataset.a; dnEigen.value = ''; dnRender(); return; }
+  if (e.target.closest('[data-name-zeigen]')) { dnNameSichtbar = true; dnRender(); const c = $('[data-copy="empfaenger"]', dnBank); if (c) c.focus(); return; }
   const cp = e.target.closest('[data-copy]');
   if (cp) {
     // the IBAN is copied without spaces, so every banking app accepts it

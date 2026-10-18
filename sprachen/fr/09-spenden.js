@@ -1,5 +1,6 @@
 /* Français – dons par virement bancaire */
 uebDict({
+  'Namen anzeigen': 'Afficher le nom',
   'Eigener Betrag': 'Montant libre',
   'z. B. 15': 'p. ex. 15',
   '<b>Danke für deine Unterstützung!</b> Jeder Franken fliesst direkt in HCKD RAIL: in neue Fahrzeugporträts, mehr Fotos, genaue Recherche und den Betrieb der Website. So bleibt die Train Database für alle kostenlos und ohne Werbung. Ob gross oder klein, jede Spende bedeutet mir viel.': '<b>Merci pour ton soutien !</b> Chaque franc va directement à HCKD RAIL : de nouveaux portraits de véhicules, plus de photos, des recherches précises et l’exploitation du site. Ainsi, la Train Database reste gratuite et sans publicité pour tous. Petit ou grand, chaque don compte beaucoup pour moi.',

@@ -13,6 +13,8 @@
 .amounts{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
 .amt{height:44px;border:0;border-radius:12px;background:var(--surface-2);color:var(--fg);font:600 15px/1 var(--body);font-variant-numeric:tabular-nums;cursor:pointer;transition:background-color .2s ease,color .2s ease}
 .amt[aria-checked="true"]{background:var(--fg);color:var(--bg)}
+.name-zeigen{display:inline-flex;align-items:center;gap:6px;margin-top:3px;padding:6px 12px;border:1px dashed var(--fg-3);border-radius:999px;background:transparent;color:var(--fg);font:600 14px/1.2 var(--body);cursor:pointer}
+.name-zeigen:hover{border-style:solid;background:var(--surface-2)}
 .amt-eigen{grid-column:1/-1;display:grid;gap:6px;margin-top:2px;font:600 13px/1.2 var(--body);color:var(--fg-2)}
 .amt-feld{display:flex;align-items:center;gap:8px;height:46px;padding:0 14px;border:2px solid var(--line);border-radius:12px;background:var(--bg)}
 .amt-feld:focus-within{border-color:var(--fg)}
