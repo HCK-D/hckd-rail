@@ -1,5 +1,5 @@
 # Adresse der fertigen Website, eine Zeile, mit / am Ende.
 # GitHub-Benutzer HCK-D, Repository hckd-rail.
-# Sobald die Domain hckd-rail.ch bei Infomaniak aktiv ist, hier https://hckd-rail.ch/ eintragen
-# (das Bau-Skript legt dann automatisch die Datei CNAME an).
-https://hck-d.github.io/hckd-rail/
+# Eigene Domain seit Oktober 2026 (DNS bei Infomaniak: 4 A-Einträge auf GitHub Pages, www als CNAME auf hck-d.github.io).
+# Das Bau-Skript legt dafür automatisch die Datei docs\CNAME an.
+https://hckd-rail.ch/
