@@ -218,6 +218,13 @@ body.has-cmp .footer{padding-bottom:76px}
 .neu-chips a,.neu-n{display:inline-block;padding:5px 10px;border-radius:999px;background:var(--surface-2);color:var(--fg);font:600 13px/1.2 var(--body);text-decoration:none}
 .neu-chips a:hover{background:var(--accent-soft);color:var(--accent-ink)}
 .neu-n{background:transparent;color:var(--fg-3)}
+/* Danke: photographers and helpers */
+.danke-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr));gap:14px;margin:0;padding:0;list-style:none}
+.danke-karte{display:flex;align-items:center;gap:14px;padding:18px;border-radius:var(--r-md);background:var(--surface);box-shadow:var(--shadow)}
+.danke-initialen{flex:none;display:grid;place-items:center;width:52px;height:52px;border-radius:50%;background:var(--accent);color:#FFFFFF;font:800 18px/1 var(--display);letter-spacing:.02em}
+.danke-karte div{display:grid;gap:4px;min-width:0}
+.danke-karte b{font:800 18px/1.2 var(--display)}
+.danke-karte div span{font-size:14.5px;color:var(--fg-2)}
 
 /* ---------- sightings on the vehicle page ---------- */
 .sicht{display:grid;gap:10px;margin-top:6px;padding:14px 16px;border-radius:var(--r-md);background:var(--surface);box-shadow:var(--shadow);max-width:720px}

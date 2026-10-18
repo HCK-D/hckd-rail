@@ -10,6 +10,7 @@
    link   Bereich der Startseite, z. B. 'abfahrten' (optional)
    ===================================================================== */
 const NEU = [
+  { datum: '2026-10-18', art: 'neu', text: 'Neue Seite «Danke»: ein Dankeschön an die Bahnfotografen, die Fotos für RailBase gemacht haben.', link: 'danke' },
   { datum: '2026-10-18', art: 'neu', text: 'Neue Adresse: railbase.ch. Am besten gleich als Lesezeichen speichern.' },
   { datum: '2026-10-18', art: 'neu', text: 'Aus HCKD RAIL wird RailBase: neuer Name und neues Logo. Sammlung und Sichtungen bleiben, wie sie sind.' },
   { datum: '2026-10-18', art: 'update', text: 'Das neue Logo ist jetzt auch das App-Symbol und das Symbol im Browser-Tab.' },
