@@ -20,13 +20,17 @@
    Genève-Aéroport, Zürich Flughafen, Lenzburg, Baden, Langenthal, Burgdorf,
    Payerne, Nyon, Vevey, Aigle, Monthey, St-Maurice, Mendrisio, Chiasso
    ===================================================================== */
-const GOTTHARD = ['Basel SBB', 'Olten', 'Arth-Goldau', 'Erstfeld', 'Bellinzona', 'Chiasso'];
+// Bahnhöfe, die nicht in der Liste oben stehen: Name -> Schweizer Koordinaten (LV95)
+const BAHNHOF_EXTRA = { 'Rorschach': [2754815, 1260640] };
+const GOTTHARD =['Basel SBB', 'Olten', 'Arth-Goldau', 'Erstfeld', 'Bellinzona', 'Chiasso'];
 const LOETSCHBERG = ['Basel SBB', 'Olten', 'Bern', 'Spiez', 'Visp', 'Brig'];
 const EINSATZ = {
-  'rabe-501': { strecken: [['Zürich HB', 'Zug', 'Arth-Goldau', 'Erstfeld', 'Bellinzona', 'Lugano', 'Chiasso'], ['Basel SBB', 'Basel Bad Bf']],
-    text: 'Auf der Gotthardachse von Zürich ins Tessin und weiter nach Mailand, seit dem Fahrplan 2026 auch ab Basel Richtung Hamburg.' },
-  'rabde-500': { strecken: [['Basel SBB', 'Delémont', 'Biel/Bienne', 'Neuchâtel', 'Yverdon-les-Bains', 'Lausanne'], ['Romanshorn', 'St. Gallen', 'Winterthur', 'Zürich HB', 'Olten', 'Solothurn', 'Biel/Bienne'], ['Yverdon-les-Bains', 'Lausanne', 'Genève']],
-    text: 'Vor allem auf der Jurasüdfusslinie: Basel–Biel–Lausanne und St. Gallen–Zürich–Biel–Genève. Weitere Einsätze führen ins Tessin.' },
+  // Giruno und ICN nach den Einsatzkarten auf sbb.ch («Unsere Züge», Stand Oktober 2026)
+  'rabe-501': { strecken: [['Basel SBB', 'Olten', 'Luzern', 'Arth-Goldau', 'Erstfeld', 'Bellinzona', 'Lugano', 'Chiasso'], ['Zürich HB', 'Zug', 'Arth-Goldau'], ['Zug', 'Luzern'], ['Olten', 'Aarau', 'Zürich HB'], ['Basel SBB', 'Zürich HB'], ['Zürich HB', 'Sargans', 'Chur'], ['Basel SBB', 'Basel Bad Bf']],
+    international: 'giruno',
+    text: 'In der Schweiz vor allem auf Zürich–Zug–Luzern und Zürich–Chur, dazu von Basel und Zürich durch den Gotthard nach Lugano und Chiasso. International auf der Nord-Süd-Achse zwischen Deutschland, der Schweiz und Italien.' },
+  'rabde-500': { strecken: [['Basel SBB', 'Delémont', 'Biel/Bienne', 'Neuchâtel', 'Yverdon-les-Bains', 'Lausanne', 'Genève', 'Genève-Aéroport'], ['Rorschach', 'St. Gallen', 'Winterthur', 'Zürich HB', 'Aarau', 'Olten', 'Solothurn', 'Biel/Bienne'], ['Bern', 'Olten'], ['Zürich HB', 'Zug', 'Arth-Goldau', 'Erstfeld', 'Bellinzona', 'Lugano', 'Chiasso']],
+    text: 'Vor allem auf der Jurasüdfusslinie: Basel–Biel–Lausanne und Rorschach–St. Gallen–Zürich–Biel–Genève, dazu Bern–Olten. Zudem fährt er zwischen Zürich und Chiasso.' },
   'rabe-502': { strecken: [['St. Gallen', 'Winterthur', 'Zürich HB', 'Olten', 'Bern', 'Fribourg/Freiburg', 'Lausanne', 'Genève'], ['Basel SBB', 'Zürich HB'], ['Zürich HB', 'Sargans', 'Chur'], ['Luzern', 'Zug', 'Zürich HB']],
     text: 'Wichtigster Korridor ist St. Gallen–Zürich–Bern–Lausanne–Genève, dazu Basel–Zürich, Zürich–Chur und Luzern–Zürich.' },
   'rabe-511': { strecken: [['Baden', 'Aarau', 'Olten', 'Luzern'], ['Zürich HB', 'Sargans', 'Chur']], gebiete: [['Zürich HB', 24, 'S-Bahn Zürich']],
@@ -53,6 +57,27 @@ const EINSATZ = {
   'am-843': { netz: true, text: 'Im Rangier- und Zustelldienst sowie für Bauzüge in der ganzen Schweiz.' },
   'tm-234': { netz: true, text: 'Auf Baustellen im ganzen Netz für Gleis-, Fahrleitungs- und Signalunterhalt.' }
 };
+
+/* =====================================================================
+   INTERNATIONAL: Karte «International» (Umschalter über der Karte)
+   STAEDTE    Name -> [Länge, Breite]; mit false am Schluss nur Wegpunkt ohne Punkt und Namen
+   strecken   Listen von Städten; die Linien verbinden die Halte direkt (Übersicht wie bei der SBB)
+   ===================================================================== */
+const STAEDTE = {
+  'Hamburg': [9.935, 53.552], 'Bremen': [8.813, 53.083], 'Hannover': [9.741, 52.377], 'Frankfurt': [8.686, 50.099],
+  'Mannheim': [8.469, 49.479], 'Karlsruhe': [8.402, 48.994], 'Freiburg': [7.841, 47.998], 'Basel': [7.589, 47.547],
+  'Zürich': [8.540, 47.378], 'Luzern': [8.310, 47.050], 'Arth-Goldau': [8.548, 47.049, false], 'Lugano': [8.947, 46.005],
+  'Milano': [9.204, 45.486], 'Verona': [10.983, 45.429], 'Venezia': [12.321, 45.441], 'Bologna': [11.343, 44.506],
+  'Firenze': [11.248, 43.776], 'Genova': [8.921, 44.418], 'Livorno': [10.334, 43.553]
+};
+const INTERNATIONAL = {
+  // nach der Einsatzkarte Europa auf sbb.ch, Stand Oktober 2026
+  giruno: { strecken: [['Hamburg', 'Hannover', 'Frankfurt', 'Mannheim', 'Karlsruhe', 'Freiburg', 'Basel'], ['Bremen', 'Hannover'],
+    ['Basel', 'Zürich', 'Arth-Goldau'], ['Basel', 'Luzern', 'Arth-Goldau'], ['Arth-Goldau', 'Lugano', 'Milano'],
+    ['Milano', 'Verona', 'Venezia'], ['Milano', 'Bologna', 'Firenze'], ['Milano', 'Genova', 'Livorno']],
+    text: 'International von Hamburg und Bremen über Hannover, Frankfurt und Basel durch die Schweiz bis Mailand und weiter nach Venedig, Florenz und Livorno.' }
+};
+
 // infrastructure wagons: no fixed routes, they go wherever a construction site is
 for (const id of ['fans-u', 'xans-37', 'xans-74', 'xas-53', 'xas-62', 'xas-62-fb', 'xas-73', 'xns-39', 'xns-60', 'silad-1-3', 'silad-4', 'silad-reserve', 'kirow-mannschaftswagen'])
   EINSATZ[id] = { netz: true, text: 'Mit Bauzügen auf Baustellen im ganzen SBB-Normalspurnetz, je nach Bauprogramm.' };

@@ -861,6 +861,19 @@ uebDict({
   'Neue Seite «Danke»: ein Dankeschön an die Bahnfotografen, die Fotos für RailBase gemacht haben.': 'New «Thank you» page: a big thank you to the railway photographers who took photos for RailBase.'
 });
 
+/* ---- 12-international.js ---- */
+/* English – international map «Where does it run?» */
+uebDict({
+  'Karte wählen': 'Choose map',
+  'Schweiz': 'Switzerland',
+  'International': 'International',
+  'Karte der Schweiz mit den Einsatzstrecken': 'Map of Switzerland with the routes served',
+  'Karte Europas mit den internationalen Strecken': 'Map of Europe with the international routes',
+  'Vereinfachte Übersicht der internationalen Strecken laut SBB; die Linien verbinden die Halte direkt. Ländergrenzen: Natural Earth.': 'Simplified overview of the international routes according to SBB; the lines connect the stops directly. Borders: Natural Earth.',
+  'International von Hamburg und Bremen über Hannover, Frankfurt und Basel durch die Schweiz bis Mailand und weiter nach Venedig, Florenz und Livorno.': 'Internationally from Hamburg and Bremen via Hanover, Frankfurt and Basel, through Switzerland to Milan and on to Venice, Florence and Livorno.',
+  'Ländergrenzen der internationalen Karten: Natural Earth (gemeinfrei), über das Paket world-atlas (ISC-Lizenz).': 'Borders of the international maps: Natural Earth (public domain), via the world-atlas package (ISC licence).'
+});
+
 /* ---- 20-personenverkehr.js ---- */
 /* English – SBB Passenger vehicles */
 uebDict({ 'ja': 'yes', 'nein': 'no' });
@@ -2014,8 +2027,8 @@ uebDict({
 });
 
 uebEinsatz({
-  'rabe-501': 'On the Gotthard axis from Zurich to Ticino and on to Milan; since the 2026 timetable also from Basel towards Hamburg.',
-  'rabde-500': 'Mainly on the Jura foot line: Basel–Biel–Lausanne and St. Gallen–Zurich–Biel–Geneva. Other services run to Ticino.',
+  'rabe-501': 'In Switzerland mainly on Zurich–Zug–Lucerne and Zurich–Chur, plus from Basel and Zurich through the Gotthard to Lugano and Chiasso. Internationally on the north–south axis between Germany, Switzerland and Italy.',
+  'rabde-500': 'Mainly on the Jura foot line: Basel–Biel–Lausanne and Rorschach–St. Gallen–Zurich–Biel–Geneva, plus Bern–Olten. It also runs between Zurich and Chiasso.',
   'rabe-502': 'The main corridor is St. Gallen–Zurich–Bern–Lausanne–Geneva, plus Basel–Zurich, Zurich–Chur and Lucerne–Zurich.',
   'rabe-511': 'Regio-Dosto mainly on the Zurich S-Bahn and as RE Wettingen–Olten–Lucerne; IR-Dosto on the Swiss Plateau, in northern Switzerland and on the axis to Chur.',
   'rabe-514': 'On the entire Zurich S-Bahn network.',

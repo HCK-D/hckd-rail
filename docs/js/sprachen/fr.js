@@ -863,6 +863,19 @@ uebDict({
   'Neue Seite «Danke»: ein Dankeschön an die Bahnfotografen, die Fotos für RailBase gemacht haben.': 'Nouvelle page «Merci» : un grand merci aux photographes ferroviaires qui ont pris des photos pour RailBase.'
 });
 
+/* ---- 12-international.js ---- */
+/* Français – carte internationale «Où circule-t-il ?» */
+uebDict({
+  'Karte wählen': 'Choisir la carte',
+  'Schweiz': 'Suisse',
+  'International': 'International',
+  'Karte der Schweiz mit den Einsatzstrecken': 'Carte de la Suisse avec les lignes desservies',
+  'Karte Europas mit den internationalen Strecken': 'Carte de l’Europe avec les lignes internationales',
+  'Vereinfachte Übersicht der internationalen Strecken laut SBB; die Linien verbinden die Halte direkt. Ländergrenzen: Natural Earth.': 'Aperçu simplifié des lignes internationales selon les CFF ; les traits relient directement les arrêts. Frontières : Natural Earth.',
+  'International von Hamburg und Bremen über Hannover, Frankfurt und Basel durch die Schweiz bis Mailand und weiter nach Venedig, Florenz und Livorno.': 'À l’international de Hambourg et Brême via Hanovre, Francfort et Bâle, à travers la Suisse jusqu’à Milan, puis vers Venise, Florence et Livourne.',
+  'Ländergrenzen der internationalen Karten: Natural Earth (gemeinfrei), über das Paket world-atlas (ISC-Lizenz).': 'Frontières des cartes internationales : Natural Earth (domaine public), via le paquet world-atlas (licence ISC).'
+});
+
 /* ---- 20-personenverkehr.js ---- */
 /* Français – véhicules CFF Voyageurs */
 uebDict({ 'ja': 'oui', 'nein': 'non', 'SBB': 'CFF' });
@@ -2026,8 +2039,8 @@ uebDict({
 });
 
 uebEinsatz({
-  'rabe-501': 'Sur l’axe du Gothard, de Zurich au Tessin et jusqu’à Milan ; depuis l’horaire 2026 aussi de Bâle en direction de Hambourg.',
-  'rabde-500': 'Surtout sur la ligne du pied du Jura : Bâle–Bienne–Lausanne et Saint-Gall–Zurich–Bienne–Genève. D’autres services mènent au Tessin.',
+  'rabe-501': 'En Suisse surtout sur Zurich–Zoug–Lucerne et Zurich–Coire, ainsi que de Bâle et de Zurich par le Gothard vers Lugano et Chiasso. À l’international sur l’axe nord-sud entre l’Allemagne, la Suisse et l’Italie.',
+  'rabde-500': 'Surtout sur la ligne du pied du Jura : Bâle–Bienne–Lausanne et Rorschach–Saint-Gall–Zurich–Bienne–Genève, ainsi que Berne–Olten. Il circule aussi entre Zurich et Chiasso.',
   'rabe-502': 'Le principal corridor est Saint-Gall–Zurich–Berne–Lausanne–Genève, avec Bâle–Zurich, Zurich–Coire et Lucerne–Zurich.',
   'rabe-511': 'Le Regio-Dosto surtout sur le RER zurichois et comme RE Wettingen–Olten–Lucerne ; l’IR-Dosto sur le Plateau, en Suisse du Nord et sur l’axe vers Coire.',
   'rabe-514': 'Sur tout le réseau du RER zurichois.',

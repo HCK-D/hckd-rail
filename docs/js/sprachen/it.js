@@ -863,6 +863,19 @@ uebDict({
   'Neue Seite «Danke»: ein Dankeschön an die Bahnfotografen, die Fotos für RailBase gemacht haben.': 'Nuova pagina «Grazie»: un ringraziamento ai fotografi ferroviari che hanno scattato foto per RailBase.'
 });
 
+/* ---- 12-international.js ---- */
+/* Italiano – carta internazionale «Dove circola?» */
+uebDict({
+  'Karte wählen': 'Scegli la carta',
+  'Schweiz': 'Svizzera',
+  'International': 'Internazionale',
+  'Karte der Schweiz mit den Einsatzstrecken': 'Carta della Svizzera con le linee servite',
+  'Karte Europas mit den internationalen Strecken': 'Carta dell’Europa con le linee internazionali',
+  'Vereinfachte Übersicht der internationalen Strecken laut SBB; die Linien verbinden die Halte direkt. Ländergrenzen: Natural Earth.': 'Panoramica semplificata delle linee internazionali secondo le FFS; le linee collegano direttamente le fermate. Confini: Natural Earth.',
+  'International von Hamburg und Bremen über Hannover, Frankfurt und Basel durch die Schweiz bis Mailand und weiter nach Venedig, Florenz und Livorno.': 'A livello internazionale da Amburgo e Brema via Hannover, Francoforte e Basilea, attraverso la Svizzera fino a Milano e poi verso Venezia, Firenze e Livorno.',
+  'Ländergrenzen der internationalen Karten: Natural Earth (gemeinfrei), über das Paket world-atlas (ISC-Lizenz).': 'Confini delle carte internazionali: Natural Earth (pubblico dominio), tramite il pacchetto world-atlas (licenza ISC).'
+});
+
 /* ---- 20-personenverkehr.js ---- */
 /* Italiano – veicoli FFS Viaggiatori */
 uebDict({ 'ja': 'sì', 'nein': 'no', 'SBB': 'FFS' });
@@ -2018,8 +2031,8 @@ uebDict({
 });
 
 uebEinsatz({
-  'rabe-501': 'Sull’asse del San Gottardo da Zurigo al Ticino e fino a Milano; dall’orario 2026 anche da Basilea in direzione di Amburgo.',
-  'rabde-500': 'Soprattutto sulla linea ai piedi del Giura: Basilea–Bienne–Losanna e San Gallo–Zurigo–Bienne–Ginevra. Altri servizi portano in Ticino.',
+  'rabe-501': 'In Svizzera soprattutto su Zurigo–Zugo–Lucerna e Zurigo–Coira, oltre che da Basilea e Zurigo attraverso il San Gottardo verso Lugano e Chiasso. A livello internazionale sull’asse nord-sud tra Germania, Svizzera e Italia.',
+  'rabde-500': 'Soprattutto sulla linea ai piedi del Giura: Basilea–Bienne–Losanna e Rorschach–San Gallo–Zurigo–Bienne–Ginevra, oltre a Berna–Olten. Circola anche tra Zurigo e Chiasso.',
   'rabe-502': 'Il corridoio principale è San Gallo–Zurigo–Berna–Losanna–Ginevra, oltre a Basilea–Zurigo, Zurigo–Coira e Lucerna–Zurigo.',
   'rabe-511': 'Il Regio-Dosto soprattutto sulla S-Bahn di Zurigo e come RE Wettingen–Olten–Lucerna; l’IR-Dosto sull’Altopiano, nella Svizzera settentrionale e sull’asse verso Coira.',
   'rabe-514': 'Su tutta la rete della S-Bahn di Zurigo.',

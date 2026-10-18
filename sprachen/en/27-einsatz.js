@@ -4,8 +4,8 @@ uebDict({
 });
 
 uebEinsatz({
-  'rabe-501': 'On the Gotthard axis from Zurich to Ticino and on to Milan; since the 2026 timetable also from Basel towards Hamburg.',
-  'rabde-500': 'Mainly on the Jura foot line: Basel–Biel–Lausanne and St. Gallen–Zurich–Biel–Geneva. Other services run to Ticino.',
+  'rabe-501': 'In Switzerland mainly on Zurich–Zug–Lucerne and Zurich–Chur, plus from Basel and Zurich through the Gotthard to Lugano and Chiasso. Internationally on the north–south axis between Germany, Switzerland and Italy.',
+  'rabde-500': 'Mainly on the Jura foot line: Basel–Biel–Lausanne and Rorschach–St. Gallen–Zurich–Biel–Geneva, plus Bern–Olten. It also runs between Zurich and Chiasso.',
   'rabe-502': 'The main corridor is St. Gallen–Zurich–Bern–Lausanne–Geneva, plus Basel–Zurich, Zurich–Chur and Lucerne–Zurich.',
   'rabe-511': 'Regio-Dosto mainly on the Zurich S-Bahn and as RE Wettingen–Olten–Lucerne; IR-Dosto on the Swiss Plateau, in northern Switzerland and on the axis to Chur.',
   'rabe-514': 'On the entire Zurich S-Bahn network.',

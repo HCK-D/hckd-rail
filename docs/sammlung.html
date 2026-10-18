@@ -517,9 +517,14 @@
         <div class="about" style="margin-top:36px" id="zug-text"></div>
         <section class="blk ez" id="zug-einsatz" hidden>
           <h2>Wo fährt er?</h2>
+          <div class="ez-tabs" id="ez-tabs" role="tablist" aria-label="Karte wählen" hidden>
+            <button type="button" role="tab" aria-selected="true" data-ez="ch">Schweiz</button>
+            <button type="button" role="tab" aria-selected="false" data-ez="eu">International</button>
+          </div>
           <div class="ez-wrap"><svg id="ez-map" role="img" aria-label="Karte der Schweiz mit den Einsatzstrecken"></svg></div>
           <p class="ez-txt" id="ez-txt"></p>
-          <p class="hinweis">Rot: Strecken und Gebiete laut den Angaben auf dieser Seite. Die Strecken folgen dem Bahnnetz; einzelne Züge können auch anders fahren. Kartendaten: BAV, swisstopo.</p>
+          <p class="hinweis" id="ez-hinweis-ch">Rot: Strecken und Gebiete laut den Angaben auf dieser Seite. Die Strecken folgen dem Bahnnetz; einzelne Züge können auch anders fahren. Kartendaten: BAV, swisstopo.</p>
+          <p class="hinweis" id="ez-hinweis-eu" hidden>Vereinfachte Übersicht der internationalen Strecken laut SBB; die Linien verbinden die Halte direkt. Ländergrenzen: Natural Earth.</p>
         </section>
         <div id="zug-secs"></div>
         <nav class="pager" id="zug-pager" aria-label="Weitere Fahrzeuge"></nav>
@@ -656,6 +661,7 @@
             <li>Diashow auf der Startseite: Pixabay, verwendet nach der Pixabay-Inhaltslizenz. Die Namen stehen in der Bildunterschrift.</li>
             <li>Illustrationen, Streckenmodell und Gestaltung: HCKD.</li>
             <li>Kartendaten: Bundesamt für Verkehr (BAV), Datensatz Schienennetz. Landesgrenze: swisstopo.</li>
+            <li>Ländergrenzen der internationalen Karten: Natural Earth (gemeinfrei), über das Paket world-atlas (ISC-Lizenz).</li>
             <li>Schrift: Source Sans 3 von Adobe, SIL Open Font License 1.1.</li>
           </ul>
           <h2>Fotos von Wikimedia Commons</h2>
@@ -855,6 +861,7 @@
 <script src="js/daten/quiz.js"></script>
 <script src="js/quiz.js"></script>
 <script src="js/daten/einsatz.js"></script>
+<script src="js/daten/europa.js"></script>
 <script src="js/einsatz.js"></script>
 <script src="js/abfahrten.js"></script>
 <script src="js/abc.js"></script>

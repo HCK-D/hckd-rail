@@ -398,6 +398,7 @@ body.has-cmp .footer{padding-bottom:76px}
 /* ---------- Wo fährt er? ---------- */
 .ez-wrap{max-width:820px;padding:12px;border-radius:var(--r-md);background:var(--surface);box-shadow:var(--shadow)}
 #ez-map{display:block;width:100%;height:auto;aspect-ratio:350/225}
+#ez-map.eu{aspect-ratio:18000/14847}
 .ez-land{fill:var(--map-land);stroke:var(--map-border);stroke-width:1.2;vector-effect:non-scaling-stroke}
 .ez-netz{fill:none;stroke:var(--fg-3);stroke-width:1;opacity:.35;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke}
 .ez-netz.on{opacity:.25}
@@ -408,6 +409,14 @@ body.has-cmp .footer{padding-bottom:76px}
 .ez-label{font:700 400px/1 var(--body);fill:var(--map-label);paint-order:stroke;stroke:var(--map-halo);stroke-width:130px;stroke-linejoin:round}
 .ez-label.mid{text-anchor:middle}
 .ez-label.end{text-anchor:end}
+/* switch «Schweiz | International» and the Europe map */
+.ez-tabs{display:inline-flex;gap:4px;margin:0 0 12px;padding:4px;border-radius:999px;background:var(--surface-2)}
+.ez-tabs[hidden]{display:none}
+.ez-tabs button{height:34px;padding:0 16px;border:0;border-radius:999px;background:transparent;color:var(--fg-2);font:600 14px/1 var(--body);cursor:pointer;transition:background-color .2s ease,color .2s ease}
+.ez-tabs button[aria-selected="true"]{background:var(--surface);color:var(--fg);box-shadow:var(--shadow)}
+.ez-meer{fill:color-mix(in srgb,#5AA3E0 16%,var(--surface))}
+.ez-eu-land{fill:var(--map-out);stroke:var(--map-border);stroke-width:.8;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+.ez-eu-ch{fill:var(--map-land);stroke:var(--map-border);stroke-width:1.4;stroke-linejoin:round;vector-effect:non-scaling-stroke}
 .ez-txt{margin:12px 0 0!important;color:var(--fg)!important}
 @media (max-width:600px){.ez-label{font-size:560px;stroke-width:170px}.ez-wrap{padding:6px}}
 

@@ -4,8 +4,8 @@ uebDict({
 });
 
 uebEinsatz({
-  'rabe-501': 'Sull’asse del San Gottardo da Zurigo al Ticino e fino a Milano; dall’orario 2026 anche da Basilea in direzione di Amburgo.',
-  'rabde-500': 'Soprattutto sulla linea ai piedi del Giura: Basilea–Bienne–Losanna e San Gallo–Zurigo–Bienne–Ginevra. Altri servizi portano in Ticino.',
+  'rabe-501': 'In Svizzera soprattutto su Zurigo–Zugo–Lucerna e Zurigo–Coira, oltre che da Basilea e Zurigo attraverso il San Gottardo verso Lugano e Chiasso. A livello internazionale sull’asse nord-sud tra Germania, Svizzera e Italia.',
+  'rabde-500': 'Soprattutto sulla linea ai piedi del Giura: Basilea–Bienne–Losanna e Rorschach–San Gallo–Zurigo–Bienne–Ginevra, oltre a Berna–Olten. Circola anche tra Zurigo e Chiasso.',
   'rabe-502': 'Il corridoio principale è San Gallo–Zurigo–Berna–Losanna–Ginevra, oltre a Basilea–Zurigo, Zurigo–Coira e Lucerna–Zurigo.',
   'rabe-511': 'Il Regio-Dosto soprattutto sulla S-Bahn di Zurigo e come RE Wettingen–Olten–Lucerna; l’IR-Dosto sull’Altopiano, nella Svizzera settentrionale e sull’asse verso Coira.',
   'rabe-514': 'Su tutta la rete della S-Bahn di Zurigo.',
