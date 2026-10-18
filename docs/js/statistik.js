@@ -39,18 +39,5 @@ const STATISTIK = {
   s.addEventListener('load', () => setTimeout(zaehle, 0));
   document.head.appendChild(s);
   addEventListener('hashchange', () => setTimeout(zaehle, 0));
-
-  // public total in the footer: needs «Allow adding visitor counts on your website» in the GoatCounter settings.
-  // GoatCounter caches the number for up to 4 hours; if the setting is off, nothing is shown.
-  const feld = $('#besuche');
-  if (!feld) return;
-  fetch('https://' + code + '.goatcounter.com/counter/TOTAL.json', { mode: 'cors' })
-    .then(r => r.ok ? r.json() : null)
-    .then(d => {
-      const n = d && parseInt(String(d.count).replace(/\D/g, ''), 10);
-      if (!n) return;
-      feld.textContent = tr('{n} Besuche', { n: n.toLocaleString(LOCALE) });
-      feld.hidden = false;
-    })
-    .catch(() => { /* no number, no display */ });
+  // the total number of visits is shown only in the admin window (admin.js), not in the footer
 })();
