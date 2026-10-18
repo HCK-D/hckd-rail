@@ -13,6 +13,11 @@
 .amounts{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
 .amt{height:44px;border:0;border-radius:12px;background:var(--surface-2);color:var(--fg);font:600 15px/1 var(--body);font-variant-numeric:tabular-nums;cursor:pointer;transition:background-color .2s ease,color .2s ease}
 .amt[aria-checked="true"]{background:var(--fg);color:var(--bg)}
+.amt-eigen{grid-column:1/-1;display:grid;gap:6px;margin-top:2px;font:600 13px/1.2 var(--body);color:var(--fg-2)}
+.amt-feld{display:flex;align-items:center;gap:8px;height:46px;padding:0 14px;border:2px solid var(--line);border-radius:12px;background:var(--bg)}
+.amt-feld:focus-within{border-color:var(--fg)}
+.amt-feld b{font:600 15px/1 var(--body);color:var(--fg-2)}
+.amt-feld input{flex:1;min-width:0;height:100%;border:0;background:transparent;color:var(--fg);font:600 17px/1 var(--body);font-variant-numeric:tabular-nums;outline:none}
 .bank{border-radius:16px;background:var(--bg);overflow:hidden}
 .bank-row{position:relative;display:flex;align-items:center;gap:12px;padding:12px 14px}
 .bank-row+.bank-row::before{content:"";position:absolute;top:0;left:14px;right:0;height:1px;background:var(--line)}
