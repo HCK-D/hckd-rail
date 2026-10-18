@@ -277,7 +277,8 @@ body.has-cmp .footer{padding-bottom:76px}
 .board-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 18px;border-bottom:1px solid rgba(255,255,255,.14)}
 .board-head b{font:800 19px/1.2 var(--display)}
 .board-head span{font:700 19px/1 var(--body);font-variant-numeric:tabular-nums;color:#FFD200}
-.board-scroll{overflow-x:auto}
+/* position:relative keeps hidden screen-reader labels inside the scroll box (otherwise the page gets wider than a phone) */
+.board-scroll{position:relative;overflow-x:auto}
 .board-tbl{width:100%;min-width:420px;border-collapse:collapse;font-size:16px}
 .board-tbl th{padding:9px 14px;text-align:left;font:600 11.5px/1 var(--body);letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.6)}
 .board-tbl td{padding:10px 14px;border-top:1px solid rgba(255,255,255,.1);vertical-align:middle}

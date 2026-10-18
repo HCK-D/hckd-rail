@@ -20,7 +20,7 @@
     dd.open = auf; // on small screens the list under «Entdecken» is shown right away
   });
   // a link was chosen, a click outside or Escape: close everything
-  nav.addEventListener('click', e => { if (e.target.closest('a')) zu(); });
+  nav.addEventListener('click', e => { if (e.target.closest('a, [data-donate]')) zu(); });
   document.addEventListener('click', e => {
     if (!nav.contains(e.target) && !btn.contains(e.target)) { if (schmal()) zu(); else dd.open = false; }
   });

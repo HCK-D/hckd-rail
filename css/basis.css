@@ -131,6 +131,8 @@ button{font:inherit}
 .nav-dd ul{position:absolute;top:calc(100% + 10px);left:0;z-index:40;display:grid;gap:2px;min-width:230px;margin:0;padding:8px;list-style:none;background:var(--surface);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow-lift)}
 .nav-dd ul a{display:block;padding:10px 12px;border-radius:10px;color:var(--fg);font-size:15px;text-decoration:none}
 .nav-dd ul a:hover,.nav-dd ul a:focus-visible{background:var(--surface-2)}
+.nav-spenden{display:none}
+.hclock{flex:none}
 .menu-btn{display:none;place-items:center;flex:none;width:34px;height:34px;padding:0;border:1px solid var(--line);border-radius:50%;background:transparent;color:var(--fg-2);cursor:pointer}
 .menu-btn[aria-expanded="true"]{color:var(--accent-ink);background:var(--accent-soft)}
 @media (max-width:1060px){
@@ -140,7 +142,12 @@ button{font:inherit}
   .topnav>*{flex:none}
   .topnav>a,.nav-dd>summary{justify-content:space-between;height:46px;padding:0 12px;font-size:17px;color:var(--fg)}
   .nav-dd ul{position:static;min-width:0;padding:0 0 4px 12px;border:0;box-shadow:none;background:transparent}
+  /* «Spenden» as the last menu entry, in red */
+  .topnav .nav-spenden:not([hidden]){display:flex;align-items:center;height:46px;margin-top:6px;padding:0 12px;border:0;border-radius:999px;background:var(--accent-soft);color:var(--accent-ink);font:700 17px/1 var(--body);text-align:left;cursor:pointer}
 }
+/* phones: the header is too narrow for the heart button, it is in the menu instead */
+@media (max-width:600px){.topbar .donate{display:none}}
+@media (max-width:340px){.hclock{display:none}}
 @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(215,25,32,.5)}70%{box-shadow:0 0 0 8px rgba(215,25,32,0)}100%{box-shadow:0 0 0 0 rgba(215,25,32,0)}}
 
 
