@@ -731,6 +731,37 @@
   </form>
 </div>
 
+<!-- Admin: dreimal auf das Logo unten klicken (js/admin.js) -->
+<div class="dlg-back" id="admin" hidden>
+  <div class="dlg admin-dlg" role="dialog" aria-modal="true" aria-labelledby="ad-h">
+    <button class="dlg-x" type="button" data-close aria-label="Schliessen"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    <span class="kicker">Admin</span>
+    <h2 id="ad-h">HCKD RAIL intern</h2>
+    <form class="ad-pin" id="ad-pin" autocomplete="off">
+      <label for="ad-code">Code eingeben</label>
+      <input id="ad-code" type="password" inputmode="numeric" pattern="[0-9]*" maxlength="12" autocomplete="off">
+      <button class="qz-btn" type="submit">Öffnen</button>
+      <p class="ad-msg" id="ad-pin-msg" aria-live="polite"></p>
+    </form>
+    <div class="ad-panel" id="ad-panel" hidden>
+      <div class="ad-zahl">
+        <small>Besuche insgesamt</small>
+        <b id="ad-total">–</b>
+        <span id="ad-stand">GoatCounter, bis zu 4 Stunden verzögert</span>
+        <a href="https://hckd-rail.goatcounter.com" target="_blank" rel="noopener">Ganze Statistik öffnen ↗</a>
+      </div>
+      <label class="ad-notiz-l" for="ad-notiz">Meine Notizen <small>(nur auf diesem Gerät gespeichert)</small></label>
+      <textarea id="ad-notiz" rows="7" maxlength="5000" placeholder="Ideen, Fahrzeuge, die noch fehlen, Fotos zum Anfragen …"></textarea>
+      <div class="ad-btns">
+        <button class="qz-btn" type="button" id="ad-senden">An mein Postfach senden</button>
+        <button class="qz-btn ghost" type="button" id="ad-kopieren">Kopieren</button>
+        <button class="qz-btn ghost" type="button" id="ad-sperren">Sperren</button>
+      </div>
+      <p class="ad-msg" id="ad-msg" aria-live="polite"></p>
+    </div>
+  </div>
+</div>
+
 <div class="dlg-back" id="donate" hidden>
   <div class="dlg" role="dialog" aria-modal="true" aria-labelledby="dn-h">
     <button class="dlg-x" type="button" data-close aria-label="Schliessen"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
@@ -789,4 +820,5 @@
 <script src="js/neu.js"></script>
 <script src="js/start.js"></script>
 <script src="js/menue.js"></script>
+<script src="js/admin.js"></script>
 <script src="js/app.js"></script>

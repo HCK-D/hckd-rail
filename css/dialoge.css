@@ -13,6 +13,23 @@
 .amounts{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
 .amt{height:44px;border:0;border-radius:12px;background:var(--surface-2);color:var(--fg);font:600 15px/1 var(--body);font-variant-numeric:tabular-nums;cursor:pointer;transition:background-color .2s ease,color .2s ease}
 .amt[aria-checked="true"]{background:var(--fg);color:var(--bg)}
+/* Admin window */
+.admin-dlg{width:min(520px,100%)}
+.ad-pin{display:grid;gap:10px}
+.ad-pin label,.ad-notiz-l{font:600 14px/1.2 var(--body);color:var(--fg-2)}
+.ad-pin input{height:52px;padding:0 16px;border:2px solid var(--line);border-radius:12px;background:var(--bg);color:var(--fg);font:700 24px/1 var(--body);letter-spacing:.3em;text-align:center}
+.ad-pin input:focus{border-color:var(--fg);outline:none}
+.ad-msg{margin:0;min-height:1.2em;font-size:14px;color:var(--fg-2)}
+.ad-panel{display:grid;gap:12px}
+.ad-zahl{display:grid;gap:4px;padding:18px;border-radius:16px;background:var(--surface-2);text-align:center}
+.ad-zahl small{font:600 12px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--fg-3)}
+.ad-zahl b{font:800 clamp(44px,12vw,72px)/1 var(--display);font-variant-numeric:tabular-nums;color:var(--fg)}
+.ad-zahl span{font-size:13px;color:var(--fg-3)}
+.ad-zahl a{font-size:14px;font-weight:600;color:var(--accent-ink)}
+.ad-notiz-l small{font-weight:400;color:var(--fg-3)}
+#ad-notiz{width:100%;box-sizing:border-box;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:var(--bg);color:var(--fg);font:15px/1.5 var(--body);resize:vertical}
+.ad-btns{display:flex;flex-wrap:wrap;gap:8px}
+.ad-btns .qz-btn{height:42px;font-size:15px}
 .name-zeigen{display:inline-flex;align-items:center;gap:6px;margin-top:3px;padding:6px 12px;border:1px dashed var(--fg-3);border-radius:999px;background:transparent;color:var(--fg);font:600 14px/1.2 var(--body);cursor:pointer}
 .name-zeigen:hover{border-style:solid;background:var(--surface-2)}
 .amt-eigen{grid-column:1/-1;display:grid;gap:6px;margin-top:2px;font:600 13px/1.2 var(--body);color:var(--fg-2)}
