@@ -92,10 +92,11 @@ const einsatzKarte = (() => {
 
   // labels: each place once, on the side where it hides the least of the red route and of other labels.
   // marken: [name, x, y, gebiet, ort] in drawing coordinates; rot: points along the red route
-  function beschrifte(marken, rot, [vx, vy, vw, vh]) {
+  // s: size of names and dots compared with the Swiss map (zoomed Europe maps are smaller)
+  function beschrifte(marken, rot, [vx, vy, vw, vh], s = 1) {
     const probe = svg.appendChild(el('text', { class: 'ez-label' }, 'x'));
-    const fs = parseFloat(getComputedStyle(probe).fontSize) || 400; probe.remove();
-    const boxen = [], punkteAlle = marken.filter(m => !m[3]).map(m => [m[1], m[2], m[4] ? 260 : 190]);
+    const fs = parseFloat(getComputedStyle(probe).fontSize) || 400 * s; probe.remove();
+    const boxen = [], punkteAlle = marken.filter(m => !m[3]).map(m => [m[1], m[2], (m[4] ? 260 : 190) * s]);
     const kosten = ([x0, y0, x1, y1]) => {
       const h = fs * .3; let c = 0;
       for (const [px, py] of rot) if (px > x0 - h && px < x1 + h && py > y0 - h && py < y1 + h) c++;
@@ -106,15 +107,18 @@ const einsatzKarte = (() => {
     };
     const seen = new Set();
     const ordnung = [...marken.filter(m => m[3]), ...marken.filter(m => !m[3])]; // areas first, they cannot move
-    for (const [name, x, cy, gebiet, ort] of ordnung) {
+    for (const [name, x, cy, gebiet, ort, radius] of ordnung) {
       if (seen.has(name)) continue; seen.add(name);
       const w = name.length * fs * .56, auf = fs * .75, ab = fs * .2, gap = fs * .85, ty = cy + fs * .33;
       if (gebiet) {
-        boxen.push([x - w / 2, ty - auf, x + w / 2, ty + ab]);
-        svg.appendChild(el('text', { x, y: ty, class: 'ez-label mid' }, name));
+        // name in the middle of the area, or above it when a station dot sits in the middle
+        const besetzt = radius && punkteAlle.some(([px, py]) => Math.hypot(px - x, py - cy) < radius * .5);
+        const gy = besetzt ? cy - radius - fs * .25 : ty;
+        boxen.push([x - w / 2, gy - auf, x + w / 2, gy + ab]);
+        svg.appendChild(el('text', { x, y: gy, class: 'ez-label mid' }, name));
         continue;
       }
-      svg.appendChild(el('circle', { cx: x, cy, r: ort ? 260 : 190, class: ort ? 'ez-ort' : 'ez-dot' }));
+      svg.appendChild(el('circle', { cx: x, cy, r: (ort ? 260 : 190) * s, class: ort ? 'ez-ort' : 'ez-dot' }));
       const [k, wahl] = [
         [x + gap, ty, '', [x + gap, ty - auf, x + gap + w, ty + ab]],
         [x - gap, ty, ' end', [x - gap - w, ty - auf, x - gap, ty + ab]],
@@ -130,10 +134,10 @@ const einsatzKarte = (() => {
       svg.appendChild(el('text', { x: wahl[0], y: wahl[1], class: 'ez-label' + wahl[2] }, name));
     }
   }
-  // points every 150 units along a line, for the label placement
-  function punkte(pts, ziel) {
+  // points every 150 units (times s) along a line, for the label placement
+  function punkte(pts, ziel, s = 1) {
     pts.forEach((b, j) => {
-      const a = pts[j - 1], n = a ? Math.ceil(Math.hypot(b[0] - a[0], b[1] - a[1]) / 150) : 1;
+      const a = pts[j - 1], n = a ? Math.ceil(Math.hypot(b[0] - a[0], b[1] - a[1]) / (150 * s)) : 1;
       for (let t = 1; t <= n; t++) ziel.push(a ? [a[0] + (b[0] - a[0]) * t / n, a[1] + (b[1] - a[1]) * t / n] : b);
     });
   }
@@ -141,6 +145,7 @@ const einsatzKarte = (() => {
   function zeigeSchweiz(e) {
     if (!G) baue();
     svg.setAttribute('viewBox', G.vb.join(' '));
+    svg.style.removeProperty('--ez-s'); svg.style.aspectRatio = '';
     svg.setAttribute('aria-label', tr('Karte der Schweiz mit den Einsatzstrecken'));
     svg.appendChild(el('path', { d: G.land, class: 'ez-land' }));
     svg.appendChild(el('path', { d: G.netz, class: e.netz ? 'ez-netz on' : 'ez-netz' }));
@@ -149,7 +154,7 @@ const einsatzKarte = (() => {
     for (const [name, r, label] of e.gebiete || []) {
       const n = node(name); if (!n) continue;
       svg.appendChild(el('circle', { cx: n[1], cy: G.flip(n[2]), r: r * KM, class: 'ez-area' }));
-      marken.push([label ? tr(label) : name, n[1], n[2], true]);
+      marken.push([label ? tr(label) : name, n[1], n[2], true, false, r * KM]);
     }
     const ids = new Set();
     for (const list of e.strecken || []) {
@@ -166,27 +171,38 @@ const einsatzKarte = (() => {
     }
     const rot = [];
     for (const s of e.netz ? G.segs.filter(s => s.sbb) : [...ids].map(i => G.segs[i])) punkte(s.pts.map(([x, y]) => [x, G.flip(y)]), rot);
-    beschrifte(marken.map(([n, x, y, g, o]) => [n, x, G.flip(y), g, o]), rot, G.vb);
+    beschrifte(marken.map(([n, x, y, g, o, r]) => [n, x, G.flip(y), g, o, r]), rot, G.vb);
   }
 
   // overview of the international routes: straight lines from stop to stop, as on the SBB maps
   function zeigeEuropa(I) {
     const E = EUROPA, P = ([lon, lat]) => [(lon - E.lon0) * E.c * E.k, (E.lat0 - lat) * E.k];
-    svg.setAttribute('viewBox', `0 0 ${E.b} ${E.h}`);
-    svg.setAttribute('aria-label', tr('Karte Europas mit den internationalen Strecken'));
-    svg.appendChild(el('rect', { x: 0, y: 0, width: E.b, height: E.h, class: 'ez-meer' }));
-    svg.appendChild(el('path', { d: E.land, class: 'ez-eu-land' }));
-    svg.appendChild(el('path', { d: E.ch, class: 'ez-eu-ch' }));
-    const linien = [], marken = [], rot = [];
+    const linien = [], marken = [];
     for (const list of I.strecken) {
       const pts = list.filter(n => STAEDTE[n]).map(n => P(STAEDTE[n]));
       if (pts.length < 2) continue;
-      linien.push('M' + pts.map(([x, y]) => Math.round(x) + ' ' + Math.round(y)).join('L'));
-      punkte(pts, rot);
+      linien.push(pts);
       for (const n of list) if (STAEDTE[n] && STAEDTE[n][2] !== false) marken.push([n, ...P(STAEDTE[n]), false, false]);
     }
-    svg.appendChild(el('path', { d: linien.join(''), class: 'ez-hl' }));
-    beschrifte(marken, rot, [0, 0, E.b, E.h]);
+    // frame: just the routes with some room around them, between square and 16:10, inside the drawn area
+    const xs = linien.flat().map(p => p[0]), ys = linien.flat().map(p => p[1]);
+    let x0 = Math.min(...xs), x1 = Math.max(...xs), y0 = Math.min(...ys), y1 = Math.max(...ys);
+    const rand = Math.max(x1 - x0, y1 - y0) * .1 + 1600;
+    x0 -= rand; x1 += rand; y0 -= rand; y1 += rand;
+    if ((x1 - x0) / (y1 - y0) < 1) { const d = ((y1 - y0) - (x1 - x0)) / 2; x0 -= d; x1 += d; }
+    if ((x1 - x0) / (y1 - y0) > 1.6) { const d = ((x1 - x0) / 1.6 - (y1 - y0)) / 2; y0 -= d; y1 += d; }
+    const rein = (a, b, max) => { const w = Math.min(b - a, max); a = Math.max(0, Math.min(a, max - w)); return [a, a + w]; };
+    [x0, x1] = rein(x0, x1, E.b); [y0, y1] = rein(y0, y1, E.h);
+    const vb = [x0, y0, x1 - x0, y1 - y0].map(Math.round), s = vb[2] / 18000;
+    svg.setAttribute('viewBox', vb.join(' '));
+    svg.style.setProperty('--ez-s', s.toFixed(3)); svg.style.aspectRatio = vb[2] + ' / ' + vb[3];
+    svg.setAttribute('aria-label', tr('Karte Europas mit den internationalen Strecken'));
+    svg.appendChild(el('rect', { x: vb[0], y: vb[1], width: vb[2], height: vb[3], class: 'ez-meer' }));
+    svg.appendChild(el('path', { d: E.land, class: 'ez-eu-land' }));
+    svg.appendChild(el('path', { d: E.ch, class: 'ez-eu-ch' }));
+    svg.appendChild(el('path', { d: linien.map(pts => 'M' + pts.map(([x, y]) => Math.round(x) + ' ' + Math.round(y)).join('L')).join(''), class: 'ez-hl' }));
+    const rot = []; linien.forEach(pts => punkte(pts, rot, s));
+    beschrifte(marken, rot, vb, s);
   }
 
   // switch «Schweiz | International» above the map, only for vehicles with an international map

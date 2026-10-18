@@ -871,7 +871,9 @@ uebDict({
   'Karte Europas mit den internationalen Strecken': 'Map of Europe with the international routes',
   'Vereinfachte Übersicht der internationalen Strecken laut SBB; die Linien verbinden die Halte direkt. Ländergrenzen: Natural Earth.': 'Simplified overview of the international routes according to SBB; the lines connect the stops directly. Borders: Natural Earth.',
   'International von Hamburg und Bremen über Hannover, Frankfurt und Basel durch die Schweiz bis Mailand und weiter nach Venedig, Florenz und Livorno.': 'Internationally from Hamburg and Bremen via Hanover, Frankfurt and Basel, through Switzerland to Milan and on to Venice, Florence and Livorno.',
-  'Ländergrenzen der internationalen Karten: Natural Earth (gemeinfrei), über das Paket world-atlas (ISC-Lizenz).': 'Borders of the international maps: Natural Earth (public domain), via the world-atlas package (ISC licence).'
+  'Ländergrenzen der internationalen Karten: Natural Earth (gemeinfrei), über das Paket world-atlas (ISC-Lizenz).': 'Borders of the international maps: Natural Earth (public domain), via the world-atlas package (ISC licence).',
+  'International von Genf, Basel und Bern über Brig und den Simplon nach Mailand sowie von Zürich nach München.': 'Internationally from Geneva, Basel and Bern via Brig and the Simplon to Milan, and from Zurich to Munich.',
+  'Als EuroCity in Richtung Amsterdam, Hamburg, Berlin und Wien, dazu bis Graz und Jarosław in Polen.': 'As EuroCity towards Amsterdam, Hamburg, Berlin and Vienna, and as far as Graz and Jarosław in Poland.'
 });
 
 /* ---- 20-personenverkehr.js ---- */
@@ -2029,8 +2031,8 @@ uebDict({
 uebEinsatz({
   'rabe-501': 'In Switzerland mainly on Zurich–Zug–Lucerne and Zurich–Chur, plus from Basel and Zurich through the Gotthard to Lugano and Chiasso. Internationally on the north–south axis between Germany, Switzerland and Italy.',
   'rabde-500': 'Mainly on the Jura foot line: Basel–Biel–Lausanne and Rorschach–St. Gallen–Zurich–Biel–Geneva, plus Bern–Olten. It also runs between Zurich and Chiasso.',
-  'rabe-502': 'The main corridor is St. Gallen–Zurich–Bern–Lausanne–Geneva, plus Basel–Zurich, Zurich–Chur and Lucerne–Zurich.',
-  'rabe-511': 'Regio-Dosto mainly on the Zurich S-Bahn and as RE Wettingen–Olten–Lucerne; IR-Dosto on the Swiss Plateau, in northern Switzerland and on the axis to Chur.',
+  'rabe-502': 'The main line is St. Gallen–Zurich–Bern–Lausanne–Geneva. Also Basel–Zurich, St. Gallen–Chur, Zurich–Chur, Lucerne–Zurich, Lucerne–Bern, Basel–Bern–Interlaken/Brig and Basel–Lugano.',
+  'rabe-511': 'As Regio-Dosto mainly on the Zurich S-Bahn and around Lausanne, as IR-Dosto in the Zurich/Mittelland region, in western and northern Switzerland and between Zurich and Chur.',
   'rabe-514': 'On the entire Zurich S-Bahn network.',
   'rabe-523': 'As S-Bahn in the cantons of Aargau, Solothurn, Lucerne, Basel, Neuchâtel, Fribourg and Vaud.',
   'rbde-560': 'At SBB on S-Bahn lines in the cantons of Aargau, Lucerne, Neuchâtel and Vaud. In Valais, RegionAlps runs its own Domino between St-Gingolph and Brig.',
@@ -2045,7 +2047,13 @@ uebEinsatz({
   'lrz-18': 'Bases of the two series: Geneva, Melide and Brig, plus Zurich, Winterthur and Bern. From there the trains respond to incidents on the network.',
   'kirow-krc-1100': 'Anywhere on the SBB standard-gauge network, mainly for installing temporary bridges.',
   'am-843': 'In shunting and local delivery work and for engineering trains throughout Switzerland.',
-  'tm-234': 'On construction sites across the network for track, overhead line and signal maintenance.'
+  'tm-234': 'On construction sites across the network for track, overhead line and signal maintenance.',
+  'rabe-512': 'In the Zurich/Mittelland region, in western and northern Switzerland and between Zurich and Chur.',
+  're-450': 'On the Zurich S-Bahn, among others as far as Schaffhausen, Zug and Glarus.',
+  'rabe-520': 'In the Seetal between Lenzburg and Lucerne and in the Lucerne region as far as Arth-Goldau and Brunnen.',
+  'rabe-503': 'Mainly on Zurich–Rorschach, Basel–Brig and Geneva–Brig. Internationally on the north–south axis to Germany and Italy.',
+  'ic2000': 'Mainly on Romanshorn–Zurich–Bern–Brig/Interlaken, Basel–Bern–Brig/Interlaken, Geneva–Brig, Geneva–Bern–Lucerne, Zurich–Konstanz and Zurich–Chur.',
+  'ew-iv': 'Hauled by Re 460 mainly on Geneva–Brig, Basel–Lugano, Zurich–Konstanz, Zurich–Baden–Olten–Bern and Zurich–Schaffhausen. Also international as EuroCity.'
 });
 
 /* ---- 30-quiz.js ---- */

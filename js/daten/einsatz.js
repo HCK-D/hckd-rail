@@ -21,7 +21,7 @@
    Payerne, Nyon, Vevey, Aigle, Monthey, St-Maurice, Mendrisio, Chiasso
    ===================================================================== */
 // Bahnhöfe, die nicht in der Liste oben stehen: Name -> Schweizer Koordinaten (LV95)
-const BAHNHOF_EXTRA = { 'Rorschach': [2754815, 1260640] };
+const BAHNHOF_EXTRA = { 'Rorschach': [2754815, 1260640], 'Interlaken Ost': [2632944, 1171143], 'Brunnen': [2688715, 1205543] };
 const GOTTHARD =['Basel SBB', 'Olten', 'Arth-Goldau', 'Erstfeld', 'Bellinzona', 'Chiasso'];
 const LOETSCHBERG = ['Basel SBB', 'Olten', 'Bern', 'Spiez', 'Visp', 'Brig'];
 const EINSATZ = {
@@ -31,12 +31,38 @@ const EINSATZ = {
     text: 'In der Schweiz vor allem auf Zürich–Zug–Luzern und Zürich–Chur, dazu von Basel und Zürich durch den Gotthard nach Lugano und Chiasso. International auf der Nord-Süd-Achse zwischen Deutschland, der Schweiz und Italien.' },
   'rabde-500': { strecken: [['Basel SBB', 'Delémont', 'Biel/Bienne', 'Neuchâtel', 'Yverdon-les-Bains', 'Lausanne', 'Genève', 'Genève-Aéroport'], ['Rorschach', 'St. Gallen', 'Winterthur', 'Zürich HB', 'Aarau', 'Olten', 'Solothurn', 'Biel/Bienne'], ['Bern', 'Olten'], ['Zürich HB', 'Zug', 'Arth-Goldau', 'Erstfeld', 'Bellinzona', 'Lugano', 'Chiasso']],
     text: 'Vor allem auf der Jurasüdfusslinie: Basel–Biel–Lausanne und Rorschach–St. Gallen–Zürich–Biel–Genève, dazu Bern–Olten. Zudem fährt er zwischen Zürich und Chiasso.' },
-  'rabe-502': { strecken: [['St. Gallen', 'Winterthur', 'Zürich HB', 'Olten', 'Bern', 'Fribourg/Freiburg', 'Lausanne', 'Genève'], ['Basel SBB', 'Zürich HB'], ['Zürich HB', 'Sargans', 'Chur'], ['Luzern', 'Zug', 'Zürich HB']],
-    text: 'Wichtigster Korridor ist St. Gallen–Zürich–Bern–Lausanne–Genève, dazu Basel–Zürich, Zürich–Chur und Luzern–Zürich.' },
-  'rabe-511': { strecken: [['Baden', 'Aarau', 'Olten', 'Luzern'], ['Zürich HB', 'Sargans', 'Chur']], gebiete: [['Zürich HB', 24, 'S-Bahn Zürich']],
-    text: 'Regio-Dosto vor allem bei der S-Bahn Zürich und als RE Wettingen–Olten–Luzern; IR-Dosto im Mittelland, in der Nordschweiz und auf der Achse nach Chur.' },
-  'rabe-514': { gebiete: [['Zürich HB', 24, 'S-Bahn Zürich']],
+  // die folgenden Personenzüge ebenfalls nach den Einsatzkarten auf sbb.ch («Unsere Züge», Stand Oktober 2026)
+  'rabe-502': { strecken: [['St. Gallen', 'Winterthur', 'Zürich HB', 'Aarau', 'Olten', 'Bern', 'Fribourg/Freiburg', 'Lausanne', 'Genève', 'Genève-Aéroport'], ['Rorschach', 'St. Gallen'], ['Rorschach', 'Buchs SG', 'Sargans', 'Chur'],
+      ['Basel SBB', 'Zürich HB'], ['Zürich HB', 'Sargans', 'Chur'], ['Zürich HB', 'Zug', 'Luzern'], ['Bern', 'Olten', 'Luzern'], ['Basel SBB', 'Olten', 'Bern', 'Spiez', 'Interlaken Ost'], ['Spiez', 'Brig'],
+      ['Basel SBB', 'Olten', 'Luzern', 'Arth-Goldau', 'Erstfeld', 'Bellinzona', 'Lugano', 'Chiasso'], ['Zug', 'Arth-Goldau'], ['Bellinzona', 'Locarno']],
+    text: 'Hauptlinie ist St. Gallen–Zürich–Bern–Lausanne–Genève. Dazu Basel–Zürich, St. Gallen–Chur, Zürich–Chur, Luzern–Zürich, Luzern–Bern, Basel–Bern–Interlaken/Brig und Basel–Lugano.' },
+  'rabe-511': { gebiete: [['Zürich HB', 20, 'S-Bahn Zürich']],
+    strecken: [['Basel SBB', 'Olten', 'Aarau', 'Zürich HB'], ['Basel SBB', 'Zürich HB'], ['Olten', 'Solothurn', 'Biel/Bienne', 'Yverdon-les-Bains', 'Lausanne', 'Genève', 'Genève-Aéroport'], ['Bern', 'Olten'],
+      ['Fribourg/Freiburg', 'Lausanne'], ['Lausanne', 'Martigny', 'Sion'], ['Zürich HB', 'Winterthur', 'St. Gallen', 'Rorschach'], ['Winterthur', 'Frauenfeld', 'Romanshorn'], ['Winterthur', 'Wil SG'],
+      ['Zürich HB', 'Schaffhausen'], ['Zürich HB', 'Zug', 'Luzern'], ['Zürich HB', 'Sargans', 'Chur']],
+    text: 'Als Regio-Dosto vor allem bei der S-Bahn Zürich und im Raum Lausanne, als IR-Dosto in der Region Zürich/Mittelland, in der West- und Nordschweiz und zwischen Zürich und Chur.' },
+  'rabe-512': { strecken: [['Basel SBB', 'Olten', 'Aarau', 'Zürich HB'], ['Basel SBB', 'Zürich HB'], ['Olten', 'Solothurn', 'Biel/Bienne', 'Yverdon-les-Bains', 'Lausanne', 'Genève', 'Genève-Aéroport'], ['Bern', 'Olten'],
+      ['Lausanne', 'Martigny', 'Sion'], ['Zürich HB', 'Winterthur', 'St. Gallen', 'Rorschach'], ['Winterthur', 'Frauenfeld', 'Romanshorn'], ['Zürich HB', 'Schaffhausen'], ['Zürich HB', 'Zug', 'Luzern'], ['Zürich HB', 'Sargans', 'Chur']],
+    text: 'In der Region Zürich/Mittelland, in der West- und Nordschweiz und zwischen Zürich und Chur.' },
+  'rabe-514': { gebiete: [['Zürich HB', 20, 'S-Bahn Zürich']],
+    strecken: [['Zürich HB', 'Aarau', 'Olten'], ['Zürich HB', 'Baden'], ['Zürich HB', 'Schaffhausen'], ['Zürich HB', 'Winterthur'], ['Zürich HB', 'Zug'], ['Zürich HB', 'Rapperswil SG', 'Ziegelbrücke']],
     text: 'Auf dem ganzen Netz der Zürcher S-Bahn.' },
+  're-450': { gebiete: [['Zürich HB', 20, 'S-Bahn Zürich']],
+    strecken: [['Zürich HB', 'Baden'], ['Zürich HB', 'Schaffhausen'], ['Zürich HB', 'Winterthur'], ['Zürich HB', 'Zug'], ['Zürich HB', 'Ziegelbrücke', 'Glarus']],
+    text: 'Bei der S-Bahn Zürich, unter anderem bis Schaffhausen, Zug und Glarus.' },
+  'rabe-520': { strecken: [['Lenzburg', 'Luzern'], ['Luzern', 'Arth-Goldau', 'Brunnen']],
+    text: 'Im Seetal zwischen Lenzburg und Luzern sowie in der Region Luzern bis Arth-Goldau und Brunnen.' },
+  'rabe-503': { strecken: [['Basel SBB', 'Olten', 'Bern', 'Thun', 'Spiez', 'Brig'], ['Genève-Aéroport', 'Genève', 'Lausanne', 'Montreux', 'Sion', 'Visp', 'Brig'], ['Bern', 'Olten', 'Zürich HB'], ['Zürich HB', 'Winterthur', 'St. Gallen', 'Rorschach']],
+    international: 'astoro',
+    text: 'Vor allem auf Zürich–Rorschach, Basel–Brig und Genève–Brig. International auf der Nord-Süd-Achse nach Deutschland und Italien.' },
+  'ic2000': { strecken: [['Romanshorn', 'Frauenfeld', 'Winterthur', 'Zürich HB', 'Aarau', 'Olten', 'Bern', 'Thun', 'Spiez', 'Interlaken Ost'], ['Spiez', 'Brig'], ['Kreuzlingen', 'Frauenfeld'], ['Basel SBB', 'Olten'], ['Basel SBB', 'Zürich HB'],
+      ['Genève-Aéroport', 'Genève', 'Lausanne', 'Fribourg/Freiburg', 'Bern', 'Olten', 'Luzern'], ['Lausanne', 'Montreux', 'Sion', 'Visp', 'Brig'], ['Zürich HB', 'Sargans', 'Chur'], ['Zürich HB', 'Zug', 'Luzern']],
+    text: 'Vor allem auf Romanshorn–Zürich–Bern–Brig/Interlaken, Basel–Bern–Brig/Interlaken, Genève–Brig, Genève–Bern–Luzern, Zürich–Konstanz und Zürich–Chur.' },
+  'ew-iv': { strecken: [['Genève-Aéroport', 'Genève', 'Lausanne', 'Yverdon-les-Bains', 'Neuchâtel'], ['Lausanne', 'Fribourg/Freiburg', 'Bern', 'Olten', 'Baden', 'Zürich HB'], ['Lausanne', 'Montreux', 'Sion', 'Visp', 'Brig'],
+      ['Bern', 'Thun', 'Spiez', 'Interlaken Ost'], ['Spiez', 'Brig'], ['Bern', 'Luzern'], ['Basel SBB', 'Olten', 'Luzern', 'Arth-Goldau', 'Erstfeld', 'Bellinzona', 'Lugano'], ['Basel SBB', 'Zürich HB'],
+      ['Zürich HB', 'Schaffhausen'], ['Zürich HB', 'Winterthur', 'Frauenfeld', 'Kreuzlingen'], ['Frauenfeld', 'Romanshorn'], ['Zürich HB', 'Zug', 'Arth-Goldau'], ['Zürich HB', 'Sargans', 'Chur'], ['Sargans', 'Buchs SG']],
+    international: 'eurocity',
+    text: 'Mit Re 460 vor allem auf Genève–Brig, Basel–Lugano, Zürich–Konstanz, Zürich–Baden–Olten–Bern und Zürich–Schaffhausen. Als EuroCity auch international unterwegs.' },
   'rabe-523': { gebiete: [['Aarau', 14, 'Aargau'], ['Solothurn', 12, 'Solothurn'], ['Luzern', 14, 'Luzern'], ['Basel SBB', 12, 'Basel'], ['Neuchâtel', 12, 'Neuenburg'], ['Fribourg/Freiburg', 14, 'Freiburg'], ['Lausanne', 18, 'Waadt']],
     text: 'Als S-Bahn in den Kantonen Aargau, Solothurn, Luzern, Basel, Neuenburg, Freiburg und Waadt.' },
   'rbde-560': { gebiete: [['Aarau', 14, 'Aargau'], ['Luzern', 14, 'Luzern'], ['Neuchâtel', 12, 'Neuenburg'], ['Lausanne', 18, 'Waadt']], strecken: [['Monthey', 'St-Maurice', 'Martigny', 'Sion', 'Visp', 'Brig']],
@@ -68,14 +94,26 @@ const STAEDTE = {
   'Mannheim': [8.469, 49.479], 'Karlsruhe': [8.402, 48.994], 'Freiburg': [7.841, 47.998], 'Basel': [7.589, 47.547],
   'Zürich': [8.540, 47.378], 'Luzern': [8.310, 47.050], 'Arth-Goldau': [8.548, 47.049, false], 'Lugano': [8.947, 46.005],
   'Milano': [9.204, 45.486], 'Verona': [10.983, 45.429], 'Venezia': [12.321, 45.441], 'Bologna': [11.343, 44.506],
-  'Firenze': [11.248, 43.776], 'Genova': [8.921, 44.418], 'Livorno': [10.334, 43.553]
+  'Firenze': [11.248, 43.776], 'Genova': [8.921, 44.418], 'Livorno': [10.334, 43.553],
+  'Bern': [7.439, 46.949], 'Genève': [6.142, 46.210], 'Lausanne': [6.629, 46.517], 'Brig': [7.988, 46.319],
+  'St. Gallen': [9.369, 47.423, false], 'Lindau': [9.680, 47.550, false], 'München': [11.558, 48.140],
+  'Amsterdam': [4.900, 52.379], 'Utrecht': [5.110, 52.089], 'Düsseldorf': [6.794, 51.220], 'Köln': [6.959, 50.943],
+  'Mainz': [8.258, 50.001], 'Berlin': [13.369, 52.525], 'Leipzig': [12.383, 51.345], 'Singen': [8.840, 47.759],
+  'Buchs SG': [9.472, 47.169, false], 'Innsbruck': [11.401, 47.263], 'Salzburg': [13.046, 47.813, false],
+  'Wien': [16.376, 48.185], 'Graz': [15.417, 47.072], 'Ostrava': [18.270, 49.840, false], 'Kraków': [19.945, 50.068, false],
+  'Jarosław': [22.680, 50.010]
 };
 const INTERNATIONAL = {
   // nach der Einsatzkarte Europa auf sbb.ch, Stand Oktober 2026
   giruno: { strecken: [['Hamburg', 'Hannover', 'Frankfurt', 'Mannheim', 'Karlsruhe', 'Freiburg', 'Basel'], ['Bremen', 'Hannover'],
     ['Basel', 'Zürich', 'Arth-Goldau'], ['Basel', 'Luzern', 'Arth-Goldau'], ['Arth-Goldau', 'Lugano', 'Milano'],
     ['Milano', 'Verona', 'Venezia'], ['Milano', 'Bologna', 'Firenze'], ['Milano', 'Genova', 'Livorno']],
-    text: 'International von Hamburg und Bremen über Hannover, Frankfurt und Basel durch die Schweiz bis Mailand und weiter nach Venedig, Florenz und Livorno.' }
+    text: 'International von Hamburg und Bremen über Hannover, Frankfurt und Basel durch die Schweiz bis Mailand und weiter nach Venedig, Florenz und Livorno.' },
+  astoro: { strecken: [['Basel', 'Bern', 'Brig', 'Milano'], ['Genève', 'Lausanne', 'Brig'], ['Zürich', 'Bern'], ['Zürich', 'St. Gallen', 'Lindau', 'München']],
+    text: 'International von Genf, Basel und Bern über Brig und den Simplon nach Mailand sowie von Zürich nach München.' },
+  eurocity: { strecken: [['Amsterdam', 'Utrecht', 'Düsseldorf', 'Köln', 'Mainz', 'Mannheim', 'Karlsruhe', 'Freiburg', 'Basel'], ['Hamburg', 'Hannover', 'Frankfurt', 'Mannheim'], ['Bremen', 'Hannover'],
+    ['Berlin', 'Leipzig', 'Frankfurt'], ['Basel', 'Zürich'], ['Basel', 'Bern', 'Lausanne', 'Genève'], ['Zürich', 'Singen'], ['Zürich', 'Buchs SG', 'Innsbruck', 'Salzburg', 'Wien', 'Ostrava', 'Kraków', 'Jarosław'], ['Salzburg', 'Graz']],
+    text: 'Als EuroCity in Richtung Amsterdam, Hamburg, Berlin und Wien, dazu bis Graz und Jarosław in Polen.' }
 };
 
 // infrastructure wagons: no fixed routes, they go wherever a construction site is

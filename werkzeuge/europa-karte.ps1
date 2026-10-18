@@ -11,8 +11,8 @@ Add-Type -ReferencedAssemblies System.Web.Extensions, System.Core -TypeDefinitio
 using System; using System.Collections.Generic; using System.Linq; using System.Text; using System.Globalization;
 using System.Web.Script.Serialization;
 public static class EuropaKarte {
-  // map frame: longitude -1..21, latitude 42.6..54.6 (Hamburg to Livorno, Paris edge to Vienna)
-  public const double LonMin = -1, LonMax = 21, LatMin = 42.6, LatMax = 54.6, LatMitte = 48.6;
+  // map frame: longitude -1..24, latitude 42.6..54.6 (Amsterdam to Jaroslaw, Hamburg to Livorno)
+  public const double LonMin = -1, LonMax = 24, LatMin = 42.6, LatMax = 54.6, LatMitte = 48.6;
   public static double C = Math.Cos(LatMitte * Math.PI / 180), K, W, H;
   static double[] P(double lon, double lat) { return new[] { (lon - LonMin) * C * K, (LatMax - lat) * K }; }
 

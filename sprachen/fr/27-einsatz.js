@@ -6,8 +6,8 @@ uebDict({
 uebEinsatz({
   'rabe-501': 'En Suisse surtout sur Zurich–Zoug–Lucerne et Zurich–Coire, ainsi que de Bâle et de Zurich par le Gothard vers Lugano et Chiasso. À l’international sur l’axe nord-sud entre l’Allemagne, la Suisse et l’Italie.',
   'rabde-500': 'Surtout sur la ligne du pied du Jura : Bâle–Bienne–Lausanne et Rorschach–Saint-Gall–Zurich–Bienne–Genève, ainsi que Berne–Olten. Il circule aussi entre Zurich et Chiasso.',
-  'rabe-502': 'Le principal corridor est Saint-Gall–Zurich–Berne–Lausanne–Genève, avec Bâle–Zurich, Zurich–Coire et Lucerne–Zurich.',
-  'rabe-511': 'Le Regio-Dosto surtout sur le RER zurichois et comme RE Wettingen–Olten–Lucerne ; l’IR-Dosto sur le Plateau, en Suisse du Nord et sur l’axe vers Coire.',
+  'rabe-502': 'La ligne principale est Saint-Gall–Zurich–Berne–Lausanne–Genève. S’y ajoutent Bâle–Zurich, Saint-Gall–Coire, Zurich–Coire, Lucerne–Zurich, Lucerne–Berne, Bâle–Berne–Interlaken/Brigue et Bâle–Lugano.',
+  'rabe-511': 'Comme Regio-Dosto surtout sur le RER zurichois et dans la région de Lausanne, comme IR-Dosto dans la région Zurich/Plateau, en Suisse occidentale et du Nord et entre Zurich et Coire.',
   'rabe-514': 'Sur tout le réseau du RER zurichois.',
   'rabe-523': 'Comme RER dans les cantons d’Argovie, de Soleure, de Lucerne, de Bâle, de Neuchâtel, de Fribourg et de Vaud.',
   'rbde-560': 'Aux CFF sur des lignes RER dans les cantons d’Argovie, de Lucerne, de Neuchâtel et de Vaud. En Valais, RegionAlps circule avec ses propres Domino entre St-Gingolph et Brigue.',
@@ -22,5 +22,11 @@ uebEinsatz({
   'lrz-18': 'Sites des deux séries : Genève, Melide et Brigue, ainsi que Zurich, Winterthour et Berne. Les trains partent de là vers les événements sur le réseau.',
   'kirow-krc-1100': 'Librement dans tout le réseau CFF à voie normale, surtout pour la pose de ponts provisoires.',
   'am-843': 'En manœuvre et en desserte ainsi que pour les trains de travaux dans toute la Suisse.',
-  'tm-234': 'Sur les chantiers de tout le réseau pour l’entretien de la voie, de la caténaire et de la signalisation.'
+  'tm-234': 'Sur les chantiers de tout le réseau pour l’entretien de la voie, de la caténaire et de la signalisation.',
+  'rabe-512': 'Dans la région Zurich/Plateau, en Suisse occidentale et du Nord et entre Zurich et Coire.',
+  're-450': 'Sur le RER zurichois, entre autres jusqu’à Schaffhouse, Zoug et Glaris.',
+  'rabe-520': 'Dans le Seetal entre Lenzbourg et Lucerne ainsi que dans la région de Lucerne jusqu’à Arth-Goldau et Brunnen.',
+  'rabe-503': 'Surtout sur Zurich–Rorschach, Bâle–Brigue et Genève–Brigue. À l’international sur l’axe nord-sud vers l’Allemagne et l’Italie.',
+  'ic2000': 'Surtout sur Romanshorn–Zurich–Berne–Brigue/Interlaken, Bâle–Berne–Brigue/Interlaken, Genève–Brigue, Genève–Berne–Lucerne, Zurich–Constance et Zurich–Coire.',
+  'ew-iv': 'Avec la Re 460 surtout sur Genève–Brigue, Bâle–Lugano, Zurich–Constance, Zurich–Baden–Olten–Berne et Zurich–Schaffhouse. Aussi à l’international comme EuroCity.'
 });
