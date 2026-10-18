@@ -502,6 +502,7 @@ uebDict({
   'Kartendaten: Bundesamt für Verkehr (BAV), Datensatz Schienennetz. Landesgrenze: swisstopo.': 'Données cartographiques : Office fédéral des transports (OFT), jeu de données du réseau ferré. Frontière nationale : swisstopo.',
   'Schrift: Source Sans 3 von Adobe, SIL Open Font License 1.1.': 'Police : Source Sans 3 d’Adobe, SIL Open Font License 1.1.',
   'Fotos von Wikimedia Commons': 'Photos de Wikimedia Commons',
+  'Bildnachweis der Fotos': 'Crédits des photos',
   'Stand: Oktober 2026': 'État : octobre 2026',
 
   // ---------- protection des données ----------
@@ -860,7 +861,8 @@ uebDict({
   'Selbst mithelfen': 'Aider toi aussi',
   'Du fotografierst auch Züge oder hast einen Fehler entdeckt? Jede Hilfe macht RailBase besser. Schick uns deine Fotos mit deinem Namen. Wir zeigen sie gerne auf der Website und nennen dich hier und unter dem Bild.': 'Tu photographies aussi des trains ou tu as trouvé une erreur ? Chaque aide rend RailBase meilleur. Envoie-nous tes photos avec ton nom. Nous les montrerons volontiers sur le site et te citerons ici et sous l’image.',
   'Neue Seite «Danke»: ein Dankeschön an die Bahnfotografen, die Fotos für RailBase gemacht haben.': 'Nouvelle page «Merci» : un grand merci aux photographes ferroviaires qui ont pris des photos pour RailBase.',
-  'Instagram von Alessandro Antonazzo (öffnet in neuem Fenster)': 'Instagram d’Alessandro Antonazzo (s’ouvre dans une nouvelle fenêtre)'
+  'Instagram von Alessandro Antonazzo (öffnet in neuem Fenster)': 'Instagram d’Alessandro Antonazzo (s’ouvre dans une nouvelle fenêtre)',
+  'Instagram von Quentin Rossier (öffnet in neuem Fenster)': 'Instagram de Quentin Rossier (s’ouvre dans une nouvelle fenêtre)'
 });
 
 /* ---- 12-international.js ---- */

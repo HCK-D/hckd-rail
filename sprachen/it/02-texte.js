@@ -105,6 +105,7 @@ uebDict({
   'Kartendaten: Bundesamt für Verkehr (BAV), Datensatz Schienennetz. Landesgrenze: swisstopo.': 'Dati cartografici: Ufficio federale dei trasporti (UFT), set di dati della rete ferroviaria. Confine nazionale: swisstopo.',
   'Schrift: Source Sans 3 von Adobe, SIL Open Font License 1.1.': 'Carattere: Source Sans 3 di Adobe, SIL Open Font License 1.1.',
   'Fotos von Wikimedia Commons': 'Foto di Wikimedia Commons',
+  'Bildnachweis der Fotos': 'Crediti delle foto',
   'Stand: Oktober 2026': 'Stato: ottobre 2026',
 
   // ---------- protezione dei dati ----------

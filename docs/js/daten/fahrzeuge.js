@@ -448,7 +448,7 @@ const ZUEGE = [
     bilder: [
       { src: 'bilder/re420-1.jpg', titel: '«Re 10/10»: Re 620 mit Re 420 vor einem Güterzug' },
       { src: 'bilder/re420-2.jpg', titel: 'Re 420 331-1 im Herbst' },
-      { src: 'bilder/re420-3.jpg', titel: 'Re 420 von WRS mit Holzzug' },
+      { src: 'bilder/re420-3.jpg', titel: 'Re 420 von WRS mit Holzzug', foto: 'Quentin Rossier' },
       { src: 'bilder/slides/slide-07.jpg', titel: 'Re 420 von SBB Cargo mit Güterzug' },
       { src: 'bilder/re420-4.jpg', titel: 'Re 420 mit gelben Güterwagen in den Reben am See' },
       { src: 'bilder/re420-5.jpg', titel: 'Re 420 mit Güterzug zwischen Reben und Feldern' },
@@ -471,7 +471,7 @@ const ZUEGE = [
       { src: 'bilder/re620-2.jpg', titel: 'Re 620 in Cargo-Farben mit Kesselwagen am See' },
       { src: 'bilder/re620-1.jpg', titel: '«Re 10/10»: Re 620 mit Re 420 vor einem Güterzug' },
       { src: 'bilder/re620-6.jpg', titel: 'Re 620 in Cargo-Farben mit Silowagen' },
-      { src: 'bilder/re620-4.jpg', titel: 'Re 620 mit Kesselwagenzug' },
+      { src: 'bilder/re620-4.jpg', titel: 'Re 620 mit Kesselwagenzug', foto: 'Quentin Rossier' },
       { src: 'bilder/re620-5.jpg', titel: 'Re 620 mit Bauzug, im Vordergrund Kühe' },
       { src: 'bilder/re620-3.jpg', titel: 'Re 620 in Cargo-Farben im Bahnhof' },
       { src: 'bilder/slides/slide-12.jpg', titel: 'Re 620 mit Kesselwagenzug' }

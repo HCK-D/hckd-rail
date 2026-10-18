@@ -7,5 +7,6 @@ uebDict({
   'Selbst mithelfen': 'Aiuta anche tu',
   'Du fotografierst auch Züge oder hast einen Fehler entdeckt? Jede Hilfe macht RailBase besser. Schick uns deine Fotos mit deinem Namen. Wir zeigen sie gerne auf der Website und nennen dich hier und unter dem Bild.': 'Anche tu fotografi treni o hai trovato un errore? Ogni aiuto rende RailBase migliore. Mandaci le tue foto con il tuo nome. Le mostreremo volentieri sul sito e ti citeremo qui e sotto l’immagine.',
   'Neue Seite «Danke»: ein Dankeschön an die Bahnfotografen, die Fotos für RailBase gemacht haben.': 'Nuova pagina «Grazie»: un ringraziamento ai fotografi ferroviari che hanno scattato foto per RailBase.',
-  'Instagram von Alessandro Antonazzo (öffnet in neuem Fenster)': 'Instagram di Alessandro Antonazzo (si apre in una nuova finestra)'
+  'Instagram von Alessandro Antonazzo (öffnet in neuem Fenster)': 'Instagram di Alessandro Antonazzo (si apre in una nuova finestra)',
+  'Instagram von Quentin Rossier (öffnet in neuem Fenster)': 'Instagram di Quentin Rossier (si apre in una nuova finestra)'
 });

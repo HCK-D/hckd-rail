@@ -105,6 +105,7 @@ uebDict({
   'Kartendaten: Bundesamt für Verkehr (BAV), Datensatz Schienennetz. Landesgrenze: swisstopo.': 'Map data: Federal Office of Transport (FOT), rail network dataset. National border: swisstopo.',
   'Schrift: Source Sans 3 von Adobe, SIL Open Font License 1.1.': 'Font: Source Sans 3 by Adobe, SIL Open Font License 1.1.',
   'Fotos von Wikimedia Commons': 'Photos from Wikimedia Commons',
+  'Bildnachweis der Fotos': 'Photo credits',
   'Stand: Oktober 2026': 'As of: October 2026',
 
   // ---------- privacy ----------
