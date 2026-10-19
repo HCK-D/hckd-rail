@@ -1307,7 +1307,7 @@ uebZug('am-843', {
     { titel: 'Acquisto e impiego', p: ['FFS Cargo ha ordinato 59 Am 843 a Vossloh di Kiel e ha presentato le prime locomotive nel 2004. Il numero indica l’acquisto Cargo di allora, non l’intera serie FFS né un effettivo attuale.', 'Cargo impiega l’Am 843 soprattutto nel servizio di manovra e di distribuzione. Presso FFS Infrastruttura svolge compiti di manovra e treni cantiere.'] },
     { titel: 'Tecnica e sviluppo', p: ['Le locomotive di FFS Cargo sono state dotate di filtri antiparticolato.', 'Nell’ottobre 2025 FFS Cargo ha annunciato l’acquisto di nuove locomotive di manovra ibride per sostituire in futuro le Am 843. Un effettivo attuale dell’intera serie non è indicato separatamente nelle pagine FFS utilizzate.'] }
   ],
-  bilder: ['Am 843 084 di FFS Cargo a Steinen', 'Am 843 092', 'Am 843 a Basilea', 'Am 843 076 di FFS Cargo', 'Am 843 075']
+  bilder: ['Am 843 001 di FFS Infrastruttura con un treno cantiere', 'Due Am 843 di FFS Infrastruttura con un treno di legname, in testa la 012', 'Am 843 011 ad Arth-Goldau', 'Am 843 con il treno di spegnimento e soccorso a Giornico', 'Am 843 a Basilea']
 });
 
 uebZug('tm-234', {

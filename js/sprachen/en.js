@@ -1305,7 +1305,7 @@ uebZug('am-843', {
     { titel: 'Procurement and service', p: ['SBB Cargo ordered 59 Am 843 from Vossloh in Kiel and presented the first locomotives in 2004. This figure refers to that Cargo order, not to the whole SBB class or a current fleet.', 'Cargo uses the Am 843 mainly for shunting and local deliveries. At SBB Infrastructure its duties include shunting and engineering trains.'] },
     { titel: 'Technology and development', p: ['The SBB Cargo locomotives were fitted with diesel particulate filters.', 'In October 2025 SBB Cargo announced the procurement of new hybrid shunting locomotives as future replacements for the Am 843. A current fleet figure for the whole class is not given separately on the SBB pages used.'] }
   ],
-  bilder: ['SBB Cargo Am 843 084 in Steinen', 'Am 843 092', 'Am 843 in Basel', 'SBB Cargo Am 843 076', 'Am 843 075']
+  bilder: ['SBB Infrastructure Am 843 001 with a construction train', 'Two SBB Infrastructure Am 843 with a timber train, 012 leading', 'Am 843 011 in Arth-Goldau', 'Am 843 with the fire-fighting and rescue train in Giornico', 'Am 843 in Basel']
 });
 
 uebZug('tm-234', {

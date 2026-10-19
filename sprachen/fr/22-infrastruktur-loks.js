@@ -21,7 +21,7 @@ uebZug('am-843', {
     { titel: 'Acquisition et utilisation', p: ['CFF Cargo a commandé 59 Am 843 chez Vossloh à Kiel et a présenté les premières locomotives en 2004. Ce chiffre désigne l’acquisition de Cargo de l’époque, et non toute la série CFF ni un effectif actuel.', 'Cargo engage l’Am 843 surtout pour la manœuvre et la desserte. Chez CFF Infrastructure, les manœuvres et les trains de travaux font partie de ses tâches.'] },
     { titel: 'Technique et évolution', p: ['Les locomotives de CFF Cargo ont été équipées de filtres à particules diesel.', 'En octobre 2025, CFF Cargo a annoncé l’acquisition de nouvelles locomotives de manœuvre hybrides pour remplacer à terme les Am 843. Un effectif actuel de toute la série n’est pas indiqué séparément sur les pages CFF utilisées.'] }
   ],
-  bilder: ['Am 843 084 de CFF Cargo à Steinen', 'Am 843 092', 'Am 843 à Bâle', 'Am 843 076 de CFF Cargo', 'Am 843 075']
+  bilder: ['Am 843 001 de CFF Infrastructure avec un train de travaux', 'Deux Am 843 de CFF Infrastructure avec un train de bois, en tête la 012', 'Am 843 011 à Arth-Goldau', 'Am 843 avec le train d’extinction et de sauvetage à Giornico', 'Am 843 à Bâle']
 });
 
 uebZug('tm-234', {
