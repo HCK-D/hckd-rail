@@ -135,7 +135,7 @@ ZUEGE.push(
       { src: 'bilder/bls-re-486-c1.jpg', titel: 'Re 486 503 mit Rollender Landstrasse in Freiburg im Breisgau', foto: 'Chondriammos', lizenz: 'CC0', lizenzUrl: 'https://creativecommons.org/publicdomain/zero/1.0/', quelle: 'https://commons.wikimedia.org/wiki/File:BLS_Cargo_Re_486_503_RoLa_Freiburg_02.jpg' },
       { src: 'bilder/bls-re-486-c2.jpg', titel: 'Re 486 504 von BLS Cargo', foto: 'Nelso Silva from Porto, Portugal', lizenz: 'CC BY-SA 2.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/2.0', quelle: 'https://commons.wikimedia.org/wiki/File:BLS_Cargo_Re_486_504_(51342571804).jpg' }
     ] },
-  { id: 'bls-re-425', kat: 'cargo', name: 'Re 425', beiname: 'Re 4/4', typ: 'Elektrolokomotive der BLS, bekannt als «die Braunen»', bahn: 'bls', vorlaeufig: false,
+  { id: 'bls-re-425', kat: 'historisch', name: 'Re 425', beiname: 'Re 4/4', typ: 'Elektrolokomotive der BLS, bekannt als «die Braunen»', bahn: 'bls', vorlaeufig: false,
     text: ['Die braunen Re 4/4 der BLS, heute Re 425, zogen über Jahrzehnte Schnellzüge zwischen Bern und Brig und Güterzüge von Basel nach Domodossola. Auch der Autoverlad am Lötschberg war lange ihre Aufgabe.', 'Seit Ende 2023 übernehmen beim Autoverlad die Re 465. Bei BLS Cargo stehen weiterhin Re 4/4 im Einsatz; die Re 4/4 165 «Moutier» gehört heute der BLS-Stiftung.'],
     kennzahlen: [['35', 'gebaut 1964–1983'], ['4980 kW', 'Leistung'], ['140 km/h', 'Höchstgeschwindigkeit'], ['1964', 'erster Einsatz']],
     nummern: [[425161, 425195]],
