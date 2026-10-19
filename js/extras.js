@@ -63,7 +63,7 @@ function cmpText(z, key) {
 }
 function renderVergleich() {
   cmpAdd.innerHTML = `<option value="">${esc(cmpIds.length >= CMP_MAX ? tr('Vergleich ist voll (3)') : tr('Fahrzeug wählen …'))}</option>` +
-    KATS.map(k => `<optgroup label="${esc(tr(k.name))}">${inKat(k.id).map(z => `<option value="${z.id}"${cmpIds.includes(z.id) ? ' disabled' : ''}>${esc(fullName(z))}</option>`).join('')}</optgroup>`).join('');
+    KATS.map(k => `<optgroup label="${esc(tr(k.name))}">${inKat(k.id).map(z => `<option value="${z.id}"${cmpIds.includes(z.id) ? ' disabled' : ''}>${esc(fullName(z))}${z.bahn ? ' · ' + esc(bahnName(z)) : ''}</option>`).join('')}</optgroup>`).join('');
   cmpAdd.disabled = cmpIds.length >= CMP_MAX;
   const list = cmpIds.map(zugOf), out = $('#cmp-out');
   if (!list.length) {

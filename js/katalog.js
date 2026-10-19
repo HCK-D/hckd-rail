@@ -150,7 +150,7 @@ function renderResults() {
   if (nrHit) hits = [nrHit.z].concat(hits.filter(z => z !== nrHit.z));
   sel = Math.min(sel, Math.max(0, hits.length - 1));
   results.innerHTML = hits.length
-    ? hits.map((z, i) => `<li><a href="#${z.id}" class="${i === sel ? 'sel' : ''}"><b>${esc(fullName(z))}</b><span>${nrHit && nrHit.z === z ? esc(tr('Loknummer')) + ' ' + esc(nrHit.nr) + ' · ' : ''}${esc(tr(katOf(z.kat).name))}</span></a></li>`).join('')
+    ? hits.map((z, i) => `<li><a href="#${z.id}" class="${i === sel ? 'sel' : ''}"><b>${esc(fullName(z))}</b><span>${nrHit && nrHit.z === z ? esc(tr('Loknummer')) + ' ' + esc(nrHit.nr) + ' · ' : ''}${esc(bahnName(z))} · ${esc(tr(katOf(z.kat).name))}</span></a></li>`).join('')
     : `<li class="none">${esc(tr('Kein Fahrzeug gefunden. Versuche eine Baureihe wie «Re 420».'))}</li>`;
   results.hidden = false;
 }
@@ -222,9 +222,34 @@ function sortiert(list) {
   });
 }
 katSort.addEventListener('change', () => renderKatList());
+
+/* ---------- Bahnen: in jeder Kategorie zuerst SBB, BLS oder TPF wählen ----------
+   Fahrzeuge ohne «bahn» gehören zur SBB. Die Wahl bleibt im Browser gespeichert. */
+const BAHNEN = [
+  { id: 'sbb', name: 'SBB', lang: 'Schweizerische Bundesbahnen' },
+  { id: 'bls', name: 'BLS', lang: 'BLS AG' },
+  { id: 'tpf', name: 'TPF', lang: 'Transports publics fribourgeois' }
+];
+const bahnOf = z => z.bahn || 'sbb';
+const bahnName = z => tr(BAHNEN.find(b => b.id === bahnOf(z)).name);
+let curBahn = (() => { try { return localStorage.getItem('hckd-bahn') || 'sbb'; } catch (e) { return 'sbb'; } })();
+function renderBahnWahl() {
+  const n = id => inKat(curKat.id).filter(z => bahnOf(z) === id).length;
+  if (!n(curBahn)) curBahn = (BAHNEN.find(b => n(b.id)) || BAHNEN[0]).id;
+  // operators without vehicles in this category get no button at all
+  $('#kat-bahn').innerHTML = BAHNEN.filter(b => n(b.id)).map(b => `<button type="button" role="tab" data-bahn="${b.id}" aria-selected="${b.id === curBahn}" title="${esc(tr(b.lang))}"><b>${esc(tr(b.name))}</b><span>${esc(tr(n(b.id) === 1 ? '{n} Fahrzeug' : '{n} Fahrzeuge', { n: n(b.id) }))}</span></button>`).join('');
+}
+$('#kat-bahn').addEventListener('click', e => {
+  const b = e.target.closest('[data-bahn]');
+  if (!b || b.dataset.bahn === curBahn) return;
+  curBahn = b.dataset.bahn;
+  try { localStorage.setItem('hckd-bahn', curBahn); } catch (err) { /* private window */ }
+  renderBahnWahl(); renderKatList();
+});
+
 function renderKatList() {
   const v = norm(katQ.value);
-  const list = sortiert(inKat(curKat.id).filter(z => !v || norm(z.name + zn(z) + z.beiname + z.typ + zt(z, 'beiname') + zt(z, 'typ')).includes(v)));
+  const list = sortiert(inKat(curKat.id).filter(z => bahnOf(z) === curBahn && (!v || norm(z.name + zn(z) + z.beiname + z.typ + zt(z, 'beiname') + zt(z, 'typ')).includes(v))));
   const card = z => `<li><a class="card" href="#${z.id}">
     <div class="art-panel">${z.bilder && z.bilder.length ? `<img class="photo" src="${esc(klein(z.bilder[0].src))}" alt="" loading="lazy">` : art(z)}${istGesehen(z.id) ? `<span class="seen-badge">${esc(tr('Gesehen'))}</span>` : ''}</div>
     <div class="card-body">
@@ -253,6 +278,7 @@ function renderKat(k) {
   $('#kat-kicker').textContent = tr('Kategorie') + ' ' + k.code + ' · ' + tr('{n} Fahrzeuge', { n: inKat(k.id).length });
   $('#kat-title').textContent = tr(k.name);
   $('#kat-text').textContent = tr(k.text);
+  renderBahnWahl();
   renderKatList();
 }
 
@@ -336,8 +362,10 @@ function slideInner(z, m, i) {
 }
 function renderZug(z) {
   curZug = z;
-  const k = katOf(z.kat), list = inKat(k.id), idx = list.indexOf(z);
-  $('#zug-crumbs').innerHTML = `<li><a href="#start">${esc(tr('Start'))}</a></li><li><a href="#${k.id}">${esc(tr(k.name))}</a></li><li aria-current="page">${esc(zn(z))}</li>`;
+  // previous/next and the way back stay within the same railway (SBB, BLS or TPF)
+  curBahn = bahnOf(z);
+  const k = katOf(z.kat), list = inKat(k.id).filter(x => bahnOf(x) === curBahn), idx = list.indexOf(z);
+  $('#zug-crumbs').innerHTML = `<li><a href="#start">${esc(tr('Start'))}</a></li><li><a href="#${k.id}">${esc(tr(k.name))}</a></li><li><a href="#${k.id}">${esc(bahnName(z))}</a></li><li aria-current="page">${esc(zn(z))}</li>`;
   $('#zug-typ').textContent = zt(z, 'typ');
   const bei = zt(z, 'beiname');
   $('#zug-title').innerHTML = esc(zn(z)) + (bei ? ` <span class="beiname">«${esc(bei)}»</span>` : '');

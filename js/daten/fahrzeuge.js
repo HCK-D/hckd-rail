@@ -8,12 +8,12 @@
    nummern: Loknummern für die Suche, z. B. [[460000, 460118]] für 460 000–460 118 oder [[11101, 11349]] für alte Nummern
    ===================================================================== */
 const KATS = [
-  { id: 'personenverkehr', code: 'P', name: 'SBB Personenverkehr', text: 'Fernverkehr, Regionalverkehr und S-Bahn: Hochgeschwindigkeits- und Doppelstockzüge, Triebzüge und Lokomotiven.', rep: 'rabe-501', bild: 'bilder/rabe-502-c2.jpg', bildPos: 'center 55%' },
-  { id: 'cargo', code: 'G', name: 'SBB Cargo', text: 'Lokomotiven für den Güterverkehr im Inland und über die Alpen, inklusive Mehrsystemloks für den Verkehr ins Ausland.', rep: 're-482', bild: 'bilder/re620-2.jpg', bildPos: 'center 60%' },
-  { id: 'infrastruktur', code: 'I', name: 'SBB Infrastruktur', text: 'Fahrzeuge für Bau, Unterhalt und Logistik am Netz: Bauzuglokomotiven und Baudienstfahrzeuge.', rep: 'aem-940', gruppen: ['Lokomotiven und Traktoren', 'Schotter- und Kippwagen', 'Schienentransport', 'Werkstatt- und Mannschaftswagen'], bild: 'bilder/aem-940-c1.jpg', bildPos: 'center 62%' },
+  { id: 'personenverkehr', code: 'P', name: 'Personenverkehr', text: 'Fernverkehr, Regionalverkehr und S-Bahn: Hochgeschwindigkeits- und Doppelstockzüge, Triebzüge und Lokomotiven.', rep: 'rabe-501', bild: 'bilder/rabe-502-c2.jpg', bildPos: 'center 55%' },
+  { id: 'cargo', code: 'G', name: 'Cargo', text: 'Lokomotiven für den Güterverkehr im Inland und über die Alpen, inklusive Mehrsystemloks für den Verkehr ins Ausland.', rep: 're-482', bild: 'bilder/re620-2.jpg', bildPos: 'center 60%' },
+  { id: 'infrastruktur', code: 'I', name: 'Infrastruktur', text: 'Fahrzeuge für Bau, Unterhalt und Logistik am Netz: Bauzuglokomotiven und Baudienstfahrzeuge.', rep: 'aem-940', gruppen: ['Lokomotiven und Traktoren', 'Schotter- und Kippwagen', 'Schienentransport', 'Werkstatt- und Mannschaftswagen'], bild: 'bilder/aem-940-c1.jpg', bildPos: 'center 62%' },
   { id: 'rangier', code: 'R', name: 'Rangierfahrzeuge', text: 'Lokomotiven und Traktoren für das Rangieren in Bahnhöfen, Abstellanlagen und Anschlussgleisen.', rep: 'eem-923', bild: 'bilder/ee-922-c3.jpg', bildPos: 'center 60%' },
   { id: 'dienst', code: 'D', name: 'Dienst- und Spezialfahrzeuge', text: 'Lösch- und Rettungszüge, Schneeräumung, Messfahrzeuge, Krane und Fahrleitungsfahrzeuge.', rep: 'xrotm', bild: 'bilder/lrz-18-c1.jpg', bildPos: 'center 65%' },
-  { id: 'historisch', code: 'H', name: 'Historische Fahrzeuge', text: 'Klassiker der SBB, die heute nicht mehr im Alltag fahren. Viele sind bei SBB Historic oder in Museen erhalten.', rep: 'h-ce68ii', bild: 'bilder/h-ce68ii-c1.jpg', bildPos: 'center 60%' }
+  { id: 'historisch', code: 'H', name: 'Historische Fahrzeuge', text: 'Klassiker von SBB, BLS und TPF, die heute nicht mehr im Alltag fahren. Viele sind bei SBB Historic, der BLS-Stiftung, GFM Historique oder in Museen erhalten.', rep: 'h-ce68ii', bild: 'bilder/h-ce68ii-c1.jpg', bildPos: 'center 60%' }
 ];
 
 const W1 = '#F3F4F2', RED = '#D71920', CRED = '#C8102E', YEL = '#E8B400', ORA = '#E0661B';
