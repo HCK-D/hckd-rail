@@ -36,7 +36,7 @@ $fix = @{
           neu = 'Neu und aktualisiert'; neuText = 'Die letzten Ergänzungen bei RailBase: neue Fahrzeuge, neue Fotos und neue Funktionen.'
           sammlung = 'Meine Sammlung'; sammlungText = 'Gesehene Fahrzeuge, Sichtungen und Entdecker-Abzeichen bei RailBase.'
           erkennen = 'FLIRT 521, 522, 523 oder 524?';erkennenText = 'So unterscheidest du die FLIRT-Baureihen 521, 522, 523 und 524 der SBB: Nummer, Strom, Farben und Einsatzgebiet.'
-          danke = 'Danke'; dankeText = 'Danke an die Bahnfotografen, die Fotos von Zügen für RailBase gemacht haben, und wie du selbst mithelfen kannst.' }
+          danke = 'Danke'; dankeText = 'Danke an die Bahnfotografen und an alle, die bei RailBase mithelfen, auch bei der Informatik. Und wie du selbst mithelfen kannst.' }
   fr = @{ start = 'RailBase – Train Database des CFF : voyageurs, Cargo, infrastructure, véhicules de manœuvre, de service et spéciaux.'; zug = 'Caractéristiques techniques, histoire et images.'
           impressum = 'Mentions légales'; impressumText = 'Mentions légales, responsabilité et crédits photo de RailBase.'
           datenschutz = 'Protection des données'; datenschutzText = 'Protection des données chez RailBase : pas de cookies, pas de publicité, seulement un comptage anonyme des visites.'
@@ -44,7 +44,7 @@ $fix = @{
           neu = 'Nouveautés et mises à jour'; neuText = 'Les derniers ajouts sur RailBase : nouveaux véhicules, nouvelles photos et nouvelles fonctions.'
           sammlung = 'Ma collection'; sammlungText = "Véhicules vus, observations et badges d’explorateur sur RailBase."
           erkennen = 'FLIRT 521, 522, 523 ou 524 ?';erkennenText = "Comment distinguer les séries FLIRT 521, 522, 523 et 524 des CFF : numéro, courant, couleurs et région d’engagement."
-          danke = 'Merci'; dankeText = 'Merci aux photographes ferroviaires qui ont pris des photos de trains pour RailBase, et comment tu peux aider toi aussi.' }
+          danke = 'Merci'; dankeText = 'Merci aux photographes ferroviaires et à toutes les personnes qui aident RailBase, y compris en informatique. Et comment tu peux aider toi aussi.' }
   it = @{ start = 'RailBase – Train Database delle FFS: viaggiatori, Cargo, infrastruttura, veicoli di manovra, di servizio e speciali.'; zug = 'Dati tecnici, storia e immagini.'
           impressum = 'Note legali'; impressumText = 'Note legali, responsabilità e crediti fotografici di RailBase.'
           datenschutz = 'Protezione dei dati'; datenschutzText = 'Protezione dei dati su RailBase: nessun cookie, nessuna pubblicità, solo un conteggio anonimo delle visite.'
@@ -52,7 +52,7 @@ $fix = @{
           neu = 'Novità e aggiornamenti'; neuText = 'Le ultime aggiunte su RailBase: nuovi veicoli, nuove foto e nuove funzioni.'
           sammlung = 'La mia collezione'; sammlungText = 'Veicoli visti, avvistamenti e distintivi da esploratore su RailBase.'
           erkennen = 'FLIRT 521, 522, 523 o 524?';erkennenText = "Come distinguere le serie FLIRT 521, 522, 523 e 524 delle FFS: numero, corrente, colori e zona d’impiego."
-          danke = 'Grazie'; dankeText = 'Grazie ai fotografi ferroviari che hanno scattato foto di treni per RailBase, e come puoi aiutare anche tu.' }
+          danke = 'Grazie'; dankeText = 'Grazie ai fotografi ferroviari e a tutte le persone che aiutano RailBase, anche per la parte informatica. E come puoi aiutare anche tu.' }
   en = @{ start = 'RailBase – Train Database for SBB passenger, Cargo, infrastructure, shunting, service and special vehicles.'; zug = 'Technical data, history and pictures.'
           impressum = 'Legal notice'; impressumText = 'Legal notice, liability and picture credits of RailBase.'
           datenschutz = 'Privacy'; datenschutzText = 'RailBase privacy policy: no cookies, no advertising, only anonymous visitor counting.'
@@ -60,7 +60,7 @@ $fix = @{
           neu = 'New and updated'; neuText = 'The latest additions to RailBase: new vehicles, new photos and new features.'
           sammlung = 'My collection'; sammlungText = 'Vehicles seen, sightings and explorer badges on RailBase.'
           erkennen = 'FLIRT 521, 522, 523 or 524?';erkennenText = 'How to tell the SBB FLIRT classes 521, 522, 523 and 524 apart: number, power system, colours and area of service.'
-          danke = 'Thank you'; dankeText = 'Thank you to the railway photographers who took photos of trains for RailBase, and how you can help too.' }
+          danke = 'Thank you'; dankeText = 'Thank you to the railway photographers and everyone who helps RailBase, including with IT. And how you can help too.' }
 }
 # Übersetzte Kategorienamen und Fahrzeugtypen aus js\sprachen\xx.js lesen
 $jsStr = '''((?:[^''\\]|\\.)*)'''
