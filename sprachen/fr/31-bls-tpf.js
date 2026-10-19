@@ -100,8 +100,9 @@ uebZug('bls-am-843', {
   typ: 'Locomotive diesel-hydraulique de BLS Infrastructure',
   text: ['BLS Infrastructure utilise aussi des locomotives diesel de la série Am 843, par exemple l’Am 843 503. Elles remorquent des trains de travaux et manœuvrent sans caténaire.', 'Techniquement, la locomotive correspond à l’Am 843 des CFF.'],
   kennzahlen: [['843 503', 'exemple photographié'], ['diesel', 'motorisation'], ['trains de travaux', 'utilisation'], ['BLS', 'infrastructure']],
-  daten: { 'Bauart': 'locomotive diesel', 'Antrieb': 'diesel-hydraulique', 'Betreiber': 'BLS Infrastructure', 'Einsatz': 'trains de travaux, manœuvres' },
-  specNote: 'Le nombre d’Am 843 du BLS n’est pas documenté publiquement. Les données techniques de la série figurent à l’Am 843 des CFF.',
+  daten: { 'Bauart': 'locomotive diesel', 'Antrieb': 'diesel-hydraulique', 'Betreiber': 'BLS Infrastructure', 'Einsatz': 'trains de travaux, manœuvres, intervention' },
+  specNote: 'Le BLS indique la longueur, le poids et l’année pour l’Am 843 de son service d’intervention. Le nombre total d’Am 843 du BLS n’est pas documenté publiquement.',
+  abschnitte: [{ titel: 'Au service d’intervention', p: ['Le BLS mentionne une Am 843 parmi les véhicules de son service d’intervention, avec le train d’extinction et de sauvetage LRZ 04 et le wagon de secours. Le service d’intervention est le corps de sapeurs-pompiers d’entreprise du BLS.'] }],
   bilder: ['Am 843 503 de BLS Infrastructure']
 });
 uebZug('bls-rangier', {
@@ -121,7 +122,8 @@ uebZug('bls-lrz', {
   text: ['Le BLS possède aussi ses propres trains d’extinction et de sauvetage. Ils sont notamment stationnés au centre d’intervention de Frutigen, au portail nord du tunnel de base du Lötschberg.', 'Ces trains amènent agents extincteurs, secouristes et protection respiratoire dans les longs tunnels.'],
   kennzahlen: [['Frutigen', 'centre d’intervention'], ['Lötschberg', 'tunnel de base'], ['tunnels', 'utilisation principale'], ['BLS', 'exploitant']],
   daten: { 'Bauart': 'train d’extinction et de sauvetage', 'Standort': 'notamment centre d’intervention de Frutigen', 'Einsatz': 'sauvetage en tunnel, lutte contre le feu' },
-  specNote: 'Les données techniques et le nombre de trains du BLS ne sont pas documentés publiquement.',
+  specNote: 'Les données valent pour le LRZ 04 que le BLS cite pour son service d’intervention. Le nombre total de trains n’est pas documenté publiquement.',
+  abschnitte: [{ titel: 'Le LRZ 04', liste: ['Véhicule de matériel', 'Véhicule d’extinction avec citerne', 'Deux véhicules de sauvetage'] }],
   bilder: ['Train d’extinction et de sauvetage devant le centre d’intervention de Frutigen']
 });
 uebZug('bls-ae-4-4', {

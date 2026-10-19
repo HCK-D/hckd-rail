@@ -99,8 +99,9 @@ uebZug('bls-am-843', {
   typ: 'Diesel-hydraulic locomotive of BLS Infrastructure',
   text: ['BLS Infrastructure also uses diesel locomotives of the Am 843 class, for example Am 843 503. They haul construction trains and shunt where there is no catenary.', 'Technically the locomotive matches the SBB Am 843.'],
   kennzahlen: [['843 503', 'photographed example'], ['diesel', 'traction'], ['construction trains', 'use'], ['BLS', 'infrastructure']],
-  daten: { 'Bauart': 'diesel locomotive', 'Antrieb': 'diesel-hydraulic', 'Betreiber': 'BLS Infrastructure', 'Einsatz': 'construction trains, shunting' },
-  specNote: 'How many Am 843 BLS owns is not publicly documented. Technical data for the class are on the SBB Am 843 page.',
+  daten: { 'Bauart': 'diesel locomotive', 'Antrieb': 'diesel-hydraulic', 'Betreiber': 'BLS Infrastructure', 'Einsatz': 'construction trains, shunting, intervention' },
+  specNote: 'BLS gives length, weight and year for the Am 843 of its intervention service. How many Am 843 BLS owns in total is not publicly documented.',
+  abschnitte: [{ titel: 'In the intervention service', p: ['BLS lists an Am 843 among the vehicles of its intervention service, together with the fire-fighting and rescue train LRZ 04 and the breakdown wagon. The intervention service is the company fire brigade of BLS.'] }],
   bilder: ['Am 843 503 of BLS Infrastructure']
 });
 uebZug('bls-rangier', {
@@ -120,7 +121,8 @@ uebZug('bls-lrz', {
   text: ['BLS also has its own fire-fighting and rescue trains. They are stationed at the Frutigen intervention centre, at the north portal of the Lötschberg base tunnel.', 'The trains bring extinguishing agents, rescuers and breathing protection into long tunnels.'],
   kennzahlen: [['Frutigen', 'intervention centre'], ['Lötschberg', 'base tunnel'], ['tunnels', 'main use'], ['BLS', 'operator']],
   daten: { 'Bauart': 'fire-fighting and rescue train', 'Standort': 'among others the Frutigen intervention centre', 'Einsatz': 'tunnel rescue, fire-fighting' },
-  specNote: 'Technical data and the number of BLS trains are not publicly documented.',
+  specNote: 'The data apply to LRZ 04, which BLS lists for its intervention service. How many trains there are in total is not publicly documented.',
+  abschnitte: [{ titel: 'LRZ 04', liste: ['Equipment vehicle', 'Fire-fighting tank vehicle', 'Two rescue vehicles'] }],
   bilder: ['Fire-fighting and rescue train in front of the Frutigen intervention centre']
 });
 uebZug('bls-ae-4-4', {

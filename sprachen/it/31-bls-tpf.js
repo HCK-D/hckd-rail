@@ -99,8 +99,9 @@ uebZug('bls-am-843', {
   typ: 'Locomotiva diesel-idraulica di BLS Infrastruttura',
   text: ['Anche BLS Infrastruttura impiega locomotive diesel della serie Am 843, per esempio la Am 843 503. Trainano treni cantiere e manovrano dove non c’è linea di contatto.', 'Tecnicamente la locomotiva corrisponde alla Am 843 delle FFS.'],
   kennzahlen: [['843 503', 'esempio fotografato'], ['diesel', 'trazione'], ['treni cantiere', 'impiego'], ['BLS', 'infrastruttura']],
-  daten: { 'Bauart': 'locomotiva diesel', 'Antrieb': 'diesel-idraulica', 'Betreiber': 'BLS Infrastruttura', 'Einsatz': 'treni cantiere, manovra' },
-  specNote: 'Il numero di Am 843 della BLS non è documentato pubblicamente. I dati tecnici della serie si trovano alla Am 843 delle FFS.',
+  daten: { 'Bauart': 'locomotiva diesel', 'Antrieb': 'diesel-idraulica', 'Betreiber': 'BLS Infrastruttura', 'Einsatz': 'treni cantiere, manovra, intervento' },
+  specNote: 'La BLS indica lunghezza, peso e anno per la Am 843 del suo servizio d’intervento. Il numero totale di Am 843 della BLS non è documentato pubblicamente.',
+  abschnitte: [{ titel: 'Nel servizio d’intervento', p: ['La BLS elenca una Am 843 tra i veicoli del suo servizio d’intervento, insieme al treno di spegnimento e soccorso LRZ 04 e al carro di soccorso. Il servizio d’intervento è il corpo pompieri aziendale della BLS.'] }],
   bilder: ['Am 843 503 di BLS Infrastruttura']
 });
 uebZug('bls-rangier', {
@@ -120,7 +121,8 @@ uebZug('bls-lrz', {
   text: ['La BLS ha anche propri treni di spegnimento e soccorso. Sono stazionati tra l’altro al centro d’intervento di Frutigen, al portale nord della galleria di base del Lötschberg.', 'Questi treni portano agenti estinguenti, soccorritori e protezione delle vie respiratorie nelle lunghe gallerie.'],
   kennzahlen: [['Frutigen', 'centro d’intervento'], ['Lötschberg', 'galleria di base'], ['gallerie', 'impiego principale'], ['BLS', 'gestore']],
   daten: { 'Bauart': 'treno di spegnimento e soccorso', 'Standort': 'tra l’altro centro d’intervento di Frutigen', 'Einsatz': 'soccorso in galleria, lotta antincendio' },
-  specNote: 'I dati tecnici e il numero di treni della BLS non sono documentati pubblicamente.',
+  specNote: 'I dati valgono per l’LRZ 04, che la BLS indica per il suo servizio d’intervento. Il numero totale di treni non è documentato pubblicamente.',
+  abschnitte: [{ titel: 'L’LRZ 04', liste: ['Veicolo attrezzi', 'Veicolo di spegnimento con cisterna', 'Due veicoli di soccorso'] }],
   bilder: ['Treno di spegnimento e soccorso davanti al centro d’intervento di Frutigen']
 });
 uebZug('bls-ae-4-4', {
