@@ -164,5 +164,5 @@ uebZug('fahrleitung', {
     { titel: 'Tâches', p: ['Les véhicules soutiennent l’inspection, le dépannage et le renouvellement de la caténaire. Les plateformes de travail donnent accès au fil de contact ; les grues lèvent mâts, consoles et matériel.'] },
     { titel: 'Délimitation', p: ['Cette page décrit le groupe de véhicules. Un portrait technique individuel nécessite la désignation exacte de la série et le numéro du véhicule, car puissance, masse, longueur et année de construction varient fortement.'] }
   ],
-  bilder: ['Wagon de montage du Combi XTmass 99 85 9236 051 près de Bad Ragaz', 'Train de construction caténaire Combi entre Bad Ragaz et Sargans, 2019', 'Wagon-grue «Krani 3» avec nacelle pour la construction de caténaires']
+  bilder: ['Wagon-grue «Krani 3» avec nacelle pour la construction de caténaires', 'Wagon de montage du Combi XTmass 99 85 9236 051 près de Bad Ragaz', 'Train de construction caténaire Combi entre Bad Ragaz et Sargans, 2019']
 });

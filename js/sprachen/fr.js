@@ -1201,7 +1201,7 @@ uebZug('re-482', {
     { titel: 'Acquisition et utilisation', p: ['CFF Cargo a introduit la Re 482 à partir de 2002. Les locomotives ont repris des trains de marchandises internationaux vers l’Allemagne et en partie l’Autriche, ainsi que des services dans le trafic marchandises suisse.'] },
     { titel: 'Deux séries', p: ['L’aperçu de la flotte distingue 35 Re 482.1 et 15 Re 482.2. Techniquement, les deux appartiennent à la famille TRAXX ; l’équipement et les paquets nationaux diffèrent selon la série.'] }
   ],
-  bilder: ['Re 482 023 de CFF Cargo avec un train de marchandises près d’Erbach (Rheingau)', 'Re 482 avec un train de marchandises devant un pont ferroviaire', 'Re 482 005 de CFF Cargo à Eschweiler', 'Re 482 007 à Köln-Kalk Nord', 'Re 482 005']
+  bilder: ['Re 482 007 à Köln-Kalk Nord', 'Re 482 023 de CFF Cargo avec un train de marchandises près d’Erbach (Rheingau)', 'Re 482 avec un train de marchandises devant un pont ferroviaire', 'Re 482 005 de CFF Cargo à Eschweiler', 'Re 482 005']
 });
 
 uebZug('re-484', {
@@ -1254,7 +1254,7 @@ uebZug('re-474', {
     { titel: 'Acquisition et utilisation', p: ['Les locomotives ont circulé à partir de 2005 en trafic marchandises Suisse–Italie. Le chiffre de 12 désigne la flotte de CFF Cargo de l’époque et n’est pas un effectif garanti pour octobre 2026.'] },
     { titel: 'Technique', p: ['La Re 474 relie le réseau suisse à courant alternatif au réseau italien à courant continu 3 kV. L’équipement multisystème et les systèmes nationaux de sécurité permettaient une circulation continue au-delà de la frontière.'] }
   ],
-  bilder: ['Re 474 près de Jestetten sur la ligne de Neuhausen', 'Re 474 014 à Domodossola', 'Re 474 013', 'Re 474 avec un train de marchandises à Gravellona Toce']
+  bilder: ['Re 474 013', 'Re 474 près de Jestetten sur la ligne de Neuhausen', 'Re 474 014 à Domodossola', 'Re 474 avec un train de marchandises à Gravellona Toce']
 });
 
 uebZug('re-193', {
@@ -1877,7 +1877,7 @@ uebZug('fahrleitung', {
     { titel: 'Tâches', p: ['Les véhicules soutiennent l’inspection, le dépannage et le renouvellement de la caténaire. Les plateformes de travail donnent accès au fil de contact ; les grues lèvent mâts, consoles et matériel.'] },
     { titel: 'Délimitation', p: ['Cette page décrit le groupe de véhicules. Un portrait technique individuel nécessite la désignation exacte de la série et le numéro du véhicule, car puissance, masse, longueur et année de construction varient fortement.'] }
   ],
-  bilder: ['Wagon de montage du Combi XTmass 99 85 9236 051 près de Bad Ragaz', 'Train de construction caténaire Combi entre Bad Ragaz et Sargans, 2019', 'Wagon-grue «Krani 3» avec nacelle pour la construction de caténaires']
+  bilder: ['Wagon-grue «Krani 3» avec nacelle pour la construction de caténaires', 'Wagon de montage du Combi XTmass 99 85 9236 051 près de Bad Ragaz', 'Train de construction caténaire Combi entre Bad Ragaz et Sargans, 2019']
 });
 
 /* ---- 26-historisch.js ---- */
@@ -2460,7 +2460,7 @@ uebZug('tpf-rabe-527', {
   kennzahlen: [['8', 'rames (191–198)'], ['160 km/h', 'vitesse maximale'], ['418', 'places au total'], ['2011', 'première mise en service']],
   daten: { 'Bauart': 'rame automotrice électrique, 4 caisses', 'Gewicht': '122 t à vide', 'Sitzplätze': '24 en 1re, 143 en 2e classe', 'Anzahl': '8 rames' },
   specNote: 'Mises en service de 2011 à 2014. S’y ajoutent 42 strapontins et 209 places debout, soit 418 places au total.',
-  bilder: ['RABe 527 198 sur le viaduc de Grandfey', 'FLIRT des TPF à Bulle', 'RABe 527 en RegioExpress à Berne', 'RABe 527 196 à Neuchâtel']
+  bilder: ['RABe 527 196 à Neuchâtel', 'RABe 527 198 sur le viaduc de Grandfey', 'FLIRT des TPF à Bulle', 'RABe 527 en RegioExpress à Berne']
 });
 uebZug('tpf-rbde-560', {
   typ: 'Rame réversible régionale modernisée (Domino 3)',

@@ -256,7 +256,7 @@ uebZug('tpf-rabe-527', {
   kennzahlen: [['8', 'rames (191–198)'], ['160 km/h', 'vitesse maximale'], ['418', 'places au total'], ['2011', 'première mise en service']],
   daten: { 'Bauart': 'rame automotrice électrique, 4 caisses', 'Gewicht': '122 t à vide', 'Sitzplätze': '24 en 1re, 143 en 2e classe', 'Anzahl': '8 rames' },
   specNote: 'Mises en service de 2011 à 2014. S’y ajoutent 42 strapontins et 209 places debout, soit 418 places au total.',
-  bilder: ['RABe 527 198 sur le viaduc de Grandfey', 'FLIRT des TPF à Bulle', 'RABe 527 en RegioExpress à Berne', 'RABe 527 196 à Neuchâtel']
+  bilder: ['RABe 527 196 à Neuchâtel', 'RABe 527 198 sur le viaduc de Grandfey', 'FLIRT des TPF à Bulle', 'RABe 527 en RegioExpress à Berne']
 });
 uebZug('tpf-rbde-560', {
   typ: 'Rame réversible régionale modernisée (Domino 3)',

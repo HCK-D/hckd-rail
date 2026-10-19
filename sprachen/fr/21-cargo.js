@@ -9,7 +9,7 @@ uebZug('re-482', {
     { titel: 'Acquisition et utilisation', p: ['CFF Cargo a introduit la Re 482 à partir de 2002. Les locomotives ont repris des trains de marchandises internationaux vers l’Allemagne et en partie l’Autriche, ainsi que des services dans le trafic marchandises suisse.'] },
     { titel: 'Deux séries', p: ['L’aperçu de la flotte distingue 35 Re 482.1 et 15 Re 482.2. Techniquement, les deux appartiennent à la famille TRAXX ; l’équipement et les paquets nationaux diffèrent selon la série.'] }
   ],
-  bilder: ['Re 482 023 de CFF Cargo avec un train de marchandises près d’Erbach (Rheingau)', 'Re 482 avec un train de marchandises devant un pont ferroviaire', 'Re 482 005 de CFF Cargo à Eschweiler', 'Re 482 007 à Köln-Kalk Nord', 'Re 482 005']
+  bilder: ['Re 482 007 à Köln-Kalk Nord', 'Re 482 023 de CFF Cargo avec un train de marchandises près d’Erbach (Rheingau)', 'Re 482 avec un train de marchandises devant un pont ferroviaire', 'Re 482 005 de CFF Cargo à Eschweiler', 'Re 482 005']
 });
 
 uebZug('re-484', {
@@ -62,7 +62,7 @@ uebZug('re-474', {
     { titel: 'Acquisition et utilisation', p: ['Les locomotives ont circulé à partir de 2005 en trafic marchandises Suisse–Italie. Le chiffre de 12 désigne la flotte de CFF Cargo de l’époque et n’est pas un effectif garanti pour octobre 2026.'] },
     { titel: 'Technique', p: ['La Re 474 relie le réseau suisse à courant alternatif au réseau italien à courant continu 3 kV. L’équipement multisystème et les systèmes nationaux de sécurité permettaient une circulation continue au-delà de la frontière.'] }
   ],
-  bilder: ['Re 474 près de Jestetten sur la ligne de Neuhausen', 'Re 474 014 à Domodossola', 'Re 474 013', 'Re 474 avec un train de marchandises à Gravellona Toce']
+  bilder: ['Re 474 013', 'Re 474 près de Jestetten sur la ligne de Neuhausen', 'Re 474 014 à Domodossola', 'Re 474 avec un train de marchandises à Gravellona Toce']
 });
 
 uebZug('re-193', {

@@ -255,7 +255,7 @@ uebZug('tpf-rabe-527', {
   kennzahlen: [['8', 'trains (191–198)'], ['160 km/h', 'top speed'], ['418', 'places in total'], ['2011', 'first in service']],
   daten: { 'Bauart': 'electric multiple unit, 4 cars', 'Gewicht': '122 t empty', 'Sitzplätze': '24 in 1st, 143 in 2nd class', 'Anzahl': '8 trains' },
   specNote: 'Entered service 2011–2014. Plus 42 folding seats and 209 standing places, 418 places in total.',
-  bilder: ['RABe 527 198 on the Grandfey viaduct', 'TPF FLIRT in Bulle', 'RABe 527 as RegioExpress in Bern', 'RABe 527 196 in Neuchâtel']
+  bilder: ['RABe 527 196 in Neuchâtel', 'RABe 527 198 on the Grandfey viaduct', 'TPF FLIRT in Bulle', 'RABe 527 as RegioExpress in Bern']
 });
 uebZug('tpf-rbde-560', {
   typ: 'Modernised regional push-pull train (Domino 3)',

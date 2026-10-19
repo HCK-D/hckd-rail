@@ -9,7 +9,7 @@ uebZug('re-482', {
     { titel: 'Acquisto e impiego', p: ['FFS Cargo ha introdotto la Re 482 dal 2002. Le locomotive hanno assunto treni merci internazionali verso la Germania e in parte l’Austria, oltre a servizi nel traffico merci svizzero.'] },
     { titel: 'Due serie', p: ['La panoramica della flotta distingue 35 Re 482.1 e 15 Re 482.2. Tecnicamente entrambe appartengono alla famiglia TRAXX; equipaggiamento e pacchetti nazionali variano secondo la serie.'] }
   ],
-  bilder: ['Re 482 023 di FFS Cargo con treno merci presso Erbach (Rheingau)', 'Re 482 con treno merci davanti a un ponte ferroviario', 'Re 482 005 di FFS Cargo a Eschweiler', 'Re 482 007 a Köln-Kalk Nord', 'Re 482 005']
+  bilder: ['Re 482 007 a Köln-Kalk Nord', 'Re 482 023 di FFS Cargo con treno merci presso Erbach (Rheingau)', 'Re 482 con treno merci davanti a un ponte ferroviario', 'Re 482 005 di FFS Cargo a Eschweiler', 'Re 482 005']
 });
 
 uebZug('re-484', {
@@ -62,7 +62,7 @@ uebZug('re-474', {
     { titel: 'Acquisto e impiego', p: ['Le locomotive hanno circolato dal 2005 nel traffico merci Svizzera–Italia. Il numero 12 indica la flotta FFS Cargo di allora e non è un effettivo garantito per ottobre 2026.'] },
     { titel: 'Tecnica', p: ['La Re 474 collega la rete svizzera a corrente alternata con la rete italiana a corrente continua a 3 kV. L’equipaggiamento multisistema e i sistemi nazionali di sicurezza permettevano un servizio continuo oltre confine.'] }
   ],
-  bilder: ['Re 474 presso Jestetten sulla linea per Neuhausen', 'Re 474 014 a Domodossola', 'Re 474 013', 'Re 474 con treno merci a Gravellona Toce']
+  bilder: ['Re 474 013', 'Re 474 presso Jestetten sulla linea per Neuhausen', 'Re 474 014 a Domodossola', 'Re 474 con treno merci a Gravellona Toce']
 });
 
 uebZug('re-193', {

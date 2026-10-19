@@ -255,7 +255,7 @@ uebZug('tpf-rabe-527', {
   kennzahlen: [['8', 'treni (191–198)'], ['160 km/h', 'velocità massima'], ['418', 'posti in totale'], ['2011', 'prima messa in servizio']],
   daten: { 'Bauart': 'elettrotreno, 4 casse', 'Gewicht': '122 t a vuoto', 'Sitzplätze': '24 in 1a, 143 in 2a classe', 'Anzahl': '8 treni' },
   specNote: 'Messi in servizio dal 2011 al 2014. Inoltre 42 strapontini e 209 posti in piedi, in totale 418 posti.',
-  bilder: ['RABe 527 198 sul viadotto di Grandfey', 'FLIRT delle TPF a Bulle', 'RABe 527 come RegioExpress a Berna', 'RABe 527 196 a Neuchâtel']
+  bilder: ['RABe 527 196 a Neuchâtel', 'RABe 527 198 sul viadotto di Grandfey', 'FLIRT delle TPF a Bulle', 'RABe 527 come RegioExpress a Berna']
 });
 uebZug('tpf-rbde-560', {
   typ: 'Treno navetta regionale ammodernato (Domino 3)',

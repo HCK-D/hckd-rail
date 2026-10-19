@@ -8,7 +8,7 @@
    nummern: Loknummern für die Suche, z. B. [[460000, 460118]] für 460 000–460 118 oder [[11101, 11349]] für alte Nummern
    ===================================================================== */
 const KATS = [
-  { id: 'personenverkehr', code: 'P', name: 'Personenverkehr', text: 'Fernverkehr, Regionalverkehr und S-Bahn: Hochgeschwindigkeits- und Doppelstockzüge, Triebzüge und Lokomotiven.', rep: 'rabe-501', bild: 'bilder/rabe-502-c2.jpg', bildPos: 'center 55%' },
+  { id: 'personenverkehr', code: 'P', name: 'Personenverkehr', text: 'Fernverkehr, Regionalverkehr und S-Bahn: Hochgeschwindigkeits- und Doppelstockzüge, Triebzüge und Lokomotiven.', rep: 'rabe-501', bild: 'bilder/rabe-502-c2.jpg', bildPos: 'center 82%' },
   { id: 'cargo', code: 'G', name: 'Cargo', text: 'Lokomotiven für den Güterverkehr im Inland und über die Alpen, inklusive Mehrsystemloks für den Verkehr ins Ausland.', rep: 're-482', bild: 'bilder/re620-2.jpg', bildPos: 'center 60%' },
   { id: 'infrastruktur', code: 'I', name: 'Infrastruktur', text: 'Fahrzeuge für Bau, Unterhalt und Logistik am Netz: Bauzuglokomotiven und Baudienstfahrzeuge.', rep: 'aem-940', gruppen: ['Lokomotiven und Traktoren', 'Schotter- und Kippwagen', 'Schienentransport', 'Werkstatt- und Mannschaftswagen'], bild: 'bilder/aem-940-c1.jpg', bildPos: 'center 62%' },
   { id: 'rangier', code: 'R', name: 'Rangierfahrzeuge', text: 'Lokomotiven und Traktoren für das Rangieren in Bahnhöfen, Abstellanlagen und Anschlussgleisen.', rep: 'eem-923', bild: 'bilder/ee-922-c3.jpg', bildPos: 'center 60%' },
@@ -407,10 +407,10 @@ const ZUEGE = [
     ],
     quellen: ['SBB Cargo – Flottenbroschüre mit zwei Serien und technischen Eckdaten', 'SBB Infrastruktur – Fahrtypenkatalog 2026, Fahrtyp Re 482, S. 77', 'SBB Cargo – Flottenstrategie und internationaler Einsatz'],
     art: { typ: 'lok', form: 'kantig', farbe: CRED, akzent: '#3A4047', panto: true }, bilder: [
+      { src: 'bilder/re-482-c4.jpg', titel: 'Re 482 007 in Köln-Kalk Nord', foto: 'Rolf Heinrich, Köln', lizenz: 'CC BY 3.0', lizenzUrl: 'https://creativecommons.org/licenses/by/3.0', quelle: 'https://commons.wikimedia.org/wiki/File:482_007-2_K%C3%B6ln-Kalk_Nord_2016-01-09-02.jpg' },
       { src: 'bilder/re-482-c1.jpg', titel: 'Re 482 023 von SBB Cargo mit Güterzug bei Erbach (Rheingau)', foto: 'Joachim Seyferth', lizenz: 'CC BY 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:482_023_der_SBB_Cargo_mit_G%C3%BCterzug_zwischen_Erbach_(Rh)_und_Hattenheim.jpg' },
       { src: 'bilder/re-482-c2.jpg', titel: 'Re 482 mit Güterzug vor einer Eisenbahnbrücke', foto: 'Smiley.toerist', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:Eisenbahnbr%C3%BCcke_approach_2023_5.jpg' },
       { src: 'bilder/re-482-c3.jpg', titel: 'Re 482 005 von SBB Cargo in Eschweiler', foto: 'InterCityImpress', lizenz: 'CC BY-SA 2.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/2.0', quelle: 'https://commons.wikimedia.org/wiki/File:482_005_-_SBB_Cargo_--_Eschweiler_-_M%C3%A4rz_2014_(13758340673).jpg' },
-      { src: 'bilder/re-482-c4.jpg', titel: 'Re 482 007 in Köln-Kalk Nord', foto: 'Rolf Heinrich, Köln', lizenz: 'CC BY 3.0', lizenzUrl: 'https://creativecommons.org/licenses/by/3.0', quelle: 'https://commons.wikimedia.org/wiki/File:482_007-2_K%C3%B6ln-Kalk_Nord_2016-01-09-02.jpg' },
       { src: 'bilder/re-482-c5.jpg', titel: 'Re 482 005', foto: 'Joachim Lutz', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:185.0DB_(SBB_482_005_A_W).jpg' }
     ] },
   { id: 're-484', kat: 'cargo', name: 'Re 484', beiname: 'TRAXX MS', typ: 'Elektrische Zweistromlokomotive', vorlaeufig: false,
@@ -489,9 +489,9 @@ const ZUEGE = [
     ],
     quellen: ['SBB Cargo – Flottenbroschüre mit Stückzahl und Hauptdaten', 'SBB Infrastruktur – Fahrtypenkatalog 2026, Fahrtyp Re 474, S. 75'],
     art: { typ: 'lok', form: 'kantig', farbe: CRED, akzent: '#D9DDE1', panto: true }, bilder: [
+      { src: 'bilder/re-474-c4.jpg', titel: 'Re 474 013', foto: 'Manfred Kopka', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:SBB_Re_474_013.jpg' },
       { src: 'bilder/re-474-c2.jpg', titel: 'Re 474 bei Jestetten auf der Strecke nach Neuhausen', foto: 'Kabelleger', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:SBB_Re_474_Jestetten_-_Neuhausen_Rheinfall.jpg' },
       { src: 'bilder/re-474-c3.jpg', titel: 'Re 474 014 in Domodossola', foto: 'NAC', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:FFS_Re_474_014_Domodossola_150609.jpg' },
-      { src: 'bilder/re-474-c4.jpg', titel: 'Re 474 013', foto: 'Manfred Kopka', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:SBB_Re_474_013.jpg' },
       { src: 'bilder/re-474-c5.jpg', titel: 'Re 474 mit Güterzug in Gravellona Toce', foto: 'Gabriele Fontana', lizenz: 'CC BY-SA 2.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/2.0', quelle: 'https://commons.wikimedia.org/wiki/File:Gravellona_Toce_(VB)_-_stazione_ferroviaria_-_treno_TEC_43609_Domodossola-Novara_Boschetto_-_SR_E_474.012_-_31-03-2011.jpg' }
     ] },
   { id: 're-193', kat: 'cargo', name: 'Re 193', beiname: 'Vectron', typ: 'Gemietete Siemens Vectron AC für den Binnengüterverkehr', vorlaeufig: false,
@@ -1165,9 +1165,9 @@ const ZUEGE = [
     ],
     quellen: ['SBB Infrastruktur – Qualitätsstandard Aus- und Weiterbildungen mit den Serienbeispielen Hubi, Krani und Combi 4A'],
     art: { typ: 'spezial', var: 'montage', farbe: YEL, akzent: '#2E3338' }, bilder: [
+      { src: 'bilder/fahrleitung-c3.jpg', titel: 'Kranwagen «Krani 3» mit Hubbühne für den Fahrleitungsbau', foto: 'Kecko from Eastern Switzerland', lizenz: 'CC BY 2.0', lizenzUrl: 'https://creativecommons.org/licenses/by/2.0', quelle: 'https://commons.wikimedia.org/wiki/File:SBB_Krani_3_-_Catenary_Construction_(50286160263).jpg' },
       { src: 'bilder/fahrleitung-c1.jpg', titel: 'Montagewagen des Combi XTmass 99 85 9236 051 bei Bad Ragaz', foto: 'Kecko from Eastern Switzerland', lizenz: 'CC BY 2.0', lizenzUrl: 'https://creativecommons.org/licenses/by/2.0', quelle: 'https://commons.wikimedia.org/wiki/File:SBB_-_Catenary_Construction_Train_(49094462641).jpg' },
-      { src: 'bilder/fahrleitung-c2.jpg', titel: 'Fahrleitungsbauzug Combi zwischen Bad Ragaz und Sargans, 2019', foto: 'Kecko from Eastern Switzerland', lizenz: 'CC BY 2.0', lizenzUrl: 'https://creativecommons.org/licenses/by/2.0', quelle: 'https://commons.wikimedia.org/wiki/File:SBB_-_Catenary_Construction_Train_(49094652767).jpg' },
-      { src: 'bilder/fahrleitung-c3.jpg', titel: 'Kranwagen «Krani 3» mit Hubbühne für den Fahrleitungsbau', foto: 'Kecko from Eastern Switzerland', lizenz: 'CC BY 2.0', lizenzUrl: 'https://creativecommons.org/licenses/by/2.0', quelle: 'https://commons.wikimedia.org/wiki/File:SBB_Krani_3_-_Catenary_Construction_(50286160263).jpg' }
+      { src: 'bilder/fahrleitung-c2.jpg', titel: 'Fahrleitungsbauzug Combi zwischen Bad Ragaz und Sargans, 2019', foto: 'Kecko from Eastern Switzerland', lizenz: 'CC BY 2.0', lizenzUrl: 'https://creativecommons.org/licenses/by/2.0', quelle: 'https://commons.wikimedia.org/wiki/File:SBB_-_Catenary_Construction_Train_(49094652767).jpg' }
     ] },
   // ---------- Historische Fahrzeuge (Katalogblatt folgt) ----------
   { id: 'h-ce68ii', kat: 'historisch', name: 'Ce 6/8 II', beiname: 'Krokodil', typ: 'Elektrische Güterzuglokomotive (historisch)',

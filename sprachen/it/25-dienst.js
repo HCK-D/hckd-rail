@@ -162,5 +162,5 @@ uebZug('fahrleitung', {
     { titel: 'Compiti', p: ['I veicoli supportano ispezione, eliminazione dei guasti e rinnovo della linea di contatto. Le piattaforme di lavoro danno accesso al filo di contatto; le gru sollevano pali, mensole e materiale.'] },
     { titel: 'Delimitazione', p: ['Questa pagina descrive il gruppo di veicoli. Per un ritratto tecnico individuale servono la designazione esatta della serie e il numero del veicolo, perché potenza, massa, lunghezza e anno di costruzione variano molto.'] }
   ],
-  bilder: ['Carro di montaggio del Combi XTmass 99 85 9236 051 presso Bad Ragaz', 'Treno di costruzione della linea di contatto Combi tra Bad Ragaz e Sargans, 2019', 'Carro gru «Krani 3» con piattaforma elevabile per la costruzione della linea di contatto']
+  bilder: ['Carro gru «Krani 3» con piattaforma elevabile per la costruzione della linea di contatto', 'Carro di montaggio del Combi XTmass 99 85 9236 051 presso Bad Ragaz', 'Treno di costruzione della linea di contatto Combi tra Bad Ragaz e Sargans, 2019']
 });

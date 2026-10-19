@@ -162,5 +162,5 @@ uebZug('fahrleitung', {
     { titel: 'Tasks', p: ['The vehicles support inspection, fault repair and renewal of the overhead line. Work platforms give access to the contact wire; cranes lift masts, cantilevers and material.'] },
     { titel: 'Scope', p: ['This page describes the vehicle group. A technical portrait of a single vehicle needs the exact series designation and vehicle number, because power, mass, length and year of construction vary widely.'] }
   ],
-  bilder: ['Installation car of the Combi XTmass 99 85 9236 051 near Bad Ragaz', 'Combi overhead line construction train between Bad Ragaz and Sargans, 2019', 'Crane wagon «Krani 3» with lifting platform for overhead line work']
+  bilder: ['Crane wagon «Krani 3» with lifting platform for overhead line work', 'Installation car of the Combi XTmass 99 85 9236 051 near Bad Ragaz', 'Combi overhead line construction train between Bad Ragaz and Sargans, 2019']
 });

@@ -1199,7 +1199,7 @@ uebZug('re-482', {
     { titel: 'Procurement and service', p: ['SBB Cargo introduced the Re 482 from 2002. The locomotives took over international freight trains to Germany and partly to Austria, as well as duties in Swiss freight traffic.'] },
     { titel: 'Two series', p: ['The fleet overview distinguishes 35 Re 482.1 and 15 Re 482.2. Technically both belong to the TRAXX family; equipment and country packages differ by series.'] }
   ],
-  bilder: ['SBB Cargo Re 482 023 with a freight train near Erbach (Rheingau)', 'Re 482 with a freight train in front of a railway bridge', 'SBB Cargo Re 482 005 in Eschweiler', 'Re 482 007 at Köln-Kalk Nord', 'Re 482 005']
+  bilder: ['Re 482 007 at Köln-Kalk Nord', 'SBB Cargo Re 482 023 with a freight train near Erbach (Rheingau)', 'Re 482 with a freight train in front of a railway bridge', 'SBB Cargo Re 482 005 in Eschweiler', 'Re 482 005']
 });
 
 uebZug('re-484', {
@@ -1252,7 +1252,7 @@ uebZug('re-474', {
     { titel: 'Procurement and service', p: ['The locomotives ran freight trains between Switzerland and Italy from 2005. The figure of 12 refers to the SBB Cargo fleet at that time and is not a confirmed fleet figure for October 2026.'] },
     { titel: 'Technology', p: ['The Re 474 links the Swiss AC network with the Italian 3 kV DC network. Multi-system equipment and national train protection systems made continuous cross-border operation possible.'] }
   ],
-  bilder: ['Re 474 near Jestetten on the line to Neuhausen', 'Re 474 014 in Domodossola', 'Re 474 013', 'Re 474 with a freight train in Gravellona Toce']
+  bilder: ['Re 474 013', 'Re 474 near Jestetten on the line to Neuhausen', 'Re 474 014 in Domodossola', 'Re 474 with a freight train in Gravellona Toce']
 });
 
 uebZug('re-193', {
@@ -1866,7 +1866,7 @@ uebZug('fahrleitung', {
     { titel: 'Tasks', p: ['The vehicles support inspection, fault repair and renewal of the overhead line. Work platforms give access to the contact wire; cranes lift masts, cantilevers and material.'] },
     { titel: 'Scope', p: ['This page describes the vehicle group. A technical portrait of a single vehicle needs the exact series designation and vehicle number, because power, mass, length and year of construction vary widely.'] }
   ],
-  bilder: ['Installation car of the Combi XTmass 99 85 9236 051 near Bad Ragaz', 'Combi overhead line construction train between Bad Ragaz and Sargans, 2019', 'Crane wagon «Krani 3» with lifting platform for overhead line work']
+  bilder: ['Crane wagon «Krani 3» with lifting platform for overhead line work', 'Installation car of the Combi XTmass 99 85 9236 051 near Bad Ragaz', 'Combi overhead line construction train between Bad Ragaz and Sargans, 2019']
 });
 
 /* ---- 26-historisch.js ---- */
@@ -2447,7 +2447,7 @@ uebZug('tpf-rabe-527', {
   kennzahlen: [['8', 'trains (191–198)'], ['160 km/h', 'top speed'], ['418', 'places in total'], ['2011', 'first in service']],
   daten: { 'Bauart': 'electric multiple unit, 4 cars', 'Gewicht': '122 t empty', 'Sitzplätze': '24 in 1st, 143 in 2nd class', 'Anzahl': '8 trains' },
   specNote: 'Entered service 2011–2014. Plus 42 folding seats and 209 standing places, 418 places in total.',
-  bilder: ['RABe 527 198 on the Grandfey viaduct', 'TPF FLIRT in Bulle', 'RABe 527 as RegioExpress in Bern', 'RABe 527 196 in Neuchâtel']
+  bilder: ['RABe 527 196 in Neuchâtel', 'RABe 527 198 on the Grandfey viaduct', 'TPF FLIRT in Bulle', 'RABe 527 as RegioExpress in Bern']
 });
 uebZug('tpf-rbde-560', {
   typ: 'Modernised regional push-pull train (Domino 3)',

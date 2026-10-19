@@ -1,6 +1,6 @@
 /* RailBase – Service Worker (automatisch erzeugt von werkzeuge\website-bauen.ps1) */
 'use strict';
-const V = 'hckd-20261019234208';
+const V = 'hckd-20261020000823';
 self.addEventListener('install', e => {
   // cache: 'reload' = directly from the server, never an older copy from the browser cache
   e.waitUntil(caches.open(V).then(c => c.addAll(['./', 'index.html', 'manifest.webmanifest'].map(u => new Request(u, { cache: 'reload' })))).then(() => self.skipWaiting()));

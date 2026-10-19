@@ -21,10 +21,10 @@ ZUEGE.push(
     quellen: ['TPF – Flotte: Flirt 190, technische Daten', 'Datenblatt HCKD «RABe 527 – FLIRT, Serie 190», Oktober 2026'],
     art: { typ: 'triebzug', nase: 'mittel', farbe: W1, akzent: TPF_BLAU, tuer: TPF_BLAU, panto: true },
     bilder: [
+      { src: 'bilder/tpf-rabe-527-c4.jpg', titel: 'RABe 527 196 in Neuchâtel', foto: 'flybyeigenheer', lizenz: 'CC BY-SA 2.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/2.0', quelle: 'https://commons.wikimedia.org/wiki/File:TPF_Flirt_RABe_527_196_-_Neuch%C3%A2tel_(28541258102).jpg' },
       { src: 'bilder/tpf-rabe-527-c1.jpg', titel: 'RABe 527 198 auf dem Grandfey-Viadukt', foto: 'Kabelleger / David Gubler', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:TPF_RABe_527_198_Viaduc_de_Grandfey.jpg' },
       { src: 'bilder/tpf-rabe-527-c2.jpg', titel: 'FLIRT der TPF in Bulle', foto: 'Plutowiki', lizenz: 'CC0', lizenzUrl: 'https://creativecommons.org/publicdomain/zero/1.0/', quelle: 'https://commons.wikimedia.org/wiki/File:TPF_Flirt_Bulle.jpg' },
-      { src: 'bilder/tpf-rabe-527-c3.jpg', titel: 'RABe 527 als RegioExpress in Bern', foto: 'Remontees', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:Tpf-rabe-527-RE-Bern.jpg' },
-      { src: 'bilder/tpf-rabe-527-c4.jpg', titel: 'RABe 527 196 in Neuchâtel', foto: 'flybyeigenheer', lizenz: 'CC BY-SA 2.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/2.0', quelle: 'https://commons.wikimedia.org/wiki/File:TPF_Flirt_RABe_527_196_-_Neuch%C3%A2tel_(28541258102).jpg' }
+      { src: 'bilder/tpf-rabe-527-c3.jpg', titel: 'RABe 527 als RegioExpress in Bern', foto: 'Remontees', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:Tpf-rabe-527-RE-Bern.jpg' }
     ] },
   { id: 'tpf-rbde-560', kat: 'personenverkehr', name: 'RBDe 560', beiname: 'Domino', typ: 'Modernisierter Regional-Pendelzug (Domino 3)', bahn: 'tpf', vorlaeufig: false,
     text: ['Die TPF hat ihre NPZ-Pendelzüge von 2009 bis 2011 zu dreiteiligen Domino umgebaut. Jeder Zug erhielt einen neuen Niederflur-Zwischenwagen von Bombardier.', 'Zwei Züge, die 235 und die 245, sind als «Chocolat Express» gestaltet.'],

@@ -9,7 +9,7 @@ uebZug('re-482', {
     { titel: 'Procurement and service', p: ['SBB Cargo introduced the Re 482 from 2002. The locomotives took over international freight trains to Germany and partly to Austria, as well as duties in Swiss freight traffic.'] },
     { titel: 'Two series', p: ['The fleet overview distinguishes 35 Re 482.1 and 15 Re 482.2. Technically both belong to the TRAXX family; equipment and country packages differ by series.'] }
   ],
-  bilder: ['SBB Cargo Re 482 023 with a freight train near Erbach (Rheingau)', 'Re 482 with a freight train in front of a railway bridge', 'SBB Cargo Re 482 005 in Eschweiler', 'Re 482 007 at Köln-Kalk Nord', 'Re 482 005']
+  bilder: ['Re 482 007 at Köln-Kalk Nord', 'SBB Cargo Re 482 023 with a freight train near Erbach (Rheingau)', 'Re 482 with a freight train in front of a railway bridge', 'SBB Cargo Re 482 005 in Eschweiler', 'Re 482 005']
 });
 
 uebZug('re-484', {
@@ -62,7 +62,7 @@ uebZug('re-474', {
     { titel: 'Procurement and service', p: ['The locomotives ran freight trains between Switzerland and Italy from 2005. The figure of 12 refers to the SBB Cargo fleet at that time and is not a confirmed fleet figure for October 2026.'] },
     { titel: 'Technology', p: ['The Re 474 links the Swiss AC network with the Italian 3 kV DC network. Multi-system equipment and national train protection systems made continuous cross-border operation possible.'] }
   ],
-  bilder: ['Re 474 near Jestetten on the line to Neuhausen', 'Re 474 014 in Domodossola', 'Re 474 013', 'Re 474 with a freight train in Gravellona Toce']
+  bilder: ['Re 474 013', 'Re 474 near Jestetten on the line to Neuhausen', 'Re 474 014 in Domodossola', 'Re 474 with a freight train in Gravellona Toce']
 });
 
 uebZug('re-193', {
