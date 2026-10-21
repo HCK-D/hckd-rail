@@ -102,7 +102,7 @@ uebZug('rabe-514', {
 uebZug('rabe-523', {
   typ: 'Rame automotrice régionale électrique de Stadler',
   text: ['Le RABe 523 à quatre caisses a été le premier FLIRT des CFF. Il a été développé pour le Stadtbahn de Zoug et est entré en service commercial en 2004.', 'La série fait partie de la grande famille FLIRT, qui circule en plusieurs versions.'],
-  kennzahlen: [['2004', 'première mise en service'], ['98*', 'véhicules selon les séries de numéros'], ['2656 kW', 'puissance'], ['74,08 m', 'longueur']],
+  kennzahlen: [['2004', 'première mise en service'], ['98*', 'véhicules selon les séries de numéros'], ['2656 kW', 'puissance'], ['73,5–74,1 m', 'longueur']],
   daten: { 'Bauart': 'rame automotrice électrique', 'Grundtyp': '4 voitures', 'Einstieg': 'à plancher bas', 'Höchstgeschwindigkeit': '160 km/h (famille FLIRT selon les CFF)', 'Erste Region': 'Stadtbahn de Zoug', 'Einsatz': 'trafic régional, RER', 'Anzahl': '98* (selon les séries de numéros)' },
   specNote: '* Le chiffre de 98 découle des séries de numéros publiées 001–073, 101–114 et 501–511 ; il n’existe pas d’indication d’effectif actuelle confirmée séparément par les CFF. Les 160 km/h sont indiqués par les CFF pour l’ensemble de la famille FLIRT régionale.',
   abschnitte: [
@@ -110,6 +110,17 @@ uebZug('rabe-523', {
       { titel: 'Utilisation et technique', p: ['Selon les CFF, les FLIRT circulent en RER notamment dans les cantons d’Argovie, de Soleure, de Lucerne, de Bâle, de Neuchâtel, de Fribourg et de Vaud.', 'Selon la version, les trains mesurent 75 à 105 m et offrent 156 à 236 places assises. Ils roulent jusqu’à 160 km/h.'] },
       { titel: 'Équipement et accessibilité', liste: ['Accès à plancher bas', 'Places pour fauteuils roulants et WC accessible', 'Sièges prioritaires', 'Table à langer (seulement dans une partie des trains)', 'Prises en 1re classe', 'Places pour vélos, poussettes et bagages'],
         p: ['Ces indications valent pour la famille FLIRT des CFF ; les détails varient selon la version.'] },
+      { titel: 'Les séries en comparaison', tabelle: { kopf: ['Numéros', 'Nombre', 'Construction', 'Longueur', 'Poids', 'Première affectation'], zeilen: [
+        ['001–012', '12', '2004–2005', '74,1 m', '120 t', 'Stadtbahn de Zoug'],
+        ['013–031', '19', '2009–2010', '74,1 m', '120 t', 'RER Vaud'],
+        ['032–043', '12', '2009–2010', '74,1 m', '120 t', 'Suisse centrale, transformés à partir de RABe 522'],
+        ['044–056', '13', '2012–2013', '74,1 m', '120 t', 'RegiOlten'],
+        ['057–066', '10', '2015–2016', '74,1 m', '127 t', 'RegiOlten'],
+        ['067–073', '7', '2017', '74,1 m', '127 t', 'RegiOlten'],
+        ['074–077', '4', '2017', '74,1 m', '127 t', 'transN, hors effectif CFF'],
+        ['101–114', '14', '2020–2021', '73,5 m', '160 t', 'RER Vaud (FLIRT 3)'],
+        ['501–511', '11', '2022–2024', '73,5 m (CFF : env. 75 m)', '160 t', '«Mouette», grandes lignes, 181 places assises']] },
+        hinweis: 'Longueurs et poids selon passiontrain.ch, arrondis ; les poids y sont indiqués comme masse totale. Les affectations valent pour la mise en service et peuvent changer.' },
       { titel: 'Bien interpréter le nombre', p: ['Le chiffre publié de 209 englobe tous les FLIRT des CFF utilisés en trafic régional, y compris d’autres séries et versions.', 'Pour le seul RABe 523, les séries de numéros publiées 001–073, 101–114 et 501–511 donnent ensemble 98 véhicules. Il s’agit d’une déduction à partir des numéros, et non d’une indication officielle d’effectif des CFF.'] }
     ],
   bilder: ['RABe 523 001 à Muttenz', 'RABe 523 019', 'RABe 523 024 à Montreux', 'RABe 523 018 à Yverdon-les-Bains', 'RABe 523 038']
@@ -178,14 +189,14 @@ uebZug('rabe-503', {
 
 uebZug('re-450', {
   abschnitte: [
-      { titel: 'Constructeur et constitution de la flotte', p: ['SLM et ABB ont construit les 115 Re 450 pour les trains navettes à deux niveaux (DPZ) du RER zurichois. Les voitures à deux niveaux ont été livrées par SLM et Schindler Waggon ; le premier DPZ a circulé en 1989, un an avant le lancement du RER en mai 1990.', 'Jusqu’en 1998, 113 rames réversibles ont été construites. Elles ont été rénovées de 2011 à 2018.'] },
+      { titel: 'Constructeur et constitution de la flotte', p: ['SLM et ABB ont construit les 115 Re 450 pour les trains navettes à deux niveaux (DPZ) du RER zurichois. Les voitures à deux niveaux ont été livrées par SLM et Schindler Waggon ; le premier DPZ a circulé en 1989, un an avant le lancement du RER en mai 1990.', 'Au total, 115 rames ont été construites jusqu’en 1998. 113 circulent aujourd’hui aux CFF ; deux ont été reprises en 2008 par le Sihltal Zürich Uetliberg Bahn (SZU). Les rames ont été rénovées de 2011 à 2018.'] },
       { titel: 'Utilisation et technique', p: ['Les DPZ forment l’épine dorsale du RER zurichois et peuvent circuler sur presque tout le réseau du ZVV. Un train mesure 98,8 m, offre 345 places assises et roule jusqu’à 130 km/h.', 'Une rame comprend la Re 450, des voitures à deux niveaux et une voiture-pilote, si bien qu’il ne faut pas déplacer la locomotive au terminus.'] },
       { titel: 'Équipement et accessibilité', liste: ['Climatisation', 'Système d’information à la clientèle', 'Prises en 1re classe', 'Amplificateur de signal mobile', 'Compartiment multifonction avec places pour vélos', 'Places pour poussettes', 'Accès de plain-pied dans la voiture à plancher bas (NDW)', 'Places pour fauteuils roulants et WC accessible', 'Sièges prioritaires'],
         p: ['Les personnes en fauteuil roulant montent sans marche dans la voiture à plancher bas NDW, intégrée aux rames.'] }
     ],
   typ: 'Locomotive des trains navettes à deux niveaux',
   text: ['La Re 450 tire et pousse les trains navettes à deux niveaux (DPZ) du RER zurichois.', 'Les trains navettes se composent de la locomotive, de voitures à deux niveaux et d’une voiture-pilote.'],
-  daten: { 'Einsatz': 'RER zurichois' },
+  daten: { 'Einsatz': 'RER zurichois', 'Anzahl': '115 construites, dont 113 aux CFF et 2 au SZU' },
   bilder: ['Re 450 021 avec la S24 à Zurich HB', 'Re 450 059 à Zurich HB', 'Re 450 033 à Turgi, 1993', 'Re 450 022 à Niederweningen, 1991', 'Re 450 avec la S5 sur la digue de Rapperswil']
 });
 
@@ -221,11 +232,11 @@ uebZug('rabe-520', {
 uebZug('rabe-521', {
   typ: 'FLIRT monocourant homologué en Suisse et en Allemagne',
   text: ['Le RABe 521 est un FLIRT de quatre caisses pour les liaisons régionales transfrontalières entre le nord-ouest de la Suisse et l’Allemagne.', 'Il constitue une part importante du RER trinational de Bâle et circule aussi sur le Seehas.'],
-  kennzahlen: [['39', 'rames'], ['160 km/h', 'vitesse maximale'], ['2004', 'première mise en service'], ['74,08 m', 'longueur']],
+  kennzahlen: [['39', 'rames'], ['160 km/h', 'vitesse maximale'], ['2005', 'première mise en service voyageurs'], ['74,08 m', 'longueur']],
   daten: { 'Zugbildung': '4 voitures', 'Gewicht': '120 t à vide, 152 t en charge', 'Leistung': '2656 kW (valeur du type de marche FOS)', 'Nummern': '521 001–030 et 201–209', 'Einsatz': 'RER de Bâle, Seehas, Suisse–Allemagne' },
   specNote: 'Le catalogue des types de marche des CFF regroupe sous ce type d’autres variantes FLIRT à quatre caisses techniquement proches ; la puissance est donc indiquée comme valeur du type.',
   abschnitte: [
-      { titel: 'Constructeur et constitution de la flotte', p: ['Stadler a développé la plateforme FLIRT à l’origine pour les CFF. La série RABe 521 compte 30 véhicules numérotés 521 001–030 et neuf autres 521 201–209, soit 39 trains. Les premiers ont circulé en 2004.'] },
+      { titel: 'Constructeur et constitution de la flotte', p: ['Stadler a développé la plateforme FLIRT à l’origine pour les CFF. La série RABe 521 compte 30 véhicules numérotés 521 001–030 et neuf autres 521 201–209, soit 39 trains. Les livraisons ont commencé mi-2005 ; les premiers sont entrés en service voyageurs la même année. Les neuf véhicules 521 201–209 pour le Seehas ont suivi.'] },
       { titel: 'Utilisation et technique', p: ['Les RABe 521 circulent surtout sur le RER trinational de Bâle et sur des liaisons transfrontalières vers l’Allemagne.', 'Des attelages automatiques permettent l’unité multiple avec des FLIRT compatibles. Les FLIRT des CFF roulent jusqu’à 160 km/h.'] },
       { titel: 'Équipement et accessibilité', liste: ['Accès à plancher bas', 'Places pour fauteuils roulants et WC accessible', 'Sièges prioritaires', 'Prises en 1re classe', 'Espaces multifonctions pour vélos et poussettes', 'Porte-bagages'],
         p: ['Les accès bas et les espaces multifonctions accélèrent l’échange des voyageurs. Ces indications valent pour la famille FLIRT des CFF.'] }
@@ -290,7 +301,7 @@ uebZug('ew-iv', {
   specNote: 'Le chiffre de 496 est une valeur historique et non l’effectif actuel : ventes, transformations et retraits ont réduit la flotte.',
   abschnitte: [
       { titel: 'Constructeur et constitution de la flotte', p: ['Les voitures unifiées IV ont été construites par SIG, SWS, SWP et SWA. Les 40 premières voitures climatisées de 1re classe sont arrivées en 1981 ; 540 ont été construites au total, dont 496 pour les CFF. Les voitures EuroCity ont suivi en 1989, les voitures-pilotes en 1997.', 'Entre 2019 et 2025, les CFF ont remis en état plus de 250 voitures EW IV et EuroCity : protection anticorrosion, nouvelle peinture et fenêtres laissant passer le signal mobile. Les voitures-pilotes sont modernisées jusqu’à fin 2027.'] },
-      { titel: 'Utilisation et technique', p: ['Les voitures circulent en compositions EC, IC et IR, le plus souvent avec une Re 460 et une voiture-pilote. Les axes typiques vont de Genève à Brigue, de Bâle à Lugano et de Zurich par Olten à Berne. Certaines voitures EC circulent aussi dans des trains internationaux de jour et de nuit.', 'Une voiture mesure 26,4 m et est autorisée à 200 km/h ; elle offre 60 places en 1re ou jusqu’à 86 en 2e classe.'] },
+      { titel: 'Utilisation et technique', p: ['Les voitures circulent en compositions EC, IC et IR, le plus souvent avec une Re 460 et une voiture-pilote. Les axes typiques vont de Genève à Brigue, de Bâle à Lugano et de Zurich par Olten à Berne. Les voitures unifiées IV classiques circulent aujourd’hui surtout en Suisse ; à l’international, ce sont surtout les voitures EuroCity des CFF qui circulent, aussi dans des trains de jour et de nuit.', 'Une voiture mesure 26,4 m et est autorisée à 200 km/h ; elle offre 60 places en 1re ou jusqu’à 86 en 2e classe.'] },
       { titel: 'Équipement et accessibilité', liste: ['Prises électriques', 'Zone famille', 'Zone de silence en 1re classe (InterCity)', 'Voiture-restaurant (EuroCity)', 'Places pour vélos et voitures à vélos dédiées', 'Places pour fauteuils roulants et WC accessible', 'Sièges prioritaires'],
         p: ['Les voitures ne sont pas à plancher bas. Des places pour fauteuils roulants et un WC accessible sont disponibles.'] }
     ],

@@ -147,8 +147,8 @@ const ZUEGE = [
     ] },
   { id: 'rabe-523', kat: 'personenverkehr', name: 'RABe 523', beiname: 'FLIRT', typ: 'Elektrischer Regionaltriebzug von Stadler', vorlaeufig: false,
     text: ['Der vierteilige RABe 523 war der erste FLIRT für die SBB. Er wurde für die Stadtbahn Zug entwickelt und ging 2004 in den Fahrgasteinsatz.', 'Die Baureihe gehört zur grösseren FLIRT-Familie, die in mehreren Ausführungen verkehrt.'],
-    kennzahlen: [['2004', 'erster Einsatz'], ['98*', 'Fahrzeuge gemäss Nummernreihen'], ['2656 kW', 'Leistung'], ['74,08 m', 'Länge']],
-    daten: { 'Bauart': 'Elektrotriebzug', 'Fahrzeugfamilie': 'FLIRT', 'Grundtyp': '4 Wagen', 'Einstieg': 'niederflurig', 'Hersteller': 'Stadler', 'Spurweite': 'Normalspur, 1435 mm', 'Stromsystem': '15 kV 16,7 Hz', 'Länge': '74,08 m', 'Gewicht': '120 t', 'Leistung': '2656 kW', 'Höchstgeschwindigkeit': '160 km/h (FLIRT-Familie laut SBB)', 'Erste Region': 'Stadtbahn Zug', 'Einsatz': 'Regionalverkehr, S-Bahn', 'Anzahl': '98* (gemäss Nummernreihen)', 'In Betrieb seit': '2004' },
+    kennzahlen: [['2004', 'erster Einsatz'], ['98*', 'Fahrzeuge gemäss Nummernreihen'], ['2656 kW', 'Leistung'], ['73,5–74,1 m', 'Länge']],
+    daten: { 'Bauart': 'Elektrotriebzug', 'Fahrzeugfamilie': 'FLIRT', 'Grundtyp': '4 Wagen', 'Einstieg': 'niederflurig', 'Hersteller': 'Stadler', 'Spurweite': 'Normalspur, 1435 mm', 'Stromsystem': '15 kV 16,7 Hz', 'Länge': '73,5–74,1 m', 'Gewicht': '120–160 t', 'Leistung': '2656 kW', 'Höchstgeschwindigkeit': '160 km/h (FLIRT-Familie laut SBB)', 'Erste Region': 'Stadtbahn Zug', 'Einsatz': 'Regionalverkehr, S-Bahn', 'Anzahl': '98* (gemäss Nummernreihen)', 'In Betrieb seit': '2004' },
     specOrder: ['Bauart', 'Fahrzeugfamilie', 'Grundtyp', 'Einstieg', 'Hersteller', 'Spurweite', 'Stromsystem', 'Länge', 'Gewicht', 'Leistung', 'Höchstgeschwindigkeit', 'Erste Region', 'Einsatz', 'Anzahl', 'In Betrieb seit'],
     specNote: '* Die 98 ergeben sich aus den veröffentlichten Nummernreihen 001–073, 101–114 und 501–511; eine separat bestätigte aktuelle SBB-Bestandsmeldung gibt es nicht. Die 160 km/h nennt die SBB für die ganze Regional-FLIRT-Familie.',
     abschnitte: [
@@ -156,9 +156,20 @@ const ZUEGE = [
       { titel: 'Einsatz und Technik', p: ['FLIRT fahren laut SBB als S-Bahn unter anderem in den Kantonen Aargau, Solothurn, Luzern, Basel, Neuenburg, Freiburg und Waadt.', 'Je nach Ausführung sind die Züge 75 bis 105 m lang und bieten 156 bis 236 Sitzplätze. Sie fahren bis 160 km/h.'] },
       { titel: 'Ausstattung und Zugänglichkeit', liste: ['Niederflureinstieg', 'Rollstuhlplätze und rollstuhlgängiges WC', 'Vorrangsitze', 'Wickeltisch (nur in einem Teil der Züge)', 'Steckdosen in der 1. Klasse', 'Velo-, Kinderwagen- und Gepäckplätze'],
         p: ['Die Angaben gelten für die FLIRT-Familie der SBB; Details unterscheiden sich nach Ausführung.'] },
+      { titel: 'Serien im Vergleich', tabelle: { kopf: ['Nummern', 'Anzahl', 'Baujahre', 'Länge', 'Gewicht', 'Erster Einsatz'], zeilen: [
+        ['001–012', '12', '2004–2005', '74,1 m', '120 t', 'Stadtbahn Zug'],
+        ['013–031', '19', '2009–2010', '74,1 m', '120 t', 'RER Vaud'],
+        ['032–043', '12', '2009–2010', '74,1 m', '120 t', 'Zentralschweiz, umgebaut aus RABe 522'],
+        ['044–056', '13', '2012–2013', '74,1 m', '120 t', 'RegiOlten'],
+        ['057–066', '10', '2015–2016', '74,1 m', '127 t', 'RegiOlten'],
+        ['067–073', '7', '2017', '74,1 m', '127 t', 'RegiOlten'],
+        ['074–077', '4', '2017', '74,1 m', '127 t', 'transN, nicht in der SBB-Zählung'],
+        ['101–114', '14', '2020–2021', '73,5 m', '160 t', 'RER Vaud (FLIRT 3)'],
+        ['501–511', '11', '2022–2024', '73,5 m (SBB: rund 75 m)', '160 t', '«Mouette», Fernverkehr, 181 Sitzplätze']] },
+        hinweis: 'Längen und Gewichte nach passiontrain.ch, gerundet; die Gewichte sind dort als Gesamtmasse angegeben. Die Einsatzgebiete gelten für die Zeit der Inbetriebnahme und können sich ändern.' },
       { titel: 'Stückzahl richtig einordnen', p: ['Die veröffentlichte Zahl von 209 umfasst sämtliche im Regionalverkehr eingesetzten FLIRT der SBB, darunter weitere Baureihen und Ausführungen.', 'Für den RABe 523 allein ergeben die veröffentlichten Nummernreihen 001–073, 101–114 und 501–511 zusammen 98 Fahrzeuge. Das ist eine Herleitung aus den Nummern, keine offizielle aktuelle Bestandsmeldung der SBB.'] }
     ],
-    quellen: ['SBB – FLIRT: Familienflotte, technische Spannbreiten und Einsatz', 'Stadler – Mitteilung zur FLIRT-Entwicklung, S. 2 (RABe 523 ab 2004)', 'SBB Infrastruktur – Fahrtypenkatalog 2026, technische Daten RABe 523', 'SBB – FLIRT-Familie der SBB, Nummernreihen'],
+    quellen: ['SBB – FLIRT: Familienflotte, technische Spannbreiten und Einsatz', 'Stadler – Mitteilung zur FLIRT-Entwicklung, S. 2 (RABe 523 ab 2004)', 'SBB Infrastruktur – Fahrtypenkatalog 2026, technische Daten RABe 523', 'SBB – FLIRT-Familie der SBB, Nummernreihen', 'passiontrain.ch – Serien des RABe 523 mit Längen und Gewichten, August 2026', 'SBB – Mouette: 11 Züge, 181 Sitzplätze', 'transN – Flotte Normalspur: vier RABe 523'],
     art: { typ: 'triebzug', nase: 'mittel', farbe: W1, akzent: RED, tuer: RED, panto: true }, bilder: [
       { src: 'bilder/rabe-523-c1.jpg', titel: 'RABe 523 001 in Muttenz', foto: 'The Nikon User', lizenz: 'CC BY 2.0', lizenzUrl: 'https://creativecommons.org/licenses/by/2.0', quelle: 'https://commons.wikimedia.org/wiki/File:523_001_Muttenz.jpg' },
       { src: 'bilder/rabe-523-c2.jpg', titel: 'RABe 523 019', foto: 'Alex Noble', lizenz: 'CC0', lizenzUrl: 'http://creativecommons.org/publicdomain/zero/1.0/deed.en', quelle: 'https://commons.wikimedia.org/wiki/File:20221007_SBB_523019.jpg' },
@@ -254,14 +265,14 @@ const ZUEGE = [
     ] },
   { id: 're-450', kat: 'personenverkehr', name: 'Re 450', beiname: 'DPZ', typ: 'Lokomotive der Doppelstock-Pendelzüge',
     text: ['Die Re 450 zieht und schiebt die doppelstöckigen Pendelzüge (DPZ) der Zürcher S-Bahn.', 'Die Pendelzüge bestehen aus der Lok, Doppelstockwagen und einem Steuerwagen.'],
-    daten: { 'Hersteller': 'SLM / ABB', 'Achsfolge': 'Bo′Bo′', 'Höchstgeschwindigkeit': '130 km/h', 'Anzahl': '115', 'In Betrieb seit': '1989', 'Einsatz': 'S-Bahn Zürich' },
+    daten: { 'Hersteller': 'SLM / ABB', 'Achsfolge': 'Bo′Bo′', 'Höchstgeschwindigkeit': '130 km/h', 'Anzahl': '115 gebaut, davon 113 bei der SBB und 2 bei der SZU', 'In Betrieb seit': '1989', 'Einsatz': 'S-Bahn Zürich' },
     abschnitte: [
-      { titel: 'Hersteller und Flottenaufbau', p: ['SLM und ABB bauten die 115 Re 450 für die doppelstöckigen Pendelzüge (DPZ) der Zürcher S-Bahn. Die Doppelstockwagen lieferten SLM und Schindler Waggon; der erste DPZ fuhr 1989, ein Jahr vor dem Start der S-Bahn im Mai 1990.', 'Bis 1998 entstanden 113 Pendelzüge. Von 2011 bis 2018 wurden sie erneuert.'] },
+      { titel: 'Hersteller und Flottenaufbau', p: ['SLM und ABB bauten die 115 Re 450 für die doppelstöckigen Pendelzüge (DPZ) der Zürcher S-Bahn. Die Doppelstockwagen lieferten SLM und Schindler Waggon; der erste DPZ fuhr 1989, ein Jahr vor dem Start der S-Bahn im Mai 1990.', 'Gebaut wurden bis 1998 insgesamt 115 Pendelzüge. 113 fahren heute bei der SBB; zwei übernahm 2008 die Sihltal-Zürich-Uetliberg-Bahn (SZU). Von 2011 bis 2018 wurden die Züge erneuert.'] },
       { titel: 'Einsatz und Technik', p: ['Die DPZ bilden das Rückgrat der Zürcher S-Bahn und können auf fast dem ganzen Netz des ZVV fahren. Ein Zug ist 98,8 m lang, bietet 345 Sitzplätze und fährt bis 130 km/h.', 'Ein Pendelzug besteht aus der Re 450, Doppelstockwagen und einem Steuerwagen, sodass am Endbahnhof die Lok nicht umgesetzt werden muss.'] },
       { titel: 'Ausstattung und Zugänglichkeit', liste: ['Klimaanlage', 'Kundeninformationssystem', 'Steckdosen in der 1. Klasse', 'Mobilfunkverstärker', 'Multifunktionsabteil mit Veloplätzen', 'Kinderwagenplätze', 'Ebenerdiger Einstieg im Niederflur-Doppelstockwagen (NDW)', 'Rollstuhlplätze und rollstuhlgängiges WC', 'Vorrangsitze'],
         p: ['Stufenlos einsteigen können Rollstuhlfahrende im Niederflurwagen NDW, der in den Pendelzügen eingereiht ist.'] }
     ],
-    quellen: ['SBB – DPZ: Flotte, Kenndaten, Ausstattung und Zugänglichkeit'],
+    quellen: ['SBB – DPZ: Flotte, Kenndaten, Ausstattung und Zugänglichkeit', 'Wikipedia – Sihltal-Zürich-Uetliberg-Bahn: Übernahme von zwei DPZ 2008'],
     art: { typ: 'lok', form: 'kantig', kurz: true, farbe: W1, akzent: RED, panto: true }, bilder: [
       { src: 'bilder/re-450-c1.jpg', titel: 'Re 450 021 mit S24 in Zürich HB', foto: 'S5A-0043', lizenz: 'CC BY 2.0', lizenzUrl: 'https://creativecommons.org/licenses/by/2.0', quelle: 'https://commons.wikimedia.org/wiki/File:(CHE-Zurich)_SBB_CFF_FFS_450021_S24_@_Zurich_HB_2023-11-20.jpg' },
       { src: 'bilder/re-450-c2.jpg', titel: 'Re 450 059 in Zürich HB', foto: 'S5A-0043', lizenz: 'CC BY 2.0', lizenzUrl: 'https://creativecommons.org/licenses/by/2.0', quelle: 'https://commons.wikimedia.org/wiki/File:(CHE-Zurich)_SBB_CFF_FFS_450059_S24_@_Zurich_HB_2023-11-22.jpg' },
@@ -313,17 +324,17 @@ const ZUEGE = [
   { id: 'rabe-521', kat: 'personenverkehr', name: 'RABe 521', beiname: 'FLIRT', typ: 'Einsystem-FLIRT mit Zulassung für die Schweiz und Deutschland', vorlaeufig: false,
     nummern: [[521001, 521030], [521201, 521209]],
     text: ['Der RABe 521 ist ein vierteiliger FLIRT für grenzüberschreitende Regionalverbindungen zwischen der Nordwestschweiz und Deutschland.', 'Er bildet einen wichtigen Teil der Regio-S-Bahn Basel und fährt auch im Seehas-Verkehr.'],
-    kennzahlen: [['39', 'Züge'], ['160 km/h', 'Höchstgeschwindigkeit'], ['2004', 'erster Einsatz'], ['74,08 m', 'Länge']],
-    daten: { 'Hersteller': 'Stadler', 'Zugbildung': '4 Wagen', 'Spurweite': 'Normalspur, 1435 mm', 'Stromsystem': '15 kV 16,7 Hz AC', 'Länge': '74,08 m', 'Gewicht': '120 t leer, 152 t beladen', 'Leistung': '2656 kW (FOS-Fahrtypwert)', 'Anfahrzugkraft': '200 kN', 'Höchstgeschwindigkeit': '160 km/h', 'Niederflureinstieg': 'ja', 'Nummern': '521 001–030 und 201–209', 'Anzahl': '39', 'In Betrieb seit': '2004', 'Einsatz': 'S-Bahn Basel, Seehas, Schweiz–Deutschland' },
+    kennzahlen: [['39', 'Züge'], ['160 km/h', 'Höchstgeschwindigkeit'], ['2005', 'erster Fahrgasteinsatz'], ['74,08 m', 'Länge']],
+    daten: { 'Hersteller': 'Stadler', 'Zugbildung': '4 Wagen', 'Spurweite': 'Normalspur, 1435 mm', 'Stromsystem': '15 kV 16,7 Hz AC', 'Länge': '74,08 m', 'Gewicht': '120 t leer, 152 t beladen', 'Leistung': '2656 kW (FOS-Fahrtypwert)', 'Anfahrzugkraft': '200 kN', 'Höchstgeschwindigkeit': '160 km/h', 'Niederflureinstieg': 'ja', 'Nummern': '521 001–030 und 201–209', 'Anzahl': '39', 'In Betrieb seit': '2005', 'Einsatz': 'S-Bahn Basel, Seehas, Schweiz–Deutschland' },
     specOrder: ['Hersteller', 'Zugbildung', 'Spurweite', 'Stromsystem', 'Länge', 'Gewicht', 'Leistung', 'Anfahrzugkraft', 'Höchstgeschwindigkeit', 'Niederflureinstieg', 'Nummern', 'Anzahl', 'In Betrieb seit', 'Einsatz'],
     specNote: 'Der SBB-Fahrtypenkatalog fasst unter diesem Fahrtyp auch technisch ähnliche vierteilige FLIRT-Varianten zusammen; die Leistung ist deshalb als Fahrtypwert angegeben.',
     abschnitte: [
-      { titel: 'Hersteller und Flottenaufbau', p: ['Stadler entwickelte die FLIRT-Plattform ursprünglich für die SBB. Die Baureihe RABe 521 umfasst 30 Fahrzeuge mit den Nummern 521 001–030 und neun weitere 521 201–209, zusammen 39 Züge. Die ersten fuhren 2004.'] },
+      { titel: 'Hersteller und Flottenaufbau', p: ['Stadler entwickelte die FLIRT-Plattform ursprünglich für die SBB. Die Baureihe RABe 521 umfasst 30 Fahrzeuge mit den Nummern 521 001–030 und neun weitere 521 201–209, zusammen 39 Züge. Die Auslieferung begann Mitte 2005; im selben Jahr gingen die ersten in den Fahrgastbetrieb. Die neun Fahrzeuge 521 201–209 für den Seehas folgten.'] },
       { titel: 'Einsatz und Technik', p: ['Die RABe 521 verkehren hauptsächlich bei der trinationalen S-Bahn Basel und auf grenzüberschreitenden Verbindungen nach Deutschland.', 'Automatische Kupplungen erlauben Mehrfachtraktion mit kompatiblen FLIRT. Die FLIRT der SBB fahren bis 160 km/h.'] },
       { titel: 'Ausstattung und Zugänglichkeit', liste: ['Niederflureinstieg', 'Rollstuhlplätze und rollstuhlgängiges WC', 'Vorrangsitze', 'Steckdosen in der 1. Klasse', 'Mehrzweckbereiche für Velos und Kinderwagen', 'Gepäckablagen'],
         p: ['Die Niederflureinstiege und Mehrzweckbereiche helfen beim schnellen Fahrgastwechsel. Die Angaben gelten für die FLIRT-Familie der SBB.'] }
     ],
-    quellen: ['SBB – FLIRT: Fahrzeugfamilie, Grunddaten und Einsatzregionen', 'SBB Infrastruktur – Fahrtypenkatalog 2026, Fahrtyp 6028, S. 345', 'Wikipedia – RABe 521: Bestand, Nummern und Einsatz'],
+    quellen: ['SBB – FLIRT: Fahrzeugfamilie, Grunddaten und Einsatzregionen', 'SBB Infrastruktur – Fahrtypenkatalog 2026, Fahrtyp 6028, S. 345', 'Wikipedia – RABe 521: Bestand, Nummern und Einsatz', 'Wikipedia – Stadler FLIRT: Auslieferung der RABe 521 ab Mitte 2005'],
     art: { typ: 'triebzug', nase: 'mittel', farbe: W1, akzent: RED, tuer: RED, panto: true }, bilder: [
       { src: 'bilder/rabe-521-c1.jpg', titel: 'RABe 521 «FLIRT»', foto: 'Samson Ng . D201@EAL', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:RABe_521_Flirt_EMU_(54920974686).jpg' },
       { src: 'bilder/rabe-521-c2.jpg', titel: 'RABe 521 als S3 nach Olten in Porrentruy', foto: 'JoachimKohler-HB', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:Porrentruy_railway_station_with_S3_to_Olten.jpg' },
@@ -403,7 +414,7 @@ const ZUEGE = [
     specNote: 'Die Zahl 496 ist ein historischer Wert und keine heutige Bestandszahl: Verkäufe, Umbauten und Ausrangierungen haben die Flotte verkleinert.',
     abschnitte: [
       { titel: 'Hersteller und Flottenaufbau', p: ['Die Einheitswagen IV entstanden bei SIG, SWS, SWP und SWA. 1981 kamen die ersten 40 klimatisierten Wagen der 1. Klasse; insgesamt wurden 540 gebaut, davon 496 für die SBB. EuroCity-Wagen folgten 1989, die Steuerwagen 1997.', 'Zwischen 2019 und 2025 setzte die SBB mehr als 250 EW-IV- und EuroCity-Wagen instand, mit Korrosionsschutz, neuem Anstrich und mobilfunkdurchlässigen Fenstern. Die Steuerwagen werden bis Ende 2027 modernisiert.'] },
-      { titel: 'Einsatz und Technik', p: ['Die Wagen verkehren als EC-, IC- und IR-Kompositionen, meist mit einer Re 460 und einem Steuerwagen. Typische Achsen führen von Genève nach Brig, von Basel nach Lugano und von Zürich über Olten nach Bern. Einzelne EC-Wagen fahren auch in internationalen Tages- und Nachtzügen.', 'Ein Wagen ist 26,4 m lang und für 200 km/h zugelassen; er bietet 60 Plätze in der 1. oder bis zu 86 in der 2. Klasse.'] },
+      { titel: 'Einsatz und Technik', p: ['Die Wagen verkehren als EC-, IC- und IR-Kompositionen, meist mit einer Re 460 und einem Steuerwagen. Typische Achsen führen von Genève nach Brig, von Basel nach Lugano und von Zürich über Olten nach Bern. Die klassischen Einheitswagen IV fahren heute überwiegend in der Schweiz; international sind vor allem die EuroCity-Wagen der SBB unterwegs, auch in Tages- und Nachtzügen.', 'Ein Wagen ist 26,4 m lang und für 200 km/h zugelassen; er bietet 60 Plätze in der 1. oder bis zu 86 in der 2. Klasse.'] },
       { titel: 'Ausstattung und Zugänglichkeit', liste: ['Steckdosen', 'Familienzone', 'Ruhezone in der 1. Klasse (InterCity)', 'Speisewagen (EuroCity)', 'Veloplätze und eigene Velowagen', 'Rollstuhlplätze und rollstuhlgängiges WC', 'Vorrangsitze'],
         p: ['Die Wagen sind nicht niederflurig. Rollstuhlplätze und ein rollstuhlgängiges WC sind vorhanden.'] }
     ],

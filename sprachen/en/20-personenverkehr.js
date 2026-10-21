@@ -102,7 +102,7 @@ uebZug('rabe-514', {
 uebZug('rabe-523', {
   typ: 'Stadler electric regional multiple unit',
   text: ['The four-car RABe 523 was the first FLIRT for SBB. It was developed for the Zug Stadtbahn and entered passenger service in 2004.', 'The class belongs to the larger FLIRT family, which runs in several versions.'],
-  kennzahlen: [['2004', 'first in service'], ['98*', 'vehicles according to number ranges'], ['2656 kW', 'power'], ['74.08 m', 'length']],
+  kennzahlen: [['2004', 'first in service'], ['98*', 'vehicles according to number ranges'], ['2656 kW', 'power'], ['73.5–74.1 m', 'length']],
   daten: { 'Bauart': 'electric multiple unit', 'Grundtyp': '4 cars', 'Einstieg': 'low-floor', 'Höchstgeschwindigkeit': '160 km/h (FLIRT family according to SBB)', 'Erste Region': 'Zug Stadtbahn', 'Einsatz': 'regional services, S-Bahn', 'Anzahl': '98* (according to number ranges)' },
   specNote: '* The figure of 98 comes from the published number ranges 001–073, 101–114 and 501–511; there is no separately confirmed current SBB fleet figure. SBB gives 160 km/h for the whole regional FLIRT family.',
   abschnitte: [
@@ -110,6 +110,17 @@ uebZug('rabe-523', {
       { titel: 'Service and technology', p: ['According to SBB, FLIRT run as S-Bahn trains in the cantons of Aargau, Solothurn, Lucerne, Basel, Neuchâtel, Fribourg and Vaud, among others.', 'Depending on the version, the trains are 75 to 105 m long and offer 156 to 236 seats. They run at up to 160 km/h.'] },
       { titel: 'Facilities and accessibility', liste: ['Low-floor entrance', 'Wheelchair spaces and accessible toilet', 'Priority seats', 'Baby-changing table (only in some trains)', 'Power sockets in 1st class', 'Bike, pram and luggage spaces'],
         p: ['These details apply to the SBB FLIRT family; specifics differ by version.'] },
+      { titel: 'Series compared', tabelle: { kopf: ['Numbers', 'Number', 'Built', 'Length', 'Weight', 'First service'], zeilen: [
+        ['001–012', '12', '2004–2005', '74.1 m', '120 t', 'Zug Stadtbahn'],
+        ['013–031', '19', '2009–2010', '74.1 m', '120 t', 'RER Vaud'],
+        ['032–043', '12', '2009–2010', '74.1 m', '120 t', 'Central Switzerland, rebuilt from RABe 522'],
+        ['044–056', '13', '2012–2013', '74.1 m', '120 t', 'RegiOlten'],
+        ['057–066', '10', '2015–2016', '74.1 m', '127 t', 'RegiOlten'],
+        ['067–073', '7', '2017', '74.1 m', '127 t', 'RegiOlten'],
+        ['074–077', '4', '2017', '74.1 m', '127 t', 'transN, not in the SBB count'],
+        ['101–114', '14', '2020–2021', '73.5 m', '160 t', 'RER Vaud (FLIRT 3)'],
+        ['501–511', '11', '2022–2024', '73.5 m (SBB: about 75 m)', '160 t', '«Mouette», long-distance, 181 seats']] },
+        hinweis: 'Lengths and weights according to passiontrain.ch, rounded; the weights are given there as total mass. Areas of service apply to the time of entry into service and may change.' },
       { titel: 'Understanding the numbers', p: ['The published figure of 209 covers all FLIRT trains used by SBB in regional service, including other classes and versions.', 'For the RABe 523 alone, the published number ranges 001–073, 101–114 and 501–511 add up to 98 vehicles. This is derived from the numbers and is not an official current SBB fleet figure.'] }
     ],
   bilder: ['RABe 523 001 in Muttenz', 'RABe 523 019', 'RABe 523 024 in Montreux', 'RABe 523 018 in Yverdon-les-Bains', 'RABe 523 038']
@@ -178,14 +189,14 @@ uebZug('rabe-503', {
 
 uebZug('re-450', {
   abschnitte: [
-      { titel: 'Manufacturer and fleet build-up', p: ['SLM and ABB built the 115 Re 450 for the double-deck push-pull trains (DPZ) of the Zurich S-Bahn. The double-deck coaches came from SLM and Schindler Waggon; the first DPZ ran in 1989, a year before the S-Bahn started in May 1990.', 'By 1998, 113 push-pull trains had been built. They were renewed from 2011 to 2018.'] },
+      { titel: 'Manufacturer and fleet build-up', p: ['SLM and ABB built the 115 Re 450 for the double-deck push-pull trains (DPZ) of the Zurich S-Bahn. The double-deck coaches came from SLM and Schindler Waggon; the first DPZ ran in 1989, a year before the S-Bahn started in May 1990.', 'A total of 115 push-pull trains were built by 1998. 113 run at SBB today; two were taken over by the Sihltal Zürich Uetliberg Bahn (SZU) in 2008. The trains were renewed from 2011 to 2018.'] },
       { titel: 'Service and technology', p: ['The DPZ are the backbone of the Zurich S-Bahn and can run on almost the whole ZVV network. A train is 98.8 m long, offers 345 seats and runs at up to 130 km/h.', 'A push-pull train consists of the Re 450, double-deck coaches and a driving trailer, so the locomotive does not have to run round at the terminus.'] },
       { titel: 'Facilities and accessibility', liste: ['Air conditioning', 'Customer information system', 'Power sockets in 1st class', 'Mobile signal booster', 'Multi-purpose area with bike spaces', 'Pram spaces', 'Level boarding in the low-floor double-deck coach (NDW)', 'Wheelchair spaces and accessible toilet', 'Priority seats'],
         p: ['Wheelchair users can board step-free in the low-floor NDW coach, which is part of the push-pull trains.'] }
     ],
   typ: 'Locomotive of the double-deck push-pull trains',
   text: ['The Re 450 hauls and pushes the double-deck push-pull trains (DPZ) of the Zurich S-Bahn.', 'The push-pull trains consist of the locomotive, double-deck coaches and a driving trailer.'],
-  daten: { 'Einsatz': 'Zurich S-Bahn' },
+  daten: { 'Einsatz': 'Zurich S-Bahn', 'Anzahl': '115 built, 113 of them at SBB and 2 at SZU' },
   bilder: ['Re 450 021 with the S24 at Zurich HB', 'Re 450 059 at Zurich HB', 'Re 450 033 in Turgi, 1993', 'Re 450 022 in Niederweningen, 1991', 'Re 450 with the S5 on the causeway at Rapperswil']
 });
 
@@ -221,11 +232,11 @@ uebZug('rabe-520', {
 uebZug('rabe-521', {
   typ: 'Single-system FLIRT approved for Switzerland and Germany',
   text: ['The RABe 521 is a four-car FLIRT for cross-border regional services between north-western Switzerland and Germany.', 'It is an important part of the Basel regional S-Bahn and also runs on the Seehas service.'],
-  kennzahlen: [['39', 'trains'], ['160 km/h', 'top speed'], ['2004', 'first in service'], ['74.08 m', 'length']],
+  kennzahlen: [['39', 'trains'], ['160 km/h', 'top speed'], ['2005', 'first in passenger service'], ['74.08 m', 'length']],
   daten: { 'Zugbildung': '4 cars', 'Gewicht': '120 t empty, 152 t loaded', 'Leistung': '2656 kW (FOS train type value)', 'Nummern': '521 001–030 and 201–209', 'Einsatz': 'Basel S-Bahn, Seehas, Switzerland–Germany' },
   specNote: 'The SBB train type catalogue also groups technically similar four-car FLIRT variants under this type; the power is therefore given as the type value.',
   abschnitte: [
-      { titel: 'Manufacturer and fleet build-up', p: ['Stadler originally developed the FLIRT platform for SBB. The RABe 521 class comprises 30 vehicles numbered 521 001–030 and nine more 521 201–209, 39 trains in total. The first ran in 2004.'] },
+      { titel: 'Manufacturer and fleet build-up', p: ['Stadler originally developed the FLIRT platform for SBB. The RABe 521 class comprises 30 vehicles numbered 521 001–030 and nine more 521 201–209, 39 trains in total. Deliveries began in mid-2005, and the first entered passenger service that year. The nine vehicles 521 201–209 for the Seehas followed.'] },
       { titel: 'Service and technology', p: ['The RABe 521 mainly run on the tri-national Basel S-Bahn and on cross-border services to Germany.', 'Automatic couplers allow multiple working with compatible FLIRT. SBB FLIRT run at up to 160 km/h.'] },
       { titel: 'Facilities and accessibility', liste: ['Low-floor entrance', 'Wheelchair spaces and accessible toilet', 'Priority seats', 'Power sockets in 1st class', 'Multi-purpose areas for bikes and prams', 'Luggage racks'],
         p: ['Low-floor entrances and multi-purpose areas speed up passenger exchange. These details apply to the SBB FLIRT family.'] }
@@ -290,7 +301,7 @@ uebZug('ew-iv', {
   specNote: 'The figure of 496 is a historical value, not today’s fleet: sales, conversions and withdrawals have reduced the fleet.',
   abschnitte: [
       { titel: 'Manufacturer and fleet build-up', p: ['The standard coaches IV were built by SIG, SWS, SWP and SWA. The first 40 air-conditioned 1st class coaches arrived in 1981; 540 were built in total, 496 of them for SBB. EuroCity coaches followed in 1989, driving trailers in 1997.', 'Between 2019 and 2025 SBB overhauled more than 250 EW IV and EuroCity coaches, with corrosion protection, new paint and windows that let mobile signals through. The driving trailers are being modernised until the end of 2027.'] },
-      { titel: 'Service and technology', p: ['The coaches run in EC, IC and IR formations, usually with an Re 460 and a driving trailer. Typical routes run from Geneva to Brig, from Basel to Lugano and from Zurich via Olten to Bern. Some EC coaches also run in international day and night trains.', 'A coach is 26.4 m long and approved for 200 km/h; it offers 60 seats in 1st or up to 86 in 2nd class.'] },
+      { titel: 'Service and technology', p: ['The coaches run in EC, IC and IR formations, usually with an Re 460 and a driving trailer. Typical routes run from Geneva to Brig, from Basel to Lugano and from Zurich via Olten to Bern. The classic standard coaches IV run mainly in Switzerland today; internationally it is mostly the SBB EuroCity coaches that run, also in day and night trains.', 'A coach is 26.4 m long and approved for 200 km/h; it offers 60 seats in 1st or up to 86 in 2nd class.'] },
       { titel: 'Facilities and accessibility', liste: ['Power sockets', 'Family zone', 'Quiet zone in 1st class (InterCity)', 'Dining car (EuroCity)', 'Bike spaces and dedicated bike coaches', 'Wheelchair spaces and accessible toilet', 'Priority seats'],
         p: ['The coaches are not low-floor. Wheelchair spaces and an accessible toilet are available.'] }
     ],

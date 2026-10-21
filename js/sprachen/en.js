@@ -490,7 +490,7 @@ uebDict({
   'Verantwortlich für diese Website': 'Responsible for this website',
   'Kontakt: über das Formular <button class="link-btn" type="button" data-report="allg" aria-haspopup="dialog">Fehler melden</button>. Nachrichten kommen direkt bei uns an.': 'Contact: via the <button class="link-btn" type="button" data-report="allg" aria-haspopup="dialog">Report an error</button> form. Messages reach us directly.',
   'Unabhängiges Projekt': 'Independent project',
-  'RailBase by HCKD RAIL ist ein privates, nicht kommerzielles Projekt von Bahnfans. Es steht in keiner Verbindung zu den Schweizerischen Bundesbahnen SBB, zu SBB Cargo oder zu anderen Bahnunternehmen. Namen und Marken gehören ihren Inhaberinnen und Inhabern und werden nur zur Beschreibung der Fahrzeuge genannt.': 'RailBase by HCKD RAIL is a private, non-commercial project by rail fans. It has no connection with Swiss Federal Railways SBB, SBB Cargo or any other railway company. Names and trademarks belong to their owners and are only mentioned to describe the vehicles.',
+  'RailBase by HCK ist ein privates, nicht kommerzielles Projekt von Bahnfans. Es steht in keiner Verbindung zu den Schweizerischen Bundesbahnen SBB, zu SBB Cargo oder zu anderen Bahnunternehmen. Namen und Marken gehören ihren Inhaberinnen und Inhabern und werden nur zur Beschreibung der Fahrzeuge genannt.': 'RailBase by HCK is a private, non-commercial project by rail fans. It has no connection with Swiss Federal Railways SBB, SBB Cargo or any other railway company. Names and trademarks belong to their owners and are only mentioned to describe the vehicles.',
   'Haftung': 'Liability',
   'Alle Angaben sind sorgfältig zusammengetragen, aber ohne Gewähr. Werte, die als vorläufig oder mit * markiert sind, können abweichen. Wenn dir ein Fehler auffällt, melde ihn bitte über «Fehler melden».': 'All information has been compiled carefully but without guarantee. Values marked as preliminary or with * may differ. If you notice an error, please report it via «Report an error».',
   'Für Inhalte externer Websites, auf die wir verlinken, sind deren Betreiber verantwortlich.': 'The operators of external websites we link to are responsible for their content.',
@@ -877,7 +877,7 @@ uebDict({
   'International von Hamburg und Bremen über Hannover, Frankfurt und Basel durch die Schweiz bis Mailand und weiter nach Venedig, Florenz und Livorno.': 'Internationally from Hamburg and Bremen via Hanover, Frankfurt and Basel, through Switzerland to Milan and on to Venice, Florence and Livorno.',
   'Ländergrenzen der internationalen Karten: Natural Earth (gemeinfrei), über das Paket world-atlas (ISC-Lizenz).': 'Borders of the international maps: Natural Earth (public domain), via the world-atlas package (ISC licence).',
   'International von Genf, Basel und Bern über Brig und den Simplon nach Mailand sowie von Zürich nach München.': 'Internationally from Geneva, Basel and Bern via Brig and the Simplon to Milan, and from Zurich to Munich.',
-  'Als EuroCity in Richtung Amsterdam, Hamburg, Berlin und Wien, dazu bis Graz und Jarosław in Polen.': 'As EuroCity towards Amsterdam, Hamburg, Berlin and Vienna, and as far as Graz and Jarosław in Poland.'
+  'Nach der SBB-Karte für Einheitswagen IV und EuroCity: Die EuroCity-Wagen der SBB fahren in Richtung Amsterdam, Hamburg, Berlin und Wien, dazu bis Graz und Jarosław in Polen. Die klassischen EW IV fahren überwiegend in der Schweiz.': 'According to the SBB map for standard coaches IV and EuroCity: the SBB EuroCity coaches run towards Amsterdam, Hamburg, Berlin and Vienna, and as far as Graz and Jarosław in Poland. The classic EW IV run mainly in Switzerland.'
 });
 
 /* ---- 13-einsatz-neu.js ---- */
@@ -1025,7 +1025,7 @@ uebZug('rabe-514', {
 uebZug('rabe-523', {
   typ: 'Stadler electric regional multiple unit',
   text: ['The four-car RABe 523 was the first FLIRT for SBB. It was developed for the Zug Stadtbahn and entered passenger service in 2004.', 'The class belongs to the larger FLIRT family, which runs in several versions.'],
-  kennzahlen: [['2004', 'first in service'], ['98*', 'vehicles according to number ranges'], ['2656 kW', 'power'], ['74.08 m', 'length']],
+  kennzahlen: [['2004', 'first in service'], ['98*', 'vehicles according to number ranges'], ['2656 kW', 'power'], ['73.5–74.1 m', 'length']],
   daten: { 'Bauart': 'electric multiple unit', 'Grundtyp': '4 cars', 'Einstieg': 'low-floor', 'Höchstgeschwindigkeit': '160 km/h (FLIRT family according to SBB)', 'Erste Region': 'Zug Stadtbahn', 'Einsatz': 'regional services, S-Bahn', 'Anzahl': '98* (according to number ranges)' },
   specNote: '* The figure of 98 comes from the published number ranges 001–073, 101–114 and 501–511; there is no separately confirmed current SBB fleet figure. SBB gives 160 km/h for the whole regional FLIRT family.',
   abschnitte: [
@@ -1033,6 +1033,17 @@ uebZug('rabe-523', {
       { titel: 'Service and technology', p: ['According to SBB, FLIRT run as S-Bahn trains in the cantons of Aargau, Solothurn, Lucerne, Basel, Neuchâtel, Fribourg and Vaud, among others.', 'Depending on the version, the trains are 75 to 105 m long and offer 156 to 236 seats. They run at up to 160 km/h.'] },
       { titel: 'Facilities and accessibility', liste: ['Low-floor entrance', 'Wheelchair spaces and accessible toilet', 'Priority seats', 'Baby-changing table (only in some trains)', 'Power sockets in 1st class', 'Bike, pram and luggage spaces'],
         p: ['These details apply to the SBB FLIRT family; specifics differ by version.'] },
+      { titel: 'Series compared', tabelle: { kopf: ['Numbers', 'Number', 'Built', 'Length', 'Weight', 'First service'], zeilen: [
+        ['001–012', '12', '2004–2005', '74.1 m', '120 t', 'Zug Stadtbahn'],
+        ['013–031', '19', '2009–2010', '74.1 m', '120 t', 'RER Vaud'],
+        ['032–043', '12', '2009–2010', '74.1 m', '120 t', 'Central Switzerland, rebuilt from RABe 522'],
+        ['044–056', '13', '2012–2013', '74.1 m', '120 t', 'RegiOlten'],
+        ['057–066', '10', '2015–2016', '74.1 m', '127 t', 'RegiOlten'],
+        ['067–073', '7', '2017', '74.1 m', '127 t', 'RegiOlten'],
+        ['074–077', '4', '2017', '74.1 m', '127 t', 'transN, not in the SBB count'],
+        ['101–114', '14', '2020–2021', '73.5 m', '160 t', 'RER Vaud (FLIRT 3)'],
+        ['501–511', '11', '2022–2024', '73.5 m (SBB: about 75 m)', '160 t', '«Mouette», long-distance, 181 seats']] },
+        hinweis: 'Lengths and weights according to passiontrain.ch, rounded; the weights are given there as total mass. Areas of service apply to the time of entry into service and may change.' },
       { titel: 'Understanding the numbers', p: ['The published figure of 209 covers all FLIRT trains used by SBB in regional service, including other classes and versions.', 'For the RABe 523 alone, the published number ranges 001–073, 101–114 and 501–511 add up to 98 vehicles. This is derived from the numbers and is not an official current SBB fleet figure.'] }
     ],
   bilder: ['RABe 523 001 in Muttenz', 'RABe 523 019', 'RABe 523 024 in Montreux', 'RABe 523 018 in Yverdon-les-Bains', 'RABe 523 038']
@@ -1101,14 +1112,14 @@ uebZug('rabe-503', {
 
 uebZug('re-450', {
   abschnitte: [
-      { titel: 'Manufacturer and fleet build-up', p: ['SLM and ABB built the 115 Re 450 for the double-deck push-pull trains (DPZ) of the Zurich S-Bahn. The double-deck coaches came from SLM and Schindler Waggon; the first DPZ ran in 1989, a year before the S-Bahn started in May 1990.', 'By 1998, 113 push-pull trains had been built. They were renewed from 2011 to 2018.'] },
+      { titel: 'Manufacturer and fleet build-up', p: ['SLM and ABB built the 115 Re 450 for the double-deck push-pull trains (DPZ) of the Zurich S-Bahn. The double-deck coaches came from SLM and Schindler Waggon; the first DPZ ran in 1989, a year before the S-Bahn started in May 1990.', 'A total of 115 push-pull trains were built by 1998. 113 run at SBB today; two were taken over by the Sihltal Zürich Uetliberg Bahn (SZU) in 2008. The trains were renewed from 2011 to 2018.'] },
       { titel: 'Service and technology', p: ['The DPZ are the backbone of the Zurich S-Bahn and can run on almost the whole ZVV network. A train is 98.8 m long, offers 345 seats and runs at up to 130 km/h.', 'A push-pull train consists of the Re 450, double-deck coaches and a driving trailer, so the locomotive does not have to run round at the terminus.'] },
       { titel: 'Facilities and accessibility', liste: ['Air conditioning', 'Customer information system', 'Power sockets in 1st class', 'Mobile signal booster', 'Multi-purpose area with bike spaces', 'Pram spaces', 'Level boarding in the low-floor double-deck coach (NDW)', 'Wheelchair spaces and accessible toilet', 'Priority seats'],
         p: ['Wheelchair users can board step-free in the low-floor NDW coach, which is part of the push-pull trains.'] }
     ],
   typ: 'Locomotive of the double-deck push-pull trains',
   text: ['The Re 450 hauls and pushes the double-deck push-pull trains (DPZ) of the Zurich S-Bahn.', 'The push-pull trains consist of the locomotive, double-deck coaches and a driving trailer.'],
-  daten: { 'Einsatz': 'Zurich S-Bahn' },
+  daten: { 'Einsatz': 'Zurich S-Bahn', 'Anzahl': '115 built, 113 of them at SBB and 2 at SZU' },
   bilder: ['Re 450 021 with the S24 at Zurich HB', 'Re 450 059 at Zurich HB', 'Re 450 033 in Turgi, 1993', 'Re 450 022 in Niederweningen, 1991', 'Re 450 with the S5 on the causeway at Rapperswil']
 });
 
@@ -1144,11 +1155,11 @@ uebZug('rabe-520', {
 uebZug('rabe-521', {
   typ: 'Single-system FLIRT approved for Switzerland and Germany',
   text: ['The RABe 521 is a four-car FLIRT for cross-border regional services between north-western Switzerland and Germany.', 'It is an important part of the Basel regional S-Bahn and also runs on the Seehas service.'],
-  kennzahlen: [['39', 'trains'], ['160 km/h', 'top speed'], ['2004', 'first in service'], ['74.08 m', 'length']],
+  kennzahlen: [['39', 'trains'], ['160 km/h', 'top speed'], ['2005', 'first in passenger service'], ['74.08 m', 'length']],
   daten: { 'Zugbildung': '4 cars', 'Gewicht': '120 t empty, 152 t loaded', 'Leistung': '2656 kW (FOS train type value)', 'Nummern': '521 001–030 and 201–209', 'Einsatz': 'Basel S-Bahn, Seehas, Switzerland–Germany' },
   specNote: 'The SBB train type catalogue also groups technically similar four-car FLIRT variants under this type; the power is therefore given as the type value.',
   abschnitte: [
-      { titel: 'Manufacturer and fleet build-up', p: ['Stadler originally developed the FLIRT platform for SBB. The RABe 521 class comprises 30 vehicles numbered 521 001–030 and nine more 521 201–209, 39 trains in total. The first ran in 2004.'] },
+      { titel: 'Manufacturer and fleet build-up', p: ['Stadler originally developed the FLIRT platform for SBB. The RABe 521 class comprises 30 vehicles numbered 521 001–030 and nine more 521 201–209, 39 trains in total. Deliveries began in mid-2005, and the first entered passenger service that year. The nine vehicles 521 201–209 for the Seehas followed.'] },
       { titel: 'Service and technology', p: ['The RABe 521 mainly run on the tri-national Basel S-Bahn and on cross-border services to Germany.', 'Automatic couplers allow multiple working with compatible FLIRT. SBB FLIRT run at up to 160 km/h.'] },
       { titel: 'Facilities and accessibility', liste: ['Low-floor entrance', 'Wheelchair spaces and accessible toilet', 'Priority seats', 'Power sockets in 1st class', 'Multi-purpose areas for bikes and prams', 'Luggage racks'],
         p: ['Low-floor entrances and multi-purpose areas speed up passenger exchange. These details apply to the SBB FLIRT family.'] }
@@ -1213,7 +1224,7 @@ uebZug('ew-iv', {
   specNote: 'The figure of 496 is a historical value, not today’s fleet: sales, conversions and withdrawals have reduced the fleet.',
   abschnitte: [
       { titel: 'Manufacturer and fleet build-up', p: ['The standard coaches IV were built by SIG, SWS, SWP and SWA. The first 40 air-conditioned 1st class coaches arrived in 1981; 540 were built in total, 496 of them for SBB. EuroCity coaches followed in 1989, driving trailers in 1997.', 'Between 2019 and 2025 SBB overhauled more than 250 EW IV and EuroCity coaches, with corrosion protection, new paint and windows that let mobile signals through. The driving trailers are being modernised until the end of 2027.'] },
-      { titel: 'Service and technology', p: ['The coaches run in EC, IC and IR formations, usually with an Re 460 and a driving trailer. Typical routes run from Geneva to Brig, from Basel to Lugano and from Zurich via Olten to Bern. Some EC coaches also run in international day and night trains.', 'A coach is 26.4 m long and approved for 200 km/h; it offers 60 seats in 1st or up to 86 in 2nd class.'] },
+      { titel: 'Service and technology', p: ['The coaches run in EC, IC and IR formations, usually with an Re 460 and a driving trailer. Typical routes run from Geneva to Brig, from Basel to Lugano and from Zurich via Olten to Bern. The classic standard coaches IV run mainly in Switzerland today; internationally it is mostly the SBB EuroCity coaches that run, also in day and night trains.', 'A coach is 26.4 m long and approved for 200 km/h; it offers 60 seats in 1st or up to 86 in 2nd class.'] },
       { titel: 'Facilities and accessibility', liste: ['Power sockets', 'Family zone', 'Quiet zone in 1st class (InterCity)', 'Dining car (EuroCity)', 'Bike spaces and dedicated bike coaches', 'Wheelchair spaces and accessible toilet', 'Priority seats'],
         p: ['The coaches are not low-floor. Wheelchair spaces and an accessible toilet are available.'] }
     ],
@@ -2128,7 +2139,7 @@ uebEinsatz({
   'rabe-520': 'In the Seetal between Lenzburg and Lucerne and in the Lucerne region as far as Arth-Goldau and Brunnen.',
   'rabe-503': 'Mainly on Zurich–Rorschach, Basel–Brig and Geneva–Brig. Internationally on the north–south axis to Germany and Italy.',
   'ic2000': 'Mainly on Romanshorn–Zurich–Bern–Brig/Interlaken, Basel–Bern–Brig/Interlaken, Geneva–Brig, Geneva–Bern–Lucerne, Zurich–Konstanz and Zurich–Chur.',
-  'ew-iv': 'Hauled by Re 460 mainly on Geneva–Brig, Basel–Lugano, Zurich–Konstanz, Zurich–Baden–Olten–Bern and Zurich–Schaffhausen. Also international as EuroCity.'
+  'ew-iv': 'Hauled by Re 460 mainly on Geneva–Brig, Basel–Lugano, Zurich–Konstanz, Zurich–Baden–Olten–Bern and Zurich–Schaffhausen. Internationally, mostly the SBB EuroCity coaches run.'
 });
 
 /* ---- 30-quiz.js ---- */
@@ -2321,13 +2332,13 @@ uebZug('bls-re-475', {
 });
 uebZug('bls-re-485', {
   abschnitte: [
-      { titel: 'Manufacturer and fleet build-up', p: ['In 2002 BLS Cargo ordered 20 TRAXX of type F140 AC from Bombardier; they were delivered by mid-2003 and carry the numbers 485 001–020.', '485 004 was destroyed in an accident at Auggen (Germany) in 2020, which is why fleet lists now show 19 locomotives.'] },
+      { titel: 'Manufacturer and fleet build-up', p: ['In 2002 BLS Cargo ordered 20 TRAXX of type F140 AC from Bombardier; they were delivered by mid-2003 and carry the numbers 485 001–020.', '485 004 was destroyed in an accident at Auggen (Germany) in 2020. How many Re 485 are operational today is not publicly confirmed.'] },
       { titel: 'Service and technology', p: ['The Re 485 haul freight trains in Switzerland and to Germany, on the Lötschberg-Simplon and Gotthard axes.', 'Technically they match the German class 185 and the SBB Cargo Re 482, with a Swiss equipment package. They run at up to 140 km/h.'] }
     ],
   typ: 'Freight electric locomotive by Bombardier',
   text: ['The Re 485 are TRAXX locomotives of BLS Cargo for freight in Switzerland and to Germany.', 'They were ordered in 2002 and delivered by mid-2003.'],
-  kennzahlen: [['20', 'locomotives'], ['140 km/h', 'top speed'], ['CH, D', 'approval'], ['2002', 'first in service']],
-  daten: { 'Bauart': 'electric locomotive Bo’Bo’', 'Zulassung': 'Switzerland, Germany' },
+  kennzahlen: [['20', 'locomotives procured'], ['140 km/h', 'top speed'], ['CH, D', 'approval'], ['2002', 'first in service']],
+  daten: { 'Bauart': 'electric locomotive Bo’Bo’', 'Zulassung': 'Switzerland, Germany', 'Anzahl': '20 procured; 485 004 withdrawn after an accident in 2020' },
   specNote: 'The 140 km/h follows from the type TRAXX F140.',
   bilder: ['Re 485 005 of BLS Cargo', 'Re 485 016 with a freight train', 'Re 485 008 near Allmendingen']
 });
@@ -2345,9 +2356,9 @@ uebZug('bls-re-486', {
 });
 uebZug('bls-re-425', {
   typ: 'BLS electric locomotive, known as «the brown ones»',
-  text: ['For decades the brown BLS Re 4/4, today Re 425, hauled fast trains between Bern and Brig and freight trains from Basel to Domodossola. The Lötschberg car shuttle was also their job for a long time.', 'Since late 2023 the Re 465 have taken over the car shuttles. BLS Cargo still uses Re 4/4; Re 4/4 165 «Moutier» now belongs to the BLS Foundation.'],
+  text: ['For decades the brown BLS Re 4/4, today Re 425, hauled fast trains between Bern and Brig and freight trains from Basel to Domodossola. The Lötschberg car shuttle was also their job for a long time.', 'BLS Cargo ended the freight service of the Re 425 in 2021. From late 2023 the Re 465 gradually took over the car shuttles; the last scheduled run of an Re 425 took place on 27 July 2026 between Kandersteg and Goppenstein. Re 425 165 «Moutier» is preserved by the BLS Foundation.'],
   kennzahlen: [['35', 'built 1964–1983'], ['4980 kW', 'power'], ['140 km/h', 'top speed'], ['1964', 'first in service']],
-  daten: { 'Bauart': 'electric locomotive Bo’Bo’', 'Betreiber': 'BLS, today mainly BLS Cargo', 'Länge': '15.1 m (from no. 174: 15.47 m)', 'Anzahl': '35 built' },
+  daten: { 'Bauart': 'electric locomotive Bo’Bo’', 'Betreiber': 'BLS and BLS Cargo (historic); some locomotives now in museum or special service', 'Länge': '15.1 m (from no. 174: 15.47 m)', 'Anzahl': '35 built' },
   abschnitte: [{ titel: 'Re 4/4 165 «Moutier»', p: ['No. 165 was delivered to BLS as Ae 4/4 II 265 and carries the coat of arms of the municipality of Moutier. Since 2017 it has been one of the historic vehicles of the BLS Foundation and stands, out of service, in the Burgdorf depot.'] }],
   bilder: ['Re 425 192 in Spiez']
 });
@@ -2572,7 +2583,7 @@ uebZug('tpf-funiculaire', {
   daten: { 'Bauart': 'funicular with water ballast', 'Kabinen': '2 with 20 places each', 'Länge': '121 m line, car 5.4 m', 'Gewicht': '1600 kg per car', 'Höchstgeschwindigkeit': '4.3 km/h (1.2 m/s)', 'Kapazität': '240 people per hour' },
   abschnitte: [
       { titel: 'Manufacturer and fleet build-up', p: ['The funicular was built by Von Roll and has run since 1899. It was rebuilt in 1998, and the last major overhaul was in 2020. It is a listed historic monument.', 'It has two cars with 20 places each.'] },
-      { titel: 'Service and technology', p: ['In Fribourg, the funicular links the lower town, the Neuveville (552 m), with St-Pierre (608 m). On the single track with a passing loop it makes about 70 round trips a day, from 7 am to 7 pm, in summer until 8 pm.', 'Waste water from the city of Fribourg serves as counterweight. The line is 121 m long with gradients up to 550 ‰; the trip takes 2 minutes at 1.2 m/s.'] },
+      { titel: 'Service and technology', p: ['In Fribourg, the funicular links the lower town, the Neuveville (552 m), with St-Pierre (608 m). In regular service it makes about 70 round trips a day on the single track with a passing loop, from 7 am to 7 pm, in summer until 8 pm.', 'Waste water from the city of Fribourg serves as counterweight. The line is 121 m long, has a gauge of 1200 mm and gradients up to 550 ‰; the trip takes 2 minutes at 1.2 m/s.', 'The funicular is closed for a major overhaul from 27 August to 4 December 2026. Service is scheduled to resume on 5 December 2026; until then bus line 4 replaces it.'] },
       { titel: 'Facilities and accessibility', liste: ['2 cars with 20 places each', '240 people per hour'],
         p: ['On its vehicle page, TPF gives no details about access with a wheelchair, pram or bike.'] }
     ],

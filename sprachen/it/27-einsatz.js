@@ -28,5 +28,5 @@ uebEinsatz({
   'rabe-520': 'Nel Seetal tra Lenzburg e Lucerna e nella regione di Lucerna fino ad Arth-Goldau e Brunnen.',
   'rabe-503': 'Soprattutto su Zurigo–Rorschach, Basilea–Briga e Ginevra–Briga. A livello internazionale sull’asse nord-sud verso la Germania e l’Italia.',
   'ic2000': 'Soprattutto su Romanshorn–Zurigo–Berna–Briga/Interlaken, Basilea–Berna–Briga/Interlaken, Ginevra–Briga, Ginevra–Berna–Lucerna, Zurigo–Costanza e Zurigo–Coira.',
-  'ew-iv': 'Con la Re 460 soprattutto su Ginevra–Briga, Basilea–Lugano, Zurigo–Costanza, Zurigo–Baden–Olten–Berna e Zurigo–Sciaffusa. Anche internazionale come EuroCity.'
+  'ew-iv': 'Con la Re 460 soprattutto su Ginevra–Briga, Basilea–Lugano, Zurigo–Costanza, Zurigo–Baden–Olten–Berna e Zurigo–Sciaffusa. A livello internazionale circolano soprattutto le carrozze EuroCity delle FFS.'
 });

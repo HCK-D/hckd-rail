@@ -96,13 +96,13 @@ uebZug('bls-re-475', {
 });
 uebZug('bls-re-485', {
   abschnitte: [
-      { titel: 'Costruttore e composizione della flotta', p: ['Nel 2002 BLS Cargo ha ordinato a Bombardier 20 TRAXX del tipo F140 AC; sono state consegnate entro metà 2003 e portano i numeri 485 001–020.', 'La 485 004 è stata distrutta nel 2020 in un incidente ad Auggen (Germania), perciò gli elenchi della flotta indicano oggi 19 locomotive.'] },
+      { titel: 'Costruttore e composizione della flotta', p: ['Nel 2002 BLS Cargo ha ordinato a Bombardier 20 TRAXX del tipo F140 AC; sono state consegnate entro metà 2003 e portano i numeri 485 001–020.', 'La 485 004 è stata distrutta nel 2020 in un incidente ad Auggen (Germania). Il numero di Re 485 oggi in servizio non è confermato pubblicamente.'] },
       { titel: 'Impiego e tecnica', p: ['Le Re 485 trainano treni merci in Svizzera e verso la Germania, sugli assi Lötschberg-Sempione e Gottardo.', 'Tecnicamente corrispondono alla serie tedesca 185 e alle Re 482 di FFS Cargo, con un pacchetto di equipaggiamento svizzero. Viaggiano fino a 140 km/h.'] }
     ],
   typ: 'Locomotiva elettrica per treni merci Bombardier',
   text: ['Le Re 485 sono locomotive TRAXX di BLS Cargo per il traffico merci in Svizzera e verso la Germania.', 'Sono state ordinate nel 2002 e consegnate entro metà 2003.'],
-  kennzahlen: [['20', 'locomotive'], ['140 km/h', 'velocità massima'], ['CH, D', 'omologazione'], ['2002', 'prima messa in servizio']],
-  daten: { 'Bauart': 'locomotiva elettrica Bo’Bo’', 'Zulassung': 'Svizzera, Germania' },
+  kennzahlen: [['20', 'locomotive acquistate'], ['140 km/h', 'velocità massima'], ['CH, D', 'omologazione'], ['2002', 'prima messa in servizio']],
+  daten: { 'Bauart': 'locomotiva elettrica Bo’Bo’', 'Zulassung': 'Svizzera, Germania', 'Anzahl': '20 acquistate; 485 004 ritirata dopo un incidente nel 2020' },
   specNote: 'I 140 km/h derivano dal tipo TRAXX F140.',
   bilder: ['Re 485 005 di BLS Cargo', 'Re 485 016 con un treno merci', 'Re 485 008 presso Allmendingen']
 });
@@ -120,9 +120,9 @@ uebZug('bls-re-486', {
 });
 uebZug('bls-re-425', {
   typ: 'Locomotiva elettrica della BLS, nota come «le marroni»',
-  text: ['Per decenni le Re 4/4 marroni della BLS, oggi Re 425, hanno trainato treni diretti tra Berna e Briga e treni merci da Basilea a Domodossola. Anche il trasporto auto del Lötschberg è stato a lungo compito loro.', 'Da fine 2023 le Re 465 hanno ripreso il trasporto auto. BLS Cargo impiega ancora Re 4/4; la Re 4/4 165 «Moutier» appartiene oggi alla Fondazione BLS.'],
+  text: ['Per decenni le Re 4/4 marroni della BLS, oggi Re 425, hanno trainato treni diretti tra Berna e Briga e treni merci da Basilea a Domodossola. Anche il trasporto auto del Lötschberg è stato a lungo compito loro.', 'Presso BLS Cargo l’impiego nel traffico merci è terminato nel 2021. Da fine 2023 le Re 465 hanno ripreso gradualmente il trasporto auto; l’ultima corsa regolare di una Re 425 si è svolta il 27 luglio 2026 tra Kandersteg e Goppenstein. La Re 425 165 «Moutier» è conservata dalla Fondazione BLS.'],
   kennzahlen: [['35', 'costruite 1964–1983'], ['4980 kW', 'potenza'], ['140 km/h', 'velocità massima'], ['1964', 'prima messa in servizio']],
-  daten: { 'Bauart': 'locomotiva elettrica Bo’Bo’', 'Betreiber': 'BLS, oggi soprattutto BLS Cargo', 'Länge': '15,1 m (dal n. 174: 15,47 m)', 'Anzahl': '35 costruite' },
+  daten: { 'Bauart': 'locomotiva elettrica Bo’Bo’', 'Betreiber': 'BLS e BLS Cargo (storico); alcune locomotive oggi in servizio museale o speciale', 'Länge': '15,1 m (dal n. 174: 15,47 m)', 'Anzahl': '35 costruite' },
   abschnitte: [{ titel: 'La Re 4/4 165 «Moutier»', p: ['La 165 fu consegnata alla BLS come Ae 4/4 II 265 e porta lo stemma del comune di Moutier. Dal 2017 fa parte dei veicoli storici della Fondazione BLS e si trova, fuori servizio, nel deposito di Burgdorf.'] }],
   bilder: ['Re 425 192 a Spiez']
 });
@@ -346,7 +346,7 @@ uebZug('tpf-funiculaire', {
   daten: { 'Bauart': 'funicolare con zavorra ad acqua', 'Kabinen': '2 da 20 posti ciascuna', 'Länge': '121 m di linea, vettura 5,4 m', 'Gewicht': '1600 kg per vettura', 'Kapazität': '240 persone all’ora' },
   abschnitte: [
       { titel: 'Costruttore e composizione della flotta', p: ['La funicolare è stata costruita da Von Roll; circola dal 1899. È stata trasformata nel 1998, l’ultima grande revisione risale al 2020. È protetta come monumento storico.', 'Dispone di due vetture da 20 posti ciascuna.'] },
-      { titel: 'Impiego e tecnica', p: ['La funicolare collega a Friburgo la città bassa, la Neuveville (552 m), con St-Pierre (608 m). Sul binario unico con incrocio effettua circa 70 corse di andata e ritorno al giorno, dalle 7 alle 19, in estate fino alle 20.', 'Come contrappeso servono le acque reflue della città di Friburgo. La linea è lunga 121 m con una pendenza fino al 550 ‰; il viaggio dura 2 minuti a 1,2 m/s.'] },
+      { titel: 'Impiego e tecnica', p: ['La funicolare collega a Friburgo la città bassa, la Neuveville (552 m), con St-Pierre (608 m). Nel servizio regolare, sul binario unico con incrocio effettua circa 70 corse di andata e ritorno al giorno, dalle 7 alle 19, in estate fino alle 20.', 'Come contrappeso servono le acque reflue della città di Friburgo. La linea è lunga 121 m, ha uno scartamento di 1200 mm e una pendenza fino al 550 ‰; il viaggio dura 2 minuti a 1,2 m/s.', 'A causa di una revisione generale, la funicolare rimane chiusa dal 27 agosto al 4 dicembre 2026. La ripresa del servizio è prevista per il 5 dicembre 2026; fino ad allora la linea di bus 4 la sostituisce.'] },
       { titel: 'Dotazione e accessibilità', liste: ['2 vetture da 20 posti ciascuna', '240 persone all’ora'],
         p: ['Sulla pagina del veicolo le TPF non danno indicazioni sull’accesso con sedia a rotelle, passeggino o bicicletta.'] }
     ],

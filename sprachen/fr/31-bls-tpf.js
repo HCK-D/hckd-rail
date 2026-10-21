@@ -97,13 +97,13 @@ uebZug('bls-re-475', {
 });
 uebZug('bls-re-485', {
   abschnitte: [
-      { titel: 'Constructeur et constitution de la flotte', p: ['En 2002, BLS Cargo a commandé à Bombardier 20 TRAXX du type F140 AC ; elles ont été livrées jusqu’à mi-2003 et portent les numéros 485 001–020.', 'La 485 004 a été détruite en 2020 lors d’un accident à Auggen (Allemagne), c’est pourquoi les listes de flotte indiquent aujourd’hui 19 locomotives.'] },
+      { titel: 'Constructeur et constitution de la flotte', p: ['En 2002, BLS Cargo a commandé à Bombardier 20 TRAXX du type F140 AC ; elles ont été livrées jusqu’à mi-2003 et portent les numéros 485 001–020.', 'La 485 004 a été détruite en 2020 lors d’un accident à Auggen (Allemagne). Le nombre de Re 485 aujourd’hui en état de service n’est pas confirmé publiquement.'] },
       { titel: 'Utilisation et technique', p: ['Les Re 485 remorquent des trains de marchandises en Suisse et vers l’Allemagne, sur les axes Lötschberg-Simplon et Gothard.', 'Techniquement, elles correspondent à la série allemande 185 et aux Re 482 de CFF Cargo, avec un paquet d’équipements suisse. Elles roulent jusqu’à 140 km/h.'] }
     ],
   typ: 'Locomotive électrique pour trains de marchandises de Bombardier',
   text: ['Les Re 485 sont des locomotives TRAXX de BLS Cargo pour le trafic marchandises en Suisse et vers l’Allemagne.', 'Elles ont été commandées en 2002 et livrées jusqu’à mi-2003.'],
-  kennzahlen: [['20', 'locomotives'], ['140 km/h', 'vitesse maximale'], ['CH, D', 'homologation'], ['2002', 'première mise en service']],
-  daten: { 'Bauart': 'locomotive électrique Bo’Bo’', 'Zulassung': 'Suisse, Allemagne' },
+  kennzahlen: [['20', 'locomotives acquises'], ['140 km/h', 'vitesse maximale'], ['CH, D', 'homologation'], ['2002', 'première mise en service']],
+  daten: { 'Bauart': 'locomotive électrique Bo’Bo’', 'Zulassung': 'Suisse, Allemagne', 'Anzahl': '20 acquises ; 485 004 retirée après un accident en 2020' },
   specNote: 'Les 140 km/h correspondent au type TRAXX F140.',
   bilder: ['Re 485 005 de BLS Cargo', 'Re 485 016 avec un train de marchandises', 'Re 485 008 près d’Allmendingen']
 });
@@ -121,9 +121,9 @@ uebZug('bls-re-486', {
 });
 uebZug('bls-re-425', {
   typ: 'Locomotive électrique du BLS, connue comme «les brunes»',
-  text: ['Pendant des décennies, les Re 4/4 brunes du BLS, aujourd’hui Re 425, ont remorqué des trains rapides entre Berne et Brigue et des trains de marchandises de Bâle à Domodossola. Le chargement des autos au Lötschberg a aussi longtemps été leur tâche.', 'Depuis fin 2023, les Re 465 ont repris le chargement des autos. BLS Cargo utilise toujours des Re 4/4 ; la Re 4/4 165 «Moutier» appartient aujourd’hui à la Fondation BLS.'],
+  text: ['Pendant des décennies, les Re 4/4 brunes du BLS, aujourd’hui Re 425, ont remorqué des trains rapides entre Berne et Brigue et des trains de marchandises de Bâle à Domodossola. Le chargement des autos au Lötschberg a aussi longtemps été leur tâche.', 'Chez BLS Cargo, l’utilisation en trafic marchandises a pris fin en 2021. Dès fin 2023, les Re 465 ont repris progressivement le chargement des autos ; la dernière course régulière d’une Re 425 a eu lieu le 27 juillet 2026 entre Kandersteg et Goppenstein. La Re 425 165 «Moutier» est conservée par la Fondation BLS.'],
   kennzahlen: [['35', 'construites 1964–1983'], ['4980 kW', 'puissance'], ['140 km/h', 'vitesse maximale'], ['1964', 'première mise en service']],
-  daten: { 'Bauart': 'locomotive électrique Bo’Bo’', 'Betreiber': 'BLS, aujourd’hui surtout BLS Cargo', 'Länge': '15,1 m (dès le n° 174 : 15,47 m)', 'Anzahl': '35 construites' },
+  daten: { 'Bauart': 'locomotive électrique Bo’Bo’', 'Betreiber': 'BLS et BLS Cargo (historique) ; quelques locomotives aujourd’hui en service muséal ou spécial', 'Länge': '15,1 m (dès le n° 174 : 15,47 m)', 'Anzahl': '35 construites' },
   abschnitte: [{ titel: 'La Re 4/4 165 «Moutier»', p: ['La 165 a été livrée au BLS comme Ae 4/4 II 265 et porte les armoiries de la commune de Moutier. Depuis 2017, elle fait partie des véhicules historiques de la Fondation BLS et se trouve, hors service, au dépôt de Berthoud.'] }],
   bilder: ['Re 425 192 à Spiez']
 });
@@ -348,7 +348,7 @@ uebZug('tpf-funiculaire', {
   daten: { 'Bauart': 'funiculaire à contrepoids d’eau', 'Kabinen': '2 de 20 places chacune', 'Länge': '121 m de ligne, cabine 5,4 m', 'Gewicht': '1600 kg par cabine', 'Kapazität': '240 personnes par heure' },
   abschnitte: [
       { titel: 'Constructeur et constitution de la flotte', p: ['Le funiculaire a été construit par Von Roll ; il circule depuis 1899. Il a été transformé en 1998, la dernière grande révision date de 2020. Il est classé monument historique.', 'Il compte deux cabines de 20 places chacune.'] },
-      { titel: 'Utilisation et technique', p: ['Le funiculaire relie à Fribourg la basse ville, la Neuveville (552 m), à St-Pierre (608 m). Sur la voie unique avec évitement, il effectue environ 70 allers-retours par jour, de 7 h à 19 h, en été jusqu’à 20 h.', 'Les eaux usées de la ville de Fribourg servent de contrepoids. La ligne mesure 121 m avec une pente jusqu’à 550 ‰ ; le trajet dure 2 minutes à 1,2 m/s.'] },
+      { titel: 'Utilisation et technique', p: ['Le funiculaire relie à Fribourg la basse ville, la Neuveville (552 m), à St-Pierre (608 m). En exploitation régulière, sur la voie unique avec évitement, il effectue environ 70 allers-retours par jour, de 7 h à 19 h, en été jusqu’à 20 h.', 'Les eaux usées de la ville de Fribourg servent de contrepoids. La ligne mesure 121 m, a un écartement de 1200 mm et une pente jusqu’à 550 ‰ ; le trajet dure 2 minutes à 1,2 m/s.', 'En raison d’une révision générale, le funiculaire est fermé du 27 août au 4 décembre 2026. La reprise est annoncée pour le 5 décembre 2026 ; d’ici là, la ligne de bus 4 assure le remplacement.'] },
       { titel: 'Équipement et accessibilité', liste: ['2 cabines de 20 places chacune', '240 personnes par heure'],
         p: ['Sur la page du véhicule, les TPF ne donnent pas d’indications sur l’accès en fauteuil roulant, avec une poussette ou un vélo.'] }
     ],

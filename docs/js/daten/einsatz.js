@@ -64,7 +64,7 @@ const EINSATZ = {
       ['Bern', 'Thun', 'Spiez', 'Interlaken Ost'], ['Spiez', 'Brig'], ['Bern', 'Luzern'], ['Basel SBB', 'Olten', 'Luzern', 'Arth-Goldau', 'Erstfeld', 'Bellinzona', 'Lugano'], ['Basel SBB', 'Zürich HB'],
       ['Zürich HB', 'Schaffhausen'], ['Zürich HB', 'Winterthur', 'Frauenfeld', 'Kreuzlingen'], ['Frauenfeld', 'Romanshorn'], ['Zürich HB', 'Zug', 'Arth-Goldau'], ['Zürich HB', 'Sargans', 'Chur'], ['Sargans', 'Buchs SG']],
     international: 'eurocity',
-    text: 'Mit Re 460 vor allem auf Genève–Brig, Basel–Lugano, Zürich–Konstanz, Zürich–Baden–Olten–Bern und Zürich–Schaffhausen. Als EuroCity auch international unterwegs.' },
+    text: 'Mit Re 460 vor allem auf Genève–Brig, Basel–Lugano, Zürich–Konstanz, Zürich–Baden–Olten–Bern und Zürich–Schaffhausen. International fahren vor allem die EuroCity-Wagen der SBB.' },
   'rabe-523': { gebiete: [['Aarau', 14, 'Aargau'], ['Solothurn', 12, 'Solothurn'], ['Luzern', 14, 'Luzern'], ['Basel SBB', 12, 'Basel'], ['Neuchâtel', 12, 'Neuenburg'], ['Fribourg/Freiburg', 14, 'Freiburg'], ['Lausanne', 18, 'Waadt']],
     text: 'Als S-Bahn in den Kantonen Aargau, Solothurn, Luzern, Basel, Neuenburg, Freiburg und Waadt.' },
   'rbde-560': { gebiete: [['Aarau', 14, 'Aargau'], ['Luzern', 14, 'Luzern'], ['Neuchâtel', 12, 'Neuenburg'], ['Lausanne', 18, 'Waadt']], strecken: [['Monthey', 'St-Maurice', 'Martigny', 'Sion', 'Visp', 'Brig']],
@@ -115,7 +115,7 @@ const INTERNATIONAL = {
     text: 'International von Genf, Basel und Bern über Brig und den Simplon nach Mailand sowie von Zürich nach München.' },
   eurocity: { strecken: [['Amsterdam', 'Utrecht', 'Düsseldorf', 'Köln', 'Mainz', 'Mannheim', 'Karlsruhe', 'Freiburg', 'Basel'], ['Hamburg', 'Hannover', 'Frankfurt', 'Mannheim'], ['Bremen', 'Hannover'],
     ['Berlin', 'Leipzig', 'Frankfurt'], ['Basel', 'Zürich'], ['Basel', 'Bern', 'Lausanne', 'Genève'], ['Zürich', 'Singen'], ['Zürich', 'Buchs SG', 'Innsbruck', 'Salzburg', 'Wien', 'Ostrava', 'Kraków', 'Jarosław'], ['Salzburg', 'Graz']],
-    text: 'Als EuroCity in Richtung Amsterdam, Hamburg, Berlin und Wien, dazu bis Graz und Jarosław in Polen.' }
+    text: 'Nach der SBB-Karte für Einheitswagen IV und EuroCity: Die EuroCity-Wagen der SBB fahren in Richtung Amsterdam, Hamburg, Berlin und Wien, dazu bis Graz und Jarosław in Polen. Die klassischen EW IV fahren überwiegend in der Schweiz.' }
 };
 
 // infrastructure wagons: no fixed routes, they go wherever a construction site is

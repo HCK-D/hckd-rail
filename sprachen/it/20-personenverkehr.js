@@ -102,7 +102,7 @@ uebZug('rabe-514', {
 uebZug('rabe-523', {
   typ: 'Elettrotreno regionale di Stadler',
   text: ['Il RABe 523 a quattro casse è stato il primo FLIRT delle FFS. È stato sviluppato per la Stadtbahn di Zugo ed è entrato in servizio commerciale nel 2004.', 'La serie appartiene alla grande famiglia FLIRT, che circola in diverse versioni.'],
-  kennzahlen: [['2004', 'primo impiego'], ['98*', 'veicoli secondo le serie di numeri'], ['2656 kW', 'potenza'], ['74,08 m', 'lunghezza']],
+  kennzahlen: [['2004', 'primo impiego'], ['98*', 'veicoli secondo le serie di numeri'], ['2656 kW', 'potenza'], ['73,5–74,1 m', 'lunghezza']],
   daten: { 'Bauart': 'elettrotreno', 'Grundtyp': '4 carrozze', 'Einstieg': 'a pianale ribassato', 'Höchstgeschwindigkeit': '160 km/h (famiglia FLIRT secondo le FFS)', 'Erste Region': 'Stadtbahn di Zugo', 'Einsatz': 'traffico regionale, S-Bahn', 'Anzahl': '98* (secondo le serie di numeri)' },
   specNote: '* Il numero 98 risulta dalle serie di numeri pubblicate 001–073, 101–114 e 501–511; non esiste un dato attuale sull’effettivo confermato separatamente dalle FFS. I 160 km/h sono indicati dalle FFS per l’intera famiglia FLIRT regionale.',
   abschnitte: [
@@ -110,6 +110,17 @@ uebZug('rabe-523', {
       { titel: 'Impiego e tecnica', p: ['Secondo le FFS, i FLIRT circolano come S-Bahn tra l’altro nei cantoni Argovia, Soletta, Lucerna, Basilea, Neuchâtel, Friburgo e Vaud.', 'A seconda della versione, i treni sono lunghi da 75 a 105 m e offrono da 156 a 236 posti a sedere. Viaggiano fino a 160 km/h.'] },
       { titel: 'Dotazione e accessibilità', liste: ['Accesso a pianale ribassato', 'Posti per sedie a rotelle e WC accessibile', 'Posti prioritari', 'Fasciatoio (solo in una parte dei treni)', 'Prese in 1a classe', 'Posti per biciclette, passeggini e bagagli'],
         p: ['Queste indicazioni valgono per la famiglia FLIRT delle FFS; i dettagli variano secondo la versione.'] },
+      { titel: 'Le serie a confronto', tabelle: { kopf: ['Numeri', 'Quantità', 'Costruzione', 'Lunghezza', 'Peso', 'Primo impiego'], zeilen: [
+        ['001–012', '12', '2004–2005', '74,1 m', '120 t', 'Stadtbahn di Zugo'],
+        ['013–031', '19', '2009–2010', '74,1 m', '120 t', 'RER Vaud'],
+        ['032–043', '12', '2009–2010', '74,1 m', '120 t', 'Svizzera centrale, trasformati da RABe 522'],
+        ['044–056', '13', '2012–2013', '74,1 m', '120 t', 'RegiOlten'],
+        ['057–066', '10', '2015–2016', '74,1 m', '127 t', 'RegiOlten'],
+        ['067–073', '7', '2017', '74,1 m', '127 t', 'RegiOlten'],
+        ['074–077', '4', '2017', '74,1 m', '127 t', 'transN, fuori dal conteggio FFS'],
+        ['101–114', '14', '2020–2021', '73,5 m', '160 t', 'RER Vaud (FLIRT 3)'],
+        ['501–511', '11', '2022–2024', '73,5 m (FFS: circa 75 m)', '160 t', '«Mouette», lunga percorrenza, 181 posti a sedere']] },
+        hinweis: 'Lunghezze e pesi secondo passiontrain.ch, arrotondati; i pesi vi sono indicati come massa totale. Gli impieghi valgono per la messa in servizio e possono cambiare.' },
       { titel: 'Interpretare correttamente il numero', p: ['Il numero pubblicato di 209 comprende tutti i FLIRT delle FFS impiegati nel traffico regionale, incluse altre serie e versioni.', 'Per il solo RABe 523, le serie di numeri pubblicate 001–073, 101–114 e 501–511 danno insieme 98 veicoli. Si tratta di una deduzione dai numeri e non di un dato ufficiale sull’effettivo delle FFS.'] }
     ],
   bilder: ['RABe 523 001 a Muttenz', 'RABe 523 019', 'RABe 523 024 a Montreux', 'RABe 523 018 a Yverdon-les-Bains', 'RABe 523 038']
@@ -178,14 +189,14 @@ uebZug('rabe-503', {
 
 uebZug('re-450', {
   abschnitte: [
-      { titel: 'Costruttore e composizione della flotta', p: ['SLM e ABB hanno costruito le 115 Re 450 per i treni navetta a due piani (DPZ) della S-Bahn di Zurigo. Le carrozze a due piani sono state fornite da SLM e Schindler Waggon; il primo DPZ ha circolato nel 1989, un anno prima dell’avvio della S-Bahn nel maggio 1990.', 'Fino al 1998 sono stati costruiti 113 treni navetta. Sono stati rinnovati dal 2011 al 2018.'] },
+      { titel: 'Costruttore e composizione della flotta', p: ['SLM e ABB hanno costruito le 115 Re 450 per i treni navetta a due piani (DPZ) della S-Bahn di Zurigo. Le carrozze a due piani sono state fornite da SLM e Schindler Waggon; il primo DPZ ha circolato nel 1989, un anno prima dell’avvio della S-Bahn nel maggio 1990.', 'In tutto sono stati costruiti 115 treni navetta fino al 1998. 113 circolano oggi alle FFS; due sono stati ripresi nel 2008 dalla Sihltal Zürich Uetliberg Bahn (SZU). I treni sono stati rinnovati dal 2011 al 2018.'] },
       { titel: 'Impiego e tecnica', p: ['I DPZ sono la spina dorsale della S-Bahn di Zurigo e possono circolare su quasi tutta la rete dello ZVV. Un treno è lungo 98,8 m, offre 345 posti a sedere e viaggia fino a 130 km/h.', 'Un treno navetta comprende la Re 450, carrozze a due piani e una carrozza pilota, così al capolinea la locomotiva non deve essere spostata.'] },
       { titel: 'Dotazione e accessibilità', liste: ['Climatizzazione', 'Sistema d’informazione alla clientela', 'Prese in 1a classe', 'Amplificatore del segnale mobile', 'Compartimento multifunzionale con posti per biciclette', 'Posti per passeggini', 'Accesso a livello nella carrozza a pianale ribassato (NDW)', 'Posti per sedie a rotelle e WC accessibile', 'Posti prioritari'],
         p: ['Le persone in sedia a rotelle salgono senza gradini nella carrozza a pianale ribassato NDW, inserita nei treni navetta.'] }
     ],
   typ: 'Locomotiva dei treni navetta a due piani',
   text: ['La Re 450 traina e spinge i treni navetta a due piani (DPZ) della S-Bahn di Zurigo.', 'I treni navetta sono composti dalla locomotiva, da carrozze a due piani e da una carrozza pilota.'],
-  daten: { 'Einsatz': 'S-Bahn di Zurigo' },
+  daten: { 'Einsatz': 'S-Bahn di Zurigo', 'Anzahl': '115 costruiti, di cui 113 alle FFS e 2 alla SZU' },
   bilder: ['Re 450 021 con la S24 a Zurigo HB', 'Re 450 059 a Zurigo HB', 'Re 450 033 a Turgi, 1993', 'Re 450 022 a Niederweningen, 1991', 'Re 450 con la S5 sulla diga di Rapperswil']
 });
 
@@ -221,11 +232,11 @@ uebZug('rabe-520', {
 uebZug('rabe-521', {
   typ: 'FLIRT monotensione omologato in Svizzera e in Germania',
   text: ['Il RABe 521 è un FLIRT a quattro casse per i collegamenti regionali transfrontalieri tra la Svizzera nord-occidentale e la Germania.', 'Costituisce una parte importante della S-Bahn trinazionale di Basilea e circola anche sul Seehas.'],
-  kennzahlen: [['39', 'treni'], ['160 km/h', 'velocità massima'], ['2004', 'primo impiego'], ['74,08 m', 'lunghezza']],
+  kennzahlen: [['39', 'treni'], ['160 km/h', 'velocità massima'], ['2005', 'primo servizio passeggeri'], ['74,08 m', 'lunghezza']],
   daten: { 'Zugbildung': '4 carrozze', 'Gewicht': '120 t a vuoto, 152 t a pieno carico', 'Leistung': '2656 kW (valore del tipo di marcia FOS)', 'Nummern': '521 001–030 e 201–209', 'Einsatz': 'S-Bahn di Basilea, Seehas, Svizzera–Germania' },
   specNote: 'Il catalogo dei tipi di marcia delle FFS raggruppa sotto questo tipo anche varianti FLIRT a quattro casse tecnicamente simili; la potenza è quindi indicata come valore del tipo.',
   abschnitte: [
-      { titel: 'Costruttore e composizione della flotta', p: ['Stadler ha sviluppato la piattaforma FLIRT originariamente per le FFS. La serie RABe 521 comprende 30 veicoli con i numeri 521 001–030 e altri nove 521 201–209, in tutto 39 treni. I primi hanno circolato nel 2004.'] },
+      { titel: 'Costruttore e composizione della flotta', p: ['Stadler ha sviluppato la piattaforma FLIRT originariamente per le FFS. La serie RABe 521 comprende 30 veicoli con i numeri 521 001–030 e altri nove 521 201–209, in tutto 39 treni. Le consegne sono iniziate a metà 2005; i primi sono entrati in servizio passeggeri lo stesso anno. Sono seguiti i nove veicoli 521 201–209 per il Seehas.'] },
       { titel: 'Impiego e tecnica', p: ['I RABe 521 circolano soprattutto sulla S-Bahn trinazionale di Basilea e su collegamenti transfrontalieri verso la Germania.', 'Gli agganci automatici permettono la trazione multipla con FLIRT compatibili. I FLIRT delle FFS viaggiano fino a 160 km/h.'] },
       { titel: 'Dotazione e accessibilità', liste: ['Accesso a pianale ribassato', 'Posti per sedie a rotelle e WC accessibile', 'Posti prioritari', 'Prese in 1a classe', 'Zone multifunzionali per biciclette e passeggini', 'Portabagagli'],
         p: ['Gli accessi ribassati e le zone multifunzionali accelerano il cambio dei viaggiatori. Queste indicazioni valgono per la famiglia FLIRT delle FFS.'] }
@@ -290,7 +301,7 @@ uebZug('ew-iv', {
   specNote: 'Il numero 496 è un valore storico e non l’effettivo attuale: vendite, trasformazioni e demolizioni hanno ridotto la flotta.',
   abschnitte: [
       { titel: 'Costruttore e composizione della flotta', p: ['Le carrozze unificate IV sono state costruite da SIG, SWS, SWP e SWA. Le prime 40 carrozze climatizzate di 1a classe sono arrivate nel 1981; in tutto ne sono state costruite 540, di cui 496 per le FFS. Le carrozze EuroCity sono seguite nel 1989, le carrozze pilota nel 1997.', 'Tra il 2019 e il 2025 le FFS hanno ripristinato oltre 250 carrozze EW IV ed EuroCity, con protezione anticorrosione, nuova verniciatura e finestrini permeabili al segnale mobile. Le carrozze pilota vengono modernizzate fino a fine 2027.'] },
-      { titel: 'Impiego e tecnica', p: ['Le carrozze circolano in composizioni EC, IC e IR, per lo più con una Re 460 e una carrozza pilota. Assi tipici vanno da Ginevra a Briga, da Basilea a Lugano e da Zurigo via Olten a Berna. Alcune carrozze EC circolano anche in treni internazionali diurni e notturni.', 'Una carrozza è lunga 26,4 m ed è omologata per 200 km/h; offre 60 posti in 1a o fino a 86 in 2a classe.'] },
+      { titel: 'Impiego e tecnica', p: ['Le carrozze circolano in composizioni EC, IC e IR, per lo più con una Re 460 e una carrozza pilota. Assi tipici vanno da Ginevra a Briga, da Basilea a Lugano e da Zurigo via Olten a Berna. Le classiche carrozze unificate IV circolano oggi soprattutto in Svizzera; a livello internazionale viaggiano soprattutto le carrozze EuroCity delle FFS, anche in treni diurni e notturni.', 'Una carrozza è lunga 26,4 m ed è omologata per 200 km/h; offre 60 posti in 1a o fino a 86 in 2a classe.'] },
       { titel: 'Dotazione e accessibilità', liste: ['Prese elettriche', 'Zona famiglia', 'Zona silenzio in 1a classe (InterCity)', 'Carrozza ristorante (EuroCity)', 'Posti per biciclette e carrozze dedicate alle biciclette', 'Posti per sedie a rotelle e WC accessibile', 'Posti prioritari'],
         p: ['Le carrozze non sono a pianale ribassato. Sono disponibili posti per sedie a rotelle e un WC accessibile.'] }
     ],

@@ -28,5 +28,5 @@ uebEinsatz({
   'rabe-520': 'In the Seetal between Lenzburg and Lucerne and in the Lucerne region as far as Arth-Goldau and Brunnen.',
   'rabe-503': 'Mainly on Zurich–Rorschach, Basel–Brig and Geneva–Brig. Internationally on the north–south axis to Germany and Italy.',
   'ic2000': 'Mainly on Romanshorn–Zurich–Bern–Brig/Interlaken, Basel–Bern–Brig/Interlaken, Geneva–Brig, Geneva–Bern–Lucerne, Zurich–Konstanz and Zurich–Chur.',
-  'ew-iv': 'Hauled by Re 460 mainly on Geneva–Brig, Basel–Lugano, Zurich–Konstanz, Zurich–Baden–Olten–Bern and Zurich–Schaffhausen. Also international as EuroCity.'
+  'ew-iv': 'Hauled by Re 460 mainly on Geneva–Brig, Basel–Lugano, Zurich–Konstanz, Zurich–Baden–Olten–Bern and Zurich–Schaffhausen. Internationally, mostly the SBB EuroCity coaches run.'
 });

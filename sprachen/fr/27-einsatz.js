@@ -28,5 +28,5 @@ uebEinsatz({
   'rabe-520': 'Dans le Seetal entre Lenzbourg et Lucerne ainsi que dans la région de Lucerne jusqu’à Arth-Goldau et Brunnen.',
   'rabe-503': 'Surtout sur Zurich–Rorschach, Bâle–Brigue et Genève–Brigue. À l’international sur l’axe nord-sud vers l’Allemagne et l’Italie.',
   'ic2000': 'Surtout sur Romanshorn–Zurich–Berne–Brigue/Interlaken, Bâle–Berne–Brigue/Interlaken, Genève–Brigue, Genève–Berne–Lucerne, Zurich–Constance et Zurich–Coire.',
-  'ew-iv': 'Avec la Re 460 surtout sur Genève–Brigue, Bâle–Lugano, Zurich–Constance, Zurich–Baden–Olten–Berne et Zurich–Schaffhouse. Aussi à l’international comme EuroCity.'
+  'ew-iv': 'Avec la Re 460 surtout sur Genève–Brigue, Bâle–Lugano, Zurich–Constance, Zurich–Baden–Olten–Berne et Zurich–Schaffhouse. À l’international circulent surtout les voitures EuroCity des CFF.'
 });

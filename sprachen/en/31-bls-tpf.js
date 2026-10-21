@@ -96,13 +96,13 @@ uebZug('bls-re-475', {
 });
 uebZug('bls-re-485', {
   abschnitte: [
-      { titel: 'Manufacturer and fleet build-up', p: ['In 2002 BLS Cargo ordered 20 TRAXX of type F140 AC from Bombardier; they were delivered by mid-2003 and carry the numbers 485 001–020.', '485 004 was destroyed in an accident at Auggen (Germany) in 2020, which is why fleet lists now show 19 locomotives.'] },
+      { titel: 'Manufacturer and fleet build-up', p: ['In 2002 BLS Cargo ordered 20 TRAXX of type F140 AC from Bombardier; they were delivered by mid-2003 and carry the numbers 485 001–020.', '485 004 was destroyed in an accident at Auggen (Germany) in 2020. How many Re 485 are operational today is not publicly confirmed.'] },
       { titel: 'Service and technology', p: ['The Re 485 haul freight trains in Switzerland and to Germany, on the Lötschberg-Simplon and Gotthard axes.', 'Technically they match the German class 185 and the SBB Cargo Re 482, with a Swiss equipment package. They run at up to 140 km/h.'] }
     ],
   typ: 'Freight electric locomotive by Bombardier',
   text: ['The Re 485 are TRAXX locomotives of BLS Cargo for freight in Switzerland and to Germany.', 'They were ordered in 2002 and delivered by mid-2003.'],
-  kennzahlen: [['20', 'locomotives'], ['140 km/h', 'top speed'], ['CH, D', 'approval'], ['2002', 'first in service']],
-  daten: { 'Bauart': 'electric locomotive Bo’Bo’', 'Zulassung': 'Switzerland, Germany' },
+  kennzahlen: [['20', 'locomotives procured'], ['140 km/h', 'top speed'], ['CH, D', 'approval'], ['2002', 'first in service']],
+  daten: { 'Bauart': 'electric locomotive Bo’Bo’', 'Zulassung': 'Switzerland, Germany', 'Anzahl': '20 procured; 485 004 withdrawn after an accident in 2020' },
   specNote: 'The 140 km/h follows from the type TRAXX F140.',
   bilder: ['Re 485 005 of BLS Cargo', 'Re 485 016 with a freight train', 'Re 485 008 near Allmendingen']
 });
@@ -120,9 +120,9 @@ uebZug('bls-re-486', {
 });
 uebZug('bls-re-425', {
   typ: 'BLS electric locomotive, known as «the brown ones»',
-  text: ['For decades the brown BLS Re 4/4, today Re 425, hauled fast trains between Bern and Brig and freight trains from Basel to Domodossola. The Lötschberg car shuttle was also their job for a long time.', 'Since late 2023 the Re 465 have taken over the car shuttles. BLS Cargo still uses Re 4/4; Re 4/4 165 «Moutier» now belongs to the BLS Foundation.'],
+  text: ['For decades the brown BLS Re 4/4, today Re 425, hauled fast trains between Bern and Brig and freight trains from Basel to Domodossola. The Lötschberg car shuttle was also their job for a long time.', 'BLS Cargo ended the freight service of the Re 425 in 2021. From late 2023 the Re 465 gradually took over the car shuttles; the last scheduled run of an Re 425 took place on 27 July 2026 between Kandersteg and Goppenstein. Re 425 165 «Moutier» is preserved by the BLS Foundation.'],
   kennzahlen: [['35', 'built 1964–1983'], ['4980 kW', 'power'], ['140 km/h', 'top speed'], ['1964', 'first in service']],
-  daten: { 'Bauart': 'electric locomotive Bo’Bo’', 'Betreiber': 'BLS, today mainly BLS Cargo', 'Länge': '15.1 m (from no. 174: 15.47 m)', 'Anzahl': '35 built' },
+  daten: { 'Bauart': 'electric locomotive Bo’Bo’', 'Betreiber': 'BLS and BLS Cargo (historic); some locomotives now in museum or special service', 'Länge': '15.1 m (from no. 174: 15.47 m)', 'Anzahl': '35 built' },
   abschnitte: [{ titel: 'Re 4/4 165 «Moutier»', p: ['No. 165 was delivered to BLS as Ae 4/4 II 265 and carries the coat of arms of the municipality of Moutier. Since 2017 it has been one of the historic vehicles of the BLS Foundation and stands, out of service, in the Burgdorf depot.'] }],
   bilder: ['Re 425 192 in Spiez']
 });
@@ -347,7 +347,7 @@ uebZug('tpf-funiculaire', {
   daten: { 'Bauart': 'funicular with water ballast', 'Kabinen': '2 with 20 places each', 'Länge': '121 m line, car 5.4 m', 'Gewicht': '1600 kg per car', 'Höchstgeschwindigkeit': '4.3 km/h (1.2 m/s)', 'Kapazität': '240 people per hour' },
   abschnitte: [
       { titel: 'Manufacturer and fleet build-up', p: ['The funicular was built by Von Roll and has run since 1899. It was rebuilt in 1998, and the last major overhaul was in 2020. It is a listed historic monument.', 'It has two cars with 20 places each.'] },
-      { titel: 'Service and technology', p: ['In Fribourg, the funicular links the lower town, the Neuveville (552 m), with St-Pierre (608 m). On the single track with a passing loop it makes about 70 round trips a day, from 7 am to 7 pm, in summer until 8 pm.', 'Waste water from the city of Fribourg serves as counterweight. The line is 121 m long with gradients up to 550 ‰; the trip takes 2 minutes at 1.2 m/s.'] },
+      { titel: 'Service and technology', p: ['In Fribourg, the funicular links the lower town, the Neuveville (552 m), with St-Pierre (608 m). In regular service it makes about 70 round trips a day on the single track with a passing loop, from 7 am to 7 pm, in summer until 8 pm.', 'Waste water from the city of Fribourg serves as counterweight. The line is 121 m long, has a gauge of 1200 mm and gradients up to 550 ‰; the trip takes 2 minutes at 1.2 m/s.', 'The funicular is closed for a major overhaul from 27 August to 4 December 2026. Service is scheduled to resume on 5 December 2026; until then bus line 4 replaces it.'] },
       { titel: 'Facilities and accessibility', liste: ['2 cars with 20 places each', '240 people per hour'],
         p: ['On its vehicle page, TPF gives no details about access with a wheelchair, pram or bike.'] }
     ],

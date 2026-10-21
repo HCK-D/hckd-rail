@@ -131,13 +131,13 @@ ZUEGE.push(
     ] },
   { id: 'bls-re-485', kat: 'cargo', name: 'Re 485', beiname: 'TRAXX', typ: 'Elektrische Güterzuglokomotive von Bombardier', bahn: 'bls', vorlaeufig: false,
     text: ['Die Re 485 sind TRAXX-Lokomotiven von BLS Cargo für den Güterverkehr in der Schweiz und nach Deutschland.', 'Sie wurden 2002 bestellt und bis Mitte 2003 geliefert.'],
-    kennzahlen: [['20', 'Lokomotiven'], ['140 km/h', 'Höchstgeschwindigkeit'], ['CH, D', 'Zulassung'], ['2002', 'erster Einsatz']],
+    kennzahlen: [['20', 'Lokomotiven beschafft'], ['140 km/h', 'Höchstgeschwindigkeit'], ['CH, D', 'Zulassung'], ['2002', 'erster Einsatz']],
     nummern: [[485001, 485020]],
-    daten: { 'Bauart': 'Elektrolokomotive Bo’Bo’', 'Fahrzeugfamilie': 'TRAXX F140 AC', 'Hersteller': 'Bombardier Transportation', 'Betreiber': 'BLS Cargo', 'Spurweite': 'Normalspur, 1435 mm', 'Fahrzeugnummern': '001–020', 'Höchstgeschwindigkeit': '140 km/h', 'Zulassung': 'Schweiz, Deutschland', 'Anzahl': '20', 'In Betrieb seit': '2002' },
+    daten: { 'Bauart': 'Elektrolokomotive Bo’Bo’', 'Fahrzeugfamilie': 'TRAXX F140 AC', 'Hersteller': 'Bombardier Transportation', 'Betreiber': 'BLS Cargo', 'Spurweite': 'Normalspur, 1435 mm', 'Fahrzeugnummern': '001–020', 'Höchstgeschwindigkeit': '140 km/h', 'Zulassung': 'Schweiz, Deutschland', 'Anzahl': '20 beschafft; 485 004 nach Unfall 2020 ausgeschieden', 'In Betrieb seit': '2002' },
     specOrder: ['Bauart', 'Fahrzeugfamilie', 'Hersteller', 'Betreiber', 'Spurweite', 'Fahrzeugnummern', 'Höchstgeschwindigkeit', 'Zulassung', 'Anzahl', 'In Betrieb seit'],
     specNote: 'Die 140 km/h stehen für die Bauart TRAXX F140.',
     abschnitte: [
-      { titel: 'Hersteller und Flottenaufbau', p: ['BLS Cargo bestellte 2002 bei Bombardier 20 TRAXX vom Typ F140 AC; sie wurden bis Mitte 2003 geliefert und tragen die Nummern 485 001–020.', 'Die 485 004 wurde 2020 bei einem Unfall in Auggen (Deutschland) zerstört, weshalb Flottenlisten heute 19 Loks nennen.'] },
+      { titel: 'Hersteller und Flottenaufbau', p: ['BLS Cargo bestellte 2002 bei Bombardier 20 TRAXX vom Typ F140 AC; sie wurden bis Mitte 2003 geliefert und tragen die Nummern 485 001–020.', 'Die 485 004 wurde 2020 bei einem Unfall in Auggen (Deutschland) zerstört. Wie viele Re 485 heute betriebsbereit sind, ist nicht öffentlich bestätigt.'] },
       { titel: 'Einsatz und Technik', p: ['Die Re 485 fahren Güterzüge in der Schweiz und nach Deutschland, auf der Lötschberg-Simplon- und der Gotthard-Achse.', 'Technisch entsprechen sie der deutschen Baureihe 185 und den Re 482 von SBB Cargo, mit einem Schweizer Ausrüstungspaket. Sie fahren bis 140 km/h.'] }
     ],
     quellen: ['Wikipedia – BLS Cargo, Flottentabelle und Geschichte', 'Datenblatt HCKD «Re 485 – TRAXX», Oktober 2026'],
@@ -227,13 +227,13 @@ ZUEGE.push(
       { src: 'bilder/bls-br-193-c2.jpg', titel: '193 496 in Hupac-Farben mit dem Melzo-Shuttle bei Angeren (NL)', foto: 'Rob Dammers', lizenz: 'CC BY 2.0', lizenzUrl: 'https://creativecommons.org/licenses/by/2.0', quelle: 'https://commons.wikimedia.org/wiki/File:Angeren_BLS_193_496_(Hupac)_met_de_Melzo_Shuttle_(47053665104).jpg' }
     ] },
   { id: 'bls-re-425', kat: 'historisch', name: 'Re 425', beiname: 'Re 4/4', typ: 'Elektrolokomotive der BLS, bekannt als «die Braunen»', bahn: 'bls', vorlaeufig: false,
-    text: ['Die braunen Re 4/4 der BLS, heute Re 425, zogen über Jahrzehnte Schnellzüge zwischen Bern und Brig und Güterzüge von Basel nach Domodossola. Auch der Autoverlad am Lötschberg war lange ihre Aufgabe.', 'Seit Ende 2023 übernehmen beim Autoverlad die Re 465. Bei BLS Cargo stehen weiterhin Re 4/4 im Einsatz; die Re 4/4 165 «Moutier» gehört heute der BLS-Stiftung.'],
+    text: ['Die braunen Re 4/4 der BLS, heute Re 425, zogen über Jahrzehnte Schnellzüge zwischen Bern und Brig und Güterzüge von Basel nach Domodossola. Auch der Autoverlad am Lötschberg war lange ihre Aufgabe.', 'Bei BLS Cargo endete der Einsatz im Güterverkehr 2021. Ab Ende 2023 übernahmen die Re 465 schrittweise den Autoverlad; die letzte planmässige Fahrt einer Re 425 fand am 27. Juli 2026 zwischen Kandersteg und Goppenstein statt. Die Re 425 165 «Moutier» bleibt bei der BLS-Stiftung erhalten.'],
     kennzahlen: [['35', 'gebaut 1964–1983'], ['4980 kW', 'Leistung'], ['140 km/h', 'Höchstgeschwindigkeit'], ['1964', 'erster Einsatz']],
     nummern: [[425161, 425195]],
-    daten: { 'Bauart': 'Elektrolokomotive Bo’Bo’', 'Frühere Bezeichnung': 'Re 4/4', 'Betreiber': 'BLS, heute vor allem BLS Cargo', 'Spurweite': 'Normalspur, 1435 mm', 'Länge': '15,1 m (ab Nr. 174: 15,47 m)', 'Gewicht': '80 t', 'Leistung': '4980 kW', 'Höchstgeschwindigkeit': '140 km/h', 'Anzahl': '35 gebaut', 'In Betrieb seit': '1964' },
+    daten: { 'Bauart': 'Elektrolokomotive Bo’Bo’', 'Frühere Bezeichnung': 'Re 4/4', 'Betreiber': 'BLS und BLS Cargo (historisch); einzelne Loks heute im Museums- oder Sonderbetrieb', 'Spurweite': 'Normalspur, 1435 mm', 'Länge': '15,1 m (ab Nr. 174: 15,47 m)', 'Gewicht': '80 t', 'Leistung': '4980 kW', 'Höchstgeschwindigkeit': '140 km/h', 'Anzahl': '35 gebaut', 'In Betrieb seit': '1964' },
     specOrder: ['Bauart', 'Frühere Bezeichnung', 'Betreiber', 'Spurweite', 'Länge', 'Gewicht', 'Leistung', 'Höchstgeschwindigkeit', 'Anzahl', 'In Betrieb seit'],
     abschnitte: [{ titel: 'Die Re 4/4 165 «Moutier»', p: ['Die 165 wurde ursprünglich als Ae 4/4 II 265 an die BLS geliefert und trägt das Wappen der Gemeinde Moutier. Seit 2017 gehört sie zu den historischen Fahrzeugen der BLS-Stiftung und steht nicht mehr betriebsfähig im Depot Burgdorf.'] }],
-    quellen: ['BLS – Flotte: Re 425, technische Daten', 'BLS-Stiftung – Re 425 165 «Moutier»', 'Wikipedia – BLS Cargo, Flottentabelle (Re 4/4 170–195)', 'Datenblatt HCKD «Re 425», Oktober 2026'],
+    quellen: ['BLS – Flotte: Re 425, technische Daten', 'BLS Inside – «Bye-bye Bruneli», 19. Juli 2026', 'Bahnonline.ch – Letzte fahrplanmässige Fahrt der Re 425, 26. Juli 2026','BLS-Stiftung – Re 425 165 «Moutier»', 'Wikipedia – BLS Cargo, Flottentabelle (Re 4/4 170–195)', 'Datenblatt HCKD «Re 425», Oktober 2026'],
     art: { typ: 'lok', form: 'kantig', farbe: BLS_BRAUN, akzent: '#E8DCC8', panto: true },
     bilder: [
       { src: 'bilder/bls-re-425-c1.jpg', titel: 'Re 425 192 in Spiez', foto: 'JoachimKohler-HB', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:BLS_Re_425_Nr._192_in_Spiez.jpg' }
