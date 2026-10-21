@@ -235,3 +235,60 @@ Object.assign(EINSATZ, {
     text: 'Auf dem Meterspurnetz der TPF zwischen Palézieux, Bulle, Gruyères und Montbovon. Die Meterspur ist gestrichelt und vereinfacht eingezeichnet.' },
   'tpf-funiculaire': { orte: [['Fribourg/Freiburg']], text: 'In der Stadt Fribourg zwischen der Unterstadt (Neuveville) und St-Pierre.' }
 });
+/* =====================================================================
+   SOB (Oktober 2026): Linien nach der Flottenseite der SOB und Wikipedia
+   (Schweizerische Südostbahn). Eigenes Netz der SOB: Romanshorn–St. Gallen–
+   Wattwil–Nesslau, Rapperswil–Pfäffikon SZ–Arth-Goldau, Wädenswil–Einsiedeln.
+   ===================================================================== */
+Object.assign(BAHNHOF_EXTRA, {
+  'Wattwil': [2724621, 1240041], 'Herisau': [2738777, 1250441], 'Pfäffikon SZ': [2701487, 1228872], 'Biberbrugg': [2697374, 1223620],
+  'Einsiedeln': [2699076, 1220557], 'Wädenswil': [2693645, 1231669], 'Samstagern': [2694527, 1227485], 'Uznach': [2716786, 1231520],
+  'Nesslau-Neu St. Johann': [2733202, 1232148], 'Siebnen-Wangen': [2710816, 1226778], 'Altstätten SG': [2759937, 1249203], 'Thalwil': [2685175, 1238955],
+  'Rothenthurm': [2693820, 1217938], 'Walenstadt': [2742225, 1220463], 'Heerbrugg': [2765164, 1253368], 'Schwanden GL': [2724642, 1206389],
+  'St. Margrethen': [2765862, 1258150]
+});
+const SOB_NETZ = [['Romanshorn', 'St. Gallen', 'Herisau', 'Wattwil', 'Nesslau-Neu St. Johann'], ['Rapperswil SG', 'Pfäffikon SZ', 'Biberbrugg', 'Rothenthurm', 'Arth-Goldau'], ['Wädenswil', 'Samstagern', 'Biberbrugg', 'Einsiedeln']];
+const SOB_ALT = [['Rapperswil SG', 'Pfäffikon SZ', 'Biberbrugg', 'Rothenthurm', 'Arth-Goldau'], ['Wädenswil', 'Samstagern', 'Biberbrugg', 'Einsiedeln']];
+const BT_NETZ = [['Romanshorn', 'St. Gallen', 'Herisau', 'Wattwil', 'Nesslau-Neu St. Johann']];
+const VAE = ['St. Gallen', 'Herisau', 'Wattwil', 'Uznach', 'Rapperswil SG', 'Pfäffikon SZ', 'Biberbrugg', 'Rothenthurm', 'Arth-Goldau', 'Luzern'];
+const SOB_SBAHN = [['Rapperswil SG', 'Uznach', 'Wattwil', 'Herisau', 'St. Gallen', 'Rorschach', 'St. Margrethen', 'Altstätten SG', 'Buchs SG', 'Sargans'],
+  ['Rapperswil SG', 'Ziegelbrücke', 'Glarus', 'Schwanden GL'], ['Sargans', 'Walenstadt', 'Ziegelbrücke', 'Uznach'], ['Wädenswil', 'Samstagern', 'Biberbrugg', 'Einsiedeln'],
+  ['Einsiedeln', 'Biberbrugg', 'Pfäffikon SZ', 'Rapperswil SG'], ['Biberbrugg', 'Rothenthurm', 'Arth-Goldau']];
+const SOB_SBAHN_TEXT = 'Auf den S-Bahn- und Regionallinien der SOB, zum Beispiel S4 Uznach–Wattwil–St. Gallen–Sargans, S6 Rapperswil–Glarus–Schwanden, S13 Wädenswil–Einsiedeln und S40 Einsiedeln–Rapperswil. Die Zuteilung der Züge wechselt mit Fahrplan und Umläufen.';
+Object.assign(EINSATZ, {
+  'sob-traverso': { strecken: [VAE, ['Basel SBB', 'Olten', 'Luzern', 'Arth-Goldau', 'Erstfeld', 'Göschenen', 'Airolo', 'Bellinzona', 'Locarno'], ['Zürich HB', 'Zug', 'Arth-Goldau'],
+      ['Bern', 'Burgdorf', 'Langenthal', 'Olten', 'Zürich HB', 'Thalwil', 'Wädenswil', 'Pfäffikon SZ', 'Siebnen-Wangen', 'Ziegelbrücke', 'Walenstadt', 'Sargans', 'Landquart', 'Chur'],
+      ['St. Gallen', 'Rorschach', 'St. Margrethen', 'Heerbrugg', 'Altstätten SG', 'Buchs SG', 'Sargans', 'Chur']],
+    text: 'Als Voralpen-Express St. Gallen–Rapperswil–Arth-Goldau–Luzern, als Treno Gottardo von Basel und Zürich über die Gotthard-Bergstrecke nach Locarno, als Aare Linth Bern–Zürich–Chur und als Alpenrhein-Express St. Gallen–Chur.' },
+  'sob-flirt3': { strecken: SOB_SBAHN, text: SOB_SBAHN_TEXT },
+  'sob-flirt-1': { strecken: SOB_SBAHN, text: SOB_SBAHN_TEXT },
+  'sob-flirt-2': { strecken: SOB_SBAHN, text: SOB_SBAHN_TEXT },
+  'sob-tm-234': { strecken: SOB_NETZ, orte: [['Zürich Flughafen'], ['Uetliberg', 2679252, 1245110]],
+    text: 'Vor allem auf dem Netz der SOB. Für andere Bahnen auch auswärts, etwa am Flughafen Zürich und am Uetliberg.' },
+  'sob-dienstwagen': { strecken: SOB_NETZ, text: 'Für Baustellen und Unterhalt auf dem Netz der SOB.' },
+  'sob-rbde-561': { strecken: [['Wädenswil', 'Samstagern', 'Biberbrugg', 'Einsiedeln'], ['Rapperswil SG', 'Pfäffikon SZ', 'Biberbrugg', 'Rothenthurm', 'Arth-Goldau'], ['Pfäffikon SZ', 'Siebnen-Wangen', 'Ziegelbrücke']],
+    text: 'Früher auf Wädenswil–Einsiedeln, Rapperswil–Samstagern und Biberbrugg–Arth-Goldau, später im Voralpen-Express. Zuletzt bis Oktober 2025 auf der S27 Siebnen-Wangen–Ziegelbrücke.' },
+  'sob-abt-npz-sued': { strecken: [['Wädenswil', 'Samstagern', 'Biberbrugg', 'Einsiedeln'], ['Rapperswil SG', 'Pfäffikon SZ', 'Biberbrugg', 'Rothenthurm', 'Arth-Goldau'], ['Pfäffikon SZ', 'Siebnen-Wangen', 'Ziegelbrücke']],
+    text: 'Mit den NPZ Süd auf den Strecken der alten SOB, zuletzt bis Oktober 2025 auf der S27 Siebnen-Wangen–Ziegelbrücke.' },
+  'sob-rbde-566': { strecken: BT_NETZ, text: 'Früher im Regionalverkehr auf dem BT-Netz zwischen Romanshorn, St. Gallen, Herisau, Wattwil und Nesslau.' },
+  'sob-abt-npz-ost': { strecken: BT_NETZ, text: 'Früher mit den NPZ Ost im Regionalverkehr auf dem BT-Netz in der Ostschweiz.' },
+  'sob-revvivo': { strecken: [VAE], text: 'Früher im Voralpen-Express St. Gallen–Rapperswil–Arth-Goldau–Luzern.' },
+  'sob-ew-iv': { strecken: [VAE, ['St. Gallen', 'Romanshorn']], text: 'Früher im Voralpen-Express zwischen Luzern, St. Gallen und Romanshorn.' },
+  'sob-ew-i-ii': { strecken: [...SOB_ALT, ...BT_NETZ], text: 'Früher in lokbespannten Zügen auf den Strecken von SOB und BT.' },
+  'sob-bde-576': { strecken: [...SOB_ALT, ...BT_NETZ, ['Wattwil', 'Uznach', 'Rapperswil SG']], text: 'Früher im Regional- und Direktverkehr von SOB und BT, auch auf der «Direkten Linie» Romanshorn–St. Gallen–Rapperswil–Arth-Goldau.' },
+  'sob-abe-4-4': { strecken: SOB_ALT, text: 'Früher auf den elektrifizierten Strecken der alten SOB zwischen Rapperswil, Arth-Goldau, Wädenswil und Einsiedeln.' },
+  'sob-de-4-4': { strecken: SOB_ALT, text: 'Früher im Gepäckverkehr auf den Strecken der alten SOB.' },
+  'bt-be-4-4': { strecken: [...BT_NETZ, ['Wattwil', 'Uznach', 'Rapperswil SG']], text: 'Früher vor Personen- und Güterzügen auf dem BT-Netz und auf der «Direkten Linie» über Wattwil nach Rapperswil.' },
+  'bt-be-3-4': { strecken: BT_NETZ, text: 'Früher im Regionalverkehr auf dem BT-Netz, später auf historischen Fahrten, etwa bei Wattwil.' },
+  'sob-re-446': { strecken: [VAE], text: 'Früher vor dem Voralpen-Express zwischen Luzern und St. Gallen.' },
+  'sob-re-456': { strecken: [VAE, ['St. Gallen', 'Romanshorn']], text: 'Früher vor Personenzügen der BT und vor dem Voralpen-Express zwischen Luzern, St. Gallen und Romanshorn.' },
+  'sob-re-4-4-iii': { strecken: SOB_ALT, text: 'Früher vor Personen- und Güterzügen auf den steilen Strecken der alten SOB.' },
+  'sob-ae-476': { strecken: SOB_ALT, text: 'Früher als zusätzliche Zugkraft auf den Strecken der alten SOB.' },
+  'sob-e-3-3': { strecken: SOB_ALT, text: 'Früher auf der Wädenswil–Einsiedeln-Bahn und dem Netz der alten SOB.' },
+  'sob-ed-4-5': { strecken: SOB_ALT, text: 'Früher vor schwereren Zügen auf den Linien der alten SOB.' },
+  'sob-am-846': { strecken: SOB_ALT, orte: [['Samstagern']], text: 'Früher vor Bauzügen und im Rangierdienst auf dem Netz der SOB, zum Beispiel in Samstagern.' },
+  'sob-eea-936': { orte: [['Herisau'], ['Samstagern']], text: 'Früher im Rangierdienst in Bahnhöfen und Werkstätten der BT und der SOB.' },
+  'sob-te-216': { orte: [['Herisau']], text: 'Im Rangierdienst in Bahnhöfen und Werkstätten, zum Beispiel in Herisau.' },
+  'sob-tm-236': { strecken: SOB_NETZ, orte: [['Herisau']], text: 'Früher im Rangier- und Baudienst auf dem Netz der SOB, oft in Herisau.' },
+  'sob-xtmas': { strecken: SOB_NETZ, text: 'Von 2010 bis 2014 für Arbeiten an der Infrastruktur auf dem Netz der SOB.' }
+});

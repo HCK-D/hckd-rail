@@ -106,8 +106,8 @@ $head = [regex]::Replace($head, '<meta name="claude:[^>]*>\s*', '')
 $reset = ':root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}'
 
 # ---------- Seitenliste aus den Fahrzeugdaten ----------
-# SBB-Fahrzeuge plus BLS und TPF (eigene Dateien, gleiche Form)
-$daten = (('fahrzeuge.js', 'bls.js', 'tpf.js') | ForEach-Object { $p = Join-Path $root "js\daten\$_"; if (Test-Path $p) { [IO.File]::ReadAllText($p, [Text.Encoding]::UTF8) } }) -join "`n"
+# SBB-Fahrzeuge plus BLS, TPF und SOB (eigene Dateien, gleiche Form)
+$daten = (('fahrzeuge.js', 'bls.js', 'tpf.js', 'sob.js') | ForEach-Object { $p = Join-Path $root "js\daten\$_"; if (Test-Path $p) { [IO.File]::ReadAllText($p, [Text.Encoding]::UTF8) } }) -join "`n"
 $seiten = New-Object System.Collections.ArrayList
 $katName = @{}
 foreach ($m in [regex]::Matches($daten, "\{ id: '([^']+)', code: '[^']*', name: '([^']+)', text: '([^']*)'")) {
