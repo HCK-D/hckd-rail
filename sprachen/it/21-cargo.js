@@ -6,9 +6,9 @@ uebZug('re-482', {
   daten: { 'Stromsystem': '15 kV 16,7 Hz e 25 kV 50 Hz', 'Gewicht': '84 t a vuoto', 'Baureihen': 'Re 482.1 e Re 482.2', 'Einsatz': 'traffico merci Svizzera, Germania, in parte Austria' },
   specNote: 'I 50 veicoli provengono dalla panoramica storica della flotta di FFS Cargo; non ne deriva un effettivo attuale per il 2026.',
   abschnitte: [
-    { titel: 'Acquisto e impiego', p: ['FFS Cargo ha introdotto la Re 482 dal 2002. Le locomotive hanno assunto treni merci internazionali verso la Germania e in parte l’Austria, oltre a servizi nel traffico merci svizzero.'] },
-    { titel: 'Due serie', p: ['La panoramica della flotta distingue 35 Re 482.1 e 15 Re 482.2. Tecnicamente entrambe appartengono alla famiglia TRAXX; equipaggiamento e pacchetti nazionali variano secondo la serie.'] }
-  ],
+      { titel: 'Costruttore e composizione della flotta', p: ['Bombardier Transportation ha fornito le Re 482 a FFS Cargo dal 2002. Fanno parte della famiglia TRAXX.', 'La panoramica della flotta distingue 35 Re 482.1 e 15 Re 482.2, in tutto 50 locomotive. Equipaggiamento e pacchetti nazionali variano secondo la serie.'] },
+      { titel: 'Impiego e tecnica', p: ['Le locomotive hanno assunto treni merci internazionali verso la Germania e in parte l’Austria, oltre a servizi nel traffico merci svizzero.', 'I sistemi di sicurezza per la Svizzera e la Germania permettono di attraversare il confine senza cambiare locomotiva.'] }
+    ],
   bilder: ['Re 482 007 a Köln-Kalk Nord', 'Re 482 023 di FFS Cargo con treno merci presso Erbach (Rheingau)', 'Re 482 con treno merci davanti a un ponte ferroviario', 'Re 482 005 di FFS Cargo a Eschweiler', 'Re 482 005']
 });
 
@@ -19,9 +19,9 @@ uebZug('re-484', {
   daten: { 'Stromsystem': '15 kV CA e 3 kV CC', 'Gewicht': '86 t a vuoto', 'In Betrieb seit': '2004–2006 (consegna)', 'Einsatz': 'Svizzera e Italia' },
   specNote: 'Il catalogo dei tipi di marcia delle FFS usa 86 t; la letteratura più vecchia indica talvolta 85,4 t. Vale qui il valore ufficiale del 2026.',
   abschnitte: [
-    { titel: 'Acquisto e impiego', p: ['FFS Cargo ha acquistato 21 Re 484 per il traffico merci internazionale Svizzera–Italia. Più tardi alcuni veicoli sono stati impiegati anche nel traffico interno svizzero.'] },
-    { titel: 'Tecnica multisistema', p: ['La locomotiva circola con la corrente alternata svizzera e con la corrente continua italiana. I sistemi nazionali di controllo della marcia permettono di attraversare il confine senza cambio di locomotiva.'] }
-  ],
+      { titel: 'Costruttore e composizione della flotta', p: ['FFS Cargo ha acquistato da Bombardier Transportation 21 Re 484 della famiglia TRAXX. Sono state consegnate dal 2004 al 2006.'] },
+      { titel: 'Impiego e tecnica', p: ['La Re 484 era destinata al traffico merci internazionale Svizzera–Italia; più tardi ha circolato anche nel traffico interno svizzero.', 'La locomotiva circola con la corrente alternata svizzera e la corrente continua italiana. Il controllo della marcia dei treni specifico per ogni paese permette di attraversare il confine senza cambiare locomotiva.'] }
+    ],
   bilder: ['Re 484 006 di FFS Cargo a Steinen', 'Re 484 018 di FFS Cargo', 'Re 484 012 con pubblicità a Singen (Hohentwiel)', 'Re 484 003', 'Re 484 020 con EuroCity a Zurigo HB']
 });
 
@@ -32,10 +32,10 @@ uebZug('re-420', {
   daten: { 'Achsfolge': 'Bo′Bo′, 4 assi motori', 'Länge': 'circa 14,8–15,5 m fuori respingenti *', 'Gewicht': 'circa 80–85 t in servizio *', 'Leistung': '4650 kW, potenza oraria alla ruota **', 'Elektrische Bremse': 'a recupero', 'In Betrieb seit': '1964 (ultima serie 1985)', 'Anzahl': '276 Re 4/4 II (numero costruito per le FFS)', 'Hersteller': 'parte meccanica SLM Winterthur; parte elettrica BBC, MFO e SAAS' },
   specNote: '* A seconda del lotto e delle trasformazioni. ** Valore per la loc 11108 descritta da SBB Historic; FFS Infrastruttura indica 4700 kW come potenza massima per il tipo di marcia Re 420.',
   abschnitte: [
-    { titel: 'Origine e tecnica', p: ['Nel 1964 le FFS ricevettero sei prototipi. Seguirono diverse serie con adattamenti a cabina, pantografi e cassa. SLM era responsabile della parte meccanica; la parte elettrica proveniva da BBC, MFO e SAAS.', 'I quattro motori di trazione sono comandati da un graduatore. Il comando multiplo permette anche la marcia con una Re 6/6, detta «Re 10/10».'] },
-    { titel: 'Impiego e varianti', p: ['La Re 4/4 II è stata impiegata nel traffico viaggiatori e merci, tra l’altro in testa ai treni veloci in pianura e sulle rampe d’accesso al San Gottardo e al Sempione. Una parte è passata a FFS Cargo.', 'La variante Re 421 è nata da trasformazioni per la Germania; 30 locomotive sono state ammodernate nel 2011–2016 come «LION» per i treni di rinforzo della S-Bahn di Zurigo. FFS Cargo offre ancora la Re 420 a noleggio in Svizzera.'],
-      hinweis: 'Numero: SBB Historic indica 276 Re 4/4 II acquistate per le FFS, una vecchia rivista Cargo 277 locomotive consegnate. Questa pagina segue SBB Historic; nessuno dei due numeri è l’effettivo attuale.' }
-  ],
+      { titel: 'Costruttore e composizione della flotta', p: ['Nel 1964 le FFS hanno ricevuto sei prototipi, seguiti da diverse serie fino al 1985. La SLM di Winterthur ha costruito la parte meccanica, l’elettrica era di BBC, MFO e SAAS.', 'La variante Re 421 è nata da trasformazioni per la Germania; 30 locomotive sono state modernizzate nel 2011–2016 come «LION» per i treni di rinforzo della S-Bahn di Zurigo.'],
+        hinweis: 'Effettivo: FFS Historic indica 276 Re 4/4 II acquistate per le FFS, una vecchia rivista Cargo 277 locomotive consegnate. Questa pagina segue FFS Historic; nessuna delle due cifre è un effettivo attuale.' },
+      { titel: 'Impiego e tecnica', p: ['La Re 4/4 II ha circolato nel traffico viaggiatori e merci, tra l’altro davanti a treni diretti in pianura e sulle rampe d’accesso al Gottardo e al Sempione. Una parte è passata a FFS Cargo, che cita ancora la Re 420 nella sua offerta di noleggio in Svizzera.', 'I quattro motori di trazione sono comandati da un graduatore. Il comando multiplo permette anche la marcia con una Re 6/6 come «Re 10/10».'] }
+    ],
   bilder: ['«Re 10/10»: Re 620 e Re 420 in testa a un treno merci', 'Re 420 331-1 in autunno', 'Re 420 di WRS con treno di legname', 'Re 420 di FFS Cargo con treno merci', 'Re 420 con carri gialli tra i vigneti sul lago', 'Re 420 con treno merci tra vigneti e campi', 'Re 420 in livrea blu con carri cisterna nello scalo di smistamento']
 });
 
@@ -45,10 +45,10 @@ uebZug('re-620', {
   kennzahlen: [['89', 'locomotive costruite'], ['7832 kW', 'potenza oraria alla ruota'], ['140 km/h', 'velocità massima'], ['1972–1980', 'periodo di costruzione']],
   daten: { 'Achsfolge': 'Bo′Bo′Bo′, 6 assi motori', 'Länge': '19,31 m fuori respingenti', 'Gewicht': '120 t in servizio', 'Leistung': '7244 kW continuativi alla ruota (7832 kW orari)', 'Elektrische Bremse': 'a recupero', 'In Betrieb seit': '1972; serie 1975–1980', 'Hersteller': 'parte meccanica SLM Winterthur; parte elettrica e montaggio BBC, in parte SAAS' },
   abschnitte: [
-    { titel: 'Origine e tecnica', p: ['Quattro prototipi apparvero nel 1972, seguiti da 85 locomotive di serie. SLM costruì cassa e telaio, BBC fornì l’equipaggiamento elettrico.', 'Il montaggio finale avvenne soprattutto presso BBC a Oerlikon e, per i numeri 11635–11654, presso SAAS a Ginevra. I primi due prototipi avevano una cassa in due parti, gli altri una cassa in un pezzo unico.'] },
-    { titel: 'Impiego e sviluppo', p: ['Le locomotive trainarono dapprima treni viaggiatori e merci pesanti. In comando multiplo con una Re 4/4 II o III formavano per i treni merci pesanti la combinazione nota come «Re 10/10». Dopo la divisionalizzazione delle FFS le Re 6/6 furono assegnate a FFS Cargo.', 'FFS Cargo offre ancora la Re 620 a noleggio per la Svizzera; l’effettivo reale cambia con i ritiri dal servizio.', 'Dal 2007, 63 locomotive hanno ricevuto l’ETCS livello 2. SBB Historic indica l’inizio dei ritiri dal servizio per anzianità nel febbraio 2021.'],
-      hinweis: 'Il numero 89 indica la serie costruita storicamente e non l’effettivo oggi in esercizio.' }
-  ],
+      { titel: 'Costruttore e composizione della flotta', p: ['Quattro prototipi sono apparsi nel 1972; dal 1975 al 1980 sono seguite 85 locomotive di serie, in tutto 89 (11601–11689). La SLM ha costruito cassa e telaio, la BBC ha fornito l’equipaggiamento elettrico.', 'Il montaggio finale è avvenuto per lo più alla BBC di Oerlikon, per i numeri 11635–11654 alla SAAS di Ginevra. I primi due prototipi avevano una cassa in due parti.'],
+        hinweis: 'Il numero 89 indica la serie costruita storicamente, non l’effettivo oggi in servizio.' },
+      { titel: 'Impiego e tecnica', p: ['Le locomotive hanno dapprima trainato pesanti treni viaggiatori e merci. In comando multiplo con una Re 4/4 II o III formavano la «Re 10/10» per i treni merci pesanti. Dopo la divisione delle FFS sono passate a FFS Cargo, che offre ancora la Re 620 a noleggio.', 'Dal 2007, 63 locomotive hanno ricevuto l’ETCS livello 2. FFS Historic colloca l’inizio dei ritiri per età nel febbraio 2021.'] }
+    ],
   bilder: ['Re 620 nei colori Cargo con carri cisterna sul lago', '«Re 10/10»: Re 620 e Re 420 in testa a un treno merci', 'Re 620 nei colori Cargo con carri silo', 'Re 620 con treno di carri cisterna', 'Re 620 con treno cantiere, mucche in primo piano', 'Re 620 nei colori Cargo in stazione', 'Re 620 con treno di carri cisterna']
 });
 
@@ -59,9 +59,9 @@ uebZug('re-474', {
   daten: { 'Stromsystem': '15 kV CA e 3 kV CC', 'Gewicht': '87 t a vuoto', 'Fahrzeugnummern': 'Re 474 001–018, di cui 12 rilevate', 'Einsatz': 'traffico merci Svizzera–Italia' },
   specNote: 'La serie di numeri presenta lacune perché FFS Cargo ha rilevato solo dodici locomotive della serie inizialmente prevista.',
   abschnitte: [
-    { titel: 'Acquisto e impiego', p: ['Le locomotive hanno circolato dal 2005 nel traffico merci Svizzera–Italia. Il numero 12 indica la flotta FFS Cargo di allora e non è un effettivo garantito per ottobre 2026.'] },
-    { titel: 'Tecnica', p: ['La Re 474 collega la rete svizzera a corrente alternata con la rete italiana a corrente continua a 3 kV. L’equipaggiamento multisistema e i sistemi nazionali di sicurezza permettevano un servizio continuo oltre confine.'] }
-  ],
+      { titel: 'Costruttore e composizione della flotta', p: ['Siemens ha costruito la Re 474 come locomotiva bicorrente della famiglia ES 64 F4. FFS Cargo ha impiegato dal 2005 dodici locomotive; questo numero non è un effettivo confermato per ottobre 2026.'] },
+      { titel: 'Impiego e tecnica', p: ['Le locomotive hanno circolato nel traffico merci Svizzera–Italia, tra l’altro sul Sempione fino a Domodossola.', 'La Re 474 collega la rete svizzera a corrente alternata con la rete italiana a corrente continua a 3 kV. L’equipaggiamento policorrente e i sistemi nazionali di sicurezza permettevano l’impiego continuo oltre confine.'] }
+    ],
   bilder: ['Re 474 013', 'Re 474 presso Jestetten sulla linea per Neuhausen', 'Re 474 014 a Domodossola', 'Re 474 con treno merci a Gravellona Toce']
 });
 
@@ -72,9 +72,9 @@ uebZug('re-193', {
   daten: { 'Leistung': 'fino a 6400 kW', 'Länge': 'circa 19,0 m', 'Gewicht': 'circa 90 t, secondo l’equipaggiamento', 'Höchstgeschwindigkeit': '120 km/h in Svizzera', 'Zugsicherung': 'ETCS BL3 e sistemi nazionali', 'Betreiber': 'FFS Cargo SA', 'Anzahl': '35 a noleggio' },
   specNote: 'Le locomotive non appartengono alle FFS. Numero e durata del noleggio si riferiscono al contratto di FFS Cargo Svizzera.',
   abschnitte: [
-    { titel: 'Acquisto e impiego', p: ['I primi cinque veicoli sono arrivati a Muttenz nel 2024. Il compito principale è il traffico merci interno svizzero; esistono omologazioni anche per servizi transfrontalieri.', 'Sono stati formati circa 550 macchiniste e macchinisti.'] },
-    { titel: 'Delimitazione', p: ['Questa pagina tratta i 35 Vectron AC di FFS Cargo Svizzera. I Vectron multisistema di SBB Cargo International rientrano in altri contratti d’acquisto e di leasing.'] }
-  ]
+      { titel: 'Costruttore e composizione della flotta', p: ['FFS Cargo noleggia per otto anni 35 Vectron AC di Siemens Mobility; le locomotive appartengono a LokRoll 3 AG. Le prime cinque sono arrivate a Muttenz nel 2024.', 'Questa pagina tratta le 35 Vectron AC di FFS Cargo Svizzera. Le Vectron policorrente di FFS Cargo International rientrano in altri contratti di acquisto e leasing.'] },
+      { titel: 'Impiego e tecnica', p: ['Il compito principale è il traffico merci interno svizzero, fino alla consegna delle nuove locomotive di linea proprie. Esistono omologazioni anche per servizi transfrontalieri.', 'Le locomotive sviluppano fino a 6400 kW e in Svizzera viaggiano fino a 120 km/h. Circa 550 macchiniste e macchinisti sono stati formati.'] }
+    ]
 });
 
 uebZug('re-421', {
@@ -85,8 +85,8 @@ uebZug('re-421', {
   daten: { 'Bauart': 'locomotiva elettrica universale', 'Gewicht': '84 t (valore del catalogo dei tipi di marcia)', 'Nummern': '421 371–397 (senza 382)', 'In Betrieb seit': '2002 (trasformazione 2002–2004)', 'Einsatz': 'traffico merci Svizzera–Germania' },
   specNote: 'Il catalogo dei tipi di marcia 2026 delle FFS indica la Re 421 come alias del tipo di marcia attivo 1051 Re 420. Le 84 t sono un valore di dinamica di marcia per questo tipo raggruppato.',
   abschnitte: [
-    { titel: 'Trasformazione per la Germania', p: ['La base furono le Re 4/4 II 11371–11397; la 11382, ritirata dopo un incendio, non faceva parte del programma.', 'Per l’omologazione tedesca le locomotive ricevettero gli adattamenti e gli equipaggiamenti necessari e la nuova serie di numeri 421 371–421 397.'] },
-    { titel: 'Impiego e stato nel catalogo', p: ['La Re 421 unisce la robusta tecnica della Re 4/4 II all’idoneità al traffico transfrontaliero ed era prevista soprattutto per treni merci verso la Germania.', 'Nel catalogo dei tipi di marcia 2026 delle FFS resta registrata come alias del tipo di marcia Re 420 attivo.'] }
-  ],
+      { titel: 'Costruttore e composizione della flotta', p: ['Le Re 421 sono Re 4/4 II trasformate, costruite da SLM, BBC, MFO e SAAS. Derivano dai numeri 11371–11397; la 11382, ritirata dopo un incendio, non faceva parte del programma, quindi sono 26 locomotive.', 'La trasformazione è avvenuta dal 2002 al 2004. Le locomotive hanno ricevuto i numeri 421 371–421 397.'] },
+      { titel: 'Impiego e tecnica', p: ['Per l’omologazione tedesca le locomotive hanno ricevuto gli adattamenti e gli equipaggiamenti necessari. Uniscono la tecnica robusta della Re 4/4 II all’idoneità transfrontaliera ed erano previste soprattutto per treni merci verso la Germania.', 'Nel catalogo dei tipi di marcia FFS 2026, la Re 421 resta registrata come alias del tipo attivo Re 420.'] }
+    ],
   bilder: ['Re 421 374 a Thun', 'Re 421 395 a Pirna', 'Re 421 377 con treno di auto a Donauwörth', 'Re 421 383 a Lindau Hbf', 'Re 421 a Dresda']
 });

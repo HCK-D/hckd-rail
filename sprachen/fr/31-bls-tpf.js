@@ -18,11 +18,14 @@ uebZug('bls-rabe-528', {
   daten: { 'Bauart': 'rame automotrice électrique, 6 caisses', 'Fahrzeugnummern': 'RE 101–139, RER 201–228', 'Gewicht': '182 t (RE), 183 t (RER)', 'Sitzplätze': '244 (RE), 223 (RER)', 'Anzahl': '67 rames' },
   specNote: 'Places assises sans strapontins : RE 46 en 1re et 198 en 2e classe, RER 35 et 188. Les rames 125–137 appartiennent à BLS Fernverkehr SA.',
   abschnitte: [
-    { titel: 'Deux versions', tabelle: { kopf: ['Caractéristique', 'RegioExpress', 'RER'], zeilen: [
+      { titel: 'Constructeur et constitution de la flotte', p: ['Stadler a livré au BLS 67 MIKA : 39 trains RegioExpress (101–139, mis en service 2021–2026) et 28 trains RER (201–228, 2022–2025). Les trains 125–137 appartiennent à BLS Fernverkehr SA, tous les autres à BLS SA.', 'Les MIKA ont remplacé des trains plus anciens comme les rames réversibles EW III et les NPZ.'] },
+      { titel: 'Utilisation et technique', p: ['Les MIKA circulent sur les RER de Berne et de Lucerne (notamment S2, S4, S6 et S7), en RegioExpress Berne–Spiez–Zweisimmen et par la ligne de faîte du Lötschberg jusqu’à Brigue et Domodossola, ainsi qu’en InterRegio 66 Berne–Neuchâtel–La Chaux-de-Fonds.', 'Le train de six caisses mesure 104,9 m, développe 3500 kW et roule jusqu’à 160 km/h.'] },
+      { titel: 'Équipement et accessibilité', liste: ['Climatisation', 'Prises à chaque place et dans le compartiment multifonction', 'Fenêtres améliorant la réception mobile', 'Zone bistro en libre-service avec distributeurs de snacks et de café (RE)', '12 places pour vélos (RE) ou 6 (RER), avec prises pour vélos électriques', 'Accès à plancher bas avec comble-lacune à toutes les portes', '3 places pour fauteuils roulants : 1 en 1re classe, 2 en 2e classe avec accès au WC', '2 WC, dont 1 accessible, avec table à langer', 'Vidéosurveillance et boutons SOS'],
+        p: ['Grâce aux accès bas avec comble-lacune, la montée se fait sans marche à toutes les portes.'] },
+      { titel: 'Deux versions', tabelle: { kopf: ['Caractéristique', 'RegioExpress', 'RER'], zeilen: [
       ['Numéros', '101–139', '201–228'], ['Nombre', '39', '28'], ['Mise en service', '2021–2026', '2022–2025'],
-      ['Places 1re / 2e classe', '46 / 198', '35 / 188'], ['Places debout', '149', '241'], ['Places vélo', '12', '6']] } },
-    { titel: 'Utilisation', p: ['Selon le BLS, les MIKA circulent notamment sur les lignes RER autour de Berne et de Lucerne, sur le RegioExpress Berne–Spiez–Zweisimmen et jusqu’à Brigue et Domodossola, ainsi que sur l’InterRegio Berne–Neuchâtel–La Chaux-de-Fonds.'] }
-  ],
+      ['Places 1re / 2e classe', '46 / 198', '35 / 188'], ['Places debout', '149', '241'], ['Places vélo', '12', '6']] } }
+    ],
   bilder: ['RABe 528 102 en RegioExpress à Berne', 'RABe 528 201 en version RER', 'RABe 528 119 à Domodossola', 'RABe 528 104 dans l’Entlebuch']
 });
 uebZug('bls-rabe-515', {
@@ -31,11 +34,14 @@ uebZug('bls-rabe-515', {
   kennzahlen: [['39', 'rames (34 à quatre caisses, 5 à six caisses)'], ['160 km/h', 'vitesse maximale'], ['335 / 546', 'places assises 4 / 6 caisses'], ['2012', 'première mise en service']],
   daten: { 'Bauart': 'rame automotrice électrique à deux niveaux', 'Fahrzeugnummern': '001–034 (4 caisses), 035–039 (6 caisses)', 'Länge': '102,6 m (4 caisses), 151,88 m (6 caisses)', 'Gewicht': '216 t (4 caisses), 301 t (6 caisses)', 'Leistung': '4000 kW (6 caisses : 6000 kW en pointe)', 'Sitzplätze': '335 (4 caisses), 546 (6 caisses)', 'Anzahl': '39 rames' },
   abschnitte: [
-    { titel: 'Quatre et six caisses', tabelle: { kopf: ['Caractéristique', 'quatre caisses', 'six caisses'], zeilen: [
+      { titel: 'Constructeur et constitution de la flotte', p: ['Le MUTZ fait partie de la famille KISS de Stadler. Le BLS possède 34 trains à quatre caisses (001–034, mis en service 2012–2017, 032 et 033 en 2019/2020) et 5 à six caisses (035–039, 2020).', 'Les trains à six caisses et les 032–034 appartiennent à BLS Fernverkehr SA, les autres à BLS SA.'] },
+      { titel: 'Utilisation et technique', p: ['Les MUTZ circulent sur le RER bernois (S1 Fribourg–Berne–Thoune, S11 Thoune–Berne, S3/S31 Bienne–Münchenbuchsee–Berne–Belp) et en InterRegio 17 Berne–Berthoud–Olten et InterRegio 65 Berne–Bienne.', 'Les deux versions développent 4000 kW et roulent jusqu’à 160 km/h. Les larges portes accélèrent la montée et la descente.'] },
+      { titel: 'Équipement et accessibilité', liste: ['Climatisation, chauffage au sol et mural', 'Information voyageurs visuelle et sonore', 'Prises en 1re classe (six caisses : aussi en 2e classe)', '6 places pour vélos (quatre caisses) ou 16 (six caisses)', 'Accès à plancher bas avec marchepieds coulissants à toutes les portes', '3 places pour fauteuils roulants (quatre caisses) ou 4 (six caisses), dans les deux classes', '2 WC, dont 1 accessible et 1 avec table à langer', 'Vidéosurveillance'],
+        p: ['Toutes les portes ont des accès bas avec marchepieds coulissants ; des places pour fauteuils roulants existent dans les deux classes.'] },
+      { titel: 'Quatre et six caisses', tabelle: { kopf: ['Caractéristique', 'quatre caisses', 'six caisses'], zeilen: [
       ['Numéros', '001–034', '035–039'], ['Mise en service', '2012–2017, 032–033 en 2019/2020', '2020'], ['Longueur', '102,6 m', '151,88 m'],
-      ['Places 1re / 2e classe', '61 / 274', '122 / 424'], ['Puissance', '4000 kW', '6000 kW en pointe, 4000 kW en continu']] } },
-    { titel: 'Utilisation', p: ['Selon le BLS, les MUTZ circulent notamment sur les lignes RER Fribourg–Berne–Thoune et Bienne–Berne–Belp, ainsi qu’en InterRegio Berne–Berthoud–Olten et Berne–Bienne.'] }
-  ],
+      ['Places 1re / 2e classe', '61 / 274', '122 / 424'], ['Puissance', '4000 kW', '6000 kW en pointe, 4000 kW en continu']] } }
+    ],
   bilder: ['RABe 515 003 à quatre caisses à Berne', 'RABe 515 039 à six caisses', 'RABe 515 027 près d’Allmendingen']
 });
 uebZug('bls-rabe-535', {
@@ -43,7 +49,12 @@ uebZug('bls-rabe-535', {
   text: ['Le Lötschberger est une rame à plancher bas à quatre caisses du BLS. Il doit son nom à la ligne de faîte du Lötschberg et à l’Oberland bernois, où il circule.', 'Jusqu’à quatre rames peuvent circuler ensemble.'],
   kennzahlen: [['25', 'rames'], ['160 km/h', 'vitesse maximale'], ['142', 'places assises'], ['2008', 'première mise en service']],
   daten: { 'Bauart': 'rame automotrice électrique à plancher bas, 4 caisses', 'Anzahl': '25 rames' },
-  abschnitte: [{ titel: 'Utilisation', p: ['Selon le BLS, le Lötschberger circule notamment entre Zweisimmen et Spiez, Spiez et Interlaken Ost, Spiez et Frutigen, ainsi que sur des lignes RER entre Thoune, Berne, Berthoud et Soleure.'] }],
+  abschnitte: [
+      { titel: 'Constructeur et constitution de la flotte', p: ['Bombardier a livré au BLS 25 Lötschberger à quatre caisses : 101–113 en 2008–2010 et 114–125 en 2012.', 'Depuis janvier 2024, le BLS modernise la flotte dans son atelier de Bönigen, jusqu’à mi-2027. Des prises doubles remplacent notamment les prises simples, des LED les tubes néon, et des capteurs de CO₂ règlent l’air frais selon les besoins.'] },
+      { titel: 'Utilisation et technique', p: ['Le Lötschberger circule dans l’Oberland bernois (RE Zweisimmen–Spiez, Spiez–Interlaken Ost et Spiez–Frutigen) et sur le RER bernois entre Thoune, Belp, Berne, Berthoud, Konolfingen et Soleure.', 'Le train mesure 62,7 m, pèse 105 t et roule jusqu’à 160 km/h. Jusqu’à quatre trains peuvent être couplés.'] },
+      { titel: 'Équipement et accessibilité', liste: ['Climatisation et chauffage', 'Prises en 1re et 2e classe', 'Information voyageurs visuelle et sonore', '6 places pour vélos (101–113) ou 12 (114–125)', 'Accès à plancher bas à toutes les portes, une entrée par côté avec marchepied coulissant', '2 places pour fauteuils roulants en 2e classe', '1 WC accessible', 'Vidéosurveillance'],
+        p: ['Toutes les portes sont à plancher bas. Selon le BLS, il n’y a pas de table à langer.'] }
+    ],
   bilder: ['RABe 535 112 «Lötschberger»', 'Lötschberger en gare de Kandersteg', 'RABe 535 122 à Iselle di Trasquera']
 });
 uebZug('bls-rabe-525', {
@@ -52,7 +63,12 @@ uebZug('bls-rabe-525', {
   kennzahlen: [['36', 'rames (23 à trois caisses, 13 à quatre caisses)'], ['140 km/h', 'vitesse maximale'], ['1000 kW', 'puissance'], ['1998', 'première mise en service']],
   daten: { 'Bauart': 'rame automotrice électrique à plancher bas, 3 ou 4 caisses', 'Länge': '47,7 m (3 caisses), 61,9 m (4 caisses)', 'Gewicht': '79 t (3 caisses), 96 t (4 caisses)', 'Sitzplätze': '134 (3 caisses), 179 (4 caisses)', 'Anzahl': '36 rames' },
   specNote: 'Mises en service de 1998 à 2005. Les numéros 015–027 ont quatre caisses, les 001–014, 028–030 et 032–037 trois caisses.',
-  abschnitte: [{ titel: 'Utilisation', p: ['Selon le BLS, les NINA à quatre caisses circulent notamment sur Berne–Chiètres–Neuchâtel, Lyss–Büren an der Aare, Soleure–Berthoud–Berne et Domodossola–Brigue–Viège.'] }],
+  abschnitte: [
+      { titel: 'Constructeur et constitution de la flotte', p: ['Les NINA viennent de Vevey Technologies et de Bombardier et ont été mis en service de 1998 à 2005. Le BLS possède 36 trains : 23 à trois caisses (001–014, 028–030, 032–037) et 13 à quatre caisses (015–027).', 'Dès juin 2015, les 36 trains ont reçu un refit à l’atelier de Bönigen pour environ 31 millions de francs ; ils doivent ainsi rouler environ six ans de plus. En 2016, une partie a reçu des vitres laissant passer le signal mobile et une nouvelle information voyageurs.'] },
+      { titel: 'Utilisation et technique', p: ['Les NINA circulent sur les RER de Berne et de Lucerne, notamment S5 Berne–Chiètres–Neuchâtel, S22 Berne–Konolfingen–Langnau, S35 Chiètres–Lyss, S36 Lyss–Büren an der Aare, S46 Soleure–Berthoud–Ostermundigen et S77 Lucerne–Wolhusen–Willisau, ainsi qu’en RE Domodossola–Brigue–Viège.', 'Un train développe 1000 kW et roule jusqu’à 140 km/h. Jusqu’à quatre trains peuvent être couplés.'] },
+      { titel: 'Équipement et accessibilité', liste: ['Climatisation et chauffage', 'Prises en 1re classe', 'Information voyageurs visuelle et sonore', '3 places pour vélos (trois caisses) ou 6 (quatre caisses)', 'Accès à plancher bas à toutes les portes, une entrée par côté avec marchepied coulissant', '1 place pour fauteuil roulant en 2e classe', '1 WC accessible', 'Vidéosurveillance'],
+        p: ['Toutes les portes sont à plancher bas. Selon le BLS, il n’y a pas de table à langer.'] }
+    ],
   bilder: ['NINA RABe 525 024 à Thoune', 'RABe 525 015 à quatre caisses à Berne']
 });
 uebZug('bls-re-465', {
@@ -60,7 +76,10 @@ uebZug('bls-re-465', {
   text: ['La Re 465 est la sœur BLS de la Re 460 des CFF. Elle remorque des trains de voyageurs, des trains de chargement des autos et des trains de marchandises.', 'Entre 2019 et 2022, les 18 locomotives ont été modernisées et peintes en vert. Depuis fin 2023, elles remplacent les Re 425 brunes au chargement des autos.'],
   kennzahlen: [['18', 'locomotives'], ['6400 kW', 'puissance'], ['160 km/h', 'vitesse maximale autorisée'], ['1994', 'première mise en service']],
   daten: { 'Bauart': 'locomotive électrique Bo’Bo’', 'Höchstgeschwindigkeit': '160 km/h (autorisée)' },
-  abschnitte: [{ titel: 'Modernisation et utilisation', p: ['Le BLS a d’abord commandé huit locomotives (001–008), puis dix autres (009–018) pour le corridor ferroutier. Grâce au refit de 2019–2022, d’environ 20 millions de francs, elles peuvent rouler jusqu’en 2040 environ.', 'Aujourd’hui, elles remorquent le GoldenPass Express entre Interlaken Ost et Zweisimmen, les trains de chargement des autos au Lötschberg et au Simplon et, souvent avec des TRAXX et des Vectron, des trains de marchandises.'] }],
+  abschnitte: [
+      { titel: 'Constructeur et constitution de la flotte', p: ['La Re 465 appartient à la famille Lok 2000 de SLM et ABB. Le BLS a d’abord commandé huit locomotives (001–008), puis dix autres (009–018) pour le corridor ferroutier ; elles ont été mises en service de 1994 à 1997.', 'De 2019 à 2022, les 18 locomotives ont été modernisées à l’atelier de Bönigen pour environ 20 millions de francs et peintes en vert. Elles peuvent ainsi rouler jusqu’en 2040 environ.'] },
+      { titel: 'Utilisation et technique', p: ['Les Re 465 tirent ou poussent le GoldenPass Express entre Interlaken Ost et Zweisimmen. Depuis le 19 décembre 2023, elles assurent le chargement des autos au Lötschberg, dès 2026 aussi au Simplon, où elles remplacent les Re 425 brunes.', 'En trafic marchandises, elles circulent souvent en unité multiple avec des TRAXX et des Vectron. La locomotive développe 6400 kW et est autorisée à 160 km/h.'] }
+    ],
   bilder: ['Re 465 014 à Zweisimmen', 'Re 465 001 et 007 en double traction']
 });
 uebZug('bls-re-475', {
@@ -68,11 +87,19 @@ uebZug('bls-re-475', {
   text: ['La Re 475 est la locomotive Vectron de BLS Cargo. Homologuée dans plusieurs pays, elle remorque des trains de marchandises à travers les Alpes jusqu’en Allemagne, en Italie et aux Pays-Bas.', 'BLS Cargo a agrandi la flotte en plusieurs séries.'],
   kennzahlen: [['50', 'locomotives en trois séries'], ['2016', 'première mise en service'], ['6', 'pays (séries récentes)'], ['Siemens', 'constructeur']],
   daten: { 'Bauart': 'locomotive électrique polycourant Bo’Bo’', 'Zulassung': 'CH, D, A, I, NL ; dès le n° 416 aussi B', 'Anzahl': '50 (en trois séries)' },
-  abschnitte: [{ titel: 'Trois séries', tabelle: { kopf: ['Numéros', 'Nombre', 'Livraison', 'Homologation'], zeilen: [
-    ['401–415', '15', '2016–2018', 'CH, D, A, I, NL'], ['416–440', '25', '2020, 2024–2025', 'CH, D, A, I, NL, B'], ['441–450', '10', 'dès 2026', 'CH, D, A, I, NL, B']] } }],
+  abschnitte: [
+      { titel: 'Constructeur et constitution de la flotte', p: ['La Re 475 est la locomotive Vectron de Siemens Mobility pour BLS Cargo. La flotte passe en trois séries à 50 locomotives : 401–415 (2016–2018), 416–440 (2020 et 2024–2025) et 441–450 (dès 2026).'] },
+      { titel: 'Utilisation et technique', p: ['BLS Cargo utilise la Re 475 surtout sur les axes Lötschberg-Simplon et Gothard et circule ainsi jusqu’aux Pays-Bas, en Belgique, en Allemagne, en Autriche et en Italie.', 'Cette locomotive polycourant est homologuée dans jusqu’à six pays ; dès le n° 416 aussi en Belgique.'] },
+      { titel: 'Trois séries', tabelle: { kopf: ['Numéros', 'Nombre', 'Livraison', 'Homologation'], zeilen: [
+    ['401–415', '15', '2016–2018', 'CH, D, A, I, NL'], ['416–440', '25', '2020, 2024–2025', 'CH, D, A, I, NL, B'], ['441–450', '10', 'dès 2026', 'CH, D, A, I, NL, B']] } }
+    ],
   bilder: ['Re 475 401 de BLS Cargo']
 });
 uebZug('bls-re-485', {
+  abschnitte: [
+      { titel: 'Constructeur et constitution de la flotte', p: ['En 2002, BLS Cargo a commandé à Bombardier 20 TRAXX du type F140 AC ; elles ont été livrées jusqu’à mi-2003 et portent les numéros 485 001–020.', 'La 485 004 a été détruite en 2020 lors d’un accident à Auggen (Allemagne), c’est pourquoi les listes de flotte indiquent aujourd’hui 19 locomotives.'] },
+      { titel: 'Utilisation et technique', p: ['Les Re 485 remorquent des trains de marchandises en Suisse et vers l’Allemagne, sur les axes Lötschberg-Simplon et Gothard.', 'Techniquement, elles correspondent à la série allemande 185 et aux Re 482 de CFF Cargo, avec un paquet d’équipements suisse. Elles roulent jusqu’à 140 km/h.'] }
+    ],
   typ: 'Locomotive électrique pour trains de marchandises de Bombardier',
   text: ['Les Re 485 sont des locomotives TRAXX de BLS Cargo pour le trafic marchandises en Suisse et vers l’Allemagne.', 'Elles ont été commandées en 2002 et livrées jusqu’à mi-2003.'],
   kennzahlen: [['20', 'locomotives'], ['140 km/h', 'vitesse maximale'], ['CH, D', 'homologation'], ['2002', 'première mise en service']],
@@ -81,6 +108,10 @@ uebZug('bls-re-485', {
   bilder: ['Re 485 005 de BLS Cargo', 'Re 485 016 avec un train de marchandises', 'Re 485 008 près d’Allmendingen']
 });
 uebZug('bls-re-486', {
+  abschnitte: [
+      { titel: 'Constructeur et constitution de la flotte', p: ['Bombardier a livré à BLS Cargo dès l’automne 2008 dix TRAXX polycourant du type F140 MS numérotées 486 501–510 ; les dernières ont suivi en 2009.'] },
+      { titel: 'Utilisation et technique', p: ['Les Re 486 peuvent circuler en Suisse, en Allemagne, en Italie et en Autriche. Elles conviennent donc au transit à travers les Alpes, par exemple avec la route roulante.', 'Locomotive polycourant, elle circule sous courant alternatif et continu ; la vitesse maximale est de 140 km/h.'] }
+    ],
   typ: 'Locomotive électrique polycourant de Bombardier',
   text: ['Les Re 486 sont des TRAXX polycourant de BLS Cargo. Elles peuvent circuler en Suisse, en Allemagne, en Italie et en Autriche.', 'Elles conviennent donc au transit à travers les Alpes, par exemple avec la route roulante.'],
   kennzahlen: [['10', 'locomotives'], ['140 km/h', 'vitesse maximale'], ['4', 'pays'], ['2008', 'première mise en service']],
@@ -251,6 +282,12 @@ uebZug('bls-re-420', {
 
 // ---------- TPF ----------
 uebZug('tpf-rabe-527', {
+  abschnitte: [
+      { titel: 'Constructeur et constitution de la flotte', p: ['Stadler Bussnang a livré aux TPF huit FLIRT de la série 190, numérotés 191–198. Ils ont été mis en service de 2011 à 2014.'] },
+      { titel: 'Utilisation et technique', p: ['Les FLIRT circulent sur le RER Fribourg : en RegioExpress RE2/RE3 Berne–Fribourg–Romont–Bulle–Broc et sur les S20/S21 Fribourg–Morat–Anet–Neuchâtel.', 'Le train de quatre caisses mesure 74,08 m, développe 2600 kW et roule jusqu’à 160 km/h. Jusqu’à quatre trains peuvent être couplés.'] },
+      { titel: 'Équipement et accessibilité', liste: ['Entièrement climatisé', 'Information voyageurs acoustique et visuelle', 'Compartiment multifonction', 'Plancher bas sur plus de 90 %', 'WC à circuit fermé, adapté aux personnes à mobilité réduite'],
+        p: ['Le train est à plancher bas sur plus de 90 %. Les TPF n’indiquent pas le nombre de places pour fauteuils roulants.'] }
+    ],
   typ: 'Rame automotrice régionale électrique de Stadler',
   text: ['Les huit FLIRT de la série 190 sont les rames à voie normale les plus modernes des TPF. Elles circulent en RegioExpress et en RER dans le canton de Fribourg et au-delà.', 'Techniquement, elles font partie de la grande famille FLIRT de Stadler.'],
   kennzahlen: [['8', 'rames (191–198)'], ['160 km/h', 'vitesse maximale'], ['418', 'places au total'], ['2011', 'première mise en service']],
@@ -265,12 +302,21 @@ uebZug('tpf-rbde-560', {
   daten: { 'Bauart': 'rame réversible avec automotrice, voiture intermédiaire à plancher bas et voiture-pilote', 'Hersteller': 'SWG, SIG, ABB ; voiture intermédiaire Bombardier', 'Fahrzeugnummern': '235–247 et 269', 'Gewicht': '146 t à vide', 'Sitzplätze': '24 en 1re, 160 en 2e classe', 'Anzahl': '14 rames' },
   specNote: 'Automotrices construites de 1984 à 1996, modernisées en Domino de 2009 à 2011.',
   abschnitte: [
-    { titel: 'Équipement', liste: ['Information voyageurs sonore et visuelle', 'Climatisation', 'Toilettes accessibles en fauteuil roulant', 'Compartiment multifonction', 'Voiture intermédiaire à plancher bas'] },
-    { titel: 'Chocolat Express', p: ['Les rames 235 et 245 portent le design «Chocolat Express». Il ne s’agit pas d’un type de véhicule à part, mais d’une décoration particulière de Domino ordinaires.'] }
-  ],
+      { titel: 'Constructeur et constitution de la flotte', p: ['Les 14 Domino des TPF (235–247 et 269) sont issus de rames réversibles NPZ construites par SWG, SIG et ABB entre 1984 et 1996. De 2009 à 2011, les TPF les ont transformées en Domino ; chaque train a reçu une nouvelle voiture intermédiaire à plancher bas de Bombardier.', 'Les TPF ont commandé 13 FLIRT Evo à quatre caisses chez Stadler. Le premier doit entrer en service en décembre 2028 ; ils remplaceront progressivement les Domino les années suivantes.'] },
+      { titel: 'Utilisation et technique', p: ['Comme les FLIRT, les Domino circulent sur le RER Fribourg, en RegioExpress Berne–Fribourg–Bulle–Broc et sur les S20/S21 Fribourg–Morat–Anet–Neuchâtel.', 'Un train mesure 75 m, développe 1650 kW et roule jusqu’à 140 km/h.'] },
+      { titel: 'Équipement et accessibilité', liste: ['Climatisation dans tout le train', 'Information voyageurs acoustique et visuelle', 'Compartiment multifonction', 'Voiture intermédiaire à plancher bas', 'WC à bioréacteur, adapté aux personnes à mobilité réduite'],
+        p: ['On monte de plain-pied dans la voiture intermédiaire à plancher bas ; l’automotrice et la voiture-pilote ont des marches.'] },
+      { titel: 'Chocolat Express', p: ['Les rames 235 et 245 portent le design «Chocolat Express». Il ne s’agit pas d’un type de véhicule à part, mais d’une décoration particulière de Domino ordinaires.'] }
+    ],
   bilder: ['Domino au design «Chocolat Express» sur le viaduc de Grandfey']
 });
 uebZug('tpf-abe-4-12', {
+  abschnitte: [
+      { titel: 'Constructeur et constitution de la flotte', p: ['Stadler Bussnang a livré aux TPF dix rames de trois caisses numérotées 101–110. Elles ont été mises en service en 2015 et 2016. Une rame se compose d’une ABe 2/4, d’une voiture intermédiaire B et d’une Be 2/4.'] },
+      { titel: 'Utilisation et technique', p: ['Les rames circulent sur le réseau à voie métrique des TPF : S50 Palézieux–Châtel-St-Denis–Bulle–Montbovon et S51 jusqu’à Gruyères.', 'Une rame mesure 55,21 m, développe 1400 kW et roule jusqu’à 100 km/h. Elle est modulable de deux à quatre éléments, et jusqu’à quatre rames peuvent circuler ensemble.'] },
+      { titel: 'Équipement et accessibilité', liste: ['Entièrement climatisée', 'Information voyageurs acoustique et visuelle', 'WC à circuit fermé, adapté aux personnes à mobilité réduite', '350 places : 15 en 1re et 133 en 2e classe, 14 strapontins, 188 places debout'],
+        p: ['Sur sa page du véhicule, les TPF ne donnent pas d’indications sur les accès à plancher bas et les places pour fauteuils roulants.'] }
+    ],
   beiname: 'Série 100',
   typ: 'Rame automotrice à plancher bas pour le réseau à voie métrique',
   text: ['Les dix rames à trois caisses de Stadler circulent sur le réseau à voie métrique des TPF en Gruyère et en Veveyse. Une rame se compose d’une ABe 2/4, d’une voiture intermédiaire B et d’une Be 2/4.', 'Jusqu’à quatre rames peuvent circuler ensemble.'],
@@ -285,9 +331,14 @@ uebZug('tpf-be-4-4-120', {
   text: ['Les rames réversibles de la série 120 se composent d’une automotrice Be 4/4, selon les besoins d’une voiture intermédiaire B, et d’une voiture-pilote (A)Bt. Elles circulent sur le réseau à voie métrique des TPF.', 'Les automotrices s’appelaient autrefois BDe 4/4, car elles avaient un compartiment à bagages.'],
   kennzahlen: [['4', 'automotrices (121–124)'], ['90 km/h', 'vitesse maximale'], ['640 kW', 'puissance'], ['1992', 'première mise en service']],
   daten: { 'Bauart': 'rame réversible : automotrice, voiture intermédiaire, voiture-pilote', 'Hersteller': 'Vevey/BBC ; voitures intermédiaires SIG', 'Länge': '52,32 m (rame de 3 véhicules)', 'Sitzplätze': '134 en 2e classe ; 9 en 1re classe seulement dans les 221–223' },
-  abschnitte: [{ titel: 'Les véhicules', tabelle: { kopf: ['Véhicule', 'Numéros', 'Nombre', 'Années de construction', 'Constructeur'], zeilen: [
-    ['Automotrice Be 4/4', '121–124', '4', '1992–1995', 'Vevey/BBC'], ['Voiture intermédiaire B', '207, 209, 215', '3', '1973', 'SIG'], ['Voiture-pilote (A)Bt', '221–226', '6', '1992–1995', 'Vevey/BBC']] } },
-    { p: ['Les rames sont modulaires : les voitures intermédiaires et les voitures-pilotes sont ajoutées selon la demande.'] }],
+  abschnitte: [
+      { titel: 'Constructeur et constitution de la flotte', p: ['La série 120 compte 13 véhicules : 4 automotrices Be 4/4 (121–124) et 6 voitures-pilotes (A)Bt (221–226) de Vevey/BBC, construites de 1992 à 1995, ainsi que 3 voitures intermédiaires B (207, 209, 215) de SIG datant de 1973.', 'Les automotrices s’appelaient autrefois BDe 4/4, car elles avaient un compartiment à bagages.'] },
+      { titel: 'Utilisation et technique', p: ['Les rames réversibles circulent sur le réseau à voie métrique des TPF entre Palézieux, Bulle, Gruyères et Montbovon. Elles sont modulables : voitures intermédiaires et voitures-pilotes sont ajoutées selon la demande.', 'Une rame de trois véhicules mesure 52,32 m, développe 640 kW et roule jusqu’à 90 km/h.'] },
+      { titel: 'Équipement et accessibilité', liste: ['Information voyageurs acoustique et visuelle', '253 places : 134 en 2e classe, 8 strapontins, 102 places debout', '1re classe de 9 places seulement dans les voitures-pilotes 221–223'],
+        p: ['Sur sa page du véhicule, les TPF ne donnent pas d’indications sur la climatisation, les accès à plancher bas et les places pour fauteuils roulants.'] },
+      { titel: 'Les véhicules', tabelle: { kopf: ['Véhicule', 'Numéros', 'Nombre', 'Années de construction', 'Constructeur'], zeilen: [
+    ['Automotrice Be 4/4', '121–124', '4', '1992–1995', 'Vevey/BBC'], ['Voiture intermédiaire B', '207, 209, 215', '3', '1973', 'SIG'], ['Voiture-pilote (A)Bt', '221–226', '6', '1992–1995', 'Vevey/BBC']] } }
+    ],
   bilder: ['Be 4/4 123', 'Automotrice 124, encore BDe 4/4 à l’époque (2010)', 'Voiture-pilote 221 à Bulle', 'Voiture-pilote 225']
 });
 uebZug('tpf-funiculaire', {
@@ -295,7 +346,12 @@ uebZug('tpf-funiculaire', {
   text: ['Depuis 1899, le funiculaire de Fribourg relie la basse ville, la Neuveville, à St-Pierre. Il franchit 58 mètres de dénivelé sur 121 mètres.', 'Sa particularité est son fonctionnement : les eaux usées de la ville de Fribourg servent de contrepoids. Selon les TPF, c’est unique en Europe.'],
   kennzahlen: [['1899', 'ouverture'], ['121 m', 'longueur de la ligne'], ['550 ‰', 'pente maximale'], ['2 min', 'temps de parcours']],
   daten: { 'Bauart': 'funiculaire à contrepoids d’eau', 'Kabinen': '2 de 20 places chacune', 'Länge': '121 m de ligne, cabine 5,4 m', 'Gewicht': '1600 kg par cabine', 'Kapazität': '240 personnes par heure' },
-  abschnitte: [{ titel: 'Exploitation', p: ['Le funiculaire circule sur une voie unique avec un évitement, environ 70 allers-retours par jour. La station inférieure de la Neuveville est à 552 m, la station supérieure de St-Pierre à 608 m. La dernière grande révision date de 2020.'] }],
+  abschnitte: [
+      { titel: 'Constructeur et constitution de la flotte', p: ['Le funiculaire a été construit par Von Roll ; il circule depuis 1899. Il a été transformé en 1998, la dernière grande révision date de 2020. Il est classé monument historique.', 'Il compte deux cabines de 20 places chacune.'] },
+      { titel: 'Utilisation et technique', p: ['Le funiculaire relie à Fribourg la basse ville, la Neuveville (552 m), à St-Pierre (608 m). Sur la voie unique avec évitement, il effectue environ 70 allers-retours par jour, de 7 h à 19 h, en été jusqu’à 20 h.', 'Les eaux usées de la ville de Fribourg servent de contrepoids. La ligne mesure 121 m avec une pente jusqu’à 550 ‰ ; le trajet dure 2 minutes à 1,2 m/s.'] },
+      { titel: 'Équipement et accessibilité', liste: ['2 cabines de 20 places chacune', '240 personnes par heure'],
+        p: ['Sur la page du véhicule, les TPF ne donnent pas d’indications sur l’accès en fauteuil roulant, avec une poussette ou un vélo.'] }
+    ],
   bilder: ['Funiculaire Neuveville–St-Pierre à Fribourg (2024)']
 });
 uebZug('tpf-tm-87', {

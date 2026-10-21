@@ -948,11 +948,12 @@ uebZug('rabde-500', {
   daten: { 'Betreiber': 'FFS Viaggiatori', 'Zugbildung': '7 carrozze', 'Gewicht': '368 t a vuoto', 'Neigetechnik': 'inclinazione attiva della cassa', 'Anzahl': '44 treni (1a serie 24, 2a serie 20)', 'Hersteller': 'Serie 1: Adtranz e FIAT-SIG; serie 2: Bombardier/Alstom' },
   specNote: 'Valori tecnici secondo FFS Infrastruttura. La pagina delle FFS arrotonda la lunghezza a 190 m e indica 471 posti a sedere e il 1999 come primo impiego.',
   abschnitte: [
-    { titel: 'Costruttori e serie', p: ['La prima serie, numeri 000–023, è stata costruita da Adtranz e FIAT-SIG. La seconda serie, numeri 024–043, è stata realizzata dal consorzio Bombardier/Alstom; la consegna è iniziata nel 2003.', 'Alstom ha fornito da Neuhausen, tra l’altro, i carrelli e il sistema di assetto variabile.'] },
-    { titel: 'Impiego e dotazione', liste: ['Ristorante', 'Zona famiglie', 'Zona silenzio', 'Zona business', 'Spazi per biciclette e bagagli', 'Posti per sedie a rotelle', 'WC accessibile in sedia a rotelle'],
-      p: ['Tra gli assi principali figurano Basilea–Bienne–Losanna e Romanshorn–San Gallo–Zurigo–Bienne–Ginevra. Altri servizi portano in Ticino.', 'Sono disponibili posti per sedie a rotelle e un WC accessibile; l’accesso però non è a pianale ribassato.'] },
-    { titel: 'Ammodernamento', p: ['Dal 2021 le FFS rinnovano gli ICN nell’officina di Yverdon. Il primo treno completamente ammodernato è stato presentato il 24 ottobre 2024. Oltre a sedili, illuminazione, tavolini e informazione alla clientela vengono revisionati anche componenti tecnici.', 'L’attuale pagina delle FFS indica il 2034 come anno di conclusione; l’obiettivo è di circa 20 anni di servizio in più.'] }
-  ],
+      { titel: 'Costruttore e composizione della flotta', p: ['Le FFS possiedono 44 ICN. La prima serie, numeri 000–023, è stata costruita da Adtranz e FIAT-SIG, la seconda, numeri 024–043, dal consorzio Bombardier/Alstom; la sua consegna è iniziata nel 2003.', 'Alstom ha fornito da Neuhausen tra l’altro i carrelli e la tecnica di pendolamento. Il primo ICN ha circolato nel 1999.'] },
+      { titel: 'Impiego e tecnica', p: ['Gli assi principali sono Basilea–Bienne–Losanna e Romanshorn–San Gallo–Zurigo–Bienne–Ginevra sulla linea ai piedi del Giura. Altri servizi raggiungono il Ticino.', 'Grazie all’inclinazione attiva delle casse, il treno a sette carrozze percorre più velocemente le curve delle linee tortuose. Raggiunge i 200 km/h.'] },
+      { titel: 'Dotazione e accessibilità', liste: ['Ristorante', 'Zona famiglia', 'Zona silenzio e zona business in 1a classe', 'Prese elettriche, anche ai tavolini laterali', 'Finestrini con migliore ricezione mobile', 'Posti per biciclette', 'Posti per passeggini e fasciatoio', 'Posti per sedie a rotelle e WC accessibile', 'Posti prioritari'],
+        p: ['L’accesso non è a pianale ribassato. Sono disponibili posti per sedie a rotelle e un WC accessibile.'] },
+      { titel: 'Ammodernamento', p: ['Dal 2021 le FFS rinnovano gli ICN nell’officina di Yverdon. Il primo treno completamente ammodernato è stato presentato il 24 ottobre 2024. Oltre a sedili, illuminazione, tavolini e informazione alla clientela vengono revisionati anche componenti tecnici.', 'L’attuale pagina delle FFS indica il 2034 come anno di conclusione; l’obiettivo è di circa 20 anni di servizio in più.'] }
+    ],
   bilder: ['ICN d’estate davanti alle montagne', 'ICN al sole invernale', 'RABDe 500 021 a Rotkreuz', 'ICN in viaggio', 'ICN sul ponte sull’Aar a Soletta']
 });
 
@@ -963,7 +964,11 @@ uebZug('rabe-502', {
   daten: { 'Hersteller': 'Bombardier Transportation, oggi Alstom', 'Antrieb': 'motori sincroni a magneti permanenti', 'Gewicht': '237,1–467,4 t a vuoto secondo la versione', 'Anzahl': '62 treni (23 InterCity, 39 InterRegio)', 'In Betrieb seit': '2018, flotta completamente consegnata nel 2022' },
   specNote: 'Pesi a vuoto secondo le FFS: IR100 237,1 t, IR200 463,2 t, IC200 467,4 t.',
   abschnitte: [
-    { titel: 'Dati tecnici delle tre versioni', tabelle: { kopf: ['Caratteristica', 'IC200', 'IR200', 'IR100'], zeilen: [
+      { titel: 'Costruttore e composizione della flotta', p: ['Il costruttore è Bombardier Transportation, oggi parte di Alstom. L’ordinazione iniziale di 59 treni è stata portata a 62 con un accordo del 2014: 23 treni InterCity e 39 InterRegio.', 'Il primo FV-Dosto ha circolato nel 2018 e nel 2022 la flotta era completamente consegnata. Esistono tre versioni: IC200 (RABDe 502) e IR200 e IR100 (RABe 502).'] },
+      { titel: 'Impiego e tecnica', p: ['Un corridoio importante è San Gallo–Zurigo–Berna–Losanna–Ginevra. Altri servizi percorrono tra l’altro Basilea–Zurigo, Zurigo–Coira e Lucerna–Zurigo.', 'I treni raggiungono i 200 km/h e sono azionati da motori sincroni a magneti permanenti. Nelle ore di punta circolano composizioni fino a 400 m con fino a 1300 posti a sedere.'] },
+      { titel: 'Dotazione e accessibilità', liste: ['Ristorante, carrozza famiglia, zona silenzio e zona business (solo versione IC)', 'Prese elettriche', 'Finestrini con migliore ricezione mobile', 'Indicazione elettronica delle prenotazioni', 'Posti per biciclette, passeggini e bagagli', 'Accesso a pianale ribassato', 'Posti per sedie a rotelle e WC accessibile', 'Posti prioritari e fasciatoio'],
+        p: ['Grazie agli accessi a pianale ribassato, le persone in sedia a rotelle salgono senza gradini ai marciapiedi adatti.'] },
+      { titel: 'Dati tecnici delle tre versioni', tabelle: { kopf: ['Caratteristica', 'IC200', 'IR200', 'IR100'], zeilen: [
       ['Serie', 'RABDe 502', 'RABe 502', 'RABe 502'],
       ['Carrozze per treno', '8', '8', '4'],
       ['Lunghezza', '200,6 m', '200,6 m', '101,0 m'],
@@ -973,11 +978,8 @@ uebZug('rabe-502', {
       ['Sforzo di trazione all’avviamento', '482,24 kN', '482,24 kN', '241,12 kN'],
       ['Ristorante', 'sì', 'no', 'no']] },
       hinweis: 'Posti e dotazione secondo le FFS, valori tecnici secondo FFS Infrastruttura. I pesi si riferiscono ai veicoli vuoti.' },
-    { titel: 'Costruttore e acquisto', p: ['Il costruttore era Bombardier Transportation, oggi parte di Alstom. L’acquisto iniziale di 59 treni è stato portato a 62 veicoli con un accordo del 2014: 23 treni InterCity e 39 InterRegio.', 'La flotta è stata completamente consegnata nel 2022. La trazione utilizza motori sincroni a magneti permanenti.'] },
-    { titel: 'Impiego e dotazione', liste: ['Accessi a pianale ribassato', 'Prese elettriche', 'Posti per sedie a rotelle', 'WC accessibile in sedia a rotelle', 'Ristorante (versione IC)', 'Carrozza famiglie (versione IC)'],
-      p: ['Un corridoio importante è San Gallo–Zurigo–Berna–Losanna–Ginevra. Altri servizi circolano tra l’altro tra Basilea e Zurigo, Zurigo e Coira e Lucerna e Zurigo.'] },
-    { titel: 'Sviluppi', p: ['Le FFS hanno deciso di trasformare i carrelli dell’intera flotta. La compensazione del rollio viene eliminata e le sospensioni adattate.', 'Secondo un comunicato del dicembre 2025 la trasformazione in serie inizierà dopo l’autorizzazione d’esercizio alla fine del 2026 e durerà fino all’inizio degli anni 2030.'] }
-  ],
+      { titel: 'Sviluppi', p: ['Le FFS hanno deciso di trasformare i carrelli dell’intera flotta. La compensazione del rollio viene eliminata e le sospensioni adattate.', 'Secondo un comunicato del dicembre 2025 la trasformazione in serie inizierà dopo l’autorizzazione d’esercizio alla fine del 2026 e durerà fino all’inizio degli anni 2030.'] }
+    ],
   bilder: ['FV-Dosto a lunga percorrenza davanti alle montagne', 'RABDe 502 006 «Olten» a Zurigo HB', 'RABe 502 402 «Biel/Bienne» davanti alle montagne', 'RABe 502 214 presso Tecknau', 'RABe 502 404 sul lago']
 });
 
@@ -988,7 +990,11 @@ uebZug('rabe-511', {
   daten: { 'Betreiber': 'FFS Viaggiatori', 'Bauart': 'elettrotreno a due piani', 'Zugbildung': '6 carrozze (Regio-Dosto), 4 carrozze (IR-Dosto)', 'Leistung': '6000 kW (entrambe le versioni)', 'Gewicht': '210–292 t secondo la versione', 'Anzahl': '93 treni (69 Regio-Dosto, 24 IR-Dosto)', 'Einsatz': 'S-Bahn di Zurigo, RegioExpress, InterRegio' },
   specNote: 'Peso secondo le FFS: 210 t per l’IR-Dosto a quattro casse, 292 t per il Regio-Dosto a sei casse.',
   abschnitte: [
-    { titel: 'Le versioni a confronto', tabelle: { kopf: ['Caratteristica', 'Regio-Dosto', 'IR-Dosto'], zeilen: [
+      { titel: 'Costruttore e composizione della flotta', p: ['Stadler ha fornito questi treni a due piani di tipo KISS dal 2012. Le FFS gestiscono 69 Regio-Dosto a sei carrozze e 24 IR-Dosto a quattro carrozze.', 'I 24 IR-Dosto sono nati dal 2020 al 2024 dalla trasformazione di Regio-Dosto per il traffico a lunga distanza. Le FFS rinnovano gli altri Regio-Dosto entro il 2035; in seguito porteranno tutti la livrea blu dello ZVV.'] },
+      { titel: 'Impiego e tecnica', p: ['I Regio-Dosto circolano soprattutto sulle linee della S-Bahn di Zurigo e come RE Wettingen–Olten–Lucerna.', 'Gli IR-Dosto svolgono servizi interregionali nella Svizzera tedesca e romanda, tra l’altro nella regione di Zurigo, sull’Altopiano, nella Svizzera nordoccidentale e verso Coira. Entrambe le versioni viaggiano fino a 160 km/h; gli IR-Dosto possono essere accoppiati con il più recente RABe 512.'] },
+      { titel: 'Dotazione e accessibilità', liste: ['Accessi a pianale ribassato', 'Posti per sedie a rotelle e WC accessibile', 'Posti per biciclette e passeggini', 'Amplificatore del segnale mobile', 'Prese in 1a classe (IR-Dosto: quasi a ogni posto, anche in 2a classe)', 'Sedili 2+1 in 1a classe (IR-Dosto)'],
+        p: ['I larghi accessi ribassati permettono di salire senza gradini ai marciapiedi adatti.'] },
+      { titel: 'Le versioni a confronto', tabelle: { kopf: ['Caratteristica', 'Regio-Dosto', 'IR-Dosto'], zeilen: [
       ['Veicoli', '69', '24'],
       ['Carrozze per treno', '6', '4'],
       ['Lunghezza', '150,0 m', '100,0 m'],
@@ -998,11 +1004,8 @@ uebZug('rabe-511', {
       ['Peso', '292 t', '210 t'],
       ['Accesso a pianale ribassato', 'sì', 'sì'],
       ['Traffico', 'S-Bahn / RE', 'IR / RE']] },
-      hinweis: 'La ripartizione 120 / 415 indica i posti di 1a e 2a classe del Regio-Dosto. Per la versione IR le FFS indicano 317 posti in totale.' },
-    { titel: 'Impiego', p: ['I Regio-Dosto circolano soprattutto sulle linee della S-Bahn di Zurigo e come RE Wettingen–Olten–Lucerna.', 'Gli IR-Dosto circolano nel traffico interregionale della Svizzera tedesca e romanda, tra l’altro nella regione di Zurigo, sull’Altopiano, nella Svizzera settentrionale e sull’asse verso Coira. La versione IR può essere accoppiata al più recente RABe 512.'] },
-    { titel: 'Dotazione e rinnovo', liste: ['Ampi accessi ribassati', 'Posti per sedie a rotelle', 'WC accessibile in sedia a rotelle', 'Spazi per passeggini e biciclette'],
-      p: ['Gli IR-Dosto sono stati migliorati nel 2020–2024 per la lunga percorrenza, tra l’altro con prese elettriche e sedili 2+1 in 1a classe.', 'Le FFS rinnovano gradualmente i Regio-Dosto; il primo treno rinnovato circola da settembre 2026.'] }
-  ],
+      hinweis: 'La ripartizione 120 / 415 indica i posti di 1a e 2a classe del Regio-Dosto. Per la versione IR le FFS indicano 317 posti in totale.' }
+    ],
   bilder: ['Regio-Dosto come S15 della S-Bahn di Zurigo a Jona', 'RABe 511 112 a Ginevra-Cornavin', 'RABe 511 026 a Ginevra', 'RABe 511 a Sevelen', 'RABe 511 018 a Zurigo HB']
 });
 
@@ -1012,10 +1015,12 @@ uebZug('rabe-514', {
   kennzahlen: [['61', 'treni'], ['360', 'posti a sedere per treno'], ['140 km/h', 'velocità massima'], ['2006', 'primo impiego alle FFS']],
   daten: { 'Betreiber': 'FFS Viaggiatori', 'Bauart': 'elettrotreno a due piani', 'Zugbildung': '4 carrozze', 'Gewicht': '223 t a vuoto', 'Anzahl': '61 treni', 'Einsatz': 'S-Bahn di Zurigo' },
   abschnitte: [
-    { titel: 'Impiego e spazi per i viaggiatori', liste: ['Accesso ribassato continuo', 'Zone multifunzionali per biciclette e passeggini', 'Posti prioritari', 'Posti per sedie a rotelle', 'WC accessibile in sedia a rotelle'],
-      p: ['I DTZ possono essere impiegati su tutta la rete della S-Bahn di Zurigo.'] },
-    { titel: 'Ammodernamento', p: ['Le FFS rinnovano la flotta dal 2025, presumibilmente fino al 2030 circa. Sono previsti una nuova livrea, una migliore ricezione mobile grazie a vetri adattati e lavori su illuminazione, interni e componenti tecnici.', 'Il rinnovo deve prolungare la durata d’utilizzo a 32 anni.'] }
-  ],
+      { titel: 'Costruttore e composizione della flotta', p: ['Siemens ha fornito i 61 elettrotreni a due piani (DTZ) dal 2006 al 2009. Sono la seconda generazione di treni a due piani della S-Bahn di Zurigo.'] },
+      { titel: 'Impiego e tecnica', p: ['I DTZ possono circolare su tutta la rete della S-Bahn di Zurigo. Un treno è lungo 100 m, offre 360 posti a sedere e viaggia fino a 140 km/h.'] },
+      { titel: 'Dotazione e accessibilità', liste: ['Accesso ribassato continuo con colmatore di gap', 'Compartimento multifunzionale con posti per biciclette e passeggini', 'Posti prioritari', 'Posti per sedie a rotelle', 'WC accessibile'],
+        p: ['Grazie agli accessi ribassati con colmatore di gap, le persone in sedia a rotelle salgono senza gradini ai marciapiedi adatti.'] },
+      { titel: 'Ammodernamento', p: ['Le FFS rinnovano la flotta dal 2025, presumibilmente fino al 2030 circa. Sono previsti una nuova livrea, una migliore ricezione mobile grazie a vetri adattati e lavori su illuminazione, interni e componenti tecnici.', 'Il rinnovo deve prolungare la durata d’utilizzo a 32 anni.'] }
+    ],
   bilder: ['RABe 514 «DTZ» in viaggio', 'Scala verso il piano intermedio del DTZ rinnovato', 'RABe 514 054 come S8 a Zurigo Enge', 'RABe 514 015 nella nuova livrea ZVV 2023', 'DTZ come S15 sulla diga di Rapperswil']
 });
 
@@ -1026,10 +1031,12 @@ uebZug('rabe-523', {
   daten: { 'Bauart': 'elettrotreno', 'Grundtyp': '4 carrozze', 'Einstieg': 'a pianale ribassato', 'Höchstgeschwindigkeit': '160 km/h (famiglia FLIRT secondo le FFS)', 'Erste Region': 'Stadtbahn di Zugo', 'Einsatz': 'traffico regionale, S-Bahn', 'Anzahl': '98* (secondo le serie di numeri)' },
   specNote: '* Il numero 98 risulta dalle serie di numeri pubblicate 001–073, 101–114 e 501–511; non esiste un dato attuale sull’effettivo confermato separatamente dalle FFS. I 160 km/h sono indicati dalle FFS per l’intera famiglia FLIRT regionale.',
   abschnitte: [
-    { titel: 'Impiego regionale e dotazione', liste: ['Accesso a pianale ribassato', 'Posti per sedie a rotelle', 'Toilette accessibili in sedia a rotelle', 'Spazi per biciclette e passeggini'],
-      p: ['Secondo le FFS i FLIRT circolano come S-Bahn tra l’altro nei cantoni Argovia, Soletta, Lucerna, Basilea, Neuchâtel, Friburgo e Vaud. La dotazione riguarda tutta la famiglia; i dettagli variano secondo la versione.'] },
-    { titel: 'Interpretare correttamente il numero', p: ['Il numero pubblicato di 209 comprende tutti i FLIRT delle FFS impiegati nel traffico regionale, incluse altre serie e versioni.', 'Per il solo RABe 523, le serie di numeri pubblicate 001–073, 101–114 e 501–511 danno insieme 98 veicoli. Si tratta di una deduzione dai numeri e non di un dato ufficiale sull’effettivo delle FFS.'] }
-  ],
+      { titel: 'Costruttore e composizione della flotta', p: ['Tutti i FLIRT sono di Stadler; il primo ha circolato alle FFS nel 2004. Nel traffico regionale le FFS impiegano complessivamente 209 FLIRT di diverse serie.'] },
+      { titel: 'Impiego e tecnica', p: ['Secondo le FFS, i FLIRT circolano come S-Bahn tra l’altro nei cantoni Argovia, Soletta, Lucerna, Basilea, Neuchâtel, Friburgo e Vaud.', 'A seconda della versione, i treni sono lunghi da 75 a 105 m e offrono da 156 a 236 posti a sedere. Viaggiano fino a 160 km/h.'] },
+      { titel: 'Dotazione e accessibilità', liste: ['Accesso a pianale ribassato', 'Posti per sedie a rotelle e WC accessibile', 'Posti prioritari', 'Fasciatoio (solo in una parte dei treni)', 'Prese in 1a classe', 'Posti per biciclette, passeggini e bagagli'],
+        p: ['Queste indicazioni valgono per la famiglia FLIRT delle FFS; i dettagli variano secondo la versione.'] },
+      { titel: 'Interpretare correttamente il numero', p: ['Il numero pubblicato di 209 comprende tutti i FLIRT delle FFS impiegati nel traffico regionale, incluse altre serie e versioni.', 'Per il solo RABe 523, le serie di numeri pubblicate 001–073, 101–114 e 501–511 danno insieme 98 veicoli. Si tratta di una deduzione dai numeri e non di un dato ufficiale sull’effettivo delle FFS.'] }
+    ],
   bilder: ['RABe 523 001 a Muttenz', 'RABe 523 019', 'RABe 523 024 a Montreux', 'RABe 523 018 a Yverdon-les-Bains', 'RABe 523 038']
 });
 
@@ -1040,20 +1047,20 @@ uebZug('rbde-560', {
   daten: { 'Fahrzeugart': 'treno navetta elettrico', 'Leistung': '1700 kW sulla RBDe 560', 'Gewicht': 'circa 146 t a vuoto', 'Niederflur': 'nella carrozza intermedia', 'Anzahl': '86 treni', 'In Betrieb seit': '2009 (primo impiego alle FFS)', 'Hersteller': 'Schindler Waggon, SWA, SIG, ABB e Bombardier (secondo la carrozza)', 'Status': 'in servizio' },
   specNote: 'Dati su flotta, capacità e impiego secondo le FFS. Valori tecnici secondo FFS Infrastruttura. Il peso a vuoto è la somma delle tre carrozze.',
   abschnitte: [
-    { titel: 'Componenti del treno', tabelle: { kopf: ['Veicolo', 'Funzione', 'Lunghezza', 'Peso a vuoto', 'Trazione'], zeilen: [
+      { titel: 'Costruttore e composizione della flotta', p: ['Le FFS possiedono 86 Domino. Le automotrici e le carrozze pilota provengono dalla famiglia NPZ di Schindler Waggon, SWA, SIG e ABB; Bombardier ha fornito le nuove carrozze intermedie a pianale ribassato di tipo INOVA.', 'Non esiste quindi un unico anno di costruzione per tutto il treno. Il primo Domino ha circolato alle FFS nel 2009.'] },
+      { titel: 'Impiego e tecnica', p: ['Le FFS impiegano il Domino soprattutto su linee S-Bahn nei cantoni Argovia, Lucerna, Neuchâtel e Vaud. L’assegnazione esatta alle linee può cambiare con l’orario.', 'Un treno a tre carrozze è lungo 75 m, offre 172 posti a sedere e viaggia fino a 140 km/h.'] },
+      { titel: 'Dotazione e accessibilità', liste: ['Accesso senza gradini nella carrozza intermedia', 'Posti per sedie a rotelle e WC accessibile', 'Posti prioritari', 'Prese in 1a classe', 'Posti per biciclette, passeggini e bagagli', 'Migliore ricezione mobile'],
+        p: ['Solo la carrozza intermedia INOVA è a pianale ribassato; automotrice e carrozza pilota hanno gradini.'] },
+      { titel: 'Componenti del treno', tabelle: { kopf: ['Veicolo', 'Funzione', 'Lunghezza', 'Peso a vuoto', 'Trazione'], zeilen: [
       ['RBDe 560', 'motrice di testa', '25,0 m', '72,0 t', '1700 kW / 182 kN'],
       ['B INOVA', 'carrozza intermedia a pianale ribassato', '24,4 m', '36,0 t', 'senza trazione propria'],
       ['ABt', 'carrozza pilota di 1a e 2a classe', '25,0 m', '38,0 t', 'senza trazione propria']] } },
-    { titel: 'Concetto e anni di costruzione', p: ['Per il Domino non esiste un unico anno di costruzione. I veicoli di base provengono dalla famiglia NPZ; per le composizioni TPF si citano gli anni dal 1984 al 1996. Il grande rinnovo dei treni TPF è avvenuto tra il 2009 e il 2011.', 'Alle FFS il primo Domino è entrato in servizio nel 2009. Bombardier ha fornito le nuove carrozze intermedie INOVA; gli altri costruttori variano secondo la motrice o la carrozza pilota.'] },
-    { titel: 'Dotazione', liste: ['Migliore ricezione mobile', 'Posti prioritari', 'Posti per sedie a rotelle', 'Toilette accessibile in sedia a rotelle', 'Prese elettriche in 1a classe', 'Posti per biciclette e passeggini', 'Spazi per i bagagli', 'Zona multifunzionale nella carrozza intermedia'],
-      p: ['Accessibilità: l’accesso senza gradini si trova nella carrozza intermedia INOVA. Motrice e carrozza pilota non sono a pianale ribassato per tutta la lunghezza.'] },
-    { titel: 'Impiego alle FFS', p: ['Le FFS impiegano il Domino soprattutto su singole linee S-Bahn nei cantoni Argovia, Lucerna, Neuchâtel e Vaud. L’assegnazione precisa delle linee può cambiare con l’orario e la disposizione dei veicoli.'] },
-    { titel: 'Altri gestori', tabelle: { kopf: ['Gestore', 'Effettivo', 'Lunghezza', 'Posti a sedere', 'Particolarità'], zeilen: [
+      { titel: 'Altri gestori', tabelle: { kopf: ['Gestore', 'Effettivo', 'Lunghezza', 'Posti a sedere', 'Particolarità'], zeilen: [
       ['TPF', '14', '75 m', '184 (24 in 1a + 160 in 2a cl.)', '1650 kW; 140 km/h; RBDe 235–247 e 269'],
       ['RegionAlps', '16', '74,5 m', '188 (12 in 1a + 176 in 2a cl.)', '100 posti in piedi; 140 km/h; St-Gingolph–Briga']] },
       hinweis: 'Effettivi e capacità secondo TPF e RegionAlps. I valori di altri gestori non possono essere trasferiti senza verifica ai treni FFS; in particolare potenza e capacità sono diverse.' },
-    { titel: 'Sostituzione', p: ['Le FFS acquistano 198 FLIRT Evo per sostituire gradualmente i Domino e i FLIRT di prima generazione. L’impiego alle FFS inizia nel 2028; l’introduzione regionale è prevista fino al 2033.', 'RegionAlps ha annunciato 27 FLIRT Evo, che sostituiranno Domino e NINA entro il 2031.'] }
-  ],
+      { titel: 'Sostituzione', p: ['Le FFS acquistano 198 FLIRT Evo per sostituire gradualmente i Domino e i FLIRT di prima generazione. L’impiego alle FFS inizia nel 2028; l’introduzione regionale è prevista fino al 2033.', 'RegionAlps ha annunciato 27 FLIRT Evo, che sostituiranno Domino e NINA entro il 2031.'] }
+    ],
   bilder: ['Domino tra vigneti e paese sul lago', 'Domino nella luce autunnale', 'Due Domino in doppia trazione sopra il lago', 'Domino tra i terrazzamenti vitati', 'Domino sulla riva del lago', 'Domino in doppia trazione tra i vigneti']
 });
 
@@ -1063,18 +1070,18 @@ uebZug('re-460', {
   kennzahlen: [['119', 'locomotive FFS'], ['200 km/h', 'in esercizio · costruita per 230 km/h'], ['18,5 m', 'lunghezza'], ['6100 kW', 'potenza continuativa'], ['1992', 'primo impiego alle FFS']],
   daten: { 'Fahrzeugart': 'locomotiva elettrica universale', 'Höchstgeschwindigkeit': '200 km/h in esercizio, costruita per 230 km/h', 'Leistung': '6100 kW continuativi', 'Gewicht': '84 t in servizio', 'In Betrieb seit': '1992 (primo impiego alle FFS)', 'Anzahl': '119 locomotive', 'Status': 'in servizio (ammodernata con il Refit)' },
   abschnitte: [
-    { titel: 'Componenti del veicolo', tabelle: { kopf: ['Veicolo', 'Funzione', 'Lunghezza', 'Peso in servizio', 'Trazione'], zeilen: [
+      { titel: 'Costruttore e composizione della flotta', p: ['SLM e ABB hanno sviluppato la Re 460 all’inizio degli anni 1990 per il progetto «Ferrovia 2000». Dal 1992 al 1996 sono state consegnate alle FFS 119 locomotive; il loro design caratteristico è di Pininfarina.', 'Tra il 2017 e il 2022 tutte le 119 locomotive hanno ricevuto un refit nell’officina di Yverdon-les-Bains: nuovi convertitori, impianto ad aria compressa, cablaggio e sedili di guida rinnovati. Così possono circolare fino agli anni 2040.'] },
+      { titel: 'Impiego e tecnica', liste: ['Tecnica di trazione trifase, con nuovi convertitori dal refit', 'Cassa in acciaio con frontali in plastica rinforzata con fibra di vetro', 'Cabina di guida a tenuta di pressione per le gallerie ad alta velocità', 'Comando multiplo per i treni navetta con carrozza pilota', 'Freno a recupero che restituisce corrente alla rete'],
+        p: ['La Re 460 traina e spinge soprattutto treni InterCity e InterRegio su tutta la rete svizzera a scartamento normale, per lo più con carrozze a due piani IC2000 o carrozze unificate IV. Viaggia fino a 200 km/h.'] },
+      { titel: 'Dotazione e accessibilità', p: ['Ciò che i viaggiatori trovano a bordo dipende dalle carrozze. Le carrozze a due piani IC2000 hanno accessi a pianale ribassato, posti per sedie a rotelle e un WC accessibile; le carrozze unificate IV non sono a pianale ribassato. I dettagli sono sulle pagine IC2000 ed EW IV.'] },
+      { titel: 'Componenti del veicolo', tabelle: { kopf: ['Veicolo', 'Funzione', 'Lunghezza', 'Peso in servizio', 'Trazione'], zeilen: [
       ['Re 460', 'locomotiva elettrica universale', '18,5 m', '84,0 t', '6100 kW / 300 kN']] } },
-    { titel: 'Concetto e anni di costruzione', p: ['La Re 460 è stata sviluppata all’inizio degli anni 1990 nell’ambito del progetto «Ferrovia 2000» per modernizzare il traffico veloce sulle linee principali svizzere. Dal 1992 al 1996 sono stati consegnati alle FFS 119 esemplari.', 'Il design caratteristico è firmato dallo studio italiano Pininfarina.'] },
-    { titel: 'Ammodernamento (programma Refit)', p: ['Tra il 2017 e il 2022 tutte le 119 locomotive hanno seguito un ampio programma Refit nell’officina FFS di Yverdon-les-Bains. Tra l’altro sono stati montati nuovi convertitori che riducono il consumo di energia e rinnovati l’impianto ad aria compressa, il cablaggio e i sedili di guida.'] },
-    { titel: 'Dotazione e caratteristiche', liste: ['Trazione trifase, convertitori GTO ammodernati in IGBT', 'Cassa aerodinamica in acciaio con frontali in vetroresina', 'Cabina stagna alla pressione per le gallerie, ad es. Mattstetten–Rothrist e galleria di base del Lötschberg', 'Comando multiplo per treni navetta con carrozza pilota (Bt, IC2000)', 'Freno a recupero che risparmia energia'] },
-    { titel: 'Impiego alle FFS', p: ['La Re 460 traina e spinge soprattutto treni InterCity (IC) e InterRegio (IR) su tutta la rete svizzera a scartamento normale. Circola spesso con carrozze a due piani IC2000 o carrozze unificate IV (EW IV).'] },
-    { titel: 'Altri gestori e tipi affini', tabelle: { kopf: ['Gestore / tipo', 'Effettivo', 'Potenza', 'Velocità massima', 'Particolarità'], zeilen: [
-      ['BLS (Re 465)', '18', '7000 kW', '230 km/h', 'variante più potente della Loc 2000 per merci e viaggiatori'],
-      ['VR (Sr2)', '46', '6000 kW', '210 km/h', 'variante a scartamento largo (1524 mm) per la Finlandia'],
-      ['NSB (El 18)', '22', '5880 kW', '200 km/h', 'variante per la Norvegia, adatta alle condizioni nordiche']] } },
-    { titel: 'Futuro e prospettive', p: ['Grazie al programma Refit le locomotive sono tecnicamente pronte per altri 20 anni circa di servizio. Resteranno presumibilmente fino agli anni 2040 la spina dorsale della lunga percorrenza FFS con locomotiva.'] }
-  ],
+      { titel: 'Altri gestori e tipi affini', tabelle: { kopf: ['Gestore / tipo', 'Effettivo', 'Potenza', 'Velocità massima', 'Particolarità'], zeilen: [
+        ['BLS (Re 465)', '18', '6400 kW', '160 km/h (omologata)', 'Locomotiva sorella per treni viaggiatori, navetta per auto e merci'],
+        ['VR (Sr2)', '46', '6000 kW', '210 km/h', 'Variante a scartamento largo (1524 mm) per la Finlandia'],
+        ['NSB (El 18)', '22', '5400 kW', '200 km/h', 'Variante per la Norvegia']] } },
+      { titel: 'Futuro e prospettive', p: ['Grazie al programma Refit le locomotive sono tecnicamente pronte per altri 20 anni circa di servizio. Resteranno presumibilmente fino agli anni 2040 la spina dorsale della lunga percorrenza FFS con locomotiva.'] }
+    ],
   bilder: ['Re 460 con carrozze unificate in primavera', 'Re 460 con carrozze a due piani IC2000 sopra il lago', 'Re 460 con IC2000 tra campi e bosco', 'Re 460 con IC2000 d’estate', 'Re 460 con carrozze unificate al mattino presto', 'Re 460 «Swisstainable» con IC2000', 'Re 460 «Swisstainable» con carrozze del treno notturno']
 });
 
@@ -1085,13 +1092,22 @@ uebZug('rabe-503', {
   daten: { 'Hersteller': 'Alstom (famiglia Pendolino, ETR 610)', 'Zugbildung': '7 carrozze', 'Stromsystem': '15 kV e 25 kV CA, 3 kV CC', 'Gewicht': '418 t a vuoto (FOS), 466 t a pieno carico', 'Höchstgeschwindigkeit': '250 km/h (veicolo), 200 km/h nel tipo di marcia svizzero', 'Neigetechnik': 'attivo', 'Einsatz': 'EuroCity Germania–Svizzera–Italia' },
   specNote: 'Le FFS indicano 250 km/h come velocità massima del veicolo; nel catalogo dei tipi di marcia è registrato 200 km/h per il tipo svizzero.',
   abschnitte: [
-    { titel: 'Acquisto e impiego', p: ['La flotta FFS comprende 19 Astoro: sette del primo acquisto e dodici consegnati in seguito.', 'Circolano sull’asse internazionale nord-sud, tra l’altro via San Gottardo verso Milano, e su collegamenti verso la Germania.'] },
-    { titel: 'Rinnovo', p: ['Dal 2024 le FFS rinnovano l’intera flotta nell’officina di Bellinzona. Interni, informazione alla clientela e componenti tecnici vengono revisionati; il programma dovrebbe durare fino alla fine del 2027.'] }
-  ],
+      { titel: 'Costruttore e composizione della flotta', p: ['L’Astoro appartiene alla famiglia Pendolino di Alstom (ETR 610). La flotta FFS conta 19 treni: sette della prima acquisizione e dodici consegnati più tardi. Il primo ha circolato nel 2009.'] },
+      { titel: 'Impiego e tecnica', p: ['L’Astoro circola sull’asse nord-sud tra Germania, Austria, Svizzera e Italia, soprattutto Ginevra–Briga–Milano, Basilea–Berna–Briga–Milano e Zurigo–Monaco.', 'Grazie alla tecnica di pendolamento accorcia i tempi di percorrenza sul Sempione e verso Monaco. Il treno è lungo 187 m, offre 402 posti a sedere e raggiunge i 250 km/h.'] },
+      { titel: 'Dotazione e accessibilità', liste: ['Ristorante', 'Zona famiglia', 'Wi-Fi', 'Prese per spine svizzere e internazionali', 'Amplificatore del segnale mobile', 'Indicazione elettronica delle prenotazioni', 'Posti per biciclette e bagagli', 'Posti per sedie a rotelle e WC accessibile', 'Posti prioritari e fasciatoio'],
+        p: ['L’accesso non è a pianale ribassato. Sono disponibili posti per sedie a rotelle e un WC accessibile.'] },
+      { titel: 'Rinnovo', p: ['Dal 2024 le FFS rinnovano l’intera flotta nell’officina di Bellinzona. Interni, informazione alla clientela e componenti tecnici vengono revisionati; il programma dovrebbe durare fino alla fine del 2027.'] }
+    ],
   bilder: ['RABe 503 «Astoro» a Briga', 'RABe 503 «Astoro» al marciapiede', 'ETR 610 013 presso St-Saphorin sul Lemano', 'ETR 610 «Astoro» in viaggio', 'ETR 610 006 come EC 50 a Domodossola']
 });
 
 uebZug('re-450', {
+  abschnitte: [
+      { titel: 'Costruttore e composizione della flotta', p: ['SLM e ABB hanno costruito le 115 Re 450 per i treni navetta a due piani (DPZ) della S-Bahn di Zurigo. Le carrozze a due piani sono state fornite da SLM e Schindler Waggon; il primo DPZ ha circolato nel 1989, un anno prima dell’avvio della S-Bahn nel maggio 1990.', 'Fino al 1998 sono stati costruiti 113 treni navetta. Sono stati rinnovati dal 2011 al 2018.'] },
+      { titel: 'Impiego e tecnica', p: ['I DPZ sono la spina dorsale della S-Bahn di Zurigo e possono circolare su quasi tutta la rete dello ZVV. Un treno è lungo 98,8 m, offre 345 posti a sedere e viaggia fino a 130 km/h.', 'Un treno navetta comprende la Re 450, carrozze a due piani e una carrozza pilota, così al capolinea la locomotiva non deve essere spostata.'] },
+      { titel: 'Dotazione e accessibilità', liste: ['Climatizzazione', 'Sistema d’informazione alla clientela', 'Prese in 1a classe', 'Amplificatore del segnale mobile', 'Compartimento multifunzionale con posti per biciclette', 'Posti per passeggini', 'Accesso a livello nella carrozza a pianale ribassato (NDW)', 'Posti per sedie a rotelle e WC accessibile', 'Posti prioritari'],
+        p: ['Le persone in sedia a rotelle salgono senza gradini nella carrozza a pianale ribassato NDW, inserita nei treni navetta.'] }
+    ],
   typ: 'Locomotiva dei treni navetta a due piani',
   text: ['La Re 450 traina e spinge i treni navetta a due piani (DPZ) della S-Bahn di Zurigo.', 'I treni navetta sono composti dalla locomotiva, da carrozze a due piani e da una carrozza pilota.'],
   daten: { 'Einsatz': 'S-Bahn di Zurigo' },
@@ -1104,9 +1120,11 @@ uebZug('rabe-512', {
   kennzahlen: [['60', 'treni ordinati'], ['466', 'posti a sedere'], ['160 km/h', 'velocità massima'], ['2023', 'primo impiego']],
   daten: { 'Zugbildung': '6 carrozze', 'Gewicht': '299 t a vuoto, 382 t a pieno carico', 'Anzahl': '60 ordinati', 'In Betrieb seit': 'luglio 2023' },
   abschnitte: [
-    { titel: 'Acquisto', p: ['Nel 2021 le FFS hanno ordinato in totale 60 nuovi IR-Dosto. Il primo servizio commerciale è iniziato nel luglio 2023; la consegna completa dovrebbe concludersi entro la fine del 2026.'] },
-    { titel: 'Impiego e comfort', p: ['I treni sono previsti per prestazioni InterRegio e RegioExpress nella regione di Zurigo, sull’Altopiano e nella Svizzera romanda.', 'Accessi a pianale ribassato, posti per sedie a rotelle, zone multiuso, prese elettriche e un’informazione moderna migliorano accessibilità e comfort. È possibile la doppia trazione con RABe 511 ammodernati.'] }
-  ],
+      { titel: 'Costruttore e composizione della flotta', p: ['Nel 2021 le FFS hanno ordinato a Stadler 60 nuovi IR-Dosto. Il primo servizio commerciale è iniziato nel luglio 2023; la consegna completa dovrebbe concludersi entro la fine del 2026.'] },
+      { titel: 'Impiego e tecnica', p: ['I treni svolgono servizi InterRegio e RegioExpress nella regione di Zurigo, sull’Altopiano e nella Svizzera romanda.', 'Un treno è lungo 150 m, offre 466 posti a sedere e viaggia fino a 160 km/h. È possibile la doppia trazione con gli IR-Dosto RABe 511 rinnovati.'] },
+      { titel: 'Dotazione e accessibilità', liste: ['Accessi a pianale ribassato a livello', 'Posti per sedie a rotelle e WC accessibile', 'Posti prioritari', 'Prese elettriche', 'Finestrini con migliore ricezione mobile', 'Informazione ai viaggiatori moderna', 'Sedili 2+1 in 1a classe', 'Otto posti per biciclette in due punti, con ricarica per e-bike', 'Posti per passeggini e bagagli, fasciatoio'],
+        p: ['Grazie agli accessi a livello, la salita è senza barriere ai marciapiedi adatti. Una zona famiglia e una zona business sono in fase di realizzazione.'] }
+    ],
   bilder: ['IR-Dosto RABe 512 a Zurigo HB', 'RABe 512 IR-Dosto in viaggio', 'RABe 512 IR-Dosto', 'Piano superiore di 2a classe del RABe 512', 'Frontale del RABe 512']
 });
 
@@ -1117,9 +1135,11 @@ uebZug('rabe-520', {
   daten: { 'Breite': 'circa 2,65 m (sagoma del Seetal)', 'Gewicht': '78 t a vuoto (FOS), 105 t a pieno carico', 'Anzahl': '17 acquistati', 'Einsatz': 'linea del Seetal Lucerna–Lenzburg' },
   specNote: 'Due unità sono poi passate a Thurbo; il numero 17 indica l’acquisto originale e non necessariamente l’effettivo FFS attuale.',
   abschnitte: [
-    { titel: 'Acquisto e particolarità', p: ['Le FFS hanno acquistato 17 veicoli numerati 520 000–016. La costruzione stretta aumenta la distanza di sicurezza dalla strada che corre parallela.', 'Una parte delle porte era in origine prevista per i marciapiedi bassi del Seetal; con l’ammodernamento del 2018–2021 è stato aggiunto un accesso per i marciapiedi standard da 55 cm.'] },
-    { titel: 'Impiego', p: ['L’area principale d’impiego è la linea del Seetal Lucerna–Lenzburg. I veicoli hanno circolato temporaneamente anche su altre linee da Lucerna e Lenzburg.'] }
-  ],
+      { titel: 'Costruttore e composizione della flotta', p: ['Stadler ha fornito queste automotrici articolate GTW dal 2002; sono stati acquistati 17 veicoli con i numeri 520 000–016. Oggi le FFS ne indicano 15 nella loro panoramica.', 'Dal 2018 al 2021 i veicoli sono stati modernizzati.'] },
+      { titel: 'Impiego e tecnica', p: ['La zona d’impiego principale è la linea del Seetal Lucerna–Lenzburg; nelle ore di punta circolano due treni accoppiati.', 'Il treno a tre elementi con modulo centrale motorizzato è lungo 53,5 m, offre 124 posti a sedere e viaggia fino a 115 km/h. La cassa stretta aumenta la distanza dalla strada parallela.'] },
+      { titel: 'Dotazione e accessibilità', liste: ['Cinque porte per lato per i marciapiedi bassi del Seetal (35 cm sopra il binario)', 'Una porta per marciapiedi standard (55 cm)', 'Un posto per sedia a rotelle per treno', 'Posti prioritari', 'Posti per biciclette, passeggini e bagagli', 'Finestrini con migliore ricezione mobile'],
+        p: ['Le persone in sedia a rotelle possono salire autonomamente in tutte le stazioni della linea del Seetal.'] }
+    ],
   bilder: ['RABe 520 «GTW» a Beinwil am See', 'RABe 520 nel Seetal presso Seengen', 'RABe 520 della linea del Seetal a Lenzburg, 2003', 'RABe 520 al passaggio a livello di Beinwil am See', 'RABe 520 come S28 presso Hunzenschwil']
 });
 
@@ -1130,9 +1150,11 @@ uebZug('rabe-521', {
   daten: { 'Zugbildung': '4 carrozze', 'Gewicht': '120 t a vuoto, 152 t a pieno carico', 'Leistung': '2656 kW (valore del tipo di marcia FOS)', 'Nummern': '521 001–030 e 201–209', 'Einsatz': 'S-Bahn di Basilea, Seehas, Svizzera–Germania' },
   specNote: 'Il catalogo dei tipi di marcia delle FFS raggruppa sotto questo tipo anche varianti FLIRT a quattro casse tecnicamente simili; la potenza è quindi indicata come valore del tipo.',
   abschnitte: [
-    { titel: 'Acquisto e flotta', p: ['La serie comprende 30 veicoli numerati 521 001–030 e altre nove unità 521 201–209, in totale 39 treni. I primi veicoli sono entrati in servizio nel 2004.', 'Stadler ha sviluppato la piattaforma FLIRT in origine per le FFS.'] },
-    { titel: 'Impiego', p: ['I RABe 521 circolano principalmente sulle linee della S-Bahn trinazionale di Basilea e su prestazioni transfrontaliere verso la Germania.', 'Gli accoppiatori automatici permettono la trazione multipla con FLIRT compatibili; accessi a pianale ribassato e zone multiuso facilitano il rapido cambio dei viaggiatori.'] }
-  ],
+      { titel: 'Costruttore e composizione della flotta', p: ['Stadler ha sviluppato la piattaforma FLIRT originariamente per le FFS. La serie RABe 521 comprende 30 veicoli con i numeri 521 001–030 e altri nove 521 201–209, in tutto 39 treni. I primi hanno circolato nel 2004.'] },
+      { titel: 'Impiego e tecnica', p: ['I RABe 521 circolano soprattutto sulla S-Bahn trinazionale di Basilea e su collegamenti transfrontalieri verso la Germania.', 'Gli agganci automatici permettono la trazione multipla con FLIRT compatibili. I FLIRT delle FFS viaggiano fino a 160 km/h.'] },
+      { titel: 'Dotazione e accessibilità', liste: ['Accesso a pianale ribassato', 'Posti per sedie a rotelle e WC accessibile', 'Posti prioritari', 'Prese in 1a classe', 'Zone multifunzionali per biciclette e passeggini', 'Portabagagli'],
+        p: ['Gli accessi ribassati e le zone multifunzionali accelerano il cambio dei viaggiatori. Queste indicazioni valgono per la famiglia FLIRT delle FFS.'] }
+    ],
   bilder: ['RABe 521 «FLIRT»', 'RABe 521 come S3 per Olten a Porrentruy', 'FLIRT sul ponte della Gäubahn a Olten', 'FLIRT sul ponte sull’Aar presso Olten', 'Interno del RABe 521 «Express-Hase»']
 });
 
@@ -1142,9 +1164,11 @@ uebZug('rabe-522', {
   kennzahlen: [['32', 'treni della serie 201–232'], ['160 km/h', 'velocità massima'], ['2011', 'impiego della serie attuale dal'], ['75,0 m', 'lunghezza']],
   daten: { 'Zugbildung': '4 carrozze', 'Stromsystem': '15 kV 16,7 Hz e 25 kV 50 Hz CA', 'Gewicht': '135 t a vuoto, 167 t a pieno carico', 'Einsatz': 'Léman Express, traffico regionale di Basilea' },
   abschnitte: [
-    { titel: 'Storia della serie', p: ['Una prima serie di dodici veicoli portava i numeri 522 001–012. Poiché questi treni inizialmente non ottennero l’omologazione francese, furono poi trasformati in RABe 523.', 'La serie attuale comprende 32 veicoli più recenti numerati 522 201–232.'] },
-    { titel: 'Impiego e dotazione', p: ['I RABe 522 circolano tra l’altro sulla rete Léman Express e su collegamenti regionali di confine nella regione di Basilea.', 'Come altri FLIRT hanno una trazione elettrica distribuita, ampi accessi a pianale ribassato, zone multiuso e accoppiatori automatici per la trazione multipla.'] }
-  ],
+      { titel: 'Costruttore e composizione della flotta', p: ['La serie è di Stadler e comprende 32 veicoli con i numeri 522 201–232; il primo RABe 522 ha circolato nel 2011.', 'Una prima serie di dodici veicoli portava i numeri 522 001–012. Poiché questi treni non avevano inizialmente ottenuto l’omologazione francese, sono stati poi trasformati in RABe 523.'] },
+      { titel: 'Impiego e tecnica', p: ['I RABe 522 circolano tra l’altro sulla rete Léman Express e su collegamenti regionali di confine nella regione di Basilea e nel Giura.', 'Come gli altri FLIRT hanno una trazione elettrica distribuita e agganci automatici per la trazione multipla.'] },
+      { titel: 'Dotazione e accessibilità', liste: ['Ampi accessi a pianale ribassato', 'Posti per sedie a rotelle e WC accessibile', 'Posti prioritari', 'Prese in 1a classe', 'Zone multifunzionali per biciclette e passeggini'],
+        p: ['Queste indicazioni valgono per la famiglia FLIRT delle FFS; i dettagli variano secondo la versione.'] }
+    ],
   bilder: ['RABe 522 209 a Delle', 'RABe 522 a Noiraigue', 'RABe 522 221 nella livrea Léman Express ad Annemasse', 'RABe 522 231 a Ginevra', 'RABe 522 213 a Ginevra-Cornavin']
 });
 
@@ -1155,12 +1179,15 @@ uebZug('rabe-524', {
   daten: { 'Zugbildung': '4 o 6 carrozze', 'Stromsystem': '15 kV 16,7 Hz CA e 3 kV CC', 'Länge': '74,1 m (4 casse), 106,3 m (6 casse), 104,9 m (FLIRT TSI)', 'Gewicht': '133 t (4 casse), 174 t (6 casse), 179 t (FLIRT TSI)', 'Anzahl': '53 (23 a quattro casse, 17 a sei casse, 13 FLIRT TSI)', 'In Betrieb seit': '2007 (costruiti tra il 2006 e il 2021)', 'Einsatz': 'TILO, Ticino–Lombardia' },
   specNote: 'Lunghezza e peso a vuoto di ogni variante secondo il catalogo dei tipi di marcia delle FFS. FLIRT TSI indica la versione più recente a sei casse conforme alle STI (RABe 524.3).',
   abschnitte: [
-    { titel: 'Varianti', tabelle: { kopf: ['Variante', 'Numero', 'Lunghezza', 'Peso a vuoto'], zeilen: [
+      { titel: 'Costruttore e composizione della flotta', p: ['Stadler ha costruito i 53 veicoli oggi in servizio tra il 2006 e il 2021: 23 a quattro casse, 17 a sei casse e 13 FLIRT TSI (RABe 524.3). I primi hanno circolato nel 2007.', 'I più recenti FLIRT TSI sono stati acquistati per ampliare l’offerta transfrontaliera.'] },
+      { titel: 'Impiego e tecnica', p: ['La serie caratterizza la rete TILO in Ticino e in Lombardia, fino a Milano. A seconda della linea circolano treni a quattro o sei casse.', 'La tecnica policorrente permette collegamenti diretti oltre confine senza cambiare veicolo.'] },
+      { titel: 'Dotazione e accessibilità', liste: ['Accesso a pianale ribassato', 'Posti per sedie a rotelle e WC accessibile', 'Posti prioritari', 'Prese in 1a classe', 'Posti per biciclette, passeggini e bagagli'],
+        p: ['Queste indicazioni valgono per la famiglia FLIRT delle FFS; i dettagli variano secondo la versione.'] },
+      { titel: 'Varianti', tabelle: { kopf: ['Variante', 'Numero', 'Lunghezza', 'Peso a vuoto'], zeilen: [
       ['RABe 524, quattro casse', '23', '74,1 m', '133 t'],
       ['RABe 524, sei casse', '17', '106,3 m', '174 t'],
-      ['RABe 524.3, FLIRT TSI', '13', '104,9 m', '179 t']] } },
-    { titel: 'Acquisto e impiego', p: ['I veicoli oggi in servizio sono stati costruiti tra il 2006 e il 2021; i primi treni sono entrati in servizio nel 2007. La tecnica multisistema permette collegamenti diretti oltre confine senza cambio di locomotiva o di veicolo.', 'La serie caratterizza la rete TILO in Ticino e in Lombardia. A seconda della linea vengono impiegati treni a quattro o sei casse; i più recenti FLIRT TSI sono stati acquistati soprattutto per ampliare l’offerta transfrontaliera.'] }
-  ],
+      ['RABe 524.3, FLIRT TSI', '13', '104,9 m', '179 t']] } }
+    ],
   bilder: ['RABe 524 008 a Milano Centrale', 'RABe 524 303 nella nuova livrea TILO a Milano Centrale', 'RABe 524 a Capolago-Riva San Vitale', 'RABe 524 a Milano Cadorna', 'RABe 524 012 come S20 a Locarno', 'RABe 524 014 con pubblicità di «Rete Tre» a Maccagno']
 });
 
@@ -1171,9 +1198,11 @@ uebZug('ic2000', {
   kennzahlen: [['341', 'carrozze'], ['200 km/h', 'velocità massima'], ['1997', 'primo impiego'], ['26,8 m', 'lunghezza per carrozza']],
   daten: { 'Fahrzeugart': 'carrozza viaggiatori a due piani', 'Hersteller': 'consorzio Schindler (Schindler Waggon, FIAT-SIG, ABB/Adtranz)', 'Länge': '26,8 m per carrozza', 'Gewicht': '47 t a vuoto (tipo FOS), 60 t a pieno carico', 'Sitzplätze': 'fino a 86 per carrozza (1a classe), fino a 126 per carrozza (2a classe)', 'Wagenübergang': 'al piano superiore', 'Antrieb': 'nessuna, con Re 460', 'Anzahl': '341 carrozze' },
   abschnitte: [
-    { titel: 'Acquisto e costruzione', p: ['Le 341 carrozze sono state consegnate dal 1997 in più serie. Le casse sono state costruite da Schindler Waggon, i carrelli da FIAT-SIG e l’equipaggiamento elettrico da ABB/Adtranz.', 'La famiglia comprende carrozze di 1a e 2a classe, carrozze servizio, carrozze ristorante e carrozze pilota.'] },
-    { titel: 'Ammodernamento e impiego', p: ['Le FFS hanno ammodernato l’intera flotta con il programma IC2020. Sono stati rinnovati tra l’altro interni, illuminazione, informazione alla clientela, prese elettriche e permeabilità al segnale mobile.', 'Le composizioni circolano su importanti assi est-ovest e nord-sud e possono essere formate in lunghezze diverse secondo la domanda.'] }
-  ],
+      { titel: 'Costruttore e composizione della flotta', p: ['Le 341 carrozze a due piani sono state consegnate dal 1997 in più serie. Le casse sono state costruite da Schindler Waggon, i carrelli da FIAT-SIG e l’equipaggiamento elettrico da ABB/Adtranz.', 'La famiglia comprende carrozze di 1a e 2a classe nonché carrozze di servizio, ristorante e pilota. Da fine 2019 all’estate 2025 le FFS hanno modernizzato tutte le carrozze.'] },
+      { titel: 'Impiego e tecnica', p: ['Le composizioni circolano come InterCity e InterRegio su importanti assi est-ovest e nord-sud, per lo più con una Re 460. Un treno offre oltre 900 posti a sedere e viaggia fino a 200 km/h.', 'Una carrozza è lunga 26,8 m e offre fino a 86 posti in 1a o 126 in 2a classe.'] },
+      { titel: 'Dotazione e accessibilità', liste: ['Climatizzazione completa', 'Prese in 1a e 2a classe', 'Sedili 2+1 in 1a classe', 'Finestrini con migliore ricezione mobile', 'Compartimenti famiglia, zona silenzio e zona business (solo InterCity)', 'Ristorante o bistrò (InterCity)', 'Posti per biciclette, passeggini e bagagli', 'Accesso a pianale ribassato', 'Posti per sedie a rotelle e WC accessibile', 'Posti prioritari'],
+        p: ['Grazie agli accessi a pianale ribassato, le persone in sedia a rotelle salgono senza gradini ai marciapiedi adatti.'] }
+    ],
   bilder: ['Treno navetta IC2000 nel paesaggio', 'Re 460 con carrozze a due piani IC2000', 'Re 460 in testa a carrozze a due piani IC2000', 'Passaggio tra una carrozza a un piano e una carrozza IC2000', 'Carrozza pilota IC2000 a Romanshorn']
 });
 
@@ -1185,9 +1214,11 @@ uebZug('ew-iv', {
   daten: { 'Fahrzeugart': 'carrozza viaggiatori', 'Betreiber': 'FFS Viaggiatori', 'Länge': '26,4 m per carrozza', 'Gewicht': '45 t a vuoto (tipo FOS), 50 t a pieno carico', 'Steuerwagen': 'IC Bt EW IV, 48 t a vuoto', 'Antrieb': 'nessuna, con locomotiva separata', 'Anzahl': '540 costruite, di cui 496 per le FFS' },
   specNote: 'Il numero 496 è un valore storico e non l’effettivo attuale: vendite, trasformazioni e demolizioni hanno ridotto la flotta.',
   abschnitte: [
-    { titel: 'Acquisto e ammodernamento', p: ['Nel 1981 furono consegnate dapprima 40 carrozze climatizzate di 1a classe; dal 1983 seguirono carrozze di 2a classe e carrozze ristorante. In totale furono costruite 540 EW IV, di cui 496 per le FFS.', 'Tra il 2019 e il 2025 le FFS hanno rimesso in efficienza oltre 250 carrozze EW IV ed EuroCity; secondo le FFS l’ammodernamento delle carrozze pilota prosegue fino alla fine del 2027.'] },
-    { titel: 'Impiego', p: ['Le carrozze circolano in composizioni EC, IC e IR, per lo più con una Re 460. Assi tipici vanno tra l’altro da Ginevra a Briga, da Basilea a Lugano e da Zurigo a Berna via Olten.'] }
-  ],
+      { titel: 'Costruttore e composizione della flotta', p: ['Le carrozze unificate IV sono state costruite da SIG, SWS, SWP e SWA. Le prime 40 carrozze climatizzate di 1a classe sono arrivate nel 1981; in tutto ne sono state costruite 540, di cui 496 per le FFS. Le carrozze EuroCity sono seguite nel 1989, le carrozze pilota nel 1997.', 'Tra il 2019 e il 2025 le FFS hanno ripristinato oltre 250 carrozze EW IV ed EuroCity, con protezione anticorrosione, nuova verniciatura e finestrini permeabili al segnale mobile. Le carrozze pilota vengono modernizzate fino a fine 2027.'] },
+      { titel: 'Impiego e tecnica', p: ['Le carrozze circolano in composizioni EC, IC e IR, per lo più con una Re 460 e una carrozza pilota. Assi tipici vanno da Ginevra a Briga, da Basilea a Lugano e da Zurigo via Olten a Berna. Alcune carrozze EC circolano anche in treni internazionali diurni e notturni.', 'Una carrozza è lunga 26,4 m ed è omologata per 200 km/h; offre 60 posti in 1a o fino a 86 in 2a classe.'] },
+      { titel: 'Dotazione e accessibilità', liste: ['Prese elettriche', 'Zona famiglia', 'Zona silenzio in 1a classe (InterCity)', 'Carrozza ristorante (EuroCity)', 'Posti per biciclette e carrozze dedicate alle biciclette', 'Posti per sedie a rotelle e WC accessibile', 'Posti prioritari'],
+        p: ['Le carrozze non sono a pianale ribassato. Sono disponibili posti per sedie a rotelle e un WC accessibile.'] }
+    ],
   bilder: ['Carrozza pilota EW IV a Bellinzona', 'InterRegio con EW IV a Zurigo HB', 'Gotthard-Weekender con EW IV a Brugg', 'Interno di 1a classe di una EW IV', 'Carrozza EW IV di 2a classe a Montreux']
 });
 
@@ -1200,9 +1231,9 @@ uebZug('re-482', {
   daten: { 'Stromsystem': '15 kV 16,7 Hz e 25 kV 50 Hz', 'Gewicht': '84 t a vuoto', 'Baureihen': 'Re 482.1 e Re 482.2', 'Einsatz': 'traffico merci Svizzera, Germania, in parte Austria' },
   specNote: 'I 50 veicoli provengono dalla panoramica storica della flotta di FFS Cargo; non ne deriva un effettivo attuale per il 2026.',
   abschnitte: [
-    { titel: 'Acquisto e impiego', p: ['FFS Cargo ha introdotto la Re 482 dal 2002. Le locomotive hanno assunto treni merci internazionali verso la Germania e in parte l’Austria, oltre a servizi nel traffico merci svizzero.'] },
-    { titel: 'Due serie', p: ['La panoramica della flotta distingue 35 Re 482.1 e 15 Re 482.2. Tecnicamente entrambe appartengono alla famiglia TRAXX; equipaggiamento e pacchetti nazionali variano secondo la serie.'] }
-  ],
+      { titel: 'Costruttore e composizione della flotta', p: ['Bombardier Transportation ha fornito le Re 482 a FFS Cargo dal 2002. Fanno parte della famiglia TRAXX.', 'La panoramica della flotta distingue 35 Re 482.1 e 15 Re 482.2, in tutto 50 locomotive. Equipaggiamento e pacchetti nazionali variano secondo la serie.'] },
+      { titel: 'Impiego e tecnica', p: ['Le locomotive hanno assunto treni merci internazionali verso la Germania e in parte l’Austria, oltre a servizi nel traffico merci svizzero.', 'I sistemi di sicurezza per la Svizzera e la Germania permettono di attraversare il confine senza cambiare locomotiva.'] }
+    ],
   bilder: ['Re 482 007 a Köln-Kalk Nord', 'Re 482 023 di FFS Cargo con treno merci presso Erbach (Rheingau)', 'Re 482 con treno merci davanti a un ponte ferroviario', 'Re 482 005 di FFS Cargo a Eschweiler', 'Re 482 005']
 });
 
@@ -1213,9 +1244,9 @@ uebZug('re-484', {
   daten: { 'Stromsystem': '15 kV CA e 3 kV CC', 'Gewicht': '86 t a vuoto', 'In Betrieb seit': '2004–2006 (consegna)', 'Einsatz': 'Svizzera e Italia' },
   specNote: 'Il catalogo dei tipi di marcia delle FFS usa 86 t; la letteratura più vecchia indica talvolta 85,4 t. Vale qui il valore ufficiale del 2026.',
   abschnitte: [
-    { titel: 'Acquisto e impiego', p: ['FFS Cargo ha acquistato 21 Re 484 per il traffico merci internazionale Svizzera–Italia. Più tardi alcuni veicoli sono stati impiegati anche nel traffico interno svizzero.'] },
-    { titel: 'Tecnica multisistema', p: ['La locomotiva circola con la corrente alternata svizzera e con la corrente continua italiana. I sistemi nazionali di controllo della marcia permettono di attraversare il confine senza cambio di locomotiva.'] }
-  ],
+      { titel: 'Costruttore e composizione della flotta', p: ['FFS Cargo ha acquistato da Bombardier Transportation 21 Re 484 della famiglia TRAXX. Sono state consegnate dal 2004 al 2006.'] },
+      { titel: 'Impiego e tecnica', p: ['La Re 484 era destinata al traffico merci internazionale Svizzera–Italia; più tardi ha circolato anche nel traffico interno svizzero.', 'La locomotiva circola con la corrente alternata svizzera e la corrente continua italiana. Il controllo della marcia dei treni specifico per ogni paese permette di attraversare il confine senza cambiare locomotiva.'] }
+    ],
   bilder: ['Re 484 006 di FFS Cargo a Steinen', 'Re 484 018 di FFS Cargo', 'Re 484 012 con pubblicità a Singen (Hohentwiel)', 'Re 484 003', 'Re 484 020 con EuroCity a Zurigo HB']
 });
 
@@ -1226,10 +1257,10 @@ uebZug('re-420', {
   daten: { 'Achsfolge': 'Bo′Bo′, 4 assi motori', 'Länge': 'circa 14,8–15,5 m fuori respingenti *', 'Gewicht': 'circa 80–85 t in servizio *', 'Leistung': '4650 kW, potenza oraria alla ruota **', 'Elektrische Bremse': 'a recupero', 'In Betrieb seit': '1964 (ultima serie 1985)', 'Anzahl': '276 Re 4/4 II (numero costruito per le FFS)', 'Hersteller': 'parte meccanica SLM Winterthur; parte elettrica BBC, MFO e SAAS' },
   specNote: '* A seconda del lotto e delle trasformazioni. ** Valore per la loc 11108 descritta da SBB Historic; FFS Infrastruttura indica 4700 kW come potenza massima per il tipo di marcia Re 420.',
   abschnitte: [
-    { titel: 'Origine e tecnica', p: ['Nel 1964 le FFS ricevettero sei prototipi. Seguirono diverse serie con adattamenti a cabina, pantografi e cassa. SLM era responsabile della parte meccanica; la parte elettrica proveniva da BBC, MFO e SAAS.', 'I quattro motori di trazione sono comandati da un graduatore. Il comando multiplo permette anche la marcia con una Re 6/6, detta «Re 10/10».'] },
-    { titel: 'Impiego e varianti', p: ['La Re 4/4 II è stata impiegata nel traffico viaggiatori e merci, tra l’altro in testa ai treni veloci in pianura e sulle rampe d’accesso al San Gottardo e al Sempione. Una parte è passata a FFS Cargo.', 'La variante Re 421 è nata da trasformazioni per la Germania; 30 locomotive sono state ammodernate nel 2011–2016 come «LION» per i treni di rinforzo della S-Bahn di Zurigo. FFS Cargo offre ancora la Re 420 a noleggio in Svizzera.'],
-      hinweis: 'Numero: SBB Historic indica 276 Re 4/4 II acquistate per le FFS, una vecchia rivista Cargo 277 locomotive consegnate. Questa pagina segue SBB Historic; nessuno dei due numeri è l’effettivo attuale.' }
-  ],
+      { titel: 'Costruttore e composizione della flotta', p: ['Nel 1964 le FFS hanno ricevuto sei prototipi, seguiti da diverse serie fino al 1985. La SLM di Winterthur ha costruito la parte meccanica, l’elettrica era di BBC, MFO e SAAS.', 'La variante Re 421 è nata da trasformazioni per la Germania; 30 locomotive sono state modernizzate nel 2011–2016 come «LION» per i treni di rinforzo della S-Bahn di Zurigo.'],
+        hinweis: 'Effettivo: FFS Historic indica 276 Re 4/4 II acquistate per le FFS, una vecchia rivista Cargo 277 locomotive consegnate. Questa pagina segue FFS Historic; nessuna delle due cifre è un effettivo attuale.' },
+      { titel: 'Impiego e tecnica', p: ['La Re 4/4 II ha circolato nel traffico viaggiatori e merci, tra l’altro davanti a treni diretti in pianura e sulle rampe d’accesso al Gottardo e al Sempione. Una parte è passata a FFS Cargo, che cita ancora la Re 420 nella sua offerta di noleggio in Svizzera.', 'I quattro motori di trazione sono comandati da un graduatore. Il comando multiplo permette anche la marcia con una Re 6/6 come «Re 10/10».'] }
+    ],
   bilder: ['«Re 10/10»: Re 620 e Re 420 in testa a un treno merci', 'Re 420 331-1 in autunno', 'Re 420 di WRS con treno di legname', 'Re 420 di FFS Cargo con treno merci', 'Re 420 con carri gialli tra i vigneti sul lago', 'Re 420 con treno merci tra vigneti e campi', 'Re 420 in livrea blu con carri cisterna nello scalo di smistamento']
 });
 
@@ -1239,10 +1270,10 @@ uebZug('re-620', {
   kennzahlen: [['89', 'locomotive costruite'], ['7832 kW', 'potenza oraria alla ruota'], ['140 km/h', 'velocità massima'], ['1972–1980', 'periodo di costruzione']],
   daten: { 'Achsfolge': 'Bo′Bo′Bo′, 6 assi motori', 'Länge': '19,31 m fuori respingenti', 'Gewicht': '120 t in servizio', 'Leistung': '7244 kW continuativi alla ruota (7832 kW orari)', 'Elektrische Bremse': 'a recupero', 'In Betrieb seit': '1972; serie 1975–1980', 'Hersteller': 'parte meccanica SLM Winterthur; parte elettrica e montaggio BBC, in parte SAAS' },
   abschnitte: [
-    { titel: 'Origine e tecnica', p: ['Quattro prototipi apparvero nel 1972, seguiti da 85 locomotive di serie. SLM costruì cassa e telaio, BBC fornì l’equipaggiamento elettrico.', 'Il montaggio finale avvenne soprattutto presso BBC a Oerlikon e, per i numeri 11635–11654, presso SAAS a Ginevra. I primi due prototipi avevano una cassa in due parti, gli altri una cassa in un pezzo unico.'] },
-    { titel: 'Impiego e sviluppo', p: ['Le locomotive trainarono dapprima treni viaggiatori e merci pesanti. In comando multiplo con una Re 4/4 II o III formavano per i treni merci pesanti la combinazione nota come «Re 10/10». Dopo la divisionalizzazione delle FFS le Re 6/6 furono assegnate a FFS Cargo.', 'FFS Cargo offre ancora la Re 620 a noleggio per la Svizzera; l’effettivo reale cambia con i ritiri dal servizio.', 'Dal 2007, 63 locomotive hanno ricevuto l’ETCS livello 2. SBB Historic indica l’inizio dei ritiri dal servizio per anzianità nel febbraio 2021.'],
-      hinweis: 'Il numero 89 indica la serie costruita storicamente e non l’effettivo oggi in esercizio.' }
-  ],
+      { titel: 'Costruttore e composizione della flotta', p: ['Quattro prototipi sono apparsi nel 1972; dal 1975 al 1980 sono seguite 85 locomotive di serie, in tutto 89 (11601–11689). La SLM ha costruito cassa e telaio, la BBC ha fornito l’equipaggiamento elettrico.', 'Il montaggio finale è avvenuto per lo più alla BBC di Oerlikon, per i numeri 11635–11654 alla SAAS di Ginevra. I primi due prototipi avevano una cassa in due parti.'],
+        hinweis: 'Il numero 89 indica la serie costruita storicamente, non l’effettivo oggi in servizio.' },
+      { titel: 'Impiego e tecnica', p: ['Le locomotive hanno dapprima trainato pesanti treni viaggiatori e merci. In comando multiplo con una Re 4/4 II o III formavano la «Re 10/10» per i treni merci pesanti. Dopo la divisione delle FFS sono passate a FFS Cargo, che offre ancora la Re 620 a noleggio.', 'Dal 2007, 63 locomotive hanno ricevuto l’ETCS livello 2. FFS Historic colloca l’inizio dei ritiri per età nel febbraio 2021.'] }
+    ],
   bilder: ['Re 620 nei colori Cargo con carri cisterna sul lago', '«Re 10/10»: Re 620 e Re 420 in testa a un treno merci', 'Re 620 nei colori Cargo con carri silo', 'Re 620 con treno di carri cisterna', 'Re 620 con treno cantiere, mucche in primo piano', 'Re 620 nei colori Cargo in stazione', 'Re 620 con treno di carri cisterna']
 });
 
@@ -1253,9 +1284,9 @@ uebZug('re-474', {
   daten: { 'Stromsystem': '15 kV CA e 3 kV CC', 'Gewicht': '87 t a vuoto', 'Fahrzeugnummern': 'Re 474 001–018, di cui 12 rilevate', 'Einsatz': 'traffico merci Svizzera–Italia' },
   specNote: 'La serie di numeri presenta lacune perché FFS Cargo ha rilevato solo dodici locomotive della serie inizialmente prevista.',
   abschnitte: [
-    { titel: 'Acquisto e impiego', p: ['Le locomotive hanno circolato dal 2005 nel traffico merci Svizzera–Italia. Il numero 12 indica la flotta FFS Cargo di allora e non è un effettivo garantito per ottobre 2026.'] },
-    { titel: 'Tecnica', p: ['La Re 474 collega la rete svizzera a corrente alternata con la rete italiana a corrente continua a 3 kV. L’equipaggiamento multisistema e i sistemi nazionali di sicurezza permettevano un servizio continuo oltre confine.'] }
-  ],
+      { titel: 'Costruttore e composizione della flotta', p: ['Siemens ha costruito la Re 474 come locomotiva bicorrente della famiglia ES 64 F4. FFS Cargo ha impiegato dal 2005 dodici locomotive; questo numero non è un effettivo confermato per ottobre 2026.'] },
+      { titel: 'Impiego e tecnica', p: ['Le locomotive hanno circolato nel traffico merci Svizzera–Italia, tra l’altro sul Sempione fino a Domodossola.', 'La Re 474 collega la rete svizzera a corrente alternata con la rete italiana a corrente continua a 3 kV. L’equipaggiamento policorrente e i sistemi nazionali di sicurezza permettevano l’impiego continuo oltre confine.'] }
+    ],
   bilder: ['Re 474 013', 'Re 474 presso Jestetten sulla linea per Neuhausen', 'Re 474 014 a Domodossola', 'Re 474 con treno merci a Gravellona Toce']
 });
 
@@ -1266,9 +1297,9 @@ uebZug('re-193', {
   daten: { 'Leistung': 'fino a 6400 kW', 'Länge': 'circa 19,0 m', 'Gewicht': 'circa 90 t, secondo l’equipaggiamento', 'Höchstgeschwindigkeit': '120 km/h in Svizzera', 'Zugsicherung': 'ETCS BL3 e sistemi nazionali', 'Betreiber': 'FFS Cargo SA', 'Anzahl': '35 a noleggio' },
   specNote: 'Le locomotive non appartengono alle FFS. Numero e durata del noleggio si riferiscono al contratto di FFS Cargo Svizzera.',
   abschnitte: [
-    { titel: 'Acquisto e impiego', p: ['I primi cinque veicoli sono arrivati a Muttenz nel 2024. Il compito principale è il traffico merci interno svizzero; esistono omologazioni anche per servizi transfrontalieri.', 'Sono stati formati circa 550 macchiniste e macchinisti.'] },
-    { titel: 'Delimitazione', p: ['Questa pagina tratta i 35 Vectron AC di FFS Cargo Svizzera. I Vectron multisistema di SBB Cargo International rientrano in altri contratti d’acquisto e di leasing.'] }
-  ]
+      { titel: 'Costruttore e composizione della flotta', p: ['FFS Cargo noleggia per otto anni 35 Vectron AC di Siemens Mobility; le locomotive appartengono a LokRoll 3 AG. Le prime cinque sono arrivate a Muttenz nel 2024.', 'Questa pagina tratta le 35 Vectron AC di FFS Cargo Svizzera. Le Vectron policorrente di FFS Cargo International rientrano in altri contratti di acquisto e leasing.'] },
+      { titel: 'Impiego e tecnica', p: ['Il compito principale è il traffico merci interno svizzero, fino alla consegna delle nuove locomotive di linea proprie. Esistono omologazioni anche per servizi transfrontalieri.', 'Le locomotive sviluppano fino a 6400 kW e in Svizzera viaggiano fino a 120 km/h. Circa 550 macchiniste e macchinisti sono stati formati.'] }
+    ]
 });
 
 uebZug('re-421', {
@@ -1279,9 +1310,9 @@ uebZug('re-421', {
   daten: { 'Bauart': 'locomotiva elettrica universale', 'Gewicht': '84 t (valore del catalogo dei tipi di marcia)', 'Nummern': '421 371–397 (senza 382)', 'In Betrieb seit': '2002 (trasformazione 2002–2004)', 'Einsatz': 'traffico merci Svizzera–Germania' },
   specNote: 'Il catalogo dei tipi di marcia 2026 delle FFS indica la Re 421 come alias del tipo di marcia attivo 1051 Re 420. Le 84 t sono un valore di dinamica di marcia per questo tipo raggruppato.',
   abschnitte: [
-    { titel: 'Trasformazione per la Germania', p: ['La base furono le Re 4/4 II 11371–11397; la 11382, ritirata dopo un incendio, non faceva parte del programma.', 'Per l’omologazione tedesca le locomotive ricevettero gli adattamenti e gli equipaggiamenti necessari e la nuova serie di numeri 421 371–421 397.'] },
-    { titel: 'Impiego e stato nel catalogo', p: ['La Re 421 unisce la robusta tecnica della Re 4/4 II all’idoneità al traffico transfrontaliero ed era prevista soprattutto per treni merci verso la Germania.', 'Nel catalogo dei tipi di marcia 2026 delle FFS resta registrata come alias del tipo di marcia Re 420 attivo.'] }
-  ],
+      { titel: 'Costruttore e composizione della flotta', p: ['Le Re 421 sono Re 4/4 II trasformate, costruite da SLM, BBC, MFO e SAAS. Derivano dai numeri 11371–11397; la 11382, ritirata dopo un incendio, non faceva parte del programma, quindi sono 26 locomotive.', 'La trasformazione è avvenuta dal 2002 al 2004. Le locomotive hanno ricevuto i numeri 421 371–421 397.'] },
+      { titel: 'Impiego e tecnica', p: ['Per l’omologazione tedesca le locomotive hanno ricevuto gli adattamenti e gli equipaggiamenti necessari. Uniscono la tecnica robusta della Re 4/4 II all’idoneità transfrontaliera ed erano previste soprattutto per treni merci verso la Germania.', 'Nel catalogo dei tipi di marcia FFS 2026, la Re 421 resta registrata come alias del tipo attivo Re 420.'] }
+    ],
   bilder: ['Re 421 374 a Thun', 'Re 421 395 a Pirna', 'Re 421 377 con treno di auto a Donauwörth', 'Re 421 383 a Lindau Hbf', 'Re 421 a Dresda']
 });
 
@@ -2215,11 +2246,14 @@ uebZug('bls-rabe-528', {
   daten: { 'Bauart': 'elettrotreno, 6 casse', 'Fahrzeugnummern': 'RE 101–139, S-Bahn 201–228', 'Gewicht': '182 t (RE), 183 t (S-Bahn)', 'Sitzplätze': '244 (RE), 223 (S-Bahn)', 'Anzahl': '67 treni' },
   specNote: 'Posti a sedere senza strapontini: RE 46 in 1a e 198 in 2a classe, S-Bahn 35 e 188. I treni 125–137 appartengono a BLS Fernverkehr SA.',
   abschnitte: [
-    { titel: 'Due versioni', tabelle: { kopf: ['Caratteristica', 'RegioExpress', 'S-Bahn'], zeilen: [
+      { titel: 'Costruttore e composizione della flotta', p: ['Stadler ha fornito alla BLS 67 MIKA: 39 treni RegioExpress (101–139, in servizio 2021–2026) e 28 treni S-Bahn (201–228, 2022–2025). I treni 125–137 appartengono a BLS Fernverkehr SA, tutti gli altri a BLS SA.', 'I MIKA hanno sostituito treni più vecchi come le composizioni navetta EW III e gli NPZ.'] },
+      { titel: 'Impiego e tecnica', p: ['I MIKA circolano sulle S-Bahn di Berna e Lucerna (tra l’altro S2, S4, S6 e S7), come RegioExpress Berna–Spiez–Zweisimmen e sulla linea di valico del Lötschberg fino a Briga e Domodossola, nonché come InterRegio 66 Berna–Neuchâtel–La Chaux-de-Fonds.', 'Il treno a sei casse è lungo 104,9 m, eroga 3500 kW e viaggia fino a 160 km/h.'] },
+      { titel: 'Dotazione e accessibilità', liste: ['Climatizzazione', 'Prese a ogni posto e nel compartimento multifunzionale', 'Finestrini con migliore ricezione mobile', 'Zona bistrò self-service con distributori di snack e caffè (RE)', '12 posti per biciclette (RE) o 6 (S-Bahn), con prese per e-bike', 'Accesso a pianale ribassato con colmatore di gap a tutte le porte', '3 posti per sedie a rotelle: 1 in 1a classe, 2 in 2a classe con accesso al WC', '2 WC, di cui 1 accessibile, con fasciatoio', 'Videosorveglianza e pulsanti SOS'],
+        p: ['Grazie agli accessi ribassati con colmatore di gap, si sale senza gradini a tutte le porte.'] },
+      { titel: 'Due versioni', tabelle: { kopf: ['Caratteristica', 'RegioExpress', 'S-Bahn'], zeilen: [
       ['Numeri', '101–139', '201–228'], ['Quantità', '39', '28'], ['Messa in servizio', '2021–2026', '2022–2025'],
-      ['Posti 1a / 2a classe', '46 / 198', '35 / 188'], ['Posti in piedi', '149', '241'], ['Posti bici', '12', '6']] } },
-    { titel: 'Impiego', p: ['Secondo la BLS, i MIKA circolano sulle linee S-Bahn attorno a Berna e Lucerna, sul RegioExpress Berna–Spiez–Zweisimmen e fino a Briga e Domodossola, e sull’InterRegio Berna–Neuchâtel–La Chaux-de-Fonds.'] }
-  ],
+      ['Posti 1a / 2a classe', '46 / 198', '35 / 188'], ['Posti in piedi', '149', '241'], ['Posti bici', '12', '6']] } }
+    ],
   bilder: ['RABe 528 102 come RegioExpress a Berna', 'RABe 528 201 in versione S-Bahn', 'RABe 528 119 a Domodossola', 'RABe 528 104 nell’Entlebuch']
 });
 uebZug('bls-rabe-515', {
@@ -2228,11 +2262,14 @@ uebZug('bls-rabe-515', {
   kennzahlen: [['39', 'treni (34 a quattro casse, 5 a sei casse)'], ['160 km/h', 'velocità massima'], ['335 / 546', 'posti a sedere 4 / 6 casse'], ['2012', 'prima messa in servizio']],
   daten: { 'Bauart': 'elettrotreno a due piani', 'Fahrzeugnummern': '001–034 (4 casse), 035–039 (6 casse)', 'Länge': '102,6 m (4 casse), 151,88 m (6 casse)', 'Gewicht': '216 t (4 casse), 301 t (6 casse)', 'Leistung': '4000 kW (6 casse: 6000 kW di punta)', 'Sitzplätze': '335 (4 casse), 546 (6 casse)', 'Anzahl': '39 treni' },
   abschnitte: [
-    { titel: 'Quattro e sei casse', tabelle: { kopf: ['Caratteristica', 'quattro casse', 'sei casse'], zeilen: [
+      { titel: 'Costruttore e composizione della flotta', p: ['Il MUTZ fa parte della famiglia KISS di Stadler. La BLS possiede 34 treni a quattro casse (001–034, in servizio 2012–2017, 032 e 033 nel 2019/2020) e 5 a sei casse (035–039, 2020).', 'I treni a sei casse e i 032–034 appartengono a BLS Fernverkehr SA, gli altri a BLS SA.'] },
+      { titel: 'Impiego e tecnica', p: ['I MUTZ circolano sulla S-Bahn di Berna (S1 Friburgo–Berna–Thun, S11 Thun–Berna, S3/S31 Bienne–Münchenbuchsee–Berna–Belp) e come InterRegio 17 Berna–Burgdorf–Olten e InterRegio 65 Berna–Bienne.', 'Entrambe le versioni erogano 4000 kW e viaggiano fino a 160 km/h. Le porte larghe accelerano la salita e la discesa.'] },
+      { titel: 'Dotazione e accessibilità', liste: ['Climatizzazione, riscaldamento a pavimento e a parete', 'Informazione ai viaggiatori ottica e acustica', 'Prese in 1a classe (sei casse: anche in 2a classe)', '6 posti per biciclette (quattro casse) o 16 (sei casse)', 'Accessi a pianale ribassato con pedane scorrevoli a tutte le porte', '3 posti per sedie a rotelle (quattro casse) o 4 (sei casse), in entrambe le classi', '2 WC, di cui 1 accessibile e 1 con fasciatoio', 'Videosorveglianza'],
+        p: ['Tutte le porte hanno accessi ribassati con pedane scorrevoli; posti per sedie a rotelle ci sono in entrambe le classi.'] },
+      { titel: 'Quattro e sei casse', tabelle: { kopf: ['Caratteristica', 'quattro casse', 'sei casse'], zeilen: [
       ['Numeri', '001–034', '035–039'], ['Messa in servizio', '2012–2017, 032–033 nel 2019/2020', '2020'], ['Lunghezza', '102,6 m', '151,88 m'],
-      ['Posti 1a / 2a classe', '61 / 274', '122 / 424'], ['Potenza', '4000 kW', '6000 kW di punta, 4000 kW continua']] } },
-    { titel: 'Impiego', p: ['Secondo la BLS, i MUTZ circolano sulle linee S-Bahn Friburgo–Berna–Thun e Bienne–Berna–Belp, e come InterRegio Berna–Burgdorf–Olten e Berna–Bienne.'] }
-  ],
+      ['Posti 1a / 2a classe', '61 / 274', '122 / 424'], ['Potenza', '4000 kW', '6000 kW di punta, 4000 kW continua']] } }
+    ],
   bilder: ['RABe 515 003 a quattro casse a Berna', 'RABe 515 039 a sei casse', 'RABe 515 027 presso Allmendingen']
 });
 uebZug('bls-rabe-535', {
@@ -2240,7 +2277,12 @@ uebZug('bls-rabe-535', {
   text: ['Il Lötschberger è un treno a pianale ribassato a quattro casse della BLS. Prende il nome dalla linea di valico del Lötschberg e dall’Oberland bernese, dove circola.', 'Fino a quattro treni possono viaggiare insieme.'],
   kennzahlen: [['25', 'treni'], ['160 km/h', 'velocità massima'], ['142', 'posti a sedere'], ['2008', 'prima messa in servizio']],
   daten: { 'Bauart': 'elettrotreno a pianale ribassato, 4 casse', 'Anzahl': '25 treni' },
-  abschnitte: [{ titel: 'Impiego', p: ['Secondo la BLS, il Lötschberger circola tra Zweisimmen e Spiez, Spiez e Interlaken Ost, Spiez e Frutigen, e sulle linee S-Bahn tra Thun, Berna, Burgdorf e Soletta.'] }],
+  abschnitte: [
+      { titel: 'Costruttore e composizione della flotta', p: ['Bombardier ha fornito alla BLS 25 Lötschberger a quattro casse: 101–113 nel 2008–2010 e 114–125 nel 2012.', 'Da gennaio 2024 la BLS modernizza la flotta nell’officina di Bönigen, fino a metà 2027. Tra l’altro prese doppie sostituiscono quelle singole, luci LED i tubi al neon e sensori di CO₂ regolano l’aria fresca secondo il bisogno.'] },
+      { titel: 'Impiego e tecnica', p: ['Il Lötschberger circola nell’Oberland bernese (RE Zweisimmen–Spiez, Spiez–Interlaken Ost e Spiez–Frutigen) e sulla S-Bahn di Berna tra Thun, Belp, Berna, Burgdorf, Konolfingen e Soletta.', 'Il treno è lungo 62,7 m, pesa 105 t e viaggia fino a 160 km/h. Fino a quattro treni possono essere accoppiati.'] },
+      { titel: 'Dotazione e accessibilità', liste: ['Climatizzazione e riscaldamento', 'Prese in 1a e 2a classe', 'Informazione ai viaggiatori ottica e acustica', '6 posti per biciclette (101–113) o 12 (114–125)', 'Accesso a pianale ribassato a tutte le porte, un accesso per lato con pedana scorrevole', '2 posti per sedie a rotelle in 2a classe', '1 WC accessibile', 'Videosorveglianza'],
+        p: ['Tutte le porte sono a pianale ribassato. Secondo la BLS non c’è un fasciatoio.'] }
+    ],
   bilder: ['RABe 535 112 «Lötschberger»', 'Lötschberger nella stazione di Kandersteg', 'RABe 535 122 a Iselle di Trasquera']
 });
 uebZug('bls-rabe-525', {
@@ -2249,7 +2291,12 @@ uebZug('bls-rabe-525', {
   kennzahlen: [['36', 'treni (23 a tre casse, 13 a quattro casse)'], ['140 km/h', 'velocità massima'], ['1000 kW', 'potenza'], ['1998', 'prima messa in servizio']],
   daten: { 'Bauart': 'elettrotreno a pianale ribassato, 3 o 4 casse', 'Länge': '47,7 m (3 casse), 61,9 m (4 casse)', 'Gewicht': '79 t (3 casse), 96 t (4 casse)', 'Sitzplätze': '134 (3 casse), 179 (4 casse)', 'Anzahl': '36 treni' },
   specNote: 'Messi in servizio dal 1998 al 2005. I numeri 015–027 hanno quattro casse, 001–014, 028–030 e 032–037 tre casse.',
-  abschnitte: [{ titel: 'Impiego', p: ['Secondo la BLS, i NINA a quattro casse circolano su Berna–Kerzers–Neuchâtel, Lyss–Büren an der Aare, Soletta–Burgdorf–Berna e Domodossola–Briga–Visp.'] }],
+  abschnitte: [
+      { titel: 'Costruttore e composizione della flotta', p: ['I NINA sono di Vevey Technologies e Bombardier e sono entrati in servizio dal 1998 al 2005. La BLS possiede 36 treni: 23 a tre casse (001–014, 028–030, 032–037) e 13 a quattro casse (015–027).', 'Da giugno 2015 tutti i 36 treni hanno ricevuto un refit nell’officina di Bönigen per circa 31 milioni di franchi; così dovrebbero circolare circa sei anni in più. Nel 2016 una parte ha ricevuto vetri permeabili al segnale mobile e una nuova informazione ai viaggiatori.'] },
+      { titel: 'Impiego e tecnica', p: ['I NINA circolano sulle S-Bahn di Berna e Lucerna, tra l’altro S5 Berna–Kerzers–Neuchâtel, S22 Berna–Konolfingen–Langnau, S35 Kerzers–Lyss, S36 Lyss–Büren an der Aare, S46 Soletta–Burgdorf–Ostermundigen e S77 Lucerna–Wolhusen–Willisau, oltre che come RE Domodossola–Briga–Visp.', 'Un treno eroga 1000 kW e viaggia fino a 140 km/h. Fino a quattro treni possono essere accoppiati.'] },
+      { titel: 'Dotazione e accessibilità', liste: ['Climatizzazione e riscaldamento', 'Prese in 1a classe', 'Informazione ai viaggiatori ottica e acustica', '3 posti per biciclette (tre casse) o 6 (quattro casse)', 'Accesso a pianale ribassato a tutte le porte, un accesso per lato con pedana scorrevole', '1 posto per sedia a rotelle in 2a classe', '1 WC accessibile', 'Videosorveglianza'],
+        p: ['Tutte le porte sono a pianale ribassato. Secondo la BLS non c’è un fasciatoio.'] }
+    ],
   bilder: ['NINA RABe 525 024 a Thun', 'RABe 525 015 a quattro casse a Berna']
 });
 uebZug('bls-re-465', {
@@ -2257,7 +2304,10 @@ uebZug('bls-re-465', {
   text: ['La Re 465 è la sorella BLS della Re 460 delle FFS. Traina treni viaggiatori, treni navetta per auto e treni merci.', 'Tra il 2019 e il 2022 tutte le 18 locomotive sono state ammodernate e verniciate di verde. Da fine 2023 sostituiscono le Re 425 marroni sui treni navetta per auto.'],
   kennzahlen: [['18', 'locomotive'], ['6400 kW', 'potenza'], ['160 km/h', 'velocità massima omologata'], ['1994', 'prima messa in servizio']],
   daten: { 'Bauart': 'locomotiva elettrica Bo’Bo’', 'Höchstgeschwindigkeit': '160 km/h (omologata)' },
-  abschnitte: [{ titel: 'Ammodernamento e impiego', p: ['La BLS ordinò prima otto locomotive (001–008), poi altre dieci (009–018) per il corridoio di trasporto combinato. Grazie al refit del 2019–2022, costato circa 20 milioni di franchi, possono circolare fino al 2040 circa.', 'Oggi trainano il GoldenPass Express tra Interlaken Ost e Zweisimmen, i treni navetta per auto del Lötschberg e del Sempione e, spesso insieme a TRAXX e Vectron, treni merci.'] }],
+  abschnitte: [
+      { titel: 'Costruttore e composizione della flotta', p: ['La Re 465 appartiene alla famiglia Lok 2000 di SLM e ABB. La BLS ordinò prima otto locomotive (001–008), poi altre dieci (009–018) per il corridoio di trasporto combinato; sono entrate in servizio dal 1994 al 1997.', 'Dal 2019 al 2022 tutte le 18 locomotive sono state modernizzate nell’officina di Bönigen per circa 20 milioni di franchi e verniciate di verde. Così possono circolare fino al 2040 circa.'] },
+      { titel: 'Impiego e tecnica', p: ['Le Re 465 trainano o spingono il GoldenPass Express tra Interlaken Ost e Zweisimmen. Dal 19 dicembre 2023 svolgono il trasporto auto al Lötschberg, dal 2026 anche al Sempione, dove sostituiscono le Re 425 marroni.', 'Nel traffico merci circolano spesso in comando multiplo con TRAXX e Vectron. La locomotiva eroga 6400 kW ed è omologata per 160 km/h.'] }
+    ],
   bilder: ['Re 465 014 a Zweisimmen', 'Re 465 001 e 007 in doppia trazione']
 });
 uebZug('bls-re-475', {
@@ -2265,11 +2315,19 @@ uebZug('bls-re-475', {
   text: ['La Re 475 è la locomotiva Vectron di BLS Cargo. È omologata in diversi paesi e traina treni merci attraverso le Alpi fino in Germania, Italia e Paesi Bassi.', 'BLS Cargo ha ampliato la flotta in più serie.'],
   kennzahlen: [['50', 'locomotive in tre serie'], ['2016', 'prima messa in servizio'], ['6', 'paesi (serie recenti)'], ['Siemens', 'costruttore']],
   daten: { 'Bauart': 'locomotiva elettrica policorrente Bo’Bo’', 'Zulassung': 'CH, D, A, I, NL; dal n. 416 anche B', 'Anzahl': '50 (in tre serie)' },
-  abschnitte: [{ titel: 'Tre serie', tabelle: { kopf: ['Numeri', 'Quantità', 'Consegna', 'Omologazione'], zeilen: [
-    ['401–415', '15', '2016–2018', 'CH, D, A, I, NL'], ['416–440', '25', '2020, 2024–2025', 'CH, D, A, I, NL, B'], ['441–450', '10', 'dal 2026', 'CH, D, A, I, NL, B']] } }],
+  abschnitte: [
+      { titel: 'Costruttore e composizione della flotta', p: ['La Re 475 è la locomotiva Vectron di Siemens Mobility per BLS Cargo. La flotta cresce in tre serie fino a 50 locomotive: 401–415 (2016–2018), 416–440 (2020 e 2024–2025) e 441–450 (dal 2026).'] },
+      { titel: 'Impiego e tecnica', p: ['BLS Cargo impiega la Re 475 soprattutto sugli assi Lötschberg-Sempione e Gottardo e circola così fino ai Paesi Bassi, in Belgio, Germania, Austria e Italia.', 'La locomotiva policorrente è omologata in fino a sei paesi; dal n. 416 anche in Belgio.'] },
+      { titel: 'Tre serie', tabelle: { kopf: ['Numeri', 'Quantità', 'Consegna', 'Omologazione'], zeilen: [
+    ['401–415', '15', '2016–2018', 'CH, D, A, I, NL'], ['416–440', '25', '2020, 2024–2025', 'CH, D, A, I, NL, B'], ['441–450', '10', 'dal 2026', 'CH, D, A, I, NL, B']] } }
+    ],
   bilder: ['Re 475 401 di BLS Cargo']
 });
 uebZug('bls-re-485', {
+  abschnitte: [
+      { titel: 'Costruttore e composizione della flotta', p: ['Nel 2002 BLS Cargo ha ordinato a Bombardier 20 TRAXX del tipo F140 AC; sono state consegnate entro metà 2003 e portano i numeri 485 001–020.', 'La 485 004 è stata distrutta nel 2020 in un incidente ad Auggen (Germania), perciò gli elenchi della flotta indicano oggi 19 locomotive.'] },
+      { titel: 'Impiego e tecnica', p: ['Le Re 485 trainano treni merci in Svizzera e verso la Germania, sugli assi Lötschberg-Sempione e Gottardo.', 'Tecnicamente corrispondono alla serie tedesca 185 e alle Re 482 di FFS Cargo, con un pacchetto di equipaggiamento svizzero. Viaggiano fino a 140 km/h.'] }
+    ],
   typ: 'Locomotiva elettrica per treni merci Bombardier',
   text: ['Le Re 485 sono locomotive TRAXX di BLS Cargo per il traffico merci in Svizzera e verso la Germania.', 'Sono state ordinate nel 2002 e consegnate entro metà 2003.'],
   kennzahlen: [['20', 'locomotive'], ['140 km/h', 'velocità massima'], ['CH, D', 'omologazione'], ['2002', 'prima messa in servizio']],
@@ -2278,6 +2336,10 @@ uebZug('bls-re-485', {
   bilder: ['Re 485 005 di BLS Cargo', 'Re 485 016 con un treno merci', 'Re 485 008 presso Allmendingen']
 });
 uebZug('bls-re-486', {
+  abschnitte: [
+      { titel: 'Costruttore e composizione della flotta', p: ['Bombardier ha fornito a BLS Cargo dall’autunno 2008 dieci TRAXX policorrente del tipo F140 MS con i numeri 486 501–510; le ultime sono seguite nel 2009.'] },
+      { titel: 'Impiego e tecnica', p: ['Le Re 486 possono circolare in Svizzera, Germania, Italia e Austria. Sono quindi adatte al transito attraverso le Alpi, per esempio con l’autostrada viaggiante.', 'Come locomotiva policorrente circola con corrente alternata e continua; la velocità massima è di 140 km/h.'] }
+    ],
   typ: 'Locomotiva elettrica policorrente Bombardier',
   text: ['Le Re 486 sono TRAXX policorrente di BLS Cargo. Possono circolare in Svizzera, Germania, Italia e Austria.', 'Sono quindi adatte al transito attraverso le Alpi, per esempio con l’autostrada viaggiante.'],
   kennzahlen: [['10', 'locomotive'], ['140 km/h', 'velocità massima'], ['4', 'paesi'], ['2008', 'prima messa in servizio']],
@@ -2448,6 +2510,12 @@ uebZug('bls-re-420', {
 
 // ---------- TPF ----------
 uebZug('tpf-rabe-527', {
+  abschnitte: [
+      { titel: 'Costruttore e composizione della flotta', p: ['Stadler Bussnang ha fornito alle TPF otto FLIRT della serie 190 con i numeri 191–198. Sono entrati in servizio dal 2011 al 2014.'] },
+      { titel: 'Impiego e tecnica', p: ['I FLIRT circolano sul RER Fribourg: come RegioExpress RE2/RE3 Berna–Friburgo–Romont–Bulle–Broc e sulle S20/S21 Friburgo–Morat–Ins–Neuchâtel.', 'Il treno a quattro casse è lungo 74,08 m, eroga 2600 kW e viaggia fino a 160 km/h. Fino a quattro treni possono essere accoppiati.'] },
+      { titel: 'Dotazione e accessibilità', liste: ['Completamente climatizzato', 'Informazione ai viaggiatori acustica e ottica', 'Compartimento multifunzionale', 'Pianale ribassato per oltre il 90 %', 'WC a circuito chiuso, adatto alle persone a mobilità ridotta'],
+        p: ['Il treno è a pianale ribassato per oltre il 90 %. Le TPF non indicano il numero di posti per sedie a rotelle.'] }
+    ],
   typ: 'Elettrotreno regionale Stadler',
   text: ['Gli otto FLIRT della serie 190 sono i treni a scartamento normale più moderni delle TPF. Circolano come RegioExpress e S-Bahn nel cantone di Friburgo e oltre.', 'Tecnicamente fanno parte della grande famiglia FLIRT di Stadler.'],
   kennzahlen: [['8', 'treni (191–198)'], ['160 km/h', 'velocità massima'], ['418', 'posti in totale'], ['2011', 'prima messa in servizio']],
@@ -2462,12 +2530,21 @@ uebZug('tpf-rbde-560', {
   daten: { 'Bauart': 'treno navetta con automotrice, carrozza intermedia a pianale ribassato e carrozza pilota', 'Hersteller': 'SWG, SIG, ABB; carrozza intermedia Bombardier', 'Fahrzeugnummern': '235–247 e 269', 'Gewicht': '146 t a vuoto', 'Sitzplätze': '24 in 1a, 160 in 2a classe', 'Anzahl': '14 treni' },
   specNote: 'Automotrici costruite dal 1984 al 1996, ammodernate in Domino dal 2009 al 2011.',
   abschnitte: [
-    { titel: 'Dotazione', liste: ['Informazione ai viaggiatori acustica e visiva', 'Climatizzazione', 'WC accessibile in sedia a rotelle', 'Zona multifunzionale', 'Carrozza intermedia a pianale ribassato'] },
-    { titel: 'Chocolat Express', p: ['I treni 235 e 245 portano il design «Chocolat Express». Non si tratta di un tipo di veicolo a sé, ma di una livrea speciale su normali Domino.'] }
-  ],
+      { titel: 'Costruttore e composizione della flotta', p: ['I 14 Domino delle TPF (235–247 e 269) derivano da treni navetta NPZ costruiti da SWG, SIG e ABB tra il 1984 e il 1996. Dal 2009 al 2011 le TPF li hanno trasformati in Domino; ogni treno ha ricevuto una nuova carrozza intermedia a pianale ribassato di Bombardier.', 'Le TPF hanno ordinato a Stadler 13 FLIRT Evo a quattro casse. Il primo dovrebbe entrare in servizio nel dicembre 2028; negli anni seguenti sostituiranno gradualmente i Domino.'] },
+      { titel: 'Impiego e tecnica', p: ['Come i FLIRT, i Domino circolano sul RER Fribourg, come RegioExpress Berna–Friburgo–Bulle–Broc e sulle S20/S21 Friburgo–Morat–Ins–Neuchâtel.', 'Un treno è lungo 75 m, eroga 1650 kW e viaggia fino a 140 km/h.'] },
+      { titel: 'Dotazione e accessibilità', liste: ['Climatizzazione in tutto il treno', 'Informazione ai viaggiatori acustica e ottica', 'Compartimento multifunzionale', 'Carrozza intermedia a pianale ribassato', 'WC con bioreattore, adatto alle persone a mobilità ridotta'],
+        p: ['Si sale senza gradini nella carrozza intermedia a pianale ribassato; automotrice e carrozza pilota hanno gradini.'] },
+      { titel: 'Chocolat Express', p: ['I treni 235 e 245 portano il design «Chocolat Express». Non si tratta di un tipo di veicolo a sé, ma di una livrea speciale su normali Domino.'] }
+    ],
   bilder: ['Domino con design «Chocolat Express» sul viadotto di Grandfey']
 });
 uebZug('tpf-abe-4-12', {
+  abschnitte: [
+      { titel: 'Costruttore e composizione della flotta', p: ['Stadler Bussnang ha fornito alle TPF dieci elettrotreni a tre casse con i numeri 101–110. Sono entrati in servizio nel 2015 e nel 2016. Un treno è composto da ABe 2/4, carrozza intermedia B e Be 2/4.'] },
+      { titel: 'Impiego e tecnica', p: ['I treni circolano sulla rete a scartamento metrico delle TPF: S50 Palézieux–Châtel-St-Denis–Bulle–Montbovon e S51 fino a Gruyères.', 'Un treno è lungo 55,21 m, eroga 1400 kW e viaggia fino a 100 km/h. È modulabile da due a quattro elementi e fino a quattro treni possono circolare insieme.'] },
+      { titel: 'Dotazione e accessibilità', liste: ['Completamente climatizzato', 'Informazione ai viaggiatori acustica e ottica', 'WC a circuito chiuso, adatto alle persone a mobilità ridotta', '350 posti: 15 in 1a e 133 in 2a classe, 14 strapontini, 188 posti in piedi'],
+        p: ['Sulla pagina del veicolo le TPF non danno indicazioni su accessi a pianale ribassato e posti per sedie a rotelle.'] }
+    ],
   beiname: 'Serie 100',
   typ: 'Elettrotreno a pianale ribassato per la rete a scartamento metrico',
   text: ['I dieci treni Stadler a tre casse circolano sulla rete a scartamento metrico delle TPF in Gruyère e in Veveyse. Un treno è composto da una ABe 2/4, una carrozza intermedia B e una Be 2/4.', 'Fino a quattro treni possono viaggiare insieme.'],
@@ -2481,9 +2558,14 @@ uebZug('tpf-be-4-4-120', {
   text: ['I treni navetta della serie 120 sono composti da un’automotrice Be 4/4, se necessario da una carrozza intermedia B e da una carrozza pilota (A)Bt. Circolano sulla rete a scartamento metrico delle TPF.', 'Le automotrici si chiamavano prima BDe 4/4 perché avevano un bagagliaio.'],
   kennzahlen: [['4', 'automotrici (121–124)'], ['90 km/h', 'velocità massima'], ['640 kW', 'potenza'], ['1992', 'prima messa in servizio']],
   daten: { 'Bauart': 'treno navetta: automotrice, carrozza intermedia, carrozza pilota', 'Hersteller': 'Vevey/BBC; carrozze intermedie SIG', 'Länge': '52,32 m (treno di 3 veicoli)', 'Sitzplätze': '134 in 2a classe; 9 in 1a classe solo nelle 221–223' },
-  abschnitte: [{ titel: 'I veicoli', tabelle: { kopf: ['Veicolo', 'Numeri', 'Quantità', 'Anni di costruzione', 'Costruttore'], zeilen: [
-    ['Automotrice Be 4/4', '121–124', '4', '1992–1995', 'Vevey/BBC'], ['Carrozza intermedia B', '207, 209, 215', '3', '1973', 'SIG'], ['Carrozza pilota (A)Bt', '221–226', '6', '1992–1995', 'Vevey/BBC']] } },
-    { p: ['I treni sono modulari: carrozze intermedie e carrozze pilota vengono aggiunte secondo la domanda.'] }],
+  abschnitte: [
+      { titel: 'Costruttore e composizione della flotta', p: ['La serie 120 comprende 13 veicoli: 4 automotrici Be 4/4 (121–124) e 6 carrozze pilota (A)Bt (221–226) di Vevey/BBC, costruite dal 1992 al 1995, oltre a 3 carrozze intermedie B (207, 209, 215) di SIG del 1973.', 'Le automotrici si chiamavano prima BDe 4/4 perché avevano un bagagliaio.'] },
+      { titel: 'Impiego e tecnica', p: ['I treni navetta circolano sulla rete a scartamento metrico delle TPF tra Palézieux, Bulle, Gruyères e Montbovon. Sono modulari: carrozze intermedie e pilota vengono aggiunte secondo la domanda.', 'Un treno di tre veicoli è lungo 52,32 m, eroga 640 kW e viaggia fino a 90 km/h.'] },
+      { titel: 'Dotazione e accessibilità', liste: ['Informazione ai viaggiatori acustica e ottica', '253 posti: 134 in 2a classe, 8 strapontini, 102 posti in piedi', '1a classe con 9 posti solo nelle carrozze pilota 221–223'],
+        p: ['Sulla pagina del veicolo le TPF non danno indicazioni su climatizzazione, accessi a pianale ribassato e posti per sedie a rotelle.'] },
+      { titel: 'I veicoli', tabelle: { kopf: ['Veicolo', 'Numeri', 'Quantità', 'Anni di costruzione', 'Costruttore'], zeilen: [
+    ['Automotrice Be 4/4', '121–124', '4', '1992–1995', 'Vevey/BBC'], ['Carrozza intermedia B', '207, 209, 215', '3', '1973', 'SIG'], ['Carrozza pilota (A)Bt', '221–226', '6', '1992–1995', 'Vevey/BBC']] } }
+    ],
   bilder: ['Be 4/4 123', 'Automotrice 124, allora ancora BDe 4/4 (2010)', 'Carrozza pilota 221 a Bulle', 'Carrozza pilota 225']
 });
 uebZug('tpf-funiculaire', {
@@ -2491,7 +2573,12 @@ uebZug('tpf-funiculaire', {
   text: ['Dal 1899 la funicolare di Friburgo collega la città bassa, la Neuveville, con St-Pierre. Supera 58 metri di dislivello su 121 metri.', 'La sua particolarità è il funzionamento: le acque reflue della città di Friburgo fungono da contrappeso. Secondo le TPF è un caso unico in Europa.'],
   kennzahlen: [['1899', 'apertura'], ['121 m', 'lunghezza della linea'], ['550 ‰', 'pendenza massima'], ['2 min', 'tempo di percorrenza']],
   daten: { 'Bauart': 'funicolare con zavorra ad acqua', 'Kabinen': '2 da 20 posti ciascuna', 'Länge': '121 m di linea, vettura 5,4 m', 'Gewicht': '1600 kg per vettura', 'Kapazität': '240 persone all’ora' },
-  abschnitte: [{ titel: 'Esercizio', p: ['La funicolare circola su un binario unico con un incrocio, circa 70 corse di andata e ritorno al giorno. La stazione a valle Neuveville si trova a 552 m, quella a monte St-Pierre a 608 m. L’ultima grande revisione risale al 2020.'] }],
+  abschnitte: [
+      { titel: 'Costruttore e composizione della flotta', p: ['La funicolare è stata costruita da Von Roll; circola dal 1899. È stata trasformata nel 1998, l’ultima grande revisione risale al 2020. È protetta come monumento storico.', 'Dispone di due vetture da 20 posti ciascuna.'] },
+      { titel: 'Impiego e tecnica', p: ['La funicolare collega a Friburgo la città bassa, la Neuveville (552 m), con St-Pierre (608 m). Sul binario unico con incrocio effettua circa 70 corse di andata e ritorno al giorno, dalle 7 alle 19, in estate fino alle 20.', 'Come contrappeso servono le acque reflue della città di Friburgo. La linea è lunga 121 m con una pendenza fino al 550 ‰; il viaggio dura 2 minuti a 1,2 m/s.'] },
+      { titel: 'Dotazione e accessibilità', liste: ['2 vetture da 20 posti ciascuna', '240 persone all’ora'],
+        p: ['Sulla pagina del veicolo le TPF non danno indicazioni sull’accesso con sedia a rotelle, passeggino o bicicletta.'] }
+    ],
   bilder: ['Funicolare Neuveville–St-Pierre a Friburgo (2024)']
 });
 uebZug('tpf-tm-87', {
@@ -2637,6 +2724,10 @@ uebZug('gfm-wagen', {
 uebDict({ 'Schotter- und Kippwagen': 'Carri per pietrisco e ribaltabili' });
 
 uebZug('bls-br-185', {
+  abschnitte: [
+      { titel: 'Costruttore e composizione della flotta', p: ['Le quattro locomotive sono TRAXX F140 AC di Bombardier Transportation. Appartengono al noleggiatore Alpha Trains e sono immatricolate in Germania; BLS Cargo le noleggia.'] },
+      { titel: 'Impiego e tecnica', p: ['Omologate per Germania, Austria e Svizzera, completano presso BLS Cargo le Re 485 proprie, con cui sono tecnicamente strettamente imparentate.', 'Erogano fino a 5600 kW e viaggiano fino a 140 km/h.'] }
+    ],
   typ: 'Locomotiva elettrica noleggiata da Alpha Trains',
   text: ['Oltre alle proprie locomotive, BLS Cargo impiega locomotive noleggiate immatricolate in Germania. Tra queste ci sono quattro TRAXX della serie 185 di Alpha Trains.', 'Tecnicamente sono strette parenti delle Re 485 della BLS, che corrispondono alla serie tedesca 185 con un equipaggiamento svizzero aggiuntivo.'],
   kennzahlen: [['4', 'locomotive noleggiate'], ['140 km/h', 'velocità massima'], ['fino a 5600 kW', 'potenza'], ['D, A, CH', 'omologazione']],
@@ -2645,6 +2736,10 @@ uebZug('bls-br-185', {
   bilder: ['185 525 con i colori BLS a Friburgo (2009)']
 });
 uebZug('bls-br-186', {
+  abschnitte: [
+      { titel: 'Costruttore e composizione della flotta', p: ['Le nove locomotive sono TRAXX policorrente F140 MS di Bombardier Transportation. Appartengono al noleggiatore Railpool; su foto si vedono tra l’altro le 186 101, 103–105, 108 e 109 con la scritta BLS.'] },
+      { titel: 'Impiego e tecnica', p: ['Le locomotive sono omologate per Germania, Austria, Svizzera, Italia e Paesi Bassi. Trainano treni merci sull’asse Rotterdam–Italia, per esempio il Melzo-Shuttle.', 'Con corrente alternata erogano 5600 kW, con 1,5 kV continua nei Paesi Bassi 4000 kW; viaggiano fino a 140 km/h.'] }
+    ],
   typ: 'Locomotiva policorrente noleggiata da Railpool',
   text: ['BLS Cargo noleggia da Railpool nove TRAXX policorrente della serie 186. Possono circolare in cinque paesi, fino ai Paesi Bassi.', 'Trainano così treni merci sull’asse Rotterdam–Italia, per esempio il Melzo-Shuttle.'],
   kennzahlen: [['9', 'locomotive noleggiate'], ['140 km/h', 'velocità massima'], ['5600 kW', 'potenza'], ['5', 'paesi']],
@@ -2653,6 +2748,10 @@ uebZug('bls-br-186', {
   bilder: ['186 101 di BLS Cargo', '186 109 con il Melzo-Shuttle presso Elten (NL)']
 });
 uebZug('bls-br-187', {
+  abschnitte: [
+      { titel: 'Costruttore e composizione della flotta', p: ['Le tre locomotive appartengono alla terza generazione TRAXX (AC3) di Bombardier Transportation. BLS Cargo le noleggia a lungo termine dal noleggiatore Railpool; la 187 004 compare su foto con la scritta BLS.'] },
+      { titel: 'Impiego e tecnica', p: ['Omologate per Germania, Austria e Svizzera, trainano treni merci di BLS Cargo.', 'Erogano 5600 kW e pesano 84 t. La serie 187 esiste anche con un piccolo motore diesel per l’«ultimo miglio» senza linea di contatto; non è documentato pubblicamente se le tre locomotive della BLS ne siano dotate.'] }
+    ],
   typ: 'Locomotiva elettrica noleggiata da Railpool',
   text: ['BLS Cargo ha noleggiato a lungo termine da Railpool tre locomotive della serie 187. Appartengono alla terza generazione TRAXX.', 'La serie 187 esiste anche con un piccolo motore diesel per l’«ultimo miglio» senza linea di contatto. Non è documentato pubblicamente se le tre locomotive della BLS ne siano dotate.'],
   kennzahlen: [['3', 'locomotive noleggiate'], ['5600 kW', 'potenza'], ['84 t', 'peso'], ['D, A, CH', 'omologazione']],
@@ -2660,6 +2759,10 @@ uebZug('bls-br-187', {
   bilder: ['187 004 di BLS Cargo']
 });
 uebZug('bls-br-193', {
+  abschnitte: [
+      { titel: 'Costruttore e composizione della flotta', p: ['Le locomotive sono Vectron di Siemens Mobility. Secondo l’elenco della flotta, BLS Cargo noleggia sei locomotive e altre quattro, che circolano in parte con i colori dell’operatore combinato Hupac (tra l’altro 193 494–496). Su foto si vedono inoltre le 193 711, 713 e 716.'] },
+      { titel: 'Impiego e tecnica', p: ['Omologate per Germania, Austria, Svizzera, Italia e Paesi Bassi, circolano soprattutto nel traffico di transito tra i porti del Mare del Nord e l’Italia.', 'Come locomotive policorrente erogano fino a 6400 kW.'] }
+    ],
   typ: 'Siemens Vectron noleggiate per BLS Cargo',
   text: ['Oltre alle proprie Re 475, BLS Cargo noleggia locomotive Vectron della serie 193. Secondo l’elenco della flotta si tratta di sei locomotive e di altre quattro, che circolano in parte con i colori dell’operatore combinato Hupac.', 'Omologate fino ai Paesi Bassi e in Italia, circolano soprattutto nel traffico di transito.'],
   kennzahlen: [['10', 'locomotive noleggiate'], ['fino a 6400 kW', 'potenza'], ['5', 'paesi'], ['Siemens', 'costruttore']],
@@ -2710,4 +2813,30 @@ uebZug('bls-hilfswagen', {
   text: ['Il carro di soccorso fa parte del servizio d’intervento, il corpo pompieri aziendale della BLS. Interviene in caso di deragliamenti e altri guasti per recuperare veicoli e prestare assistenza tecnica.', 'È composto dal carro di soccorso vero e proprio e da un carro supplementare.'],
   kennzahlen: [['2011', 'messa in servizio'], ['46 m', 'lunghezza'], ['101,5 t', 'peso'], ['2', 'carri']],
   daten: { 'Bauart': 'carro di soccorso con carro supplementare', 'Betreiber': 'BLS SA, servizio d’intervento', 'Einsatz': 'recupero, intervento tecnico' }
+});
+
+/* ---- 33-einsatz-bls-tpf.js ---- */
+/* Italiano – carte «Dove circola?» per BLS e TPF */
+uebDict({
+  'S-Bahn Bern': 'S-Bahn di Berna',
+  'Im Transitverkehr von den Nordseehäfen Rotterdam und Antwerpen über Deutschland und die Schweiz bis Norditalien, durch den Lötschberg-Simplon und den Gotthard.': 'In transito dai porti del Mare del Nord, Rotterdam e Anversa, attraverso la Germania e la Svizzera fino al Nord Italia, per il Lötschberg-Sempione e il Gottardo.'
+});
+uebEinsatz({
+  'bls-rabe-528': 'Sulle S-Bahn di Berna e Lucerna, come RegioExpress Berna–Spiez–Zweisimmen e sulla linea di valico del Lötschberg fino a Briga e Domodossola, nonché come InterRegio Berna–Neuchâtel–La Chaux-de-Fonds.',
+  'bls-rabe-515': 'Sulla S-Bahn di Berna (S1 Friburgo–Berna–Thun, S3/S31 Bienne–Berna–Belp) e come InterRegio Berna–Burgdorf–Olten e Berna–Bienne.',
+  'bls-rabe-535': 'Nell’Oberland bernese (Zweisimmen–Spiez, Spiez–Interlaken Ost, Spiez–Frutigen) e sulla S-Bahn di Berna tra Thun, Berna, Burgdorf e Soletta.',
+  'bls-rabe-525': 'Sulle S-Bahn di Berna e Lucerna, tra l’altro Berna–Neuchâtel, Berna–Langnau, Lyss–Büren an der Aare e Lucerna–Willisau, oltre che come RegioExpress Domodossola–Briga–Visp.',
+  'bls-re-465': 'In testa al GoldenPass Express tra Interlaken Ost e Zweisimmen, ai treni navetta per auto del Lötschberg e del Sempione e a treni merci sull’asse Lötschberg-Sempione.',
+  'bls-re-475': 'Nel traffico merci attraverso la Svizzera sugli assi Lötschberg-Sempione e Gottardo, a livello internazionale fino ai Paesi Bassi, in Belgio e in Italia.',
+  'bls-re-485': 'Nel traffico merci in Svizzera e verso la Germania, sugli assi Lötschberg-Sempione e Gottardo.',
+  'bls-re-486': 'Nel transito merci attraverso le Alpi, anche con l’autostrada viaggiante; omologazione per Svizzera, Germania, Italia e Austria.',
+  'bls-br-185': 'Nel traffico merci di BLS Cargo in Svizzera, Germania e Austria.',
+  'bls-br-186': 'Nel transito merci di BLS Cargo, anche sull’asse Rotterdam–Italia con il Melzo-Shuttle.',
+  'bls-br-187': 'Nel traffico merci di BLS Cargo in Svizzera, Germania e Austria.',
+  'bls-br-193': 'Nel transito merci di BLS Cargo, fino ai Paesi Bassi e in Italia.',
+  'tpf-rabe-527': 'Come RegioExpress Berna–Friburgo–Romont–Bulle–Broc e sul RER Fribourg tra Friburgo, Morat e Neuchâtel.',
+  'tpf-rbde-560': 'Sul RER Fribourg: RegioExpress Berna–Friburgo–Bulle–Broc e S20/S21 Friburgo–Morat–Ins–Neuchâtel.',
+  'tpf-abe-4-12': 'Sulla rete a scartamento metrico delle TPF: S50 Palézieux–Châtel-St-Denis–Bulle–Montbovon e S51 fino a Gruyères. Lo scartamento metrico è tracciato a tratteggio e in modo semplificato.',
+  'tpf-be-4-4-120': 'Sulla rete a scartamento metrico delle TPF tra Palézieux, Bulle, Gruyères e Montbovon. Lo scartamento metrico è tracciato a tratteggio e in modo semplificato.',
+  'tpf-funiculaire': 'Nella città di Friburgo, tra la città bassa (Neuveville) e St-Pierre.'
 });

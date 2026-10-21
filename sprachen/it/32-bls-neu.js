@@ -2,6 +2,10 @@
 uebDict({ 'Schotter- und Kippwagen': 'Carri per pietrisco e ribaltabili' });
 
 uebZug('bls-br-185', {
+  abschnitte: [
+      { titel: 'Costruttore e composizione della flotta', p: ['Le quattro locomotive sono TRAXX F140 AC di Bombardier Transportation. Appartengono al noleggiatore Alpha Trains e sono immatricolate in Germania; BLS Cargo le noleggia.'] },
+      { titel: 'Impiego e tecnica', p: ['Omologate per Germania, Austria e Svizzera, completano presso BLS Cargo le Re 485 proprie, con cui sono tecnicamente strettamente imparentate.', 'Erogano fino a 5600 kW e viaggiano fino a 140 km/h.'] }
+    ],
   typ: 'Locomotiva elettrica noleggiata da Alpha Trains',
   text: ['Oltre alle proprie locomotive, BLS Cargo impiega locomotive noleggiate immatricolate in Germania. Tra queste ci sono quattro TRAXX della serie 185 di Alpha Trains.', 'Tecnicamente sono strette parenti delle Re 485 della BLS, che corrispondono alla serie tedesca 185 con un equipaggiamento svizzero aggiuntivo.'],
   kennzahlen: [['4', 'locomotive noleggiate'], ['140 km/h', 'velocità massima'], ['fino a 5600 kW', 'potenza'], ['D, A, CH', 'omologazione']],
@@ -10,6 +14,10 @@ uebZug('bls-br-185', {
   bilder: ['185 525 con i colori BLS a Friburgo (2009)']
 });
 uebZug('bls-br-186', {
+  abschnitte: [
+      { titel: 'Costruttore e composizione della flotta', p: ['Le nove locomotive sono TRAXX policorrente F140 MS di Bombardier Transportation. Appartengono al noleggiatore Railpool; su foto si vedono tra l’altro le 186 101, 103–105, 108 e 109 con la scritta BLS.'] },
+      { titel: 'Impiego e tecnica', p: ['Le locomotive sono omologate per Germania, Austria, Svizzera, Italia e Paesi Bassi. Trainano treni merci sull’asse Rotterdam–Italia, per esempio il Melzo-Shuttle.', 'Con corrente alternata erogano 5600 kW, con 1,5 kV continua nei Paesi Bassi 4000 kW; viaggiano fino a 140 km/h.'] }
+    ],
   typ: 'Locomotiva policorrente noleggiata da Railpool',
   text: ['BLS Cargo noleggia da Railpool nove TRAXX policorrente della serie 186. Possono circolare in cinque paesi, fino ai Paesi Bassi.', 'Trainano così treni merci sull’asse Rotterdam–Italia, per esempio il Melzo-Shuttle.'],
   kennzahlen: [['9', 'locomotive noleggiate'], ['140 km/h', 'velocità massima'], ['5600 kW', 'potenza'], ['5', 'paesi']],
@@ -18,6 +26,10 @@ uebZug('bls-br-186', {
   bilder: ['186 101 di BLS Cargo', '186 109 con il Melzo-Shuttle presso Elten (NL)']
 });
 uebZug('bls-br-187', {
+  abschnitte: [
+      { titel: 'Costruttore e composizione della flotta', p: ['Le tre locomotive appartengono alla terza generazione TRAXX (AC3) di Bombardier Transportation. BLS Cargo le noleggia a lungo termine dal noleggiatore Railpool; la 187 004 compare su foto con la scritta BLS.'] },
+      { titel: 'Impiego e tecnica', p: ['Omologate per Germania, Austria e Svizzera, trainano treni merci di BLS Cargo.', 'Erogano 5600 kW e pesano 84 t. La serie 187 esiste anche con un piccolo motore diesel per l’«ultimo miglio» senza linea di contatto; non è documentato pubblicamente se le tre locomotive della BLS ne siano dotate.'] }
+    ],
   typ: 'Locomotiva elettrica noleggiata da Railpool',
   text: ['BLS Cargo ha noleggiato a lungo termine da Railpool tre locomotive della serie 187. Appartengono alla terza generazione TRAXX.', 'La serie 187 esiste anche con un piccolo motore diesel per l’«ultimo miglio» senza linea di contatto. Non è documentato pubblicamente se le tre locomotive della BLS ne siano dotate.'],
   kennzahlen: [['3', 'locomotive noleggiate'], ['5600 kW', 'potenza'], ['84 t', 'peso'], ['D, A, CH', 'omologazione']],
@@ -25,6 +37,10 @@ uebZug('bls-br-187', {
   bilder: ['187 004 di BLS Cargo']
 });
 uebZug('bls-br-193', {
+  abschnitte: [
+      { titel: 'Costruttore e composizione della flotta', p: ['Le locomotive sono Vectron di Siemens Mobility. Secondo l’elenco della flotta, BLS Cargo noleggia sei locomotive e altre quattro, che circolano in parte con i colori dell’operatore combinato Hupac (tra l’altro 193 494–496). Su foto si vedono inoltre le 193 711, 713 e 716.'] },
+      { titel: 'Impiego e tecnica', p: ['Omologate per Germania, Austria, Svizzera, Italia e Paesi Bassi, circolano soprattutto nel traffico di transito tra i porti del Mare del Nord e l’Italia.', 'Come locomotive policorrente erogano fino a 6400 kW.'] }
+    ],
   typ: 'Siemens Vectron noleggiate per BLS Cargo',
   text: ['Oltre alle proprie Re 475, BLS Cargo noleggia locomotive Vectron della serie 193. Secondo l’elenco della flotta si tratta di sei locomotive e di altre quattro, che circolano in parte con i colori dell’operatore combinato Hupac.', 'Omologate fino ai Paesi Bassi e in Italia, circolano soprattutto nel traffico di transito.'],
   kennzahlen: [['10', 'locomotive noleggiate'], ['fino a 6400 kW', 'potenza'], ['5', 'paesi'], ['Siemens', 'costruttore']],

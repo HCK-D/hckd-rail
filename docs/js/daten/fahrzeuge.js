@@ -47,9 +47,10 @@ const ZUEGE = [
     specOrder: ['Baureihe', 'Betreiber', 'Zugbildung', 'Fahrzeugnummern', 'Spurweite', 'Höchstgeschwindigkeit', 'Länge', 'Leistung', 'Gewicht', 'Anfahrzugkraft', 'Neigetechnik', 'Niederflureinstieg', 'Sitzplätze', 'Anzahl', 'In Betrieb seit', 'Hersteller'],
     specNote: 'Technische Werte nach SBB Infrastruktur. Die SBB-Fahrzeugseite rundet die Länge auf 190 m und nennt 471 Sitzplätze sowie 1999 als ersten Einsatz.',
     abschnitte: [
-      { titel: 'Hersteller und Serien', p: ['Die erste Serie mit den Endnummern 000 bis 023 entstand bei Adtranz und FIAT-SIG. Die zweite Serie mit den Nummern 024 bis 043 lief unter dem Konsortium Bombardier/Alstom; ihre Auslieferung begann 2003.', 'Alstom lieferte aus Neuhausen unter anderem die Drehgestelle und die Neigetechnik.'] },
-      { titel: 'Einsatz und Ausstattung', liste: ['Restaurant', 'Familienzone', 'Ruhezone', 'Businesszone', 'Velo- und Gepäckbereiche', 'Rollstuhlplätze', 'Rollstuhlgängiges WC'],
-        p: ['Zu den Hauptachsen zählen Basel–Biel–Lausanne und Romanshorn–St. Gallen–Zürich–Biel–Genève. Weitere Einsätze führen ins Tessin.', 'Rollstuhlplätze und ein rollstuhlgängiges WC sind vorhanden; der Einstieg ist jedoch nicht niederflurig.'] },
+      { titel: 'Hersteller und Flottenaufbau', p: ['Die SBB besitzt 44 ICN. Die erste Serie mit den Endnummern 000 bis 023 entstand bei Adtranz und FIAT-SIG, die zweite mit den Nummern 024 bis 043 beim Konsortium Bombardier/Alstom; ihre Auslieferung begann 2003.', 'Alstom lieferte aus Neuhausen unter anderem die Drehgestelle und die Neigetechnik. Der erste ICN fuhr 1999.'] },
+      { titel: 'Einsatz und Technik', p: ['Zu den Hauptachsen zählen Basel–Biel–Lausanne und Romanshorn–St. Gallen–Zürich–Biel–Genève auf der Jurasüdfusslinie. Weitere Einsätze führen ins Tessin.', 'Dank aktiver Wagenkastenneigung fährt der siebenteilige Zug auf kurvenreichen Strecken schneller durch die Kurven. Er erreicht 200 km/h.'] },
+      { titel: 'Ausstattung und Zugänglichkeit', liste: ['Restaurant', 'Familienzone', 'Ruhezone und Businesszone in der 1. Klasse', 'Steckdosen, auch an den Seitenwandtischen', 'Fenster mit besserem Mobilfunkempfang', 'Veloabstellplätze', 'Kinderwagenplätze und Wickeltisch', 'Rollstuhlplätze und rollstuhlgängiges WC', 'Vorrangsitze'],
+        p: ['Der Einstieg ist nicht niederflurig. Rollstuhlplätze und ein rollstuhlgängiges WC sind vorhanden.'] },
       { titel: 'Modernisierung', p: ['Seit 2021 erneuert die SBB die ICN im Werk Yverdon. Der erste komplett modernisierte Zug wurde am 24. Oktober 2024 vorgestellt. Neben Sitzen, Beleuchtung, Tischen und Kundeninformation werden auch technische Komponenten überarbeitet.', 'Die aktuelle SBB-Fahrzeugseite nennt 2034 als Abschlussjahr; Ziel sind rund 20 weitere Einsatzjahre.'] }
     ],
     quellen: ['SBB – ICN mit Flottenangaben, Herstellern, Einsatz und Modernisierungszeitraum', 'SBB Infrastruktur – Fahrtypenkatalog 2026, Fahrtyp 6022, S. 339', 'SBB – Präsentation des ersten komplett modernisierten ICN, 24. Oktober 2024', 'Alstom – Auslieferung der zweiten ICN-Serie, Mitteilung vom 23. Juni 2003'],
@@ -68,6 +69,10 @@ const ZUEGE = [
     specOrder: ['Baureihe', 'Hersteller', 'Spurweite', 'Höchstgeschwindigkeit', 'Antrieb', 'Länge', 'Sitzplätze', 'Leistung', 'Gewicht', 'Anzahl', 'In Betrieb seit'],
     specNote: 'Leergewichte laut SBB: IR100 237,1 t, IR200 463,2 t, IC200 467,4 t.',
     abschnitte: [
+      { titel: 'Hersteller und Flottenaufbau', p: ['Hersteller ist Bombardier Transportation, heute Teil von Alstom. Aus der ursprünglichen Beschaffung von 59 Zügen wurden durch eine Vereinbarung von 2014 insgesamt 62 Fahrzeuge: 23 Intercity- und 39 Interregio-Züge.', 'Der erste FV-Dosto fuhr 2018, 2022 war die Flotte vollständig ausgeliefert. Es gibt drei Ausführungen: IC200 (RABDe 502) sowie IR200 und IR100 (RABe 502).'] },
+      { titel: 'Einsatz und Technik', p: ['Ein wichtiger Einsatzkorridor ist St. Gallen–Zürich–Bern–Lausanne–Genève. Weitere Einsätze führen unter anderem über Basel–Zürich, Zürich–Chur und Luzern–Zürich.', 'Die Züge erreichen 200 km/h und werden von Permanentmagnet-Synchronmotoren angetrieben. In Verkehrsspitzen fahren bis zu 400 m lange Kompositionen mit bis zu 1300 Sitzplätzen.'] },
+      { titel: 'Ausstattung und Zugänglichkeit', liste: ['Restaurant, Familienwagen, Ruhezone und Businesszone (nur IC-Ausführung)', 'Steckdosen', 'Fenster mit besserem Mobilfunkempfang', 'Elektronische Reservationsanzeige', 'Velo-, Kinderwagen- und Gepäckplätze', 'Niederflureinstiege', 'Rollstuhlplätze und rollstuhlgängiges WC', 'Vorrangsitze und Wickeltisch'],
+        p: ['Dank Niederflureinstiegen gelangen Rollstuhlfahrende an passenden Perrons stufenlos in den Zug.'] },
       { titel: 'Technische Daten der drei Ausführungen', tabelle: { kopf: ['Merkmal', 'IC200', 'IR200', 'IR100'], zeilen: [
         ['Baureihe', 'RABDe 502', 'RABe 502', 'RABe 502'],
         ['Wagen je Zug', '8', '8', '4'],
@@ -78,9 +83,6 @@ const ZUEGE = [
         ['Anfahrzugkraft', '482,24 kN', '482,24 kN', '241,12 kN'],
         ['Restaurant', 'ja', 'nein', 'nein']] },
         hinweis: 'Sitzplätze und Ausstattung nach SBB, technische Werte nach SBB Infrastruktur. Die Gewichte gelten für leere Fahrzeuge.' },
-      { titel: 'Hersteller und Beschaffung', p: ['Hersteller war Bombardier Transportation, heute Teil von Alstom. Aus der ursprünglichen Beschaffung von 59 Zügen wurden durch eine Vereinbarung von 2014 insgesamt 62 Fahrzeuge: 23 Intercity- und 39 Interregio-Züge.', 'Die Flotte war 2022 vollständig ausgeliefert. Der Antrieb verwendet Permanentmagnet-Synchronmotoren.'] },
-      { titel: 'Einsatz und Ausstattung', liste: ['Niederflureinstiege', 'Steckdosen', 'Rollstuhlplätze', 'Rollstuhlgängiges WC', 'Restaurant (IC-Ausführung)', 'Familienwagen (IC-Ausführung)'],
-        p: ['Ein wichtiger Einsatzkorridor ist St. Gallen–Zürich–Bern–Lausanne–Genève. Weitere Einsätze führen unter anderem über Basel–Zürich, Zürich–Chur und Luzern–Zürich.'] },
       { titel: 'Weiterentwicklung', p: ['Die SBB hat den Umbau der Drehgestelle der gesamten Flotte beschlossen. Dabei wird die Wankkompensation entfernt und die Federung angepasst.', 'Laut Mitteilung vom Dezember 2025 soll der Serienumbau nach der Betriebsbewilligung Ende 2026 beginnen und bis Anfang der 2030er-Jahre dauern.'] }
     ],
     quellen: ['SBB – FV-Dosto mit Flottenangaben, Ausstattung und Einsatzstrecken', 'SBB Infrastruktur – Fahrtypenkatalog 2026, Fahrtypen 6041 bis 6043, S. 358–360', 'Alstom – Twindexx Swiss Express für die SBB', 'SBB – Umbau der FV-Dosto, Mitteilung vom 5. Dezember 2025'],
@@ -99,6 +101,10 @@ const ZUEGE = [
     specOrder: ['Hersteller', 'Betreiber', 'Bauart', 'Zugbildung', 'Spurweite', 'Stromsystem', 'Höchstgeschwindigkeit', 'Länge', 'Leistung', 'Gewicht', 'Sitzplätze', 'Niederflureinstieg', 'Anzahl', 'In Betrieb seit', 'Einsatz'],
     specNote: 'Gewicht laut SBB: 210 t für den vierteiligen IR-Dosto, 292 t für den sechsteiligen Regio-Dosto.',
     abschnitte: [
+      { titel: 'Hersteller und Flottenaufbau', p: ['Stadler lieferte die Doppelstockzüge vom Typ KISS ab 2012. Die SBB führt 69 sechsteilige Regio-Dosto und 24 vierteilige IR-Dosto.', 'Die 24 IR-Dosto entstanden 2020 bis 2024 durch die Aufwertung von Regio-Dosto für den Fernverkehr. Die übrigen Regio-Dosto erneuert die SBB bis 2035; danach tragen alle die blaue ZVV-Farbgebung.'] },
+      { titel: 'Einsatz und Technik', p: ['Regio-Dosto fahren vor allem auf Linien der Zürcher S-Bahn und als RE Wettingen–Olten–Luzern.', 'IR-Dosto verkehren im interregionalen Verkehr der Deutsch- und Westschweiz, unter anderem im Raum Zürich, im Mittelland, in der Nordschweiz und auf der Achse nach Chur. Beide Ausführungen fahren bis 160 km/h; die IR-Dosto lassen sich mit dem neueren RABe 512 kuppeln.'] },
+      { titel: 'Ausstattung und Zugänglichkeit', liste: ['Niederflureinstiege', 'Rollstuhlplätze und rollstuhlgängiges WC', 'Velo- und Kinderwagenplätze', 'Mobilfunkverstärker', 'Steckdosen in der 1. Klasse (IR-Dosto: fast an jedem Platz, auch in der 2. Klasse)', '2+1-Bestuhlung in der 1. Klasse (IR-Dosto)'],
+        p: ['Die breiten Tiefeinstiege erlauben an passenden Perrons einen stufenlosen Einstieg.'] },
       { titel: 'Ausführungen im Vergleich', tabelle: { kopf: ['Merkmal', 'Regio-Dosto', 'IR-Dosto'], zeilen: [
         ['Fahrzeuge', '69', '24'],
         ['Wagen je Zug', '6', '4'],
@@ -109,10 +115,7 @@ const ZUEGE = [
         ['Gewicht', '292 t', '210 t'],
         ['Niederflureinstieg', 'ja', 'ja'],
         ['Verkehr', 'S-Bahn / RE', 'IR / RE']] },
-        hinweis: 'Die Aufteilung 120 / 415 bezeichnet die Plätze der 1. und 2. Klasse im Regio-Dosto. Für die IR-Ausführung nennt die SBB 317 Plätze insgesamt.' },
-      { titel: 'Einsatz', p: ['Regio-Dosto fahren vor allem auf Linien der Zürcher S-Bahn und als RE Wettingen–Olten–Luzern.', 'IR-Dosto verkehren im interregionalen Verkehr der Deutsch- und Westschweiz, unter anderem im Raum Zürich, im Mittelland, in der Nordschweiz und auf der Achse nach Chur. Die IR-Ausführung kann mit dem neueren RABe 512 gekuppelt werden.'] },
-      { titel: 'Ausstattung und Erneuerung', liste: ['Breite Tiefeinstiege', 'Rollstuhlplätze', 'Rollstuhlgängiges WC', 'Flächen für Kinderwagen und Velos'],
-        p: ['Die IR-Dosto wurden 2020–2024 für den Fernverkehr aufgewertet, unter anderem mit Steckdosen und 2+1-Bestuhlung in der 1. Klasse.', 'Die SBB erneuert die Regio-Dosto schrittweise; der erste erneuerte Zug verkehrt seit September 2026.'] }
+        hinweis: 'Die Aufteilung 120 / 415 bezeichnet die Plätze der 1. und 2. Klasse im Regio-Dosto. Für die IR-Ausführung nennt die SBB 317 Plätze insgesamt.' }
     ],
     quellen: ['SBB – Regio-Dosto: 69 sechsteilige Züge', 'SBB – IR-Dosto: 24 vierteilige Züge', 'SBB News – Erneuerung der Zürcher S-Bahn-Flotten, Oktober 2026', 'SBB – Regio-Dosto RABe 511 mit Flottenangaben (Leistung und Gewicht)'],
     art: { typ: 'triebzug', nase: 'kurz', dd: true, farbe: W1, akzent: RED, tuer: RED, panto: true }, bilder: [
@@ -128,8 +131,10 @@ const ZUEGE = [
     daten: { 'Hersteller': 'Siemens', 'Betreiber': 'SBB Personenverkehr', 'Bauart': 'Doppelstocktriebzug', 'Zugbildung': '4 Wagen', 'Spurweite': 'Normalspur, 1435 mm', 'Stromsystem': '15 kV 16,7 Hz', 'Länge': '100,0 m', 'Leistung': '3200 kW', 'Gewicht': '223 t leer', 'Höchstgeschwindigkeit': '140 km/h', 'Sitzplätze': '360', 'Niederflureinstieg': 'ja', 'Anzahl': '61 Züge', 'In Betrieb seit': '2006', 'Beschaffungszeit': '2006–2009', 'Einsatz': 'S-Bahn Zürich' },
     specOrder: ['Hersteller', 'Betreiber', 'Bauart', 'Zugbildung', 'Spurweite', 'Stromsystem', 'Länge', 'Leistung', 'Gewicht', 'Höchstgeschwindigkeit', 'Sitzplätze', 'Niederflureinstieg', 'Anzahl', 'In Betrieb seit', 'Beschaffungszeit', 'Einsatz'],
     abschnitte: [
-      { titel: 'Einsatz und Fahrgasträume', liste: ['Durchgehender Tiefeinstieg', 'Multifunktionsbereiche für Velo und Kinderwagen', 'Vorrangsitze', 'Rollstuhlplätze', 'Rollstuhlgängiges WC'],
-        p: ['Die DTZ können auf dem gesamten Netz der Zürcher S-Bahn eingesetzt werden.'] },
+      { titel: 'Hersteller und Flottenaufbau', p: ['Siemens lieferte die 61 Doppelstocktriebzüge (DTZ) von 2006 bis 2009. Sie sind die zweite Generation von Doppelstockzügen der Zürcher S-Bahn.'] },
+      { titel: 'Einsatz und Technik', p: ['Die DTZ können auf dem ganzen Netz der Zürcher S-Bahn eingesetzt werden. Ein Zug ist 100 m lang, bietet 360 Sitzplätze und fährt bis 140 km/h.'] },
+      { titel: 'Ausstattung und Zugänglichkeit', liste: ['Durchgehender Tiefeinstieg mit Spaltüberbrückung', 'Multifunktionsabteil mit Velo- und Kinderwagenplätzen', 'Vorrangsitze', 'Rollstuhlplätze', 'Rollstuhlgängiges WC'],
+        p: ['Über die Tiefeinstiege mit Spaltüberbrückung gelangen Rollstuhlfahrende an passenden Perrons ohne Stufe in den Zug.'] },
       { titel: 'Modernisierung', p: ['Die SBB erneuert die Flotte seit 2025, voraussichtlich bis etwa 2030. Dazu gehören eine neue Lackierung, besserer Mobilfunkempfang durch angepasste Fensterscheiben sowie Arbeiten an Beleuchtung, Innenraum und technischen Komponenten.', 'Die Erneuerung soll die Nutzungsdauer auf 32 Jahre verlängern.'] }
     ],
     quellen: ['SBB – DTZ: Kenndaten, Einsatz und Ausstattung', 'SBB News – Erneuerung der DTZ und Regio-Dosto, Oktober 2026', 'SBB Infrastruktur – Fahrtypenkatalog 2026, technische Daten RABe 514'],
@@ -147,8 +152,10 @@ const ZUEGE = [
     specOrder: ['Bauart', 'Fahrzeugfamilie', 'Grundtyp', 'Einstieg', 'Hersteller', 'Spurweite', 'Stromsystem', 'Länge', 'Gewicht', 'Leistung', 'Höchstgeschwindigkeit', 'Erste Region', 'Einsatz', 'Anzahl', 'In Betrieb seit'],
     specNote: '* Die 98 ergeben sich aus den veröffentlichten Nummernreihen 001–073, 101–114 und 501–511; eine separat bestätigte aktuelle SBB-Bestandsmeldung gibt es nicht. Die 160 km/h nennt die SBB für die ganze Regional-FLIRT-Familie.',
     abschnitte: [
-      { titel: 'Regionaler Einsatz und Ausstattung', liste: ['Niederflureinstieg', 'Rollstuhlplätze', 'Rollstuhlgängige Toiletten', 'Abstellflächen für Velos und Kinderwagen'],
-        p: ['FLIRT fahren laut SBB als S-Bahn unter anderem in den Kantonen Aargau, Solothurn, Luzern, Basel, Neuenburg, Freiburg und Waadt. Die Ausstattung gehört zur ganzen Familie; Details unterscheiden sich nach Ausführung.'] },
+      { titel: 'Hersteller und Flottenaufbau', p: ['Alle FLIRT stammen von Stadler; der erste fuhr bei der SBB 2004. Im Regionalverkehr setzt die SBB insgesamt 209 FLIRT verschiedener Baureihen ein.'] },
+      { titel: 'Einsatz und Technik', p: ['FLIRT fahren laut SBB als S-Bahn unter anderem in den Kantonen Aargau, Solothurn, Luzern, Basel, Neuenburg, Freiburg und Waadt.', 'Je nach Ausführung sind die Züge 75 bis 105 m lang und bieten 156 bis 236 Sitzplätze. Sie fahren bis 160 km/h.'] },
+      { titel: 'Ausstattung und Zugänglichkeit', liste: ['Niederflureinstieg', 'Rollstuhlplätze und rollstuhlgängiges WC', 'Vorrangsitze', 'Wickeltisch (nur in einem Teil der Züge)', 'Steckdosen in der 1. Klasse', 'Velo-, Kinderwagen- und Gepäckplätze'],
+        p: ['Die Angaben gelten für die FLIRT-Familie der SBB; Details unterscheiden sich nach Ausführung.'] },
       { titel: 'Stückzahl richtig einordnen', p: ['Die veröffentlichte Zahl von 209 umfasst sämtliche im Regionalverkehr eingesetzten FLIRT der SBB, darunter weitere Baureihen und Ausführungen.', 'Für den RABe 523 allein ergeben die veröffentlichten Nummernreihen 001–073, 101–114 und 501–511 zusammen 98 Fahrzeuge. Das ist eine Herleitung aus den Nummern, keine offizielle aktuelle Bestandsmeldung der SBB.'] }
     ],
     quellen: ['SBB – FLIRT: Familienflotte, technische Spannbreiten und Einsatz', 'Stadler – Mitteilung zur FLIRT-Entwicklung, S. 2 (RABe 523 ab 2004)', 'SBB Infrastruktur – Fahrtypenkatalog 2026, technische Daten RABe 523', 'SBB – FLIRT-Familie der SBB, Nummernreihen'],
@@ -166,16 +173,14 @@ const ZUEGE = [
     specOrder: ['Fahrzeugart', 'Betreiber', 'Zugbildung', 'Stromsystem', 'Spurweite', 'Höchstgeschwindigkeit', 'Leistung', 'Anfahrzugkraft', 'Länge', 'Gewicht', 'Sitzplätze', 'Niederflur', 'Anzahl', 'In Betrieb seit', 'Hersteller', 'Status'],
     specNote: 'Flotten-, Kapazitäts- und Einsatzdaten nach SBB. Technische Werte nach SBB Infrastruktur. Das Leergewicht ist die Summe der drei Wagen.',
     abschnitte: [
+      { titel: 'Hersteller und Flottenaufbau', p: ['Die SBB besitzt 86 Domino. Die Trieb- und Steuerwagen stammen aus der NPZ-Familie von Schindler Waggon, SWA, SIG und ABB; Bombardier lieferte die neuen Niederflur-Mittelwagen vom Typ INOVA.', 'Ein einzelnes Baujahr für den ganzen Zug gibt es deshalb nicht. Der erste Domino fuhr bei der SBB 2009.'] },
+      { titel: 'Einsatz und Technik', p: ['Die SBB setzt den Domino hauptsächlich auf S-Bahn-Linien in den Kantonen Aargau, Luzern, Neuenburg und Waadt ein. Die genaue Linienzuordnung kann sich mit dem Fahrplan ändern.', 'Ein dreiteiliger Zug ist 75 m lang, bietet 172 Sitzplätze und fährt bis 140 km/h.'] },
+      { titel: 'Ausstattung und Zugänglichkeit', liste: ['Stufenloser Einstieg im Mittelwagen', 'Rollstuhlplätze und rollstuhlgängiges WC', 'Vorrangsitze', 'Steckdosen in der 1. Klasse', 'Velo-, Kinderwagen- und Gepäckplätze', 'Verbesserter Mobilfunkempfang'],
+        p: ['Nur der INOVA-Mittelwagen ist niederflurig; Trieb- und Steuerwagen haben Stufen.'] },
       { titel: 'Fahrzeugteile', tabelle: { kopf: ['Fahrzeug', 'Funktion', 'Länge', 'Leergewicht', 'Antrieb'], zeilen: [
         ['RBDe 560', 'motorisierter Endwagen', '25,0 m', '72,0 t', '1700 kW / 182 kN'],
         ['B INOVA', 'Niederflur-Zwischenwagen', '24,4 m', '36,0 t', 'ohne eigenen Antrieb'],
         ['ABt', 'Steuerwagen mit 1. und 2. Klasse', '25,0 m', '38,0 t', 'ohne eigenen Antrieb']] } },
-      { titel: 'Fahrzeugkonzept und Baujahre', p: [
-        'Für den Domino gibt es kein einzelnes Baujahr für den ganzen Zug. Die Grundfahrzeuge stammen aus der NPZ-Familie; bei den TPF-Kompositionen werden dafür die Jahre 1984 bis 1996 genannt. Die grosse Renovierung der TPF-Züge erfolgte 2009 bis 2011.',
-        'Bei der SBB ging der erste Domino 2009 in Betrieb. Bombardier lieferte die neuen INOVA-Mittelwagen; die übrigen Hersteller unterscheiden sich je nach Trieb- oder Steuerwagen.'] },
-      { titel: 'Ausstattung', liste: ['Verbesserter Mobilfunkempfang', 'Vorrangsitze', 'Rollstuhlplätze', 'Rollstuhlgängige Toilette', 'Steckdosen in der 1. Klasse', 'Velo- und Kinderwagenplätze', 'Gepäckablageflächen', 'Multifunktionszone im Mittelwagen'],
-        p: ['Zugänglichkeit: Der stufenlose Einstieg befindet sich im INOVA-Mittelwagen. Trieb- und Steuerwagen sind nicht durchgehend niederflurig.'] },
-      { titel: 'Einsatz bei der SBB', p: ['Die SBB setzt den Domino hauptsächlich auf einzelnen S-Bahn-Linien in den Kantonen Aargau, Luzern, Neuenburg und Waadt ein. Die genaue Linienzuordnung kann sich mit dem Fahrplan und der Fahrzeugdisposition ändern.'] },
       { titel: 'Weitere Betreiber', tabelle: { kopf: ['Betreiber', 'Bestand', 'Länge', 'Sitzplätze', 'Besonderheiten'], zeilen: [
         ['TPF', '14', '75 m', '184 (24 1. Kl. + 160 2. Kl.)', '1650 kW; 140 km/h; RBDe 235–247 und 269'],
         ['RegionAlps', '16', '74,5 m', '188 (12 1. Kl. + 176 2. Kl.)', '100 Stehplätze; 140 km/h; St-Gingolph–Brig']] },
@@ -201,24 +206,16 @@ const ZUEGE = [
     daten: { 'Fahrzeugart': 'Elektrische Universallokomotive', 'Betreiber': 'SBB', 'Achsanordnung': "Bo'Bo'", 'Stromsystem': '15 kV, 16,7 Hz AC', 'Spurweite': 'Normalspur, 1435 mm', 'Höchstgeschwindigkeit': '200 km/h im Betrieb, gebaut für 230 km/h', 'Leistung': '6100 kW Dauerleistung', 'Anfahrzugkraft': '300 kN', 'Länge': '18,5 m', 'Gewicht': '84 t Dienstgewicht', 'Hersteller': 'SLM / ABB', 'In Betrieb seit': '1992 (erster SBB-Einsatz)', 'Anzahl': '119 Lokomotiven', 'Status': 'im Einsatz (Refit modernisiert)' },
     specOrder: ['Fahrzeugart', 'Betreiber', 'Achsanordnung', 'Stromsystem', 'Spurweite', 'Höchstgeschwindigkeit', 'Leistung', 'Anfahrzugkraft', 'Länge', 'Gewicht', 'Hersteller', 'In Betrieb seit', 'Anzahl', 'Status'],
     abschnitte: [
+      { titel: 'Hersteller und Flottenaufbau', p: ['SLM und ABB entwickelten die Re 460 Anfang der 1990er-Jahre für das Projekt «Bahn 2000». Von 1992 bis 1996 wurden 119 Lokomotiven an die SBB geliefert; das markante Design stammt von Pininfarina.', 'Zwischen 2017 und 2022 durchliefen alle 119 Loks im Werk Yverdon-les-Bains ein Refit mit neuen Stromrichtern, erneuerter Druckluftanlage, Verkabelung und Führersitzen. Damit sind sie bis in die 2040er-Jahre einsetzbar.'] },
+      { titel: 'Einsatz und Technik', liste: ['Drehstrom-Antriebstechnik, beim Refit mit neuen Stromrichtern', 'Lokkasten aus Stahl mit Fronten aus glasfaserverstärktem Kunststoff', 'Druckdichter Führerstand für schnelle Tunnelfahrten', 'Vielfachsteuerung für den Wendezugbetrieb mit Steuerwagen', 'Rekuperationsbremse, die Strom ins Netz zurückspeist'],
+        p: ['Die Re 460 zieht und schiebt vor allem InterCity- und InterRegio-Züge im ganzen Schweizer Normalspurnetz, meist mit IC2000-Doppelstockwagen oder Einheitswagen IV. Sie fährt bis 200 km/h.'] },
+      { titel: 'Ausstattung und Zugänglichkeit', p: ['Was Reisende im Zug vorfinden, hängt von den Wagen ab. Die IC2000-Doppelstockwagen haben Niederflureinstiege, Rollstuhlplätze und ein rollstuhlgängiges WC; die Einheitswagen IV sind nicht niederflurig. Details stehen auf den Seiten IC2000 und EW IV.'] },
       { titel: 'Fahrzeugkomponenten und Baugruppen', tabelle: { kopf: ['Fahrzeugteil', 'Funktion', 'Länge', 'Dienstgewicht', 'Antrieb'], zeilen: [
         ['Re 460', 'Elektrische Universallokomotive', '18,5 m', '84,0 t', '6100 kW / 300 kN']] } },
-      { titel: 'Fahrzeugkonzept und Baujahre', p: [
-        'Die Re 460 wurde Anfang der 1990er-Jahre im Rahmen des Projekts «Bahn 2000» entwickelt, um den Schnellverkehr auf den Schweizer Hauptlinien zu modernisieren. Von 1992 bis 1996 wurden insgesamt 119 Exemplare an die SBB geliefert.',
-        'Das markante Design stammt vom italienischen Designstudio Pininfarina.'] },
-      { titel: 'Modernisierung (Refit-Programm)', p: [
-        'Zwischen 2017 und 2022 durchliefen alle 119 Lokomotiven im SBB-Werk Yverdon-les-Bains ein umfassendes Refit-Programm. Dabei wurden unter anderem neue Stromrichter verbaut, die den Energieverbrauch senken, sowie die Druckluftanlage, die Verkabelung und die Führersitze erneuert.'] },
-      { titel: 'Ausstattung und Merkmale', liste: [
-        'Drehstrom-Antriebstechnik, Umrichter mit GTO, modernisiert auf IGBT',
-        'Aerodynamischer Lokkasten aus Stahl mit GFK-Fronten',
-        'Druckgeschützter Führerstand für Tunnelfahrten, z. B. Mattstetten–Rothrist und Lötschberg-Basistunnel',
-        'Vielfachsteuerung für den Wendezugbetrieb mit Steuerwagen (Bt, IC2000)',
-        'Energiesparende Rekuperationsbremse'] },
-      { titel: 'Einsatz bei der SBB', p: ['Die Re 460 zieht und schiebt vor allem InterCity- (IC) und InterRegio-Züge (IR) im gesamten Schweizer Normalspurnetz. Häufig fährt sie mit IC2000-Doppelstockwagen oder Einheitswagen IV (EW IV).'] },
       { titel: 'Weitere Betreiber und verwandte Typen', tabelle: { kopf: ['Betreiber / Typ', 'Bestand', 'Leistung', 'Höchstgeschwindigkeit', 'Besonderheiten'], zeilen: [
-        ['BLS (Re 465)', '18', '7000 kW', '230 km/h', 'Stärkere Variante der Lok 2000 für Güter- und Personenverkehr'],
+        ['BLS (Re 465)', '18', '6400 kW', '160 km/h (zugelassen)', 'Schwesterlok für Personen-, Autoverlad- und Güterzüge'],
         ['VR (Sr2)', '46', '6000 kW', '210 km/h', 'Breitspur-Variante (1524 mm) für Finnland'],
-        ['NSB (El 18)', '22', '5880 kW', '200 km/h', 'Variante für Norwegen, für nordische Bedingungen']] } },
+        ['NSB (El 18)', '22', '5400 kW', '200 km/h', 'Variante für Norwegen']] } },
       { titel: 'Zukunft und Ausblick', p: ['Dank des Refit-Programms sind die Lokomotiven technisch fit für weitere rund 20 Einsatzjahre. Sie bleiben voraussichtlich bis in die 2040er-Jahre das Rückgrat des lokbespannten SBB-Fernverkehrs.'] }
     ],
     quellen: ['SBB Fernverkehr – Re 460 Lokomotive', 'SBB Infrastruktur – Fahrtypenkatalog', 'SLM / ABB – Technische Dokumentation Re 460', 'BLS – Re 465 Übersicht'],
@@ -241,7 +238,10 @@ const ZUEGE = [
     specOrder: ['Hersteller', 'Zugbildung', 'Spurweite', 'Stromsystem', 'Länge', 'Gewicht', 'Leistung', 'Anfahrzugkraft', 'Höchstgeschwindigkeit', 'Neigetechnik', 'Sitzplätze', 'Niederflureinstieg', 'Anzahl', 'In Betrieb seit', 'Einsatz'],
     specNote: 'Die SBB nennt 250 km/h als Höchstgeschwindigkeit des Fahrzeugs; im Fahrtypenkatalog ist für den Schweizer Fahrtyp 200 km/h hinterlegt.',
     abschnitte: [
-      { titel: 'Beschaffung und Einsatz', p: ['Zur SBB-Flotte gehören 19 Astoro: sieben aus der ersten Beschaffung und zwölf später gelieferte Fahrzeuge.', 'Sie verkehren auf der internationalen Nord-Süd-Achse, unter anderem via Gotthard nach Milano, und auf Verbindungen in Richtung Deutschland.'] },
+      { titel: 'Hersteller und Flottenaufbau', p: ['Der Astoro gehört zur Pendolino-Familie von Alstom (ETR 610). Zur SBB-Flotte gehören 19 Züge: sieben aus der ersten Beschaffung und zwölf später gelieferte. Der erste fuhr 2009.'] },
+      { titel: 'Einsatz und Technik', p: ['Der Astoro verkehrt auf der Nord-Süd-Achse zwischen Deutschland, Österreich, der Schweiz und Italien, vor allem Genève–Brig–Milano, Basel–Bern–Brig–Milano und Zürich–München.', 'Dank Neigetechnik verkürzt er die Fahrzeiten über den Simplon und Richtung München. Der Zug ist 187 m lang, bietet 402 Sitzplätze und erreicht 250 km/h.'] },
+      { titel: 'Ausstattung und Zugänglichkeit', liste: ['Restaurant', 'Familienzone', 'WLAN', 'Steckdosen für Schweizer und internationale Stecker', 'Mobilfunkverstärker', 'Elektronische Reservationsanzeige', 'Velo- und Gepäckplätze', 'Rollstuhlplätze und rollstuhlgängiges WC', 'Vorrangsitze und Wickeltisch'],
+        p: ['Der Einstieg ist nicht niederflurig. Rollstuhlplätze und ein rollstuhlgängiges WC sind vorhanden.'] },
       { titel: 'Erneuerung', p: ['Seit 2024 erneuert die SBB die ganze Flotte im Werk Bellinzona. Innenraum, Fahrgastinformation und technische Komponenten werden überarbeitet; das Programm soll voraussichtlich bis Ende 2027 dauern.'] }
     ],
     quellen: ['SBB – Astoro: Flottengrösse, Sitzplätze und Kenndaten', 'SBB Infrastruktur – Fahrtypenkatalog 2026, Fahrtyp 6013, S. 332', 'SBB News – Erneuerung der Astoro-Flotte bis Ende 2027'],
@@ -255,6 +255,13 @@ const ZUEGE = [
   { id: 're-450', kat: 'personenverkehr', name: 'Re 450', beiname: 'DPZ', typ: 'Lokomotive der Doppelstock-Pendelzüge',
     text: ['Die Re 450 zieht und schiebt die doppelstöckigen Pendelzüge (DPZ) der Zürcher S-Bahn.', 'Die Pendelzüge bestehen aus der Lok, Doppelstockwagen und einem Steuerwagen.'],
     daten: { 'Hersteller': 'SLM / ABB', 'Achsfolge': 'Bo′Bo′', 'Höchstgeschwindigkeit': '130 km/h', 'Anzahl': '115', 'In Betrieb seit': '1989', 'Einsatz': 'S-Bahn Zürich' },
+    abschnitte: [
+      { titel: 'Hersteller und Flottenaufbau', p: ['SLM und ABB bauten die 115 Re 450 für die doppelstöckigen Pendelzüge (DPZ) der Zürcher S-Bahn. Die Doppelstockwagen lieferten SLM und Schindler Waggon; der erste DPZ fuhr 1989, ein Jahr vor dem Start der S-Bahn im Mai 1990.', 'Bis 1998 entstanden 113 Pendelzüge. Von 2011 bis 2018 wurden sie erneuert.'] },
+      { titel: 'Einsatz und Technik', p: ['Die DPZ bilden das Rückgrat der Zürcher S-Bahn und können auf fast dem ganzen Netz des ZVV fahren. Ein Zug ist 98,8 m lang, bietet 345 Sitzplätze und fährt bis 130 km/h.', 'Ein Pendelzug besteht aus der Re 450, Doppelstockwagen und einem Steuerwagen, sodass am Endbahnhof die Lok nicht umgesetzt werden muss.'] },
+      { titel: 'Ausstattung und Zugänglichkeit', liste: ['Klimaanlage', 'Kundeninformationssystem', 'Steckdosen in der 1. Klasse', 'Mobilfunkverstärker', 'Multifunktionsabteil mit Veloplätzen', 'Kinderwagenplätze', 'Ebenerdiger Einstieg im Niederflur-Doppelstockwagen (NDW)', 'Rollstuhlplätze und rollstuhlgängiges WC', 'Vorrangsitze'],
+        p: ['Stufenlos einsteigen können Rollstuhlfahrende im Niederflurwagen NDW, der in den Pendelzügen eingereiht ist.'] }
+    ],
+    quellen: ['SBB – DPZ: Flotte, Kenndaten, Ausstattung und Zugänglichkeit'],
     art: { typ: 'lok', form: 'kantig', kurz: true, farbe: W1, akzent: RED, panto: true }, bilder: [
       { src: 'bilder/re-450-c1.jpg', titel: 'Re 450 021 mit S24 in Zürich HB', foto: 'S5A-0043', lizenz: 'CC BY 2.0', lizenzUrl: 'https://creativecommons.org/licenses/by/2.0', quelle: 'https://commons.wikimedia.org/wiki/File:(CHE-Zurich)_SBB_CFF_FFS_450021_S24_@_Zurich_HB_2023-11-20.jpg' },
       { src: 'bilder/re-450-c2.jpg', titel: 'Re 450 059 in Zürich HB', foto: 'S5A-0043', lizenz: 'CC BY 2.0', lizenzUrl: 'https://creativecommons.org/licenses/by/2.0', quelle: 'https://commons.wikimedia.org/wiki/File:(CHE-Zurich)_SBB_CFF_FFS_450059_S24_@_Zurich_HB_2023-11-22.jpg' },
@@ -269,8 +276,10 @@ const ZUEGE = [
     daten: { 'Hersteller': 'Stadler', 'Plattform': 'Stadler KISS', 'Zugbildung': '6 Wagen', 'Spurweite': 'Normalspur, 1435 mm', 'Stromsystem': '15 kV 16,7 Hz AC', 'Länge': '151,88 m', 'Gewicht': '299 t leer, 382 t beladen', 'Leistung': '6000 kW', 'Anfahrzugkraft': '400 kN', 'Höchstgeschwindigkeit': '160 km/h', 'Sitzplätze': '466', 'Niederflureinstieg': 'ja', 'Nummern': '512 001–060', 'Anzahl': '60 bestellt', 'In Betrieb seit': 'Juli 2023', 'Einsatz': 'InterRegio, RegioExpress' },
     specOrder: ['Hersteller', 'Plattform', 'Zugbildung', 'Spurweite', 'Stromsystem', 'Länge', 'Gewicht', 'Leistung', 'Anfahrzugkraft', 'Höchstgeschwindigkeit', 'Sitzplätze', 'Niederflureinstieg', 'Nummern', 'Anzahl', 'In Betrieb seit', 'Einsatz'],
     abschnitte: [
-      { titel: 'Beschaffung', p: ['Die SBB bestellte 2021 insgesamt 60 neue IR-Dosto. Der erste kommerzielle Einsatz begann im Juli 2023; die vollständige Auslieferung soll bis Ende 2026 abgeschlossen sein.'] },
-      { titel: 'Einsatz und Komfort', p: ['Die Züge sind für InterRegio- und RegioExpress-Leistungen in der Region Zürich, im Mittelland und in der Westschweiz vorgesehen.', 'Niederflureinstiege, Rollstuhlplätze, Mehrzweckbereiche, Steckdosen und moderne Fahrgastinformation verbessern Zugänglichkeit und Reisekomfort. Doppeltraktion mit aufgewerteten RABe 511 ist möglich.'] }
+      { titel: 'Hersteller und Flottenaufbau', p: ['Die SBB bestellte 2021 bei Stadler 60 neue IR-Dosto. Der erste kommerzielle Einsatz begann im Juli 2023; die vollständige Auslieferung soll bis Ende 2026 abgeschlossen sein.'] },
+      { titel: 'Einsatz und Technik', p: ['Die Züge fahren InterRegio- und RegioExpress-Leistungen in der Region Zürich, im Mittelland und in der Westschweiz.', 'Ein Zug ist 150 m lang, bietet 466 Sitzplätze und fährt bis 160 km/h. Doppeltraktion mit den aufgewerteten IR-Dosto RABe 511 ist möglich.'] },
+      { titel: 'Ausstattung und Zugänglichkeit', liste: ['Niveaugleiche Niederflureinstiege', 'Rollstuhlplätze und rollstuhlgängiges WC', 'Vorrangsitze', 'Steckdosen', 'Fenster mit besserem Mobilfunkempfang', 'Moderne Fahrgastinformation', '2+1-Bestuhlung in der 1. Klasse', 'Acht Veloplätze an zwei Orten, mit Lademöglichkeit für E-Bikes', 'Kinderwagen- und Gepäckplätze, Wickeltisch'],
+        p: ['Dank niveaugleicher Einstiege ist der Einstieg an passenden Perrons barrierefrei. Eine Familien- und eine Businesszone sind in Umsetzung.'] }
     ],
     quellen: ['SBB – Neuer IR-Dosto: 60 Züge, Einsatz seit Juli 2023', 'SBB Infrastruktur – Fahrtypenkatalog 2026, Fahrtyp 6072, S. 389', 'Wikipedia – SBB RABe 512: Technik, Nummerierung und Beschaffung'],
     art: { typ: 'triebzug', nase: 'kurz', dd: true, farbe: W1, akzent: RED, tuer: RED, panto: true }, bilder: [
@@ -288,10 +297,12 @@ const ZUEGE = [
     specOrder: ['Hersteller', 'Fahrzeugtyp', 'Spurweite', 'Stromsystem', 'Länge', 'Breite', 'Gewicht', 'Leistung', 'Anfahrzugkraft', 'Höchstgeschwindigkeit', 'Niederflureinstieg', 'Nummern', 'Anzahl', 'In Betrieb seit', 'Einsatz'],
     specNote: 'Zwei Einheiten gingen später an Thurbo; die Zahl 17 bezeichnet die ursprüngliche Beschaffung und nicht zwingend den heutigen SBB-Bestand.',
     abschnitte: [
-      { titel: 'Beschaffung und Besonderheiten', p: ['Die SBB beschaffte 17 Fahrzeuge mit den Nummern 520 000–016. Die schmale Bauweise vergrössert den Sicherheitsabstand zur parallel verlaufenden Strasse.', 'Ein Teil der Türen war ursprünglich für die niedrigen Seetalperrons ausgelegt; bei der Modernisierung 2018–2021 kam ein Einstieg für 55-cm-Standardperrons dazu.'] },
-      { titel: 'Einsatz', p: ['Haupteinsatzgebiet ist die Seetalbahn Luzern–Lenzburg. Die Fahrzeuge fuhren zeitweise auch auf weiteren Linien ab Luzern und Lenzburg.'] }
+      { titel: 'Hersteller und Flottenaufbau', p: ['Stadler lieferte die Gelenktriebwagen GTW ab 2002; beschafft wurden 17 Fahrzeuge mit den Nummern 520 000–016. Die SBB führt heute 15 Züge in ihrer Übersicht.', 'Von 2018 bis 2021 wurden die Fahrzeuge modernisiert.'] },
+      { titel: 'Einsatz und Technik', p: ['Haupteinsatzgebiet ist die Seetalbahn Luzern–Lenzburg; zu Spitzenzeiten fahren zwei Züge gekuppelt.', 'Der dreiteilige Zug mit angetriebenem Mittelteil ist 53,5 m lang, bietet 124 Sitzplätze und fährt bis 115 km/h. Seine schmale Bauweise vergrössert den Abstand zur parallel verlaufenden Strasse.'] },
+      { titel: 'Ausstattung und Zugänglichkeit', liste: ['Pro Seite fünf Türen für die tiefen Seetalperrons (35 cm über Schiene)', 'Eine Tür für Standardperrons (55 cm)', 'Ein Rollstuhlplatz pro Zug', 'Vorrangsitze', 'Velo-, Kinderwagen- und Gepäckplätze', 'Fenster mit besserem Mobilfunkempfang'],
+        p: ['Rollstuhlfahrende können an allen Stationen der Seetalbahn selbstständig einsteigen.'] }
     ],
-    quellen: ['Wikipedia – SBB RABe 520: Bestand, Technik, Einsatz und Modernisierung', 'SBB Infrastruktur – Fahrtypenkatalog 2026, Fahrtyp 6027, S. 344'],
+    quellen: ['SBB – GTW Seetal: Flotte, Kenndaten und Zugänglichkeit', 'Wikipedia – SBB RABe 520: Bestand, Technik, Einsatz und Modernisierung','SBB Infrastruktur – Fahrtypenkatalog 2026, Fahrtyp 6027, S. 344'],
     art: { typ: 'triebzug', nase: 'mittel', farbe: W1, akzent: RED, tuer: RED, panto: true }, bilder: [
       { src: 'bilder/rabe-520-c1.jpg', titel: 'RABe 520 «GTW» in Beinwil am See', foto: 'Smiley.toerist', lizenz: 'CC BY-SA 3.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/3.0', quelle: 'https://commons.wikimedia.org/wiki/File:Beinwil_am_See_station.jpg' },
       { src: 'bilder/rabe-520-c2.jpg', titel: 'RABe 520 im Seetal bei Seengen', foto: 'Ray Swi-hymn from Sijhih-Taipei, Taiwan', lizenz: 'CC BY-SA 2.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/2.0', quelle: 'https://commons.wikimedia.org/wiki/File:20170710_SeengenHwy_5743_(36762966812).jpg' },
@@ -307,8 +318,10 @@ const ZUEGE = [
     specOrder: ['Hersteller', 'Zugbildung', 'Spurweite', 'Stromsystem', 'Länge', 'Gewicht', 'Leistung', 'Anfahrzugkraft', 'Höchstgeschwindigkeit', 'Niederflureinstieg', 'Nummern', 'Anzahl', 'In Betrieb seit', 'Einsatz'],
     specNote: 'Der SBB-Fahrtypenkatalog fasst unter diesem Fahrtyp auch technisch ähnliche vierteilige FLIRT-Varianten zusammen; die Leistung ist deshalb als Fahrtypwert angegeben.',
     abschnitte: [
-      { titel: 'Beschaffung und Flotte', p: ['Die Baureihe umfasst 30 Fahrzeuge mit den Nummern 521 001–030 und neun weitere Einheiten 521 201–209, zusammen 39 Züge. Die ersten Fahrzeuge gingen 2004 in Betrieb.', 'Stadler entwickelte die FLIRT-Grundplattform ursprünglich für die SBB.'] },
-      { titel: 'Einsatz', p: ['Die RABe 521 verkehren hauptsächlich auf Linien der trinationalen S-Bahn Basel sowie auf grenzüberschreitenden Leistungen nach Deutschland.', 'Automatische Kupplungen erlauben Mehrfachtraktion mit kompatiblen FLIRT; Niederflureinstiege und Mehrzweckbereiche helfen beim schnellen Fahrgastwechsel.'] }
+      { titel: 'Hersteller und Flottenaufbau', p: ['Stadler entwickelte die FLIRT-Plattform ursprünglich für die SBB. Die Baureihe RABe 521 umfasst 30 Fahrzeuge mit den Nummern 521 001–030 und neun weitere 521 201–209, zusammen 39 Züge. Die ersten fuhren 2004.'] },
+      { titel: 'Einsatz und Technik', p: ['Die RABe 521 verkehren hauptsächlich bei der trinationalen S-Bahn Basel und auf grenzüberschreitenden Verbindungen nach Deutschland.', 'Automatische Kupplungen erlauben Mehrfachtraktion mit kompatiblen FLIRT. Die FLIRT der SBB fahren bis 160 km/h.'] },
+      { titel: 'Ausstattung und Zugänglichkeit', liste: ['Niederflureinstieg', 'Rollstuhlplätze und rollstuhlgängiges WC', 'Vorrangsitze', 'Steckdosen in der 1. Klasse', 'Mehrzweckbereiche für Velos und Kinderwagen', 'Gepäckablagen'],
+        p: ['Die Niederflureinstiege und Mehrzweckbereiche helfen beim schnellen Fahrgastwechsel. Die Angaben gelten für die FLIRT-Familie der SBB.'] }
     ],
     quellen: ['SBB – FLIRT: Fahrzeugfamilie, Grunddaten und Einsatzregionen', 'SBB Infrastruktur – Fahrtypenkatalog 2026, Fahrtyp 6028, S. 345', 'Wikipedia – RABe 521: Bestand, Nummern und Einsatz'],
     art: { typ: 'triebzug', nase: 'mittel', farbe: W1, akzent: RED, tuer: RED, panto: true }, bilder: [
@@ -325,8 +338,10 @@ const ZUEGE = [
     daten: { 'Hersteller': 'Stadler', 'Zugbildung': '4 Wagen', 'Spurweite': 'Normalspur, 1435 mm', 'Stromsystem': '15 kV 16,7 Hz und 25 kV 50 Hz AC', 'Länge': '75,0 m', 'Gewicht': '135 t leer, 167 t beladen', 'Leistung': '2600 kW', 'Anfahrzugkraft': '200 kN', 'Höchstgeschwindigkeit': '160 km/h', 'Niederflureinstieg': 'ja', 'Nummern': '522 201–232', 'Anzahl': '32', 'In Betrieb seit': '2011', 'Einsatz': 'Léman Express, Regionalverkehr Basel' },
     specOrder: ['Hersteller', 'Zugbildung', 'Spurweite', 'Stromsystem', 'Länge', 'Gewicht', 'Leistung', 'Anfahrzugkraft', 'Höchstgeschwindigkeit', 'Niederflureinstieg', 'Nummern', 'Anzahl', 'In Betrieb seit', 'Einsatz'],
     abschnitte: [
-      { titel: 'Seriengeschichte', p: ['Eine erste Serie mit zwölf Fahrzeugen trug die Nummern 522 001–012. Weil diese Züge zunächst keine französische Zulassung erhielten, wurden sie später zu RABe 523 umgebaut.', 'Die heutige Baureihe umfasst 32 neuere Fahrzeuge mit den Nummern 522 201–232.'] },
-      { titel: 'Einsatz und Ausstattung', p: ['Die RABe 522 verkehren unter anderem im Léman-Express-Netz und auf grenznahen Regionalverbindungen im Raum Basel.', 'Wie andere FLIRT haben sie einen verteilten elektrischen Antrieb, breite Niederflureinstiege, Mehrzweckbereiche und automatische Kupplungen für Mehrfachtraktion.'] }
+      { titel: 'Hersteller und Flottenaufbau', p: ['Die Baureihe stammt von Stadler und umfasst 32 Fahrzeuge mit den Nummern 522 201–232; der erste RABe 522 fuhr 2011.', 'Eine erste Serie mit zwölf Fahrzeugen trug die Nummern 522 001–012. Weil diese Züge zunächst keine französische Zulassung erhielten, wurden sie später zu RABe 523 umgebaut.'] },
+      { titel: 'Einsatz und Technik', p: ['Die RABe 522 verkehren unter anderem im Léman-Express-Netz und auf grenznahen Regionalverbindungen im Raum Basel und im Jura.', 'Wie andere FLIRT haben sie einen verteilten elektrischen Antrieb und automatische Kupplungen für Mehrfachtraktion.'] },
+      { titel: 'Ausstattung und Zugänglichkeit', liste: ['Breite Niederflureinstiege', 'Rollstuhlplätze und rollstuhlgängiges WC', 'Vorrangsitze', 'Steckdosen in der 1. Klasse', 'Mehrzweckbereiche für Velos und Kinderwagen'],
+        p: ['Die Angaben gelten für die FLIRT-Familie der SBB; Details unterscheiden sich nach Ausführung.'] }
     ],
     quellen: ['SBB – FLIRT: Fahrzeugfamilie, Grunddaten und Einsatzregionen', 'SBB Infrastruktur – Fahrtypenkatalog 2026, Fahrtyp 6029, S. 346', 'Wikipedia – RABe 522: Serien, Bestand und Einsatz'],
     art: { typ: 'triebzug', nase: 'mittel', farbe: W1, akzent: RED, tuer: RED, panto: true }, bilder: [
@@ -343,11 +358,14 @@ const ZUEGE = [
     specOrder: ['Hersteller', 'Betreiber', 'Zugbildung', 'Spurweite', 'Stromsystem', 'Länge', 'Gewicht', 'Leistung', 'Anfahrzugkraft', 'Höchstgeschwindigkeit', 'Anzahl', 'In Betrieb seit', 'Einsatz'],
     specNote: 'Länge und Leergewicht je Variante nach dem SBB-Fahrtypenkatalog. FLIRT TSI bezeichnet die neuere, TSI-konforme sechsteilige Ausführung (RABe 524.3).',
     abschnitte: [
+      { titel: 'Hersteller und Flottenaufbau', p: ['Stadler baute die heute eingesetzten 53 Fahrzeuge zwischen 2006 und 2021: 23 vierteilige, 17 sechsteilige und 13 FLIRT TSI (RABe 524.3). Die ersten fuhren 2007.', 'Die neueren FLIRT TSI wurden für den Ausbau des grenzüberschreitenden Angebots beschafft.'] },
+      { titel: 'Einsatz und Technik', p: ['Die Baureihe prägt das TILO-Netz im Tessin und in der Lombardei, bis Milano. Je nach Linie fahren vier- oder sechsteilige Züge.', 'Die Mehrsystemtechnik erlaubt direkte Verbindungen über die Landesgrenze ohne Fahrzeugwechsel.'] },
+      { titel: 'Ausstattung und Zugänglichkeit', liste: ['Niederflureinstieg', 'Rollstuhlplätze und rollstuhlgängiges WC', 'Vorrangsitze', 'Steckdosen in der 1. Klasse', 'Velo-, Kinderwagen- und Gepäckplätze'],
+        p: ['Die Angaben gelten für die FLIRT-Familie der SBB; Details unterscheiden sich nach Ausführung.'] },
       { titel: 'Varianten', tabelle: { kopf: ['Variante', 'Anzahl', 'Länge', 'Leergewicht'], zeilen: [
         ['RABe 524, vierteilig', '23', '74,1 m', '133 t'],
         ['RABe 524, sechsteilig', '17', '106,3 m', '174 t'],
-        ['RABe 524.3, FLIRT TSI', '13', '104,9 m', '179 t']] } },
-      { titel: 'Beschaffung und Einsatz', p: ['Die heute eingesetzten Fahrzeuge wurden zwischen 2006 und 2021 gebaut; die ersten Züge gingen 2007 in Betrieb. Die Mehrsystemtechnik erlaubt direkte Verbindungen über die Landesgrenze ohne Lok- oder Fahrzeugwechsel.', 'Die Baureihe prägt das TILO-Netz im Tessin und in der Lombardei. Je nach Linie werden vier- oder sechsteilige Fahrzeuge eingesetzt; die neueren FLIRT TSI wurden besonders für den Ausbau des grenzüberschreitenden Angebots beschafft.'] }
+        ['RABe 524.3, FLIRT TSI', '13', '104,9 m', '179 t']] } }
     ],
     quellen: ['TILO – Daten und Fakten: Flotte mit 53 RABe 524', 'SBB Infrastruktur – Fahrtypenkatalog 2026, Fahrtypen 6030, 6031 und 6064', 'Wikipedia – SBB RABe 524: Baujahre, Varianten und Inbetriebnahme'],
     art: { typ: 'triebzug', nase: 'mittel', farbe: W1, akzent: '#1F6FB2', tuer: RED, panto: true }, bilder: [
@@ -364,8 +382,10 @@ const ZUEGE = [
     daten: { 'Fahrzeugart': 'Doppelstock-Reisezugwagen', 'Hersteller': 'Schindler-Konsortium (Schindler Waggon, FIAT-SIG, ABB/Adtranz)', 'Spurweite': 'Normalspur, 1435 mm', 'Länge': '26,8 m je Wagen', 'Gewicht': '47 t leer (FOS-Typ), 60 t beladen', 'Höchstgeschwindigkeit': '200 km/h', 'Sitzplätze': 'bis 86 je Wagen (1. Klasse), bis 126 je Wagen (2. Klasse)', 'Niederflureinstieg': 'ja', 'Wagenübergang': 'im Oberdeck', 'Antrieb': 'keiner, mit Re 460', 'Anzahl': '341 Wagen', 'In Betrieb seit': '1997', 'Einsatz': 'InterCity, InterRegio' },
     specOrder: ['Fahrzeugart', 'Hersteller', 'Spurweite', 'Länge', 'Gewicht', 'Höchstgeschwindigkeit', 'Sitzplätze', 'Niederflureinstieg', 'Wagenübergang', 'Antrieb', 'Anzahl', 'In Betrieb seit', 'Einsatz'],
     abschnitte: [
-      { titel: 'Beschaffung und Konstruktion', p: ['Die 341 Wagen wurden ab 1997 in mehreren Serien geliefert. Die Wagenkästen entstanden bei Schindler Waggon, die Drehgestelle bei FIAT-SIG und die elektrische Ausrüstung bei ABB/Adtranz.', 'Zur Familie gehören Wagen der 1. und 2. Klasse, Service-, Speise- und Steuerwagen.'] },
-      { titel: 'Modernisierung und Einsatz', p: ['Die SBB modernisierte die komplette Flotte im Programm IC2020. Erneuert wurden unter anderem Innenraum, Beleuchtung, Fahrgastinformation, Steckdosen und Mobilfunkdurchlässigkeit.', 'Die Kompositionen verkehren auf wichtigen Ost-West- und Nord-Süd-Achsen und lassen sich je nach Nachfrage unterschiedlich lang bilden.'] }
+      { titel: 'Hersteller und Flottenaufbau', p: ['Die 341 Doppelstockwagen wurden ab 1997 in mehreren Serien geliefert. Die Wagenkästen entstanden bei Schindler Waggon, die Drehgestelle bei FIAT-SIG und die elektrische Ausrüstung bei ABB/Adtranz.', 'Zur Familie gehören Wagen der 1. und 2. Klasse sowie Service-, Speise- und Steuerwagen. Von Ende 2019 bis Sommer 2025 modernisierte die SBB alle Wagen.'] },
+      { titel: 'Einsatz und Technik', p: ['Die Kompositionen fahren als InterCity und InterRegio auf wichtigen Ost-West- und Nord-Süd-Achsen, meist mit einer Re 460. Ein Zug bietet über 900 Sitzplätze und fährt bis 200 km/h.', 'Ein Wagen ist 26,8 m lang und bietet bis zu 86 Plätze in der 1. oder 126 in der 2. Klasse.'] },
+      { titel: 'Ausstattung und Zugänglichkeit', liste: ['Vollklimatisierung', 'Steckdosen in der 1. und 2. Klasse', '2+1-Bestuhlung in der 1. Klasse', 'Fenster mit besserem Mobilfunkempfang', 'Familienabteile, Ruhezone und Businesszone (nur InterCity)', 'Restaurant oder Bistro (InterCity)', 'Velo-, Kinderwagen- und Gepäckplätze', 'Niederflureinstieg', 'Rollstuhlplätze und rollstuhlgängiges WC', 'Vorrangsitze'],
+        p: ['Über die Niederflureinstiege gelangen Rollstuhlfahrende an passenden Perrons stufenlos in den Zug.'] }
     ],
     quellen: ['SBB – IC2000: Flottengrösse, Ausstattung und Kenndaten', 'SBB Infrastruktur – Fahrtypenkatalog 2026, Fahrtypen 3004/3005, S. 131–132', 'Wikipedia – IC2000: Bau, Varianten und Liefergeschichte'],
     art: { typ: 'wagen', dd: true, farbe: W1, akzent: RED }, bilder: [
@@ -382,8 +402,10 @@ const ZUEGE = [
     specOrder: ['Fahrzeugart', 'Hersteller', 'Betreiber', 'Spurweite', 'Länge', 'Gewicht', 'Steuerwagen', 'Höchstgeschwindigkeit', 'Niederflureinstieg', 'Antrieb', 'Anzahl', 'In Betrieb seit', 'Einsatz'],
     specNote: 'Die Zahl 496 ist ein historischer Wert und keine heutige Bestandszahl: Verkäufe, Umbauten und Ausrangierungen haben die Flotte verkleinert.',
     abschnitte: [
-      { titel: 'Beschaffung und Modernisierung', p: ['1981 wurden zunächst 40 klimatisierte Wagen der 1. Klasse geliefert; ab 1983 folgten Wagen der 2. Klasse und Speisewagen. Insgesamt entstanden 540 EW IV, davon 496 für die SBB.', 'Zwischen 2019 und 2025 setzte die SBB mehr als 250 EW-IV- und EuroCity-Wagen instand; die Modernisierung der Steuerwagen läuft laut SBB bis Ende 2027.'] },
-      { titel: 'Einsatz', p: ['Die Wagen verkehren als EC-, IC- und IR-Kompositionen, meist mit einer Re 460. Typische Einsatzachsen führen unter anderem von Genève nach Brig, von Basel nach Lugano sowie von Zürich über Olten nach Bern.'] }
+      { titel: 'Hersteller und Flottenaufbau', p: ['Die Einheitswagen IV entstanden bei SIG, SWS, SWP und SWA. 1981 kamen die ersten 40 klimatisierten Wagen der 1. Klasse; insgesamt wurden 540 gebaut, davon 496 für die SBB. EuroCity-Wagen folgten 1989, die Steuerwagen 1997.', 'Zwischen 2019 und 2025 setzte die SBB mehr als 250 EW-IV- und EuroCity-Wagen instand, mit Korrosionsschutz, neuem Anstrich und mobilfunkdurchlässigen Fenstern. Die Steuerwagen werden bis Ende 2027 modernisiert.'] },
+      { titel: 'Einsatz und Technik', p: ['Die Wagen verkehren als EC-, IC- und IR-Kompositionen, meist mit einer Re 460 und einem Steuerwagen. Typische Achsen führen von Genève nach Brig, von Basel nach Lugano und von Zürich über Olten nach Bern. Einzelne EC-Wagen fahren auch in internationalen Tages- und Nachtzügen.', 'Ein Wagen ist 26,4 m lang und für 200 km/h zugelassen; er bietet 60 Plätze in der 1. oder bis zu 86 in der 2. Klasse.'] },
+      { titel: 'Ausstattung und Zugänglichkeit', liste: ['Steckdosen', 'Familienzone', 'Ruhezone in der 1. Klasse (InterCity)', 'Speisewagen (EuroCity)', 'Veloplätze und eigene Velowagen', 'Rollstuhlplätze und rollstuhlgängiges WC', 'Vorrangsitze'],
+        p: ['Die Wagen sind nicht niederflurig. Rollstuhlplätze und ein rollstuhlgängiges WC sind vorhanden.'] }
     ],
     quellen: ['SBB – Einheitswagen IV / Eurocity: Eigenschaften, Einsatz und Modernisierung', 'SBB Infrastruktur – Fahrtypenkatalog 2026, Fahrtypen 3013 und 3016, S. 140 und 142', 'Wikipedia – Einheitswagen IV: Beschaffungs- und Entwicklungsgeschichte'],
     art: { typ: 'wagen', farbe: W1, akzent: RED }, bilder: [
@@ -402,8 +424,8 @@ const ZUEGE = [
     specOrder: ['Hersteller', 'Plattform', 'Achsfolge', 'Spurweite', 'Stromsystem', 'Länge', 'Gewicht', 'Leistung', 'Anfahrzugkraft', 'Höchstgeschwindigkeit', 'Baureihen', 'Anzahl', 'In Betrieb seit', 'Einsatz'],
     specNote: 'Die 50 Fahrzeuge stammen aus der historischen SBB-Cargo-Flottenübersicht; daraus folgt kein aktueller Einzelbestand im Jahr 2026.',
     abschnitte: [
-      { titel: 'Beschaffung und Einsatz', p: ['SBB Cargo führte die Re 482 ab 2002 ein. Die Lokomotiven übernahmen internationale Güterzüge in Richtung Deutschland und teilweise Österreich sowie Einsätze im Schweizer Güterverkehr.'] },
-      { titel: 'Zwei Serien', p: ['Die Flottenübersicht unterscheidet 35 Re 482.1 und 15 Re 482.2. Technisch gehören beide zur TRAXX-Familie; Ausrüstung und Länderpakete unterscheiden sich je nach Serie.'] }
+      { titel: 'Hersteller und Flottenaufbau', p: ['Bombardier Transportation lieferte die Re 482 ab 2002 an SBB Cargo. Sie gehören zur TRAXX-Familie.', 'Die Flottenübersicht unterscheidet 35 Re 482.1 und 15 Re 482.2, zusammen 50 Lokomotiven. Ausrüstung und Länderpakete unterscheiden sich je nach Serie.'] },
+      { titel: 'Einsatz und Technik', p: ['Die Lokomotiven übernahmen internationale Güterzüge in Richtung Deutschland und teilweise Österreich sowie Einsätze im Schweizer Güterverkehr.', 'Zugsicherungen für die Schweiz und Deutschland erlauben Fahrten über die Grenze ohne Lokwechsel.'] }
     ],
     quellen: ['SBB Cargo – Flottenbroschüre mit zwei Serien und technischen Eckdaten', 'SBB Infrastruktur – Fahrtypenkatalog 2026, Fahrtyp Re 482, S. 77', 'SBB Cargo – Flottenstrategie und internationaler Einsatz'],
     art: { typ: 'lok', form: 'kantig', farbe: CRED, akzent: '#3A4047', panto: true }, bilder: [
@@ -420,8 +442,8 @@ const ZUEGE = [
     specOrder: ['Hersteller', 'Plattform', 'Achsfolge', 'Spurweite', 'Stromsystem', 'Länge', 'Gewicht', 'Leistung', 'Anfahrzugkraft', 'Höchstgeschwindigkeit', 'Anzahl', 'In Betrieb seit', 'Einsatz'],
     specNote: 'Der SBB-Fahrtypenkatalog verwendet 86 t; ältere Literatur nennt teils 85,4 t. Hier gilt der offizielle Wert von 2026.',
     abschnitte: [
-      { titel: 'Beschaffung und Einsatz', p: ['SBB Cargo beschaffte 21 Re 484 für den internationalen Güterverkehr Schweiz–Italien. Später wurden Fahrzeuge auch im Schweizer Binnenverkehr eingesetzt.'] },
-      { titel: 'Mehrsystemtechnik', p: ['Die Lokomotive fährt unter dem Schweizer Wechselstromsystem und dem italienischen Gleichstromsystem. Die länderspezifische Zugbeeinflussung ermöglicht grenzüberschreitende Fahrten ohne Lokwechsel.'] }
+      { titel: 'Hersteller und Flottenaufbau', p: ['SBB Cargo beschaffte bei Bombardier Transportation 21 Re 484 der TRAXX-Familie. Sie wurden 2004 bis 2006 abgeliefert.'] },
+      { titel: 'Einsatz und Technik', p: ['Die Re 484 war für den internationalen Güterverkehr Schweiz–Italien bestimmt; später fuhr sie auch im Schweizer Binnenverkehr.', 'Die Lok fährt unter dem Schweizer Wechselstromsystem und dem italienischen Gleichstromsystem. Die länderspezifische Zugbeeinflussung ermöglicht Fahrten über die Grenze ohne Lokwechsel.'] }
     ],
     quellen: ['SBB Cargo – Flottenbroschüre mit Stückzahl und Hauptdaten', 'SBB Infrastruktur – Fahrtypenkatalog 2026, Fahrtyp Re 484, S. 78', 'SBB News – Einsatz von elf Re 484 im Schweizer Güterverkehr'],
     art: { typ: 'lok', form: 'kantig', farbe: CRED, akzent: '#8A939B', panto: true }, bilder: [
@@ -439,9 +461,9 @@ const ZUEGE = [
     specOrder: ['Achsfolge', 'Stromsystem', 'Spurweite', 'Länge', 'Gewicht', 'Anfahrzugkraft', 'Leistung', 'Höchstgeschwindigkeit', 'Elektrische Bremse', 'In Betrieb seit', 'Anzahl', 'Hersteller'],
     specNote: '* Je nach Baulos und Umbau. ** Wert für die bei SBB Historic beschriebene Lok 11108; SBB Infrastruktur weist für den Fahrtyp Re 420 4700 kW als maximale Leistung aus.',
     abschnitte: [
-      { titel: 'Entstehung und Technik', p: ['1964 erhielt die SBB sechs Prototypen. Es folgten mehrere Serien mit Anpassungen an Führerstand, Stromabnehmern und Fahrzeugkasten. SLM verantwortete den mechanischen Teil; die Elektrik stammte von BBC, MFO und SAAS.', 'Die vier Fahrmotoren werden über einen Stufenschalter gesteuert. Die Vielfachsteuerung erlaubt auch den Betrieb mit einer Re 6/6 als «Re 10/10».'] },
-      { titel: 'Einsatz und Varianten', p: ['Die Re 4/4 II wurde im Personen- und Güterverkehr eingesetzt, darunter vor Schnellzügen im Flachland sowie auf den Zufahrten zu Gotthard und Simplon. Ein Teil gelangte zu SBB Cargo.', 'Die Variante Re 421 entstand durch Umbauten für Deutschland; 30 Lokomotiven wurden 2011–2016 als «LION» für Verstärkungszüge der Zürcher S-Bahn modernisiert. SBB Cargo nennt die Re 420 weiterhin im Schweizer Mietangebot.'],
-        hinweis: 'Stückzahl: SBB Historic nennt 276 für die SBB beschaffte Re 4/4 II, ein älteres Cargo-Magazin 277 abgelieferte Lokomotiven. Diese Seite folgt SBB Historic; beide Zahlen sind keine aktuelle Flottenstärke.' }
+      { titel: 'Hersteller und Flottenaufbau', p: ['1964 erhielt die SBB sechs Prototypen; danach folgten mehrere Serien bis 1985. SLM in Winterthur baute den mechanischen Teil, die Elektrik stammte von BBC, MFO und SAAS.', 'Die Variante Re 421 entstand durch Umbauten für Deutschland; 30 Lokomotiven wurden 2011–2016 als «LION» für Verstärkungszüge der Zürcher S-Bahn modernisiert.'],
+        hinweis: 'Stückzahl: SBB Historic nennt 276 für die SBB beschaffte Re 4/4 II, ein älteres Cargo-Magazin 277 abgelieferte Lokomotiven. Diese Seite folgt SBB Historic; beide Zahlen sind keine aktuelle Flottenstärke.' },
+      { titel: 'Einsatz und Technik', p: ['Die Re 4/4 II fuhr im Personen- und Güterverkehr, darunter vor Schnellzügen im Flachland sowie auf den Zufahrten zu Gotthard und Simplon. Ein Teil gelangte zu SBB Cargo, das die Re 420 weiterhin im Schweizer Mietangebot nennt.', 'Die vier Fahrmotoren werden über einen Stufenschalter gesteuert. Die Vielfachsteuerung erlaubt auch den Betrieb mit einer Re 6/6 als «Re 10/10».'] }
     ],
     quellen: ['SBB Historic – Fahrzeugarchiv Re 4/4 II 11108; Serie, Varianten und Technik', 'SBB Infrastruktur – Fahrtypenkatalog 2026, Fahrtyp 1051 (Re 420), S. 67', 'SBB Cargo – Vermietung von Rollmaterial, Angebot Re 420', 'SBB Cargo – Cargo-Magazin 2/2015, S. 15; abweichende historische Stückzahl'],
     art: { typ: 'lok', form: 'kantig', kurz: true, farbe: CRED, panto: true },
@@ -461,9 +483,9 @@ const ZUEGE = [
     daten: { 'Achsfolge': "Bo′Bo′Bo′, 6 Triebachsen", 'Stromsystem': '15 kV, 16,7 Hz AC', 'Spurweite': 'Normalspur, 1435 mm', 'Länge': '19,31 m über Puffer', 'Gewicht': '120 t Dienstgewicht', 'Anfahrzugkraft': '398 kN', 'Leistung': '7244 kW Dauerleistung am Rad (7832 kW Stundenleistung)', 'Höchstgeschwindigkeit': '140 km/h', 'Elektrische Bremse': 'Rekuperation', 'In Betrieb seit': '1972; Serie 1975–1980', 'Anzahl': '89 (11601–11689)', 'Hersteller': 'Mechanik SLM Winterthur; Elektrik und Montage BBC, teils SAAS' },
     specOrder: ['Achsfolge', 'Stromsystem', 'Spurweite', 'Länge', 'Gewicht', 'Anfahrzugkraft', 'Leistung', 'Höchstgeschwindigkeit', 'Elektrische Bremse', 'In Betrieb seit', 'Anzahl', 'Hersteller'],
     abschnitte: [
-      { titel: 'Entstehung und Technik', p: ['Vier Prototypen erschienen 1972; danach folgten 85 Serienlokomotiven. SLM baute Kasten und Fahrgestell, BBC lieferte die elektrische Ausrüstung.', 'Die Endmontage erfolgte überwiegend bei BBC in Oerlikon, bei den Nummern 11635–11654 durch SAAS in Genf. Die ersten beiden Prototypen besassen einen zweiteiligen Kasten, die übrigen Fahrzeuge einen einteiligen.'] },
-      { titel: 'Einsatz und Weiterentwicklung', p: ['Die Lokomotiven fuhren zunächst schwere Personen- und Güterzüge. In Vielfachsteuerung mit einer Re 4/4 II oder III bildeten sie für schwere Güterzüge die als «Re 10/10» bekannte Kombination. Nach der SBB-Divisionalisierung wurden die Re 6/6 SBB Cargo zugeteilt.', 'SBB Cargo führt die Re 620 weiterhin in seinem Mietangebot für die Schweiz; der tatsächliche Bestand verändert sich durch Ausrangierungen.', 'Ab 2007 erhielten 63 Lokomotiven ETCS Level 2. SBB Historic nennt den Beginn der altersbedingten Ausrangierungen im Februar 2021.'],
-        hinweis: 'Die Zahl 89 bezeichnet die historisch gebaute Serie und nicht den heutigen betriebsfähigen Bestand.' }
+      { titel: 'Hersteller und Flottenaufbau', p: ['Vier Prototypen erschienen 1972; von 1975 bis 1980 folgten 85 Serienlokomotiven, zusammen 89 (11601–11689). SLM baute Kasten und Fahrgestell, BBC lieferte die elektrische Ausrüstung.', 'Die Endmontage erfolgte meist bei BBC in Oerlikon, bei den Nummern 11635–11654 durch SAAS in Genf. Die ersten beiden Prototypen hatten einen zweiteiligen Kasten.'],
+        hinweis: 'Die Zahl 89 bezeichnet die historisch gebaute Serie und nicht den heutigen betriebsfähigen Bestand.' },
+      { titel: 'Einsatz und Technik', p: ['Die Lokomotiven fuhren zunächst schwere Personen- und Güterzüge. Mit einer Re 4/4 II oder III in Vielfachsteuerung bildeten sie für schwere Güterzüge die «Re 10/10». Nach der Aufteilung der SBB kamen sie zu SBB Cargo, das die Re 620 weiterhin im Mietangebot führt.', 'Ab 2007 erhielten 63 Lokomotiven ETCS Level 2. SBB Historic nennt den Beginn der altersbedingten Ausrangierungen im Februar 2021.'] }
     ],
     quellen: ['SBB Historic – Fahrzeugarchiv Re 6/6 11666; Serie, Hersteller und Technik', 'SBB Infrastruktur – Fahrtypenkatalog 2026, Fahrtyp 1064 (Re 620), S. 80', 'SBB Cargo – Vermietung von Rollmaterial, Angebot Re 620'],
     art: { typ: 'lok', form: 'kantig', achsen: 6, farbe: CRED, panto: true },
@@ -484,8 +506,8 @@ const ZUEGE = [
     specOrder: ['Hersteller', 'Plattform', 'Achsfolge', 'Spurweite', 'Stromsystem', 'Länge', 'Gewicht', 'Leistung', 'Anfahrzugkraft', 'Höchstgeschwindigkeit', 'Fahrzeugnummern', 'Anzahl', 'In Betrieb seit', 'Einsatz'],
     specNote: 'Die Nummernreihe hat Lücken, weil SBB Cargo von der ursprünglich vorgesehenen Serie nur zwölf Lokomotiven übernahm.',
     abschnitte: [
-      { titel: 'Beschaffung und Einsatz', p: ['Die Lokomotiven fuhren ab 2005 im Güterverkehr Schweiz–Italien. Die Zahl 12 bezeichnet die damalige SBB-Cargo-Flotte und ist keine gesicherte Bestandszahl für Oktober 2026.'] },
-      { titel: 'Technik', p: ['Die Re 474 verbindet das Schweizer Wechselstromnetz mit dem italienischen 3-kV-Gleichstromnetz. Mehrsystemausrüstung und nationale Zugsicherungen ermöglichten den durchgehenden Einsatz über die Grenze.'] }
+      { titel: 'Hersteller und Flottenaufbau', p: ['Siemens baute die Re 474 als Zweisystemlok der Familie ES 64 F4. SBB Cargo setzte ab 2005 zwölf Lokomotiven ein; diese Zahl ist keine gesicherte Bestandszahl für Oktober 2026.'] },
+      { titel: 'Einsatz und Technik', p: ['Die Lokomotiven fuhren im Güterverkehr Schweiz–Italien, unter anderem über den Simplon nach Domodossola.', 'Die Re 474 verbindet das Schweizer Wechselstromnetz mit dem italienischen 3-kV-Gleichstromnetz. Mehrsystemausrüstung und nationale Zugsicherungen ermöglichten den durchgehenden Einsatz über die Grenze.'] }
     ],
     quellen: ['SBB Cargo – Flottenbroschüre mit Stückzahl und Hauptdaten', 'SBB Infrastruktur – Fahrtypenkatalog 2026, Fahrtyp Re 474, S. 75'],
     art: { typ: 'lok', form: 'kantig', farbe: CRED, akzent: '#D9DDE1', panto: true }, bilder: [
@@ -501,8 +523,8 @@ const ZUEGE = [
     specOrder: ['Hersteller', 'Plattform', 'Achsfolge', 'Spurweite', 'Leistung', 'Länge', 'Gewicht', 'Höchstgeschwindigkeit', 'Zugsicherung', 'Eigentümer', 'Betreiber', 'Anzahl', 'In Betrieb seit'],
     specNote: 'Die Lokomotiven gehören nicht der SBB. Stückzahl und Mietdauer beziehen sich auf den Vertrag für SBB Cargo Schweiz.',
     abschnitte: [
-      { titel: 'Beschaffung und Einsatz', p: ['Die ersten fünf Fahrzeuge trafen 2024 in Muttenz ein. Hauptaufgabe ist der Schweizer Binnengüterverkehr; Zulassungen bestehen auch für grenzüberschreitende Einsätze.', 'Rund 550 Lokführerinnen und Lokführer wurden geschult.'] },
-      { titel: 'Abgrenzung', p: ['Diese Seite behandelt die 35 Vectron AC von SBB Cargo Schweiz. Die Mehrsystem-Vectron von SBB Cargo International gehören zu anderen Beschaffungs- und Leasingverträgen.'] }
+      { titel: 'Hersteller und Flottenaufbau', p: ['SBB Cargo hat 35 Vectron AC von Siemens Mobility für acht Jahre gemietet; die Lokomotiven gehören der LokRoll 3 AG. Die ersten fünf trafen 2024 in Muttenz ein.', 'Diese Seite behandelt die 35 Vectron AC von SBB Cargo Schweiz. Die Mehrsystem-Vectron von SBB Cargo International gehören zu anderen Beschaffungs- und Leasingverträgen.'] },
+      { titel: 'Einsatz und Technik', p: ['Hauptaufgabe ist der Schweizer Binnengüterverkehr, bis die neuen eigenen Streckenlokomotiven geliefert sind. Zulassungen bestehen auch für grenzüberschreitende Einsätze.', 'Die Loks leisten bis 6400 kW und fahren in der Schweiz bis 120 km/h. Rund 550 Lokführerinnen und Lokführer wurden geschult.'] }
     ],
     quellen: ['SBB Cargo – Einführung der 35 BR 193 und Schweizer Höchstgeschwindigkeit', 'Siemens Mobility – Bestellung, Vermietung und Auslieferung 2024', 'Siemens Mobility – Vectron-Mehrsystemlokomotiven für SBB Cargo International'],
     art: { typ: 'lok', form: 'kantig', farbe: CRED, akzent: '#F3F4F2', panto: true }, bilder: [] },
@@ -515,8 +537,8 @@ const ZUEGE = [
     specOrder: ['Hersteller', 'Bauart', 'Achsfolge', 'Spurweite', 'Stromsystem', 'Länge', 'Gewicht', 'Leistung', 'Anfahrzugkraft', 'Höchstgeschwindigkeit', 'Nummern', 'Anzahl', 'In Betrieb seit', 'Einsatz'],
     specNote: 'Der SBB-Fahrtypenkatalog 2026 führt die Re 421 als Alias des aktiven Fahrtyps 1051 Re 420. Die 84 t sind ein Fahrdynamikwert für diesen zusammengefassten Fahrtyp.',
     abschnitte: [
-      { titel: 'Umbau für Deutschland', p: ['Als Basis dienten die Re 4/4 II 11371 bis 11397; die nach einem Brand ausgeschiedene 11382 war nicht Teil des Programms.', 'Für die deutsche Zulassung erhielten die Lokomotiven die nötigen Anpassungen und Ausrüstungen sowie die neue Nummernreihe 421 371 bis 421 397.'] },
-      { titel: 'Einsatz und Katalogstatus', p: ['Die Re 421 verbindet die robuste Technik der Re 4/4 II mit grenzüberschreitender Einsatzfähigkeit und war vor allem für Güterzüge nach Deutschland vorgesehen.', 'Im SBB-Fahrtypenkatalog 2026 bleibt sie als Alias des aktiven Re-420-Fahrtyps hinterlegt.'] }
+      { titel: 'Hersteller und Flottenaufbau', p: ['Die Re 421 sind umgebaute Re 4/4 II von SLM, BBC, MFO und SAAS. Als Basis dienten die Nummern 11371 bis 11397; die nach einem Brand ausgeschiedene 11382 war nicht Teil des Programms, deshalb sind es 26 Lokomotiven.', 'Der Umbau fand 2002 bis 2004 statt. Die Loks erhielten die Nummern 421 371 bis 421 397.'] },
+      { titel: 'Einsatz und Technik', p: ['Für die deutsche Zulassung erhielten die Lokomotiven die nötigen Anpassungen und Ausrüstungen. Sie verbinden die robuste Technik der Re 4/4 II mit grenzüberschreitender Einsatzfähigkeit und waren vor allem für Güterzüge nach Deutschland vorgesehen.', 'Im SBB-Fahrtypenkatalog 2026 bleibt die Re 421 als Alias des aktiven Re-420-Fahrtyps hinterlegt.'] }
     ],
     quellen: ['SBB Infrastruktur – Fahrtypenkatalog 2026, Fahrtyp 1051 Re 420 mit Alias Re 421, S. 67', 'Archiv SBB Historic – Fahrzeugdossier Re 4/4 II 11108, Angaben zur Fahrzeugfamilie und zum Umbau Re 421, Stand Oktober 2025'],
     art: { typ: 'lok', form: 'kantig', kurz: true, farbe: CRED, akzent: '#F3F4F2', panto: true }, bilder: [

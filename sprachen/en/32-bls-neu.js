@@ -2,6 +2,10 @@
 uebDict({ 'Schotter- und Kippwagen': 'Ballast and tipper wagons' });
 
 uebZug('bls-br-185', {
+  abschnitte: [
+      { titel: 'Manufacturer and fleet build-up', p: ['The four locomotives are TRAXX F140 AC by Bombardier Transportation. They belong to the lessor Alpha Trains and are registered in Germany; BLS Cargo leases them.'] },
+      { titel: 'Service and technology', p: ['Approved for Germany, Austria and Switzerland, they supplement BLS Cargo’s own Re 485, to which they are technically closely related.', 'They have up to 5600 kW and run at up to 140 km/h.'] }
+    ],
   typ: 'Electric locomotive leased from Alpha Trains',
   text: ['Besides its own locomotives, BLS Cargo uses leased locomotives registered in Germany. Among them are four TRAXX of the 185 class from Alpha Trains.', 'Technically they are close relatives of the BLS Re 485, which match the German 185 class with additional Swiss equipment.'],
   kennzahlen: [['4', 'leased locomotives'], ['140 km/h', 'top speed'], ['up to 5600 kW', 'power'], ['D, A, CH', 'approval']],
@@ -10,6 +14,10 @@ uebZug('bls-br-185', {
   bilder: ['185 525 in BLS colours in Fribourg (2009)']
 });
 uebZug('bls-br-186', {
+  abschnitte: [
+      { titel: 'Manufacturer and fleet build-up', p: ['The nine locomotives are multi-system TRAXX F140 MS by Bombardier Transportation. They belong to the lessor Railpool; photos show, among others, 186 101, 103–105, 108 and 109 with BLS lettering.'] },
+      { titel: 'Service and technology', p: ['The locomotives are approved for Germany, Austria, Switzerland, Italy and the Netherlands. They haul freight trains on the Rotterdam–Italy axis, for example the Melzo Shuttle.', 'Under AC they deliver 5600 kW, under 1.5 kV DC in the Netherlands 4000 kW; they run at up to 140 km/h.'] }
+    ],
   typ: 'Multi-system locomotive leased from Railpool',
   text: ['BLS Cargo leases nine multi-system TRAXX of the 186 class from Railpool. They may run in five countries, as far as the Netherlands.', 'This lets them haul freight trains on the Rotterdam–Italy axis, for example the Melzo Shuttle.'],
   kennzahlen: [['9', 'leased locomotives'], ['140 km/h', 'top speed'], ['5600 kW', 'power'], ['5', 'countries']],
@@ -18,6 +26,10 @@ uebZug('bls-br-186', {
   bilder: ['186 101 of BLS Cargo', '186 109 with the Melzo Shuttle near Elten (NL)']
 });
 uebZug('bls-br-187', {
+  abschnitte: [
+      { titel: 'Manufacturer and fleet build-up', p: ['The three locomotives belong to the third TRAXX generation (AC3) by Bombardier Transportation. BLS Cargo has leased them long-term from the lessor Railpool; 187 004 appears on photos with BLS lettering.'] },
+      { titel: 'Service and technology', p: ['Approved for Germany, Austria and Switzerland, they haul BLS Cargo freight trains.', 'They have 5600 kW and weigh 84 t. The 187 class also exists with a small diesel engine for the «last mile» without catenary; whether the three BLS locomotives have it is not publicly documented.'] }
+    ],
   typ: 'Electric locomotive leased from Railpool',
   text: ['BLS Cargo has leased three locomotives of the 187 class from Railpool on a long-term basis. They belong to the third TRAXX generation.', 'The 187 class also exists with a small diesel engine for the «last mile» without catenary. Whether the three BLS locomotives have it is not publicly documented.'],
   kennzahlen: [['3', 'leased locomotives'], ['5600 kW', 'power'], ['84 t', 'weight'], ['D, A, CH', 'approval']],
@@ -25,6 +37,10 @@ uebZug('bls-br-187', {
   bilder: ['187 004 of BLS Cargo']
 });
 uebZug('bls-br-193', {
+  abschnitte: [
+      { titel: 'Manufacturer and fleet build-up', p: ['The locomotives are Vectron by Siemens Mobility. According to the fleet list, BLS Cargo leases six locomotives plus four more, some of which run in the colours of the intermodal operator Hupac (among them 193 494–496). Photos also show 193 711, 713 and 716.'] },
+      { titel: 'Service and technology', p: ['Approved for Germany, Austria, Switzerland, Italy and the Netherlands, they mainly run in transit traffic between the North Sea ports and Italy.', 'As multi-system locomotives they deliver up to 6400 kW.'] }
+    ],
   typ: 'Leased Siemens Vectron for BLS Cargo',
   text: ['In addition to its own Re 475, BLS Cargo leases Vectron locomotives of the 193 class. According to the fleet list there are six locomotives plus four more, some of which run in the colours of the intermodal operator Hupac.', 'Approved as far as the Netherlands and Italy, they mainly run in transit traffic.'],
   kennzahlen: [['10', 'leased locomotives'], ['up to 6400 kW', 'power'], ['5', 'countries'], ['Siemens', 'builder']],

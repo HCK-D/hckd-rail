@@ -19,10 +19,13 @@ ZUEGE.push(
     specOrder: ['Bauart', 'Hersteller', 'Betreiber', 'Spurweite', 'Fahrzeugnummern', 'Länge', 'Gewicht', 'Leistung', 'Höchstgeschwindigkeit', 'Sitzplätze', 'Anzahl', 'In Betrieb seit'],
     specNote: 'Sitzplätze ohne Klappsitze: RE 46 in der 1. und 198 in der 2. Klasse, S-Bahn 35 und 188. Die Züge 125–137 gehören der BLS Fernverkehr AG.',
     abschnitte: [
+      { titel: 'Hersteller und Flottenaufbau', p: ['Stadler lieferte der BLS 67 MIKA: 39 RegioExpress-Züge (101–139, in Betrieb 2021–2026) und 28 S-Bahn-Züge (201–228, 2022–2025). Die Züge 125–137 gehören der BLS Fernverkehr AG, alle übrigen der BLS AG.', 'Die MIKA lösten ältere Züge wie die EW-III-Pendelzüge und die NPZ ab.'] },
+      { titel: 'Einsatz und Technik', p: ['Die MIKA fahren bei den S-Bahnen Bern und Luzern (unter anderem S2, S4, S6 und S7), als RegioExpress Bern–Spiez–Zweisimmen und über die Lötschberg-Bergstrecke nach Brig und Domodossola sowie als InterRegio 66 Bern–Neuchâtel–La Chaux-de-Fonds.', 'Der sechsteilige Zug ist 104,9 m lang, leistet 3500 kW und fährt bis 160 km/h.'] },
+      { titel: 'Ausstattung und Zugänglichkeit', liste: ['Klimaanlage', 'Steckdosen an jedem Sitzplatz und im Multifunktionsabteil', 'Fenster mit besserem Mobilfunkempfang', 'Selbstbedienungs-Bistrozone mit Snack- und Kaffeeautomaten (RE)', '12 Veloplätze (RE) bzw. 6 (S-Bahn), mit Steckdosen für E-Bikes', 'Niederflureinstieg mit Spaltüberbrückung an allen Türen', '3 Rollstuhlplätze: 1 in der 1. Klasse, 2 in der 2. Klasse mit Zugang zum WC', '2 WC, davon 1 rollstuhlgängig, mit Wickeltisch', 'Videoüberwachung und SOS-Tasten'],
+        p: ['Dank Niederflureinstiegen mit Spaltüberbrückung ist der Einstieg an allen Türen stufenlos.'] },
       { titel: 'Zwei Ausführungen', tabelle: { kopf: ['Merkmal', 'RegioExpress', 'S-Bahn'], zeilen: [
         ['Nummern', '101–139', '201–228'], ['Anzahl', '39', '28'], ['In Betrieb gesetzt', '2021–2026', '2022–2025'],
-        ['Sitzplätze 1. / 2. Klasse', '46 / 198', '35 / 188'], ['Stehplätze', '149', '241'], ['Veloplätze', '12', '6']] } },
-      { titel: 'Einsatz', p: ['Laut BLS fahren die MIKA unter anderem auf den S-Bahn-Linien rund um Bern und Luzern, auf dem RegioExpress Bern–Spiez–Zweisimmen und weiter bis Brig und Domodossola sowie auf dem InterRegio Bern–Neuchâtel–La Chaux-de-Fonds.'] }
+        ['Sitzplätze 1. / 2. Klasse', '46 / 198', '35 / 188'], ['Stehplätze', '149', '241'], ['Veloplätze', '12', '6']] } }
     ],
     quellen: ['BLS – Flotte: RABe 528 «MIKA», technische Daten RE und S-Bahn', 'Datenblatt HCKD «RABe 528 MIKA», Oktober 2026'],
     art: { typ: 'triebzug', nase: 'mittel', farbe: W1, akzent: BLS_GRUEN, tuer: BLS_GRUEN, panto: true },
@@ -39,10 +42,13 @@ ZUEGE.push(
     daten: { 'Bauart': 'Doppelstock-Elektrotriebzug', 'Fahrzeugfamilie': 'KISS', 'Hersteller': 'Stadler', 'Betreiber': 'BLS AG', 'Spurweite': 'Normalspur, 1435 mm', 'Fahrzeugnummern': '001–034 (4-teilig), 035–039 (6-teilig)', 'Länge': '102,6 m (4-teilig), 151,88 m (6-teilig)', 'Gewicht': '216 t (4-teilig), 301 t (6-teilig)', 'Leistung': '4000 kW (6-teilig: 6000 kW Spitze)', 'Höchstgeschwindigkeit': '160 km/h', 'Sitzplätze': '335 (4-teilig), 546 (6-teilig)', 'Anzahl': '39 Züge', 'In Betrieb seit': '2012' },
     specOrder: ['Bauart', 'Fahrzeugfamilie', 'Hersteller', 'Betreiber', 'Spurweite', 'Fahrzeugnummern', 'Länge', 'Gewicht', 'Leistung', 'Höchstgeschwindigkeit', 'Sitzplätze', 'Anzahl', 'In Betrieb seit'],
     abschnitte: [
+      { titel: 'Hersteller und Flottenaufbau', p: ['Der MUTZ gehört zur KISS-Familie von Stadler. Die BLS hat 34 vierteilige Züge (001–034, in Betrieb 2012–2017, 032 und 033 2019/2020) und 5 sechsteilige (035–039, 2020).', 'Die sechsteiligen Züge und die 032–034 gehören der BLS Fernverkehr AG, die übrigen der BLS AG.'] },
+      { titel: 'Einsatz und Technik', p: ['Die MUTZ fahren bei der S-Bahn Bern (S1 Fribourg–Bern–Thun, S11 Thun–Bern, S3/S31 Biel–Münchenbuchsee–Bern–Belp) und als InterRegio 17 Bern–Burgdorf–Olten und InterRegio 65 Bern–Biel.', 'Beide Ausführungen leisten 4000 kW und fahren bis 160 km/h. Breite Türen beschleunigen das Ein- und Aussteigen.'] },
+      { titel: 'Ausstattung und Zugänglichkeit', liste: ['Klimaanlage, Boden- und Wandheizung', 'Optische und akustische Fahrgastinformation', 'Steckdosen in der 1. Klasse (sechsteilig: auch in der 2. Klasse)', '6 Veloplätze (vierteilig) bzw. 16 (sechsteilig)', 'Niederflureinstiege mit Schiebetritten an allen Türen', '3 Rollstuhlplätze (vierteilig) bzw. 4 (sechsteilig), in beiden Klassen', '2 WC, davon 1 rollstuhlgängig und 1 mit Wickeltisch', 'Videoüberwachung'],
+        p: ['An allen Türen gibt es Niederflureinstiege mit Schiebetritten; Rollstuhlplätze sind in beiden Klassen vorhanden.'] },
       { titel: 'Vier- und sechsteilig', tabelle: { kopf: ['Merkmal', 'vierteilig', 'sechsteilig'], zeilen: [
         ['Nummern', '001–034', '035–039'], ['In Betrieb gesetzt', '2012–2017, 032–033 2019/2020', '2020'], ['Länge', '102,6 m', '151,88 m'],
-        ['Sitzplätze 1. / 2. Klasse', '61 / 274', '122 / 424'], ['Leistung', '4000 kW', '6000 kW Spitze, 4000 kW Dauer']] } },
-      { titel: 'Einsatz', p: ['Laut BLS fahren die MUTZ unter anderem auf den S-Bahn-Linien Freiburg–Bern–Thun und Biel–Bern–Belp sowie als InterRegio Bern–Burgdorf–Olten und Bern–Biel.'] }
+        ['Sitzplätze 1. / 2. Klasse', '61 / 274', '122 / 424'], ['Leistung', '4000 kW', '6000 kW Spitze, 4000 kW Dauer']] } }
     ],
     quellen: ['BLS – Flotte: RABe 515 «MUTZ», technische Daten', 'Datenblätter HCKD «RABe 515 MUTZ» vier- und sechsteilig, Oktober 2026'],
     art: { typ: 'triebzug', nase: 'kurz', dd: true, farbe: W1, akzent: BLS_GRUEN, tuer: BLS_GRUEN, panto: true },
@@ -57,7 +63,12 @@ ZUEGE.push(
     nummern: [[535101, 535125]],
     daten: { 'Bauart': 'Niederflur-Elektrotriebzug, 4 Wagen', 'Hersteller': 'Bombardier Transportation', 'Betreiber': 'BLS AG', 'Spurweite': 'Normalspur, 1435 mm', 'Fahrzeugnummern': '101–125', 'Länge': '62,7 m', 'Gewicht': '105 t', 'Leistung': '1000 kW', 'Höchstgeschwindigkeit': '160 km/h', 'Sitzplätze': '142', 'Anzahl': '25 Züge', 'In Betrieb seit': '2008' },
     specOrder: ['Bauart', 'Hersteller', 'Betreiber', 'Spurweite', 'Fahrzeugnummern', 'Länge', 'Gewicht', 'Leistung', 'Höchstgeschwindigkeit', 'Sitzplätze', 'Anzahl', 'In Betrieb seit'],
-    abschnitte: [{ titel: 'Einsatz', p: ['Laut BLS fährt der Lötschberger unter anderem Zweisimmen–Spiez, Spiez–Interlaken Ost und Spiez–Frutigen sowie auf S-Bahn-Linien zwischen Thun, Bern, Burgdorf und Solothurn.'] }],
+    abschnitte: [
+      { titel: 'Hersteller und Flottenaufbau', p: ['Bombardier lieferte der BLS 25 vierteilige Lötschberger: 101–113 in den Jahren 2008–2010 und 114–125 im Jahr 2012.', 'Seit Januar 2024 modernisiert die BLS die Flotte in der Werkstätte Bönigen, bis Mitte 2027. Dabei ersetzen unter anderem Doppelsteckdosen die einzelnen Steckdosen, LED-Leuchten die Neonröhren, und CO₂-Sensoren regeln die Frischluft nach Bedarf.'] },
+      { titel: 'Einsatz und Technik', p: ['Der Lötschberger fährt im Berner Oberland (RE Zweisimmen–Spiez, Spiez–Interlaken Ost und Spiez–Frutigen) und bei der S-Bahn Bern zwischen Thun, Belp, Bern, Burgdorf, Konolfingen und Solothurn.', 'Der Zug ist 62,7 m lang, wiegt 105 t und fährt bis 160 km/h. Bis zu vier Züge lassen sich kuppeln.'] },
+      { titel: 'Ausstattung und Zugänglichkeit', liste: ['Klimaanlage und Heizung', 'Steckdosen in der 1. und 2. Klasse', 'Optische und akustische Fahrgastinformation', '6 Veloplätze (101–113) bzw. 12 (114–125)', 'Niederflureinstieg an allen Türen, pro Seite ein Einstieg mit Schiebetritt', '2 Rollstuhlplätze in der 2. Klasse', '1 rollstuhlgängiges WC', 'Videoüberwachung'],
+        p: ['Alle Türen sind niederflurig. Einen Wickeltisch gibt es laut BLS nicht.'] }
+    ],
     quellen: ['BLS – Flotte: RABe 535 «Lötschberger», technische Daten und Linien', 'Datenblatt HCKD «RABe 535 Lötschberger», Oktober 2026'],
     art: { typ: 'triebzug', nase: 'mittel', farbe: W1, akzent: BLS_GRUEN, tuer: BLS_GRUEN, panto: true },
     bilder: [
@@ -72,7 +83,12 @@ ZUEGE.push(
     daten: { 'Bauart': 'Niederflur-Elektrotriebzug, 3 oder 4 Wagen', 'Hersteller': 'Vevey Technologies / Bombardier', 'Betreiber': 'BLS AG', 'Spurweite': 'Normalspur, 1435 mm', 'Länge': '47,7 m (3-teilig), 61,9 m (4-teilig)', 'Gewicht': '79 t (3-teilig), 96 t (4-teilig)', 'Leistung': '1000 kW', 'Höchstgeschwindigkeit': '140 km/h', 'Sitzplätze': '134 (3-teilig), 179 (4-teilig)', 'Anzahl': '36 Züge', 'In Betrieb seit': '1998' },
     specOrder: ['Bauart', 'Hersteller', 'Betreiber', 'Spurweite', 'Länge', 'Gewicht', 'Leistung', 'Höchstgeschwindigkeit', 'Sitzplätze', 'Anzahl', 'In Betrieb seit'],
     specNote: 'In Betrieb gesetzt 1998–2005. Vierteilig sind die Nummern 015–027, dreiteilig 001–014, 028–030 und 032–037.',
-    abschnitte: [{ titel: 'Einsatz', p: ['Laut BLS fahren die vierteiligen NINA unter anderem Bern–Kerzers–Neuchâtel, Lyss–Büren an der Aare, Solothurn–Burgdorf–Bern und Domodossola–Brig–Visp.'] }],
+    abschnitte: [
+      { titel: 'Hersteller und Flottenaufbau', p: ['Die NINA stammen von Vevey Technologies und Bombardier und gingen 1998 bis 2005 in Betrieb. Die BLS hat 36 Züge: 23 dreiteilige (001–014, 028–030, 032–037) und 13 vierteilige (015–027).', 'Von Juni 2015 an erhielten alle 36 Züge in der Werkstätte Bönigen ein Refit für rund 31 Millionen Franken; sie sollen damit etwa sechs Jahre länger fahren. 2016 bekam ein Teil mobilfunkdurchlässige Scheiben und eine neue Fahrgastinformation.'] },
+      { titel: 'Einsatz und Technik', p: ['Die NINA fahren bei den S-Bahnen Bern und Luzern, unter anderem S5 Bern–Kerzers–Neuchâtel, S22 Bern–Konolfingen–Langnau, S35 Kerzers–Lyss, S36 Lyss–Büren an der Aare, S46 Solothurn–Burgdorf–Ostermundigen und S77 Luzern–Wolhusen–Willisau, dazu als RE Domodossola–Brig–Visp.', 'Ein Zug leistet 1000 kW und fährt bis 140 km/h. Bis zu vier Züge lassen sich kuppeln.'] },
+      { titel: 'Ausstattung und Zugänglichkeit', liste: ['Klimaanlage und Heizung', 'Steckdosen in der 1. Klasse', 'Optische und akustische Fahrgastinformation', '3 Veloplätze (dreiteilig) bzw. 6 (vierteilig)', 'Niederflureinstieg an allen Türen, pro Seite ein Einstieg mit Schiebetritt', '1 Rollstuhlplatz in der 2. Klasse', '1 rollstuhlgängiges WC', 'Videoüberwachung'],
+        p: ['Alle Türen sind niederflurig. Einen Wickeltisch gibt es laut BLS nicht.'] }
+    ],
     quellen: ['BLS – Flotte: RABe 525 «NINA», technische Daten', 'Datenblatt HCKD «RABe 525 NINA», Oktober 2026'],
     art: { typ: 'triebzug', nase: 'mittel', farbe: W1, akzent: BLS_GRUEN, tuer: BLS_GRUEN, panto: true },
     bilder: [
@@ -85,7 +101,10 @@ ZUEGE.push(
     nummern: [[465001, 465018]],
     daten: { 'Bauart': 'Elektrolokomotive Bo’Bo’', 'Fahrzeugfamilie': 'Lok 2000', 'Betreiber': 'BLS AG', 'Spurweite': 'Normalspur, 1435 mm', 'Fahrzeugnummern': '001–018', 'Länge': '18,5 m', 'Gewicht': '84 t', 'Leistung': '6400 kW', 'Höchstgeschwindigkeit': '160 km/h (zugelassen)', 'Anzahl': '18', 'In Betrieb seit': '1994' },
     specOrder: ['Bauart', 'Fahrzeugfamilie', 'Betreiber', 'Spurweite', 'Fahrzeugnummern', 'Länge', 'Gewicht', 'Leistung', 'Höchstgeschwindigkeit', 'Anzahl', 'In Betrieb seit'],
-    abschnitte: [{ titel: 'Modernisierung und Einsatz', p: ['Die BLS bestellte zuerst acht Loks (001–008), später zehn weitere (009–018) für den Huckepackkorridor. Mit dem Refit 2019–2022 für rund 20 Millionen Franken sind sie bis etwa 2040 einsetzbar.', 'Heute ziehen sie den GoldenPass Express zwischen Interlaken Ost und Zweisimmen, die Autoverlad-Züge am Lötschberg und am Simplon und, oft zusammen mit TRAXX und Vectron, Güterzüge.'] }],
+    abschnitte: [
+      { titel: 'Hersteller und Flottenaufbau', p: ['Die Re 465 gehört zur Familie der Lok 2000 von SLM und ABB. Die BLS bestellte zuerst acht Loks (001–008), später zehn weitere (009–018) für den Huckepackkorridor; sie gingen 1994 bis 1997 in Betrieb.', 'Von 2019 bis 2022 wurden alle 18 Loks in der Werkstätte Bönigen für rund 20 Millionen Franken modernisiert und grün lackiert. Damit sind sie bis etwa 2040 einsetzbar.'] },
+      { titel: 'Einsatz und Technik', p: ['Die Re 465 ziehen oder schieben den GoldenPass Express zwischen Interlaken Ost und Zweisimmen. Seit dem 19. Dezember 2023 fahren sie den Autoverlad am Lötschberg, ab 2026 auch am Simplon, und ersetzen dort die braunen Re 425.', 'Im Güterverkehr fahren sie oft in Vielfachsteuerung mit TRAXX und Vectron. Die Lok leistet 6400 kW und ist für 160 km/h zugelassen.'] }
+    ],
     quellen: ['BLS – Flotte: Re 465, technische Daten, Refit und Einsatz', 'Datenblatt HCKD «Re 465 – Lok 2000», Oktober 2026'],
     art: { typ: 'lok', form: 'rund', farbe: BLS_GRUEN, panto: true },
     bilder: [
@@ -99,8 +118,12 @@ ZUEGE.push(
     nummern: [[475401, 475450]],
     daten: { 'Bauart': 'Mehrsystem-Elektrolokomotive Bo’Bo’', 'Fahrzeugfamilie': 'Vectron', 'Hersteller': 'Siemens Mobility', 'Betreiber': 'BLS Cargo', 'Spurweite': 'Normalspur, 1435 mm', 'Fahrzeugnummern': '401–450', 'Zulassung': 'CH, D, A, I, NL; ab Nr. 416 auch B', 'Anzahl': '50 (in drei Serien)', 'In Betrieb seit': '2016' },
     specOrder: ['Bauart', 'Fahrzeugfamilie', 'Hersteller', 'Betreiber', 'Spurweite', 'Fahrzeugnummern', 'Zulassung', 'Anzahl', 'In Betrieb seit'],
-    abschnitte: [{ titel: 'Drei Serien', tabelle: { kopf: ['Nummern', 'Anzahl', 'Lieferung', 'Zulassung'], zeilen: [
-      ['401–415', '15', '2016–2018', 'CH, D, A, I, NL'], ['416–440', '25', '2020, 2024–2025', 'CH, D, A, I, NL, B'], ['441–450', '10', 'ab 2026', 'CH, D, A, I, NL, B']] } }],
+    abschnitte: [
+      { titel: 'Hersteller und Flottenaufbau', p: ['Die Re 475 ist die Vectron-Lokomotive von Siemens Mobility für BLS Cargo. Die Flotte wächst in drei Serien auf 50 Loks: 401–415 (2016–2018), 416–440 (2020 und 2024–2025) und 441–450 (ab 2026).'] },
+      { titel: 'Einsatz und Technik', p: ['BLS Cargo setzt die Re 475 vor allem auf der Lötschberg-Simplon- und der Gotthard-Achse ein und fährt damit bis in die Niederlande, nach Belgien, Deutschland, Österreich und Italien.', 'Die Mehrsystemlok ist für bis zu sechs Länder zugelassen; ab Nummer 416 auch für Belgien.'] },
+      { titel: 'Drei Serien', tabelle: { kopf: ['Nummern', 'Anzahl', 'Lieferung', 'Zulassung'], zeilen: [
+      ['401–415', '15', '2016–2018', 'CH, D, A, I, NL'], ['416–440', '25', '2020, 2024–2025', 'CH, D, A, I, NL, B'], ['441–450', '10', 'ab 2026', 'CH, D, A, I, NL, B']] } }
+    ],
     quellen: ['Wikipedia – BLS Cargo, Flottentabelle', 'Datenblatt HCKD «Re 475 – Siemens Vectron», Oktober 2026'],
     art: { typ: 'lok', form: 'kantig', farbe: BLS_GRUEN, akzent: BLS_DUNKEL, panto: true },
     bilder: [
@@ -113,7 +136,10 @@ ZUEGE.push(
     daten: { 'Bauart': 'Elektrolokomotive Bo’Bo’', 'Fahrzeugfamilie': 'TRAXX F140 AC', 'Hersteller': 'Bombardier Transportation', 'Betreiber': 'BLS Cargo', 'Spurweite': 'Normalspur, 1435 mm', 'Fahrzeugnummern': '001–020', 'Höchstgeschwindigkeit': '140 km/h', 'Zulassung': 'Schweiz, Deutschland', 'Anzahl': '20', 'In Betrieb seit': '2002' },
     specOrder: ['Bauart', 'Fahrzeugfamilie', 'Hersteller', 'Betreiber', 'Spurweite', 'Fahrzeugnummern', 'Höchstgeschwindigkeit', 'Zulassung', 'Anzahl', 'In Betrieb seit'],
     specNote: 'Die 140 km/h stehen für die Bauart TRAXX F140.',
-    abschnitte: [],
+    abschnitte: [
+      { titel: 'Hersteller und Flottenaufbau', p: ['BLS Cargo bestellte 2002 bei Bombardier 20 TRAXX vom Typ F140 AC; sie wurden bis Mitte 2003 geliefert und tragen die Nummern 485 001–020.', 'Die 485 004 wurde 2020 bei einem Unfall in Auggen (Deutschland) zerstört, weshalb Flottenlisten heute 19 Loks nennen.'] },
+      { titel: 'Einsatz und Technik', p: ['Die Re 485 fahren Güterzüge in der Schweiz und nach Deutschland, auf der Lötschberg-Simplon- und der Gotthard-Achse.', 'Technisch entsprechen sie der deutschen Baureihe 185 und den Re 482 von SBB Cargo, mit einem Schweizer Ausrüstungspaket. Sie fahren bis 140 km/h.'] }
+    ],
     quellen: ['Wikipedia – BLS Cargo, Flottentabelle und Geschichte', 'Datenblatt HCKD «Re 485 – TRAXX», Oktober 2026'],
     art: { typ: 'lok', form: 'kantig', farbe: BLS_GRUEN, akzent: BLS_DUNKEL, panto: true },
     bilder: [
@@ -128,7 +154,10 @@ ZUEGE.push(
     daten: { 'Bauart': 'Mehrsystem-Elektrolokomotive Bo’Bo’', 'Fahrzeugfamilie': 'TRAXX F140 MS', 'Hersteller': 'Bombardier Transportation', 'Betreiber': 'BLS Cargo', 'Spurweite': 'Normalspur, 1435 mm', 'Fahrzeugnummern': '501–510', 'Höchstgeschwindigkeit': '140 km/h', 'Zulassung': 'Schweiz, Deutschland, Italien, Österreich', 'Anzahl': '10', 'In Betrieb seit': '2008' },
     specOrder: ['Bauart', 'Fahrzeugfamilie', 'Hersteller', 'Betreiber', 'Spurweite', 'Fahrzeugnummern', 'Höchstgeschwindigkeit', 'Zulassung', 'Anzahl', 'In Betrieb seit'],
     specNote: 'Die 140 km/h stehen für die Bauart TRAXX F140.',
-    abschnitte: [],
+    abschnitte: [
+      { titel: 'Hersteller und Flottenaufbau', p: ['Bombardier lieferte BLS Cargo ab Herbst 2008 zehn Mehrsystem-TRAXX vom Typ F140 MS mit den Nummern 486 501–510; die letzten folgten 2009.'] },
+      { titel: 'Einsatz und Technik', p: ['Die Re 486 dürfen in der Schweiz, in Deutschland, Italien und Österreich fahren. Damit eignen sie sich für den Transitverkehr durch die Alpen, zum Beispiel mit der Rollenden Landstrasse.', 'Als Mehrsystemlok fahren sie unter Wechsel- und Gleichstrom; die Höchstgeschwindigkeit beträgt 140 km/h.'] }
+    ],
     quellen: ['Wikipedia – BLS Cargo, Flottentabelle', 'Datenblatt HCKD «Re 486 – TRAXX MS», Oktober 2026'],
     art: { typ: 'lok', form: 'kantig', farbe: BLS_GRUEN, akzent: BLS_DUNKEL, panto: true },
     bilder: [
@@ -142,7 +171,10 @@ ZUEGE.push(
     daten: { 'Bauart': 'Elektrolokomotive Bo’Bo’', 'Fahrzeugfamilie': 'TRAXX F140 AC', 'Hersteller': 'Bombardier Transportation', 'Eigentümer': 'Alpha Trains', 'Betreiber': 'BLS Cargo (gemietet)', 'Spurweite': 'Normalspur, 1435 mm', 'Leistung': 'bis 5600 kW', 'Höchstgeschwindigkeit': '140 km/h', 'Zulassung': 'Deutschland, Österreich, Schweiz', 'Anzahl': '4 gemietet' },
     specOrder: ['Bauart', 'Fahrzeugfamilie', 'Hersteller', 'Eigentümer', 'Betreiber', 'Spurweite', 'Leistung', 'Höchstgeschwindigkeit', 'Zulassung', 'Anzahl'],
     specNote: 'Welche Nummern die vier gemieteten Loks tragen, ist nicht öffentlich aufgelistet. Das Foto zeigt die 185 525 in BLS-Farben im Jahr 2009.',
-    abschnitte: [],
+    abschnitte: [
+      { titel: 'Hersteller und Flottenaufbau', p: ['Die vier Lokomotiven sind TRAXX F140 AC von Bombardier Transportation. Sie gehören dem Vermieter Alpha Trains und sind in Deutschland registriert; BLS Cargo hat sie gemietet.'] },
+      { titel: 'Einsatz und Technik', p: ['Die Loks sind für Deutschland, Österreich und die Schweiz zugelassen und ergänzen bei BLS Cargo die eigenen Re 485, mit denen sie technisch eng verwandt sind.', 'Sie leisten bis 5600 kW und fahren bis 140 km/h.'] }
+    ],
     quellen: ['Wikipedia – BLS Cargo, Tabelle der gemieteten Lokomotiven', 'Wikipedia – Bombardier Traxx, Baureihe 185'],
     art: { typ: 'lok', form: 'kantig', farbe: '#2F6DB5', akzent: BLS_GRUEN, panto: true },
     bilder: [
@@ -154,7 +186,10 @@ ZUEGE.push(
     daten: { 'Bauart': 'Mehrsystem-Elektrolokomotive Bo’Bo’', 'Fahrzeugfamilie': 'TRAXX F140 MS', 'Hersteller': 'Bombardier Transportation', 'Eigentümer': 'Railpool', 'Betreiber': 'BLS Cargo (gemietet)', 'Spurweite': 'Normalspur, 1435 mm', 'Fahrzeugnummern': 'u. a. 186 101, 103–105, 108, 109 (auf Fotos belegt)', 'Leistung': '5600 kW (unter 1,5 kV Gleichstrom 4000 kW)', 'Höchstgeschwindigkeit': '140 km/h', 'Zulassung': 'Deutschland, Österreich, Schweiz, Italien, Niederlande', 'Anzahl': '9 gemietet' },
     specOrder: ['Bauart', 'Fahrzeugfamilie', 'Hersteller', 'Eigentümer', 'Betreiber', 'Spurweite', 'Fahrzeugnummern', 'Leistung', 'Höchstgeschwindigkeit', 'Zulassung', 'Anzahl'],
     specNote: 'Die eigenen Mehrsystem-TRAXX von BLS Cargo heissen Re 486 und haben eine eigene Seite.',
-    abschnitte: [],
+    abschnitte: [
+      { titel: 'Hersteller und Flottenaufbau', p: ['Die neun Lokomotiven sind Mehrsystem-TRAXX F140 MS von Bombardier Transportation. Sie gehören dem Vermieter Railpool; auf Fotos sind unter anderem die 186 101, 103–105, 108 und 109 mit BLS-Anschrift zu sehen.'] },
+      { titel: 'Einsatz und Technik', p: ['Die Loks sind für Deutschland, Österreich, die Schweiz, Italien und die Niederlande zugelassen. Sie ziehen Güterzüge auf der Achse Rotterdam–Italien, zum Beispiel den Melzo-Shuttle.', 'Unter Wechselstrom leisten sie 5600 kW, unter 1,5 kV Gleichstrom in den Niederlanden 4000 kW; sie fahren bis 140 km/h.'] }
+    ],
     quellen: ['Wikipedia – BLS Cargo, Tabelle der gemieteten Lokomotiven', 'Wikipedia – Bombardier Traxx, Baureihe 186', 'Wikimedia Commons – Fotos der BLS 186 101–109'],
     art: { typ: 'lok', form: 'kantig', farbe: '#8C959E', akzent: BLS_GRUEN, panto: true },
     bilder: [
@@ -166,7 +201,10 @@ ZUEGE.push(
     kennzahlen: [['3', 'gemietete Lokomotiven'], ['5600 kW', 'Leistung'], ['84 t', 'Gewicht'], ['D, A, CH', 'Zulassung']],
     daten: { 'Bauart': 'Elektrolokomotive Bo’Bo’', 'Fahrzeugfamilie': 'TRAXX AC3', 'Hersteller': 'Bombardier Transportation', 'Eigentümer': 'Railpool', 'Betreiber': 'BLS Cargo (gemietet)', 'Spurweite': 'Normalspur, 1435 mm', 'Beispiel': '187 004', 'Gewicht': '84 t', 'Leistung': '5600 kW', 'Höchstgeschwindigkeit': '140 oder 160 km/h, je nach Ausführung', 'Zulassung': 'Deutschland, Österreich, Schweiz', 'Anzahl': '3 gemietet' },
     specOrder: ['Bauart', 'Fahrzeugfamilie', 'Hersteller', 'Eigentümer', 'Betreiber', 'Spurweite', 'Beispiel', 'Gewicht', 'Leistung', 'Höchstgeschwindigkeit', 'Zulassung', 'Anzahl'],
-    abschnitte: [],
+    abschnitte: [
+      { titel: 'Hersteller und Flottenaufbau', p: ['Die drei Lokomotiven gehören zur dritten TRAXX-Generation (AC3) von Bombardier Transportation. BLS Cargo hat sie langfristig beim Vermieter Railpool gemietet; die 187 004 ist auf Fotos mit BLS-Anschrift zu sehen.'] },
+      { titel: 'Einsatz und Technik', p: ['Die Loks sind für Deutschland, Österreich und die Schweiz zugelassen und fahren Güterzüge von BLS Cargo.', 'Sie leisten 5600 kW und wiegen 84 t. Die Baureihe 187 gibt es auch mit einem kleinen Dieselmotor für die «letzte Meile» ohne Fahrleitung; ob die drei BLS-Loks ihn haben, ist nicht öffentlich belegt.'] }
+    ],
     quellen: ['Wikipedia – BLS Cargo, Tabelle der gemieteten Lokomotiven', 'Wikipedia – Bombardier Traxx, Baureihe 187 und Railpool'],
     art: { typ: 'lok', form: 'kantig', farbe: '#C9CED3', akzent: '#2F6DB5', panto: true },
     bilder: [
@@ -178,7 +216,10 @@ ZUEGE.push(
     daten: { 'Bauart': 'Mehrsystem-Elektrolokomotive Bo’Bo’', 'Fahrzeugfamilie': 'Vectron', 'Hersteller': 'Siemens Mobility', 'Eigentümer': 'verschiedene Vermieter, u. a. BRCE', 'Betreiber': 'BLS Cargo (gemietet)', 'Spurweite': 'Normalspur, 1435 mm', 'Fahrzeugnummern': 'u. a. 193 494–496 (Hupac), 193 711, 713, 716 (auf Fotos belegt)', 'Leistung': 'bis 6400 kW', 'Zulassung': 'Deutschland, Österreich, Schweiz, Italien, Niederlande', 'Anzahl': '6 + 4 gemietet' },
     specOrder: ['Bauart', 'Fahrzeugfamilie', 'Hersteller', 'Eigentümer', 'Betreiber', 'Spurweite', 'Fahrzeugnummern', 'Leistung', 'Zulassung', 'Anzahl'],
     specNote: 'Die eigenen Vectron von BLS Cargo heissen Re 475 und haben eine eigene Seite.',
-    abschnitte: [],
+    abschnitte: [
+      { titel: 'Hersteller und Flottenaufbau', p: ['Die Lokomotiven sind Vectron von Siemens Mobility. BLS Cargo mietet laut Flottenliste sechs Loks sowie vier weitere, die zum Teil in den Farben des Kombi-Operateurs Hupac fahren (unter anderem 193 494–496). Auf Fotos sind zudem die 193 711, 713 und 716 zu sehen.'] },
+      { titel: 'Einsatz und Technik', p: ['Die Loks sind für Deutschland, Österreich, die Schweiz, Italien und die Niederlande zugelassen und fahren vor allem im Transitverkehr zwischen den Nordseehäfen und Italien.', 'Als Mehrsystemlok leisten sie bis 6400 kW.'] }
+    ],
     quellen: ['Wikipedia – BLS Cargo, Tabelle der gemieteten Lokomotiven (Railcolornews 2018 und 2019)', 'Wikimedia Commons – Fotos der BLS 193 494–496, 711, 713 und 716'],
     art: { typ: 'lok', form: 'kantig', farbe: '#2E3338', akzent: BLS_GRUEN, panto: true },
     bilder: [

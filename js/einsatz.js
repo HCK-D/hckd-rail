@@ -164,6 +164,15 @@ const einsatzKarte = (() => {
       if (pts.length) { marken.push([pts[0][0], pts[0][1], pts[0][2]]); marken.push([pts[pts.length - 1][0], pts[pts.length - 1][1], pts[pts.length - 1][2]]); }
     }
     if (ids.size) svg.appendChild(el('path', { d: [...ids].map(i => G.pathD(G.segs[i].pts)).join(''), class: 'ez-hl' }));
+    // metre-gauge lines are not in the standard-gauge network: dashed straight lines from station to station
+    const schmal = [];
+    for (const list of e.linien || []) {
+      const pts = list.map(node).filter(Boolean).map(p => [p[0], p[1], p[2]]);
+      if (pts.length < 2) continue;
+      svg.appendChild(el('path', { d: G.pathD(pts.map(p => [p[1], p[2]])), class: 'ez-hl ez-schmal' }));
+      marken.push(pts[0], pts[pts.length - 1]);
+      schmal.push(pts.map(p => [p[1], G.flip(p[2])]));
+    }
     for (const [name, E, Nn] of e.orte || []) {
       // a station name alone, or a name with Swiss coordinates (LV95)
       const n = E == null ? node(name) : null;
@@ -172,6 +181,7 @@ const einsatzKarte = (() => {
     }
     const rot = [];
     for (const s of e.netz ? G.segs.filter(s => s.sbb) : [...ids].map(i => G.segs[i])) punkte(s.pts.map(([x, y]) => [x, G.flip(y)]), rot);
+    for (const pts of schmal) punkte(pts, rot);
     beschrifte(marken.map(([n, x, y, g, o, r]) => [n, x, G.flip(y), g, o, r]), rot, G.vb);
   }
 

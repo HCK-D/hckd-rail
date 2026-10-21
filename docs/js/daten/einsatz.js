@@ -9,6 +9,8 @@
    orte      [Name, Ost, Nord] mit Schweizer Koordinaten (LV95), für Orte
              ohne Bahnhof in der Liste, z. B. Rangierbahnhöfe
    netz      true = im ganzen Normalspurnetz unterwegs
+   linien    Listen von Bahnhöfen für Meterspur-Linien (nicht im Normalspurnetz):
+             gestrichelte gerade Linie von Bahnhof zu Bahnhof
    text      kurze Beschreibung unter der Karte
    Bahnhöfe: Zürich HB, Bern, Basel SBB, Genève, Lausanne, Luzern, St. Gallen,
    Lugano, Chur, Brig, Biel/Bienne, Olten, Winterthur, Bellinzona, Sion,
@@ -181,4 +183,55 @@ Object.assign(EINSATZ, {
   'h-mirage': { strecken: [['Zürich HB', 'Meilen', 'Rapperswil SG']], text: 'Früher im Vorortsverkehr am rechten Zürichseeufer, bekannt als «Goldküstenexpress».' },
   'h-rbe540': { netz: true, orte: [['Oensingen-Balsthal-Bahn', 2619225, 1240567]],
     text: 'Früher vor Schnellzügen, später vor Regional- und S-Bahn-Pendelzügen. Die RBe 540 074 fährt heute bei der Oensingen-Balsthal-Bahn.' }
+});
+
+/* =====================================================================
+   BLS und TPF (Oktober 2026): Linien nach den Flottenseiten von BLS und TPF
+   und dem Liniennetz des RER Fribourg. Meterspur mit «linien» (gestrichelt).
+   ===================================================================== */
+Object.assign(BAHNHOF_EXTRA, {
+  'Zweisimmen': [2595109, 1155802], 'Frutigen': [2616307, 1159760], 'Langnau i.E.': [2626312, 1198741], 'Konolfingen': [2613929, 1192192],
+  'Kerzers': [2581295, 1202697], 'Ins': [2574211, 1205476], 'Lyss': [2589950, 1213932], 'Büren an der Aare': [2594888, 1220800],
+  'Belp': [2604573, 1193087], 'Murten/Morat': [2575373, 1197190], 'Willisau': [2642349, 1219232], 'Wolhusen': [2648711, 1211805],
+  'Schwarzenburg': [2592668, 1185333], 'Laupen BE': [2585018, 1194484], 'Goppenstein': [2624339, 1135197], 'Hasle-Rüegsau': [2616476, 1207269],
+  'Ostermundigen': [2603263, 1200637], 'Bulle': [2570462, 1163181], 'Romont FR': [2559703, 1171502], 'Broc-Chocolaterie': [2574770, 1161626],
+  'Palézieux': [2553919, 1154785], 'Châtel-St-Denis': [2558350, 1153090], 'Montbovon': [2569554, 1148311], 'Gruyères': [2571994, 1159103]
+});
+Object.assign(STAEDTE, { 'Rotterdam': [4.469, 51.925], 'Antwerpen': [4.421, 51.217], 'Duisburg': [6.775, 51.430], 'Domodossola': [8.292, 46.115], 'Novara': [8.625, 45.451] });
+INTERNATIONAL.blscargo = { strecken: [['Rotterdam', 'Duisburg', 'Köln', 'Mainz', 'Mannheim', 'Karlsruhe', 'Freiburg', 'Basel'], ['Antwerpen', 'Köln'],
+  ['Basel', 'Bern', 'Brig', 'Domodossola', 'Novara', 'Milano'], ['Basel', 'Luzern', 'Lugano', 'Milano']],
+  text: 'Im Transitverkehr von den Nordseehäfen Rotterdam und Antwerpen über Deutschland und die Schweiz bis Norditalien, durch den Lötschberg-Simplon und den Gotthard.' };
+const BLS_CARGO_CH = [['Basel Bad Bf', 'Basel SBB', 'Olten', 'Bern', 'Thun', 'Spiez', 'Brig'], ['Olten', 'Luzern', 'Arth-Goldau', 'Erstfeld', 'Bellinzona', 'Chiasso']];
+Object.assign(EINSATZ, {
+  'bls-rabe-528': { gebiete: [['Bern', 14, 'S-Bahn Bern']],
+    strecken: [['Bern', 'Thun', 'Spiez', 'Zweisimmen'], ['Spiez', 'Frutigen', 'Kandersteg', 'Goppenstein', 'Brig'], ['Bern', 'Kerzers', 'Neuchâtel', 'La Chaux-de-Fonds'],
+      ['Laupen BE', 'Bern', 'Konolfingen', 'Langnau i.E.', 'Wolhusen', 'Luzern'], ['Bern', 'Schwarzenburg']],
+    text: 'Bei der S-Bahn Bern und Luzern, als RegioExpress Bern–Spiez–Zweisimmen und über die Lötschberg-Bergstrecke nach Brig und Domodossola sowie als InterRegio Bern–Neuchâtel–La Chaux-de-Fonds.' },
+  'bls-rabe-515': { gebiete: [['Bern', 14, 'S-Bahn Bern']],
+    strecken: [['Fribourg/Freiburg', 'Bern', 'Thun'], ['Biel/Bienne', 'Bern', 'Belp'], ['Bern', 'Burgdorf', 'Olten']],
+    text: 'Bei der S-Bahn Bern (S1 Fribourg–Bern–Thun, S3/S31 Biel–Bern–Belp) und als InterRegio Bern–Burgdorf–Olten und Bern–Biel.' },
+  'bls-rabe-535': { strecken: [['Solothurn', 'Burgdorf', 'Konolfingen', 'Thun'], ['Thun', 'Belp', 'Bern', 'Burgdorf', 'Solothurn'], ['Zweisimmen', 'Spiez', 'Interlaken Ost'], ['Spiez', 'Frutigen']],
+    text: 'Im Berner Oberland (Zweisimmen–Spiez, Spiez–Interlaken Ost, Spiez–Frutigen) und bei der S-Bahn Bern zwischen Thun, Bern, Burgdorf und Solothurn.' },
+  'bls-rabe-525': { strecken: [['Bern', 'Konolfingen', 'Langnau i.E.'], ['Hasle-Rüegsau', 'Konolfingen', 'Thun'], ['Solothurn', 'Burgdorf', 'Ostermundigen'], ['Bern', 'Kerzers', 'Neuchâtel'],
+      ['Kerzers', 'Lyss', 'Büren an der Aare'], ['Kerzers', 'Murten/Morat', 'Payerne'], ['Luzern', 'Wolhusen', 'Willisau'], ['Brig', 'Visp']],
+    text: 'Bei den S-Bahnen Bern und Luzern, unter anderem Bern–Neuchâtel, Bern–Langnau, Lyss–Büren an der Aare und Luzern–Willisau, dazu als RegioExpress Domodossola–Brig–Visp.' },
+  'bls-re-465': { strecken: [['Interlaken Ost', 'Spiez', 'Zweisimmen'], ['Kandersteg', 'Goppenstein'], ['Basel SBB', 'Olten', 'Bern', 'Thun', 'Spiez', 'Brig']],
+    text: 'Vor dem GoldenPass Express zwischen Interlaken Ost und Zweisimmen, vor den Autozügen am Lötschberg und am Simplon sowie vor Güterzügen auf der Lötschberg-Simplon-Achse.' },
+  'bls-re-475': { strecken: BLS_CARGO_CH, international: 'blscargo',
+    text: 'Im Güterverkehr durch die Schweiz auf der Lötschberg-Simplon- und der Gotthard-Achse, international bis in die Niederlande, nach Belgien und Italien.' },
+  'bls-re-485': { strecken: BLS_CARGO_CH, text: 'Im Güterverkehr in der Schweiz und nach Deutschland, auf der Lötschberg-Simplon- und der Gotthard-Achse.' },
+  'bls-re-486': { strecken: BLS_CARGO_CH, text: 'Im Transitgüterverkehr durch die Alpen, auch mit der Rollenden Landstrasse; Zulassung für die Schweiz, Deutschland, Italien und Österreich.' },
+  'bls-br-185': { strecken: BLS_CARGO_CH, text: 'Im Güterverkehr von BLS Cargo in der Schweiz, in Deutschland und Österreich.' },
+  'bls-br-186': { strecken: BLS_CARGO_CH, international: 'blscargo', text: 'Im Transitgüterverkehr von BLS Cargo, auch auf der Achse Rotterdam–Italien mit dem Melzo-Shuttle.' },
+  'bls-br-187': { strecken: BLS_CARGO_CH, text: 'Im Güterverkehr von BLS Cargo in der Schweiz, in Deutschland und Österreich.' },
+  'bls-br-193': { strecken: BLS_CARGO_CH, international: 'blscargo', text: 'Im Transitgüterverkehr von BLS Cargo, bis in die Niederlande und nach Italien.' },
+  'tpf-rabe-527': { strecken: [['Bern', 'Fribourg/Freiburg', 'Romont FR', 'Bulle', 'Broc-Chocolaterie'], ['Fribourg/Freiburg', 'Murten/Morat', 'Ins', 'Neuchâtel']],
+    text: 'Als RegioExpress Bern–Fribourg–Romont–Bulle–Broc und beim RER Fribourg zwischen Fribourg, Murten und Neuchâtel.' },
+  'tpf-rbde-560': { strecken: [['Bern', 'Fribourg/Freiburg', 'Romont FR', 'Bulle', 'Broc-Chocolaterie'], ['Fribourg/Freiburg', 'Murten/Morat', 'Ins', 'Neuchâtel']],
+    text: 'Beim RER Fribourg: RegioExpress Bern–Fribourg–Bulle–Broc und S20/S21 Fribourg–Murten–Ins–Neuchâtel.' },
+  'tpf-abe-4-12': { linien: [['Palézieux', 'Châtel-St-Denis', 'Bulle', 'Montbovon'], ['Bulle', 'Gruyères']], orte: [['Bulle']],
+    text: 'Auf dem Meterspurnetz der TPF: S50 Palézieux–Châtel-St-Denis–Bulle–Montbovon und S51 bis Gruyères. Die Meterspur ist gestrichelt und vereinfacht eingezeichnet.' },
+  'tpf-be-4-4-120': { linien: [['Palézieux', 'Châtel-St-Denis', 'Bulle', 'Montbovon'], ['Bulle', 'Gruyères']], orte: [['Bulle']],
+    text: 'Auf dem Meterspurnetz der TPF zwischen Palézieux, Bulle, Gruyères und Montbovon. Die Meterspur ist gestrichelt und vereinfacht eingezeichnet.' },
+  'tpf-funiculaire': { orte: [['Fribourg/Freiburg']], text: 'In der Stadt Fribourg zwischen der Unterstadt (Neuveville) und St-Pierre.' }
 });

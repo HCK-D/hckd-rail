@@ -2,6 +2,10 @@
 uebDict({ 'Schotter- und Kippwagen': 'Wagons à ballast et basculants' });
 
 uebZug('bls-br-185', {
+  abschnitte: [
+      { titel: 'Constructeur et constitution de la flotte', p: ['Les quatre locomotives sont des TRAXX F140 AC de Bombardier Transportation. Elles appartiennent au loueur Alpha Trains et sont immatriculées en Allemagne ; BLS Cargo les loue.'] },
+      { titel: 'Utilisation et technique', p: ['Homologuées pour l’Allemagne, l’Autriche et la Suisse, elles complètent chez BLS Cargo les Re 485 propres, dont elles sont techniquement très proches.', 'Elles développent jusqu’à 5600 kW et roulent jusqu’à 140 km/h.'] }
+    ],
   typ: 'Locomotive électrique louée à Alpha Trains',
   text: ['En plus de ses propres locomotives, BLS Cargo utilise des locomotives louées immatriculées en Allemagne. Parmi elles figurent quatre TRAXX de la série 185 d’Alpha Trains.', 'Techniquement, elles sont proches parentes des Re 485 du BLS, qui correspondent à la série allemande 185 avec un équipement suisse supplémentaire.'],
   kennzahlen: [['4', 'locomotives louées'], ['140 km/h', 'vitesse maximale'], ['jusqu’à 5600 kW', 'puissance'], ['D, A, CH', 'homologation']],
@@ -10,6 +14,10 @@ uebZug('bls-br-185', {
   bilder: ['185 525 aux couleurs du BLS à Fribourg (2009)']
 });
 uebZug('bls-br-186', {
+  abschnitte: [
+      { titel: 'Constructeur et constitution de la flotte', p: ['Les neuf locomotives sont des TRAXX polycourant F140 MS de Bombardier Transportation. Elles appartiennent au loueur Railpool ; on voit notamment sur des photos les 186 101, 103–105, 108 et 109 avec l’inscription BLS.'] },
+      { titel: 'Utilisation et technique', p: ['Les locomotives sont homologuées pour l’Allemagne, l’Autriche, la Suisse, l’Italie et les Pays-Bas. Elles remorquent des trains de marchandises sur l’axe Rotterdam–Italie, par exemple le Melzo-Shuttle.', 'Sous courant alternatif, elles développent 5600 kW, sous 1,5 kV continu aux Pays-Bas 4000 kW ; elles roulent jusqu’à 140 km/h.'] }
+    ],
   typ: 'Locomotive polycourant louée à Railpool',
   text: ['BLS Cargo loue à Railpool neuf TRAXX polycourant de la série 186. Elles peuvent circuler dans cinq pays, jusqu’aux Pays-Bas.', 'Elles remorquent ainsi des trains de marchandises sur l’axe Rotterdam–Italie, par exemple le Melzo-Shuttle.'],
   kennzahlen: [['9', 'locomotives louées'], ['140 km/h', 'vitesse maximale'], ['5600 kW', 'puissance'], ['5', 'pays']],
@@ -18,6 +26,10 @@ uebZug('bls-br-186', {
   bilder: ['186 101 de BLS Cargo', '186 109 avec le Melzo-Shuttle près d’Elten (NL)']
 });
 uebZug('bls-br-187', {
+  abschnitte: [
+      { titel: 'Constructeur et constitution de la flotte', p: ['Les trois locomotives appartiennent à la troisième génération TRAXX (AC3) de Bombardier Transportation. BLS Cargo les loue à long terme au loueur Railpool ; la 187 004 apparaît sur des photos avec l’inscription BLS.'] },
+      { titel: 'Utilisation et technique', p: ['Homologuées pour l’Allemagne, l’Autriche et la Suisse, elles remorquent des trains de marchandises de BLS Cargo.', 'Elles développent 5600 kW et pèsent 84 t. La série 187 existe aussi avec un petit moteur diesel pour le «dernier kilomètre» sans caténaire ; on ne sait pas publiquement si les trois locomotives du BLS en sont équipées.'] }
+    ],
   typ: 'Locomotive électrique louée à Railpool',
   text: ['BLS Cargo loue à long terme trois locomotives de la série 187 à Railpool. Elles appartiennent à la troisième génération TRAXX.', 'La série 187 existe aussi avec un petit moteur diesel pour le «dernier kilomètre» sans caténaire. On ne sait pas publiquement si les trois locomotives du BLS en sont équipées.'],
   kennzahlen: [['3', 'locomotives louées'], ['5600 kW', 'puissance'], ['84 t', 'poids'], ['D, A, CH', 'homologation']],
@@ -25,6 +37,10 @@ uebZug('bls-br-187', {
   bilder: ['187 004 de BLS Cargo']
 });
 uebZug('bls-br-193', {
+  abschnitte: [
+      { titel: 'Constructeur et constitution de la flotte', p: ['Les locomotives sont des Vectron de Siemens Mobility. Selon la liste de la flotte, BLS Cargo loue six locomotives et quatre autres, qui circulent en partie aux couleurs de l’opérateur combiné Hupac (notamment 193 494–496). Des photos montrent en outre les 193 711, 713 et 716.'] },
+      { titel: 'Utilisation et technique', p: ['Homologuées pour l’Allemagne, l’Autriche, la Suisse, l’Italie et les Pays-Bas, elles circulent surtout en transit entre les ports de la mer du Nord et l’Italie.', 'Locomotives polycourant, elles développent jusqu’à 6400 kW.'] }
+    ],
   typ: 'Siemens Vectron louées pour BLS Cargo',
   text: ['En plus de ses propres Re 475, BLS Cargo loue des locomotives Vectron de la série 193. Selon la liste de la flotte, il s’agit de six locomotives et de quatre autres, qui circulent en partie aux couleurs de l’opérateur combiné Hupac.', 'Homologuées jusqu’aux Pays-Bas et en Italie, elles circulent surtout en transit.'],
   kennzahlen: [['10', 'locomotives louées'], ['jusqu’à 6400 kW', 'puissance'], ['5', 'pays'], ['Siemens', 'constructeur']],

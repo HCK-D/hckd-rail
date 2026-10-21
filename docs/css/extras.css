@@ -413,6 +413,7 @@ body.has-cmp .footer{padding-bottom:76px}
 .ez-netz{fill:none;stroke:var(--fg-3);stroke-width:1;opacity:.35;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke}
 .ez-netz.on{opacity:.25}
 .ez-hl{fill:none;stroke:var(--accent);stroke-width:3.2;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+.ez-hl.ez-schmal{stroke-width:2.6;stroke-dasharray:6 4}
 .ez-area{fill:color-mix(in srgb,var(--accent) 16%,transparent);stroke:var(--accent);stroke-width:1.6;stroke-dasharray:5 4;vector-effect:non-scaling-stroke}
 .ez-dot{fill:var(--surface);stroke:var(--accent);stroke-width:2.2;vector-effect:non-scaling-stroke}
 .ez-ort{fill:var(--accent);stroke:var(--surface);stroke-width:2;vector-effect:non-scaling-stroke}

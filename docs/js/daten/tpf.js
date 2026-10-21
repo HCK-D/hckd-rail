@@ -17,8 +17,13 @@ ZUEGE.push(
     daten: { 'Bauart': 'Elektrotriebzug, 4 Wagen', 'Achsfolge': 'Bo’2’2’2’Bo’', 'Fahrzeugfamilie': 'FLIRT', 'Hersteller': 'Stadler Bussnang', 'Betreiber': 'TPF', 'Spurweite': 'Normalspur, 1435 mm', 'Fahrzeugnummern': '191–198', 'Länge': '74,078 m', 'Gewicht': '122 t leer', 'Leistung': '2600 kW', 'Höchstgeschwindigkeit': '160 km/h', 'Sitzplätze': '24 in der 1., 143 in der 2. Klasse', 'Anzahl': '8 Züge', 'In Betrieb seit': '2011' },
     specOrder: ['Bauart', 'Achsfolge', 'Fahrzeugfamilie', 'Hersteller', 'Betreiber', 'Spurweite', 'Fahrzeugnummern', 'Länge', 'Gewicht', 'Leistung', 'Höchstgeschwindigkeit', 'Sitzplätze', 'Anzahl', 'In Betrieb seit'],
     specNote: 'In Betrieb gesetzt 2011–2014. Dazu kommen 42 Klappsitze und 209 Stehplätze, zusammen 418 Plätze.',
-    abschnitte: [],
-    quellen: ['TPF – Flotte: Flirt 190, technische Daten', 'Datenblatt HCKD «RABe 527 – FLIRT, Serie 190», Oktober 2026'],
+    abschnitte: [
+      { titel: 'Hersteller und Flottenaufbau', p: ['Stadler Bussnang lieferte den TPF acht FLIRT der Serie 190 mit den Nummern 191–198. Sie gingen 2011 bis 2014 in Betrieb.'] },
+      { titel: 'Einsatz und Technik', p: ['Die FLIRT fahren beim RER Fribourg: als RegioExpress RE2/RE3 Bern–Fribourg–Romont–Bulle–Broc und auf den S20/S21 Fribourg–Murten–Ins–Neuchâtel.', 'Der vierteilige Zug ist 74,08 m lang, leistet 2600 kW und fährt bis 160 km/h. Bis zu vier Züge lassen sich kuppeln.'] },
+      { titel: 'Ausstattung und Zugänglichkeit', liste: ['Vollständig klimatisiert', 'Akustische und optische Fahrgastinformation', 'Mehrzweckabteil', 'Zu über 90 Prozent niederflurig', 'WC mit geschlossenem System, für Personen mit eingeschränkter Mobilität'],
+        p: ['Der Zug ist zu über 90 Prozent niederflurig. Zur Zahl der Rollstuhlplätze macht die TPF keine Angabe.'] }
+    ],
+    quellen: ['TPF – Flotte: Flirt 190, technische Daten', 'RER Fribourg – Liniennetz RE2, RE3, S20 und S21','Datenblatt HCKD «RABe 527 – FLIRT, Serie 190», Oktober 2026'],
     art: { typ: 'triebzug', nase: 'mittel', farbe: W1, akzent: TPF_BLAU, tuer: TPF_BLAU, panto: true },
     bilder: [
       { src: 'bilder/tpf-rabe-527-c4.jpg', titel: 'RABe 527 196 in Neuchâtel', foto: 'flybyeigenheer', lizenz: 'CC BY-SA 2.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/2.0', quelle: 'https://commons.wikimedia.org/wiki/File:TPF_Flirt_RABe_527_196_-_Neuch%C3%A2tel_(28541258102).jpg' },
@@ -33,10 +38,13 @@ ZUEGE.push(
     specOrder: ['Bauart', 'Hersteller', 'Betreiber', 'Spurweite', 'Fahrzeugnummern', 'Länge', 'Gewicht', 'Leistung', 'Höchstgeschwindigkeit', 'Sitzplätze', 'Anzahl', 'In Betrieb seit'],
     specNote: 'Triebwagen gebaut 1984–1996, als Domino modernisiert 2009–2011.',
     abschnitte: [
-      { titel: 'Ausstattung', liste: ['Akustische und optische Fahrgastinformation', 'Klimaanlage', 'Rollstuhlgängiges WC', 'Mehrzweckabteil', 'Niederflur-Zwischenwagen'] },
+      { titel: 'Hersteller und Flottenaufbau', p: ['Die 14 Domino der TPF (235–247 und 269) entstanden aus NPZ-Pendelzügen von SWG, SIG und ABB aus den Jahren 1984 bis 1996. Von 2009 bis 2011 baute die TPF sie zu Domino um; jeder Zug erhielt einen neuen Niederflur-Zwischenwagen von Bombardier.', 'Die TPF hat bei Stadler 13 vierteilige FLIRT Evo bestellt. Der erste soll im Dezember 2028 in Betrieb gehen; sie sollen die Domino in den folgenden Jahren schrittweise ersetzen.'] },
+      { titel: 'Einsatz und Technik', p: ['Die Domino fahren wie die FLIRT beim RER Fribourg, als RegioExpress Bern–Fribourg–Bulle–Broc und auf den S20/S21 Fribourg–Murten–Ins–Neuchâtel.', 'Ein Zug ist 75 m lang, leistet 1650 kW und fährt bis 140 km/h.'] },
+      { titel: 'Ausstattung und Zugänglichkeit', liste: ['Klimaanlage im ganzen Zug', 'Akustische und optische Fahrgastinformation', 'Mehrzweckabteil', 'Niederflur-Zwischenwagen', 'WC mit Bioreaktor, für Personen mit eingeschränkter Mobilität'],
+        p: ['Stufenlos einsteigen kann man im Niederflur-Zwischenwagen; Trieb- und Steuerwagen haben Stufen.'] },
       { titel: 'Chocolat Express', p: ['Die Züge 235 und 245 tragen das Design «Chocolat Express». Es ist kein eigener Fahrzeugtyp, sondern eine besondere Gestaltung normaler Domino.'] }
     ],
-    quellen: ['TPF – Flotte: Compositions Domino, technische Daten', 'Datenblätter HCKD «RBDe 560 – DOMINO 3» und «Chocolat Express», Oktober 2026'],
+    quellen: ['TPF – Flotte: Compositions Domino, technische Daten', 'Rail Technology Magazine – TPF bestellt 13 FLIRT Evo bei Stadler','Datenblätter HCKD «RBDe 560 – DOMINO 3» und «Chocolat Express», Oktober 2026'],
     art: { typ: 'triebzug', nase: 'kurz', farbe: W1, akzent: TPF_BLAU, tuer: TPF_BLAU, panto: true },
     bilder: [
       { src: 'bilder/tpf-rbde-560-c1.jpg', titel: 'Domino im Design «Chocolat Express» auf dem Grandfey-Viadukt', foto: 'Kabelleger / David Gubler', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:TPF_RBDe_560_Chocolat_Express_Viaduc_de_Grandfey.jpg' }
@@ -47,8 +55,13 @@ ZUEGE.push(
     daten: { 'Bauart': 'Niederflur-Elektrotriebzug, 3 Wagen', 'Achsfolge': 'Bo’2’+2’2’+2’Bo’', 'Hersteller': 'Stadler Bussnang', 'Betreiber': 'TPF', 'Spurweite': 'Meterspur, 1000 mm', 'Fahrzeugnummern': '101–110', 'Länge': '55,21 m', 'Gewicht': '88 t leer', 'Leistung': '1400 kW', 'Höchstgeschwindigkeit': '100 km/h', 'Sitzplätze': '15 in der 1., 133 in der 2. Klasse', 'Anzahl': '10 Züge', 'In Betrieb seit': '2015' },
     specOrder: ['Bauart', 'Achsfolge', 'Hersteller', 'Betreiber', 'Spurweite', 'Fahrzeugnummern', 'Länge', 'Gewicht', 'Leistung', 'Höchstgeschwindigkeit', 'Sitzplätze', 'Anzahl', 'In Betrieb seit'],
     specNote: 'In Betrieb gesetzt 2015–2016. Dazu 14 Klappsitze und 188 Stehplätze, zusammen 350 Plätze.',
-    abschnitte: [],
-    quellen: ['TPF – Flotte: ABe 100, technische Daten', 'Datenblatt HCKD «ABe 4/12 – Serie 100», Oktober 2026'],
+    abschnitte: [
+      { titel: 'Hersteller und Flottenaufbau', p: ['Stadler Bussnang lieferte den TPF zehn dreiteilige Triebzüge mit den Nummern 101–110. Sie gingen 2015 und 2016 in Betrieb. Ein Zug besteht aus ABe 2/4, Zwischenwagen B und Be 2/4.'] },
+      { titel: 'Einsatz und Technik', p: ['Die Züge fahren auf dem Meterspurnetz der TPF: S50 Palézieux–Châtel-St-Denis–Bulle–Montbovon und S51 bis Gruyères.', 'Ein Zug ist 55,21 m lang, leistet 1400 kW und fährt bis 100 km/h. Die Züge lassen sich modular aus zwei bis vier Elementen bilden, und bis zu vier Züge können gemeinsam fahren.'] },
+      { titel: 'Ausstattung und Zugänglichkeit', liste: ['Vollständig klimatisiert', 'Akustische und optische Fahrgastinformation', 'WC mit geschlossenem System, für Personen mit eingeschränkter Mobilität', '350 Plätze: 15 in der 1. und 133 in der 2. Klasse, 14 Klappsitze, 188 Stehplätze'],
+        p: ['Zu Niederflureinstiegen und Rollstuhlplätzen macht die TPF auf ihrer Fahrzeugseite keine Angaben.'] }
+    ],
+    quellen: ['TPF – Flotte: ABe 100, technische Daten', 'RER Fribourg – Liniennetz S50 und S51','Datenblatt HCKD «ABe 4/12 – Serie 100», Oktober 2026'],
     art: { typ: 'triebzug', nase: 'mittel', farbe: W1, akzent: TPF_BLAU, tuer: TPF_BLAU, panto: true },
     bilder: [
       { src: 'bilder/tpf-abe-4-12-c1.jpg', titel: 'ABe 4/12 vor der Dent du Chamois', foto: 'Plutowiki', lizenz: 'CC0', lizenzUrl: 'https://creativecommons.org/publicdomain/zero/1.0/', quelle: 'https://commons.wikimedia.org/wiki/File:TPF_ABe_4-12_Dent_du_Chamois.jpg' },
@@ -61,9 +74,14 @@ ZUEGE.push(
     kennzahlen: [['4', 'Triebwagen (121–124)'], ['90 km/h', 'Höchstgeschwindigkeit'], ['640 kW', 'Leistung'], ['1992', 'erster Einsatz']],
     daten: { 'Bauart': 'Pendelzug: Triebwagen, Zwischenwagen, Steuerwagen', 'Hersteller': 'Vevey/BBC; Zwischenwagen SIG', 'Betreiber': 'TPF', 'Spurweite': 'Meterspur, 1000 mm', 'Fahrzeugnummern': 'Be 4/4 121–124, B 207, 209, 215, (A)Bt 221–226', 'Länge': '52,32 m (Zug mit 3 Wagen)', 'Leistung': '640 kW', 'Höchstgeschwindigkeit': '90 km/h', 'Sitzplätze': '134 in der 2. Klasse; 9 in der 1. Klasse nur in 221–223', 'In Betrieb seit': '1992' },
     specOrder: ['Bauart', 'Hersteller', 'Betreiber', 'Spurweite', 'Fahrzeugnummern', 'Länge', 'Leistung', 'Höchstgeschwindigkeit', 'Sitzplätze', 'In Betrieb seit'],
-    abschnitte: [{ titel: 'Die Fahrzeuge', tabelle: { kopf: ['Fahrzeug', 'Nummern', 'Anzahl', 'Baujahre', 'Hersteller'], zeilen: [
-      ['Triebwagen Be 4/4', '121–124', '4', '1992–1995', 'Vevey/BBC'], ['Zwischenwagen B', '207, 209, 215', '3', '1973', 'SIG'], ['Steuerwagen (A)Bt', '221–226', '6', '1992–1995', 'Vevey/BBC']] } },
-      { p: ['Die Züge sind modular: Zwischen- und Steuerwagen werden je nach Nachfrage angehängt.'] }],
+    abschnitte: [
+      { titel: 'Hersteller und Flottenaufbau', p: ['Zur Serie 120 gehören 13 Fahrzeuge: 4 Triebwagen Be 4/4 (121–124) und 6 Steuerwagen (A)Bt (221–226) von Vevey/BBC aus den Jahren 1992 bis 1995 sowie 3 Zwischenwagen B (207, 209, 215) von SIG aus dem Jahr 1973.', 'Die Triebwagen hiessen früher BDe 4/4, weil sie ein Gepäckabteil hatten.'] },
+      { titel: 'Einsatz und Technik', p: ['Die Pendelzüge fahren auf dem Meterspurnetz der TPF zwischen Palézieux, Bulle, Gruyères und Montbovon. Sie sind modular: Zwischen- und Steuerwagen werden je nach Nachfrage angehängt.', 'Ein Zug aus drei Fahrzeugen ist 52,32 m lang, leistet 640 kW und fährt bis 90 km/h.'] },
+      { titel: 'Ausstattung und Zugänglichkeit', liste: ['Akustische und optische Fahrgastinformation', '253 Plätze: 134 in der 2. Klasse, 8 Klappsitze, 102 Stehplätze', '1. Klasse mit 9 Plätzen nur in den Steuerwagen 221–223'],
+        p: ['Zu Klimaanlage, Niederflureinstiegen und Rollstuhlplätzen macht die TPF auf ihrer Fahrzeugseite keine Angaben.'] },
+      { titel: 'Die Fahrzeuge', tabelle: { kopf: ['Fahrzeug', 'Nummern', 'Anzahl', 'Baujahre', 'Hersteller'], zeilen: [
+      ['Triebwagen Be 4/4', '121–124', '4', '1992–1995', 'Vevey/BBC'], ['Zwischenwagen B', '207, 209, 215', '3', '1973', 'SIG'], ['Steuerwagen (A)Bt', '221–226', '6', '1992–1995', 'Vevey/BBC']] } }
+    ],
     quellen: ['TPF – Flotte: Compositions 120, technische Daten', 'Datenblätter HCKD zu Be 4/4 121–124, B 207/209/215 und (A)Bt 221–226, Oktober 2026'],
     art: { typ: 'triebzug', nase: 'kurz', farbe: W1, akzent: TPF_BLAU, tuer: TPF_BLAU, panto: true },
     bilder: [
@@ -77,7 +95,12 @@ ZUEGE.push(
     kennzahlen: [['1899', 'eröffnet'], ['121 m', 'Streckenlänge'], ['550 ‰', 'grösste Steigung'], ['2 Min.', 'Fahrzeit']],
     daten: { 'Bauart': 'Standseilbahn mit Wasserballast', 'Hersteller': 'Von Roll', 'Betreiber': 'TPF', 'Kabinen': '2 mit je 20 Plätzen', 'Länge': '121 m Strecke, Kabine 5,4 m', 'Gewicht': '1600 kg je Kabine', 'Höchstgeschwindigkeit': '4,3 km/h (1,2 m/s)', 'Höhenunterschied': '58 m', 'Kapazität': '240 Personen pro Stunde', 'In Betrieb seit': '1899' },
     specOrder: ['Bauart', 'Hersteller', 'Betreiber', 'Kabinen', 'Länge', 'Gewicht', 'Höchstgeschwindigkeit', 'Höhenunterschied', 'Kapazität', 'In Betrieb seit'],
-    abschnitte: [{ titel: 'Betrieb', p: ['Die Bahn fährt eingleisig mit einer Ausweiche, etwa 70 Mal hin und zurück pro Tag. Die Talstation Neuveville liegt auf 552 m, die Bergstation St-Pierre auf 608 m. Die letzte grosse Revision war 2020.'] }],
+    abschnitte: [
+      { titel: 'Hersteller und Flottenaufbau', p: ['Die Standseilbahn baute Von Roll; sie fährt seit 1899. 1998 wurde sie umgebaut, die letzte grosse Revision war 2020. Die Bahn ist als Kulturdenkmal geschützt.', 'Zur Bahn gehören zwei Kabinen mit je 20 Plätzen.'] },
+      { titel: 'Einsatz und Technik', p: ['Die Bahn verbindet in Freiburg die Unterstadt Neuveville (552 m) mit St-Pierre (608 m). Auf der eingleisigen Strecke mit Ausweiche fährt sie etwa 70 Mal hin und zurück pro Tag, von 7 bis 19 Uhr, im Sommer bis 20 Uhr.', 'Als Gegengewicht dient Abwasser der Stadt Freiburg. Die Strecke ist 121 m lang und bis 550 ‰ steil; die Fahrt dauert 2 Minuten bei 1,2 m/s.'] },
+      { titel: 'Ausstattung und Zugänglichkeit', liste: ['2 Kabinen mit je 20 Plätzen', '240 Personen pro Stunde'],
+        p: ['Zur Zugänglichkeit für Rollstühle, Kinderwagen und Velos macht die TPF auf der Fahrzeugseite keine Angaben.'] }
+    ],
     quellen: ['TPF – Flotte: Funiculaire Neuveville – St-Pierre, technische Daten', 'Datenblatt HCKD «Funiculaire Fribourg», Oktober 2026'],
     art: { typ: 'wagen', geschlossen: true, zweiachs: true, farbe: '#C8102E', akzent: GFM_CREME },
     bilder: [

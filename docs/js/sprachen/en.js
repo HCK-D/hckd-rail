@@ -946,11 +946,12 @@ uebZug('rabde-500', {
   daten: { 'Betreiber': 'SBB Passenger', 'Zugbildung': '7 cars', 'Gewicht': '368 t empty', 'Neigetechnik': 'active body tilting', 'Anzahl': '44 trains (1st series 24, 2nd series 20)', 'Hersteller': 'Series 1: Adtranz and FIAT-SIG; series 2: Bombardier/Alstom' },
   specNote: 'Technical values according to SBB Infrastructure. The SBB vehicle page rounds the length to 190 m and gives 471 seats and 1999 as the first year in service.',
   abschnitte: [
-    { titel: 'Manufacturers and series', p: ['The first series, numbers 000 to 023, was built by Adtranz and FIAT-SIG. The second series, numbers 024 to 043, was built by the Bombardier/Alstom consortium; deliveries began in 2003.', 'Alstom supplied the bogies and the tilting system from Neuhausen, among other parts.'] },
-    { titel: 'Service and facilities', liste: ['Restaurant', 'Family zone', 'Quiet zone', 'Business zone', 'Bicycle and luggage areas', 'Wheelchair spaces', 'Wheelchair-accessible toilet'],
-      p: ['Its main routes include Basel–Biel–Lausanne and Romanshorn–St. Gallen–Zurich–Biel–Geneva. Other services run to Ticino.', 'Wheelchair spaces and an accessible toilet are available, but the entrances are not low-floor.'] },
-    { titel: 'Modernisation', p: ['Since 2021 SBB has been refurbishing the ICN trains at its Yverdon works. The first fully modernised train was presented on 24 October 2024. Besides seats, lighting, tables and passenger information, technical components are also overhauled.', 'The current SBB vehicle page gives 2034 as the completion year; the aim is around 20 more years of service.'] }
-  ],
+      { titel: 'Manufacturer and fleet build-up', p: ['SBB owns 44 ICN. The first series, numbers 000 to 023, was built by Adtranz and FIAT-SIG, the second, numbers 024 to 043, by the Bombardier/Alstom consortium; its delivery began in 2003.', 'Alstom supplied the bogies and the tilting system from Neuhausen, among other parts. The first ICN ran in 1999.'] },
+      { titel: 'Service and technology', p: ['Its main routes are Basel–Biel–Lausanne and Romanshorn–St. Gallen–Zurich–Biel–Geneva on the Jura foot line. Other services run to Ticino.', 'Thanks to active body tilting, the seven-car train takes curves faster on winding lines. It reaches 200 km/h.'] },
+      { titel: 'Facilities and accessibility', liste: ['Restaurant', 'Family zone', 'Quiet zone and business zone in 1st class', 'Power sockets, also at the side tables', 'Windows with better mobile reception', 'Bike spaces', 'Pram spaces and baby-changing table', 'Wheelchair spaces and accessible toilet', 'Priority seats'],
+        p: ['Boarding is not low-floor. Wheelchair spaces and an accessible toilet are available.'] },
+      { titel: 'Modernisation', p: ['Since 2021 SBB has been refurbishing the ICN trains at its Yverdon works. The first fully modernised train was presented on 24 October 2024. Besides seats, lighting, tables and passenger information, technical components are also overhauled.', 'The current SBB vehicle page gives 2034 as the completion year; the aim is around 20 more years of service.'] }
+    ],
   bilder: ['ICN in summer in front of the mountains', 'ICN in the winter sun', 'RABDe 500 021 in Rotkreuz', 'ICN on its way', 'ICN on the Aare bridge in Solothurn']
 });
 
@@ -961,7 +962,11 @@ uebZug('rabe-502', {
   daten: { 'Hersteller': 'Bombardier Transportation, now Alstom', 'Antrieb': 'permanent-magnet synchronous motors', 'Gewicht': '237.1–467.4 t empty, depending on version', 'Anzahl': '62 trains (23 InterCity, 39 InterRegio)', 'In Betrieb seit': '2018, whole fleet delivered in 2022' },
   specNote: 'Empty weights according to SBB: IR100 237.1 t, IR200 463.2 t, IC200 467.4 t.',
   abschnitte: [
-    { titel: 'Technical data of the three versions', tabelle: { kopf: ['Feature', 'IC200', 'IR200', 'IR100'], zeilen: [
+      { titel: 'Manufacturer and fleet build-up', p: ['The builder is Bombardier Transportation, now part of Alstom. The original order for 59 trains was raised to 62 by an agreement in 2014: 23 InterCity and 39 InterRegio trains.', 'The first FV-Dosto ran in 2018, and the fleet was fully delivered in 2022. There are three versions: IC200 (RABDe 502) and IR200 and IR100 (RABe 502).'] },
+      { titel: 'Service and technology', p: ['An important corridor is St. Gallen–Zurich–Bern–Lausanne–Geneva. Other services run on Basel–Zurich, Zurich–Chur and Lucerne–Zurich, among others.', 'The trains reach 200 km/h and are driven by permanent-magnet synchronous motors. At peak times, formations up to 400 m long offer up to 1300 seats.'] },
+      { titel: 'Facilities and accessibility', liste: ['Restaurant, family car, quiet zone and business zone (IC version only)', 'Power sockets', 'Windows with better mobile reception', 'Electronic reservation display', 'Bike, pram and luggage spaces', 'Low-floor entrances', 'Wheelchair spaces and accessible toilet', 'Priority seats and baby-changing table'],
+        p: ['Thanks to low-floor entrances, wheelchair users can board step-free at suitable platforms.'] },
+      { titel: 'Technical data of the three versions', tabelle: { kopf: ['Feature', 'IC200', 'IR200', 'IR100'], zeilen: [
       ['Class', 'RABDe 502', 'RABe 502', 'RABe 502'],
       ['Cars per train', '8', '8', '4'],
       ['Length', '200.6 m', '200.6 m', '101.0 m'],
@@ -971,11 +976,8 @@ uebZug('rabe-502', {
       ['Starting tractive effort', '482.24 kN', '482.24 kN', '241.12 kN'],
       ['Restaurant', 'yes', 'no', 'no']] },
       hinweis: 'Seats and facilities according to SBB, technical values according to SBB Infrastructure. Weights refer to empty vehicles.' },
-    { titel: 'Manufacturer and procurement', p: ['The manufacturer was Bombardier Transportation, now part of Alstom. An agreement in 2014 turned the original order of 59 trains into 62 vehicles: 23 InterCity and 39 InterRegio trains.', 'The fleet was fully delivered in 2022. The drive uses permanent-magnet synchronous motors.'] },
-    { titel: 'Service and facilities', liste: ['Low-floor entrances', 'Power sockets', 'Wheelchair spaces', 'Wheelchair-accessible toilet', 'Restaurant (IC version)', 'Family car (IC version)'],
-      p: ['An important corridor is St. Gallen–Zurich–Bern–Lausanne–Geneva. Other services run on routes such as Basel–Zurich, Zurich–Chur and Lucerne–Zurich.'] },
-    { titel: 'Further development', p: ['SBB has decided to modify the bogies of the entire fleet. The roll compensation is removed and the suspension adjusted.', 'According to an announcement from December 2025, series conversion is due to start after the operating approval at the end of 2026 and last until the early 2030s.'] }
-  ],
+      { titel: 'Further development', p: ['SBB has decided to modify the bogies of the entire fleet. The roll compensation is removed and the suspension adjusted.', 'According to an announcement from December 2025, series conversion is due to start after the operating approval at the end of 2026 and last until the early 2030s.'] }
+    ],
   bilder: ['FV-Dosto on a long-distance service against the mountains', 'RABDe 502 006 «Olten» at Zurich HB', 'RABe 502 402 «Biel/Bienne» in front of the mountains', 'RABe 502 214 near Tecknau', 'RABe 502 404 by the lake']
 });
 
@@ -986,7 +988,11 @@ uebZug('rabe-511', {
   daten: { 'Betreiber': 'SBB Passenger', 'Bauart': 'double-deck multiple unit', 'Zugbildung': '6 cars (Regio-Dosto), 4 cars (IR-Dosto)', 'Länge': '150.0 m (Regio-Dosto), 100.0 m (IR-Dosto)', 'Leistung': '6000 kW (both versions)', 'Gewicht': '210–292 t, depending on version', 'Anzahl': '93 trains (69 Regio-Dosto, 24 IR-Dosto)', 'Einsatz': 'Zurich S-Bahn, RegioExpress, InterRegio' },
   specNote: 'Weight according to SBB: 210 t for the four-car IR-Dosto, 292 t for the six-car Regio-Dosto.',
   abschnitte: [
-    { titel: 'The versions compared', tabelle: { kopf: ['Feature', 'Regio-Dosto', 'IR-Dosto'], zeilen: [
+      { titel: 'Manufacturer and fleet build-up', p: ['Stadler delivered these KISS double-deck trains from 2012. SBB runs 69 six-car Regio-Dosto and 24 four-car IR-Dosto.', 'The 24 IR-Dosto were created from 2020 to 2024 by upgrading Regio-Dosto for long-distance service. SBB is renewing the other Regio-Dosto until 2035; afterwards they will all wear the blue ZVV livery.'] },
+      { titel: 'Service and technology', p: ['Regio-Dosto mainly run on Zurich S-Bahn lines and as the RE Wettingen–Olten–Lucerne.', 'IR-Dosto run interregional services in German- and French-speaking Switzerland, among others around Zurich, in the Mittelland, in north-western Switzerland and towards Chur. Both versions run at up to 160 km/h; the IR-Dosto can be coupled with the newer RABe 512.'] },
+      { titel: 'Facilities and accessibility', liste: ['Low-floor entrances', 'Wheelchair spaces and accessible toilet', 'Bike and pram spaces', 'Mobile signal booster', 'Power sockets in 1st class (IR-Dosto: at almost every seat, also in 2nd class)', '2+1 seating in 1st class (IR-Dosto)'],
+        p: ['The wide low entrances allow step-free boarding at suitable platforms.'] },
+      { titel: 'The versions compared', tabelle: { kopf: ['Feature', 'Regio-Dosto', 'IR-Dosto'], zeilen: [
       ['Vehicles', '69', '24'],
       ['Cars per train', '6', '4'],
       ['Length', '150.0 m', '100.0 m'],
@@ -996,11 +1002,8 @@ uebZug('rabe-511', {
       ['Weight', '292 t', '210 t'],
       ['Low-floor entrance', 'yes', 'yes'],
       ['Services', 'S-Bahn / RE', 'IR / RE']] },
-      hinweis: 'The split 120 / 415 refers to the 1st and 2nd class seats in the Regio-Dosto. For the IR version SBB gives 317 seats in total.' },
-    { titel: 'Service', p: ['Regio-Dosto trains mainly run on Zurich S-Bahn lines and as the RE Wettingen–Olten–Lucerne.', 'IR-Dosto trains run interregional services in German- and French-speaking Switzerland, including the Zurich area, the Swiss Plateau, northern Switzerland and the line to Chur. The IR version can be coupled with the newer RABe 512.'] },
-    { titel: 'Facilities and refurbishment', liste: ['Wide low-level entrances', 'Wheelchair spaces', 'Wheelchair-accessible toilet', 'Space for prams and bicycles'],
-      p: ['The IR-Dosto trains were upgraded for long-distance service in 2020–2024, with power sockets and 2+1 seating in 1st class, among other things.', 'SBB is refurbishing the Regio-Dosto trains step by step; the first refurbished train has been running since September 2026.'] }
-  ],
+      hinweis: 'The split 120 / 415 refers to the 1st and 2nd class seats in the Regio-Dosto. For the IR version SBB gives 317 seats in total.' }
+    ],
   bilder: ['Regio-Dosto as Zurich S-Bahn line S15 in Jona', 'RABe 511 112 at Genève-Cornavin', 'RABe 511 026 in Geneva', 'RABe 511 in Sevelen', 'RABe 511 018 at Zurich HB']
 });
 
@@ -1010,10 +1013,12 @@ uebZug('rabe-514', {
   kennzahlen: [['61', 'trains'], ['360', 'seats per train'], ['140 km/h', 'top speed'], ['2006', 'first in service with SBB']],
   daten: { 'Betreiber': 'SBB Passenger', 'Bauart': 'double-deck multiple unit', 'Zugbildung': '4 cars', 'Gewicht': '223 t empty', 'Anzahl': '61 trains', 'Einsatz': 'Zurich S-Bahn' },
   abschnitte: [
-    { titel: 'Service and passenger areas', liste: ['Continuous low-level entrance', 'Multi-purpose areas for bicycles and prams', 'Priority seats', 'Wheelchair spaces', 'Wheelchair-accessible toilet'],
-      p: ['The DTZ trains can be used across the entire Zurich S-Bahn network.'] },
-    { titel: 'Modernisation', p: ['SBB has been refurbishing the fleet since 2025, probably until around 2030. This includes a new livery, better mobile reception through adapted window glass, and work on lighting, interiors and technical components.', 'The refurbishment is intended to extend the service life to 32 years.'] }
-  ],
+      { titel: 'Manufacturer and fleet build-up', p: ['Siemens delivered the 61 double-deck multiple units (DTZ) from 2006 to 2009. They are the second generation of double-deck trains of the Zurich S-Bahn.'] },
+      { titel: 'Service and technology', p: ['The DTZ can run on the whole Zurich S-Bahn network. A train is 100 m long, offers 360 seats and runs at up to 140 km/h.'] },
+      { titel: 'Facilities and accessibility', liste: ['Continuous low entrances with gap bridging', 'Multi-purpose area with bike and pram spaces', 'Priority seats', 'Wheelchair spaces', 'Accessible toilet'],
+        p: ['Thanks to the low entrances with gap bridging, wheelchair users can board without a step at suitable platforms.'] },
+      { titel: 'Modernisation', p: ['SBB has been refurbishing the fleet since 2025, probably until around 2030. This includes a new livery, better mobile reception through adapted window glass, and work on lighting, interiors and technical components.', 'The refurbishment is intended to extend the service life to 32 years.'] }
+    ],
   bilder: ['RABe 514 «DTZ» on its way', 'Stairs to the middle level of a refurbished DTZ', 'RABe 514 054 as S8 at Zurich Enge', 'RABe 514 015 in the new 2023 ZVV livery', 'DTZ as S15 on the causeway at Rapperswil']
 });
 
@@ -1024,10 +1029,12 @@ uebZug('rabe-523', {
   daten: { 'Bauart': 'electric multiple unit', 'Grundtyp': '4 cars', 'Einstieg': 'low-floor', 'Höchstgeschwindigkeit': '160 km/h (FLIRT family according to SBB)', 'Erste Region': 'Zug Stadtbahn', 'Einsatz': 'regional services, S-Bahn', 'Anzahl': '98* (according to number ranges)' },
   specNote: '* The figure of 98 comes from the published number ranges 001–073, 101–114 and 501–511; there is no separately confirmed current SBB fleet figure. SBB gives 160 km/h for the whole regional FLIRT family.',
   abschnitte: [
-    { titel: 'Regional service and facilities', liste: ['Low-floor entrance', 'Wheelchair spaces', 'Wheelchair-accessible toilets', 'Space for bicycles and prams'],
-      p: ['According to SBB, FLIRT trains run as S-Bahn services in the cantons of Aargau, Solothurn, Lucerne, Basel, Neuchâtel, Fribourg and Vaud, among others. The facilities apply to the whole family; details vary by version.'] },
-    { titel: 'Understanding the numbers', p: ['The published figure of 209 covers all FLIRT trains used by SBB in regional service, including other classes and versions.', 'For the RABe 523 alone, the published number ranges 001–073, 101–114 and 501–511 add up to 98 vehicles. This is derived from the numbers and is not an official current SBB fleet figure.'] }
-  ],
+      { titel: 'Manufacturer and fleet build-up', p: ['All FLIRT come from Stadler; the first ran at SBB in 2004. In regional service, SBB uses a total of 209 FLIRT of various classes.'] },
+      { titel: 'Service and technology', p: ['According to SBB, FLIRT run as S-Bahn trains in the cantons of Aargau, Solothurn, Lucerne, Basel, Neuchâtel, Fribourg and Vaud, among others.', 'Depending on the version, the trains are 75 to 105 m long and offer 156 to 236 seats. They run at up to 160 km/h.'] },
+      { titel: 'Facilities and accessibility', liste: ['Low-floor entrance', 'Wheelchair spaces and accessible toilet', 'Priority seats', 'Baby-changing table (only in some trains)', 'Power sockets in 1st class', 'Bike, pram and luggage spaces'],
+        p: ['These details apply to the SBB FLIRT family; specifics differ by version.'] },
+      { titel: 'Understanding the numbers', p: ['The published figure of 209 covers all FLIRT trains used by SBB in regional service, including other classes and versions.', 'For the RABe 523 alone, the published number ranges 001–073, 101–114 and 501–511 add up to 98 vehicles. This is derived from the numbers and is not an official current SBB fleet figure.'] }
+    ],
   bilder: ['RABe 523 001 in Muttenz', 'RABe 523 019', 'RABe 523 024 in Montreux', 'RABe 523 018 in Yverdon-les-Bains', 'RABe 523 038']
 });
 
@@ -1038,20 +1045,20 @@ uebZug('rbde-560', {
   daten: { 'Fahrzeugart': 'electric push-pull train', 'Leistung': '1700 kW on the RBDe 560', 'Gewicht': 'approx. 146 t empty', 'Niederflur': 'in the intermediate car', 'Anzahl': '86 trains', 'In Betrieb seit': '2009 (first in service with SBB)', 'Hersteller': 'Schindler Waggon, SWA, SIG, ABB and Bombardier (depending on the car)', 'Status': 'in service' },
   specNote: 'Fleet, capacity and service data according to SBB. Technical values according to SBB Infrastructure. The empty weight is the total of the three cars.',
   abschnitte: [
-    { titel: 'Train components', tabelle: { kopf: ['Vehicle', 'Role', 'Length', 'Empty weight', 'Drive'], zeilen: [
+      { titel: 'Manufacturer and fleet build-up', p: ['SBB owns 86 Domino. The power cars and driving trailers come from the NPZ family by Schindler Waggon, SWA, SIG and ABB; Bombardier supplied the new low-floor INOVA intermediate cars.', 'There is therefore no single year of construction for the whole train. The first Domino ran at SBB in 2009.'] },
+      { titel: 'Service and technology', p: ['SBB mainly uses the Domino on S-Bahn lines in the cantons of Aargau, Lucerne, Neuchâtel and Vaud. The exact line allocation can change with the timetable.', 'A three-car train is 75 m long, offers 172 seats and runs at up to 140 km/h.'] },
+      { titel: 'Facilities and accessibility', liste: ['Step-free entrance in the intermediate car', 'Wheelchair spaces and accessible toilet', 'Priority seats', 'Power sockets in 1st class', 'Bike, pram and luggage spaces', 'Improved mobile reception'],
+        p: ['Only the INOVA intermediate car is low-floor; the power car and driving trailer have steps.'] },
+      { titel: 'Train components', tabelle: { kopf: ['Vehicle', 'Role', 'Length', 'Empty weight', 'Drive'], zeilen: [
       ['RBDe 560', 'powered end car', '25.0 m', '72.0 t', '1700 kW / 182 kN'],
       ['B INOVA', 'low-floor intermediate car', '24.4 m', '36.0 t', 'no own drive'],
       ['ABt', 'driving trailer with 1st and 2nd class', '25.0 m', '38.0 t', 'no own drive']] } },
-    { titel: 'Concept and years of construction', p: ['There is no single year of construction for the Domino as a whole. The base vehicles come from the NPZ family; for the TPF sets the years 1984 to 1996 are given. The major refurbishment of the TPF trains took place from 2009 to 2011.', 'At SBB the first Domino entered service in 2009. Bombardier supplied the new INOVA intermediate cars; the other manufacturers differ depending on the power car or driving trailer.'] },
-    { titel: 'Facilities', liste: ['Improved mobile reception', 'Priority seats', 'Wheelchair spaces', 'Wheelchair-accessible toilet', 'Power sockets in 1st class', 'Spaces for bicycles and prams', 'Luggage areas', 'Multi-purpose zone in the intermediate car'],
-      p: ['Accessibility: the step-free entrance is in the INOVA intermediate car. The power car and driving trailer are not low-floor throughout.'] },
-    { titel: 'Service with SBB', p: ['SBB mainly uses the Domino on individual S-Bahn lines in the cantons of Aargau, Lucerne, Neuchâtel and Vaud. The exact allocation can change with the timetable and fleet planning.'] },
-    { titel: 'Other operators', tabelle: { kopf: ['Operator', 'Fleet', 'Length', 'Seats', 'Notes'], zeilen: [
+      { titel: 'Other operators', tabelle: { kopf: ['Operator', 'Fleet', 'Length', 'Seats', 'Notes'], zeilen: [
       ['TPF', '14', '75 m', '184 (24 1st + 160 2nd cl.)', '1650 kW; 140 km/h; RBDe 235–247 and 269'],
       ['RegionAlps', '16', '74.5 m', '188 (12 1st + 176 2nd cl.)', '100 standing places; 140 km/h; St-Gingolph–Brig']] },
       hinweis: 'Fleet and capacity figures according to TPF and RegionAlps. Values of other operators cannot simply be applied to SBB trains; power and capacity in particular differ.' },
-    { titel: 'Replacement', p: ['SBB is procuring 198 FLIRT Evo trains to gradually replace the Domino and first-generation FLIRT trains. Service with SBB starts in 2028; regional introduction is planned until 2033.', 'RegionAlps has announced 27 FLIRT Evo, which are to replace its Domino and NINA trains by 2031.'] }
-  ],
+      { titel: 'Replacement', p: ['SBB is procuring 198 FLIRT Evo trains to gradually replace the Domino and first-generation FLIRT trains. Service with SBB starts in 2028; regional introduction is planned until 2033.', 'RegionAlps has announced 27 FLIRT Evo, which are to replace its Domino and NINA trains by 2031.'] }
+    ],
   bilder: ['Domino between vineyards and a lakeside village', 'Domino in autumn light', 'Two Domino trains in multiple above the lake', 'Domino among the vineyard terraces', 'Domino on the lakeshore', 'Domino in multiple in the vineyards']
 });
 
@@ -1061,18 +1068,18 @@ uebZug('re-460', {
   kennzahlen: [['119', 'SBB locomotives'], ['200 km/h', 'in service · built for 230 km/h'], ['18.5 m', 'length'], ['6100 kW', 'continuous power'], ['1992', 'first in service with SBB']],
   daten: { 'Fahrzeugart': 'electric universal locomotive', 'Höchstgeschwindigkeit': '200 km/h in service, built for 230 km/h', 'Leistung': '6100 kW continuous', 'Gewicht': '84 t in working order', 'In Betrieb seit': '1992 (first in service with SBB)', 'Anzahl': '119 locomotives', 'Status': 'in service (modernised in the Refit programme)' },
   abschnitte: [
-    { titel: 'Vehicle components', tabelle: { kopf: ['Vehicle', 'Role', 'Length', 'Weight in working order', 'Drive'], zeilen: [
+      { titel: 'Manufacturer and fleet build-up', p: ['SLM and ABB developed the Re 460 in the early 1990s for the «Rail 2000» project. From 1992 to 1996, 119 locomotives were delivered to SBB; their striking design is by Pininfarina.', 'Between 2017 and 2022 all 119 locomotives went through a refit at the Yverdon-les-Bains works with new converters, a renewed compressed-air system, wiring and driver’s seats. This lets them run into the 2040s.'] },
+      { titel: 'Service and technology', liste: ['Three-phase traction, with new converters from the refit', 'Steel body with fronts made of glass-fibre reinforced plastic', 'Pressure-tight cab for high-speed tunnel runs', 'Multiple-unit control for push-pull trains with a driving trailer', 'Regenerative brake that feeds power back into the grid'],
+        p: ['The Re 460 mainly pulls and pushes InterCity and InterRegio trains on the whole Swiss standard-gauge network, usually with IC2000 double-deck coaches or standard coaches IV. It runs at up to 200 km/h.'] },
+      { titel: 'Facilities and accessibility', p: ['What passengers find on board depends on the coaches. The IC2000 double-deck coaches have low-floor entrances, wheelchair spaces and an accessible toilet; the standard coaches IV are not low-floor. Details are on the IC2000 and EW IV pages.'] },
+      { titel: 'Vehicle components', tabelle: { kopf: ['Vehicle', 'Role', 'Length', 'Weight in working order', 'Drive'], zeilen: [
       ['Re 460', 'electric universal locomotive', '18.5 m', '84.0 t', '6100 kW / 300 kN']] } },
-    { titel: 'Concept and years of construction', p: ['The Re 460 was developed in the early 1990s as part of the «Rail 2000» project to modernise fast services on the main Swiss lines. From 1992 to 1996, a total of 119 locomotives were delivered to SBB.', 'Its distinctive design comes from the Italian design studio Pininfarina.'] },
-    { titel: 'Modernisation (Refit programme)', p: ['Between 2017 and 2022 all 119 locomotives went through an extensive Refit programme at the SBB works in Yverdon-les-Bains. New converters that reduce energy consumption were installed, and the compressed-air system, wiring and driver seats were renewed, among other work.'] },
-    { titel: 'Equipment and features', liste: ['Three-phase drive technology, GTO converters upgraded to IGBT', 'Aerodynamic steel body with GRP cab fronts', 'Pressure-sealed cab for tunnel runs, e.g. Mattstetten–Rothrist and the Lötschberg Base Tunnel', 'Multiple-unit control for push-pull operation with driving trailers (Bt, IC2000)', 'Energy-saving regenerative brake'] },
-    { titel: 'Service with SBB', p: ['The Re 460 hauls and pushes mainly InterCity (IC) and InterRegio (IR) trains across the entire Swiss standard-gauge network. It often runs with IC2000 double-deck coaches or Standard Coaches IV (EW IV).'] },
-    { titel: 'Other operators and related types', tabelle: { kopf: ['Operator / type', 'Fleet', 'Power', 'Top speed', 'Notes'], zeilen: [
-      ['BLS (Re 465)', '18', '7000 kW', '230 km/h', 'more powerful version of the Lok 2000 for freight and passenger trains'],
-      ['VR (Sr2)', '46', '6000 kW', '210 km/h', 'broad-gauge version (1524 mm) for Finland'],
-      ['NSB (El 18)', '22', '5880 kW', '200 km/h', 'version for Norway, built for Nordic conditions']] } },
-    { titel: 'Future and outlook', p: ['Thanks to the Refit programme the locomotives are technically fit for around 20 more years of service. They are expected to remain the backbone of SBB locomotive-hauled long-distance services into the 2040s.'] }
-  ],
+      { titel: 'Other operators and related types', tabelle: { kopf: ['Operator / type', 'Fleet', 'Power', 'Top speed', 'Special features'], zeilen: [
+        ['BLS (Re 465)', '18', '6400 kW', '160 km/h (approved)', 'Sister locomotive for passenger, car-shuttle and freight trains'],
+        ['VR (Sr2)', '46', '6000 kW', '210 km/h', 'Broad-gauge version (1524 mm) for Finland'],
+        ['NSB (El 18)', '22', '5400 kW', '200 km/h', 'Version for Norway']] } },
+      { titel: 'Future and outlook', p: ['Thanks to the Refit programme the locomotives are technically fit for around 20 more years of service. They are expected to remain the backbone of SBB locomotive-hauled long-distance services into the 2040s.'] }
+    ],
   bilder: ['Re 460 with standard coaches in spring', 'Re 460 with IC2000 double-deck coaches above the lake', 'Re 460 with IC2000 between field and forest', 'Re 460 with IC2000 in summer', 'Re 460 with standard coaches in the early morning', 'Re 460 «Swisstainable» with IC2000', 'Re 460 «Swisstainable» with night-train coaches']
 });
 
@@ -1083,13 +1090,22 @@ uebZug('rabe-503', {
   daten: { 'Hersteller': 'Alstom (Pendolino family, ETR 610)', 'Zugbildung': '7 cars', 'Stromsystem': '15 kV and 25 kV AC, 3 kV DC', 'Gewicht': '418 t empty (FOS), 466 t loaded', 'Höchstgeschwindigkeit': '250 km/h (vehicle), 200 km/h in the Swiss train type', 'Neigetechnik': 'active', 'Einsatz': 'EuroCity Germany–Switzerland–Italy' },
   specNote: 'SBB gives 250 km/h as the top speed of the vehicle; the train type catalogue lists 200 km/h for the Swiss train type.',
   abschnitte: [
-    { titel: 'Procurement and service', p: ['The SBB fleet includes 19 Astoro trains: seven from the first order and twelve delivered later.', 'They run on the international north–south axis, including via the Gotthard to Milan, and on routes towards Germany.'] },
-    { titel: 'Refurbishment', p: ['Since 2024 SBB has been refurbishing the whole fleet at its Bellinzona works. Interiors, passenger information and technical components are being overhauled; the programme is expected to last until the end of 2027.'] }
-  ],
+      { titel: 'Manufacturer and fleet build-up', p: ['The Astoro belongs to Alstom’s Pendolino family (ETR 610). The SBB fleet has 19 trains: seven from the first order and twelve delivered later. The first ran in 2009.'] },
+      { titel: 'Service and technology', p: ['The Astoro runs on the north–south axis between Germany, Austria, Switzerland and Italy, mainly Geneva–Brig–Milan, Basel–Bern–Brig–Milan and Zurich–Munich.', 'Thanks to tilting, it shortens journey times over the Simplon and towards Munich. The train is 187 m long, offers 402 seats and reaches 250 km/h.'] },
+      { titel: 'Facilities and accessibility', liste: ['Restaurant', 'Family zone', 'Wi-Fi', 'Power sockets for Swiss and international plugs', 'Mobile signal booster', 'Electronic reservation display', 'Bike and luggage spaces', 'Wheelchair spaces and accessible toilet', 'Priority seats and baby-changing table'],
+        p: ['Boarding is not low-floor. Wheelchair spaces and an accessible toilet are available.'] },
+      { titel: 'Refurbishment', p: ['Since 2024 SBB has been refurbishing the whole fleet at its Bellinzona works. Interiors, passenger information and technical components are being overhauled; the programme is expected to last until the end of 2027.'] }
+    ],
   bilder: ['RABe 503 «Astoro» in Brig', 'RABe 503 «Astoro» at the platform', 'ETR 610 013 near St-Saphorin on Lake Geneva', 'ETR 610 «Astoro» on its way', 'ETR 610 006 as EC 50 in Domodossola']
 });
 
 uebZug('re-450', {
+  abschnitte: [
+      { titel: 'Manufacturer and fleet build-up', p: ['SLM and ABB built the 115 Re 450 for the double-deck push-pull trains (DPZ) of the Zurich S-Bahn. The double-deck coaches came from SLM and Schindler Waggon; the first DPZ ran in 1989, a year before the S-Bahn started in May 1990.', 'By 1998, 113 push-pull trains had been built. They were renewed from 2011 to 2018.'] },
+      { titel: 'Service and technology', p: ['The DPZ are the backbone of the Zurich S-Bahn and can run on almost the whole ZVV network. A train is 98.8 m long, offers 345 seats and runs at up to 130 km/h.', 'A push-pull train consists of the Re 450, double-deck coaches and a driving trailer, so the locomotive does not have to run round at the terminus.'] },
+      { titel: 'Facilities and accessibility', liste: ['Air conditioning', 'Customer information system', 'Power sockets in 1st class', 'Mobile signal booster', 'Multi-purpose area with bike spaces', 'Pram spaces', 'Level boarding in the low-floor double-deck coach (NDW)', 'Wheelchair spaces and accessible toilet', 'Priority seats'],
+        p: ['Wheelchair users can board step-free in the low-floor NDW coach, which is part of the push-pull trains.'] }
+    ],
   typ: 'Locomotive of the double-deck push-pull trains',
   text: ['The Re 450 hauls and pushes the double-deck push-pull trains (DPZ) of the Zurich S-Bahn.', 'The push-pull trains consist of the locomotive, double-deck coaches and a driving trailer.'],
   daten: { 'Einsatz': 'Zurich S-Bahn' },
@@ -1102,9 +1118,11 @@ uebZug('rabe-512', {
   kennzahlen: [['60', 'trains ordered'], ['466', 'seats'], ['160 km/h', 'top speed'], ['2023', 'first in service']],
   daten: { 'Zugbildung': '6 cars', 'Länge': '151.88 m', 'Gewicht': '299 t empty, 382 t loaded', 'Anzahl': '60 ordered', 'In Betrieb seit': 'July 2023' },
   abschnitte: [
-    { titel: 'Procurement', p: ['In 2021 SBB ordered a total of 60 new IR-Dosto trains. Commercial service began in July 2023; delivery is due to be complete by the end of 2026.'] },
-    { titel: 'Service and comfort', p: ['The trains are intended for InterRegio and RegioExpress services in the Zurich region, on the Swiss Plateau and in western Switzerland.', 'Low-floor entrances, wheelchair spaces, multi-purpose areas, power sockets and modern passenger information improve accessibility and comfort. Multiple working with upgraded RABe 511 trains is possible.'] }
-  ],
+      { titel: 'Manufacturer and fleet build-up', p: ['In 2021 SBB ordered 60 new IR-Dosto from Stadler. The first commercial service began in July 2023; full delivery is due by the end of 2026.'] },
+      { titel: 'Service and technology', p: ['The trains run InterRegio and RegioExpress services around Zurich, in the Mittelland and in western Switzerland.', 'A train is 150 m long, offers 466 seats and runs at up to 160 km/h. Double traction with the upgraded IR-Dosto RABe 511 is possible.'] },
+      { titel: 'Facilities and accessibility', liste: ['Level low-floor entrances', 'Wheelchair spaces and accessible toilet', 'Priority seats', 'Power sockets', 'Windows with better mobile reception', 'Modern passenger information', '2+1 seating in 1st class', 'Eight bike spaces in two places, with e-bike charging', 'Pram and luggage spaces, baby-changing table'],
+        p: ['Thanks to level entrances, boarding is barrier-free at suitable platforms. A family zone and a business zone are being added.'] }
+    ],
   bilder: ['IR-Dosto RABe 512 at Zurich HB', 'RABe 512 IR-Dosto on its way', 'RABe 512 IR-Dosto', 'Upper deck, 2nd class, in the RABe 512', 'Front of the RABe 512']
 });
 
@@ -1115,9 +1133,11 @@ uebZug('rabe-520', {
   daten: { 'Breite': 'approx. 2.65 m (Seetal gauge)', 'Gewicht': '78 t empty (FOS), 105 t loaded', 'Anzahl': '17 procured', 'Einsatz': 'Seetal line Lucerne–Lenzburg' },
   specNote: 'Two units later went to Thurbo; the figure of 17 refers to the original order and not necessarily to today’s SBB fleet.',
   abschnitte: [
-    { titel: 'Procurement and special features', p: ['SBB procured 17 vehicles numbered 520 000–016. The narrow design increases the safety distance to the road running alongside.', 'Some doors were originally designed for the low Seetal platforms; during the 2018–2021 modernisation an entrance for standard 55 cm platforms was added.'] },
-    { titel: 'Service', p: ['The main area of operation is the Seetal line Lucerne–Lenzburg. At times the vehicles also ran on other lines from Lucerne and Lenzburg.'] }
-  ],
+      { titel: 'Manufacturer and fleet build-up', p: ['Stadler delivered these GTW articulated railcars from 2002; 17 vehicles numbered 520 000–016 were procured. SBB lists 15 trains in its overview today.', 'The vehicles were modernised from 2018 to 2021.'] },
+      { titel: 'Service and technology', p: ['The main area of use is the Seetal line Lucerne–Lenzburg; at peak times two trains run coupled.', 'The three-section train with a powered middle module is 53.5 m long, offers 124 seats and runs at up to 115 km/h. Its narrow body increases the distance to the road running alongside.'] },
+      { titel: 'Facilities and accessibility', liste: ['Five doors per side for the low Seetal platforms (35 cm above rail)', 'One door for standard platforms (55 cm)', 'One wheelchair space per train', 'Priority seats', 'Bike, pram and luggage spaces', 'Windows with better mobile reception'],
+        p: ['Wheelchair users can board on their own at all stations of the Seetal line.'] }
+    ],
   bilder: ['RABe 520 «GTW» in Beinwil am See', 'RABe 520 in the Seetal near Seengen', 'RABe 520 of the Seetal line in Lenzburg, 2003', 'RABe 520 at the level crossing in Beinwil am See', 'RABe 520 as S28 near Hunzenschwil']
 });
 
@@ -1128,9 +1148,11 @@ uebZug('rabe-521', {
   daten: { 'Zugbildung': '4 cars', 'Gewicht': '120 t empty, 152 t loaded', 'Leistung': '2656 kW (FOS train type value)', 'Nummern': '521 001–030 and 201–209', 'Einsatz': 'Basel S-Bahn, Seehas, Switzerland–Germany' },
   specNote: 'The SBB train type catalogue also groups technically similar four-car FLIRT variants under this type; the power is therefore given as the type value.',
   abschnitte: [
-    { titel: 'Procurement and fleet', p: ['The class comprises 30 vehicles numbered 521 001–030 and nine further units 521 201–209, 39 trains in total. The first vehicles entered service in 2004.', 'Stadler originally developed the FLIRT platform for SBB.'] },
-    { titel: 'Service', p: ['The RABe 521 trains mainly run on lines of the tri-national Basel S-Bahn and on cross-border services to Germany.', 'Automatic couplers allow multiple working with compatible FLIRT trains; low-floor entrances and multi-purpose areas help passengers board and alight quickly.'] }
-  ],
+      { titel: 'Manufacturer and fleet build-up', p: ['Stadler originally developed the FLIRT platform for SBB. The RABe 521 class comprises 30 vehicles numbered 521 001–030 and nine more 521 201–209, 39 trains in total. The first ran in 2004.'] },
+      { titel: 'Service and technology', p: ['The RABe 521 mainly run on the tri-national Basel S-Bahn and on cross-border services to Germany.', 'Automatic couplers allow multiple working with compatible FLIRT. SBB FLIRT run at up to 160 km/h.'] },
+      { titel: 'Facilities and accessibility', liste: ['Low-floor entrance', 'Wheelchair spaces and accessible toilet', 'Priority seats', 'Power sockets in 1st class', 'Multi-purpose areas for bikes and prams', 'Luggage racks'],
+        p: ['Low-floor entrances and multi-purpose areas speed up passenger exchange. These details apply to the SBB FLIRT family.'] }
+    ],
   bilder: ['RABe 521 «FLIRT»', 'RABe 521 as S3 to Olten in Porrentruy', 'FLIRT on the Gäubahn bridge in Olten', 'FLIRT on the Aare bridge near Olten', 'Interior of the RABe 521 «Express-Hase»']
 });
 
@@ -1140,9 +1162,11 @@ uebZug('rabe-522', {
   kennzahlen: [['32', 'trains of the 201–232 series'], ['160 km/h', 'top speed'], ['2011', 'current series in service since'], ['75.0 m', 'length']],
   daten: { 'Zugbildung': '4 cars', 'Stromsystem': '15 kV 16.7 Hz and 25 kV 50 Hz AC', 'Gewicht': '135 t empty, 167 t loaded', 'Einsatz': 'Léman Express, Basel regional services' },
   abschnitte: [
-    { titel: 'History of the series', p: ['A first series of twelve vehicles carried the numbers 522 001–012. As these trains initially did not receive French approval, they were later converted into RABe 523.', 'The current class comprises 32 newer vehicles numbered 522 201–232.'] },
-    { titel: 'Service and facilities', p: ['The RABe 522 trains run on the Léman Express network and on regional cross-border services around Basel, among others.', 'Like other FLIRT trains they have a distributed electric drive, wide low-floor entrances, multi-purpose areas and automatic couplers for multiple working.'] }
-  ],
+      { titel: 'Manufacturer and fleet build-up', p: ['The class comes from Stadler and comprises 32 vehicles numbered 522 201–232; the first RABe 522 ran in 2011.', 'A first series of twelve vehicles carried the numbers 522 001–012. Because these trains initially did not get French approval, they were later rebuilt as RABe 523.'] },
+      { titel: 'Service and technology', p: ['The RABe 522 run on the Léman Express network and on regional cross-border services around Basel and in the Jura, among others.', 'Like other FLIRT, they have distributed electric traction and automatic couplers for multiple working.'] },
+      { titel: 'Facilities and accessibility', liste: ['Wide low-floor entrances', 'Wheelchair spaces and accessible toilet', 'Priority seats', 'Power sockets in 1st class', 'Multi-purpose areas for bikes and prams'],
+        p: ['These details apply to the SBB FLIRT family; specifics differ by version.'] }
+    ],
   bilder: ['RABe 522 209 in Delle', 'RABe 522 in Noiraigue', 'RABe 522 221 in Léman Express livery in Annemasse', 'RABe 522 231 in Geneva', 'RABe 522 213 at Genève-Cornavin']
 });
 
@@ -1153,12 +1177,15 @@ uebZug('rabe-524', {
   daten: { 'Zugbildung': '4 or 6 cars', 'Stromsystem': '15 kV 16.7 Hz AC and 3 kV DC', 'Länge': '74.1 m (4-car), 106.3 m (6-car), 104.9 m (FLIRT TSI)', 'Gewicht': '133 t (4-car), 174 t (6-car), 179 t (FLIRT TSI)', 'Anzahl': '53 (23 four-car, 17 six-car, 13 FLIRT TSI)', 'In Betrieb seit': '2007 (built 2006–2021)', 'Einsatz': 'TILO, Ticino–Lombardy' },
   specNote: 'Length and empty weight of each variant according to the SBB train type catalogue. FLIRT TSI refers to the newer TSI-compliant six-car version (RABe 524.3).',
   abschnitte: [
-    { titel: 'Variants', tabelle: { kopf: ['Variant', 'Number', 'Length', 'Empty weight'], zeilen: [
+      { titel: 'Manufacturer and fleet build-up', p: ['Stadler built the 53 vehicles in service today between 2006 and 2021: 23 four-car, 17 six-car and 13 FLIRT TSI (RABe 524.3). The first ran in 2007.', 'The newer FLIRT TSI were procured to expand cross-border services.'] },
+      { titel: 'Service and technology', p: ['The class shapes the TILO network in Ticino and Lombardy, as far as Milan. Depending on the line, four- or six-car trains run.', 'Multi-system equipment allows direct services across the border without changing vehicles.'] },
+      { titel: 'Facilities and accessibility', liste: ['Low-floor entrance', 'Wheelchair spaces and accessible toilet', 'Priority seats', 'Power sockets in 1st class', 'Bike, pram and luggage spaces'],
+        p: ['These details apply to the SBB FLIRT family; specifics differ by version.'] },
+      { titel: 'Variants', tabelle: { kopf: ['Variant', 'Number', 'Length', 'Empty weight'], zeilen: [
       ['RABe 524, four-car', '23', '74.1 m', '133 t'],
       ['RABe 524, six-car', '17', '106.3 m', '174 t'],
-      ['RABe 524.3, FLIRT TSI', '13', '104.9 m', '179 t']] } },
-    { titel: 'Procurement and service', p: ['The vehicles in service today were built between 2006 and 2021; the first trains entered service in 2007. The multi-system equipment allows direct cross-border services without changing locomotive or train.', 'The class shapes the TILO network in Ticino and Lombardy. Four- or six-car trains are used depending on the line; the newer FLIRT TSI trains were procured mainly to expand cross-border services.'] }
-  ],
+      ['RABe 524.3, FLIRT TSI', '13', '104.9 m', '179 t']] } }
+    ],
   bilder: ['RABe 524 008 at Milano Centrale', 'RABe 524 303 in the new TILO livery at Milano Centrale', 'RABe 524 in Capolago-Riva San Vitale', 'RABe 524 at Milano Cadorna', 'RABe 524 012 as S20 in Locarno', 'RABe 524 014 with advertising for «Rete Tre» in Maccagno']
 });
 
@@ -1169,9 +1196,11 @@ uebZug('ic2000', {
   kennzahlen: [['341', 'coaches'], ['200 km/h', 'top speed'], ['1997', 'first in service'], ['26.8 m', 'length per coach']],
   daten: { 'Fahrzeugart': 'double-deck passenger coach', 'Hersteller': 'Schindler consortium (Schindler Waggon, FIAT-SIG, ABB/Adtranz)', 'Länge': '26.8 m per coach', 'Gewicht': '47 t empty (FOS type), 60 t loaded', 'Sitzplätze': 'up to 86 per coach (1st class), up to 126 per coach (2nd class)', 'Wagenübergang': 'on the upper deck', 'Antrieb': 'none, hauled by Re 460', 'Anzahl': '341 coaches' },
   abschnitte: [
-    { titel: 'Procurement and construction', p: ['The 341 coaches were delivered from 1997 in several series. The car bodies were built by Schindler Waggon, the bogies by FIAT-SIG and the electrical equipment by ABB/Adtranz.', 'The family includes 1st and 2nd class coaches, service and dining cars, and driving trailers.'] },
-    { titel: 'Modernisation and service', p: ['SBB modernised the entire fleet in the IC2020 programme. Interiors, lighting, passenger information, power sockets and mobile signal permeability were renewed, among other things.', 'The sets run on important east–west and north–south axes and can be formed in different lengths depending on demand.'] }
-  ],
+      { titel: 'Manufacturer and fleet build-up', p: ['The 341 double-deck coaches were delivered in several series from 1997. The bodies were built by Schindler Waggon, the bogies by FIAT-SIG and the electrical equipment by ABB/Adtranz.', 'The family includes 1st and 2nd class coaches as well as service, dining and driving trailer coaches. From late 2019 to summer 2025 SBB modernised all coaches.'] },
+      { titel: 'Service and technology', p: ['The formations run as InterCity and InterRegio on important east–west and north–south axes, usually with an Re 460. A train offers more than 900 seats and runs at up to 200 km/h.', 'A coach is 26.8 m long and offers up to 86 seats in 1st or 126 in 2nd class.'] },
+      { titel: 'Facilities and accessibility', liste: ['Full air conditioning', 'Power sockets in 1st and 2nd class', '2+1 seating in 1st class', 'Windows with better mobile reception', 'Family compartments, quiet zone and business zone (InterCity only)', 'Restaurant or bistro (InterCity)', 'Bike, pram and luggage spaces', 'Low-floor entrance', 'Wheelchair spaces and accessible toilet', 'Priority seats'],
+        p: ['Thanks to the low-floor entrances, wheelchair users can board step-free at suitable platforms.'] }
+    ],
   bilder: ['IC2000 push-pull train in the countryside', 'Re 460 with IC2000 double-deck coaches', 'Re 460 at the head of IC2000 double-deck coaches', 'Gangway between a single-deck coach and an IC2000 double-deck coach', 'IC2000 driving trailer in Romanshorn']
 });
 
@@ -1183,9 +1212,11 @@ uebZug('ew-iv', {
   daten: { 'Fahrzeugart': 'passenger coach', 'Betreiber': 'SBB Passenger', 'Länge': '26.4 m per coach', 'Gewicht': '45 t empty (FOS type), 50 t loaded', 'Steuerwagen': 'IC Bt EW IV, 48 t empty', 'Antrieb': 'none, hauled by a separate locomotive', 'Anzahl': '540 built, 496 of them for SBB' },
   specNote: 'The figure of 496 is a historical value, not today’s fleet: sales, conversions and withdrawals have reduced the fleet.',
   abschnitte: [
-    { titel: 'Procurement and modernisation', p: ['In 1981, 40 air-conditioned 1st class coaches were delivered first; 2nd class coaches and dining cars followed from 1983. A total of 540 EW IV were built, 496 of them for SBB.', 'Between 2019 and 2025 SBB overhauled more than 250 EW IV and EuroCity coaches; according to SBB, modernisation of the driving trailers continues until the end of 2027.'] },
-    { titel: 'Service', p: ['The coaches run as EC, IC and IR sets, usually with a Re 460. Typical routes include Geneva to Brig, Basel to Lugano and Zurich to Bern via Olten.'] }
-  ],
+      { titel: 'Manufacturer and fleet build-up', p: ['The standard coaches IV were built by SIG, SWS, SWP and SWA. The first 40 air-conditioned 1st class coaches arrived in 1981; 540 were built in total, 496 of them for SBB. EuroCity coaches followed in 1989, driving trailers in 1997.', 'Between 2019 and 2025 SBB overhauled more than 250 EW IV and EuroCity coaches, with corrosion protection, new paint and windows that let mobile signals through. The driving trailers are being modernised until the end of 2027.'] },
+      { titel: 'Service and technology', p: ['The coaches run in EC, IC and IR formations, usually with an Re 460 and a driving trailer. Typical routes run from Geneva to Brig, from Basel to Lugano and from Zurich via Olten to Bern. Some EC coaches also run in international day and night trains.', 'A coach is 26.4 m long and approved for 200 km/h; it offers 60 seats in 1st or up to 86 in 2nd class.'] },
+      { titel: 'Facilities and accessibility', liste: ['Power sockets', 'Family zone', 'Quiet zone in 1st class (InterCity)', 'Dining car (EuroCity)', 'Bike spaces and dedicated bike coaches', 'Wheelchair spaces and accessible toilet', 'Priority seats'],
+        p: ['The coaches are not low-floor. Wheelchair spaces and an accessible toilet are available.'] }
+    ],
   bilder: ['EW IV driving trailer in Bellinzona', 'InterRegio with EW IV at Zurich HB', 'Gotthard Weekender with EW IV in Brugg', '1st class interior of an EW IV', 'EW IV 2nd class coach in Montreux']
 });
 
@@ -1198,9 +1229,9 @@ uebZug('re-482', {
   daten: { 'Stromsystem': '15 kV 16.7 Hz and 25 kV 50 Hz', 'Gewicht': '84 t empty', 'Baureihen': 'Re 482.1 and Re 482.2', 'Einsatz': 'freight in Switzerland, Germany, partly Austria' },
   specNote: 'The 50 vehicles come from the historical SBB Cargo fleet overview; this does not give a current fleet figure for 2026.',
   abschnitte: [
-    { titel: 'Procurement and service', p: ['SBB Cargo introduced the Re 482 from 2002. The locomotives took over international freight trains to Germany and partly to Austria, as well as duties in Swiss freight traffic.'] },
-    { titel: 'Two series', p: ['The fleet overview distinguishes 35 Re 482.1 and 15 Re 482.2. Technically both belong to the TRAXX family; equipment and country packages differ by series.'] }
-  ],
+      { titel: 'Manufacturer and fleet build-up', p: ['Bombardier Transportation delivered the Re 482 to SBB Cargo from 2002. They belong to the TRAXX family.', 'The fleet overview distinguishes 35 Re 482.1 and 15 Re 482.2, 50 locomotives in total. Equipment and country packages differ by series.'] },
+      { titel: 'Service and technology', p: ['The locomotives took over international freight trains to Germany and partly Austria as well as duties in Swiss freight traffic.', 'Train protection systems for Switzerland and Germany allow border crossings without a change of locomotive.'] }
+    ],
   bilder: ['Re 482 007 at Köln-Kalk Nord', 'SBB Cargo Re 482 023 with a freight train near Erbach (Rheingau)', 'Re 482 with a freight train in front of a railway bridge', 'SBB Cargo Re 482 005 in Eschweiler', 'Re 482 005']
 });
 
@@ -1211,9 +1242,9 @@ uebZug('re-484', {
   daten: { 'Stromsystem': '15 kV AC and 3 kV DC', 'Gewicht': '86 t empty', 'In Betrieb seit': '2004–2006 (delivery)', 'Einsatz': 'Switzerland and Italy' },
   specNote: 'The SBB train type catalogue uses 86 t; older literature sometimes gives 85.4 t. The official 2026 value is used here.',
   abschnitte: [
-    { titel: 'Procurement and service', p: ['SBB Cargo procured 21 Re 484 for international freight traffic between Switzerland and Italy. Later, some vehicles were also used in Swiss domestic traffic.'] },
-    { titel: 'Multi-system technology', p: ['The locomotive runs under the Swiss AC system and the Italian DC system. The national train protection systems allow cross-border runs without changing locomotives.'] }
-  ],
+      { titel: 'Manufacturer and fleet build-up', p: ['SBB Cargo procured 21 Re 484 of the TRAXX family from Bombardier Transportation. They were delivered from 2004 to 2006.'] },
+      { titel: 'Service and technology', p: ['The Re 484 was intended for international freight between Switzerland and Italy; later it also ran in Swiss domestic traffic.', 'The locomotive runs under the Swiss AC system and the Italian DC system. Country-specific train protection allows border crossings without a change of locomotive.'] }
+    ],
   bilder: ['SBB Cargo Re 484 006 in Steinen', 'SBB Cargo Re 484 018', 'Re 484 012 with advertising in Singen (Hohentwiel)', 'Re 484 003', 'Re 484 020 with a EuroCity at Zurich HB']
 });
 
@@ -1224,10 +1255,10 @@ uebZug('re-420', {
   daten: { 'Achsfolge': 'Bo′Bo′, 4 driven axles', 'Länge': 'approx. 14.8–15.5 m over buffers *', 'Gewicht': 'approx. 80–85 t in working order *', 'Leistung': '4650 kW one-hour rating at the wheel **', 'Elektrische Bremse': 'regenerative', 'In Betrieb seit': '1964 (last series 1985)', 'Anzahl': '276 Re 4/4 II (number built for SBB)', 'Hersteller': 'mechanical part SLM Winterthur; electrical part BBC, MFO and SAAS' },
   specNote: '* Depending on batch and conversion. ** Value for locomotive 11108 described by SBB Historic; SBB Infrastructure gives 4700 kW as the maximum power of the Re 420 train type.',
   abschnitte: [
-    { titel: 'Origins and technology', p: ['In 1964 SBB received six prototypes. Several series followed, with changes to the cab, pantographs and body. SLM was responsible for the mechanical part; the electrical equipment came from BBC, MFO and SAAS.', 'The four traction motors are controlled by a tap changer. Multiple-unit control also allows operation together with a Re 6/6 as the «Re 10/10».'] },
-    { titel: 'Service and variants', p: ['The Re 4/4 II was used in passenger and freight service, including on fast trains in the lowlands and on the approaches to the Gotthard and Simplon. Some passed to SBB Cargo.', 'The Re 421 variant was created by conversions for Germany; 30 locomotives were modernised in 2011–2016 as «LION» for extra trains of the Zurich S-Bahn. SBB Cargo still lists the Re 420 in its Swiss rental offer.'],
-      hinweis: 'Numbers: SBB Historic gives 276 Re 4/4 II procured for SBB, an older Cargo magazine 277 locomotives delivered. This page follows SBB Historic; neither figure is the current fleet size.' }
-  ],
+      { titel: 'Manufacturer and fleet build-up', p: ['In 1964 SBB received six prototypes, followed by several series until 1985. SLM in Winterthur built the mechanical part; the electrics came from BBC, MFO and SAAS.', 'The Re 421 variant was created by conversions for Germany; 30 locomotives were modernised in 2011–2016 as «LION» for extra trains of the Zurich S-Bahn.'],
+        hinweis: 'Fleet size: SBB Historic gives 276 Re 4/4 II procured for SBB, an older Cargo magazine 277 delivered locomotives. This page follows SBB Historic; neither figure is a current fleet size.' },
+      { titel: 'Service and technology', p: ['The Re 4/4 II ran in passenger and freight service, including express trains on the plains and the approaches to the Gotthard and Simplon. Some went to SBB Cargo, which still lists the Re 420 in its Swiss rental offer.', 'The four traction motors are controlled by a tap changer. Multiple-unit control also allows operation with an Re 6/6 as «Re 10/10».'] }
+    ],
   bilder: ['«Re 10/10»: Re 620 and Re 420 at the head of a freight train', 'Re 420 331-1 in autumn', 'WRS Re 420 with a timber train', 'SBB Cargo Re 420 with a freight train', 'Re 420 with yellow wagons in the vineyards by the lake', 'Re 420 with a freight train between vineyards and fields', 'Re 420 in blue livery with tank wagons in a marshalling yard']
 });
 
@@ -1237,10 +1268,10 @@ uebZug('re-620', {
   kennzahlen: [['89', 'locomotives built'], ['7832 kW', 'one-hour rating at the wheel'], ['140 km/h', 'top speed'], ['1972–1980', 'construction period']],
   daten: { 'Achsfolge': 'Bo′Bo′Bo′, 6 driven axles', 'Länge': '19.31 m over buffers', 'Gewicht': '120 t in working order', 'Leistung': '7244 kW continuous at the wheel (7832 kW one-hour rating)', 'Elektrische Bremse': 'regenerative', 'In Betrieb seit': '1972; series 1975–1980', 'Hersteller': 'mechanical part SLM Winterthur; electrical part and assembly BBC, partly SAAS' },
   abschnitte: [
-    { titel: 'Origins and technology', p: ['Four prototypes appeared in 1972, followed by 85 series locomotives. SLM built the body and running gear, BBC supplied the electrical equipment.', 'Final assembly mostly took place at BBC in Oerlikon, and for numbers 11635–11654 at SAAS in Geneva. The first two prototypes had a two-part body, the others a one-piece body.'] },
-    { titel: 'Service and further development', p: ['The locomotives first hauled heavy passenger and freight trains. In multiple with a Re 4/4 II or III they formed the combination known as the «Re 10/10» for heavy freight trains. After SBB was split into divisions, the Re 6/6 were assigned to SBB Cargo.', 'SBB Cargo still lists the Re 620 in its rental offer for Switzerland; the actual fleet is shrinking due to withdrawals.', 'From 2007, 63 locomotives received ETCS Level 2. SBB Historic dates the start of age-related withdrawals to February 2021.'],
-      hinweis: 'The figure of 89 refers to the series as built and not to today’s operational fleet.' }
-  ],
+      { titel: 'Manufacturer and fleet build-up', p: ['Four prototypes appeared in 1972; 85 series locomotives followed from 1975 to 1980, 89 in total (11601–11689). SLM built the body and frame, BBC supplied the electrical equipment.', 'Final assembly mostly took place at BBC in Oerlikon, for numbers 11635–11654 at SAAS in Geneva. The first two prototypes had a two-part body.'],
+        hinweis: 'The number 89 refers to the series built historically, not to today’s operational fleet.' },
+      { titel: 'Service and technology', p: ['The locomotives first hauled heavy passenger and freight trains. In multiple with an Re 4/4 II or III they formed the «Re 10/10» for heavy freight trains. After SBB was divided, they went to SBB Cargo, which still offers the Re 620 for rent.', 'From 2007, 63 locomotives received ETCS Level 2. SBB Historic dates the start of age-related withdrawals to February 2021.'] }
+    ],
   bilder: ['Re 620 in Cargo colours with tank wagons by the lake', '«Re 10/10»: Re 620 and Re 420 at the head of a freight train', 'Re 620 in Cargo colours with silo wagons', 'Re 620 with a train of tank wagons', 'Re 620 with an engineering train, cows in the foreground', 'Re 620 in Cargo colours in a station', 'Re 620 with a train of tank wagons']
 });
 
@@ -1251,9 +1282,9 @@ uebZug('re-474', {
   daten: { 'Stromsystem': '15 kV AC and 3 kV DC', 'Gewicht': '87 t empty', 'Fahrzeugnummern': 'Re 474 001–018, 12 of them taken over', 'Einsatz': 'freight Switzerland–Italy' },
   specNote: 'The number range has gaps because SBB Cargo only took over twelve locomotives of the originally planned series.',
   abschnitte: [
-    { titel: 'Procurement and service', p: ['The locomotives ran freight trains between Switzerland and Italy from 2005. The figure of 12 refers to the SBB Cargo fleet at that time and is not a confirmed fleet figure for October 2026.'] },
-    { titel: 'Technology', p: ['The Re 474 links the Swiss AC network with the Italian 3 kV DC network. Multi-system equipment and national train protection systems made continuous cross-border operation possible.'] }
-  ],
+      { titel: 'Manufacturer and fleet build-up', p: ['Siemens built the Re 474 as a dual-system locomotive of the ES 64 F4 family. SBB Cargo used twelve locomotives from 2005; this number is not a confirmed fleet size for October 2026.'] },
+      { titel: 'Service and technology', p: ['The locomotives ran in freight traffic between Switzerland and Italy, among others over the Simplon to Domodossola.', 'The Re 474 links the Swiss AC network with the Italian 3 kV DC network. Multi-system equipment and national train protection allowed through running across the border.'] }
+    ],
   bilder: ['Re 474 013', 'Re 474 near Jestetten on the line to Neuhausen', 'Re 474 014 in Domodossola', 'Re 474 with a freight train in Gravellona Toce']
 });
 
@@ -1264,9 +1295,9 @@ uebZug('re-193', {
   daten: { 'Leistung': 'up to 6400 kW', 'Länge': 'around 19.0 m', 'Gewicht': 'around 90 t, depending on equipment', 'Höchstgeschwindigkeit': '120 km/h in Switzerland', 'Zugsicherung': 'ETCS BL3 and national systems', 'Betreiber': 'SBB Cargo AG', 'Anzahl': '35 rented' },
   specNote: 'The locomotives are not owned by SBB. Number and rental period refer to the contract for SBB Cargo Switzerland.',
   abschnitte: [
-    { titel: 'Procurement and service', p: ['The first five vehicles arrived in Muttenz in 2024. Their main task is Swiss domestic freight; approvals also exist for cross-border services.', 'Around 550 train drivers were trained.'] },
-    { titel: 'Distinction', p: ['This page covers the 35 Vectron AC of SBB Cargo Switzerland. The multi-system Vectron locomotives of SBB Cargo International belong to other procurement and leasing contracts.'] }
-  ]
+      { titel: 'Manufacturer and fleet build-up', p: ['SBB Cargo has leased 35 Vectron AC from Siemens Mobility for eight years; the locomotives belong to LokRoll 3 AG. The first five arrived in Muttenz in 2024.', 'This page covers the 35 Vectron AC of SBB Cargo Switzerland. The multi-system Vectron of SBB Cargo International belong to other procurement and leasing contracts.'] },
+      { titel: 'Service and technology', p: ['Their main task is Swiss domestic freight until SBB Cargo’s own new mainline locomotives are delivered. Approvals also exist for cross-border operation.', 'The locomotives deliver up to 6400 kW and run at up to 120 km/h in Switzerland. Around 550 train drivers were trained.'] }
+    ]
 });
 
 uebZug('re-421', {
@@ -1277,9 +1308,9 @@ uebZug('re-421', {
   daten: { 'Bauart': 'electric universal locomotive', 'Gewicht': '84 t (value in the train type catalogue)', 'Nummern': '421 371–397 (without 382)', 'In Betrieb seit': '2002 (conversion 2002–2004)', 'Einsatz': 'freight Switzerland–Germany' },
   specNote: 'The 2026 SBB train type catalogue lists the Re 421 as an alias of the active train type 1051 Re 420. The 84 t is a running-dynamics value for this combined train type.',
   abschnitte: [
-    { titel: 'Conversion for Germany', p: ['The Re 4/4 II 11371 to 11397 served as the basis; number 11382, withdrawn after a fire, was not part of the programme.', 'For German approval the locomotives received the necessary modifications and equipment and the new number range 421 371 to 421 397.'] },
-    { titel: 'Service and catalogue status', p: ['The Re 421 combines the robust technology of the Re 4/4 II with cross-border capability and was mainly intended for freight trains to Germany.', 'In the 2026 SBB train type catalogue it remains listed as an alias of the active Re 420 train type.'] }
-  ],
+      { titel: 'Manufacturer and fleet build-up', p: ['The Re 421 are rebuilt Re 4/4 II by SLM, BBC, MFO and SAAS. They come from numbers 11371 to 11397; 11382, withdrawn after a fire, was not part of the programme, hence 26 locomotives.', 'The conversion took place from 2002 to 2004. The locomotives received the numbers 421 371 to 421 397.'] },
+      { titel: 'Service and technology', p: ['For German approval the locomotives received the necessary modifications and equipment. They combine the robust technology of the Re 4/4 II with cross-border capability and were mainly intended for freight trains to Germany.', 'In the SBB train type catalogue 2026, the Re 421 remains listed as an alias of the active Re 420 type.'] }
+    ],
   bilder: ['Re 421 374 in Thun', 'Re 421 395 in Pirna', 'Re 421 377 with a car train in Donauwörth', 'Re 421 383 at Lindau Hbf', 'Re 421 in Dresden']
 });
 
@@ -2211,11 +2242,14 @@ uebZug('bls-rabe-528', {
   daten: { 'Bauart': 'electric multiple unit, 6 cars', 'Fahrzeugnummern': 'RE 101–139, S-Bahn 201–228', 'Gewicht': '182 t (RE), 183 t (S-Bahn)', 'Sitzplätze': '244 (RE), 223 (S-Bahn)', 'Anzahl': '67 trains' },
   specNote: 'Seats without folding seats: RE 46 in 1st and 198 in 2nd class, S-Bahn 35 and 188. Trains 125–137 belong to BLS Fernverkehr AG.',
   abschnitte: [
-    { titel: 'Two versions', tabelle: { kopf: ['Feature', 'RegioExpress', 'S-Bahn'], zeilen: [
+      { titel: 'Manufacturer and fleet build-up', p: ['Stadler delivered 67 MIKA to BLS: 39 RegioExpress trains (101–139, in service 2021–2026) and 28 S-Bahn trains (201–228, 2022–2025). Trains 125–137 belong to BLS Fernverkehr AG, all others to BLS AG.', 'The MIKA replaced older trains such as the EW III push-pull sets and the NPZ.'] },
+      { titel: 'Service and technology', p: ['The MIKA run on the Bern and Lucerne S-Bahn (among others S2, S4, S6 and S7), as RegioExpress Bern–Spiez–Zweisimmen and over the Lötschberg summit line to Brig and Domodossola, and as InterRegio 66 Bern–Neuchâtel–La Chaux-de-Fonds.', 'The six-car train is 104.9 m long, has 3500 kW and runs at up to 160 km/h.'] },
+      { titel: 'Facilities and accessibility', liste: ['Air conditioning', 'Power sockets at every seat and in the multi-purpose area', 'Windows with better mobile reception', 'Self-service bistro zone with snack and coffee machines (RE)', '12 bike spaces (RE) or 6 (S-Bahn), with sockets for e-bikes', 'Low-floor entrance with gap bridging at all doors', '3 wheelchair spaces: 1 in 1st class, 2 in 2nd class with toilet access', '2 toilets, 1 of them accessible, with baby-changing table', 'Video surveillance and SOS buttons'],
+        p: ['Thanks to low-floor entrances with gap bridging, boarding is step-free at every door.'] },
+      { titel: 'Two versions', tabelle: { kopf: ['Feature', 'RegioExpress', 'S-Bahn'], zeilen: [
       ['Numbers', '101–139', '201–228'], ['Number built', '39', '28'], ['Entry into service', '2021–2026', '2022–2025'],
-      ['Seats 1st / 2nd class', '46 / 198', '35 / 188'], ['Standing places', '149', '241'], ['Bike spaces', '12', '6']] } },
-    { titel: 'Service', p: ['According to BLS, the MIKA runs on S-Bahn lines around Bern and Lucerne, on the RegioExpress Bern–Spiez–Zweisimmen and to Brig and Domodossola, and on the InterRegio Bern–Neuchâtel–La Chaux-de-Fonds.'] }
-  ],
+      ['Seats 1st / 2nd class', '46 / 198', '35 / 188'], ['Standing places', '149', '241'], ['Bike spaces', '12', '6']] } }
+    ],
   bilder: ['RABe 528 102 as RegioExpress in Bern', 'RABe 528 201 in S-Bahn version', 'RABe 528 119 in Domodossola', 'RABe 528 104 in the Entlebuch']
 });
 uebZug('bls-rabe-515', {
@@ -2224,11 +2258,14 @@ uebZug('bls-rabe-515', {
   kennzahlen: [['39', 'trains (34 four-car, 5 six-car)'], ['160 km/h', 'top speed'], ['335 / 546', 'seats 4 / 6 cars'], ['2012', 'first in service']],
   daten: { 'Bauart': 'electric double-deck multiple unit', 'Fahrzeugnummern': '001–034 (4 cars), 035–039 (6 cars)', 'Länge': '102.6 m (4 cars), 151.88 m (6 cars)', 'Gewicht': '216 t (4 cars), 301 t (6 cars)', 'Leistung': '4000 kW (6 cars: 6000 kW peak)', 'Sitzplätze': '335 (4 cars), 546 (6 cars)', 'Anzahl': '39 trains' },
   abschnitte: [
-    { titel: 'Four and six cars', tabelle: { kopf: ['Feature', 'four-car', 'six-car'], zeilen: [
+      { titel: 'Manufacturer and fleet build-up', p: ['The MUTZ belongs to Stadler’s KISS family. BLS has 34 four-car trains (001–034, in service 2012–2017, 032 and 033 in 2019/2020) and 5 six-car trains (035–039, 2020).', 'The six-car trains and 032–034 belong to BLS Fernverkehr AG, the others to BLS AG.'] },
+      { titel: 'Service and technology', p: ['The MUTZ run on the Bern S-Bahn (S1 Fribourg–Bern–Thun, S11 Thun–Bern, S3/S31 Biel–Münchenbuchsee–Bern–Belp) and as InterRegio 17 Bern–Burgdorf–Olten and InterRegio 65 Bern–Biel.', 'Both versions have 4000 kW and run at up to 160 km/h. Wide doors speed up boarding and alighting.'] },
+      { titel: 'Facilities and accessibility', liste: ['Air conditioning, floor and wall heating', 'Visual and audio passenger information', 'Power sockets in 1st class (six-car: also in 2nd class)', '6 bike spaces (four-car) or 16 (six-car)', 'Low-floor entrances with sliding steps at all doors', '3 wheelchair spaces (four-car) or 4 (six-car), in both classes', '2 toilets, 1 accessible and 1 with baby-changing table', 'Video surveillance'],
+        p: ['All doors have low-floor entrances with sliding steps; there are wheelchair spaces in both classes.'] },
+      { titel: 'Four and six cars', tabelle: { kopf: ['Feature', 'four-car', 'six-car'], zeilen: [
       ['Numbers', '001–034', '035–039'], ['Entry into service', '2012–2017, 032–033 in 2019/2020', '2020'], ['Length', '102.6 m', '151.88 m'],
-      ['Seats 1st / 2nd class', '61 / 274', '122 / 424'], ['Power', '4000 kW', '6000 kW peak, 4000 kW continuous']] } },
-    { titel: 'Service', p: ['According to BLS, the MUTZ runs on S-Bahn lines Fribourg–Bern–Thun and Biel–Bern–Belp, and as InterRegio Bern–Burgdorf–Olten and Bern–Biel.'] }
-  ],
+      ['Seats 1st / 2nd class', '61 / 274', '122 / 424'], ['Power', '4000 kW', '6000 kW peak, 4000 kW continuous']] } }
+    ],
   bilder: ['Four-car RABe 515 003 in Bern', 'Six-car RABe 515 039', 'RABe 515 027 near Allmendingen']
 });
 uebZug('bls-rabe-535', {
@@ -2236,7 +2273,12 @@ uebZug('bls-rabe-535', {
   text: ['The Lötschberger is a four-car low-floor train of BLS. It is named after the Lötschberg summit line and the Bernese Oberland, where it runs.', 'Up to four trains can run together.'],
   kennzahlen: [['25', 'trains'], ['160 km/h', 'top speed'], ['142', 'seats'], ['2008', 'first in service']],
   daten: { 'Bauart': 'electric low-floor multiple unit, 4 cars', 'Anzahl': '25 trains' },
-  abschnitte: [{ titel: 'Service', p: ['According to BLS, the Lötschberger runs between Zweisimmen and Spiez, Spiez and Interlaken Ost, Spiez and Frutigen, and on S-Bahn lines between Thun, Bern, Burgdorf and Solothurn.'] }],
+  abschnitte: [
+      { titel: 'Manufacturer and fleet build-up', p: ['Bombardier delivered 25 four-car Lötschberger to BLS: 101–113 in 2008–2010 and 114–125 in 2012.', 'Since January 2024 BLS has been modernising the fleet at the Bönigen workshop, until mid-2027. Among other things, double sockets replace single ones, LED lights replace neon tubes, and CO₂ sensors control fresh air as needed.'] },
+      { titel: 'Service and technology', p: ['The Lötschberger runs in the Bernese Oberland (RE Zweisimmen–Spiez, Spiez–Interlaken Ost and Spiez–Frutigen) and on the Bern S-Bahn between Thun, Belp, Bern, Burgdorf, Konolfingen and Solothurn.', 'The train is 62.7 m long, weighs 105 t and runs at up to 160 km/h. Up to four trains can be coupled.'] },
+      { titel: 'Facilities and accessibility', liste: ['Air conditioning and heating', 'Power sockets in 1st and 2nd class', 'Visual and audio passenger information', '6 bike spaces (101–113) or 12 (114–125)', 'Low-floor entrance at all doors, one entrance per side with a sliding step', '2 wheelchair spaces in 2nd class', '1 accessible toilet', 'Video surveillance'],
+        p: ['All doors are low-floor. According to BLS there is no baby-changing table.'] }
+    ],
   bilder: ['RABe 535 112 «Lötschberger»', 'Lötschberger at Kandersteg station', 'RABe 535 122 at Iselle di Trasquera']
 });
 uebZug('bls-rabe-525', {
@@ -2245,7 +2287,12 @@ uebZug('bls-rabe-525', {
   kennzahlen: [['36', 'trains (23 three-car, 13 four-car)'], ['140 km/h', 'top speed'], ['1000 kW', 'power'], ['1998', 'first in service']],
   daten: { 'Bauart': 'electric low-floor multiple unit, 3 or 4 cars', 'Länge': '47.7 m (3 cars), 61.9 m (4 cars)', 'Gewicht': '79 t (3 cars), 96 t (4 cars)', 'Sitzplätze': '134 (3 cars), 179 (4 cars)', 'Anzahl': '36 trains' },
   specNote: 'Entered service 1998–2005. Numbers 015–027 have four cars, 001–014, 028–030 and 032–037 three cars.',
-  abschnitte: [{ titel: 'Service', p: ['According to BLS, the four-car NINA runs on Bern–Kerzers–Neuchâtel, Lyss–Büren an der Aare, Solothurn–Burgdorf–Bern and Domodossola–Brig–Visp.'] }],
+  abschnitte: [
+      { titel: 'Manufacturer and fleet build-up', p: ['The NINA come from Vevey Technologies and Bombardier and entered service from 1998 to 2005. BLS has 36 trains: 23 three-car (001–014, 028–030, 032–037) and 13 four-car (015–027).', 'From June 2015 all 36 trains received a refit at the Bönigen workshop for around 31 million francs, to run about six years longer. In 2016 some received windows that let mobile signals through and new passenger information.'] },
+      { titel: 'Service and technology', p: ['The NINA run on the Bern and Lucerne S-Bahn, among others S5 Bern–Kerzers–Neuchâtel, S22 Bern–Konolfingen–Langnau, S35 Kerzers–Lyss, S36 Lyss–Büren an der Aare, S46 Solothurn–Burgdorf–Ostermundigen and S77 Lucerne–Wolhusen–Willisau, and as the RE Domodossola–Brig–Visp.', 'A train has 1000 kW and runs at up to 140 km/h. Up to four trains can be coupled.'] },
+      { titel: 'Facilities and accessibility', liste: ['Air conditioning and heating', 'Power sockets in 1st class', 'Visual and audio passenger information', '3 bike spaces (three-car) or 6 (four-car)', 'Low-floor entrance at all doors, one entrance per side with a sliding step', '1 wheelchair space in 2nd class', '1 accessible toilet', 'Video surveillance'],
+        p: ['All doors are low-floor. According to BLS there is no baby-changing table.'] }
+    ],
   bilder: ['NINA RABe 525 024 in Thun', 'Four-car RABe 525 015 in Bern']
 });
 uebZug('bls-re-465', {
@@ -2253,7 +2300,10 @@ uebZug('bls-re-465', {
   text: ['The Re 465 is the BLS sister of the SBB Re 460. It hauls passenger trains, car-shuttle trains and freight trains.', 'Between 2019 and 2022 all 18 locomotives were modernised and painted green. Since late 2023 they have replaced the brown Re 425 on the car shuttles.'],
   kennzahlen: [['18', 'locomotives'], ['6400 kW', 'power'], ['160 km/h', 'approved top speed'], ['1994', 'first in service']],
   daten: { 'Bauart': 'electric locomotive Bo’Bo’', 'Höchstgeschwindigkeit': '160 km/h (approved)' },
-  abschnitte: [{ titel: 'Modernisation and service', p: ['BLS first ordered eight locomotives (001–008), then ten more (009–018) for the piggyback corridor. The refit of 2019–2022, costing about 20 million francs, lets them run until about 2040.', 'Today they haul the GoldenPass Express between Interlaken Ost and Zweisimmen, the car shuttles through the Lötschberg and Simplon, and, often together with TRAXX and Vectron, freight trains.'] }],
+  abschnitte: [
+      { titel: 'Manufacturer and fleet build-up', p: ['The Re 465 belongs to the Lok 2000 family by SLM and ABB. BLS first ordered eight locomotives (001–008), later ten more (009–018) for the piggyback corridor; they entered service from 1994 to 1997.', 'From 2019 to 2022 all 18 locomotives were modernised at the Bönigen workshop for about 20 million francs and painted green. This lets them run until about 2040.'] },
+      { titel: 'Service and technology', p: ['The Re 465 pull or push the GoldenPass Express between Interlaken Ost and Zweisimmen. Since 19 December 2023 they have run the Lötschberg car shuttle, from 2026 also on the Simplon, replacing the brown Re 425.', 'In freight service they often run in multiple with TRAXX and Vectron. The locomotive has 6400 kW and is approved for 160 km/h.'] }
+    ],
   bilder: ['Re 465 014 in Zweisimmen', 'Re 465 001 and 007 in double traction']
 });
 uebZug('bls-re-475', {
@@ -2261,11 +2311,19 @@ uebZug('bls-re-475', {
   text: ['The Re 475 is the Vectron locomotive of BLS Cargo. It is approved in several countries and hauls freight across the Alps to Germany, Italy and the Netherlands.', 'BLS Cargo has expanded the fleet in several batches.'],
   kennzahlen: [['50', 'locomotives in three batches'], ['2016', 'first in service'], ['6', 'countries (later batches)'], ['Siemens', 'builder']],
   daten: { 'Bauart': 'multi-system electric locomotive Bo’Bo’', 'Zulassung': 'CH, D, A, I, NL; from no. 416 also B', 'Anzahl': '50 (in three batches)' },
-  abschnitte: [{ titel: 'Three batches', tabelle: { kopf: ['Numbers', 'Number', 'Delivery', 'Approval'], zeilen: [
-    ['401–415', '15', '2016–2018', 'CH, D, A, I, NL'], ['416–440', '25', '2020, 2024–2025', 'CH, D, A, I, NL, B'], ['441–450', '10', 'from 2026', 'CH, D, A, I, NL, B']] } }],
+  abschnitte: [
+      { titel: 'Manufacturer and fleet build-up', p: ['The Re 475 is the Vectron locomotive by Siemens Mobility for BLS Cargo. The fleet grows in three batches to 50 locomotives: 401–415 (2016–2018), 416–440 (2020 and 2024–2025) and 441–450 (from 2026).'] },
+      { titel: 'Service and technology', p: ['BLS Cargo uses the Re 475 mainly on the Lötschberg-Simplon and Gotthard axes and runs as far as the Netherlands, Belgium, Germany, Austria and Italy.', 'The multi-system locomotive is approved in up to six countries; from number 416 also in Belgium.'] },
+      { titel: 'Three batches', tabelle: { kopf: ['Numbers', 'Number', 'Delivery', 'Approval'], zeilen: [
+    ['401–415', '15', '2016–2018', 'CH, D, A, I, NL'], ['416–440', '25', '2020, 2024–2025', 'CH, D, A, I, NL, B'], ['441–450', '10', 'from 2026', 'CH, D, A, I, NL, B']] } }
+    ],
   bilder: ['Re 475 401 of BLS Cargo']
 });
 uebZug('bls-re-485', {
+  abschnitte: [
+      { titel: 'Manufacturer and fleet build-up', p: ['In 2002 BLS Cargo ordered 20 TRAXX of type F140 AC from Bombardier; they were delivered by mid-2003 and carry the numbers 485 001–020.', '485 004 was destroyed in an accident at Auggen (Germany) in 2020, which is why fleet lists now show 19 locomotives.'] },
+      { titel: 'Service and technology', p: ['The Re 485 haul freight trains in Switzerland and to Germany, on the Lötschberg-Simplon and Gotthard axes.', 'Technically they match the German class 185 and the SBB Cargo Re 482, with a Swiss equipment package. They run at up to 140 km/h.'] }
+    ],
   typ: 'Freight electric locomotive by Bombardier',
   text: ['The Re 485 are TRAXX locomotives of BLS Cargo for freight in Switzerland and to Germany.', 'They were ordered in 2002 and delivered by mid-2003.'],
   kennzahlen: [['20', 'locomotives'], ['140 km/h', 'top speed'], ['CH, D', 'approval'], ['2002', 'first in service']],
@@ -2274,6 +2332,10 @@ uebZug('bls-re-485', {
   bilder: ['Re 485 005 of BLS Cargo', 'Re 485 016 with a freight train', 'Re 485 008 near Allmendingen']
 });
 uebZug('bls-re-486', {
+  abschnitte: [
+      { titel: 'Manufacturer and fleet build-up', p: ['From autumn 2008 Bombardier delivered ten multi-system TRAXX of type F140 MS to BLS Cargo, numbered 486 501–510; the last followed in 2009.'] },
+      { titel: 'Service and technology', p: ['The Re 486 may run in Switzerland, Germany, Italy and Austria. This makes them suitable for transit across the Alps, for example with the rolling highway.', 'As a multi-system locomotive it runs on AC and DC; the top speed is 140 km/h.'] }
+    ],
   typ: 'Multi-system electric locomotive by Bombardier',
   text: ['The Re 486 are multi-system TRAXX locomotives of BLS Cargo. They can run in Switzerland, Germany, Italy and Austria.', 'This makes them suitable for transit across the Alps, for example with the rolling highway.'],
   kennzahlen: [['10', 'locomotives'], ['140 km/h', 'top speed'], ['4', 'countries'], ['2008', 'first in service']],
@@ -2444,6 +2506,12 @@ uebZug('bls-re-420', {
 
 // ---------- TPF ----------
 uebZug('tpf-rabe-527', {
+  abschnitte: [
+      { titel: 'Manufacturer and fleet build-up', p: ['Stadler Bussnang delivered eight FLIRT of the 190 series to TPF, numbered 191–198. They entered service from 2011 to 2014.'] },
+      { titel: 'Service and technology', p: ['The FLIRT run on the RER Fribourg: as RegioExpress RE2/RE3 Bern–Fribourg–Romont–Bulle–Broc and on the S20/S21 Fribourg–Murten–Ins–Neuchâtel.', 'The four-car train is 74.08 m long, has 2600 kW and runs at up to 160 km/h. Up to four trains can be coupled.'] },
+      { titel: 'Facilities and accessibility', liste: ['Fully air-conditioned', 'Audio and visual passenger information', 'Multi-purpose compartment', 'More than 90 percent low-floor', 'Closed-circuit toilet suitable for people with reduced mobility'],
+        p: ['The train is more than 90 percent low-floor. TPF does not state the number of wheelchair spaces.'] }
+    ],
   typ: 'Electric regional multiple unit by Stadler',
   text: ['The eight FLIRT of the 190 series are the most modern standard-gauge trains of TPF. They run as RegioExpress and S-Bahn in the canton of Fribourg and beyond.', 'Technically they belong to Stadler’s large FLIRT family.'],
   kennzahlen: [['8', 'trains (191–198)'], ['160 km/h', 'top speed'], ['418', 'places in total'], ['2011', 'first in service']],
@@ -2458,12 +2526,21 @@ uebZug('tpf-rbde-560', {
   daten: { 'Bauart': 'push-pull train with power car, low-floor intermediate car and driving trailer', 'Hersteller': 'SWG, SIG, ABB; intermediate car Bombardier', 'Fahrzeugnummern': '235–247 and 269', 'Gewicht': '146 t empty', 'Sitzplätze': '24 in 1st, 160 in 2nd class', 'Anzahl': '14 trains' },
   specNote: 'Power cars built 1984–1996, modernised into Domino 2009–2011.',
   abschnitte: [
-    { titel: 'Equipment', liste: ['Audio and visual passenger information', 'Air conditioning', 'Wheelchair-accessible toilet', 'Multi-purpose area', 'Low-floor intermediate car'] },
-    { titel: 'Chocolat Express', p: ['Trains 235 and 245 carry the «Chocolat Express» design. It is not a separate type of vehicle but a special livery on normal Domino.'] }
-  ],
+      { titel: 'Manufacturer and fleet build-up', p: ['The 14 TPF Domino (235–247 and 269) were created from NPZ push-pull trains built by SWG, SIG and ABB between 1984 and 1996. From 2009 to 2011 TPF rebuilt them as Domino; each train received a new low-floor intermediate car from Bombardier.', 'TPF has ordered 13 four-car FLIRT Evo from Stadler. The first is due to enter service in December 2028; they will gradually replace the Domino in the following years.'] },
+      { titel: 'Service and technology', p: ['Like the FLIRT, the Domino run on the RER Fribourg, as RegioExpress Bern–Fribourg–Bulle–Broc and on the S20/S21 Fribourg–Murten–Ins–Neuchâtel.', 'A train is 75 m long, has 1650 kW and runs at up to 140 km/h.'] },
+      { titel: 'Facilities and accessibility', liste: ['Air conditioning throughout the train', 'Audio and visual passenger information', 'Multi-purpose compartment', 'Low-floor intermediate car', 'Bioreactor toilet suitable for people with reduced mobility'],
+        p: ['Step-free boarding is possible in the low-floor intermediate car; the power car and driving trailer have steps.'] },
+      { titel: 'Chocolat Express', p: ['Trains 235 and 245 carry the «Chocolat Express» design. It is not a separate type of vehicle but a special livery on normal Domino.'] }
+    ],
   bilder: ['Domino in «Chocolat Express» design on the Grandfey viaduct']
 });
 uebZug('tpf-abe-4-12', {
+  abschnitte: [
+      { titel: 'Manufacturer and fleet build-up', p: ['Stadler Bussnang delivered ten three-car trains to TPF, numbered 101–110. They entered service in 2015 and 2016. A train consists of an ABe 2/4, an intermediate car B and a Be 2/4.'] },
+      { titel: 'Service and technology', p: ['The trains run on the TPF metre-gauge network: S50 Palézieux–Châtel-St-Denis–Bulle–Montbovon and S51 to Gruyères.', 'A train is 55.21 m long, has 1400 kW and runs at up to 100 km/h. It can be formed modularly from two to four sections, and up to four trains can run together.'] },
+      { titel: 'Facilities and accessibility', liste: ['Fully air-conditioned', 'Audio and visual passenger information', 'Closed-circuit toilet suitable for people with reduced mobility', '350 places: 15 in 1st and 133 in 2nd class, 14 folding seats, 188 standing places'],
+        p: ['On its vehicle page, TPF gives no details about low-floor entrances or wheelchair spaces.'] }
+    ],
   beiname: 'Series 100',
   typ: 'Low-floor multiple unit for the metre-gauge network',
   text: ['The ten three-car Stadler trains run on the TPF metre-gauge network in Gruyère and Veveyse. A train consists of an ABe 2/4, an intermediate car B and a Be 2/4.', 'Up to four trains can run together.'],
@@ -2478,9 +2555,14 @@ uebZug('tpf-be-4-4-120', {
   text: ['The push-pull trains of the 120 series consist of a Be 4/4 power car, an intermediate car B if needed, and an (A)Bt driving trailer. They run on the TPF metre-gauge network.', 'The power cars used to be called BDe 4/4 because they had a luggage compartment.'],
   kennzahlen: [['4', 'power cars (121–124)'], ['90 km/h', 'top speed'], ['640 kW', 'power'], ['1992', 'first in service']],
   daten: { 'Bauart': 'push-pull train: power car, intermediate car, driving trailer', 'Hersteller': 'Vevey/BBC; intermediate cars SIG', 'Länge': '52.32 m (3-car train)', 'Sitzplätze': '134 in 2nd class; 9 in 1st class only in 221–223' },
-  abschnitte: [{ titel: 'The vehicles', tabelle: { kopf: ['Vehicle', 'Numbers', 'Number', 'Years built', 'Builder'], zeilen: [
-    ['Power car Be 4/4', '121–124', '4', '1992–1995', 'Vevey/BBC'], ['Intermediate car B', '207, 209, 215', '3', '1973', 'SIG'], ['Driving trailer (A)Bt', '221–226', '6', '1992–1995', 'Vevey/BBC']] } },
-    { p: ['The trains are modular: intermediate cars and driving trailers are added as needed.'] }],
+  abschnitte: [
+      { titel: 'Manufacturer and fleet build-up', p: ['The 120 series comprises 13 vehicles: 4 Be 4/4 power cars (121–124) and 6 (A)Bt driving trailers (221–226) by Vevey/BBC, built from 1992 to 1995, plus 3 intermediate cars B (207, 209, 215) by SIG from 1973.', 'The power cars used to be called BDe 4/4 because they had a luggage compartment.'] },
+      { titel: 'Service and technology', p: ['The push-pull trains run on the TPF metre-gauge network between Palézieux, Bulle, Gruyères and Montbovon. They are modular: intermediate cars and driving trailers are added as needed.', 'A three-vehicle train is 52.32 m long, has 640 kW and runs at up to 90 km/h.'] },
+      { titel: 'Facilities and accessibility', liste: ['Audio and visual passenger information', '253 places: 134 in 2nd class, 8 folding seats, 102 standing places', '1st class with 9 seats only in driving trailers 221–223'],
+        p: ['On its vehicle page, TPF gives no details about air conditioning, low-floor entrances or wheelchair spaces.'] },
+      { titel: 'The vehicles', tabelle: { kopf: ['Vehicle', 'Numbers', 'Number', 'Years built', 'Builder'], zeilen: [
+    ['Power car Be 4/4', '121–124', '4', '1992–1995', 'Vevey/BBC'], ['Intermediate car B', '207, 209, 215', '3', '1973', 'SIG'], ['Driving trailer (A)Bt', '221–226', '6', '1992–1995', 'Vevey/BBC']] } }
+    ],
   bilder: ['Be 4/4 123', 'Power car 124, then still BDe 4/4 (2010)', 'Driving trailer 221 in Bulle', 'Driving trailer 225']
 });
 uebZug('tpf-funiculaire', {
@@ -2488,7 +2570,12 @@ uebZug('tpf-funiculaire', {
   text: ['Since 1899 the Fribourg funicular has linked the lower town, the Neuveville, with St-Pierre. It climbs 58 metres over 121 metres.', 'What makes it special is how it works: waste water from the city of Fribourg serves as counterweight. According to TPF this is unique in Europe.'],
   kennzahlen: [['1899', 'opened'], ['121 m', 'line length'], ['550 ‰', 'maximum gradient'], ['2 min', 'journey time']],
   daten: { 'Bauart': 'funicular with water ballast', 'Kabinen': '2 with 20 places each', 'Länge': '121 m line, car 5.4 m', 'Gewicht': '1600 kg per car', 'Höchstgeschwindigkeit': '4.3 km/h (1.2 m/s)', 'Kapazität': '240 people per hour' },
-  abschnitte: [{ titel: 'Operation', p: ['The funicular runs on a single track with a passing loop, about 70 round trips a day. The lower station Neuveville lies at 552 m, the upper station St-Pierre at 608 m. The last major overhaul was in 2020.'] }],
+  abschnitte: [
+      { titel: 'Manufacturer and fleet build-up', p: ['The funicular was built by Von Roll and has run since 1899. It was rebuilt in 1998, and the last major overhaul was in 2020. It is a listed historic monument.', 'It has two cars with 20 places each.'] },
+      { titel: 'Service and technology', p: ['In Fribourg, the funicular links the lower town, the Neuveville (552 m), with St-Pierre (608 m). On the single track with a passing loop it makes about 70 round trips a day, from 7 am to 7 pm, in summer until 8 pm.', 'Waste water from the city of Fribourg serves as counterweight. The line is 121 m long with gradients up to 550 ‰; the trip takes 2 minutes at 1.2 m/s.'] },
+      { titel: 'Facilities and accessibility', liste: ['2 cars with 20 places each', '240 people per hour'],
+        p: ['On its vehicle page, TPF gives no details about access with a wheelchair, pram or bike.'] }
+    ],
   bilder: ['Neuveville–St-Pierre funicular in Fribourg (2024)']
 });
 uebZug('tpf-tm-87', {
@@ -2634,6 +2721,10 @@ uebZug('gfm-wagen', {
 uebDict({ 'Schotter- und Kippwagen': 'Ballast and tipper wagons' });
 
 uebZug('bls-br-185', {
+  abschnitte: [
+      { titel: 'Manufacturer and fleet build-up', p: ['The four locomotives are TRAXX F140 AC by Bombardier Transportation. They belong to the lessor Alpha Trains and are registered in Germany; BLS Cargo leases them.'] },
+      { titel: 'Service and technology', p: ['Approved for Germany, Austria and Switzerland, they supplement BLS Cargo’s own Re 485, to which they are technically closely related.', 'They have up to 5600 kW and run at up to 140 km/h.'] }
+    ],
   typ: 'Electric locomotive leased from Alpha Trains',
   text: ['Besides its own locomotives, BLS Cargo uses leased locomotives registered in Germany. Among them are four TRAXX of the 185 class from Alpha Trains.', 'Technically they are close relatives of the BLS Re 485, which match the German 185 class with additional Swiss equipment.'],
   kennzahlen: [['4', 'leased locomotives'], ['140 km/h', 'top speed'], ['up to 5600 kW', 'power'], ['D, A, CH', 'approval']],
@@ -2642,6 +2733,10 @@ uebZug('bls-br-185', {
   bilder: ['185 525 in BLS colours in Fribourg (2009)']
 });
 uebZug('bls-br-186', {
+  abschnitte: [
+      { titel: 'Manufacturer and fleet build-up', p: ['The nine locomotives are multi-system TRAXX F140 MS by Bombardier Transportation. They belong to the lessor Railpool; photos show, among others, 186 101, 103–105, 108 and 109 with BLS lettering.'] },
+      { titel: 'Service and technology', p: ['The locomotives are approved for Germany, Austria, Switzerland, Italy and the Netherlands. They haul freight trains on the Rotterdam–Italy axis, for example the Melzo Shuttle.', 'Under AC they deliver 5600 kW, under 1.5 kV DC in the Netherlands 4000 kW; they run at up to 140 km/h.'] }
+    ],
   typ: 'Multi-system locomotive leased from Railpool',
   text: ['BLS Cargo leases nine multi-system TRAXX of the 186 class from Railpool. They may run in five countries, as far as the Netherlands.', 'This lets them haul freight trains on the Rotterdam–Italy axis, for example the Melzo Shuttle.'],
   kennzahlen: [['9', 'leased locomotives'], ['140 km/h', 'top speed'], ['5600 kW', 'power'], ['5', 'countries']],
@@ -2650,6 +2745,10 @@ uebZug('bls-br-186', {
   bilder: ['186 101 of BLS Cargo', '186 109 with the Melzo Shuttle near Elten (NL)']
 });
 uebZug('bls-br-187', {
+  abschnitte: [
+      { titel: 'Manufacturer and fleet build-up', p: ['The three locomotives belong to the third TRAXX generation (AC3) by Bombardier Transportation. BLS Cargo has leased them long-term from the lessor Railpool; 187 004 appears on photos with BLS lettering.'] },
+      { titel: 'Service and technology', p: ['Approved for Germany, Austria and Switzerland, they haul BLS Cargo freight trains.', 'They have 5600 kW and weigh 84 t. The 187 class also exists with a small diesel engine for the «last mile» without catenary; whether the three BLS locomotives have it is not publicly documented.'] }
+    ],
   typ: 'Electric locomotive leased from Railpool',
   text: ['BLS Cargo has leased three locomotives of the 187 class from Railpool on a long-term basis. They belong to the third TRAXX generation.', 'The 187 class also exists with a small diesel engine for the «last mile» without catenary. Whether the three BLS locomotives have it is not publicly documented.'],
   kennzahlen: [['3', 'leased locomotives'], ['5600 kW', 'power'], ['84 t', 'weight'], ['D, A, CH', 'approval']],
@@ -2657,6 +2756,10 @@ uebZug('bls-br-187', {
   bilder: ['187 004 of BLS Cargo']
 });
 uebZug('bls-br-193', {
+  abschnitte: [
+      { titel: 'Manufacturer and fleet build-up', p: ['The locomotives are Vectron by Siemens Mobility. According to the fleet list, BLS Cargo leases six locomotives plus four more, some of which run in the colours of the intermodal operator Hupac (among them 193 494–496). Photos also show 193 711, 713 and 716.'] },
+      { titel: 'Service and technology', p: ['Approved for Germany, Austria, Switzerland, Italy and the Netherlands, they mainly run in transit traffic between the North Sea ports and Italy.', 'As multi-system locomotives they deliver up to 6400 kW.'] }
+    ],
   typ: 'Leased Siemens Vectron for BLS Cargo',
   text: ['In addition to its own Re 475, BLS Cargo leases Vectron locomotives of the 193 class. According to the fleet list there are six locomotives plus four more, some of which run in the colours of the intermodal operator Hupac.', 'Approved as far as the Netherlands and Italy, they mainly run in transit traffic.'],
   kennzahlen: [['10', 'leased locomotives'], ['up to 6400 kW', 'power'], ['5', 'countries'], ['Siemens', 'builder']],
@@ -2707,4 +2810,30 @@ uebZug('bls-hilfswagen', {
   text: ['The breakdown wagon belongs to the intervention service, the company fire brigade of BLS. It is used after derailments and other incidents to recover vehicles and provide technical assistance.', 'It consists of the breakdown wagon itself and an additional wagon.'],
   kennzahlen: [['2011', 'entry into service'], ['46 m', 'length'], ['101.5 t', 'weight'], ['2', 'wagons']],
   daten: { 'Bauart': 'breakdown wagon with additional wagon', 'Betreiber': 'BLS AG, intervention service', 'Einsatz': 'recovery, technical intervention' }
+});
+
+/* ---- 33-einsatz-bls-tpf.js ---- */
+/* English – maps «Where does it run?» for BLS and TPF */
+uebDict({
+  'S-Bahn Bern': 'Bern S-Bahn',
+  'Im Transitverkehr von den Nordseehäfen Rotterdam und Antwerpen über Deutschland und die Schweiz bis Norditalien, durch den Lötschberg-Simplon und den Gotthard.': 'In transit traffic from the North Sea ports of Rotterdam and Antwerp via Germany and Switzerland to northern Italy, through the Lötschberg-Simplon and the Gotthard.'
+});
+uebEinsatz({
+  'bls-rabe-528': 'On the Bern and Lucerne S-Bahn, as RegioExpress Bern–Spiez–Zweisimmen and over the Lötschberg summit line to Brig and Domodossola, and as InterRegio Bern–Neuchâtel–La Chaux-de-Fonds.',
+  'bls-rabe-515': 'On the Bern S-Bahn (S1 Fribourg–Bern–Thun, S3/S31 Biel–Bern–Belp) and as InterRegio Bern–Burgdorf–Olten and Bern–Biel.',
+  'bls-rabe-535': 'In the Bernese Oberland (Zweisimmen–Spiez, Spiez–Interlaken Ost, Spiez–Frutigen) and on the Bern S-Bahn between Thun, Bern, Burgdorf and Solothurn.',
+  'bls-rabe-525': 'On the Bern and Lucerne S-Bahn, among others Bern–Neuchâtel, Bern–Langnau, Lyss–Büren an der Aare and Lucerne–Willisau, and as RegioExpress Domodossola–Brig–Visp.',
+  'bls-re-465': 'Hauling the GoldenPass Express between Interlaken Ost and Zweisimmen, the car shuttles through the Lötschberg and Simplon, and freight trains on the Lötschberg-Simplon axis.',
+  'bls-re-475': 'In freight traffic through Switzerland on the Lötschberg-Simplon and Gotthard axes, internationally as far as the Netherlands, Belgium and Italy.',
+  'bls-re-485': 'In freight traffic in Switzerland and to Germany, on the Lötschberg-Simplon and Gotthard axes.',
+  'bls-re-486': 'In freight transit across the Alps, also with the rolling highway; approved for Switzerland, Germany, Italy and Austria.',
+  'bls-br-185': 'In BLS Cargo freight traffic in Switzerland, Germany and Austria.',
+  'bls-br-186': 'In BLS Cargo transit traffic, also on the Rotterdam–Italy axis with the Melzo Shuttle.',
+  'bls-br-187': 'In BLS Cargo freight traffic in Switzerland, Germany and Austria.',
+  'bls-br-193': 'In BLS Cargo transit traffic, as far as the Netherlands and Italy.',
+  'tpf-rabe-527': 'As RegioExpress Bern–Fribourg–Romont–Bulle–Broc and on the RER Fribourg between Fribourg, Murten and Neuchâtel.',
+  'tpf-rbde-560': 'On the RER Fribourg: RegioExpress Bern–Fribourg–Bulle–Broc and S20/S21 Fribourg–Murten–Ins–Neuchâtel.',
+  'tpf-abe-4-12': 'On the TPF metre-gauge network: S50 Palézieux–Châtel-St-Denis–Bulle–Montbovon and S51 to Gruyères. The metre gauge is drawn dashed and simplified.',
+  'tpf-be-4-4-120': 'On the TPF metre-gauge network between Palézieux, Bulle, Gruyères and Montbovon. The metre gauge is drawn dashed and simplified.',
+  'tpf-funiculaire': 'In the city of Fribourg, between the lower town (Neuveville) and St-Pierre.'
 });
