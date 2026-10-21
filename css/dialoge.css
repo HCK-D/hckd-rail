@@ -27,6 +27,13 @@
 .ad-zahl span{font-size:13px;color:var(--fg-3)}
 .ad-zahl a{font-size:14px;font-weight:600;color:var(--accent-ink)}
 .ad-notiz-l small{font-weight:400;color:var(--fg-3)}
+.ad-ohne{border:1px solid var(--line);border-radius:12px;padding:10px 14px}
+.ad-ohne summary{font:600 14px/1.4 var(--body);color:var(--fg-2);cursor:pointer}
+.ad-ohne summary b{margin-left:6px;padding:1px 8px;border-radius:999px;background:var(--surface-2);color:var(--fg)}
+#ad-ohne-liste{max-height:300px;overflow:auto;margin-top:8px}
+#ad-ohne-liste h3{margin:12px 0 4px;font:600 12px/1.2 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--fg-3)}
+#ad-ohne-liste ul{margin:0;padding-left:18px;font-size:14px;line-height:1.6}
+#ad-ohne-liste a{color:var(--fg)}
 #ad-notiz{width:100%;box-sizing:border-box;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:var(--bg);color:var(--fg);font:15px/1.5 var(--body);resize:vertical}
 .ad-btns{display:flex;flex-wrap:wrap;gap:8px}
 .ad-btns .qz-btn{height:42px;font-size:15px}

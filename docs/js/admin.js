@@ -40,7 +40,17 @@
   const istOffen = () => { try { return sessionStorage.getItem(OFFEN_KEY) === '1'; } catch (e) { return false; } };
   function zeigePanel(auf) {
     pin.hidden = auf; panel.hidden = !auf;
-    if (auf) { ladeZahl(); notiz.value = lies(); notiz.focus(); } else { code.value = ''; pinMsg.textContent = ''; code.focus(); }
+    if (auf) { ladeZahl(); ohneFotos(); notiz.value = lies(); notiz.focus(); } else { code.value = ''; pinMsg.textContent = ''; code.focus(); }
+  }
+
+  // vehicles without photos, grouped by railway and category; built from the data, so it stays current
+  function ohneFotos() {
+    const liste = ZUEGE.filter(z => !(z.bilder && z.bilder.length));
+    $('#ad-ohne-n').textContent = liste.length;
+    $('#ad-ohne-liste').innerHTML = BAHNEN.flatMap(b => KATS.map(k => {
+      const zz = liste.filter(z => bahnOf(z) === b.id && z.kat === k.id);
+      return zz.length ? `<h3>${esc(b.name)} · ${esc(k.name)} (${zz.length})</h3><ul>${zz.map(z => `<li><a href="#${z.id}" data-close>${esc(fullNameDe(z))}</a></li>`).join('')}</ul>` : '';
+    })).join('') || '<p>Alle Fahrzeuge haben Fotos.</p>';
   }
   function oeffnen(von) { zurueck = von; dlg.hidden = false; msg.textContent = ''; zeigePanel(istOffen()); }
   function schliessen() { speichere(); dlg.hidden = true; if (zurueck) zurueck.focus(); }
