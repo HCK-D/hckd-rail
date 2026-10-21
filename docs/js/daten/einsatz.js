@@ -354,3 +354,25 @@ Object.assign(EINSATZ, {
   'gfm-ee-91': { orte: [['Bulle']], strecken: TPF_NORMAL, text: 'Früher im Rangierdienst auf dem Normalspurnetz der GFM, etwa in Bulle.' },
   'gfm-wagen': { linien: TPF_METER, text: 'Früher auf dem Meterspurnetz der CEG und der GFM. Die Meterspur ist gestrichelt und vereinfacht eingezeichnet.' }
 });
+/* =====================================================================
+   transN (Oktober 2026): Linien nach den Flottenseiten von transN.
+   Meterspur mit «linien» (gestrichelt).
+   ===================================================================== */
+Object.assign(BAHNHOF_EXTRA, {
+  'Buttes': [2532518, 1193407], 'Travers': [2541978, 1199319], 'Fleurier': [2534681, 1195208], 'Le Locle': [2547390, 1212104],
+  'Les Ponts-de-Martel': [2546505, 1205576], 'Les Brenets': [2544455, 1213170], 'Boudry Littorail': [2554363, 1199997],
+  'Neuchâtel Place Pury': [2561234, 1204476], 'Auvernier': [2557322, 1203328]
+});
+const TRN_FLIRT = [['Neuchâtel', 'Auvernier', 'Travers', 'Fleurier', 'Buttes'], ['Neuchâtel', 'La Chaux-de-Fonds', 'Le Locle']];
+const TRN_FLIRT_TEXT = 'Auf den transN-Linien R21 Neuchâtel–Val-de-Travers–Buttes und R23 Neuchâtel–La Chaux-de-Fonds–Le Locle.';
+Object.assign(EINSATZ, {
+  'trn-rabe-523': { strecken: TRN_FLIRT, text: TRN_FLIRT_TEXT },
+  'trn-rabe-527': { strecken: TRN_FLIRT, text: TRN_FLIRT_TEXT },
+  'trn-be-4-8': { linien: [['Neuchâtel Place Pury', 'Auvernier', 'Boudry Littorail']], orte: [['Neuchâtel']],
+    text: 'Auf der Littorail-Linie R15 von Neuchâtel Place Pury nach Boudry. Die Meterspur ist gestrichelt und vereinfacht eingezeichnet.' },
+  'trn-abe-4-8': { linien: [['La Chaux-de-Fonds', 'Les Ponts-de-Martel']], text: 'Auf der R22 La Chaux-de-Fonds–Les Ponts-de-Martel. Die Meterspur ist gestrichelt und vereinfacht eingezeichnet.' },
+  'trn-bde-4-4': { linien: [['Le Locle', 'Les Brenets']], text: 'Auf der R24 Le Locle–Les Brenets, einer gut 4 km langen Meterspurstrecke. Sie ist gestrichelt eingezeichnet.' },
+  'trn-tm-44-normal': { strecken: [['Travers', 'Fleurier', 'Buttes']], text: 'Für Bau und Unterhalt auf dem Normalspurnetz von transN, etwa auf der Strecke Travers–Buttes.' },
+  'trn-tm-44-meter': { linien: [['Neuchâtel Place Pury', 'Auvernier', 'Boudry Littorail'], ['La Chaux-de-Fonds', 'Les Ponts-de-Martel'], ['Le Locle', 'Les Brenets']],
+    text: 'Im Baudienst auf den Meterspurlinien von transN, unter anderem La Chaux-de-Fonds–Les Ponts-de-Martel. Die Meterspur ist gestrichelt und vereinfacht eingezeichnet.' }
+});
