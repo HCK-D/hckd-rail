@@ -108,6 +108,7 @@ uebZug('xas-73', {
 });
 
 uebZug('xns-39', {
+  bilder: ['Xns 39 (Fccnpps) 21 85 6439 038-1 dans un train de travaux', 'Plusieurs Xns 39 dans un train de travaux, de nuit'],
   typ: 'Wagon à ballast à deux essieux à commande manuelle',
   text: ['Le Xns 39 est un wagon à ballast compact à deux essieux.', 'Ses trappes de vidange sont actionnées à la main par des leviers et permettent de ballaster directement dans la voie.'],
   kennzahlen: [['100 km/h', 'vitesse maximale'], ['10,0 m', 'longueur'], ['13,1 t', 'poids à vide'], ['45 t', 'poids total max.']],

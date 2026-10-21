@@ -66,6 +66,7 @@ uebZug('re-474', {
 });
 
 uebZug('re-193', {
+  bilder: ['Re 193 with a freight train on Lake Biel near Ligerz', 'Re 193 with yellow sliding-wall wagons', 'Re 193 with a mixed freight train near Ligerz', 'Re 193 and Re 420 in double traction near Ligerz'],
   typ: 'Rented Siemens Vectron AC for domestic freight',
   text: ['Since the end of 2024, SBB Cargo has been using Siemens Vectron locomotives of class 193.', 'The 35 vehicles are rented for eight years and bridge the gap until the new company-owned mainline locomotives are delivered.'],
   kennzahlen: [['35', 'rented locomotives'], ['8 years', 'rental and maintenance contract'], ['120 km/h', 'approval in Switzerland'], ['2024', 'delivery and start of service']],

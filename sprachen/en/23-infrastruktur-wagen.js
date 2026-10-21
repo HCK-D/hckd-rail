@@ -107,6 +107,7 @@ uebZug('xas-73', {
 });
 
 uebZug('xns-39', {
+  bilder: ['Xns 39 (Fccnpps) 21 85 6439 038-1 in a construction train', 'Several Xns 39 in a construction train at night'],
   typ: 'Two-axle ballast wagon with manual operation',
   text: ['The Xns 39 is a compact two-axle ballast wagon.', 'Its outlet gates are operated by hand with levers and allow ballasting directly in the track.'],
   kennzahlen: [['100 km/h', 'top speed'], ['10.0 m', 'length'], ['13.1 t', 'empty weight'], ['45 t', 'max. gross weight']],

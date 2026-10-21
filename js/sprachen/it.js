@@ -491,7 +491,7 @@ uebDict({
   'Verantwortlich für diese Website': 'Responsabile di questo sito',
   'Kontakt: über das Formular <button class="link-btn" type="button" data-report="allg" aria-haspopup="dialog">Fehler melden</button>. Nachrichten kommen direkt bei uns an.': 'Contatto: tramite il modulo <button class="link-btn" type="button" data-report="allg" aria-haspopup="dialog">Segnala un errore</button>. I messaggi arrivano direttamente a noi.',
   'Unabhängiges Projekt': 'Progetto indipendente',
-  'RailBase by HCK ist ein privates, nicht kommerzielles Projekt von Bahnfans. Es steht in keiner Verbindung zu den Schweizerischen Bundesbahnen SBB, zu SBB Cargo oder zu anderen Bahnunternehmen. Namen und Marken gehören ihren Inhaberinnen und Inhabern und werden nur zur Beschreibung der Fahrzeuge genannt.': 'RailBase by HCK è un progetto privato e non commerciale di appassionati di ferrovia. Non ha alcun legame con le Ferrovie federali svizzere FFS, con FFS Cargo o con altre imprese ferroviarie. Nomi e marchi appartengono ai rispettivi titolari e sono citati solo per descrivere i veicoli.',
+  'RailBase by HCKD ist ein privates, nicht kommerzielles Projekt von Bahnfans. Es steht in keiner Verbindung zu den Schweizerischen Bundesbahnen SBB, zu SBB Cargo oder zu anderen Bahnunternehmen. Namen und Marken gehören ihren Inhaberinnen und Inhabern und werden nur zur Beschreibung der Fahrzeuge genannt.': 'RailBase by HCKD è un progetto privato e non commerciale di appassionati di ferrovia. Non ha alcun legame con le Ferrovie federali svizzere FFS, con FFS Cargo o con altre imprese ferroviarie. Nomi e marchi appartengono ai rispettivi titolari e sono citati solo per descrivere i veicoli.',
   'Haftung': 'Responsabilità',
   'Alle Angaben sind sorgfältig zusammengetragen, aber ohne Gewähr. Werte, die als vorläufig oder mit * markiert sind, können abweichen. Wenn dir ein Fehler auffällt, melde ihn bitte über «Fehler melden».': 'Tutte le indicazioni sono state raccolte con cura, ma senza garanzia. I valori indicati come provvisori o con * possono differire. Se noti un errore, segnalalo tramite «Segnala un errore».',
   'Für Inhalte externer Websites, auf die wir verlinken, sind deren Betreiber verantwortlich.': 'Dei contenuti dei siti esterni a cui rimandiamo sono responsabili i rispettivi gestori.',
@@ -1302,6 +1302,7 @@ uebZug('re-474', {
 });
 
 uebZug('re-193', {
+  bilder: ['Re 193 con un treno merci sul lago di Bienne presso Ligerz', 'Re 193 con carri gialli a pareti scorrevoli', 'Re 193 con un treno merci misto presso Ligerz', 'Re 193 e Re 420 in doppia trazione presso Ligerz'],
   typ: 'Siemens Vectron AC a noleggio per il traffico merci interno',
   text: ['Dalla fine del 2024 FFS Cargo impiega locomotive Siemens Vectron della serie 193.', 'I 35 veicoli sono noleggiati per otto anni e colmano il periodo fino alla consegna delle nuove locomotive di linea proprie.'],
   kennzahlen: [['35', 'locomotive a noleggio'], ['8 anni', 'contratto di noleggio e manutenzione'], ['120 km/h', 'omologazione in Svizzera'], ['2024', 'consegna e inizio servizio']],
@@ -1330,6 +1331,7 @@ uebZug('re-421', {
 /* ---- 22-infrastruktur-loks.js ---- */
 /* Italiano – FFS Infrastruttura: locomotive e trattori */
 uebZug('aem-940', {
+  bilder: ['Aem 940 sul lago di Bienne presso Ligerz', 'Aem 940 020', 'Aem 940 023', 'Aem 940 018 a Biasca', 'Aem 940 001', 'Aem 940 004'],
   typ: 'Locomotiva bimodale',
   text: ['L’Aem 940 è una locomotiva bimodale a quattro assi di Alstom per FFS Infrastruttura. Circola in elettrico sotto la linea di contatto e, sui binari non elettrificati, con due gruppi diesel-generatori.', 'È quindi adatta ai treni cantiere e alle manovre pesanti.'],
   kennzahlen: [['47', 'locomotive ordinate'], ['120 km/h', 'velocità massima'], ['2000 kW', 'potenza elettrica'], ['2018', 'inizio delle prove']],
@@ -1529,6 +1531,7 @@ uebZug('xas-73', {
 });
 
 uebZug('xns-39', {
+  bilder: ['Xns 39 (Fccnpps) 21 85 6439 038-1 in un treno cantiere', 'Diversi Xns 39 in un treno cantiere, di notte'],
   typ: 'Carro per pietrisco a due assi con comando manuale',
   text: ['Lo Xns 39 è un carro per pietrisco compatto a due assi.', 'Le saracinesche di scarico sono azionate a mano con leve e permettono di posare la massicciata direttamente nel binario.'],
   kennzahlen: [['100 km/h', 'velocità massima'], ['10,0 m', 'lunghezza'], ['13,1 t', 'peso a vuoto'], ['45 t', 'peso totale max.']],

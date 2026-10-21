@@ -1,5 +1,6 @@
 /* Italiano – FFS Infrastruttura: locomotive e trattori */
 uebZug('aem-940', {
+  bilder: ['Aem 940 sul lago di Bienne presso Ligerz', 'Aem 940 020', 'Aem 940 023', 'Aem 940 018 a Biasca', 'Aem 940 001', 'Aem 940 004'],
   typ: 'Locomotiva bimodale',
   text: ['L’Aem 940 è una locomotiva bimodale a quattro assi di Alstom per FFS Infrastruttura. Circola in elettrico sotto la linea di contatto e, sui binari non elettrificati, con due gruppi diesel-generatori.', 'È quindi adatta ai treni cantiere e alle manovre pesanti.'],
   kennzahlen: [['47', 'locomotive ordinate'], ['120 km/h', 'velocità massima'], ['2000 kW', 'potenza elettrica'], ['2018', 'inizio delle prove']],

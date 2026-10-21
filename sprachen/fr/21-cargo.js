@@ -66,6 +66,7 @@ uebZug('re-474', {
 });
 
 uebZug('re-193', {
+  bilder: ['Re 193 avec un train de marchandises au bord du lac de Bienne près de Gléresse', 'Re 193 avec des wagons jaunes à parois coulissantes', 'Re 193 avec un train de marchandises mixte près de Gléresse', 'Re 193 et Re 420 en double traction près de Gléresse'],
   typ: 'Siemens Vectron AC en location pour le trafic marchandises intérieur',
   text: ['Depuis fin 2024, CFF Cargo utilise des locomotives Siemens Vectron de la série 193.', 'Les 35 véhicules sont loués pour huit ans et font la transition jusqu’à la livraison des nouvelles locomotives de ligne propres.'],
   kennzahlen: [['35', 'locomotives louées'], ['8 ans', 'contrat de location et d’entretien'], ['120 km/h', 'autorisation en Suisse'], ['2024', 'livraison et mise en service']],

@@ -1,5 +1,6 @@
 /* Français – CFF Infrastructure : locomotives et tracteurs */
 uebZug('aem-940', {
+  bilder: ['Aem 940 au bord du lac de Bienne près de Gléresse', 'Aem 940 020', 'Aem 940 023', 'Aem 940 018 à Biasca', 'Aem 940 001', 'Aem 940 004'],
   typ: 'Locomotive bimode',
   text: ['L’Aem 940 est une locomotive bimode à quatre essieux d’Alstom pour CFF Infrastructure. Elle roule à l’électricité sous la ligne de contact et, sur les voies non électrifiées, avec deux groupes diesel-générateurs.', 'Elle convient ainsi aux trains de travaux et aux manœuvres lourdes.'],
   kennzahlen: [['47', 'locomotives commandées'], ['120 km/h', 'vitesse maximale'], ['2000 kW', 'puissance électrique'], ['2018', 'début des essais']],

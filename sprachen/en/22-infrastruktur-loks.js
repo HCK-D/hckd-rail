@@ -1,5 +1,6 @@
 /* English – SBB Infrastructure: locomotives and tractors */
 uebZug('aem-940', {
+  bilder: ['Aem 940 on Lake Biel near Ligerz', 'Aem 940 020', 'Aem 940 023', 'Aem 940 018 in Biasca', 'Aem 940 001', 'Aem 940 004'],
   typ: 'Bi-mode locomotive',
   text: ['The Aem 940 is a four-axle bi-mode locomotive from Alstom for SBB Infrastructure. It runs electrically under the overhead line and, on non-electrified tracks, with two diesel generator sets.', 'This makes it suitable for engineering trains and heavy shunting.'],
   kennzahlen: [['47', 'locomotives ordered'], ['120 km/h', 'top speed'], ['2000 kW', 'electric power'], ['2018', 'start of trials']],

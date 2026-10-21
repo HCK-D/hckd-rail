@@ -491,7 +491,7 @@ uebDict({
   'Verantwortlich für diese Website': 'Responsable de ce site',
   'Kontakt: über das Formular <button class="link-btn" type="button" data-report="allg" aria-haspopup="dialog">Fehler melden</button>. Nachrichten kommen direkt bei uns an.': 'Contact : via le formulaire <button class="link-btn" type="button" data-report="allg" aria-haspopup="dialog">Signaler une erreur</button>. Les messages nous parviennent directement.',
   'Unabhängiges Projekt': 'Projet indépendant',
-  'RailBase by HCK ist ein privates, nicht kommerzielles Projekt von Bahnfans. Es steht in keiner Verbindung zu den Schweizerischen Bundesbahnen SBB, zu SBB Cargo oder zu anderen Bahnunternehmen. Namen und Marken gehören ihren Inhaberinnen und Inhabern und werden nur zur Beschreibung der Fahrzeuge genannt.': 'RailBase by HCK est un projet privé et non commercial de passionnés du rail. Il n’a aucun lien avec les Chemins de fer fédéraux suisses CFF, avec CFF Cargo ou avec d’autres entreprises ferroviaires. Les noms et marques appartiennent à leurs titulaires et ne sont cités que pour décrire les véhicules.',
+  'RailBase by HCKD ist ein privates, nicht kommerzielles Projekt von Bahnfans. Es steht in keiner Verbindung zu den Schweizerischen Bundesbahnen SBB, zu SBB Cargo oder zu anderen Bahnunternehmen. Namen und Marken gehören ihren Inhaberinnen und Inhabern und werden nur zur Beschreibung der Fahrzeuge genannt.': 'RailBase by HCKD est un projet privé et non commercial de passionnés du rail. Il n’a aucun lien avec les Chemins de fer fédéraux suisses CFF, avec CFF Cargo ou avec d’autres entreprises ferroviaires. Les noms et marques appartiennent à leurs titulaires et ne sont cités que pour décrire les véhicules.',
   'Haftung': 'Responsabilité',
   'Alle Angaben sind sorgfältig zusammengetragen, aber ohne Gewähr. Werte, die als vorläufig oder mit * markiert sind, können abweichen. Wenn dir ein Fehler auffällt, melde ihn bitte über «Fehler melden».': 'Toutes les indications ont été rassemblées avec soin, mais sans garantie. Les valeurs marquées comme provisoires ou avec * peuvent différer. Si tu remarques une erreur, signale-la via « Signaler une erreur ».',
   'Für Inhalte externer Websites, auf die wir verlinken, sind deren Betreiber verantwortlich.': 'Les exploitants des sites externes vers lesquels nous renvoyons sont responsables de leur contenu.',
@@ -1302,6 +1302,7 @@ uebZug('re-474', {
 });
 
 uebZug('re-193', {
+  bilder: ['Re 193 avec un train de marchandises au bord du lac de Bienne près de Gléresse', 'Re 193 avec des wagons jaunes à parois coulissantes', 'Re 193 avec un train de marchandises mixte près de Gléresse', 'Re 193 et Re 420 en double traction près de Gléresse'],
   typ: 'Siemens Vectron AC en location pour le trafic marchandises intérieur',
   text: ['Depuis fin 2024, CFF Cargo utilise des locomotives Siemens Vectron de la série 193.', 'Les 35 véhicules sont loués pour huit ans et font la transition jusqu’à la livraison des nouvelles locomotives de ligne propres.'],
   kennzahlen: [['35', 'locomotives louées'], ['8 ans', 'contrat de location et d’entretien'], ['120 km/h', 'autorisation en Suisse'], ['2024', 'livraison et mise en service']],
@@ -1330,6 +1331,7 @@ uebZug('re-421', {
 /* ---- 22-infrastruktur-loks.js ---- */
 /* Français – CFF Infrastructure : locomotives et tracteurs */
 uebZug('aem-940', {
+  bilder: ['Aem 940 au bord du lac de Bienne près de Gléresse', 'Aem 940 020', 'Aem 940 023', 'Aem 940 018 à Biasca', 'Aem 940 001', 'Aem 940 004'],
   typ: 'Locomotive bimode',
   text: ['L’Aem 940 est une locomotive bimode à quatre essieux d’Alstom pour CFF Infrastructure. Elle roule à l’électricité sous la ligne de contact et, sur les voies non électrifiées, avec deux groupes diesel-générateurs.', 'Elle convient ainsi aux trains de travaux et aux manœuvres lourdes.'],
   kennzahlen: [['47', 'locomotives commandées'], ['120 km/h', 'vitesse maximale'], ['2000 kW', 'puissance électrique'], ['2018', 'début des essais']],
@@ -1530,6 +1532,7 @@ uebZug('xas-73', {
 });
 
 uebZug('xns-39', {
+  bilder: ['Xns 39 (Fccnpps) 21 85 6439 038-1 dans un train de travaux', 'Plusieurs Xns 39 dans un train de travaux, de nuit'],
   typ: 'Wagon à ballast à deux essieux à commande manuelle',
   text: ['Le Xns 39 est un wagon à ballast compact à deux essieux.', 'Ses trappes de vidange sont actionnées à la main par des leviers et permettent de ballaster directement dans la voie.'],
   kennzahlen: [['100 km/h', 'vitesse maximale'], ['10,0 m', 'longueur'], ['13,1 t', 'poids à vide'], ['45 t', 'poids total max.']],

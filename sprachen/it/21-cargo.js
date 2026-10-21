@@ -66,6 +66,7 @@ uebZug('re-474', {
 });
 
 uebZug('re-193', {
+  bilder: ['Re 193 con un treno merci sul lago di Bienne presso Ligerz', 'Re 193 con carri gialli a pareti scorrevoli', 'Re 193 con un treno merci misto presso Ligerz', 'Re 193 e Re 420 in doppia trazione presso Ligerz'],
   typ: 'Siemens Vectron AC a noleggio per il traffico merci interno',
   text: ['Dalla fine del 2024 FFS Cargo impiega locomotive Siemens Vectron della serie 193.', 'I 35 veicoli sono noleggiati per otto anni e colmano il periodo fino alla consegna delle nuove locomotive di linea proprie.'],
   kennzahlen: [['35', 'locomotive a noleggio'], ['8 anni', 'contratto di noleggio e manutenzione'], ['120 km/h', 'omologazione in Svizzera'], ['2024', 'consegna e inizio servizio']],

@@ -490,7 +490,7 @@ uebDict({
   'Verantwortlich für diese Website': 'Responsible for this website',
   'Kontakt: über das Formular <button class="link-btn" type="button" data-report="allg" aria-haspopup="dialog">Fehler melden</button>. Nachrichten kommen direkt bei uns an.': 'Contact: via the <button class="link-btn" type="button" data-report="allg" aria-haspopup="dialog">Report an error</button> form. Messages reach us directly.',
   'Unabhängiges Projekt': 'Independent project',
-  'RailBase by HCK ist ein privates, nicht kommerzielles Projekt von Bahnfans. Es steht in keiner Verbindung zu den Schweizerischen Bundesbahnen SBB, zu SBB Cargo oder zu anderen Bahnunternehmen. Namen und Marken gehören ihren Inhaberinnen und Inhabern und werden nur zur Beschreibung der Fahrzeuge genannt.': 'RailBase by HCK is a private, non-commercial project by rail fans. It has no connection with Swiss Federal Railways SBB, SBB Cargo or any other railway company. Names and trademarks belong to their owners and are only mentioned to describe the vehicles.',
+  'RailBase by HCKD ist ein privates, nicht kommerzielles Projekt von Bahnfans. Es steht in keiner Verbindung zu den Schweizerischen Bundesbahnen SBB, zu SBB Cargo oder zu anderen Bahnunternehmen. Namen und Marken gehören ihren Inhaberinnen und Inhabern und werden nur zur Beschreibung der Fahrzeuge genannt.': 'RailBase by HCKD is a private, non-commercial project by rail fans. It has no connection with Swiss Federal Railways SBB, SBB Cargo or any other railway company. Names and trademarks belong to their owners and are only mentioned to describe the vehicles.',
   'Haftung': 'Liability',
   'Alle Angaben sind sorgfältig zusammengetragen, aber ohne Gewähr. Werte, die als vorläufig oder mit * markiert sind, können abweichen. Wenn dir ein Fehler auffällt, melde ihn bitte über «Fehler melden».': 'All information has been compiled carefully but without guarantee. Values marked as preliminary or with * may differ. If you notice an error, please report it via «Report an error».',
   'Für Inhalte externer Websites, auf die wir verlinken, sind deren Betreiber verantwortlich.': 'The operators of external websites we link to are responsible for their content.',
@@ -1300,6 +1300,7 @@ uebZug('re-474', {
 });
 
 uebZug('re-193', {
+  bilder: ['Re 193 with a freight train on Lake Biel near Ligerz', 'Re 193 with yellow sliding-wall wagons', 'Re 193 with a mixed freight train near Ligerz', 'Re 193 and Re 420 in double traction near Ligerz'],
   typ: 'Rented Siemens Vectron AC for domestic freight',
   text: ['Since the end of 2024, SBB Cargo has been using Siemens Vectron locomotives of class 193.', 'The 35 vehicles are rented for eight years and bridge the gap until the new company-owned mainline locomotives are delivered.'],
   kennzahlen: [['35', 'rented locomotives'], ['8 years', 'rental and maintenance contract'], ['120 km/h', 'approval in Switzerland'], ['2024', 'delivery and start of service']],
@@ -1328,6 +1329,7 @@ uebZug('re-421', {
 /* ---- 22-infrastruktur-loks.js ---- */
 /* English – SBB Infrastructure: locomotives and tractors */
 uebZug('aem-940', {
+  bilder: ['Aem 940 on Lake Biel near Ligerz', 'Aem 940 020', 'Aem 940 023', 'Aem 940 018 in Biasca', 'Aem 940 001', 'Aem 940 004'],
   typ: 'Bi-mode locomotive',
   text: ['The Aem 940 is a four-axle bi-mode locomotive from Alstom for SBB Infrastructure. It runs electrically under the overhead line and, on non-electrified tracks, with two diesel generator sets.', 'This makes it suitable for engineering trains and heavy shunting.'],
   kennzahlen: [['47', 'locomotives ordered'], ['120 km/h', 'top speed'], ['2000 kW', 'electric power'], ['2018', 'start of trials']],
@@ -1525,6 +1527,7 @@ uebZug('xas-73', {
 });
 
 uebZug('xns-39', {
+  bilder: ['Xns 39 (Fccnpps) 21 85 6439 038-1 in a construction train', 'Several Xns 39 in a construction train at night'],
   typ: 'Two-axle ballast wagon with manual operation',
   text: ['The Xns 39 is a compact two-axle ballast wagon.', 'Its outlet gates are operated by hand with levers and allow ballasting directly in the track.'],
   kennzahlen: [['100 km/h', 'top speed'], ['10.0 m', 'length'], ['13.1 t', 'empty weight'], ['45 t', 'max. gross weight']],

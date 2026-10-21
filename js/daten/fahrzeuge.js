@@ -538,7 +538,12 @@ const ZUEGE = [
       { titel: 'Einsatz und Technik', p: ['Hauptaufgabe ist der Schweizer Binnengüterverkehr, bis die neuen eigenen Streckenlokomotiven geliefert sind. Zulassungen bestehen auch für grenzüberschreitende Einsätze.', 'Die Loks leisten bis 6400 kW und fahren in der Schweiz bis 120 km/h. Rund 550 Lokführerinnen und Lokführer wurden geschult.'] }
     ],
     quellen: ['SBB Cargo – Einführung der 35 BR 193 und Schweizer Höchstgeschwindigkeit', 'Siemens Mobility – Bestellung, Vermietung und Auslieferung 2024', 'Siemens Mobility – Vectron-Mehrsystemlokomotiven für SBB Cargo International'],
-    art: { typ: 'lok', form: 'kantig', farbe: CRED, akzent: '#F3F4F2', panto: true }, bilder: [] },
+    art: { typ: 'lok', form: 'kantig', farbe: CRED, akzent: '#F3F4F2', panto: true }, bilder: [
+      { src: 'bilder/re-193-c1.jpg', titel: 'Re 193 mit Güterzug am Bielersee bei Ligerz', urheber: 'Quentin Rossier' },
+      { src: 'bilder/re-193-c2.jpg', titel: 'Re 193 mit gelben Schiebewandwagen', urheber: 'Quentin Rossier' },
+      { src: 'bilder/re-193-c3.jpg', titel: 'Re 193 mit gemischtem Güterzug bei Ligerz', urheber: 'Quentin Rossier' },
+      { src: 'bilder/re-193-c4.jpg', titel: 'Re 193 und Re 420 in Doppeltraktion bei Ligerz', urheber: 'Quentin Rossier' }
+    ] },
 
   { id: 're-421', kat: 'cargo', name: 'Re 421', beiname: 'Re 4/4 II für Deutschland', typ: 'Elektrische Universallokomotive für den grenzüberschreitenden Verkehr', vorlaeufig: false,
     nummern: [[421371, 421397]],
@@ -571,6 +576,7 @@ const ZUEGE = [
     ],
     quellen: ['SBB News – Vorstellung der Aem 940 und der 47 bestellten Fahrzeuge, 2018', 'Alstom – Präsentation zur SBB Aem 940, S. 12 und 26, 2016'],
     art: { typ: 'lok', form: 'kantig', farbe: YEL, akzent: '#2E3338', panto: true }, bilder: [
+      { src: 'bilder/aem-940-c6.jpg', titel: 'Aem 940 am Bielersee bei Ligerz', urheber: 'Quentin Rossier' },
       { src: 'bilder/aem-940-c1.jpg', titel: 'Aem 940 020', foto: 'Joachim Lutz', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:Alstom_H4_(Aem_940_020_A_W).jpg' },
       { src: 'bilder/aem-940-c2.jpg', titel: 'Aem 940 023', foto: 'Nelso Silva from Porto, Portugal', lizenz: 'CC BY-SA 2.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/2.0', quelle: 'https://commons.wikimedia.org/wiki/File:SBB_Aem_940_023_(53756058710).jpg' },
       { src: 'bilder/aem-940-c3.jpg', titel: 'Aem 940 018 in Biasca', foto: 'JoachimKohler-HB', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:2-Kraft-(Rangier-)Lokomotive_SBB_Aem_940_018_in._Biasca_(2026).jpg' },
@@ -779,7 +785,10 @@ const ZUEGE = [
       { titel: 'Sicherer Transport', p: ['Vor jeder Fahrt sind die von Hand bedienten Schieber zu schliessen und zu sichern. Beim Entladen dürfen sich keine Personen im Auslauf- oder Gefahrenbereich aufhalten.'] }
     ],
     quellen: ['SBB Infrastruktur – Ausbildungspräsentation «Wagon de chantier», 15.09.2022, Folie Xns 39', 'SBB Infrastruktur – Fahrtypenkatalog 2026, Fahrtyp 5108 Xns 39 (Fccnpps), S. 294', 'SBB Infrastruktur – Anhang A zu I-40036, Neuschotterwagen'],
-    art: { typ: 'wagen', var: 'schotter', zweiachs: true, farbe: YEL }, bilder: [] },
+    art: { typ: 'wagen', var: 'schotter', zweiachs: true, farbe: YEL }, bilder: [
+      { src: 'bilder/xns-39-c1.jpg', titel: 'Xns 39 (Fccnpps) 21 85 6439 038-1 in einem Bauzug', urheber: 'HCKD' },
+      { src: 'bilder/xns-39-c2.jpg', titel: 'Mehrere Xns 39 in einem Bauzug, nachts', urheber: 'HCKD' }
+    ] },
   { id: 'xns-60', kat: 'infrastruktur', gruppe: 'Schotter- und Kippwagen', name: 'Xns 60', beiname: '', typ: 'Zweiachsiger Schotterkippwagen für Ballast und Siebrückstände', vorlaeufig: false,
     text: ['Der Xns 60 ist ein zweiachsiger Kippwagen für Schotter, Siebrückstände und ähnliches Schüttgut.', 'Die Entladung erfolgt durch Kippen und Schwerkraft.'],
     kennzahlen: [['100 km/h', 'Höchstgeschwindigkeit'], ['10,94 m', 'Länge'], ['17,0 t', 'Leergewicht'], ['42 t', 'max. Gesamtgewicht']],

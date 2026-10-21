@@ -271,9 +271,10 @@ shareBtn.addEventListener('click', () => {
    BILDNACHWEIS im Impressum: alle Fotos mit freier Lizenz
    ===================================================================== */
 (() => {
-  const liste = ZUEGE.map(z => ({ z, b: (z.bilder || []).map((x, i) => ({ x, i })).filter(o => o.x.foto) })).filter(o => o.b.length);
+  // urheber: photographer named only here, not under the photo (photos sent to RailBase)
+  const liste = ZUEGE.map(z => ({ z, b: (z.bilder || []).map((x, i) => ({ x, i })).filter(o => o.x.foto || o.x.urheber) })).filter(o => o.b.length);
   $('#bildnachweis').innerHTML = liste.map(({ z, b }) => `<li><b>${esc(fullName(z))}</b><ul>${b.map(({ x, i }) =>
-    `<li>${esc(zb(z, i))}: ${nachweis(x).replace(/^<small class="credit">|<\/small>$/g, '')}</li>`).join('')}</ul></li>`).join('');
+    `<li>${esc(zb(z, i))}: ${x.foto ? nachweis(x).replace(/^<small class="credit">|<\/small>$/g, '') : esc(tr('Foto:')) + ' ' + esc(x.urheber)}</li>`).join('')}</ul></li>`).join('');
 })();
 
 /* =====================================================================
