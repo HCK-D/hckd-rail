@@ -292,3 +292,65 @@ Object.assign(EINSATZ, {
   'sob-tm-236': { strecken: SOB_NETZ, orte: [['Herisau']], text: 'Früher im Rangier- und Baudienst auf dem Netz der SOB, oft in Herisau.' },
   'sob-xtmas': { strecken: SOB_NETZ, text: 'Von 2010 bis 2014 für Arbeiten an der Infrastruktur auf dem Netz der SOB.' }
 });
+/* =====================================================================
+   BLS und TPF: historische Fahrzeuge, Infrastruktur, Rangier und Dienst
+   (Oktober 2026), nach den Angaben auf den Fahrzeugseiten.
+   ===================================================================== */
+const BLS_LOETSCHBERG = ['Bern', 'Thun', 'Spiez', 'Frutigen', 'Kandersteg', 'Goppenstein', 'Brig'];
+const BLS_NETZ = [['Thun', 'Spiez', 'Frutigen', 'Kandersteg', 'Goppenstein', 'Brig'], ['Spiez', 'Zweisimmen'], ['Spiez', 'Interlaken Ost'], ['Bern', 'Kerzers', 'Neuchâtel'],
+  ['Bern', 'Schwarzenburg'], ['Bern', 'Belp', 'Thun'], ['Burgdorf', 'Hasle-Rüegsau', 'Konolfingen', 'Thun'], ['Solothurn', 'Burgdorf']];
+const BLS_NETZ_TEXT = 'Für Baustellen und Unterhalt auf dem Netz der BLS, zum Beispiel am Lötschberg, im Simmental, im Gürbetal und auf Bern–Neuchâtel.';
+const TPF_NORMAL = [['Romont FR', 'Bulle', 'Broc-Chocolaterie'], ['Fribourg/Freiburg', 'Murten/Morat', 'Ins']];
+const TPF_METER = [['Palézieux', 'Châtel-St-Denis', 'Bulle', 'Montbovon'], ['Bulle', 'Gruyères']];
+const TPF_METER_TEXT = 'Auf dem Meterspurnetz der TPF zwischen Palézieux, Bulle, Gruyères und Montbovon. Die Meterspur ist gestrichelt und vereinfacht eingezeichnet.';
+Object.assign(EINSATZ, {
+  'bls-re-425': { strecken: [['Basel SBB', 'Olten', ...BLS_LOETSCHBERG]], text: 'Früher vor Schnellzügen Bern–Brig, vor Güterzügen Basel–Domodossola und beim Autoverlad Kandersteg–Goppenstein.' },
+  'bls-am-843': { strecken: BLS_NETZ, orte: [['Frutigen']], text: 'Auf dem Netz der BLS, für Bauzüge, Rangieren und im Interventionsdienst.' },
+  'bls-fccnpps': { strecken: BLS_NETZ, text: BLS_NETZ_TEXT },
+  'bls-faccnpps': { strecken: BLS_NETZ, text: BLS_NETZ_TEXT },
+  'bls-xas': { strecken: BLS_NETZ, text: BLS_NETZ_TEXT },
+  'bls-fans-u': { strecken: BLS_NETZ, text: BLS_NETZ_TEXT },
+  'bls-schleiffahrzeug': { strecken: BLS_NETZ, orte: [['Spiez']], text: 'Auf dem Netz der BLS; der erste Ernsteinsatz war in Spiez geplant.' },
+  'bls-rangier': { strecken: BLS_NETZ, text: 'In Bahnhöfen und Werkstätten auf dem Netz der BLS.' },
+  'bls-lrz': { strecken: [['Frutigen', 'Visp'], ['Thun', 'Spiez', 'Frutigen', 'Kandersteg', 'Goppenstein', 'Brig']], orte: [['Frutigen']],
+    text: 'Vom Interventionszentrum Frutigen aus, unter anderem für den Lötschberg-Basistunnel und die Bergstrecke.' },
+  'bls-hilfswagen': { strecken: BLS_NETZ, text: 'Für Bergungen und technische Hilfe auf dem Netz der BLS.' },
+  'bls-ae-4-4': { strecken: [BLS_LOETSCHBERG], text: 'Früher vor Personen- und Güterzügen über die Lötschberg-Bergstrecke.' },
+  'bls-ae-6-8': { strecken: [BLS_LOETSCHBERG], text: 'Früher vor schweren Zügen über den Lötschberg, ab 1939 auch vor Schnellzügen im Flachland.' },
+  'bls-ae-8-8': { strecken: [BLS_LOETSCHBERG], text: 'Früher vor schweren Zügen am Lötschberg, zuletzt auch mit Aushubzügen aus dem Lötschberg-Basistunnel.' },
+  'bls-be-5-7': { strecken: [BLS_LOETSCHBERG], text: 'Früher als erste Elektrolok der Lötschbergbahn vor Schnell- und Güterzügen.' },
+  'bls-ce-6-6': { strecken: [['Thun', 'Spiez', 'Interlaken Ost'], ['Bern', 'Kerzers', 'Neuchâtel']], text: 'Früher vor Güterzügen, etwa zwischen Thun und Interlaken, ab 1928 auf der Bern–Neuenburg-Bahn.' },
+  'bls-ce-4-6': { strecken: [['Spiez', 'Zweisimmen']], text: 'Früher auf Nebenlinien der BLS-Gruppe, etwa Spiez–Erlenbach–Zweisimmen.' },
+  'bls-ce-4-4': { strecken: [['Bern', 'Belp', 'Thun'], ['Bern', 'Schwarzenburg']], text: 'Früher auf den Linien der GBS: Bern–Belp–Thun und Bern–Schwarzenburg.' },
+  'bls-bcfe-4-6': { strecken: [['Bern', 'Kerzers', 'Neuchâtel'], ['Thun', 'Spiez', 'Frutigen', 'Kandersteg', 'Goppenstein', 'Brig']], text: 'Früher im Personenverkehr der BLS-Gruppe, etwa auf der Bern–Neuenburg-Bahn, zu der die 736 gehörte.' },
+  'bls-be-4-4-761': { strecken: [['Bern', 'Kerzers', 'Neuchâtel']], text: 'Früher auf der Bern–Neuenburg-Bahn, auch vor internationalen Zügen Bern–Paris; heute auf Sonderfahrten.' },
+  'bls-ce-2-4': { orte: [['Bern']], text: 'Früher bei der BLS-Gruppe; genaue Einsatzstrecken sind nicht belegt.' },
+  'bls-abde-4-8': { strecken: [['Spiez', 'Zweisimmen'], ['Spiez', 'Interlaken Ost'], ['Bern', 'Belp', 'Thun']], orte: [['Kerzers']],
+    text: 'Früher im Regionalverkehr, etwa im Simmental, zwischen Spiez und Interlaken und im Gürbetal. Der erhaltene Zug steht bei Kerzers-Kallnach.' },
+  'bls-rbde-565': { gebiete: [['Bern', 14, 'S-Bahn Bern']], strecken: [['Thun', 'Spiez', 'Zweisimmen'], ['Bern', 'Kerzers', 'Neuchâtel'], ['Bern', 'Belp', 'Thun']],
+    text: 'Früher im Regional- und S-Bahn-Verkehr der BLS, unter anderem bei der S-Bahn Bern.' },
+  'bls-rbde-566': { gebiete: [['Bern', 14, 'S-Bahn Bern']], strecken: [['Spiez', 'Frutigen'], ['Brig', 'Goppenstein'], ['Thun', 'Konolfingen', 'Burgdorf', 'Solothurn']],
+    text: 'Früher unter anderem Spiez–Frutigen, Brig–Goppenstein, bei der S-Bahn Bern und zwischen Thun und Solothurn.' },
+  'bls-rabe-526': { orte: [['Biel/Bienne']], text: 'Bei der BLS im Regionalverkehr; ab 2013 bei der SBB im Jura ab Biel, ab 2018 bei Thurbo.' },
+  'bls-ew-iii': { strecken: [['Bern', 'Kerzers', 'Neuchâtel']], text: 'Zuletzt vor allem als RegioExpress Bern–Neuchâtel.' },
+  'bls-re-420': { strecken: [['Interlaken Ost', 'Spiez', 'Zweisimmen']], text: 'Zuletzt vor den Wagen der GoldenPass Line zwischen Interlaken Ost und Zweisimmen.' },
+  'tpf-tm-87': { strecken: TPF_NORMAL, text: 'Auf dem Normalspurnetz der TPF, etwa Romont–Bulle–Broc und Fribourg–Murten–Ins.' },
+  'tpf-tmf-17': { linien: TPF_METER, orte: [['Bulle']], text: TPF_METER_TEXT },
+  'tpf-gem-18': { linien: TPF_METER, orte: [['Bulle']], text: TPF_METER_TEXT },
+  'tpf-x-925': { linien: TPF_METER, strecken: TPF_NORMAL, text: 'Auf dem Meterspurnetz der TPF; mit dem Tragwagen Sgjs X113 arbeitet der Kran auch auf dem Normalspurnetz. Die Meterspur ist gestrichelt eingezeichnet.' },
+  'tpf-retrozug': { linien: TPF_METER, text: 'Auf Sonderfahrten auf dem Meterspurnetz der TPF. Die Meterspur ist gestrichelt und vereinfacht eingezeichnet.' },
+  'gfm-be-111': { linien: TPF_METER, text: 'Früher auf dem Meterspurnetz der CEG und der GFM in der Gruyère. Die Meterspur ist gestrichelt und vereinfacht eingezeichnet.' },
+  'gfm-be-115': { linien: TPF_METER, text: 'Früher auf dem Meterspurnetz der GFM und der TPF. Die Meterspur ist gestrichelt und vereinfacht eingezeichnet.' },
+  'gfm-be-131': { linien: TPF_METER, text: 'Früher auf dem Meterspurnetz der GFM. Die Meterspur ist gestrichelt und vereinfacht eingezeichnet.' },
+  'gfm-bde-141': { linien: TPF_METER, text: 'Früher auf dem Meterspurnetz der GFM, zuerst vor Kieszügen. Die Meterspur ist gestrichelt und vereinfacht eingezeichnet.' },
+  'gfm-be-151': { linien: TPF_METER, text: 'Früher als Pendelzug auf dem Meterspurnetz der GFM und der TPF. Die Meterspur ist gestrichelt und vereinfacht eingezeichnet.' },
+  'gfm-gde-101': { linien: [...TPF_METER, ['Montreux', 'Montbovon', 'Zweisimmen']], text: 'Früher auf dem Meterspurnetz der GFM; heute bei der MOB zwischen Montreux und Zweisimmen. Die Meterspur ist gestrichelt und vereinfacht eingezeichnet.' },
+  'gfm-te-22': { orte: [['Bulle'], ['Montbovon']], text: 'Früher im Rangierdienst auf dem Meterspurnetz der GFM: der 11 in Bulle, der 12 in Montbovon.' },
+  'gfm-te-44': { orte: [['Broc-Fabrique', 2574770, 1161626]], linien: TPF_METER, text: 'Früher im Rangierdienst in Broc-Fabrique und vor Bauzügen auf dem Meterspurnetz der GFM.' },
+  'gfm-tm-15': { orte: [['Bulle']], linien: TPF_METER, text: 'Früher vor Bauzügen auf dem Meterspurnetz der GFM und im Rangierdienst in Bulle.' },
+  'gfm-abde-24': { strecken: [['Fribourg/Freiburg', 'Murten/Morat', 'Ins']], text: 'Früher auf der Normalspurstrecke Freiburg–Murten–Ins.' },
+  'gfm-abde-44': { strecken: TPF_NORMAL, text: 'Früher auf den Normalspurstrecken der GFM.' },
+  'gfm-rbde-567': { strecken: TPF_NORMAL, text: 'Früher als Pendelzüge auf dem Normalspurnetz von GFM und TPF.' },
+  'gfm-ee-91': { orte: [['Bulle']], strecken: TPF_NORMAL, text: 'Früher im Rangierdienst auf dem Normalspurnetz der GFM, etwa in Bulle.' },
+  'gfm-wagen': { linien: TPF_METER, text: 'Früher auf dem Meterspurnetz der CEG und der GFM. Die Meterspur ist gestrichelt und vereinfacht eingezeichnet.' }
+});

@@ -75,10 +75,7 @@ uebZug('bls-re-465', {
   text: ['The Re 465 is the BLS sister of the SBB Re 460. It hauls passenger trains, car-shuttle trains and freight trains.', 'Between 2019 and 2022 all 18 locomotives were modernised and painted green. Since late 2023 they have replaced the brown Re 425 on the car shuttles.'],
   kennzahlen: [['18', 'locomotives'], ['6400 kW', 'power'], ['160 km/h', 'approved top speed'], ['1994', 'first in service']],
   daten: { 'Bauart': 'electric locomotive Bo’Bo’', 'Höchstgeschwindigkeit': '160 km/h (approved)' },
-  abschnitte: [
-      { titel: 'Manufacturer and fleet build-up', p: ['The Re 465 belongs to the Lok 2000 family by SLM and ABB. BLS first ordered eight locomotives (001–008), later ten more (009–018) for the piggyback corridor; they entered service from 1994 to 1997.', 'From 2019 to 2022 all 18 locomotives were modernised at the Bönigen workshop for about 20 million francs and painted green. This lets them run until about 2040.'] },
-      { titel: 'Service and technology', p: ['The Re 465 pull or push the GoldenPass Express between Interlaken Ost and Zweisimmen. Since 19 December 2023 they have run the Lötschberg car shuttle, from 2026 also on the Simplon, replacing the brown Re 425.', 'In freight service they often run in multiple with TRAXX and Vectron. The locomotive has 6400 kW and is approved for 160 km/h.'] }
-    ],
+  abschnitte: [{ titel: 'Manufacturer and fleet build-up', p: ['The Re 465 belongs to the Lok 2000 family by SLM and ABB. BLS first ordered eight locomotives (001–008), later ten more (009–018) for the piggyback corridor; they entered service from 1994 to 1997.', 'From 2019 to 2022 all 18 locomotives were modernised at the Bönigen workshop for about 20 million francs and painted green. This lets them run until about 2040.'] }, { titel: 'Service and technology', p: ['The Re 465 pull or push the GoldenPass Express between Interlaken Ost and Zweisimmen. Since 19 December 2023 they have run the Lötschberg car shuttle, from 2026 also on the Simplon, replacing the brown Re 425.', 'In freight service they often run in multiple with TRAXX and Vectron. The locomotive has 6400 kW and is approved for 160 km/h.'] }, { titel: 'Facilities and accessibility', liste: ['Two cabs', 'Multiple-unit control, in freight service often with TRAXX and Vectron', 'Pulls or pushes trains, for example the GoldenPass Express'], p: ['As a locomotive the Re 465 has no passenger compartment. On the GoldenPass Express and the car shuttles, accessibility depends on the coaches.'] }],
   bilder: ['Re 465 014 in Zweisimmen', 'Re 465 001 and 007 in double traction']
 });
 uebZug('bls-re-475', {
@@ -86,19 +83,12 @@ uebZug('bls-re-475', {
   text: ['The Re 475 is the Vectron locomotive of BLS Cargo. It is approved in several countries and hauls freight across the Alps to Germany, Italy and the Netherlands.', 'BLS Cargo has expanded the fleet in several batches.'],
   kennzahlen: [['50', 'locomotives in three batches'], ['2016', 'first in service'], ['6', 'countries (later batches)'], ['Siemens', 'builder']],
   daten: { 'Bauart': 'multi-system electric locomotive Bo’Bo’', 'Zulassung': 'CH, D, A, I, NL; from no. 416 also B', 'Anzahl': '50 (in three batches)' },
-  abschnitte: [
-      { titel: 'Manufacturer and fleet build-up', p: ['The Re 475 is the Vectron locomotive by Siemens Mobility for BLS Cargo. The fleet grows in three batches to 50 locomotives: 401–415 (2016–2018), 416–440 (2020 and 2024–2025) and 441–450 (from 2026).'] },
-      { titel: 'Service and technology', p: ['BLS Cargo uses the Re 475 mainly on the Lötschberg-Simplon and Gotthard axes and runs as far as the Netherlands, Belgium, Germany, Austria and Italy.', 'The multi-system locomotive is approved in up to six countries; from number 416 also in Belgium.'] },
-      { titel: 'Three batches', tabelle: { kopf: ['Numbers', 'Number', 'Delivery', 'Approval'], zeilen: [
-    ['401–415', '15', '2016–2018', 'CH, D, A, I, NL'], ['416–440', '25', '2020, 2024–2025', 'CH, D, A, I, NL, B'], ['441–450', '10', 'from 2026', 'CH, D, A, I, NL, B']] } }
-    ],
+  abschnitte: [{ titel: 'Manufacturer and fleet build-up', p: ['The Re 475 is the Vectron locomotive by Siemens Mobility for BLS Cargo. The fleet grows in three batches to 50 locomotives: 401–415 (2016–2018), 416–440 (2020 and 2024–2025) and 441–450 (from 2026).'] }, { titel: 'Service and technology', p: ['BLS Cargo uses the Re 475 mainly on the Lötschberg-Simplon and Gotthard axes and runs as far as the Netherlands, Belgium, Germany, Austria and Italy.', 'The multi-system locomotive is approved in up to six countries; from number 416 also in Belgium.'] }, { titel: 'Facilities and accessibility', liste: ['Two cabs', 'Multi-system locomotive for AC and DC', 'Approval for Switzerland, Germany, Austria, Italy and the Netherlands, from number 416 also for Belgium'], p: ['The Re 475 is a freight locomotive and has no passenger compartment.'] }, { titel: 'Three batches', tabelle: { kopf: ['Numbers', 'Number', 'Delivery', 'Approval'], zeilen: [
+    ['401–415', '15', '2016–2018', 'CH, D, A, I, NL'], ['416–440', '25', '2020, 2024–2025', 'CH, D, A, I, NL, B'], ['441–450', '10', 'from 2026', 'CH, D, A, I, NL, B']] } }],
   bilder: ['Re 475 401 of BLS Cargo']
 });
 uebZug('bls-re-485', {
-  abschnitte: [
-      { titel: 'Manufacturer and fleet build-up', p: ['In 2002 BLS Cargo ordered 20 TRAXX of type F140 AC from Bombardier; they were delivered by mid-2003 and carry the numbers 485 001–020.', '485 004 was destroyed in an accident at Auggen (Germany) in 2020. How many Re 485 are operational today is not publicly confirmed.'] },
-      { titel: 'Service and technology', p: ['The Re 485 haul freight trains in Switzerland and to Germany, on the Lötschberg-Simplon and Gotthard axes.', 'Technically they match the German class 185 and the SBB Cargo Re 482, with a Swiss equipment package. They run at up to 140 km/h.'] }
-    ],
+  abschnitte: [{ titel: 'Manufacturer and fleet build-up', p: ['In 2002 BLS Cargo ordered 20 TRAXX of type F140 AC from Bombardier; they were delivered by mid-2003 and carry the numbers 485 001–020.', '485 004 was destroyed in an accident at Auggen (Germany) in 2020. How many Re 485 are operational today is not publicly confirmed.'] }, { titel: 'Service and technology', p: ['The Re 485 haul freight trains in Switzerland and to Germany, on the Lötschberg-Simplon and Gotthard axes.', 'Technically they match the German class 185 and the SBB Cargo Re 482, with a Swiss equipment package. They run at up to 140 km/h.'] }, { titel: 'Facilities and accessibility', liste: ['Two cabs', 'Approval for Switzerland and Germany', 'Swiss equipment package based on the German class 185'], p: ['The Re 485 is a freight locomotive and has no passenger compartment.'] }],
   typ: 'Freight electric locomotive by Bombardier',
   text: ['The Re 485 are TRAXX locomotives of BLS Cargo for freight in Switzerland and to Germany.', 'They were ordered in 2002 and delivered by mid-2003.'],
   kennzahlen: [['20', 'locomotives procured'], ['140 km/h', 'top speed'], ['CH, D', 'approval'], ['2002', 'first in service']],
@@ -107,10 +97,7 @@ uebZug('bls-re-485', {
   bilder: ['Re 485 005 of BLS Cargo', 'Re 485 016 with a freight train', 'Re 485 008 near Allmendingen']
 });
 uebZug('bls-re-486', {
-  abschnitte: [
-      { titel: 'Manufacturer and fleet build-up', p: ['From autumn 2008 Bombardier delivered ten multi-system TRAXX of type F140 MS to BLS Cargo, numbered 486 501–510; the last followed in 2009.'] },
-      { titel: 'Service and technology', p: ['The Re 486 may run in Switzerland, Germany, Italy and Austria. This makes them suitable for transit across the Alps, for example with the rolling highway.', 'As a multi-system locomotive it runs on AC and DC; the top speed is 140 km/h.'] }
-    ],
+  abschnitte: [{ titel: 'Manufacturer and fleet build-up', p: ['From autumn 2008 Bombardier delivered ten multi-system TRAXX of type F140 MS to BLS Cargo, numbered 486 501–510; the last followed in 2009.'] }, { titel: 'Service and technology', p: ['The Re 486 may run in Switzerland, Germany, Italy and Austria. This makes them suitable for transit across the Alps, for example with the rolling highway.', 'As a multi-system locomotive it runs on AC and DC; the top speed is 140 km/h.'] }, { titel: 'Facilities and accessibility', liste: ['Two cabs', 'Multi-system locomotive for AC and DC', 'Approval for Switzerland, Germany, Italy and Austria'], p: ['The Re 486 is a freight locomotive and has no passenger compartment.'] }],
   typ: 'Multi-system electric locomotive by Bombardier',
   text: ['The Re 486 are multi-system TRAXX locomotives of BLS Cargo. They can run in Switzerland, Germany, Italy and Austria.', 'This makes them suitable for transit across the Alps, for example with the rolling highway.'],
   kennzahlen: [['10', 'locomotives'], ['140 km/h', 'top speed'], ['4', 'countries'], ['2008', 'first in service']],
@@ -123,7 +110,7 @@ uebZug('bls-re-425', {
   text: ['For decades the brown BLS Re 4/4, today Re 425, hauled fast trains between Bern and Brig and freight trains from Basel to Domodossola. The Lötschberg car shuttle was also their job for a long time.', 'BLS Cargo ended the freight service of the Re 425 in 2021. From late 2023 the Re 465 gradually took over the car shuttles; the last scheduled run of an Re 425 took place on 27 July 2026 between Kandersteg and Goppenstein. Re 425 165 «Moutier» is preserved by the BLS Foundation.'],
   kennzahlen: [['35', 'built 1964–1983'], ['4980 kW', 'power'], ['140 km/h', 'top speed'], ['1964', 'first in service']],
   daten: { 'Bauart': 'electric locomotive Bo’Bo’', 'Betreiber': 'BLS and BLS Cargo (historic); some locomotives now in museum or special service', 'Länge': '15.1 m (from no. 174: 15.47 m)', 'Anzahl': '35 built' },
-  abschnitte: [{ titel: 'Re 4/4 165 «Moutier»', p: ['No. 165 was delivered to BLS as Ae 4/4 II 265 and carries the coat of arms of the municipality of Moutier. Since 2017 it has been one of the historic vehicles of the BLS Foundation and stands, out of service, in the Burgdorf depot.'] }],
+  abschnitte: [{ titel: 'Manufacturer and fleet build-up', p: ['35 locomotives were built; the first entered service in 1964. Today they carry the numbers Re 425 161–195. From number 174 the locomotives are slightly longer at 15.47 m than the older ones at 15.1 m.'] }, { titel: 'Service and technology', p: ['The locomotives hauled express trains Bern–Brig, freight trains Basel–Domodossola and the Lötschberg car shuttle. At BLS Cargo, freight service ended in 2021. From the end of 2023 the Re 465 took over the car shuttle; the last scheduled run was on 27 July 2026 between Kandersteg and Goppenstein.', 'The locomotive has 4980 kW and runs at up to 140 km/h.'] }, { titel: 'Facilities and accessibility', liste: ['Two cabs', 'No passenger compartment'], p: ['With passenger trains and the car shuttle, accessibility depended on the coaches.'] }, { titel: 'Re 4/4 165 «Moutier»', p: ['No. 165 was delivered to BLS as Ae 4/4 II 265 and carries the coat of arms of the municipality of Moutier. Since 2017 it has been one of the historic vehicles of the BLS Foundation and stands, out of service, in the Burgdorf depot.'] }],
   bilder: ['Re 425 192 in Spiez']
 });
 uebZug('bls-am-843', {
@@ -132,7 +119,7 @@ uebZug('bls-am-843', {
   kennzahlen: [['843 503', 'photographed example'], ['diesel', 'traction'], ['construction trains', 'use'], ['BLS', 'infrastructure']],
   daten: { 'Bauart': 'diesel locomotive', 'Antrieb': 'diesel-hydraulic', 'Betreiber': 'BLS Infrastructure', 'Einsatz': 'construction trains, shunting, intervention' },
   specNote: 'BLS gives length, weight and year for the Am 843 of its intervention service. How many Am 843 BLS owns in total is not publicly documented.',
-  abschnitte: [{ titel: 'In the intervention service', p: ['BLS lists an Am 843 among the vehicles of its intervention service, together with the fire-fighting and rescue train LRZ 04 and the breakdown wagon. The intervention service is the company fire brigade of BLS.'] }],
+  abschnitte: [{ titel: 'Manufacturer and fleet build-up', p: ['The Am 843 is a Vossloh locomotive and technically matches the SBB Am 843. For the locomotive in the intervention service BLS gives the year 2008. How many Am 843 BLS owns is not publicly documented.'] }, { titel: 'Service and technology', p: ['BLS lists an Am 843 among the vehicles of its intervention service, together with the fire-fighting and rescue train LRZ 04 and the breakdown wagon. The intervention service is the company fire brigade of BLS.'] }, { titel: 'Facilities and accessibility', liste: ['Diesel-hydraulic drive, independent of the overhead line', '15.2 m long, 80 t', 'No passenger compartment'] }],
   bilder: ['Am 843 503 of BLS Infrastructure']
 });
 uebZug('bls-rangier', {
@@ -141,10 +128,9 @@ uebZug('bls-rangier', {
   text: ['BLS uses various small vehicles for shunting in stations and workshops. Some come from railways that are now part of BLS, such as the Emmental–Burgdorf–Thun railway.', 'This page shows the types documented on photos with BLS lettering.'],
   kennzahlen: [['5', 'types documented on photos'], ['Ee 936', 'largest shunter'], ['Kandersteg', 'among other places photographed'], ['BLS', 'operator']],
   daten: { 'Bauart': 'shunting locomotives and tractors', 'Einsatz': 'shunting in stations and workshops' },
-  abschnitte: [{ titel: 'Documented on photos', tabelle: { kopf: ['Type', 'Example', 'Traction', 'Photo'], zeilen: [
+  abschnitte: [{ titel: 'Manufacturer and fleet build-up', p: ['BLS uses shunting locomotives and tractors of the types Ee 936, Eea 935, Tem 225, Tm 235 and Tea 245. Some come from railways that now belong to BLS, such as the Emmental–Burgdorf–Thun Railway. How many vehicles of each type BLS owns today is not publicly documented.'] }, { titel: 'Service and technology', p: ['The vehicles shunt wagons and trains in stations and workshops. Depending on the type they run electrically from the overhead line, with a diesel engine or with a battery.'] }, { titel: 'Facilities and accessibility', liste: ['Small locomotives and tractors for short shunting moves', 'No passenger compartment'] }, { titel: 'Documented on photos', tabelle: { kopf: ['Type', 'Example', 'Traction', 'Photo'], zeilen: [
     ['Ee 936', '936 132', 'electric', 'Kandersteg 2016'], ['Eea 935', '935 402', 'electric and battery', 'Kandersteg 2016'],
-    ['Tem 225', '225 041', 'electric and diesel', 'Burgdorf 2018'], ['Tm 235', '235 091', 'diesel', 'Spiez 2012'], ['Tea 245', '245 021', 'electric and battery', 'no location']] } },
-    { p: ['How many vehicles of each type BLS owns today is not publicly documented. RailBase therefore only lists examples with photos here.'] }],
+    ['Tem 225', '225 041', 'electric and diesel', 'Burgdorf 2018'], ['Tm 235', '235 091', 'diesel', 'Spiez 2012'], ['Tea 245', '245 021', 'electric and battery', 'no location']] } }],
   bilder: ['Ee 936 132 in Kandersteg (2016)', 'Eea 935 402 in Kandersteg (2016)', 'Tem 225 041 in Burgdorf (2018)', 'Tm 235 091 in Spiez (2012)', 'Tea 245 021']
 });
 uebZug('bls-lrz', {
@@ -153,7 +139,7 @@ uebZug('bls-lrz', {
   kennzahlen: [['Frutigen', 'intervention centre'], ['Lötschberg', 'base tunnel'], ['tunnels', 'main use'], ['BLS', 'operator']],
   daten: { 'Bauart': 'fire-fighting and rescue train', 'Standort': 'among others the Frutigen intervention centre', 'Einsatz': 'tunnel rescue, fire-fighting' },
   specNote: 'The data apply to LRZ 04, which BLS lists for its intervention service. How many trains there are in total is not publicly documented.',
-  abschnitte: [{ titel: 'LRZ 04', liste: ['Equipment vehicle', 'Fire-fighting tank vehicle', 'Two rescue vehicles'] }],
+  abschnitte: [{ titel: 'Manufacturer and fleet build-up', p: ['For its intervention service BLS names the LRZ 04 from 2004. How many trains there are in total is not publicly documented.'] }, { titel: 'Service and technology', p: ['The trains are stationed among other places at the intervention centre in Frutigen, at the north portal of the Lötschberg base tunnel. They bring extinguishing agents, rescue crews and breathing protection into long tunnels. The LRZ 04 is 80 m long and weighs 285 t.'] }, { titel: 'Facilities and accessibility', liste: ['Equipment vehicle', 'Fire-fighting tank vehicle', 'Two rescue vehicles'] }],
   bilder: ['Fire-fighting and rescue train in front of the Frutigen intervention centre']
 });
 uebZug('bls-ae-4-4', {
@@ -161,7 +147,7 @@ uebZug('bls-ae-4-4', {
   text: ['The BLS Ae 4/4 were the first modern bogie locomotives with four axles and 1000 hp per axle. They are seen as forerunners of all modern four-axle high-power locomotives.', 'Ae 415 251 is operational and can be hired from BLS.'],
   kennzahlen: [['1944', 'first delivery'], ['2945 kW', 'power'], ['125 km/h', 'top speed'], ['80 t', 'weight']],
   daten: { 'Bauart': 'electric locomotive Bo’Bo’', 'Hersteller': 'SLM and BBC', 'Betreiber': 'BLS, today BLS Historic', 'Erhalten': 'Ae 415 251, operational' },
-  abschnitte: [{ titel: 'Modernised', liste: ['New tap changers and air-blast circuit breakers', 'Electric brake twice as strong; one pantograph was removed for it', 'Rubber springs instead of leaf springs', 'A cable that loads the front axles more and improves adhesion'] }],
+  abschnitte: [{ titel: 'Manufacturer and fleet build-up', p: ['SLM and BBC built the BLS Ae 4/4; the first entered service in 1944. They were later called Ae 415. Ae 415 251 is preserved in working order and can be hired from BLS.'] }, { titel: 'Service and technology', p: ['The Ae 4/4 were the first modern four-axle bogie locomotives with 1000 hp per axle and are considered the forerunners of all modern four-axle high-performance locomotives. They have 2945 kW and run at up to 125 km/h.'] }, { titel: 'Facilities and accessibility', liste: ['Two cabs', 'No passenger compartment'] }, { titel: 'Modernised', liste: ['New tap changers and air-blast circuit breakers', 'Electric brake twice as strong; one pantograph was removed for it', 'Rubber springs instead of leaf springs', 'A cable that loads the front axles more and improves adhesion'] }],
   bilder: ['Ae 4/4 251 in Interlaken West (2004)']
 });
 uebZug('bls-ae-6-8', {
@@ -169,7 +155,7 @@ uebZug('bls-ae-6-8', {
   text: ['The Lötschberg Ae 6/8 were built from 1926 to 1943 and at the time were the most powerful locomotives in the world.', 'Ae 6/8 205 was shown at the 1939 National Exhibition in Zurich and now belongs to the BLS Foundation.'],
   kennzahlen: [['8', 'built 1926–1943'], ['4415 kW', 'power'], ['100 km/h', 'top speed'], ['120 t', 'weight']],
   daten: { 'Bauart': 'electric locomotive (1’Co)(Co1’)', 'Hersteller': 'electrics SAAS; mechanics Breda (201–204), SLM (205–208)', 'Betreiber': 'BLS, today BLS Foundation', 'Erhalten': 'Ae 6/8 205' },
-  abschnitte: [{ titel: 'Two batches', p: ['Numbers 201–204 were built 1926–1931 still as Be 6/8, 205–208 in 1939–1943 directly as Ae 6/8 for 100 km/h. In 1939 the first four also received new gearing for fast trains on the plains.'] }],
+  abschnitte: [{ titel: 'Manufacturer and fleet build-up', p: ['SAAS supplied the electrical equipment, Breda (201–204) and SLM (205–208) the mechanical part. The eight locomotives were built from 1926 to 1943. Ae 6/8 205 was shown at the 1939 National Exhibition in Zurich and now belongs to the BLS Foundation.'] }, { titel: 'Service and technology', p: ['The Ae 6/8 hauled heavy trains on the Lötschberg railway and were the most powerful locomotive in the world when built. They have 4415 kW and run at up to 100 km/h.'] }, { titel: 'Facilities and accessibility', liste: ['Six driven axles, wheel arrangement (1’Co)(Co1’)', 'No passenger compartment'] }, { titel: 'Two batches', p: ['Numbers 201–204 were built 1926–1931 still as Be 6/8, 205–208 in 1939–1943 directly as Ae 6/8 for 100 km/h. In 1939 the first four also received new gearing for fast trains on the plains.'] }],
   bilder: ['Ae 6/8 205 near Ausserberg, 100 years of the Lötschberg']
 });
 uebZug('bls-ae-8-8', {
@@ -177,7 +163,7 @@ uebZug('bls-ae-8-8', {
   text: ['The Ae 8/8 basically consists of two permanently coupled Ae 4/4. BLS bought it from 1956 because more and more heavy trains needed a banking locomotive on the Lötschberg line.', 'Its nickname is «Muni», the bull.'],
   kennzahlen: [['6475 kW', 'power'], ['160 t', 'weight'], ['125 km/h', 'top speed'], ['1959', 'first in service']],
   daten: { 'Bauart': 'double locomotive Bo’Bo’+Bo’Bo’', 'Betreiber': 'BLS, today BLS Foundation', 'Erhalten': 'Ae 8/8 273 and 275' },
-  abschnitte: [{ titel: 'Today', p: ['The Ae 8/8 entered service between 1959 and 1966. One of the last jobs of no. 273 was hauling spoil trains from the Lötschberg base tunnel.', 'The BLS Foundation is raising money to make 273 operational again. The future of 275 is uncertain because of its condition.'] }],
+  abschnitte: [{ titel: 'Manufacturer and fleet build-up', p: ['BLS procured the double locomotives from 1956; they entered service between 1959 and 1966. Numbers 273 and 275 are preserved by the BLS Foundation.'] }, { titel: 'Service and technology', p: ['Because more and more heavy trains on the Lötschberg line needed a pilot engine, the Ae 8/8 basically consists of two permanently coupled Ae 4/4. It is 30.2 m long, weighs 160 t, has 6475 kW and runs at up to 125 km/h.'] }, { titel: 'Facilities and accessibility', liste: ['Double locomotive of two permanently coupled halves (Bo’Bo’+Bo’Bo’)', 'No passenger compartment'] }, { titel: 'Today', p: ['The Ae 8/8 entered service between 1959 and 1966. One of the last jobs of no. 273 was hauling spoil trains from the Lötschberg base tunnel.', 'The BLS Foundation is raising money to make 273 operational again. The future of 275 is uncertain because of its condition.'] }],
   bilder: ['Ae 8/8 274']
 });
 uebZug('bls-be-5-7', {
@@ -185,7 +171,7 @@ uebZug('bls-be-5-7', {
   text: ['In 1913 the Be 5/7 was the first series locomotive for the electric Lötschberg line. It was designed as a universal locomotive for fast and freight trains.', 'After the Ae 4/4 arrived it mainly hauled freight trains.'],
   kennzahlen: [['13', 'built'], ['1913', 'first in service'], ['1840 kW', 'one-hour rating'], ['75 km/h', 'top speed']],
   daten: { 'Bauart': 'electric locomotive 1’E1’', 'Hersteller': 'SLM, MFO and BBC', 'Leistung': '1840 kW (one-hour rating)', 'Höchstgeschwindigkeit': '75 km/h, later locomotives 80 km/h', 'Erhalten': 'one locomotive at the Swiss Museum of Transport' },
-  abschnitte: [{ titel: 'At the Museum of Transport', p: ['Since 1959 locomotive 161 (originally 155) has been at the Swiss Museum of Transport in Lucerne. It carries the number 151 there.'] }],
+  abschnitte: [{ titel: 'Manufacturer and fleet build-up', p: ['SLM, MFO and BBC built the locomotives numbered 151–163; the first entered service in 1913. Later locomotives ran at 80 instead of 75 km/h.'] }, { titel: 'Service and technology', p: ['The Be 5/7 was the first series locomotive of the electric Lötschberg railway and was intended as a universal locomotive for express and freight trains. After the Ae 4/4 arrived, it mainly hauled freight trains. It has 1840 kW.'] }, { titel: 'Facilities and accessibility', liste: ['Five driven axles, wheel arrangement 1’E1’', 'No passenger compartment'] }, { titel: 'At the Museum of Transport', p: ['Since 1959 locomotive 161 (originally 155) has been at the Swiss Museum of Transport in Lucerne. It carries the number 151 there.'] }],
   bilder: ['Be 5/7 with the number 151']
 });
 uebZug('bls-ce-6-6', {
@@ -193,7 +179,7 @@ uebZug('bls-ce-6-6', {
   text: ['Ce 6/6 121 was a one-off electric locomotive, built in 1910 as F 2×3/3, later called Fc 2×3/3 and finally Ce 6/6.', 'It ran until 1968, mostly with freight trains on flatter lines such as Thun–Interlaken.'],
   kennzahlen: [['1', 'built'], ['1910', 'built'], ['1968', 'scrapped'], ['1.7 million km', 'covered']],
   daten: { 'Bauart': 'electric locomotive with two three-axle power bogies', 'Hersteller': 'MFO and SLM', 'Leistung': '2 × 1000 hp (one-hour rating)', 'Höchstgeschwindigkeit': '70 km/h, later 60 km/h', 'Verbleib': 'scrapped 1968, one bogie at the Museum of Transport' },
-  abschnitte: [{ titel: 'Long in service', p: ['From 1928 the locomotive hauled freight trains for the Bern–Neuchâtel railway. It was scrapped on 10 July 1968 after 57 years. One bogie is on display at the Museum of Transport in Lucerne.'] }],
+  abschnitte: [{ titel: 'Manufacturer and fleet build-up', p: ['MFO and SLM built the single locomotive 121 in 1910. It was first called F 2×3/3, then Fc 2×3/3 and finally Ce 6/6.'] }, { titel: 'Service and technology', p: ['The locomotive mainly hauled freight trains on flatter lines such as Thun–Interlaken, from 1928 on the Bern–Neuchâtel railway. Two power units had 1000 hp each; top speed was later reduced from 70 to 60 km/h.'] }, { titel: 'Facilities and accessibility', liste: ['Two three-axle power units', 'No passenger compartment'] }, { titel: 'Long in service', p: ['From 1928 the locomotive hauled freight trains for the Bern–Neuchâtel railway. It was scrapped on 10 July 1968 after 57 years. One bogie is on display at the Museum of Transport in Lucerne.'] }],
   bilder: ['Fc 2×3/3 121, the later Ce 6/6 121']
 });
 uebZug('bls-ce-4-6', {
@@ -201,7 +187,7 @@ uebZug('bls-ce-4-6', {
   text: ['The Ce 4/6 owes its nickname «Dekretsmühle» to the Bern government, which in 1918 decreed the electrification of branch lines because of the coal shortage after the First World War.', 'Ce 4/6 307 of the former Erlenbach–Zweisimmen railway now stands in the Burgdorf depot.'],
   kennzahlen: [['17', 'locomotives 301–317'], ['1920', 'year built of 307'], ['993 kW', 'power'], ['65 km/h', 'top speed']],
   daten: { 'Bauart': 'electric rod-drive locomotive', 'Betreiber': 'BLS group, today BLS Foundation', 'Erhalten': 'Ce 4/6 307, not operational' },
-  abschnitte: [{ titel: 'Light construction', p: ['Because the locomotives were mainly meant for branch lines, their axle load could not exceed 12 tonnes. Nos. 308–317 were rebuilt into Ce 4/4 in 1954–1956.', 'No. 307 has been a BLS historic vehicle since 1999 and has belonged to the BLS Foundation since 2023.'] }],
+  abschnitte: [{ titel: 'Manufacturer and fleet build-up', p: ['From 1920 the BLS group received locomotives 301–317. Numbers 308–317 were rebuilt as Ce 4/4 in 1954–1956. Ce 4/6 307 of the former Erlenbach–Zweisimmen railway has belonged to the BLS Foundation since 2023.'] }, { titel: 'Service and technology', p: ['The locomotives mainly ran on branch lines electrified after the Bern government decree of 1918. They have 993 kW and run at up to 65 km/h.'] }, { titel: 'Facilities and accessibility', liste: ['Rod drive', 'Maximum axle load of 12 t for branch lines', 'No passenger compartment'] }, { titel: 'Light construction', p: ['Because the locomotives were mainly meant for branch lines, their axle load could not exceed 12 tonnes. Nos. 308–317 were rebuilt into Ce 4/4 in 1954–1956.', 'No. 307 has been a BLS historic vehicle since 1999 and has belonged to the BLS Foundation since 2023.'] }],
   bilder: ['Ce 4/6 307 «Dekretsmühle»']
 });
 uebZug('bls-ce-4-4', {
@@ -209,7 +195,7 @@ uebZug('bls-ce-4-4', {
   text: ['The Ce 4/4 were created in 1954–1956 from Ce 4/6 308–317 by removing the end hoods and carrying axles. This increased adhesive weight and tractive effort, although the locomotive became lighter.', 'Ce 4/4 312 is now a museum piece in the Burgdorf depot.'],
   kennzahlen: [['1920', 'built'], ['1957', 'rebuild of 312'], ['993 kW', 'power'], ['65 km/h', 'top speed']],
   daten: { 'Bauart': 'electric locomotive', 'Betreiber': 'BLS group, today BLS Foundation', 'Fahrzeugnummern': '312 (formerly GBS)', 'Erhalten': 'Ce 4/4 312, not operational' },
-  abschnitte: [{ p: ['With its repainted body, 312 has been a BLS historic vehicle since 2013 and has belonged to the BLS Foundation since 2023. It can be seen on guided tours.'] }]
+  abschnitte: [{ titel: 'Manufacturer and fleet build-up', p: ['The Ce 4/4 were created in 1954–1956 from the Ce 4/6 308–317 built from 1920. Number 312, formerly with the GBS, has been a historic vehicle with a freshly painted body since 2013 and has belonged to the BLS Foundation since 2023. It can be visited on guided tours at the Burgdorf depot.'] }, { titel: 'Service and technology', p: ['In the rebuild, the bonnets and carrying axles were removed. This increased adhesive weight and tractive effort, although the locomotive became lighter. It has 993 kW and runs at up to 65 km/h.'] }, { titel: 'Facilities and accessibility', liste: ['Four driven axles', '12.34 m long, 64 t', 'No passenger compartment'] }]
 });
 uebZug('bls-bcfe-4-6', {
   beiname: 'Blue Arrow',
@@ -217,7 +203,7 @@ uebZug('bls-bcfe-4-6', {
   text: ['The «Blue Arrow» of 1938 is, together with the SBB Red Arrow, one of the classics of Swiss railways. Its large windows give an almost panoramic view.', 'BCFe 4/6 736 is operational and can be hired for excursions.'],
   kennzahlen: [['1938', 'built'], ['136', 'seats'], ['110 km/h', 'top speed'], ['41.5 m', 'length']],
   daten: { 'Bauart': 'electric twin railcar', 'Hersteller': 'Sécheron (electrics), SIG (mechanics)', 'Betreiber': 'BLS group, today BLS Historic', 'Fahrzeugnummern': '736 (formerly BN BCFZe 4/6)' },
-  abschnitte: [{ titel: 'History', p: ['In 1935 BLS introduced single-car lightweight railcars. After the successful trial it ordered three BCFZe 4/6 twin railcars, delivered in summer 1938. No. 731 was shown at the 1939 National Exhibition.', 'For decades the three trains carried passengers in the BLS group, until they were sold in 1983. No. 736 of the Bern–Neuchâtel railway is preserved.'] }],
+  abschnitte: [{ titel: 'Manufacturer and fleet build-up', p: ['In 1935 BLS introduced single-car lightweight railcars. After the successful trial it ordered three BCFZe 4/6 twin railcars, delivered in summer 1938. No. 731 was shown at the 1939 National Exhibition.', 'For decades the three trains carried passengers in the BLS group, until they were sold in 1983. No. 736 of the Bern–Neuchâtel railway is preserved.'] }, { titel: 'Service and technology', p: ['For decades the double railcars carried the passenger traffic of the BLS group. A train is 41.5 m long, has 710 kW and runs at up to 110 km/h. The electrical part comes from Sécheron, the mechanical part from SIG.'] }, { titel: 'Facilities and accessibility', liste: ['136 seats', 'Large windows with an almost all-round view', 'In working order, can be hired for excursions'] }],
   bilder: ['BCFe 4/6 736 «Blue Arrow»']
 });
 uebZug('bls-be-4-4-761', {
@@ -225,10 +211,11 @@ uebZug('bls-be-4-4-761', {
   text: ['The «Wellensittich» (budgie) of 1953, today Be 545 761, is regarded as the ancestor of high-power railcars. With 2000 hp it could even haul international Bern–Paris trains between Bern and Neuchâtel.', 'Since 2001 it has again worn its original light and dark green livery and runs on special trips.'],
   kennzahlen: [['1953', 'built'], ['1470 kW', 'power'], ['125 km/h', 'top speed'], ['56', 'seats']],
   daten: { 'Bauart': 'electric railcar', 'Frühere Bezeichnung': 'Ce 4/4, then Be 4/4 761', 'Betreiber': 'BN, today BLS Historic', 'Fahrzeugnummern': '761–763 (preserved: 761)' },
-  abschnitte: [{ p: ['Nos. 761 and 762 came to the Bern–Neuchâtel railway in 1953, 763 to the GBS in 1956. No. 761 has been one of the BLS historic vehicles since 2003 and its interior was fully renovated in 2010.'] }],
+  abschnitte: [{ titel: 'Manufacturer and fleet build-up', p: ['Numbers 761 and 762 came to the Bern–Neuchâtel railway in 1953, 763 to the GBS in 1956. Number 761 is now called Be 545 761 and has been one of BLS’s historic vehicles since 2003.'] }, { titel: 'Service and technology', p: ['With 2000 hp (1470 kW) the railcar could even haul international Bern–Paris trains between Bern and Neuchâtel. It runs at up to 125 km/h.'] }, { titel: 'Facilities and accessibility', liste: ['56 seats', 'Interior fully renovated in 2010', 'Back in its original light and dark green livery since 2001'] }],
   bilder: ['Be 4/4 761 «Wellensittich» in Frutigen']
 });
 uebZug('bls-ce-2-4', {
+  abschnitte: [{ titel: 'Manufacturer and fleet build-up', p: ['In 1935 the BLS group introduced single-car lightweight railcars, including Ce 2/4 727 and 787. Surviving data on these railcars are scarce; the sources used do not name the manufacturers.'] }, { titel: 'Service and technology', p: ['The railcars were a trial with light electric vehicles. Because it succeeded, the «Blue Arrow» double railcars followed in 1938.'] }, { titel: 'Facilities and accessibility', p: ['No reliable information on the facilities has been published. The letter C stands for seats of the former 3rd class.'] }],
   typ: 'Lightweight railcar from 1935 (historic)',
   text: ['In 1935 the BLS group introduced single-car lightweight railcars, among them Ce 2/4 727 and 787. After the successful trial the «Blue Arrow» twin railcars followed in 1938.', 'Little data on these railcars has survived.'],
   kennzahlen: [['1935', 'built'], ['727, 787', 'numbers'], ['1', 'car'], ['BLS', 'group']],
@@ -236,6 +223,7 @@ uebZug('bls-ce-2-4', {
   bilder: ['Ce 2/4 787']
 });
 uebZug('bls-abde-4-8', {
+  abschnitte: [{ titel: 'Manufacturer and fleet build-up', p: ['SIG and SAAS, later also BBC, built the double railcars 741–755 for BLS, SEZ, GBS and BN. The first ran in 1945. Only former 742 is preserved, with the railway museum group Kerzers-Kallnach.'] }, { titel: 'Service and technology', p: ['The trains ran regional services of the BLS group, for example in the Simmental, between Spiez and Interlaken and in the Gürbetal, often as push-pull trains with a driving trailer. The first (741–743) had 706 kW, later ones 1177 kW; top speed rose from 110 to 125 km/h.'] }, { titel: 'Facilities and accessibility', liste: ['Double railcar, about 47 m long', 'Luggage compartment (letter D)', 'High-floor entrances with steps'] }],
   typ: 'Electric twin railcar for regional service (historic)',
   text: ['From 1945 the ABDe 4/8 twin railcars ran in regional service in the BLS group, for example in the Simmental, between Spiez and Interlaken and in the Gürbetal. Many ran as push-pull trains with a driving trailer.', 'Only one train is preserved: the former 742, now with the railway museum group Kerzers-Kallnach.'],
   kennzahlen: [['13', 'trains 1945–1964'], ['125 km/h', 'top speed'], ['1177 kW', 'power of later trains'], ['2003', 'last withdrawn']],
@@ -243,6 +231,7 @@ uebZug('bls-abde-4-8', {
   bilder: ['ABDe 4/8 741']
 });
 uebZug('bls-rbde-565', {
+  abschnitte: [{ titel: 'Manufacturer and fleet build-up', p: ['SIG, SWS, SWP, BBC and ABB built 22 power cars numbered 721–742; the first entered service in 1982.'] }, { titel: 'Service and technology', p: ['The power cars ran with intermediate and driving trailers in BLS regional and S-Bahn services. They have 1650 kW continuous power and run at up to 125 km/h. From 2022 to 2025 they were replaced by the MIKA.'] }, { titel: 'Facilities and accessibility', liste: ['Push-pull train with intermediate and driving trailers', 'Luggage compartment in the power car (letter D)', 'High-floor entrances in the power car'] }],
   typ: 'Regional push-pull train of the private railways (historic)',
   text: ['The RBDe 565 were the regional push-pull trains of BLS. They ran with intermediate cars and driving trailers in regional and S-Bahn service.', 'From 2022 to 2025 they were replaced by the new MIKA.'],
   kennzahlen: [['22', 'power cars'], ['125 km/h', 'top speed'], ['1650 kW', 'continuous power'], ['1982', 'first in service']],
@@ -250,6 +239,7 @@ uebZug('bls-rbde-565', {
   bilder: ['RBDe 565 726 in Laupen (2019)']
 });
 uebZug('bls-rbde-566', {
+  abschnitte: [{ titel: 'Manufacturer and fleet build-up', p: ['The 13 power cars 230–242 were built in 1984–1985 for the EBT group and came to BLS with the 2006 merger. Number 566 241 is preserved with coaches by the Verein Pendelzug Mirage.'] }, { titel: 'Service and technology', p: ['The trains ran among others Spiez–Frutigen, Brig–Goppenstein, on the Bern S-Bahn and between Thun and Solothurn. The last scheduled run was on 6 December 2024.'] }, { titel: 'Facilities and accessibility', liste: ['Power car for push-pull trains with intermediate and driving trailers', 'Luggage compartment (letter D)', 'High-floor entrances in the power car'] }],
   typ: 'Regional push-pull train of the former RM fleet (historic)',
   text: ['The RBDe 566 II were built in 1984–1985 for the EBT group and came to BLS with the 2006 merger. They ran between Spiez and Frutigen, Brig and Goppenstein, on the Bern S-Bahn and between Thun and Solothurn.', 'The last scheduled run was on 6 December 2024.'],
   kennzahlen: [['13', 'power cars'], ['1984', 'first in service'], ['2024', 'last run'], ['230–242', 'numbers']],
@@ -257,6 +247,7 @@ uebZug('bls-rbde-566', {
   bilder: ['RBDe 566 238 with AB and ABt (2020)']
 });
 uebZug('bls-rabe-526', {
+  abschnitte: [{ titel: 'Manufacturer and fleet build-up', p: ['Stadler built the 13 GTW articulated railcars for Regionalverkehr Mittelland (RM). With the merger they came to BLS.'] }, { titel: 'Service and technology', p: ['In 2013 BLS sold the trains to SBB, which used them in the Jura from Biel; in 2018 they went to Thurbo. Today they no longer run for BLS.'] }, { titel: 'Facilities and accessibility', liste: ['Electric articulated railcar of the Stadler GTW family', 'Partly low-floor'] }],
   typ: 'Stadler articulated railcar of the former RM fleet (formerly BLS)',
   text: ['The red GTW of Regionalverkehr Mittelland came to BLS with the merger. In 2013 BLS sold them to SBB, which used them in the Jura from Biel; in 2018 they went to Thurbo.', 'They no longer run at BLS.'],
   kennzahlen: [['13', 'trains'], ['2013', 'to SBB'], ['2018', 'to Thurbo'], ['Stadler', 'builder']],
@@ -264,6 +255,7 @@ uebZug('bls-rabe-526', {
   bilder: ['BLS GTW RABe 526 265']
 });
 uebZug('bls-ew-iii', {
+  abschnitte: [{ titel: 'Manufacturer and fleet build-up', p: ['BLS used the push-pull trains with standard coaches III from 1973 until the end of 2021. A train consisted of a locomotive and six coaches: AD/ABS, A, B, B, B and driving trailer Bt. SBB Historic has taken over one train and preserves it.'] }, { titel: 'Service and technology', p: ['Last, the trains mainly ran as RegioExpress Bern–Neuchâtel, hauled by an Re 465, the Kambly train by an Re 420. A train is 165 m long, weighs 263 t and runs at up to 140 km/h. The MIKA replaced them.'] }, { titel: 'Facilities and accessibility', liste: ['63 seats in 1st and 280 in 2nd class', 'Driving trailer Bt for push-pull operation', 'High-floor entrances with steps'] }],
   name: 'EW III', beiname: 'Push-pull train',
   typ: 'Push-pull train with standard coaches III (historic)',
   text: ['The BLS EW III push-pull trains ran from 1973 until late 2021, last mainly as RegioExpress between Bern and Neuchâtel. They made way for the new MIKA.', 'SBB Historic took over one EW III set and preserves it.'],
@@ -272,6 +264,7 @@ uebZug('bls-ew-iii', {
   bilder: ['BLS EW III push-pull train in Malters']
 });
 uebZug('bls-re-420', {
+  abschnitte: [{ titel: 'Manufacturer and fleet build-up', p: ['For a time BLS had its own Re 420 of the Re 4/4 II family. Today it no longer owns any locomotives of this type.'] }, { titel: 'Service and technology', p: ['The last three hauled the GoldenPass Line coaches between Interlaken Ost and Zweisimmen. The locomotive is 14.8 m long, weighs 80 t, has 4700 kW and runs at up to 140 km/h.'] }, { titel: 'Facilities and accessibility', liste: ['Two cabs', 'No passenger compartment'], p: ['Accessibility depended on the coaches it hauled.'] }],
   typ: 'Re 4/4 II in BLS service (historic)',
   text: ['For a while BLS owned its own Re 420 of the proven Re 4/4 II family. The last three hauled the GoldenPass Line coaches between Interlaken Ost and Zweisimmen.', 'Today BLS no longer owns locomotives of this type.'],
   kennzahlen: [['4700 kW', 'power'], ['140 km/h', 'top speed'], ['80 t', 'weight'], ['14.8 m', 'length']],
@@ -354,18 +347,21 @@ uebZug('tpf-funiculaire', {
   bilder: ['Neuveville–St-Pierre funicular in Fribourg (2024)']
 });
 uebZug('tpf-tm-87', {
+  abschnitte: [{ titel: 'Manufacturer and fleet build-up', p: ['Stadler Bussnang and ADtranz built the tractor; it entered service in 2000. TPF runs it as number 87 on its standard-gauge network.'] }, { titel: 'Service and technology', p: ['The Tm 87 is used for infrastructure maintenance, hauls heavy trains and clears snow. An MTU 12V 183 TD13 engine drives it diesel-hydraulically; it has 550 kW and runs at up to 80 km/h.'] }, { titel: 'Facilities and accessibility', liste: ['Palfinger loading crane, 1200 kg at 7.2 m reach', 'Remote control', 'No passenger compartment'] }],
   typ: 'Diesel-hydraulic service tractor with loading crane',
   text: ['Tm 87 is a service tractor of the Tm 234 type for the TPF standard-gauge network. It is used for infrastructure maintenance, hauls heavy trains and clears snow.', 'It has a loading crane and can be operated by remote control.'],
   kennzahlen: [['550 kW', 'power'], ['80 km/h', 'top speed'], ['30 t', 'weight'], ['2000', 'first in service']],
   daten: { 'Bauart': 'diesel-hydraulic tractor with loading crane', 'Länge': '11.364 m', 'Gewicht': '30 t empty', 'Kran': 'Palfinger, 1200 kg at 7.2 m' }
 });
 uebZug('tpf-tmf-17', {
+  abschnitte: [{ titel: 'Manufacturer and fleet build-up', p: ['Schöma built the two-axle tractor 17; it entered service in 2011.'] }, { titel: 'Service and technology', p: ['It works in engineering service on the TPF metre-gauge network, hauls heavy trains and clears snow. A six-cylinder Deutz engine gives 330 kW; the tractor runs at up to 65 km/h and hauls 200 t on the level or 90 t on 50 ‰.'] }, { titel: 'Facilities and accessibility', liste: ['Remote control', 'Two axles, 8.50 m long', 'No passenger compartment'] }],
   typ: 'Diesel tractor for the metre-gauge network',
   text: ['Tmf 2/2 17 by Schöma is a two-axle diesel tractor for the TPF metre-gauge network. It works on construction duty, hauls heavy trains and clears snow.', 'It can also be operated by remote control.'],
   kennzahlen: [['330 kW', 'power'], ['65 km/h', 'top speed'], ['28 t', 'weight'], ['2011', 'first in service']],
   daten: { 'Bauart': 'two-axle diesel tractor', 'Länge': '8.50 m', 'Gewicht': '28 t empty', 'Motor': 'Deutz, 6 cylinders', 'Anhängelast': '200 t on the level, 90 t at 50 ‰' }
 });
 uebZug('tpf-gem-18', {
+  abschnitte: [{ titel: 'Manufacturer and fleet build-up', p: ['Stadler Bussnang built locomotive 18; it entered service in 2016.'] }, { titel: 'Service and technology', p: ['Under the overhead line it runs electrically with 700 kW, otherwise with a Mercedes-Benz OM 502 LA diesel engine of 400 kW. TPF uses it for engineering work, heavy trains and snow clearing. It runs at up to 80 km/h and hauls 300 t on the level or 120 t on 50 ‰.'] }, { titel: 'Facilities and accessibility', liste: ['Cab with room for eight people', 'Bi-mode drive: electric and diesel', 'No passenger compartment for travellers'] }],
   typ: 'Bi-mode locomotive for the metre-gauge network',
   text: ['Stadler’s Gem 2/2 18 runs electrically under the catenary and on diesel elsewhere. TPF uses it on construction duty, for heavy trains and for snow clearing.', 'The cab has room for eight people.'],
   kennzahlen: [['700 kW', 'electric'], ['400 kW', 'diesel'], ['80 km/h', 'top speed'], ['2016', 'first in service']],
@@ -373,6 +369,7 @@ uebZug('tpf-gem-18', {
   bilder: ['Gem 2/2 18']
 });
 uebZug('tpf-x-925', {
+  abschnitte: [{ titel: 'Manufacturer and fleet build-up', p: ['Schindler Waggon Pratteln, MOB-TPF and Nencki were involved in the crane wagon. The underframe dates from 1972; the rebuild as a crane wagon entered service in 2016.'] }, { titel: 'Service and technology', p: ['The crane wagon works on the TPF metre-gauge network. The crane platform can be moved onto the standard-gauge carrier wagon Sgjs X113, so the crane also works on the standard-gauge network. The wagon runs at up to 65 km/h.'] }, { titel: 'Facilities and accessibility', liste: ['Radio-controlled Palfinger PKR290 crane, 1500 kg at 14 m', 'Four axles in two bogies', 'No passenger compartment'] }],
   name: 'X 925', beiname: 'Crane wagon',
   typ: 'Crane wagon for metre and standard gauge',
   text: ['Crane wagon X 925 carries a radio-controlled Palfinger crane. The underframe dates from 1972; the conversion into a crane wagon entered service in 2016.', 'The crane platform can be transferred to the standard-gauge carrier wagon Sgjs X113. This lets the crane also work on the TPF standard-gauge network.'],
@@ -385,11 +382,12 @@ uebZug('tpf-retrozug', {
   text: ['The TPF retro train consists of power car Be 4/4 116 and three coaches from 1930 to 1932. TPF uses it for fondue trains and other special trips.', 'The power car of 1922 was fully rebuilt to its original form by TPF in 1999.'],
   kennzahlen: [['1922', 'power car built'], ['482 kW', 'power'], ['65 km/h', 'top speed'], ['186', 'places']],
   daten: { 'Bauart': 'power car with three coaches', 'Hersteller': 'SWS (power car), SIG (coaches)', 'Länge': '61.58 m (whole train)', 'Höchstgeschwindigkeit': '65 km/h (30 km/h in scheduled service)', 'Sitzplätze': '176 in 2nd class, plus 10 folding seats' },
-  abschnitte: [{ titel: 'The vehicles', tabelle: { kopf: ['Vehicle', 'Year built', 'Builder'], zeilen: [
+  abschnitte: [{ titel: 'Manufacturer and fleet build-up', p: ['The Be 4/4 116 motor coach was built by SWS in 1922 and completely rebuilt true to the original by TPF in 1999. The three coaches B 243, Brs 245 and Br 247 were built by SIG from 1930 to 1932.'] }, { titel: 'Service and technology', p: ['TPF uses the train for fondue trains and other special trips on its metre-gauge network. The motor coach has 482 kW; the whole train is 61.58 m long and runs at up to 65 km/h, 30 km/h in scheduled service.'] }, { titel: 'Facilities and accessibility', liste: ['176 seats in 2nd class and 10 folding seats', 'Two coaches with a restaurant section (letter R)', 'High-floor entrances with steps'] }, { titel: 'The vehicles', tabelle: { kopf: ['Vehicle', 'Year built', 'Builder'], zeilen: [
     ['Power car Be 4/4 116', '1922 (rebuilt 1999)', 'SWS'], ['Coach B 243', '1930', 'SIG'], ['Coach Brs 245', '1931', 'SIG'], ['Coach Br 247', '1932', 'SIG']] } }],
   bilder: ['TPF retro train', 'Be 4/4 116 in Bulle (2011)', 'Inside the retro train']
 });
 uebZug('gfm-be-111', {
+  abschnitte: [{ titel: 'Manufacturer and fleet build-up', p: ['Motor coach 111 dates from 1903; the sources used do not name a manufacturer. Today it belongs to the GFM Historique collection. From 2006 to 2011 it was on loan to the Blonay–Chamby museum railway.'] }, { titel: 'Service and technology', p: ['It ran in the early days of electric railways in the Gruyère on the metre-gauge network of the CEG and later the GFM.'] }, { titel: 'Facilities and accessibility', p: ['No reliable details on the facilities have been published. Like all vehicles of that time, it has high entrances with steps.'] }],
   typ: 'Electric railcar from 1903 (historic)',
   text: ['Railcar 111 of 1903 dates from the early days of electric railways in Gruyère. It is now part of the GFM Historique collection.', 'From 2006 to 2011 it was on loan to the Blonay–Chamby museum railway.'],
   kennzahlen: [['1903', 'built'], ['111', 'number'], ['metre gauge', 'gauge'], ['GFM Historique', 'today']],
@@ -398,6 +396,7 @@ uebZug('gfm-be-111', {
   bilder: ['Railcar 111 at the Blonay–Chamby museum railway']
 });
 uebZug('gfm-be-115', {
+  abschnitte: [{ titel: 'Manufacturer and fleet build-up', p: ['Motor coach 115 dates from 1905; the sources used do not name a manufacturer. It was scrapped in October 2016.'] }, { titel: 'Service and technology', p: ['For a long time it ran as a nostalgia motor coach on the metre-gauge network of the GFM and later TPF.'] }, { titel: 'Facilities and accessibility', p: ['No reliable details on the facilities have been published. Like all vehicles of that time, it had high entrances with steps.'] }],
   typ: 'Nostalgic railcar from 1905 (historic)',
   text: ['Be 4/4 115 of 1905 ran for a long time as a nostalgic railcar on the metre-gauge network of GFM and later TPF.', 'It was scrapped in October 2016.'],
   kennzahlen: [['1905', 'built'], ['2016', 'scrapped'], ['115', 'number'], ['metre gauge', 'gauge']],
@@ -405,12 +404,14 @@ uebZug('gfm-be-115', {
   bilder: ['Be 4/4 115 in Bulle (1995)', 'Be 4/4 115 with Bt 254 in Broc-Fabrique (2011)']
 });
 uebZug('gfm-be-131', {
+  abschnitte: [{ titel: 'Manufacturer and fleet build-up', p: ['The three motor coaches 131–133 were built for the GFM in 1943. Number 132 was scrapped in 1989, 133 in 2003; 131 is preserved as Ce 4/4 131 by GFM Historique.'] }, { titel: 'Service and technology', p: ['The motor coaches ran on the GFM metre-gauge network.'] }, { titel: 'Facilities and accessibility', p: ['No reliable details on the facilities have been published. Like all vehicles of that time, they have high entrances with steps.'] }],
   typ: 'Electric railcars from 1943 (historic)',
   text: ['The three railcars 131 to 133 were built in 1943 for the GFM metre-gauge network.', 'No. 132 was scrapped in 1989 and 133 in 2003. No. 131 is preserved and is part of the GFM Historique collection as Ce 4/4 131.'],
   kennzahlen: [['3', 'railcars'], ['1943', 'built'], ['131', 'preserved'], ['metre gauge', 'gauge']],
   daten: { 'Bauart': 'electric railcar', 'Verbleib': '131 preserved, 132 scrapped 1989, 133 scrapped 2003' }
 });
 uebZug('gfm-bde-141', {
+  abschnitte: [{ titel: 'Manufacturer and fleet build-up', p: ['SWP built the mechanical part, SAAS the electrical equipment; the two motor coaches 141 and 142 came in 1972. Number 141 went to GFM Historique in 2017, 142 was scrapped in April 2017.'] }, { titel: 'Service and technology', p: ['At first the motor coaches hauled gravel trains. From 1981 they had a compartment with seats and also ran with driving trailers 251–256. They weigh 36.5 t and run at up to 70 km/h.'] }, { titel: 'Facilities and accessibility', liste: ['40 seats from 1981', 'Luggage compartment (letter D)', 'High-floor entrances with steps'] }],
   typ: 'Gravel-train railcars from 1972 (historic)',
   text: ['The two powerful railcars of 1972 were first built for gravel trains. From 1981 they got a seating compartment and also ran with driving trailers 251–256.', 'No. 141 went to GFM Historique in 2017; 142 was scrapped in April 2017.'],
   kennzahlen: [['2', 'railcars'], ['1972', 'built'], ['70 km/h', 'top speed'], ['36.5 t', 'weight']],
@@ -418,6 +419,7 @@ uebZug('gfm-bde-141', {
   bilder: ['BDe 4/4 141 with driving trailer', 'BDe 4/4 142 in Bulle (2014)', 'BDe 4/4 142 in Bulle']
 });
 uebZug('gfm-be-151', {
+  abschnitte: [{ titel: 'Manufacturer and fleet build-up', p: ['Motor coaches 151 and 152 came in 1977. Both were scrapped in April 2017.'] }, { titel: 'Service and technology', p: ['They had only one cab and therefore always ran as push-pull trains with one of the driving trailers 251–256 on the GFM and TPF metre-gauge network.'] }, { titel: 'Facilities and accessibility', liste: ['One cab', 'Always running with a driving trailer', 'High-floor entrances with steps'] }],
   typ: 'Push-pull railcars from 1977 (historic)',
   text: ['Railcars 151 and 152 of 1977 had only one driving cab. They therefore always ran with one of the driving trailers 251–256.', 'Both were scrapped in April 2017.'],
   kennzahlen: [['2', 'railcars'], ['1977', 'built'], ['1', 'driving cab'], ['2017', 'scrapped']],
@@ -425,6 +427,7 @@ uebZug('gfm-be-151', {
   bilder: ['Be 4/4 151 with driving trailer Bt 256', 'Be 4/4 152 in Montbovon (1995)']
 });
 uebZug('gfm-gde-101', {
+  abschnitte: [{ titel: 'Manufacturer and fleet build-up', p: ['SLM and BBC built locomotive 101 «Ville de Bulle»; it entered service in 1983. It was later sold to the Montreux–Bernese Oberland Railway; the year is given differently (2007 or 2017).'] }, { titel: 'Service and technology', p: ['It was the only large electric locomotive of the GFM on the metre gauge. At the MOB it now runs as GDe 4/4 6005.'] }, { titel: 'Facilities and accessibility', liste: ['Two cabs', 'Luggage compartment (letter D)', 'No passenger compartment'] }],
   typ: 'GFM metre-gauge electric locomotive (now at MOB)',
   text: ['GDe 4/4 101 «Ville de Bulle» was the only large metre-gauge electric locomotive of GFM.', 'It was sold to the Montreux–Oberland Bernois railway and runs there as GDe 4/4 6005.'],
   kennzahlen: [['1983', 'built'], ['SLM / BBC', 'builder'], ['6005', 'current number at MOB'], ['metre gauge', 'gauge']],
@@ -433,6 +436,7 @@ uebZug('gfm-gde-101', {
   bilder: ['The former GDe 4/4 101 as MOB 6005 near Saanenmöser (2014)']
 });
 uebZug('gfm-te-22', {
+  abschnitte: [{ titel: 'Manufacturer and fleet build-up', p: ['The two tractors 11 and 12 date from 1913; the electrical equipment came from MFO (11) and Alioth (12). Number 12 was withdrawn in 2012.'] }, { titel: 'Service and technology', p: ['They shunted on the GFM metre-gauge network: Te 2/2 11 in Bulle, Te 2/2 12 in Montbovon.'] }, { titel: 'Facilities and accessibility', liste: ['Two axles', 'Electric drive from the overhead line', 'No passenger compartment'] }],
   typ: 'Electric shunting tractors from 1913 (historic)',
   text: ['The two small shunting tractors of 1913 shunted on the GFM metre-gauge network: Te 2/2 11 in Bulle, Te 2/2 12 in Montbovon.', 'No. 12 was withdrawn in 2012.'],
   kennzahlen: [['2', 'tractors'], ['1913', 'built'], ['Bulle', 'Te 2/2 11'], ['Montbovon', 'Te 2/2 12']],
@@ -441,6 +445,7 @@ uebZug('gfm-te-22', {
   bilder: ['Te 2/2 12 in Montbovon', 'Te 2/2 12 from the side']
 });
 uebZug('gfm-te-44', {
+  abschnitte: [{ titel: 'Manufacturer and fleet build-up', p: ['Numbers 13 and 14 were built in 1901 as motor coaches with electrical equipment from Alioth and rebuilt as shunting tractors in 1927 and 1933. Number 13 was withdrawn in 2017.'] }, { titel: 'Service and technology', p: ['Number 13 shunted in Broc-Fabrique, 14 hauled engineering trains.'] }, { titel: 'Facilities and accessibility', liste: ['Four driven axles', 'Electric drive from the overhead line', 'No passenger compartment'] }],
   typ: 'Shunting tractors rebuilt from railcars (historic)',
   text: ['Te 4/4 13 and 14 were built in 1901 as railcars and rebuilt into shunting tractors in 1927 and 1933.', 'No. 13 shunted in Broc-Fabrique, 14 hauled construction trains. No. 13 was withdrawn in 2017.'],
   kennzahlen: [['2', 'tractors'], ['1901', 'built'], ['1927 / 1933', 'rebuilt'], ['metre gauge', 'gauge']],
@@ -448,6 +453,7 @@ uebZug('gfm-te-44', {
   bilder: ['Te 4/4 13', 'Te 4/4 14']
 });
 uebZug('gfm-tm-15', {
+  abschnitte: [{ titel: 'Manufacturer and fleet build-up', p: ['Schöma and Deutz built the tractor in 1971; it was rebuilt in 1981.'] }, { titel: 'Service and technology', p: ['It hauled engineering trains and shunted in Bulle.'] }, { titel: 'Facilities and accessibility', liste: ['Diesel drive, independent of the overhead line', 'Two axles', 'No passenger compartment'] }],
   typ: 'Diesel tractor for construction trains and shunting (historic)',
   text: ['The small diesel tractor Tm 2/2 15 was built by Schöma in 1971 and rebuilt in 1981. It hauled construction trains and shunted in Bulle.'],
   kennzahlen: [['1971', 'built'], ['1981', 'rebuilt'], ['Schöma', 'builder'], ['Bulle', 'place of use']],
@@ -455,6 +461,7 @@ uebZug('gfm-tm-15', {
   bilder: ['Tm 2/2 15 in Bulle (2005)']
 });
 uebZug('gfm-abde-24', {
+  abschnitte: [{ titel: 'Manufacturer and fleet build-up', p: ['The motor coaches came to the Fribourg–Morat–Anet railway (FMA) in 1931 and later belonged to the GFM. ABDe 2/4 155 was scrapped in 2025; its cabs went to ÖV Historique.'] }, { titel: 'Service and technology', p: ['They ran on the standard-gauge line Fribourg–Murten–Ins, at first with direct current. In 1946 they were converted to alternating current at 15 kV and 16.7 Hz.'] }, { titel: 'Facilities and accessibility', liste: ['Seats in 1st and 2nd class (letters A and B)', 'Luggage compartment (letter D)', 'High-floor entrances with steps'] }],
   typ: 'Railcar of the Fribourg–Morat–Anet railway (historic)',
   text: ['The ABDe 2/4 came to the Fribourg–Morat–Anet railway in 1931, still for direct current. In 1946 they were converted to alternating current.', 'ABDe 2/4 155 was scrapped in 2025; its driving cabs went to ÖV Historique.'],
   kennzahlen: [['1931', 'delivered'], ['1946', 'converted to AC'], ['155', 'last preserved'], ['standard gauge', 'gauge']],
@@ -462,6 +469,7 @@ uebZug('gfm-abde-24', {
   bilder: ['ABDe 2/4 155']
 });
 uebZug('gfm-abde-44', {
+  abschnitte: [{ titel: 'Manufacturer and fleet build-up', p: ['SIG and BBC built motor coaches 161–167 from 1946 to 1948; number 166 was an ABe 4/4. Most were rebuilt in 1965. Numbers 162, 163 and 167 have been scrapped.'] }, { titel: 'Service and technology', p: ['The motor coaches modernised services on the GFM standard-gauge lines.'] }, { titel: 'Facilities and accessibility', liste: ['16 seats in 1st and 32 in 2nd class', 'Luggage compartment (letter D), except on 166', 'High-floor entrances with steps'] }],
   typ: 'GFM standard-gauge railcars (historic)',
   text: ['ABDe 4/4 161 to 167 by SIG and BBC were built in 1946 to 1948 and modernised the GFM standard-gauge lines. Most were rebuilt in 1965.', 'Several railcars have since been scrapped.'],
   kennzahlen: [['1946', 'first built'], ['1965', 'rebuilt'], ['SIG / BBC', 'builder'], ['48', 'seats (16 + 32)']],
@@ -469,6 +477,7 @@ uebZug('gfm-abde-44', {
   bilder: ['ABDe 4/4 162 in Ins', 'ABDe 4/4 167 in Bulle']
 });
 uebZug('gfm-rbde-567', {
+  abschnitte: [{ titel: 'Manufacturer and fleet build-up', p: ['Power cars 171–173 by SIG, SWS and BBC date from 1983, 181–182 by SWP, SIG and ABB from 1991. Number 173 came from the RVT in 1992. They no longer appear in the current TPF fleet overview; 171 was still photographed in 2024.'] }, { titel: 'Service and technology', p: ['The power cars belong to the private-railway NPZ family and ran as push-pull trains on the GFM and TPF standard-gauge network.'] }, { titel: 'Facilities and accessibility', liste: ['Power car for push-pull trains with driving trailer', 'Luggage compartment (letter D)', 'High-floor entrances in the power car'] }],
   typ: 'Older regional push-pull trains of GFM and TPF',
   text: ['Power cars 171 to 173 of 1983 and 181 to 182 of 1991 belong to the NPZ family of the private railways. No. 173 came from the RVT in 1992.', 'They are no longer in the current TPF fleet overview; 171 was still photographed in 2024.'],
   kennzahlen: [['5', 'power cars'], ['1983', 'first built'], ['1991', 'second batch'], ['standard gauge', 'gauge']],
@@ -476,6 +485,7 @@ uebZug('gfm-rbde-567', {
   bilder: ['Power car 182 in Ins (2000)', 'Power car 171 (2005)']
 });
 uebZug('gfm-ee-91', {
+  abschnitte: [{ titel: 'Manufacturer and fleet build-up', p: ['SIG and BBC built the small shunting locomotive in 1960. It later carried the number 217 091.'] }, { titel: 'Service and technology', p: ['It shunted on the GFM standard-gauge network, for example in Bulle.'] }, { titel: 'Facilities and accessibility', liste: ['Two driven axles', 'Electric drive from the overhead line', 'No passenger compartment'] }],
   typ: 'Electric standard-gauge shunting locomotive (historic)',
   text: ['The small shunting locomotive Ee 2/2 91 was built in 1960 by SIG and BBC. It shunted on the GFM standard-gauge network, for example in Bulle, and later carried the number 217 091.'],
   kennzahlen: [['1960', 'built'], ['SIG / BBC', 'builder'], ['217 091', 'later number'], ['standard gauge', 'gauge']],
@@ -483,6 +493,7 @@ uebZug('gfm-ee-91', {
   bilder: ['Ee 2/2 91 (217 091) in Bulle (2005)']
 });
 uebZug('gfm-wagen', {
+  abschnitte: [{ titel: 'Manufacturer and fleet build-up', p: ['Preserved are passenger coach B 235 of 1903 and driving trailer CFt4 273 at GFM Historique, as well as the covered freight wagons K 671 and K 672 at the Blonay–Chamby museum railway. The sources used do not name the manufacturers.'] }, { titel: 'Service and technology', p: ['The wagons ran on the metre-gauge network of the CEG and the GFM. Today they are in the care of museum associations.'] }, { titel: 'Facilities and accessibility', liste: ['Passenger coach B 235 of 1903', 'Driving trailer CFt4 273 with luggage compartment (letter F)', 'Covered freight wagons K 671 and K 672'] }],
   name: 'Historic wagons',
   typ: 'Preserved GFM coaches and wagons',
   text: ['Besides the powered vehicles, GFM wagons are also preserved. GFM Historique keeps coach B 235 of 1903 and driving trailer CFt4 273.', 'The covered wagons K 671 and K 672 are at the Blonay–Chamby museum railway.'],

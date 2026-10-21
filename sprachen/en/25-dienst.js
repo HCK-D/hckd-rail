@@ -15,10 +15,7 @@ uebZug('lrz-18', {
   kennzahlen: [['6', 'train sets'], ['2018', 'delivery completed'], ['6 × 390 kW', 'drive of the four-car version'], ['100 km/h', 'top speed']],
   daten: { 'Hersteller': 'Windhoff / Dräger (Vogt extinguishing system)', 'Ausführungen': '3 or 4 cars', 'Länge': '83.22 m (four cars)', 'Gewicht': 'around 326 t (four cars)', 'Leistung': '6 × 390 kW (four cars)', 'Pumpenleistung': 'up to 6000 l/min at 10 bar', 'Rettungskapazität': 'up to 60 people per rescue vehicle', 'Schleppleistung': 'up to 1600 t in the tunnel', 'Autonomer Betrieb': 'approx. 4–5 hours', 'Anzahl': '6 sets (2 lots of 3)' },
   specNote: 'Length, mass and power apply to the four-car LRZ 18; three-car trains are correspondingly shorter and lighter.',
-  abschnitte: [
-    { titel: 'Procurement in two lots', p: ['After the first order of three trains for Geneva, Melide and Brig, SBB exercised an option in 2016 for three more sets for Zurich, Winterthur and Bern.', 'The generation thus comprises six trains; delivery was completed at the end of 2018.'] },
-    { titel: 'Tunnel rescue and fire-fighting', p: ['An independent breathing-air supply serves the driver’s cabs and rescue compartments. Each rescue vehicle holds up to about 60 people in its protected compartment; the train can tow up to 1600 tonnes in a tunnel.', 'The fire-fighting equipment provides 45,000 litres of water and pumps of up to 6000 litres per minute.'] }
-  ],
+  abschnitte: [{ titel: 'Manufacturer and fleet build-up', p: ['After the first order of three trains for Geneva, Melide and Brig, SBB exercised an option in 2016 for three more sets for Zurich, Winterthur and Bern.', 'The generation thus comprises six trains; delivery was completed at the end of 2018.'] }, { titel: 'Service and technology', p: ['The six trains are stationed in Geneva, Melide, Brig, Zurich, Winterthur and Bern. A four-car train is 83.22 m long, weighs about 326 t, has six drives of 390 kW and runs at up to 100 km/h. It has ETCS and can work autonomously for about four to five hours.'] }, { titel: 'Facilities and accessibility', p: ['An independent breathing-air supply serves the driver’s cabs and rescue compartments. Each rescue vehicle holds up to about 60 people in its protected compartment; the train can tow up to 1600 tonnes in a tunnel.', 'The fire-fighting equipment provides 45,000 litres of water and pumps of up to 6000 litres per minute.'] }],
   bilder: ['LRZ 18 «Bern» near Einigen', 'LRZ 18 in Geneva', 'Rescue vehicle of the LRZ 18 in Geneva', 'LRZ 18 in Geneva, side view', 'Auxiliary equipment vehicle Xtmas 99 85 9177 015 at Innotrans 2018']
 });
 
@@ -29,11 +26,7 @@ uebZug('lrz-14', {
   kennzahlen: [['2', 'train sets'], ['2014–2016', 'construction and commissioning'], ['6 × 390 kW', 'installed drive power'], ['100 km/h', 'top speed']],
   daten: { 'Formation': 'fire-fighting tank wagon + equipment vehicle + 2 rescue vehicles', 'Rettungsfahrzeuge': '22.06 m / 78 t each', 'Gewicht': 'around 326 t', 'Atemluft': 'around 1.98 million l', 'Anhängelast': '940 t on 27 ‰', 'Anzahl': '2 sets', 'Einsatz': 'Gotthard axis and tunnel network' },
   specNote: 'The designation LRZ 14 names the generation. Commissioning was staggered up to the opening of the Gotthard Base Tunnel.',
-  abschnitte: [
-    { titel: 'Procurement', p: ['The two sets were procured from 2012 and made ready for service before the Gotthard Base Tunnel opened.'] },
-    { titel: 'Two rescue units', p: ['Each rescue vehicle has room for about 60 people, or 40 people and six stretchers. Pressurised compartments, airlocks and medical connections allow evacuations from smoke-filled tunnel sections.'] },
-    { titel: 'Performance profile', p: ['With its second rescue vehicle, the four-car formation offers more rescue capacity and more breathing air than earlier generations. Several powered vehicles provide high tractive effort and redundancy.'] }
-  ],
+  abschnitte: [{ titel: 'Manufacturer and fleet build-up', p: ['The two sets were procured from 2012 and made ready for service before the Gotthard Base Tunnel opened.'] }, { titel: 'Service and technology', p: ['The two trains are intended for the Gotthard axis and the tunnel network. A train weighs about 326 t, has six drives of 390 kW and runs at up to 100 km/h. On a 27 ‰ gradient it can haul 940 t.'] }, { titel: 'Facilities and accessibility', p: ['Each rescue vehicle has room for about 60 people, or 40 people and six stretchers. Pressurised compartments, airlocks and medical connections allow evacuations from smoke-filled tunnel sections.'] }, { titel: 'Performance profile', p: ['With its second rescue vehicle, the four-car formation offers more rescue capacity and more breathing air than earlier generations. Several powered vehicles provide high tractive effort and redundancy.'] }],
   bilder: ['New LRZ 14 at the Erstfeld maintenance and intervention centre', 'LRZ 14 «Uri» at Erstfeld station', 'LRZ 14 «Uri» of the Erstfeld company fire brigade', 'LRZ 14 in Erstfeld']
 });
 
@@ -43,10 +36,7 @@ uebZug('lrz-08', {
   text: ['SBB procured eight fire-fighting and rescue trains of the LRZ 08 generation, each made up of a fire-fighting tank wagon, an equipment vehicle and a rescue vehicle.', 'They were designed for rapid interventions on the open network and in tunnels.'],
   kennzahlen: [['8', 'train sets'], ['2008–2010', 'delivery'], ['4 × 390 kW', 'installed drive power'], ['100 km/h', 'top speed']],
   daten: { 'Gewicht': 'around 248 t', 'Atemluft': 'around 1.44 million l', 'Rettungsplätze': 'approx. 60, or 40 + 9 stretchers', 'Anhängelast': '730 t on 27 ‰', 'Anzahl': '8 sets', 'In Betrieb seit': '2008–2010 (delivery)' },
-  abschnitte: [
-    { titel: 'Procurement', p: ['The generation was ordered in 2006 and delivered from 2008 to 2010. Eight sets extended the SBB intervention network.'] },
-    { titel: 'Function', p: ['Tank wagon, equipment vehicle and rescue vehicle work as one unit. Two 390 kW power packs each in the equipment and rescue vehicles drive the train.', 'The pressurised rescue compartment works independently of the outside air and allows people to be evacuated from smoke-filled areas.'] }
-  ],
+  abschnitte: [{ titel: 'Manufacturer and fleet build-up', p: ['The generation was ordered in 2006 and delivered from 2008 to 2010. Eight sets extended the SBB intervention network.'] }, { titel: 'Service and technology', p: ['Tank wagon, equipment vehicle and rescue vehicle work as one unit. Two 390 kW power packs each in the equipment and rescue vehicles drive the train.', 'The pressurised rescue compartment works independently of the outside air and allows people to be evacuated from smoke-filled areas.'] }, { titel: 'Facilities and accessibility', liste: ['About 60 rescue places, or 40 places and 9 stretchers', 'Pressure-protected rescue room, independent of the outside air', '48,000 l of water and 1800 l of foam concentrate', 'About 1.44 million l of breathing air'] }],
   bilder: ['LRZ 08 (TES 08 Olten) in Renens', 'Rescue vehicle XTmas 99 85 9174 004 «Lausanne» in Bern', 'XTmas 99 85 9174 008 «Olten» in Lausanne', 'LRZ 08 in Winterthur']
 });
 
@@ -57,10 +47,7 @@ uebZug('lrz-04', {
   kennzahlen: [['1', 'set of this generation'], ['2004', 'entry into service'], ['4 × 315 kW', 'installed drive power'], ['100 km/h', 'top speed']],
   daten: { 'Gewicht': 'around 210 t', 'Atemluft': 'around 1.44 million l', 'Anzahl': '1 set', 'Einsatz': 'fire-fighting, rescue, recovery' },
   specNote: 'The number and year refer to the separate LRZ 04 generation. Later generations are counted separately.',
-  abschnitte: [
-    { titel: 'Design', p: ['The vehicles carry water, foam, rescue and recovery equipment. The equipment and rescue vehicles each have two power packs, so the train needs no separate auxiliary locomotive.', 'The rescue car has a protected interior supplied with breathing air for evacuations from smoke-filled tunnels.'] },
-    { titel: 'Service', p: ['The train responds to incidents on the rail network, especially in longer tunnels and on sections that are hard to reach.'] }
-  ],
+  abschnitte: [{ titel: 'Manufacturer and fleet build-up', p: ['The manufacturers are Windhoff and Dräger; the base is the Windhoff MPV. SBB has one train set, which entered service in 2004. It consists of tank fire-fighting car, equipment vehicle and rescue vehicle.'] }, { titel: 'Service and technology', p: ['The train responds to incidents on the rail network, especially in longer tunnels and on sections that are hard to reach.'] }, { titel: 'Facilities and accessibility', p: ['The vehicles carry water, foam, rescue and recovery equipment. The equipment and rescue vehicles each have two power packs, so the train needs no separate auxiliary locomotive.', 'The rescue car has a protected interior supplied with breathing air for evacuations from smoke-filled tunnels.'] }],
   bilder: ['LRZ 04 in Brig, 2016', 'LRZ 04 in Hohtenn', 'LRZ 04 at Hohtenn station']
 });
 
@@ -71,10 +58,7 @@ uebZug('xrotm', {
   kennzahlen: [['4', 'series in the regulations'], ['17', 'vehicles by number ranges'], ['60–80 km/h', 'top speed of the large types'], ['95–115', 'operating numbers']],
   daten: { 'Xrotm 4/4': 'No. 95–96, 2 vehicles, 80 km/h', 'Xrotm 2/3': 'No. 97, 1 vehicle, 60 km/h', 'XTm': 'No. 102–109, 8 vehicles, 45 km/h (100 km/h hauled)', 'Xrotm ex Tm 232': 'No. 110–115, 6 vehicles, 80 km/h (90 km/h hauled)', 'Anzahl': '17 by number ranges', 'Einsatz': 'clearing snow and drifts' },
   specNote: 'The number is derived from the number ranges published in the SBB operating regulations and is not a separately confirmed fleet figure.',
-  abschnitte: [
-    { titel: 'Use', p: ['The large Xrotm 95, 96 and 97 are used during heavy snowfall, including on the Gotthard panorama line.', 'The smaller Xrotm 110–115 are suited to stations and less busy lines.'] },
-    { titel: 'Operation', p: ['Rotary snow ploughs are special vehicles with rotating clearing units. Depending on the series, their own drive, clearing capacity, line speed and permitted hauled speed differ.'] }
-  ],
+  abschnitte: [{ titel: 'Manufacturer and fleet build-up', p: ['According to the operating rules, SBB Infrastructure distinguishes four series with a total of 17 rotary snow ploughs.'], tabelle: { kopf: ['Series', 'Numbers', 'Number', 'Top speed'], zeilen: [['Xrotm 4/4', '95–96', '2', '80 km/h'], ['Xrotm 2/3', '97', '1', '60 km/h'], ['XTm', '102–109', '8', '45 km/h, towed 100 km/h'], ['Xrotm ex Tm 232', '110–115', '6', '80 km/h, towed 90 km/h']] } }, { titel: 'Service and technology', p: ['The large Xrotm 95, 96 and 97 are used during heavy snowfall, including on the Gotthard panorama line.', 'The smaller Xrotm 110–115 are suited to stations and less busy lines.'] }, { titel: 'Facilities and accessibility', liste: ['Rotating clearing units', 'Own traction and clearing capacity depending on the series', 'No passenger compartment'] }, { titel: 'Operation', p: ['Rotary snow ploughs are special vehicles with rotating clearing units. Depending on the series, their own drive, clearing capacity, line speed and permitted hauled speed differ.'] }],
   bilder: ['Xrotm rotary snow plough in Erstfeld', 'Xrotm rotary snow plough No. 95 in Erstfeld', 'Xrotm 95 at Erstfeld station', 'Vehicle number of Xrotm 95', 'Xrotm 4/4 95 in Erstfeld']
 });
 
@@ -84,10 +68,7 @@ uebZug('diagnose', {
   text: ['The self-propelled diagnostic vehicle Xtmass ROGER 1000 checks the condition of the railway infrastructure at high speed.', 'Measuring systems record track, overhead line and other installations without unnecessarily interrupting regular services.'],
   kennzahlen: [['160 km/h', 'top speed'], ['672 kW', 'maximum power'], ['64 t', 'empty weight'], ['23.9 m', 'vehicle length']],
   daten: { 'Fahrzeugart': 'self-propelled diagnostic vehicle', 'Gewicht': '64 t empty, max. 66 t', 'Einsatz': 'track and overhead line measurement' },
-  abschnitte: [
-    { titel: 'Measuring tasks', p: ['ROGER 1000 combines several measuring and diagnostic systems in one vehicle. Its high speed allows checks on main lines with little impact on the timetable.'] },
-    { titel: 'Use beyond Switzerland', p: ['Mermec documents a measuring run of the SBB vehicle on a German high-speed line. This shows its suitability for test runs on high-performance networks.'] }
-  ],
+  abschnitte: [{ titel: 'Manufacturer and fleet build-up', p: ['Mermec built the self-propelled Xtmass ROGER 1000 diagnostic vehicle for SBB Infrastructure. The sources used do not give a number of vehicles.'] }, { titel: 'Service and technology', p: ['ROGER 1000 combines several measuring and diagnostic systems in one vehicle. Its high speed allows checks on main lines with little impact on the timetable.'] }, { titel: 'Facilities and accessibility', liste: ['Measuring and diagnostic systems for track, overhead line and other installations', 'Own drive with 672 kW, up to 160 km/h', 'No passenger compartment'] }, { titel: 'Use beyond Switzerland', p: ['Mermec documents a measuring run of the SBB vehicle on a German high-speed line. This shows its suitability for test runs on high-performance networks.'] }],
   bilder: ['MerMec measuring railcar XTmass 99 85 9160 001 in Lausanne', 'ROGER 1000 (XTmass 99 85 9160 001) in Lausanne, 2009']
 });
 
@@ -97,11 +78,7 @@ uebZug('kirow-krc-1100', {
   kennzahlen: [['1', 'SBB crane of this class'], ['2019', 'replacement programme completed'], ['125 t', 'maximum lifting capacity'], ['16°', 'slewing with the adjacent track open']],
   daten: { 'Bauart': 'slewing railway crane', 'Schwenkwinkel': 'up to 16° with the adjacent track open', 'Eigenmasse': '112 t transport weight (manufacturer’s data sheet)', 'Transport': 'with protection wagon, counterweight placed on it', 'Netz': 'SBB standard-gauge network', 'Vorgänger': 'one of the two KRC 800', 'In Betrieb seit': '2019 (replacement programme 2016–2019)', 'Einsatz': 'recovery, temporary bridges, heavy construction' },
   specNote: '125 t is the maximum lifting capacity, not the crane’s mass. The 112 t transport weight comes from Kirow’s KRC 1100 technical data sheet, not from an SBB document.',
-  abschnitte: [
-    { titel: 'Procurement', p: ['SBB chose the KRC 1100 in December 2017. Kirow describes the replacement of the two KRC 800 by two new large cranes between 2016 and 2019; one of them belongs to the 1100 class.'] },
-    { titel: 'Working next to live tracks', p: ['According to the manufacturer, the bevelled counterweight allows slewing up to 16 degrees while keeping the clearance gauge of the adjacent track free. In transport position the counterweight rests on a protection wagon.'] },
-    { titel: 'About the capacity figure', p: ['The maximum lifting capacity only applies under defined conditions. The permitted load decreases with the outreach and depends on outriggers and track geometry.'] }
-  ]
+  abschnitte: [{ titel: 'Manufacturer and fleet build-up', p: ['SBB chose the KRC 1100 in December 2017. Kirow describes the replacement of the two KRC 800 by two new large cranes between 2016 and 2019; one of them belongs to the 1100 class.'] }, { titel: 'Service and technology', p: ['According to the manufacturer, the bevelled counterweight allows slewing up to 16 degrees while keeping the clearance gauge of the adjacent track free. In transport position the counterweight rests on a protection wagon.'] }, { titel: 'Facilities and accessibility', liste: ['Lifting capacity up to 125 t under defined conditions', 'Bevelled counterweight, slewing up to 16° with the adjacent track kept clear', 'Transport with a protection wagon carrying the counterweight', 'No passenger compartment'] }, { titel: 'About the capacity figure', p: ['The maximum lifting capacity only applies under defined conditions. The permitted load decreases with the outreach and depends on outriggers and track geometry.'] }]
 });
 
 uebZug('kirow-800', {
@@ -109,10 +86,7 @@ uebZug('kirow-800', {
   text: ['In 1996 SBB received two Kirow cranes of the KRC 800 class.', 'They were used for heavy recovery and construction work and were replaced by new large cranes between 2016 and 2019.'],
   kennzahlen: [['2', 'cranes delivered'], ['1996', 'delivery'], ['203 t', 'mass of the crane set'], ['80 km/h', 'top speed']],
   daten: { 'Formation': 'crane with protection and crew wagons', 'Gewicht': 'around 203 t (whole set)', 'Länge': 'around 48 m (whole set)', 'Nachfolger': 'KRC 1100 and Multi Tasker 1200' },
-  abschnitte: [
-    { titel: 'Use', p: ['The two cranes were used for heavy lifting on construction projects and after incidents. Their lifting capacity depended on outreach, outriggers and track geometry.', 'For transfers they ran as a freight train consist with protection and crew wagons.'] },
-    { titel: 'Replacement', p: ['Kirow documents the replacement of the two cranes delivered in 1996 by a Multi Tasker 1200 and a crane of the 1100 class between 2016 and 2019.'] }
-  ]
+  abschnitte: [{ titel: 'Manufacturer and fleet build-up', p: ['Kirow Leipzig delivered two KRC 800 cranes to SBB in 1996. Between 2016 and 2019 SBB replaced them with a Multi Tasker 1200 and a crane of the 1100 class.'] }, { titel: 'Service and technology', p: ['The two cranes were used for heavy lifting on construction projects and after incidents. Their lifting capacity depended on outreach, outriggers and track geometry.', 'For transfers they ran as a freight train consist with protection and crew wagons.'] }, { titel: 'Facilities and accessibility', liste: ['Formation of crane, protection wagon and crew car, about 48 m long and 203 t', 'Crew car for the crane team', 'No traction of its own, up to 80 km/h in a train'] }, { titel: 'Replacement', p: ['Kirow documents the replacement of the two cranes delivered in 1996 by a Multi Tasker 1200 and a crane of the 1100 class between 2016 and 2019.'] }]
 });
 
 uebZug('kirow-250', {
@@ -121,10 +95,7 @@ uebZug('kirow-250', {
   kennzahlen: [['169 t', 'mass of the crane set'], ['47 m', 'length of the set'], ['80 km/h', 'top speed'], ['2005', 'in the SBB fleet by then at the latest']],
   daten: { 'Formation': 'crane with protection or counterweight wagon and crew wagon', 'Gewicht': 'around 169 t (whole set)', 'Länge': 'around 47 m (whole set)', 'Antrieb': 'hydraulic crane drive, no traction drive', 'Tragfähigkeit': 'depends on outreach', 'Anzahl': 'at least 1, total not documented', 'Im SBB-Bestand': 'by 2005 at the latest (photo evidence)' },
   specNote: 'Number and year are deliberately given only as a minimum: an SBB KRC 250 is documented in a photo in 2005. Crane mass and lifting capacity are different values.',
-  abschnitte: [
-    { titel: 'Role', p: ['The KRC 250 lifts track panels, switch components and other heavy loads. Protection and counterweight wagons are part of the operating set; the crew wagon provides work and rest rooms.'] },
-    { titel: 'Available data', p: ['The SBB train type catalogue documents design, formation and running data. It does not show a current fleet figure or year of procurement.', 'A photo shows at least one SBB KRC 250 in 2005. Public sources currently allow nothing more to be said with certainty.'] }
-  ]
+  abschnitte: [{ titel: 'Manufacturer and fleet build-up', p: ['Kirow Leipzig built the KRC 250. At least one SBB crane of this type is documented by 2005 at the latest; the total number and year of purchase are not reliably documented.'] }, { titel: 'Service and technology', p: ['The KRC 250 lifts track panels, switch components and other heavy loads. Protection and counterweight wagons are part of the operating set; the crew wagon provides work and rest rooms.'] }, { titel: 'Facilities and accessibility', liste: ['Formation with protection or counterweight wagon and crew car, about 47 m long and 169 t', 'Hydraulic crane drive, no traction of its own', 'Crew car with work and rest rooms', 'Up to 80 km/h in a train'] }, { titel: 'Available data', p: ['The SBB train type catalogue documents design, formation and running data. It does not show a current fleet figure or year of procurement.', 'A photo shows at least one SBB KRC 250 in 2005. Public sources currently allow nothing more to be said with certainty.'] }]
 });
 
 uebZug('kirow-krc-100', {
@@ -133,10 +104,7 @@ uebZug('kirow-krc-100', {
   kennzahlen: [['12', 'cranes delivered'], ['2006–2007', 'delivery'], ['70 t', 'crane service weight'], ['120 km/h', 'permitted when hauled']],
   daten: { 'Länge': '11.0 m over buffers', 'Gewicht': '70 t in service', 'Tragfähigkeit': 'depends on outreach, maximum load not documented', 'Höchstgeschwindigkeit': '120 km/h hauled', 'Gegengewicht': 'fixed', 'In Betrieb seit': '2006–2007 (Dec. 2006 to Oct. 2007)', 'Einsatz': 'track construction, mast erection, recovery' },
   specNote: 'The lifting capacity of railway cranes depends heavily on outreach, outriggers and track geometry.',
-  abschnitte: [
-    { titel: 'Procurement', p: ['Kirow delivered twelve KRC 100 between December 2006 and October 2007. The series was procured for decentralised construction and recovery work.'] },
-    { titel: 'Use', p: ['The slewing superstructure allows work to the side of and along the track, for example erecting masts or steel protection elements.', 'For transfers the crane runs as a work train with protection and support wagons; it needs no drive of its own.'] }
-  ]
+  abschnitte: [{ titel: 'Manufacturer and fleet build-up', p: ['Kirow delivered twelve KRC 100 between December 2006 and October 2007. The series was procured for decentralised construction and recovery work.'] }, { titel: 'Service and technology', p: ['The slewing superstructure allows work to the side of and along the track, for example erecting masts or steel protection elements.', 'For transfers the crane runs as a work train with protection and support wagons; it needs no drive of its own.'] }, { titel: 'Facilities and accessibility', liste: ['Fixed counterweight and small tail radius', 'Slewing superstructure', 'No traction of its own, up to 120 km/h when towed', 'No passenger compartment'] }]
 });
 
 uebZug('bendini', {
@@ -145,10 +113,7 @@ uebZug('bendini', {
   kennzahlen: [['30 tm', 'crane class'], ['100 km/h', 'transport speed'], ['38 t', 'vehicle mass'], ['8.1 m', 'vehicle length']],
   daten: { 'Basistyp': 'construction machine', 'Fahrzeugart': 'freight wagon', 'Anzahl': 'several, total not confirmed', 'Fahrzeugnummern': 'examples from XTm 91551 to 91596', 'In Betrieb seit': '1980s (underframes from 1984, 1985 and 1989 documented)', 'Einsatz': 'maintenance and installation' },
   specNote: 'The 30 tm figure is the crane class used in the SBB catalogue; it is not the same as the 38 t vehicle mass. Number and year are deliberately given only as a minimum or period.',
-  abschnitte: [
-    { titel: 'Role in the crane fleet', p: ['At only 8.1 metres long, the Bendini is much more compact than the heavy Kirow sets.', 'It suits local installation and lifting work where no large heavy crane is needed.'] },
-    { titel: 'Planned replacement', p: ['In SBB Infrastructure’s procurement planning, a project for medium-load cranes explicitly appears as a replacement for the Bendini and other older cranes.', 'The 2026 train type catalogue nevertheless still lists the Bendini as active.'] }
-  ]
+  abschnitte: [{ titel: 'Manufacturer and fleet build-up', p: ['The crane wagons come from Bendini; underframes from 1984, 1985 and 1989 are documented. SBB has several of them; the total number is not confirmed. Examples carry numbers between XTm 91551 and 91596.'] }, { titel: 'Service and technology', p: ['At only 8.1 metres long, the Bendini is much more compact than the heavy Kirow sets.', 'It suits local installation and lifting work where no large heavy crane is needed.'] }, { titel: 'Facilities and accessibility', liste: ['Crane class 30 tm', 'Compact: 8.1 m long, 38 t', 'No traction of its own, up to 100 km/h in a train'] }, { titel: 'Planned replacement', p: ['In SBB Infrastructure’s procurement planning, a project for medium-load cranes explicitly appears as a replacement for the Bendini and other older cranes.', 'The 2026 train type catalogue nevertheless still lists the Bendini as active.'] }]
 });
 
 uebZug('fahrleitung', {
@@ -158,9 +123,6 @@ uebZug('fahrleitung', {
   kennzahlen: [['several', 'series and versions'], ['Hubi', 'vehicle example'], ['Krani', 'vehicle example'], ['Combi 4A', 'vehicle example']],
   daten: { 'Fahrzeuggruppe': 'overhead line service vehicles', 'Arbeitsmittel': 'lifting work platform', 'Weitere Ausrüstung': 'crane and material platform', 'Antrieb': 'depends on series', 'Höchstgeschwindigkeit': 'depends on series', 'Arbeitsort': 'overhead line and supports', 'Anzahl': 'no total published', 'Einsatz': 'installation, inspection and repair' },
   specNote: '«Overhead line vehicle» is not a single class. Technical values and years of construction must be assigned to a specific type or vehicle number.',
-  abschnitte: [
-    { titel: 'Tasks', p: ['The vehicles support inspection, fault repair and renewal of the overhead line. Work platforms give access to the contact wire; cranes lift masts, cantilevers and material.'] },
-    { titel: 'Scope', p: ['This page describes the vehicle group. A technical portrait of a single vehicle needs the exact series designation and vehicle number, because power, mass, length and year of construction vary widely.'] }
-  ],
+  abschnitte: [{ titel: 'Manufacturer and fleet build-up', p: ['SBB Infrastructure uses several series and versions. Publicly named examples are Hubi, Krani and Combi 4A; a total number has not been published.'] }, { titel: 'Service and technology', p: ['The vehicles support inspection, fault repair and renewal of the overhead line. Work platforms give access to the contact wire; cranes lift masts, cantilevers and material.'] }, { titel: 'Facilities and accessibility', liste: ['Lifting work platform for access to the contact wire', 'Crane and material platform', 'Drive and speed depending on the series'] }, { titel: 'Scope', p: ['This page describes the vehicle group. A technical portrait of a single vehicle needs the exact series designation and vehicle number, because power, mass, length and year of construction vary widely.'] }],
   bilder: ['Crane wagon «Krani 3» with lifting platform for overhead line work', 'Installation car of the Combi XTmass 99 85 9236 051 near Bad Ragaz', 'Combi overhead line construction train between Bad Ragaz and Sargans, 2019']
 });

@@ -76,10 +76,7 @@ uebZug('bls-re-465', {
   text: ['La Re 465 est la sœur BLS de la Re 460 des CFF. Elle remorque des trains de voyageurs, des trains de chargement des autos et des trains de marchandises.', 'Entre 2019 et 2022, les 18 locomotives ont été modernisées et peintes en vert. Depuis fin 2023, elles remplacent les Re 425 brunes au chargement des autos.'],
   kennzahlen: [['18', 'locomotives'], ['6400 kW', 'puissance'], ['160 km/h', 'vitesse maximale autorisée'], ['1994', 'première mise en service']],
   daten: { 'Bauart': 'locomotive électrique Bo’Bo’', 'Höchstgeschwindigkeit': '160 km/h (autorisée)' },
-  abschnitte: [
-      { titel: 'Constructeur et constitution de la flotte', p: ['La Re 465 appartient à la famille Lok 2000 de SLM et ABB. Le BLS a d’abord commandé huit locomotives (001–008), puis dix autres (009–018) pour le corridor ferroutier ; elles ont été mises en service de 1994 à 1997.', 'De 2019 à 2022, les 18 locomotives ont été modernisées à l’atelier de Bönigen pour environ 20 millions de francs et peintes en vert. Elles peuvent ainsi rouler jusqu’en 2040 environ.'] },
-      { titel: 'Utilisation et technique', p: ['Les Re 465 tirent ou poussent le GoldenPass Express entre Interlaken Ost et Zweisimmen. Depuis le 19 décembre 2023, elles assurent le chargement des autos au Lötschberg, dès 2026 aussi au Simplon, où elles remplacent les Re 425 brunes.', 'En trafic marchandises, elles circulent souvent en unité multiple avec des TRAXX et des Vectron. La locomotive développe 6400 kW et est autorisée à 160 km/h.'] }
-    ],
+  abschnitte: [{ titel: 'Constructeur et constitution de la flotte', p: ['La Re 465 appartient à la famille Lok 2000 de SLM et ABB. Le BLS a d’abord commandé huit locomotives (001–008), puis dix autres (009–018) pour le corridor ferroutier ; elles ont été mises en service de 1994 à 1997.', 'De 2019 à 2022, les 18 locomotives ont été modernisées à l’atelier de Bönigen pour environ 20 millions de francs et peintes en vert. Elles peuvent ainsi rouler jusqu’en 2040 environ.'] }, { titel: 'Utilisation et technique', p: ['Les Re 465 tirent ou poussent le GoldenPass Express entre Interlaken Ost et Zweisimmen. Depuis le 19 décembre 2023, elles assurent le chargement des autos au Lötschberg, dès 2026 aussi au Simplon, où elles remplacent les Re 425 brunes.', 'En trafic marchandises, elles circulent souvent en unité multiple avec des TRAXX et des Vectron. La locomotive développe 6400 kW et est autorisée à 160 km/h.'] }, { titel: 'Équipement et accessibilité', liste: ['Deux cabines de conduite', 'Commande multiple, en trafic marchandises souvent avec des TRAXX et Vectron', 'Tire ou pousse les trains, par exemple le GoldenPass Express'], p: ['Comme locomotive, la Re 465 n’a pas de compartiment voyageurs. Pour le GoldenPass Express et le transport des autos, l’accessibilité dépend des voitures.'] }],
   bilder: ['Re 465 014 à Zweisimmen', 'Re 465 001 et 007 en double traction']
 });
 uebZug('bls-re-475', {
@@ -87,19 +84,12 @@ uebZug('bls-re-475', {
   text: ['La Re 475 est la locomotive Vectron de BLS Cargo. Homologuée dans plusieurs pays, elle remorque des trains de marchandises à travers les Alpes jusqu’en Allemagne, en Italie et aux Pays-Bas.', 'BLS Cargo a agrandi la flotte en plusieurs séries.'],
   kennzahlen: [['50', 'locomotives en trois séries'], ['2016', 'première mise en service'], ['6', 'pays (séries récentes)'], ['Siemens', 'constructeur']],
   daten: { 'Bauart': 'locomotive électrique polycourant Bo’Bo’', 'Zulassung': 'CH, D, A, I, NL ; dès le n° 416 aussi B', 'Anzahl': '50 (en trois séries)' },
-  abschnitte: [
-      { titel: 'Constructeur et constitution de la flotte', p: ['La Re 475 est la locomotive Vectron de Siemens Mobility pour BLS Cargo. La flotte passe en trois séries à 50 locomotives : 401–415 (2016–2018), 416–440 (2020 et 2024–2025) et 441–450 (dès 2026).'] },
-      { titel: 'Utilisation et technique', p: ['BLS Cargo utilise la Re 475 surtout sur les axes Lötschberg-Simplon et Gothard et circule ainsi jusqu’aux Pays-Bas, en Belgique, en Allemagne, en Autriche et en Italie.', 'Cette locomotive polycourant est homologuée dans jusqu’à six pays ; dès le n° 416 aussi en Belgique.'] },
-      { titel: 'Trois séries', tabelle: { kopf: ['Numéros', 'Nombre', 'Livraison', 'Homologation'], zeilen: [
-    ['401–415', '15', '2016–2018', 'CH, D, A, I, NL'], ['416–440', '25', '2020, 2024–2025', 'CH, D, A, I, NL, B'], ['441–450', '10', 'dès 2026', 'CH, D, A, I, NL, B']] } }
-    ],
+  abschnitte: [{ titel: 'Constructeur et constitution de la flotte', p: ['La Re 475 est la locomotive Vectron de Siemens Mobility pour BLS Cargo. La flotte passe en trois séries à 50 locomotives : 401–415 (2016–2018), 416–440 (2020 et 2024–2025) et 441–450 (dès 2026).'] }, { titel: 'Utilisation et technique', p: ['BLS Cargo utilise la Re 475 surtout sur les axes Lötschberg-Simplon et Gothard et circule ainsi jusqu’aux Pays-Bas, en Belgique, en Allemagne, en Autriche et en Italie.', 'Cette locomotive polycourant est homologuée dans jusqu’à six pays ; dès le n° 416 aussi en Belgique.'] }, { titel: 'Équipement et accessibilité', liste: ['Deux cabines de conduite', 'Locomotive polycourant pour courant alternatif et continu', 'Homologation pour la Suisse, l’Allemagne, l’Autriche, l’Italie et les Pays-Bas, dès le numéro 416 aussi pour la Belgique'], p: ['La Re 475 est une locomotive marchandises et n’a pas de compartiment voyageurs.'] }, { titel: 'Trois séries', tabelle: { kopf: ['Numéros', 'Nombre', 'Livraison', 'Homologation'], zeilen: [
+    ['401–415', '15', '2016–2018', 'CH, D, A, I, NL'], ['416–440', '25', '2020, 2024–2025', 'CH, D, A, I, NL, B'], ['441–450', '10', 'dès 2026', 'CH, D, A, I, NL, B']] } }],
   bilder: ['Re 475 401 de BLS Cargo']
 });
 uebZug('bls-re-485', {
-  abschnitte: [
-      { titel: 'Constructeur et constitution de la flotte', p: ['En 2002, BLS Cargo a commandé à Bombardier 20 TRAXX du type F140 AC ; elles ont été livrées jusqu’à mi-2003 et portent les numéros 485 001–020.', 'La 485 004 a été détruite en 2020 lors d’un accident à Auggen (Allemagne). Le nombre de Re 485 aujourd’hui en état de service n’est pas confirmé publiquement.'] },
-      { titel: 'Utilisation et technique', p: ['Les Re 485 remorquent des trains de marchandises en Suisse et vers l’Allemagne, sur les axes Lötschberg-Simplon et Gothard.', 'Techniquement, elles correspondent à la série allemande 185 et aux Re 482 de CFF Cargo, avec un paquet d’équipements suisse. Elles roulent jusqu’à 140 km/h.'] }
-    ],
+  abschnitte: [{ titel: 'Constructeur et constitution de la flotte', p: ['En 2002, BLS Cargo a commandé à Bombardier 20 TRAXX du type F140 AC ; elles ont été livrées jusqu’à mi-2003 et portent les numéros 485 001–020.', 'La 485 004 a été détruite en 2020 lors d’un accident à Auggen (Allemagne). Le nombre de Re 485 aujourd’hui en état de service n’est pas confirmé publiquement.'] }, { titel: 'Utilisation et technique', p: ['Les Re 485 remorquent des trains de marchandises en Suisse et vers l’Allemagne, sur les axes Lötschberg-Simplon et Gothard.', 'Techniquement, elles correspondent à la série allemande 185 et aux Re 482 de CFF Cargo, avec un paquet d’équipements suisse. Elles roulent jusqu’à 140 km/h.'] }, { titel: 'Équipement et accessibilité', liste: ['Deux cabines de conduite', 'Homologation pour la Suisse et l’Allemagne', 'Équipement suisse sur la base de la série allemande 185'], p: ['La Re 485 est une locomotive marchandises et n’a pas de compartiment voyageurs.'] }],
   typ: 'Locomotive électrique pour trains de marchandises de Bombardier',
   text: ['Les Re 485 sont des locomotives TRAXX de BLS Cargo pour le trafic marchandises en Suisse et vers l’Allemagne.', 'Elles ont été commandées en 2002 et livrées jusqu’à mi-2003.'],
   kennzahlen: [['20', 'locomotives acquises'], ['140 km/h', 'vitesse maximale'], ['CH, D', 'homologation'], ['2002', 'première mise en service']],
@@ -108,10 +98,7 @@ uebZug('bls-re-485', {
   bilder: ['Re 485 005 de BLS Cargo', 'Re 485 016 avec un train de marchandises', 'Re 485 008 près d’Allmendingen']
 });
 uebZug('bls-re-486', {
-  abschnitte: [
-      { titel: 'Constructeur et constitution de la flotte', p: ['Bombardier a livré à BLS Cargo dès l’automne 2008 dix TRAXX polycourant du type F140 MS numérotées 486 501–510 ; les dernières ont suivi en 2009.'] },
-      { titel: 'Utilisation et technique', p: ['Les Re 486 peuvent circuler en Suisse, en Allemagne, en Italie et en Autriche. Elles conviennent donc au transit à travers les Alpes, par exemple avec la route roulante.', 'Locomotive polycourant, elle circule sous courant alternatif et continu ; la vitesse maximale est de 140 km/h.'] }
-    ],
+  abschnitte: [{ titel: 'Constructeur et constitution de la flotte', p: ['Bombardier a livré à BLS Cargo dès l’automne 2008 dix TRAXX polycourant du type F140 MS numérotées 486 501–510 ; les dernières ont suivi en 2009.'] }, { titel: 'Utilisation et technique', p: ['Les Re 486 peuvent circuler en Suisse, en Allemagne, en Italie et en Autriche. Elles conviennent donc au transit à travers les Alpes, par exemple avec la route roulante.', 'Locomotive polycourant, elle circule sous courant alternatif et continu ; la vitesse maximale est de 140 km/h.'] }, { titel: 'Équipement et accessibilité', liste: ['Deux cabines de conduite', 'Locomotive polycourant pour courant alternatif et continu', 'Homologation pour la Suisse, l’Allemagne, l’Italie et l’Autriche'], p: ['La Re 486 est une locomotive marchandises et n’a pas de compartiment voyageurs.'] }],
   typ: 'Locomotive électrique polycourant de Bombardier',
   text: ['Les Re 486 sont des TRAXX polycourant de BLS Cargo. Elles peuvent circuler en Suisse, en Allemagne, en Italie et en Autriche.', 'Elles conviennent donc au transit à travers les Alpes, par exemple avec la route roulante.'],
   kennzahlen: [['10', 'locomotives'], ['140 km/h', 'vitesse maximale'], ['4', 'pays'], ['2008', 'première mise en service']],
@@ -124,7 +111,7 @@ uebZug('bls-re-425', {
   text: ['Pendant des décennies, les Re 4/4 brunes du BLS, aujourd’hui Re 425, ont remorqué des trains rapides entre Berne et Brigue et des trains de marchandises de Bâle à Domodossola. Le chargement des autos au Lötschberg a aussi longtemps été leur tâche.', 'Chez BLS Cargo, l’utilisation en trafic marchandises a pris fin en 2021. Dès fin 2023, les Re 465 ont repris progressivement le chargement des autos ; la dernière course régulière d’une Re 425 a eu lieu le 27 juillet 2026 entre Kandersteg et Goppenstein. La Re 425 165 «Moutier» est conservée par la Fondation BLS.'],
   kennzahlen: [['35', 'construites 1964–1983'], ['4980 kW', 'puissance'], ['140 km/h', 'vitesse maximale'], ['1964', 'première mise en service']],
   daten: { 'Bauart': 'locomotive électrique Bo’Bo’', 'Betreiber': 'BLS et BLS Cargo (historique) ; quelques locomotives aujourd’hui en service muséal ou spécial', 'Länge': '15,1 m (dès le n° 174 : 15,47 m)', 'Anzahl': '35 construites' },
-  abschnitte: [{ titel: 'La Re 4/4 165 «Moutier»', p: ['La 165 a été livrée au BLS comme Ae 4/4 II 265 et porte les armoiries de la commune de Moutier. Depuis 2017, elle fait partie des véhicules historiques de la Fondation BLS et se trouve, hors service, au dépôt de Berthoud.'] }],
+  abschnitte: [{ titel: 'Constructeur et constitution de la flotte', p: ['35 locomotives ont été construites ; la première est entrée en service en 1964. Aujourd’hui, elles portent les numéros Re 425 161–195. Dès le numéro 174, elles sont un peu plus longues (15,47 m) que les anciennes (15,1 m).'] }, { titel: 'Utilisation et technique', p: ['Les locomotives tiraient les trains rapides Berne–Brigue, les trains marchandises Bâle–Domodossola et le transport des autos au Lötschberg. Chez BLS Cargo, le trafic marchandises a pris fin en 2021. Dès fin 2023, les Re 465 ont repris le transport des autos ; la dernière course régulière a eu lieu le 27 juillet 2026 entre Kandersteg et Goppenstein.', 'La locomotive développe 4980 kW et roule jusqu’à 140 km/h.'] }, { titel: 'Équipement et accessibilité', liste: ['Deux cabines de conduite', 'Pas de compartiment voyageurs'], p: ['En tête de trains voyageurs et pour le transport des autos, l’accessibilité dépendait des voitures.'] }, { titel: 'La Re 4/4 165 «Moutier»', p: ['La 165 a été livrée au BLS comme Ae 4/4 II 265 et porte les armoiries de la commune de Moutier. Depuis 2017, elle fait partie des véhicules historiques de la Fondation BLS et se trouve, hors service, au dépôt de Berthoud.'] }],
   bilder: ['Re 425 192 à Spiez']
 });
 uebZug('bls-am-843', {
@@ -133,7 +120,7 @@ uebZug('bls-am-843', {
   kennzahlen: [['843 503', 'exemple photographié'], ['diesel', 'motorisation'], ['trains de travaux', 'utilisation'], ['BLS', 'infrastructure']],
   daten: { 'Bauart': 'locomotive diesel', 'Antrieb': 'diesel-hydraulique', 'Betreiber': 'BLS Infrastructure', 'Einsatz': 'trains de travaux, manœuvres, intervention' },
   specNote: 'Le BLS indique la longueur, le poids et l’année pour l’Am 843 de son service d’intervention. Le nombre total d’Am 843 du BLS n’est pas documenté publiquement.',
-  abschnitte: [{ titel: 'Au service d’intervention', p: ['Le BLS mentionne une Am 843 parmi les véhicules de son service d’intervention, avec le train d’extinction et de sauvetage LRZ 04 et le wagon de secours. Le service d’intervention est le corps de sapeurs-pompiers d’entreprise du BLS.'] }],
+  abschnitte: [{ titel: 'Constructeur et constitution de la flotte', p: ['L’Am 843 est une locomotive Vossloh, techniquement identique à l’Am 843 des CFF. Pour la locomotive du service d’intervention, le BLS indique l’année 2008. Le nombre d’Am 843 du BLS n’est pas documenté publiquement.'] }, { titel: 'Utilisation et technique', p: ['Le BLS mentionne une Am 843 parmi les véhicules de son service d’intervention, avec le train d’extinction et de sauvetage LRZ 04 et le wagon de secours. Le service d’intervention est le corps de sapeurs-pompiers d’entreprise du BLS.'] }, { titel: 'Équipement et accessibilité', liste: ['Propulsion diesel-hydraulique, indépendante de la ligne de contact', '15,2 m de long, 80 t', 'Pas de compartiment voyageurs'] }],
   bilder: ['Am 843 503 de BLS Infrastructure']
 });
 uebZug('bls-rangier', {
@@ -142,10 +129,9 @@ uebZug('bls-rangier', {
   text: ['Pour manœuvrer dans les gares et les ateliers, le BLS utilise différents petits engins. Certains proviennent de compagnies qui font aujourd’hui partie du BLS, comme le chemin de fer Emmental–Berthoud–Thoune.', 'Cette page montre les types documentés sur des photos avec l’inscription BLS.'],
   kennzahlen: [['5', 'types documentés sur photo'], ['Ee 936', 'plus grande loco de manœuvre'], ['Kandersteg', 'entre autres photographiés'], ['BLS', 'exploitant']],
   daten: { 'Bauart': 'locomotives et tracteurs de manœuvre', 'Einsatz': 'manœuvres dans les gares et ateliers' },
-  abschnitte: [{ titel: 'Documentés sur photo', tabelle: { kopf: ['Type', 'Exemple', 'Motorisation', 'Photo'], zeilen: [
+  abschnitte: [{ titel: 'Constructeur et constitution de la flotte', p: ['Le BLS utilise des locomotives et tracteurs de manœuvre des types Ee 936, Eea 935, Tem 225, Tm 235 et Tea 245. Certains viennent de chemins de fer qui font aujourd’hui partie du BLS, comme l’Emmental–Burgdorf–Thun. Le nombre de véhicules de chaque type n’est pas documenté publiquement.'] }, { titel: 'Utilisation et technique', p: ['Les véhicules manœuvrent wagons et trains dans les gares et les ateliers. Selon le type, ils roulent à l’électricité par la ligne de contact, avec un moteur diesel ou avec une batterie.'] }, { titel: 'Équipement et accessibilité', liste: ['Petites locomotives et tracteurs pour de courtes manœuvres', 'Pas de compartiment voyageurs'] }, { titel: 'Documentés sur photo', tabelle: { kopf: ['Type', 'Exemple', 'Motorisation', 'Photo'], zeilen: [
     ['Ee 936', '936 132', 'électrique', 'Kandersteg 2016'], ['Eea 935', '935 402', 'électrique et batterie', 'Kandersteg 2016'],
-    ['Tem 225', '225 041', 'électrique et diesel', 'Berthoud 2018'], ['Tm 235', '235 091', 'diesel', 'Spiez 2012'], ['Tea 245', '245 021', 'électrique et batterie', 'sans lieu']] } },
-    { p: ['Le nombre de véhicules de chaque type que possède aujourd’hui le BLS n’est pas documenté publiquement. RailBase ne cite donc ici que des exemples avec photo.'] }],
+    ['Tem 225', '225 041', 'électrique et diesel', 'Berthoud 2018'], ['Tm 235', '235 091', 'diesel', 'Spiez 2012'], ['Tea 245', '245 021', 'électrique et batterie', 'sans lieu']] } }],
   bilder: ['Ee 936 132 à Kandersteg (2016)', 'Eea 935 402 à Kandersteg (2016)', 'Tem 225 041 à Berthoud (2018)', 'Tm 235 091 à Spiez (2012)', 'Tea 245 021']
 });
 uebZug('bls-lrz', {
@@ -154,7 +140,7 @@ uebZug('bls-lrz', {
   kennzahlen: [['Frutigen', 'centre d’intervention'], ['Lötschberg', 'tunnel de base'], ['tunnels', 'utilisation principale'], ['BLS', 'exploitant']],
   daten: { 'Bauart': 'train d’extinction et de sauvetage', 'Standort': 'notamment centre d’intervention de Frutigen', 'Einsatz': 'sauvetage en tunnel, lutte contre le feu' },
   specNote: 'Les données valent pour le LRZ 04 que le BLS cite pour son service d’intervention. Le nombre total de trains n’est pas documenté publiquement.',
-  abschnitte: [{ titel: 'Le LRZ 04', liste: ['Véhicule de matériel', 'Véhicule d’extinction avec citerne', 'Deux véhicules de sauvetage'] }],
+  abschnitte: [{ titel: 'Constructeur et constitution de la flotte', p: ['Pour son service d’intervention, le BLS cite le LRZ 04 de 2004. Le nombre total de trains n’est pas documenté publiquement.'] }, { titel: 'Utilisation et technique', p: ['Les trains sont stationnés notamment au centre d’intervention de Frutigen, au portail nord du tunnel de base du Lötschberg. Ils apportent agents extincteurs, sauveteurs et protection respiratoire dans les longs tunnels. Le LRZ 04 mesure 80 m et pèse 285 t.'] }, { titel: 'Équipement et accessibilité', liste: ['Véhicule de matériel', 'Véhicule d’extinction avec citerne', 'Deux véhicules de sauvetage'] }],
   bilder: ['Train d’extinction et de sauvetage devant le centre d’intervention de Frutigen']
 });
 uebZug('bls-ae-4-4', {
@@ -162,7 +148,7 @@ uebZug('bls-ae-4-4', {
   text: ['Les Ae 4/4 du BLS ont été les premières locomotives modernes à bogies à quatre essieux avec 1000 ch par essieu. Elles sont considérées comme les précurseurs de toutes les locomotives modernes à quatre essieux de grande puissance.', 'L’Ae 415 251 est en état de marche et peut être louée auprès du BLS.'],
   kennzahlen: [['1944', 'première livraison'], ['2945 kW', 'puissance'], ['125 km/h', 'vitesse maximale'], ['80 t', 'poids']],
   daten: { 'Bauart': 'locomotive électrique Bo’Bo’', 'Hersteller': 'SLM et BBC', 'Betreiber': 'BLS, aujourd’hui BLS Historic', 'Erhalten': 'Ae 415 251, en état de marche' },
-  abschnitte: [{ titel: 'Modernisée', liste: ['Nouveaux graduateurs et disjoncteurs à air comprimé', 'Frein électrique deux fois plus puissant ; un pantographe a été retiré pour cela', 'Ressorts en caoutchouc au lieu de ressorts à lames', 'Câble qui charge davantage les essieux avant et améliore l’adhérence'] }],
+  abschnitte: [{ titel: 'Constructeur et constitution de la flotte', p: ['SLM et BBC ont construit les Ae 4/4 du BLS ; la première est entrée en service en 1944. Elles se sont ensuite appelées Ae 415. L’Ae 415 251 est conservée en état de marche et peut être louée auprès du BLS.'] }, { titel: 'Utilisation et technique', p: ['Les Ae 4/4 ont été les premières locomotives modernes à bogies à quatre essieux avec 1000 ch par essieu ; elles sont considérées comme les précurseurs de toutes les locomotives modernes à grande puissance à quatre essieux. Elles développent 2945 kW et roulent jusqu’à 125 km/h.'] }, { titel: 'Équipement et accessibilité', liste: ['Deux cabines de conduite', 'Pas de compartiment voyageurs'] }, { titel: 'Modernisée', liste: ['Nouveaux graduateurs et disjoncteurs à air comprimé', 'Frein électrique deux fois plus puissant ; un pantographe a été retiré pour cela', 'Ressorts en caoutchouc au lieu de ressorts à lames', 'Câble qui charge davantage les essieux avant et améliore l’adhérence'] }],
   bilder: ['Ae 4/4 251 à Interlaken West (2004)']
 });
 uebZug('bls-ae-6-8', {
@@ -170,7 +156,7 @@ uebZug('bls-ae-6-8', {
   text: ['Les Ae 6/8 du Lötschberg ont été construites de 1926 à 1943 et étaient alors les locomotives les plus puissantes du monde.', 'L’Ae 6/8 205 a été exposée à l’Exposition nationale de 1939 à Zurich et appartient aujourd’hui à la Fondation BLS.'],
   kennzahlen: [['8', 'construites 1926–1943'], ['4415 kW', 'puissance'], ['100 km/h', 'vitesse maximale'], ['120 t', 'poids']],
   daten: { 'Bauart': 'locomotive électrique (1’Co)(Co1’)', 'Hersteller': 'électricité SAAS ; mécanique Breda (201–204), SLM (205–208)', 'Betreiber': 'BLS, aujourd’hui Fondation BLS', 'Erhalten': 'Ae 6/8 205' },
-  abschnitte: [{ titel: 'Deux séries', p: ['Les numéros 201–204 ont été construits de 1926 à 1931 encore comme Be 6/8, les 205–208 de 1939 à 1943 directement comme Ae 6/8 pour 100 km/h. En 1939, les quatre premières ont aussi reçu de nouvelles transmissions pour les trains rapides en plaine.'] }],
+  abschnitte: [{ titel: 'Constructeur et constitution de la flotte', p: ['La SAAS a fourni l’équipement électrique, Breda (201–204) et SLM (205–208) la partie mécanique. Les huit locomotives ont été construites de 1926 à 1943. L’Ae 6/8 205 a été exposée à l’Exposition nationale de 1939 à Zurich et appartient aujourd’hui à la Fondation BLS.'] }, { titel: 'Utilisation et technique', p: ['Les Ae 6/8 tiraient de lourds trains sur la ligne du Lötschberg et étaient à leur construction la locomotive la plus puissante du monde. Elles développent 4415 kW et roulent jusqu’à 100 km/h.'] }, { titel: 'Équipement et accessibilité', liste: ['Six essieux moteurs, disposition (1’Co)(Co1’)', 'Pas de compartiment voyageurs'] }, { titel: 'Deux séries', p: ['Les numéros 201–204 ont été construits de 1926 à 1931 encore comme Be 6/8, les 205–208 de 1939 à 1943 directement comme Ae 6/8 pour 100 km/h. En 1939, les quatre premières ont aussi reçu de nouvelles transmissions pour les trains rapides en plaine.'] }],
   bilder: ['Ae 6/8 205 près d’Ausserberg, 100 ans du Lötschberg']
 });
 uebZug('bls-ae-8-8', {
@@ -178,7 +164,7 @@ uebZug('bls-ae-8-8', {
   text: ['L’Ae 8/8 se compose en principe de deux Ae 4/4 accouplées en permanence. Le BLS l’a acquise dès 1956, car de plus en plus de lourds trains avaient besoin d’une locomotive de renfort sur la ligne du Lötschberg.', 'On la surnomme «Muni», le taureau.'],
   kennzahlen: [['6475 kW', 'puissance'], ['160 t', 'poids'], ['125 km/h', 'vitesse maximale'], ['1959', 'première mise en service']],
   daten: { 'Bauart': 'double locomotive Bo’Bo’+Bo’Bo’', 'Betreiber': 'BLS, aujourd’hui Fondation BLS', 'Erhalten': 'Ae 8/8 273 et 275' },
-  abschnitte: [{ titel: 'Aujourd’hui', p: ['Les Ae 8/8 ont été mises en service entre 1959 et 1966. L’une des dernières tâches de la 273 a été de remorquer les trains de déblais du tunnel de base du Lötschberg.', 'La Fondation BLS récolte des fonds pour remettre la 273 en état de marche. L’avenir de la 275 est incertain en raison de son état.'] }],
+  abschnitte: [{ titel: 'Constructeur et constitution de la flotte', p: ['Le BLS a acquis les doubles locomotives dès 1956 ; elles ont été mises en service entre 1959 et 1966. Les 273 et 275 sont conservées par la Fondation BLS.'] }, { titel: 'Utilisation et technique', p: ['Comme de plus en plus de trains lourds avaient besoin d’une locomotive de renfort sur la ligne du Lötschberg, l’Ae 8/8 se compose en principe de deux Ae 4/4 accouplées de façon permanente. Elle mesure 30,2 m, pèse 160 t, développe 6475 kW et roule jusqu’à 125 km/h.'] }, { titel: 'Équipement et accessibilité', liste: ['Double locomotive de deux moitiés accouplées en permanence (Bo’Bo’+Bo’Bo’)', 'Pas de compartiment voyageurs'] }, { titel: 'Aujourd’hui', p: ['Les Ae 8/8 ont été mises en service entre 1959 et 1966. L’une des dernières tâches de la 273 a été de remorquer les trains de déblais du tunnel de base du Lötschberg.', 'La Fondation BLS récolte des fonds pour remettre la 273 en état de marche. L’avenir de la 275 est incertain en raison de son état.'] }],
   bilder: ['Ae 8/8 274']
 });
 uebZug('bls-be-5-7', {
@@ -186,7 +172,7 @@ uebZug('bls-be-5-7', {
   text: ['En 1913, la Be 5/7 a été la première locomotive de série pour le Lötschberg électrique. Elle était conçue comme locomotive universelle pour trains rapides et marchandises.', 'Après l’arrivée des Ae 4/4, elle a surtout remorqué des trains de marchandises.'],
   kennzahlen: [['13', 'construites'], ['1913', 'première mise en service'], ['1840 kW', 'puissance unihoraire'], ['75 km/h', 'vitesse maximale']],
   daten: { 'Bauart': 'locomotive électrique 1’E1’', 'Hersteller': 'SLM, MFO et BBC', 'Leistung': '1840 kW (puissance unihoraire)', 'Höchstgeschwindigkeit': '75 km/h, locomotives ultérieures 80 km/h', 'Erhalten': 'une locomotive au Musée suisse des transports' },
-  abschnitte: [{ titel: 'Au Musée des transports', p: ['Depuis 1959, la locomotive 161 (à l’origine 155) se trouve au Musée suisse des transports à Lucerne. Elle y porte le numéro 151.'] }],
+  abschnitte: [{ titel: 'Constructeur et constitution de la flotte', p: ['SLM, MFO et BBC ont construit les locomotives numérotées 151–163 ; la première est entrée en service en 1913. Les locomotives plus récentes roulaient à 80 au lieu de 75 km/h.'] }, { titel: 'Utilisation et technique', p: ['La Be 5/7 a été la première locomotive de série du Lötschberg électrique, prévue comme locomotive universelle pour trains rapides et marchandises. Après l’arrivée des Ae 4/4, elle a surtout tiré des trains marchandises. Elle développe 1840 kW.'] }, { titel: 'Équipement et accessibilité', liste: ['Cinq essieux moteurs, disposition 1’E1’', 'Pas de compartiment voyageurs'] }, { titel: 'Au Musée des transports', p: ['Depuis 1959, la locomotive 161 (à l’origine 155) se trouve au Musée suisse des transports à Lucerne. Elle y porte le numéro 151.'] }],
   bilder: ['Be 5/7 portant le numéro 151']
 });
 uebZug('bls-ce-6-6', {
@@ -194,7 +180,7 @@ uebZug('bls-ce-6-6', {
   text: ['La Ce 6/6 121 était une locomotive électrique unique, construite en 1910 comme F 2×3/3, puis appelée Fc 2×3/3 et enfin Ce 6/6.', 'Elle a circulé jusqu’en 1968, surtout avec des trains de marchandises sur des lignes plus plates comme Thoune–Interlaken.'],
   kennzahlen: [['1', 'exemplaire'], ['1910', 'construite'], ['1968', 'démolie'], ['1,7 mio de km', 'parcourus']],
   daten: { 'Bauart': 'locomotive électrique à deux bogies moteurs à trois essieux', 'Hersteller': 'MFO et SLM', 'Leistung': '2 × 1000 ch (puissance unihoraire)', 'Höchstgeschwindigkeit': '70 km/h, plus tard 60 km/h', 'Verbleib': 'démolie en 1968, un bogie au Musée des transports' },
-  abschnitte: [{ titel: 'Longtemps en service', p: ['Dès 1928, la locomotive a remorqué des trains de marchandises pour le chemin de fer Berne–Neuchâtel. Elle a été démolie le 10 juillet 1968 après 57 ans. Un bogie est exposé au Musée des transports de Lucerne.'] }],
+  abschnitte: [{ titel: 'Constructeur et constitution de la flotte', p: ['MFO et SLM ont construit en 1910 l’unique locomotive 121. Elle s’est d’abord appelée F 2×3/3, puis Fc 2×3/3 et enfin Ce 6/6.'] }, { titel: 'Utilisation et technique', p: ['La locomotive tirait surtout des trains marchandises sur des lignes plus plates comme Thoune–Interlaken, dès 1928 sur le Berne–Neuchâtel. Deux châssis moteurs développaient chacun 1000 ch ; la vitesse maximale a ensuite été réduite de 70 à 60 km/h.'] }, { titel: 'Équipement et accessibilité', liste: ['Deux châssis moteurs à trois essieux', 'Pas de compartiment voyageurs'] }, { titel: 'Longtemps en service', p: ['Dès 1928, la locomotive a remorqué des trains de marchandises pour le chemin de fer Berne–Neuchâtel. Elle a été démolie le 10 juillet 1968 après 57 ans. Un bogie est exposé au Musée des transports de Lucerne.'] }],
   bilder: ['Fc 2×3/3 121, la future Ce 6/6 121']
 });
 uebZug('bls-ce-4-6', {
@@ -202,7 +188,7 @@ uebZug('bls-ce-4-6', {
   text: ['La Ce 4/6 doit son surnom de «Dekretsmühle» au gouvernement bernois, qui a ordonné par décret en 1918 l’électrification des lignes secondaires pour faire face à la pénurie de charbon après la Première Guerre mondiale.', 'La Ce 4/6 307 de l’ancien chemin de fer Erlenbach–Zweisimmen se trouve aujourd’hui au dépôt de Berthoud.'],
   kennzahlen: [['17', 'locomotives 301–317'], ['1920', 'année de construction de la 307'], ['993 kW', 'puissance'], ['65 km/h', 'vitesse maximale']],
   daten: { 'Bauart': 'locomotive électrique à bielles', 'Betreiber': 'groupe BLS, aujourd’hui Fondation BLS', 'Erhalten': 'Ce 4/6 307, hors service' },
-  abschnitte: [{ titel: 'Construction légère', p: ['Comme les locomotives devaient surtout circuler sur des lignes secondaires, leur charge par essieu ne devait pas dépasser 12 tonnes. Les 308–317 ont été transformées en Ce 4/4 en 1954–1956.', 'La 307 est un véhicule historique du BLS depuis 1999 et appartient à la Fondation BLS depuis 2023.'] }],
+  abschnitte: [{ titel: 'Constructeur et constitution de la flotte', p: ['Dès 1920, le groupe BLS a reçu les locomotives 301–317. Les 308–317 ont été transformées en Ce 4/4 en 1954–1956. La Ce 4/6 307 de l’ancien Erlenbach–Zweisimmen appartient à la Fondation BLS depuis 2023.'] }, { titel: 'Utilisation et technique', p: ['Les locomotives circulaient surtout sur des lignes secondaires électrifiées après le décret du gouvernement bernois de 1918. Elles développent 993 kW et roulent jusqu’à 65 km/h.'] }, { titel: 'Équipement et accessibilité', liste: ['Entraînement par bielles', 'Charge par essieu maximale de 12 t pour les lignes secondaires', 'Pas de compartiment voyageurs'] }, { titel: 'Construction légère', p: ['Comme les locomotives devaient surtout circuler sur des lignes secondaires, leur charge par essieu ne devait pas dépasser 12 tonnes. Les 308–317 ont été transformées en Ce 4/4 en 1954–1956.', 'La 307 est un véhicule historique du BLS depuis 1999 et appartient à la Fondation BLS depuis 2023.'] }],
   bilder: ['Ce 4/6 307 «Dekretsmühle»']
 });
 uebZug('bls-ce-4-4', {
@@ -210,7 +196,7 @@ uebZug('bls-ce-4-4', {
   text: ['Les Ce 4/4 sont nées en 1954–1956 des Ce 4/6 308–317 : les avant-corps et les essieux porteurs ont été supprimés. Le poids adhérent et l’effort de traction ont ainsi augmenté, bien que la locomotive soit devenue plus légère.', 'La Ce 4/4 312 est aujourd’hui une pièce de musée au dépôt de Berthoud.'],
   kennzahlen: [['1920', 'construite'], ['1957', 'transformation de la 312'], ['993 kW', 'puissance'], ['65 km/h', 'vitesse maximale']],
   daten: { 'Bauart': 'locomotive électrique', 'Betreiber': 'groupe BLS, aujourd’hui Fondation BLS', 'Fahrzeugnummern': '312 (anciennement GBS)', 'Erhalten': 'Ce 4/4 312, hors service' },
-  abschnitte: [{ p: ['Avec sa caisse repeinte, la 312 est un véhicule historique du BLS depuis 2013 et appartient à la Fondation BLS depuis 2023. Elle peut être visitée lors de visites guidées.'] }]
+  abschnitte: [{ titel: 'Constructeur et constitution de la flotte', p: ['Les Ce 4/4 sont nées en 1954–1956 des Ce 4/6 308–317 construites dès 1920. La 312, autrefois au GBS, est un véhicule historique depuis 2013 avec une caisse repeinte et appartient à la Fondation BLS depuis 2023. Elle peut être visitée lors de visites guidées au dépôt de Burgdorf.'] }, { titel: 'Utilisation et technique', p: ['Lors de la transformation, les capots et les essieux porteurs ont été enlevés. Le poids adhérent et l’effort de traction ont ainsi augmenté, bien que la locomotive soit devenue plus légère. Elle développe 993 kW et roule jusqu’à 65 km/h.'] }, { titel: 'Équipement et accessibilité', liste: ['Quatre essieux moteurs', '12,34 m de long, 64 t', 'Pas de compartiment voyageurs'] }]
 });
 uebZug('bls-bcfe-4-6', {
   beiname: 'Flèche bleue',
@@ -218,7 +204,7 @@ uebZug('bls-bcfe-4-6', {
   text: ['La «Flèche bleue» de 1938 est, avec la Flèche rouge des CFF, l’un des classiques du rail suisse. Ses grandes fenêtres offrent une vue presque panoramique.', 'La BCFe 4/6 736 est en état de marche et peut être louée pour des excursions.'],
   kennzahlen: [['1938', 'construite'], ['136', 'places'], ['110 km/h', 'vitesse maximale'], ['41,5 m', 'longueur']],
   daten: { 'Bauart': 'automotrice double électrique', 'Hersteller': 'Sécheron (électricité), SIG (mécanique)', 'Betreiber': 'groupe BLS, aujourd’hui BLS Historic', 'Fahrzeugnummern': '736 (anciennement BCFZe 4/6 du BN)' },
-  abschnitte: [{ titel: 'Histoire', p: ['En 1935, le BLS a introduit des automotrices légères à une caisse. L’essai ayant réussi, il a commandé trois automotrices doubles BCFZe 4/6, livrées à l’été 1938. La 731 était exposée à l’Exposition nationale de 1939.', 'Pendant des décennies, ces trois trains ont assuré le trafic voyageurs du groupe BLS, jusqu’à leur vente en 1983. La 736 du chemin de fer Berne–Neuchâtel est conservée.'] }],
+  abschnitte: [{ titel: 'Constructeur et constitution de la flotte', p: ['En 1935, le BLS a introduit des automotrices légères à une caisse. L’essai ayant réussi, il a commandé trois automotrices doubles BCFZe 4/6, livrées à l’été 1938. La 731 était exposée à l’Exposition nationale de 1939.', 'Pendant des décennies, ces trois trains ont assuré le trafic voyageurs du groupe BLS, jusqu’à leur vente en 1983. La 736 du chemin de fer Berne–Neuchâtel est conservée.'] }, { titel: 'Utilisation et technique', p: ['Pendant des décennies, les automotrices doubles ont assuré le trafic voyageurs du groupe BLS. Une rame mesure 41,5 m, développe 710 kW et roule jusqu’à 110 km/h. La partie électrique vient de Sécheron, la partie mécanique de SIG.'] }, { titel: 'Équipement et accessibilité', liste: ['136 places assises', 'Grandes fenêtres avec une vue presque panoramique', 'En état de marche, peut être louée pour des excursions'] }],
   bilder: ['BCFe 4/6 736 «Flèche bleue»']
 });
 uebZug('bls-be-4-4-761', {
@@ -226,10 +212,11 @@ uebZug('bls-be-4-4-761', {
   text: ['La «Wellensittich» (perruche) de 1953, aujourd’hui Be 545 761, est considérée comme l’ancêtre des automotrices à grande puissance. Avec 2000 ch, elle pouvait même remorquer des trains internationaux Berne–Paris entre Berne et Neuchâtel.', 'Depuis 2001, elle porte à nouveau sa livrée d’origine vert clair et vert foncé et circule pour des courses spéciales.'],
   kennzahlen: [['1953', 'construite'], ['1470 kW', 'puissance'], ['125 km/h', 'vitesse maximale'], ['56', 'places assises']],
   daten: { 'Bauart': 'automotrice électrique', 'Frühere Bezeichnung': 'Ce 4/4, puis Be 4/4 761', 'Betreiber': 'BN, aujourd’hui BLS Historic', 'Fahrzeugnummern': '761–763 (conservée : 761)' },
-  abschnitte: [{ p: ['Les 761 et 762 sont arrivées au chemin de fer Berne–Neuchâtel en 1953, la 763 au GBS en 1956. La 761 fait partie des véhicules historiques du BLS depuis 2003 et a été entièrement rénovée à l’intérieur en 2010.'] }],
+  abschnitte: [{ titel: 'Constructeur et constitution de la flotte', p: ['Les 761 et 762 sont arrivées en 1953 au Berne–Neuchâtel, la 763 en 1956 au GBS. La 761 s’appelle aujourd’hui Be 545 761 et fait partie des véhicules historiques du BLS depuis 2003.'] }, { titel: 'Utilisation et technique', p: ['Avec 2000 ch (1470 kW), l’automotrice pouvait même tirer des trains internationaux Berne–Paris entre Berne et Neuchâtel. Elle roule jusqu’à 125 km/h.'] }, { titel: 'Équipement et accessibilité', liste: ['56 places assises', 'Intérieur entièrement rénové en 2010', 'De nouveau dans sa livrée d’origine vert clair et vert foncé depuis 2001'] }],
   bilder: ['Be 4/4 761 «Wellensittich» à Frutigen']
 });
 uebZug('bls-ce-2-4', {
+  abschnitte: [{ titel: 'Constructeur et constitution de la flotte', p: ['En 1935, le groupe BLS a introduit des automotrices légères à une caisse, dont les Ce 2/4 727 et 787. Les données conservées sur ces automotrices sont rares ; les sources utilisées n’indiquent pas les constructeurs.'] }, { titel: 'Utilisation et technique', p: ['Les automotrices étaient un essai de véhicules électriques légers. Comme il a réussi, les automotrices doubles « Flèche bleue » ont suivi en 1938.'] }, { titel: 'Équipement et accessibilité', p: ['Aucune information fiable sur l’équipement n’est publiée. La lettre C désigne les places de l’ancienne 3e classe.'] }],
   typ: 'Automotrice légère de 1935 (historique)',
   text: ['En 1935, le groupe BLS a introduit des automotrices légères à une caisse, dont les Ce 2/4 727 et 787. L’essai ayant réussi, les automotrices doubles «Flèche bleue» ont suivi en 1938.', 'Les données conservées sur ces automotrices sont rares.'],
   kennzahlen: [['1935', 'construites'], ['727, 787', 'numéros'], ['1', 'caisse'], ['BLS', 'groupe']],
@@ -237,6 +224,7 @@ uebZug('bls-ce-2-4', {
   bilder: ['Ce 2/4 787']
 });
 uebZug('bls-abde-4-8', {
+  abschnitte: [{ titel: 'Constructeur et constitution de la flotte', p: ['SIG et SAAS, puis aussi BBC, ont construit les automotrices doubles 741–755 pour le BLS, le SEZ, le GBS et le BN. La première a circulé en 1945. Seule l’ancienne 742 est conservée, par le groupe du musée ferroviaire Kerzers-Kallnach.'] }, { titel: 'Utilisation et technique', p: ['Les rames assuraient le trafic régional du groupe BLS, par exemple dans le Simmental, entre Spiez et Interlaken et dans le Gürbetal, souvent en navette avec voiture-pilote. Les premières (741–743) développaient 706 kW, les suivantes 1177 kW ; la vitesse maximale est passée de 110 à 125 km/h.'] }, { titel: 'Équipement et accessibilité', liste: ['Automotrice double d’env. 47 m', 'Compartiment à bagages (lettre D)', 'Accès surélevés avec marches'] }],
   typ: 'Automotrice double électrique pour le trafic régional (historique)',
   text: ['Dès 1945, les automotrices doubles ABDe 4/8 ont circulé en trafic régional dans le groupe BLS, par exemple dans le Simmental, entre Spiez et Interlaken et dans le Gürbetal. Beaucoup roulaient en rame réversible avec voiture-pilote.', 'Un seul train est conservé : l’ancienne 742, aujourd’hui chez le groupe du musée ferroviaire de Kerzers-Kallnach.'],
   kennzahlen: [['13', 'trains 1945–1964'], ['125 km/h', 'vitesse maximale'], ['1177 kW', 'puissance des trains ultérieurs'], ['2003', 'derniers retirés']],
@@ -244,6 +232,7 @@ uebZug('bls-abde-4-8', {
   bilder: ['ABDe 4/8 741']
 });
 uebZug('bls-rbde-565', {
+  abschnitte: [{ titel: 'Constructeur et constitution de la flotte', p: ['SIG, SWS, SWP, BBC et ABB ont construit 22 automotrices numérotées 721–742 ; la première est entrée en service en 1982.'] }, { titel: 'Utilisation et technique', p: ['Les automotrices circulaient avec voitures intermédiaires et voitures-pilotes dans le trafic régional et S-Bahn du BLS. Elles développent 1650 kW en continu et roulent jusqu’à 125 km/h. De 2022 à 2025, elles ont été remplacées par les MIKA.'] }, { titel: 'Équipement et accessibilité', liste: ['Rame réversible avec voitures intermédiaires et voiture-pilote', 'Compartiment à bagages dans l’automotrice (lettre D)', 'Accès surélevés dans l’automotrice'] }],
   typ: 'Rame réversible régionale des chemins de fer privés (historique)',
   text: ['Les RBDe 565 étaient les rames réversibles régionales du BLS. Elles circulaient avec voitures intermédiaires et voitures-pilotes en trafic régional et RER.', 'De 2022 à 2025, elles ont été remplacées par les nouvelles MIKA.'],
   kennzahlen: [['22', 'automotrices'], ['125 km/h', 'vitesse maximale'], ['1650 kW', 'puissance continue'], ['1982', 'première mise en service']],
@@ -251,6 +240,7 @@ uebZug('bls-rbde-565', {
   bilder: ['RBDe 565 726 à Laupen (2019)']
 });
 uebZug('bls-rbde-566', {
+  abschnitte: [{ titel: 'Constructeur et constitution de la flotte', p: ['Les 13 automotrices 230–242 ont été construites en 1984–1985 pour le groupe EBT et sont arrivées au BLS avec la fusion de 2006. La 566 241 est conservée avec des voitures par l’association Pendelzug Mirage.'] }, { titel: 'Utilisation et technique', p: ['Les rames circulaient notamment sur Spiez–Frutigen, Brigue–Goppenstein, dans le S-Bahn de Berne et entre Thoune et Soleure. La dernière course régulière a eu lieu le 6 décembre 2024.'] }, { titel: 'Équipement et accessibilité', liste: ['Automotrice pour rames réversibles avec voitures intermédiaires et voiture-pilote', 'Compartiment à bagages (lettre D)', 'Accès surélevés dans l’automotrice'] }],
   typ: 'Rame réversible régionale de l’ancien parc RM (historique)',
   text: ['Les RBDe 566 II ont été construites en 1984–1985 pour le groupe EBT et sont arrivées au BLS avec la fusion de 2006. Elles circulaient notamment entre Spiez et Frutigen, Brigue et Goppenstein, sur le RER bernois et entre Thoune et Soleure.', 'La dernière course régulière a eu lieu le 6 décembre 2024.'],
   kennzahlen: [['13', 'automotrices'], ['1984', 'première mise en service'], ['2024', 'dernière course'], ['230–242', 'numéros']],
@@ -258,6 +248,7 @@ uebZug('bls-rbde-566', {
   bilder: ['RBDe 566 238 avec AB et ABt (2020)']
 });
 uebZug('bls-rabe-526', {
+  abschnitte: [{ titel: 'Constructeur et constitution de la flotte', p: ['Stadler a construit les 13 automotrices articulées GTW pour le Regionalverkehr Mittelland (RM). Avec la fusion, elles sont passées au BLS.'] }, { titel: 'Utilisation et technique', p: ['En 2013, le BLS a vendu les rames aux CFF, qui les ont utilisées dans le Jura au départ de Bienne ; en 2018, elles sont allées à Thurbo. Aujourd’hui, elles ne circulent plus au BLS.'] }, { titel: 'Équipement et accessibilité', liste: ['Automotrice articulée électrique de la famille Stadler GTW', 'Partiellement à plancher surbaissé'] }],
   typ: 'Automotrice articulée Stadler de l’ancien parc RM (anciennement BLS)',
   text: ['Les GTW rouges du Regionalverkehr Mittelland sont arrivés au BLS avec la fusion. En 2013, le BLS les a vendus aux CFF, qui les ont utilisés dans le Jura depuis Bienne ; en 2018, ils sont partis chez Thurbo.', 'Ils ne circulent plus au BLS.'],
   kennzahlen: [['13', 'rames'], ['2013', 'aux CFF'], ['2018', 'à Thurbo'], ['Stadler', 'constructeur']],
@@ -265,6 +256,7 @@ uebZug('bls-rabe-526', {
   bilder: ['GTW RABe 526 265 du BLS']
 });
 uebZug('bls-ew-iii', {
+  abschnitte: [{ titel: 'Constructeur et constitution de la flotte', p: ['Le BLS a exploité les rames réversibles de voitures unifiées III de 1973 à fin 2021. Une rame se composait d’une locomotive et de six voitures : AD/ABS, A, B, B, B et voiture-pilote Bt. CFF Historic a repris une rame et la conserve.'] }, { titel: 'Utilisation et technique', p: ['En dernier, les rames circulaient surtout comme RegioExpress Berne–Neuchâtel, tirées par une Re 465, le train Kambly par une Re 420. Une rame mesure 165 m, pèse 263 t et roule jusqu’à 140 km/h. Les MIKA les ont remplacées.'] }, { titel: 'Équipement et accessibilité', liste: ['63 places en 1re et 280 en 2e classe', 'Voiture-pilote Bt pour la navette', 'Accès surélevés avec marches'] }],
   name: 'EW III', beiname: 'Rame réversible',
   typ: 'Rame réversible avec voitures unifiées III (historique)',
   text: ['Les rames réversibles EW III du BLS ont circulé de 1973 à fin 2021, en dernier lieu surtout comme RegioExpress entre Berne et Neuchâtel. Elles ont cédé la place aux nouvelles MIKA.', 'CFF Historic a repris une rame EW III et la conserve.'],
@@ -273,6 +265,7 @@ uebZug('bls-ew-iii', {
   bilder: ['Rame réversible EW III du BLS à Malters']
 });
 uebZug('bls-re-420', {
+  abschnitte: [{ titel: 'Constructeur et constitution de la flotte', p: ['Le BLS a possédé un temps ses propres Re 420 de la famille Re 4/4 II. Aujourd’hui, il n’a plus de locomotives de ce type.'] }, { titel: 'Utilisation et technique', p: ['Les trois dernières tiraient les voitures de la GoldenPass Line entre Interlaken Ost et Zweisimmen. La locomotive mesure 14,8 m, pèse 80 t, développe 4700 kW et roule jusqu’à 140 km/h.'] }, { titel: 'Équipement et accessibilité', liste: ['Deux cabines de conduite', 'Pas de compartiment voyageurs'], p: ['L’accessibilité dépendait des voitures tirées.'] }],
   typ: 'Re 4/4 II au service du BLS (historique)',
   text: ['Le BLS a possédé pendant un temps ses propres Re 420 de la famille éprouvée des Re 4/4 II. Les trois dernières remorquaient les voitures de la GoldenPass Line entre Interlaken Ost et Zweisimmen.', 'Aujourd’hui, le BLS ne possède plus de locomotives de ce type.'],
   kennzahlen: [['4700 kW', 'puissance'], ['140 km/h', 'vitesse maximale'], ['80 t', 'poids'], ['14,8 m', 'longueur']],
@@ -355,18 +348,21 @@ uebZug('tpf-funiculaire', {
   bilder: ['Funiculaire Neuveville–St-Pierre à Fribourg (2024)']
 });
 uebZug('tpf-tm-87', {
+  abschnitte: [{ titel: 'Constructeur et constitution de la flotte', p: ['Stadler Bussnang et ADtranz ont construit le tracteur ; il est entré en service en 2000. Les TPF l’exploitent sous le numéro 87 sur leur réseau à voie normale.'] }, { titel: 'Utilisation et technique', p: ['Le Tm 87 sert à l’entretien de l’infrastructure, tire des trains lourds et déneige. Un moteur MTU 12V 183 TD13 l’entraîne en diesel-hydraulique ; il développe 550 kW et roule jusqu’à 80 km/h.'] }, { titel: 'Équipement et accessibilité', liste: ['Grue de chargement Palfinger, 1200 kg à 7,2 m', 'Commande à distance', 'Pas de compartiment voyageurs'] }],
   typ: 'Tracteur de service diesel-hydraulique avec grue de chargement',
   text: ['Le Tm 87 est un tracteur de service de la série Tm 234 pour le réseau à voie normale des TPF. Il sert à l’entretien de l’infrastructure, remorque des trains lourds et déblaie la neige.', 'Il possède une grue de chargement et peut être télécommandé.'],
   kennzahlen: [['550 kW', 'puissance'], ['80 km/h', 'vitesse maximale'], ['30 t', 'poids'], ['2000', 'première mise en service']],
   daten: { 'Bauart': 'tracteur diesel-hydraulique avec grue de chargement', 'Gewicht': '30 t à vide', 'Kran': 'Palfinger, 1200 kg à 7,2 m' }
 });
 uebZug('tpf-tmf-17', {
+  abschnitte: [{ titel: 'Constructeur et constitution de la flotte', p: ['Schöma a construit le tracteur à deux essieux 17 ; il est entré en service en 2011.'] }, { titel: 'Utilisation et technique', p: ['Il travaille pour les chantiers sur le réseau à voie métrique des TPF, tire des trains lourds et déneige. Un moteur Deutz à six cylindres développe 330 kW ; le tracteur roule jusqu’à 65 km/h et tire 200 t en palier ou 90 t sur 50 ‰.'] }, { titel: 'Équipement et accessibilité', liste: ['Commande à distance', 'Deux essieux, 8,50 m de long', 'Pas de compartiment voyageurs'] }],
   typ: 'Tracteur diesel pour le réseau à voie métrique',
   text: ['Le Tmf 2/2 17 de Schöma est un tracteur diesel à deux essieux pour le réseau à voie métrique des TPF. Il travaille au service des travaux, remorque des trains lourds et déblaie la neige.', 'Il peut aussi être télécommandé.'],
   kennzahlen: [['330 kW', 'puissance'], ['65 km/h', 'vitesse maximale'], ['28 t', 'poids'], ['2011', 'première mise en service']],
   daten: { 'Bauart': 'tracteur diesel à deux essieux', 'Gewicht': '28 t à vide', 'Motor': 'Deutz, 6 cylindres', 'Anhängelast': '200 t en palier, 90 t à 50 ‰' }
 });
 uebZug('tpf-gem-18', {
+  abschnitte: [{ titel: 'Constructeur et constitution de la flotte', p: ['Stadler Bussnang a construit la locomotive 18 ; elle est entrée en service en 2016.'] }, { titel: 'Utilisation et technique', p: ['Sous la ligne de contact, elle roule à l’électricité avec 700 kW, sinon avec un moteur diesel Mercedes-Benz OM 502 LA de 400 kW. Les TPF l’utilisent pour les chantiers, les trains lourds et le déneigement. Elle roule jusqu’à 80 km/h et tire 300 t en palier ou 120 t sur 50 ‰.'] }, { titel: 'Équipement et accessibilité', liste: ['Cabine pour huit personnes', 'Bimode : électrique et diesel', 'Pas de compartiment pour voyageurs'] }],
   typ: 'Locomotive bimode pour le réseau à voie métrique',
   text: ['La Gem 2/2 18 de Stadler roule à l’électricité sous la caténaire et au diesel ailleurs. Les TPF l’utilisent au service des travaux, pour les trains lourds et le déneigement.', 'La cabine accueille huit personnes.'],
   kennzahlen: [['700 kW', 'électrique'], ['400 kW', 'diesel'], ['80 km/h', 'vitesse maximale'], ['2016', 'première mise en service']],
@@ -374,6 +370,7 @@ uebZug('tpf-gem-18', {
   bilder: ['Gem 2/2 18']
 });
 uebZug('tpf-x-925', {
+  abschnitte: [{ titel: 'Constructeur et constitution de la flotte', p: ['Schindler Waggon Pratteln, MOB-TPF et Nencki ont participé au wagon-grue. Le châssis date de 1972 ; la transformation en wagon-grue est entrée en service en 2016.'] }, { titel: 'Utilisation et technique', p: ['Le wagon-grue travaille sur le réseau à voie métrique des TPF. La plate-forme de la grue peut être déplacée sur le wagon porteur à voie normale Sgjs X113 ; la grue travaille ainsi aussi sur le réseau à voie normale. Le wagon roule jusqu’à 65 km/h.'] }, { titel: 'Équipement et accessibilité', liste: ['Grue radiocommandée Palfinger PKR290, 1500 kg à 14 m', 'Quatre essieux sur deux bogies', 'Pas de compartiment voyageurs'] }],
   name: 'X 925', beiname: 'Wagon-grue',
   typ: 'Wagon-grue pour voie métrique et voie normale',
   text: ['Le wagon-grue X 925 porte une grue Palfinger radiocommandée. Le châssis date de 1972, la transformation en wagon-grue est entrée en service en 2016.', 'La plateforme de la grue peut être transférée sur le wagon porteur à voie normale Sgjs X113. La grue peut ainsi travailler aussi sur le réseau à voie normale des TPF.'],
@@ -386,11 +383,12 @@ uebZug('tpf-retrozug', {
   text: ['Le train rétro des TPF se compose de l’automotrice Be 4/4 116 et de trois voitures de 1930 à 1932. Les TPF l’utilisent pour les trains fondue et d’autres courses spéciales.', 'L’automotrice de 1922 a été entièrement reconstruite à l’identique par les TPF en 1999.'],
   kennzahlen: [['1922', 'automotrice construite'], ['482 kW', 'puissance'], ['65 km/h', 'vitesse maximale'], ['186', 'places']],
   daten: { 'Bauart': 'automotrice avec trois voitures', 'Hersteller': 'SWS (automotrice), SIG (voitures)', 'Länge': '61,58 m (train complet)', 'Höchstgeschwindigkeit': '65 km/h (30 km/h en service)', 'Sitzplätze': '176 en 2e classe, plus 10 strapontins' },
-  abschnitte: [{ titel: 'Les véhicules', tabelle: { kopf: ['Véhicule', 'Année de construction', 'Constructeur'], zeilen: [
+  abschnitte: [{ titel: 'Constructeur et constitution de la flotte', p: ['L’automotrice Be 4/4 116 a été construite par SWS en 1922 et entièrement reconstruite à l’identique par les TPF en 1999. Les trois voitures B 243, Brs 245 et Br 247 ont été construites par SIG de 1930 à 1932.'] }, { titel: 'Utilisation et technique', p: ['Les TPF utilisent le train pour des trains fondue et d’autres courses spéciales sur leur réseau à voie métrique. L’automotrice développe 482 kW ; le train entier mesure 61,58 m et roule jusqu’à 65 km/h, 30 km/h selon l’horaire.'] }, { titel: 'Équipement et accessibilité', liste: ['176 places en 2e classe et 10 strapontins', 'Deux voitures avec partie restaurant (lettre R)', 'Accès surélevés avec marches'] }, { titel: 'Les véhicules', tabelle: { kopf: ['Véhicule', 'Année de construction', 'Constructeur'], zeilen: [
     ['Automotrice Be 4/4 116', '1922 (reconstruite en 1999)', 'SWS'], ['Voiture B 243', '1930', 'SIG'], ['Voiture Brs 245', '1931', 'SIG'], ['Voiture Br 247', '1932', 'SIG']] } }],
   bilder: ['Train rétro des TPF', 'Be 4/4 116 à Bulle (2011)', 'Intérieur du train rétro']
 });
 uebZug('gfm-be-111', {
+  abschnitte: [{ titel: 'Constructeur et constitution de la flotte', p: ['L’automotrice 111 date de 1903 ; les sources utilisées n’indiquent pas de constructeur. Elle fait aujourd’hui partie de la collection de GFM Historique. De 2006 à 2011, elle était prêtée au chemin de fer-musée Blonay–Chamby.'] }, { titel: 'Utilisation et technique', p: ['Elle a circulé aux débuts des chemins de fer électriques en Gruyère, sur le réseau à voie métrique de la CEG puis des GFM.'] }, { titel: 'Équipement et accessibilité', p: ['Aucun détail fiable sur l’équipement n’est publié. Comme tous les véhicules de cette époque, elle a des accès hauts avec marches.'] }],
   typ: 'Automotrice électrique de 1903 (historique)',
   text: ['L’automotrice 111 de 1903 date des débuts des chemins de fer électriques en Gruyère. Elle fait aujourd’hui partie de la collection de GFM Historique.', 'De 2006 à 2011, elle a été prêtée au chemin de fer-musée Blonay–Chamby.'],
   kennzahlen: [['1903', 'construite'], ['111', 'numéro'], ['voie métrique', 'écartement'], ['GFM Historique', 'aujourd’hui']],
@@ -399,6 +397,7 @@ uebZug('gfm-be-111', {
   bilder: ['Automotrice 111 au chemin de fer-musée Blonay–Chamby']
 });
 uebZug('gfm-be-115', {
+  abschnitte: [{ titel: 'Constructeur et constitution de la flotte', p: ['L’automotrice 115 date de 1905 ; les sources utilisées n’indiquent pas de constructeur. Elle a été démolie en octobre 2016.'] }, { titel: 'Utilisation et technique', p: ['Elle a longtemps circulé comme automotrice nostalgique sur le réseau à voie métrique des GFM puis des TPF.'] }, { titel: 'Équipement et accessibilité', p: ['Aucun détail fiable sur l’équipement n’est publié. Comme tous les véhicules de cette époque, elle avait des accès hauts avec marches.'] }],
   typ: 'Automotrice nostalgique de 1905 (historique)',
   text: ['La Be 4/4 115 de 1905 a longtemps circulé comme automotrice nostalgique sur le réseau à voie métrique des GFM, puis des TPF.', 'Elle a été démolie en octobre 2016.'],
   kennzahlen: [['1905', 'construite'], ['2016', 'démolie'], ['115', 'numéro'], ['voie métrique', 'écartement']],
@@ -406,12 +405,14 @@ uebZug('gfm-be-115', {
   bilder: ['Be 4/4 115 à Bulle (1995)', 'Be 4/4 115 avec Bt 254 à Broc-Fabrique (2011)']
 });
 uebZug('gfm-be-131', {
+  abschnitte: [{ titel: 'Constructeur et constitution de la flotte', p: ['Les trois automotrices 131–133 ont été construites en 1943 pour les GFM. La 132 a été démolie en 1989, la 133 en 2003 ; la 131 est conservée comme Ce 4/4 131 par GFM Historique.'] }, { titel: 'Utilisation et technique', p: ['Les automotrices circulaient sur le réseau à voie métrique des GFM.'] }, { titel: 'Équipement et accessibilité', p: ['Aucun détail fiable sur l’équipement n’est publié. Comme tous les véhicules de cette époque, elles ont des accès hauts avec marches.'] }],
   typ: 'Automotrices électriques de 1943 (historique)',
   text: ['Les trois automotrices 131 à 133 ont été construites en 1943 pour le réseau à voie métrique des GFM.', 'La 132 a été démolie en 1989 et la 133 en 2003. La 131 est conservée et fait partie de la collection de GFM Historique sous le nom de Ce 4/4 131.'],
   kennzahlen: [['3', 'automotrices'], ['1943', 'construites'], ['131', 'conservée'], ['voie métrique', 'écartement']],
   daten: { 'Bauart': 'automotrice électrique', 'Verbleib': '131 conservée, 132 démolie en 1989, 133 démolie en 2003' }
 });
 uebZug('gfm-bde-141', {
+  abschnitte: [{ titel: 'Constructeur et constitution de la flotte', p: ['SWP a construit la partie mécanique, SAAS la partie électrique ; les deux automotrices 141 et 142 sont arrivées en 1972. La 141 est allée à GFM Historique en 2017, la 142 a été démolie en avril 2017.'] }, { titel: 'Utilisation et technique', p: ['D’abord, les automotrices tiraient des trains de gravier. Dès 1981, elles avaient un compartiment avec des places assises et circulaient aussi avec les voitures-pilotes 251–256. Elles pèsent 36,5 t et roulent jusqu’à 70 km/h.'] }, { titel: 'Équipement et accessibilité', liste: ['40 places assises dès 1981', 'Compartiment à bagages (lettre D)', 'Accès surélevés avec marches'] }],
   typ: 'Automotrices pour trains de gravier de 1972 (historique)',
   text: ['Les deux puissantes automotrices de 1972 ont d’abord été construites pour les trains de gravier. Dès 1981, elles ont reçu un compartiment avec places assises et ont aussi circulé avec les voitures-pilotes 251–256.', 'La 141 est allée à GFM Historique en 2017, la 142 a été démolie en avril 2017.'],
   kennzahlen: [['2', 'automotrices'], ['1972', 'construites'], ['70 km/h', 'vitesse maximale'], ['36,5 t', 'poids']],
@@ -419,6 +420,7 @@ uebZug('gfm-bde-141', {
   bilder: ['BDe 4/4 141 avec voiture-pilote', 'BDe 4/4 142 à Bulle (2014)', 'BDe 4/4 142 à Bulle']
 });
 uebZug('gfm-be-151', {
+  abschnitte: [{ titel: 'Constructeur et constitution de la flotte', p: ['Les automotrices 151 et 152 sont arrivées en 1977. Les deux ont été démolies en avril 2017.'] }, { titel: 'Utilisation et technique', p: ['Elles n’avaient qu’une cabine de conduite et circulaient donc toujours en navette avec l’une des voitures-pilotes 251–256 sur le réseau à voie métrique des GFM et des TPF.'] }, { titel: 'Équipement et accessibilité', liste: ['Une cabine de conduite', 'Toujours avec voiture-pilote', 'Accès surélevés avec marches'] }],
   typ: 'Automotrices pour rames réversibles de 1977 (historique)',
   text: ['Les automotrices 151 et 152 de 1977 n’avaient qu’une seule cabine de conduite. Elles circulaient donc toujours avec l’une des voitures-pilotes 251–256.', 'Les deux ont été démolies en avril 2017.'],
   kennzahlen: [['2', 'automotrices'], ['1977', 'construites'], ['1', 'cabine de conduite'], ['2017', 'démolies']],
@@ -426,6 +428,7 @@ uebZug('gfm-be-151', {
   bilder: ['Be 4/4 151 avec la voiture-pilote Bt 256', 'Be 4/4 152 à Montbovon (1995)']
 });
 uebZug('gfm-gde-101', {
+  abschnitte: [{ titel: 'Constructeur et constitution de la flotte', p: ['SLM et BBC ont construit la locomotive 101 « Ville de Bulle » ; elle est entrée en service en 1983. Elle a ensuite été vendue au Montreux–Oberland bernois ; l’année est indiquée différemment (2007 ou 2017).'] }, { titel: 'Utilisation et technique', p: ['C’était la seule grande locomotive électrique des GFM à voie métrique. Au MOB, elle circule aujourd’hui comme GDe 4/4 6005.'] }, { titel: 'Équipement et accessibilité', liste: ['Deux cabines de conduite', 'Compartiment à bagages (lettre D)', 'Pas de compartiment voyageurs'] }],
   typ: 'Locomotive électrique à voie métrique des GFM (aujourd’hui au MOB)',
   text: ['La GDe 4/4 101 «Ville de Bulle» était la seule grande locomotive électrique à voie métrique des GFM.', 'Elle a été vendue au Montreux–Oberland bernois et y circule comme GDe 4/4 6005.'],
   kennzahlen: [['1983', 'construite'], ['SLM / BBC', 'constructeur'], ['6005', 'numéro actuel au MOB'], ['voie métrique', 'écartement']],
@@ -434,6 +437,7 @@ uebZug('gfm-gde-101', {
   bilder: ['L’ancienne GDe 4/4 101 comme MOB 6005 près de Saanenmöser (2014)']
 });
 uebZug('gfm-te-22', {
+  abschnitte: [{ titel: 'Constructeur et constitution de la flotte', p: ['Les deux tracteurs 11 et 12 datent de 1913 ; l’équipement électrique venait de MFO (11) et d’Alioth (12). Le 12 a été retiré en 2012.'] }, { titel: 'Utilisation et technique', p: ['Ils manœuvraient sur le réseau à voie métrique des GFM : le Te 2/2 11 à Bulle, le Te 2/2 12 à Montbovon.'] }, { titel: 'Équipement et accessibilité', liste: ['Deux essieux', 'Propulsion électrique par la ligne de contact', 'Pas de compartiment voyageurs'] }],
   typ: 'Tracteurs de manœuvre électriques de 1913 (historique)',
   text: ['Les deux petits tracteurs de manœuvre de 1913 manœuvraient sur le réseau à voie métrique des GFM : le Te 2/2 11 à Bulle, le Te 2/2 12 à Montbovon.', 'Le 12 a été retiré en 2012.'],
   kennzahlen: [['2', 'tracteurs'], ['1913', 'construits'], ['Bulle', 'Te 2/2 11'], ['Montbovon', 'Te 2/2 12']],
@@ -442,6 +446,7 @@ uebZug('gfm-te-22', {
   bilder: ['Te 2/2 12 à Montbovon', 'Te 2/2 12 vu de côté']
 });
 uebZug('gfm-te-44', {
+  abschnitte: [{ titel: 'Constructeur et constitution de la flotte', p: ['Les 13 et 14 ont été construits en 1901 comme automotrices avec équipement électrique Alioth et transformés en tracteurs de manœuvre en 1927 et 1933. Le 13 a été retiré en 2017.'] }, { titel: 'Utilisation et technique', p: ['Le 13 manœuvrait à Broc-Fabrique, le 14 tirait des trains de travaux.'] }, { titel: 'Équipement et accessibilité', liste: ['Quatre essieux moteurs', 'Propulsion électrique par la ligne de contact', 'Pas de compartiment voyageurs'] }],
   typ: 'Tracteurs de manœuvre transformés à partir d’automotrices (historique)',
   text: ['Les Te 4/4 13 et 14 ont été construits en 1901 comme automotrices et transformés en tracteurs de manœuvre en 1927 et 1933.', 'Le 13 manœuvrait à Broc-Fabrique, le 14 remorquait des trains de travaux. Le 13 a été retiré en 2017.'],
   kennzahlen: [['2', 'tracteurs'], ['1901', 'construits'], ['1927 / 1933', 'transformés'], ['voie métrique', 'écartement']],
@@ -449,6 +454,7 @@ uebZug('gfm-te-44', {
   bilder: ['Te 4/4 13', 'Te 4/4 14']
 });
 uebZug('gfm-tm-15', {
+  abschnitte: [{ titel: 'Constructeur et constitution de la flotte', p: ['Schöma et Deutz ont construit le tracteur en 1971 ; il a été transformé en 1981.'] }, { titel: 'Utilisation et technique', p: ['Il tirait des trains de travaux et manœuvrait à Bulle.'] }, { titel: 'Équipement et accessibilité', liste: ['Propulsion diesel, indépendante de la ligne de contact', 'Deux essieux', 'Pas de compartiment voyageurs'] }],
   typ: 'Tracteur diesel pour trains de travaux et manœuvres (historique)',
   text: ['Le petit tracteur diesel Tm 2/2 15 a été construit par Schöma en 1971 et transformé en 1981. Il remorquait des trains de travaux et manœuvrait à Bulle.'],
   kennzahlen: [['1971', 'construit'], ['1981', 'transformé'], ['Schöma', 'constructeur'], ['Bulle', 'lieu d’utilisation']],
@@ -456,6 +462,7 @@ uebZug('gfm-tm-15', {
   bilder: ['Tm 2/2 15 à Bulle (2005)']
 });
 uebZug('gfm-abde-24', {
+  abschnitte: [{ titel: 'Constructeur et constitution de la flotte', p: ['Les automotrices sont arrivées en 1931 au Fribourg–Morat–Anet (FMA) et ont ensuite appartenu aux GFM. L’ABDe 2/4 155 a été démolie en 2025 ; ses cabines sont allées à ÖV Historique.'] }, { titel: 'Utilisation et technique', p: ['Elles circulaient sur la ligne à voie normale Fribourg–Morat–Anet, d’abord en courant continu. En 1946, elles ont été transformées pour le courant alternatif 15 kV 16,7 Hz.'] }, { titel: 'Équipement et accessibilité', liste: ['Places en 1re et 2e classe (lettres A et B)', 'Compartiment à bagages (lettre D)', 'Accès surélevés avec marches'] }],
   typ: 'Automotrice du chemin de fer Fribourg–Morat–Anet (historique)',
   text: ['Les ABDe 2/4 sont arrivées en 1931 au chemin de fer Fribourg–Morat–Anet, encore pour le courant continu. En 1946, elles ont été converties au courant alternatif.', 'L’ABDe 2/4 155 a été démolie en 2025 ; ses cabines de conduite sont allées à ÖV Historique.'],
   kennzahlen: [['1931', 'livrée'], ['1946', 'convertie au courant alternatif'], ['155', 'conservée en dernier'], ['voie normale', 'écartement']],
@@ -463,6 +470,7 @@ uebZug('gfm-abde-24', {
   bilder: ['ABDe 2/4 155']
 });
 uebZug('gfm-abde-44', {
+  abschnitte: [{ titel: 'Constructeur et constitution de la flotte', p: ['SIG et BBC ont construit de 1946 à 1948 les automotrices 161–167 ; la 166 était une ABe 4/4. La plupart ont été transformées en 1965. Les 162, 163 et 167 ont été démolies.'] }, { titel: 'Utilisation et technique', p: ['Les automotrices ont modernisé le trafic sur les lignes à voie normale des GFM.'] }, { titel: 'Équipement et accessibilité', liste: ['16 places en 1re et 32 en 2e classe', 'Compartiment à bagages (lettre D), sauf sur la 166', 'Accès surélevés avec marches'] }],
   typ: 'Automotrices à voie normale des GFM (historique)',
   text: ['Les ABDe 4/4 161 à 167 de SIG et BBC ont été construites de 1946 à 1948 et ont modernisé les lignes à voie normale des GFM. La plupart ont été transformées en 1965.', 'Plusieurs automotrices ont depuis été démolies.'],
   kennzahlen: [['1946', 'premières construites'], ['1965', 'transformées'], ['SIG / BBC', 'constructeur'], ['48', 'places (16 + 32)']],
@@ -470,6 +478,7 @@ uebZug('gfm-abde-44', {
   bilder: ['ABDe 4/4 162 à Anet', 'ABDe 4/4 167 à Bulle']
 });
 uebZug('gfm-rbde-567', {
+  abschnitte: [{ titel: 'Constructeur et constitution de la flotte', p: ['Les automotrices 171–173 de SIG, SWS et BBC datent de 1983, les 181–182 de SWP, SIG et ABB de 1991. La 173 est venue du RVT en 1992. Elles ne figurent plus dans l’aperçu actuel de la flotte des TPF ; la 171 a encore été photographiée en 2024.'] }, { titel: 'Utilisation et technique', p: ['Les automotrices font partie de la famille des NPZ des chemins de fer privés et circulaient en navettes sur le réseau à voie normale des GFM et des TPF.'] }, { titel: 'Équipement et accessibilité', liste: ['Automotrice pour rames réversibles avec voiture-pilote', 'Compartiment à bagages (lettre D)', 'Accès surélevés dans l’automotrice'] }],
   typ: 'Anciennes rames réversibles régionales des GFM et des TPF',
   text: ['Les automotrices 171 à 173 de 1983 et 181 à 182 de 1991 font partie de la famille des NPZ des chemins de fer privés. La 173 est venue du RVT en 1992.', 'Elles ne figurent plus dans l’aperçu actuel de la flotte des TPF ; la 171 a encore été photographiée en 2024.'],
   kennzahlen: [['5', 'automotrices'], ['1983', 'premières construites'], ['1991', 'deuxième série'], ['voie normale', 'écartement']],
@@ -477,6 +486,7 @@ uebZug('gfm-rbde-567', {
   bilder: ['Automotrice 182 à Anet (2000)', 'Automotrice 171 (2005)']
 });
 uebZug('gfm-ee-91', {
+  abschnitte: [{ titel: 'Constructeur et constitution de la flotte', p: ['SIG et BBC ont construit la petite locomotive de manœuvre en 1960. Elle a ensuite porté le numéro 217 091.'] }, { titel: 'Utilisation et technique', p: ['Elle manœuvrait sur le réseau à voie normale des GFM, par exemple à Bulle.'] }, { titel: 'Équipement et accessibilité', liste: ['Deux essieux moteurs', 'Propulsion électrique par la ligne de contact', 'Pas de compartiment voyageurs'] }],
   typ: 'Locomotive de manœuvre électrique à voie normale (historique)',
   text: ['La petite locomotive de manœuvre Ee 2/2 91 a été construite en 1960 par SIG et BBC. Elle manœuvrait sur le réseau à voie normale des GFM, par exemple à Bulle, et a plus tard porté le numéro 217 091.'],
   kennzahlen: [['1960', 'construite'], ['SIG / BBC', 'constructeur'], ['217 091', 'numéro ultérieur'], ['voie normale', 'écartement']],
@@ -484,6 +494,7 @@ uebZug('gfm-ee-91', {
   bilder: ['Ee 2/2 91 (217 091) à Bulle (2005)']
 });
 uebZug('gfm-wagen', {
+  abschnitte: [{ titel: 'Constructeur et constitution de la flotte', p: ['Sont conservés la voiture B 235 de 1903 et la voiture-pilote CFt4 273 chez GFM Historique, ainsi que les wagons couverts K 671 et K 672 au chemin de fer-musée Blonay–Chamby. Les sources utilisées n’indiquent pas les constructeurs.'] }, { titel: 'Utilisation et technique', p: ['Les véhicules circulaient sur le réseau à voie métrique de la CEG et des GFM. Aujourd’hui, ils sont confiés à des associations muséales.'] }, { titel: 'Équipement et accessibilité', liste: ['Voiture B 235 de 1903', 'Voiture-pilote CFt4 273 avec compartiment à bagages (lettre F)', 'Wagons couverts K 671 et K 672'] }],
   name: 'Wagons historiques',
   typ: 'Voitures et wagons conservés des GFM',
   text: ['Outre les engins moteurs, des wagons des GFM sont aussi conservés. GFM Historique garde la voiture B 235 de 1903 et la voiture-pilote CFt4 273.', 'Les wagons couverts K 671 et K 672 se trouvent au chemin de fer-musée Blonay–Chamby.'],

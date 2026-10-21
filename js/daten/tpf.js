@@ -112,7 +112,7 @@ ZUEGE.push(
     kennzahlen: [['550 kW', 'Leistung'], ['80 km/h', 'Höchstgeschwindigkeit'], ['30 t', 'Gewicht'], ['2000', 'erster Einsatz']],
     daten: { 'Bauart': 'Dieselhydraulischer Traktor mit Ladekran', 'Hersteller': 'Stadler Bussnang / ADtranz', 'Betreiber': 'TPF', 'Spurweite': 'Normalspur, 1435 mm', 'Fahrzeugnummern': '87', 'Länge': '11,364 m', 'Gewicht': '30 t leer', 'Leistung': '550 kW', 'Höchstgeschwindigkeit': '80 km/h', 'Motor': 'MTU 12V 183 TD13', 'Kran': 'Palfinger, 1200 kg bei 7,2 m', 'In Betrieb seit': '2000' },
     specOrder: ['Bauart', 'Hersteller', 'Betreiber', 'Spurweite', 'Fahrzeugnummern', 'Länge', 'Gewicht', 'Leistung', 'Höchstgeschwindigkeit', 'Motor', 'Kran', 'In Betrieb seit'],
-    abschnitte: [],
+    abschnitte: [{ titel: 'Hersteller und Flottenaufbau', p: ['Stadler Bussnang und ADtranz bauten den Traktor; er ging 2000 in Betrieb. Die TPF führt ihn mit der Nummer 87 auf ihrem Normalspurnetz.'] }, { titel: 'Einsatz und Technik', p: ['Der Tm 87 dient dem Unterhalt der Infrastruktur, zieht schwere Züge und räumt Schnee. Ein MTU-Motor 12V 183 TD13 treibt ihn dieselhydraulisch an; er leistet 550 kW und fährt bis 80 km/h.'] }, { titel: 'Ausstattung und Zugänglichkeit', liste: ['Ladekran von Palfinger, 1200 kg bei 7,2 m Ausladung', 'Fernsteuerung', 'Kein Fahrgastraum'] }],
     quellen: ['TPF – Flotte: Tm 87, technische Daten', 'Datenblatt HCKD «Tm 234 87», Oktober 2026'],
     art: { typ: 'rangier', farbe: YEL, panto: false, kran: true },
     bilder: [] },
@@ -121,7 +121,7 @@ ZUEGE.push(
     kennzahlen: [['330 kW', 'Leistung'], ['65 km/h', 'Höchstgeschwindigkeit'], ['28 t', 'Gewicht'], ['2011', 'erster Einsatz']],
     daten: { 'Bauart': 'Zweiachsiger Dieseltraktor', 'Hersteller': 'Schöma', 'Betreiber': 'TPF', 'Spurweite': 'Meterspur, 1000 mm', 'Fahrzeugnummern': '17', 'Länge': '8,50 m', 'Gewicht': '28 t leer', 'Leistung': '330 kW', 'Höchstgeschwindigkeit': '65 km/h', 'Motor': 'Deutz, 6 Zylinder', 'Anhängelast': '200 t in der Ebene, 90 t bei 50 ‰', 'In Betrieb seit': '2011' },
     specOrder: ['Bauart', 'Hersteller', 'Betreiber', 'Spurweite', 'Fahrzeugnummern', 'Länge', 'Gewicht', 'Leistung', 'Höchstgeschwindigkeit', 'Motor', 'Anhängelast', 'In Betrieb seit'],
-    abschnitte: [],
+    abschnitte: [{ titel: 'Hersteller und Flottenaufbau', p: ['Schöma baute den zweiachsigen Traktor 17; er ging 2011 in Betrieb.'] }, { titel: 'Einsatz und Technik', p: ['Er arbeitet im Baudienst auf dem Meterspurnetz der TPF, zieht schwere Züge und räumt Schnee. Ein Deutz-Sechszylinder leistet 330 kW; der Traktor fährt bis 65 km/h und zieht 200 t in der Ebene oder 90 t bei 50 ‰.'] }, { titel: 'Ausstattung und Zugänglichkeit', liste: ['Fernsteuerung', 'Zwei Achsen, 8,50 m lang', 'Kein Fahrgastraum'] }],
     quellen: ['TPF – Flotte: Tmf 17, technische Daten', 'Datenblatt HCKD «Tmf 2/2 17», Oktober 2026'],
     art: { typ: 'rangier', farbe: YEL, panto: false, klein: true },
     bilder: [] },
@@ -130,7 +130,7 @@ ZUEGE.push(
     kennzahlen: [['700 kW', 'elektrisch'], ['400 kW', 'Diesel'], ['80 km/h', 'Höchstgeschwindigkeit'], ['2016', 'erster Einsatz']],
     daten: { 'Bauart': 'Zweikraftlokomotive (elektrisch und Diesel)', 'Hersteller': 'Stadler Bussnang', 'Betreiber': 'TPF', 'Spurweite': 'Meterspur, 1000 mm', 'Fahrzeugnummern': '18', 'Länge': '8,37 m', 'Gewicht': '28 t leer', 'Leistung': '700 kW elektrisch, 400 kW Diesel', 'Höchstgeschwindigkeit': '80 km/h', 'Motor': 'Mercedes-Benz OM 502 LA', 'Anhängelast': '300 t in der Ebene, 120 t bei 50 ‰', 'In Betrieb seit': '2016' },
     specOrder: ['Bauart', 'Hersteller', 'Betreiber', 'Spurweite', 'Fahrzeugnummern', 'Länge', 'Gewicht', 'Leistung', 'Höchstgeschwindigkeit', 'Motor', 'Anhängelast', 'In Betrieb seit'],
-    abschnitte: [],
+    abschnitte: [{ titel: 'Hersteller und Flottenaufbau', p: ['Stadler Bussnang baute die Lok 18; sie ging 2016 in Betrieb.'] }, { titel: 'Einsatz und Technik', p: ['Unter der Fahrleitung fährt sie elektrisch mit 700 kW, sonst mit einem Dieselmotor Mercedes-Benz OM 502 LA mit 400 kW. Die TPF setzt sie im Baudienst, für schwere Züge und zum Schneeräumen ein. Sie fährt bis 80 km/h und zieht 300 t in der Ebene oder 120 t bei 50 ‰.'] }, { titel: 'Ausstattung und Zugänglichkeit', liste: ['Kabine mit Platz für acht Personen', 'Zweikraftantrieb: elektrisch und Diesel', 'Kein Fahrgastraum für Reisende'] }],
     quellen: ['TPF – Flotte: Gem 18, technische Daten', 'Datenblatt HCKD «Gem 2/2 18», Oktober 2026'],
     art: { typ: 'rangier', farbe: YEL, akzent: '#2E3338', panto: true },
     bilder: [
@@ -141,7 +141,7 @@ ZUEGE.push(
     kennzahlen: [['1500 kg', 'bei 14 m Ausladung'], ['65 km/h', 'Höchstgeschwindigkeit'], ['52 t', 'Gesamtgewicht'], ['2016', 'erster Einsatz']],
     daten: { 'Bauart': 'Vierachsiger Kranwagen 2’2’', 'Hersteller': 'Schindler Waggon Pratteln, MOB-TPF, Nencki', 'Betreiber': 'TPF', 'Spurweite': 'Meterspur, 1000 mm; Kran auch auf Normalspur-Tragwagen Sgjs X113', 'Fahrzeugnummern': 'X 925', 'Länge': '13,776 m', 'Gewicht': '37,825 t leer, 52 t beladen', 'Höchstgeschwindigkeit': '65 km/h', 'Kran': 'Palfinger PKR290, 1500 kg bei 14 m', 'In Betrieb seit': '2016' },
     specOrder: ['Bauart', 'Hersteller', 'Betreiber', 'Spurweite', 'Fahrzeugnummern', 'Länge', 'Gewicht', 'Höchstgeschwindigkeit', 'Kran', 'In Betrieb seit'],
-    abschnitte: [],
+    abschnitte: [{ titel: 'Hersteller und Flottenaufbau', p: ['Am Kranwagen waren Schindler Waggon Pratteln, MOB-TPF und Nencki beteiligt. Das Fahrgestell stammt von 1972, der Umbau zum Kranwagen ging 2016 in Betrieb.'] }, { titel: 'Einsatz und Technik', p: ['Der Kranwagen arbeitet auf dem Meterspurnetz der TPF. Die Kranplattform lässt sich auf den Normalspur-Tragwagen Sgjs X113 umsetzen; so arbeitet der Kran auch auf dem Normalspurnetz. Der Wagen fährt bis 65 km/h.'] }, { titel: 'Ausstattung und Zugänglichkeit', liste: ['Funkferngesteuerter Kran Palfinger PKR290, 1500 kg bei 14 m', 'Vier Achsen in zwei Drehgestellen', 'Kein Fahrgastraum'] }],
     quellen: ['TPF – Flotte: Wagon-grue X925, technische Daten', 'Datenblätter HCKD «X 925 – Kranwagen» und «Sgjs X113», Oktober 2026'],
     art: { typ: 'spezial', var: 'kran', farbe: YEL, akzent: '#2E3338' },
     bilder: [] },
@@ -151,7 +151,7 @@ ZUEGE.push(
     kennzahlen: [['1922', 'Triebwagen gebaut'], ['482 kW', 'Leistung'], ['65 km/h', 'Höchstgeschwindigkeit'], ['186', 'Plätze']],
     daten: { 'Bauart': 'Triebwagen mit drei Wagen', 'Hersteller': 'SWS (Triebwagen), SIG (Wagen)', 'Betreiber': 'TPF', 'Spurweite': 'Meterspur, 1000 mm', 'Fahrzeugnummern': 'Be 4/4 116, B 243, Brs 245, Br 247', 'Länge': '61,58 m (ganzer Zug)', 'Leistung': '482 kW', 'Höchstgeschwindigkeit': '65 km/h (fahrplanmässig 30 km/h)', 'Sitzplätze': '176 in der 2. Klasse, dazu 10 Klappsitze', 'In Betrieb seit': '1922' },
     specOrder: ['Bauart', 'Hersteller', 'Betreiber', 'Spurweite', 'Fahrzeugnummern', 'Länge', 'Leistung', 'Höchstgeschwindigkeit', 'Sitzplätze', 'In Betrieb seit'],
-    abschnitte: [{ titel: 'Die Fahrzeuge', tabelle: { kopf: ['Fahrzeug', 'Baujahr', 'Hersteller'], zeilen: [
+    abschnitte: [{ titel: 'Hersteller und Flottenaufbau', p: ['Der Triebwagen Be 4/4 116 stammt von SWS aus dem Jahr 1922 und wurde 1999 von der TPF vollständig originalgetreu neu aufgebaut. Die drei Wagen B 243, Brs 245 und Br 247 baute SIG von 1930 bis 1932.'] }, { titel: 'Einsatz und Technik', p: ['Die TPF setzt den Zug für Fondue-Züge und andere Sonderfahrten auf ihrem Meterspurnetz ein. Der Triebwagen leistet 482 kW; der ganze Zug ist 61,58 m lang und fährt bis 65 km/h, fahrplanmässig 30 km/h.'] }, { titel: 'Ausstattung und Zugänglichkeit', liste: ['176 Plätze in der 2. Klasse und 10 Klappsitze', 'Zwei Wagen mit Restaurantteil (Buchstabe R)', 'Hochflurige Einstiege mit Stufen'] }, { titel: 'Die Fahrzeuge', tabelle: { kopf: ['Fahrzeug', 'Baujahr', 'Hersteller'], zeilen: [
       ['Triebwagen Be 4/4 116', '1922 (Neuaufbau 1999)', 'SWS'], ['Wagen B 243', '1930', 'SIG'], ['Wagen Brs 245', '1931', 'SIG'], ['Wagen Br 247', '1932', 'SIG']] } }],
     quellen: ['TPF – Flotte: Compositions train rétro, technische Daten', 'Datenblätter HCKD zu Be 4/4 116, B 243, Brs 245 und Br 247, Oktober 2026'],
     art: { typ: 'triebzug', nase: 'kurz', farbe: GFM_CREME, akzent: GFM_BLAU, tuer: GFM_BLAU, panto: true },
@@ -166,7 +166,7 @@ ZUEGE.push(
     daten: { 'Bauart': 'Elektrischer Triebwagen', 'Betreiber': 'CEG/GFM, heute GFM Historique', 'Spurweite': 'Meterspur, 1000 mm', 'Fahrzeugnummern': '111', 'Erhalten': 'GFM Historique', 'In Betrieb seit': '1903' },
     specOrder: ['Bauart', 'Betreiber', 'Spurweite', 'Fahrzeugnummern', 'Erhalten', 'In Betrieb seit'],
     specNote: 'GFM Historique nennt ihn «Be 4/4 111», Wikipedia «BCe 4/4 111».',
-    abschnitte: [],
+    abschnitte: [{ titel: 'Hersteller und Flottenaufbau', p: ['Der Triebwagen 111 stammt von 1903; einen Hersteller nennen die verwendeten Quellen nicht. Heute gehört er zur Sammlung von GFM Historique. Von 2006 bis 2011 war er an die Museumsbahn Blonay–Chamby ausgeliehen.'] }, { titel: 'Einsatz und Technik', p: ['Er fuhr in der Anfangszeit der elektrischen Bahnen in der Gruyère auf dem Meterspurnetz der CEG und später der GFM.'] }, { titel: 'Ausstattung und Zugänglichkeit', p: ['Zur Ausstattung sind keine verlässlichen Einzelangaben veröffentlicht. Wie alle Fahrzeuge dieser Zeit hat er hohe Einstiege mit Stufen.'] }],
     quellen: ['GFM Historique – Sammlung', 'Wikipedia – Chemins de fer fribourgeois Gruyère–Fribourg–Morat', 'Datenblatt HCKD «ABe 4/4 111», Oktober 2026'],
     art: { typ: 'triebzug', nase: 'kurz', farbe: GFM_CREME, akzent: '#3E5A3B', tuer: '#3E5A3B', panto: true },
     bilder: [
@@ -177,7 +177,7 @@ ZUEGE.push(
     kennzahlen: [['1905', 'gebaut'], ['2016', 'abgebrochen'], ['115', 'Nummer'], ['Meterspur', 'Spurweite']],
     daten: { 'Bauart': 'Elektrischer Triebwagen', 'Betreiber': 'GFM, später TPF', 'Spurweite': 'Meterspur, 1000 mm', 'Fahrzeugnummern': '115', 'Verbleib': 'Oktober 2016 abgebrochen', 'In Betrieb seit': '1905' },
     specOrder: ['Bauart', 'Betreiber', 'Spurweite', 'Fahrzeugnummern', 'Verbleib', 'In Betrieb seit'],
-    abschnitte: [],
+    abschnitte: [{ titel: 'Hersteller und Flottenaufbau', p: ['Der Triebwagen 115 stammt von 1905; einen Hersteller nennen die verwendeten Quellen nicht. Im Oktober 2016 wurde er abgebrochen.'] }, { titel: 'Einsatz und Technik', p: ['Er fuhr lange als Nostalgie-Triebwagen auf dem Meterspurnetz der GFM und später der TPF.'] }, { titel: 'Ausstattung und Zugänglichkeit', p: ['Zur Ausstattung sind keine verlässlichen Einzelangaben veröffentlicht. Wie alle Fahrzeuge dieser Zeit hatte er hohe Einstiege mit Stufen.'] }],
     quellen: ['Wikipedia – Chemins de fer fribourgeois Gruyère–Fribourg–Morat', 'Datenblatt HCKD «Be 4/4 115», Oktober 2026'],
     art: { typ: 'triebzug', nase: 'kurz', farbe: GFM_CREME, akzent: GFM_BLAU, tuer: GFM_BLAU, panto: true },
     bilder: [
@@ -189,7 +189,7 @@ ZUEGE.push(
     kennzahlen: [['3', 'Triebwagen'], ['1943', 'gebaut'], ['131', 'erhalten'], ['Meterspur', 'Spurweite']],
     daten: { 'Bauart': 'Elektrischer Triebwagen', 'Betreiber': 'GFM', 'Spurweite': 'Meterspur, 1000 mm', 'Fahrzeugnummern': '131–133', 'Verbleib': '131 erhalten, 132 abgebrochen 1989, 133 abgebrochen 2003', 'In Betrieb seit': '1943' },
     specOrder: ['Bauart', 'Betreiber', 'Spurweite', 'Fahrzeugnummern', 'Verbleib', 'In Betrieb seit'],
-    abschnitte: [],
+    abschnitte: [{ titel: 'Hersteller und Flottenaufbau', p: ['Die drei Triebwagen 131–133 entstanden 1943 für die GFM. Die 132 wurde 1989, die 133 2003 abgebrochen; die 131 ist als Ce 4/4 131 bei GFM Historique erhalten.'] }, { titel: 'Einsatz und Technik', p: ['Die Triebwagen fuhren auf dem Meterspurnetz der GFM.'] }, { titel: 'Ausstattung und Zugänglichkeit', p: ['Zur Ausstattung sind keine verlässlichen Einzelangaben veröffentlicht. Wie alle Fahrzeuge dieser Zeit haben sie hohe Einstiege mit Stufen.'] }],
     quellen: ['Wikipedia – Chemins de fer fribourgeois Gruyère–Fribourg–Morat', 'GFM Historique – Sammlung (Ce 4/4 131)', 'Datenblatt HCKD «Be 4/4 131–133», Oktober 2026'],
     art: { typ: 'triebzug', nase: 'kurz', farbe: GFM_CREME, akzent: GFM_BLAU, tuer: GFM_BLAU, panto: true },
     bilder: [] },
@@ -198,7 +198,7 @@ ZUEGE.push(
     kennzahlen: [['2', 'Triebwagen'], ['1972', 'gebaut'], ['70 km/h', 'Höchstgeschwindigkeit'], ['36,5 t', 'Gewicht']],
     daten: { 'Bauart': 'Elektrischer Triebwagen mit Gepäckabteil', 'Hersteller': 'SWP (Mechanik), SAAS (Elektrik)', 'Betreiber': 'GFM, später TPF', 'Spurweite': 'Meterspur, 1000 mm', 'Fahrzeugnummern': '141, 142', 'Gewicht': '36,5 t', 'Höchstgeschwindigkeit': '70 km/h', 'Sitzplätze': '40 (ab 1981)', 'Verbleib': '141 bei GFM Historique, 142 abgebrochen 2017', 'In Betrieb seit': '1972' },
     specOrder: ['Bauart', 'Hersteller', 'Betreiber', 'Spurweite', 'Fahrzeugnummern', 'Gewicht', 'Höchstgeschwindigkeit', 'Sitzplätze', 'Verbleib', 'In Betrieb seit'],
-    abschnitte: [],
+    abschnitte: [{ titel: 'Hersteller und Flottenaufbau', p: ['SWP baute den mechanischen Teil, SAAS die Elektrik; die zwei Triebwagen 141 und 142 kamen 1972. Die 141 ging 2017 an GFM Historique, die 142 wurde im April 2017 abgebrochen.'] }, { titel: 'Einsatz und Technik', p: ['Zuerst zogen die Triebwagen Kieszüge. Ab 1981 hatten sie ein Abteil mit Sitzplätzen und fuhren auch mit den Steuerwagen 251–256. Sie wiegen 36,5 t und fahren bis 70 km/h.'] }, { titel: 'Ausstattung und Zugänglichkeit', liste: ['40 Sitzplätze ab 1981', 'Gepäckabteil (Buchstabe D)', 'Hochflurige Einstiege mit Stufen'] }],
     quellen: ['GFM Historique – Sammlung (BDe 4/4 141)', 'Wikipedia – Chemins de fer fribourgeois Gruyère–Fribourg–Morat', 'Datenblatt HCKD «BDe 4/4 141–142», Oktober 2026'],
     art: { typ: 'triebzug', nase: 'kurz', farbe: W1, akzent: TPF_BLAU, tuer: TPF_BLAU, panto: true },
     bilder: [
@@ -211,7 +211,7 @@ ZUEGE.push(
     kennzahlen: [['2', 'Triebwagen'], ['1977', 'gebaut'], ['1', 'Führerstand'], ['2017', 'abgebrochen']],
     daten: { 'Bauart': 'Elektrischer Triebwagen mit einem Führerstand', 'Betreiber': 'GFM, später TPF', 'Spurweite': 'Meterspur, 1000 mm', 'Fahrzeugnummern': '151, 152', 'Einsatz': 'Pendelzug mit Steuerwagen 251–256', 'Verbleib': 'April 2017 abgebrochen', 'In Betrieb seit': '1977' },
     specOrder: ['Bauart', 'Betreiber', 'Spurweite', 'Fahrzeugnummern', 'Einsatz', 'Verbleib', 'In Betrieb seit'],
-    abschnitte: [],
+    abschnitte: [{ titel: 'Hersteller und Flottenaufbau', p: ['Die Triebwagen 151 und 152 kamen 1977. Beide wurden im April 2017 abgebrochen.'] }, { titel: 'Einsatz und Technik', p: ['Sie hatten nur einen Führerstand und fuhren deshalb immer als Pendelzug mit einem der Steuerwagen 251–256 auf dem Meterspurnetz von GFM und TPF.'] }, { titel: 'Ausstattung und Zugänglichkeit', liste: ['Ein Führerstand', 'Immer mit Steuerwagen unterwegs', 'Hochflurige Einstiege mit Stufen'] }],
     quellen: ['Wikipedia – Chemins de fer fribourgeois Gruyère–Fribourg–Morat', 'Datenblatt HCKD «Be 4/4 151–152», Oktober 2026'],
     art: { typ: 'triebzug', nase: 'kurz', farbe: GFM_CREME, akzent: GFM_BLAU, tuer: GFM_BLAU, panto: true },
     bilder: [
@@ -224,7 +224,7 @@ ZUEGE.push(
     daten: { 'Bauart': 'Elektrolokomotive', 'Hersteller': 'SLM und BBC', 'Betreiber': 'GFM, heute MOB', 'Spurweite': 'Meterspur, 1000 mm', 'Fahrzeugnummern': '101, bei der MOB 6005', 'Verbleib': 'an die MOB verkauft', 'In Betrieb seit': '1983' },
     specOrder: ['Bauart', 'Hersteller', 'Betreiber', 'Spurweite', 'Fahrzeugnummern', 'Verbleib', 'In Betrieb seit'],
     specNote: 'Das Verkaufsjahr wird unterschiedlich angegeben (2007 oder 2017).',
-    abschnitte: [],
+    abschnitte: [{ titel: 'Hersteller und Flottenaufbau', p: ['SLM und BBC bauten die Lok 101 «Ville de Bulle»; sie ging 1983 in Betrieb. Später wurde sie an die Montreux–Berner Oberland-Bahn verkauft; das Jahr wird unterschiedlich angegeben (2007 oder 2017).'] }, { titel: 'Einsatz und Technik', p: ['Sie war die einzige grosse Elektrolok der GFM auf der Meterspur. Bei der MOB fährt sie heute als GDe 4/4 6005.'] }, { titel: 'Ausstattung und Zugänglichkeit', liste: ['Zwei Führerstände', 'Gepäckabteil (Buchstabe D)', 'Kein Fahrgastraum'] }],
     quellen: ['Wikipedia (Englisch) – Transports publics Fribourgeois, Rollmaterial', 'Wikipedia – Chemins de fer fribourgeois Gruyère–Fribourg–Morat', 'Datenblatt HCKD «GDe 4/4 101», Oktober 2026'],
     art: { typ: 'lok', form: 'kantig', farbe: GFM_BLAU, akzent: GFM_CREME, panto: true },
     bilder: [
@@ -236,7 +236,7 @@ ZUEGE.push(
     daten: { 'Bauart': 'Elektrischer Rangiertraktor', 'Hersteller': 'Elektrik MFO (11), Alioth (12)', 'Betreiber': 'GFM, später TPF', 'Spurweite': 'Meterspur, 1000 mm', 'Fahrzeugnummern': '11, 12', 'In Betrieb seit': '1913' },
     specOrder: ['Bauart', 'Hersteller', 'Betreiber', 'Spurweite', 'Fahrzeugnummern', 'In Betrieb seit'],
     specNote: 'Für die 12 nennt Wikipedia den Abbruch 2012; auf Commons gibt es auch Fotos von 2026.',
-    abschnitte: [],
+    abschnitte: [{ titel: 'Hersteller und Flottenaufbau', p: ['Die zwei Traktoren 11 und 12 stammen von 1913; die Elektrik lieferte MFO (11) beziehungsweise Alioth (12). Die 12 wurde 2012 ausrangiert.'] }, { titel: 'Einsatz und Technik', p: ['Sie rangierten auf dem Meterspurnetz der GFM: der Te 2/2 11 in Bulle, der Te 2/2 12 in Montbovon.'] }, { titel: 'Ausstattung und Zugänglichkeit', liste: ['Zwei Achsen', 'Elektrischer Antrieb über die Fahrleitung', 'Kein Fahrgastraum'] }],
     quellen: ['Wikipedia – Chemins de fer fribourgeois Gruyère–Fribourg–Morat', 'Datenblätter HCKD «Te 2/2 11» und «Te 2/2 12», Oktober 2026'],
     art: { typ: 'rangier', farbe: '#3E5A3B', panto: true, klein: true },
     bilder: [
@@ -248,7 +248,7 @@ ZUEGE.push(
     kennzahlen: [['2', 'Traktoren'], ['1901', 'gebaut'], ['1927 / 1933', 'umgebaut'], ['Meterspur', 'Spurweite']],
     daten: { 'Bauart': 'Elektrischer Rangiertraktor', 'Hersteller': 'Elektrik Alioth', 'Betreiber': 'GFM, später TPF', 'Spurweite': 'Meterspur, 1000 mm', 'Fahrzeugnummern': '13, 14', 'Einsatz': 'Rangieren in Broc-Fabrique, Bauzüge', 'In Betrieb seit': '1901' },
     specOrder: ['Bauart', 'Hersteller', 'Betreiber', 'Spurweite', 'Fahrzeugnummern', 'Einsatz', 'In Betrieb seit'],
-    abschnitte: [],
+    abschnitte: [{ titel: 'Hersteller und Flottenaufbau', p: ['Die 13 und 14 entstanden 1901 als Triebwagen mit Elektrik von Alioth und wurden 1927 und 1933 zu Rangiertraktoren umgebaut. Die 13 wurde 2017 ausrangiert.'] }, { titel: 'Einsatz und Technik', p: ['Die 13 rangierte in Broc-Fabrique, die 14 fuhr Bauzüge.'] }, { titel: 'Ausstattung und Zugänglichkeit', liste: ['Vier angetriebene Achsen', 'Elektrischer Antrieb über die Fahrleitung', 'Kein Fahrgastraum'] }],
     quellen: ['Wikipedia – Chemins de fer fribourgeois Gruyère–Fribourg–Morat', 'Datenblätter HCKD «Te 4/4 13» und «Te 4/4 14», Oktober 2026'],
     art: { typ: 'rangier', farbe: '#3E5A3B', panto: true },
     bilder: [
@@ -260,7 +260,7 @@ ZUEGE.push(
     kennzahlen: [['1971', 'gebaut'], ['1981', 'umgebaut'], ['Schöma', 'Hersteller'], ['Bulle', 'Einsatzort']],
     daten: { 'Bauart': 'Zweiachsiger Dieseltraktor', 'Hersteller': 'Schöma / Deutz', 'Betreiber': 'GFM, später TPF', 'Spurweite': 'Meterspur, 1000 mm', 'Fahrzeugnummern': '15', 'Einsatz': 'Bauzüge, Rangieren in Bulle', 'In Betrieb seit': '1971' },
     specOrder: ['Bauart', 'Hersteller', 'Betreiber', 'Spurweite', 'Fahrzeugnummern', 'Einsatz', 'In Betrieb seit'],
-    abschnitte: [],
+    abschnitte: [{ titel: 'Hersteller und Flottenaufbau', p: ['Schöma und Deutz bauten den Traktor 1971; 1981 wurde er umgebaut.'] }, { titel: 'Einsatz und Technik', p: ['Er fuhr Bauzüge und rangierte in Bulle.'] }, { titel: 'Ausstattung und Zugänglichkeit', liste: ['Dieselantrieb, unabhängig von der Fahrleitung', 'Zwei Achsen', 'Kein Fahrgastraum'] }],
     quellen: ['Wikipedia (Englisch) – Transports publics Fribourgeois, Rollmaterial', 'Wikipedia – Chemins de fer fribourgeois Gruyère–Fribourg–Morat', 'Datenblatt HCKD «Tm 2/2 15», Oktober 2026'],
     art: { typ: 'rangier', farbe: YEL, panto: false, klein: true },
     bilder: [
@@ -271,7 +271,7 @@ ZUEGE.push(
     kennzahlen: [['1931', 'geliefert'], ['1946', 'auf Wechselstrom umgebaut'], ['155', 'zuletzt erhalten'], ['Normalspur', 'Spurweite']],
     daten: { 'Bauart': 'Elektrischer Triebwagen', 'Betreiber': 'FMA, später GFM', 'Spurweite': 'Normalspur, 1435 mm', 'Stromsystem': 'zuerst Gleichstrom, ab 1946 15 kV 16,7 Hz', 'Verbleib': '155 abgebrochen 2025, Führerstände bei ÖV Historique', 'In Betrieb seit': '1931' },
     specOrder: ['Bauart', 'Betreiber', 'Spurweite', 'Stromsystem', 'Verbleib', 'In Betrieb seit'],
-    abschnitte: [],
+    abschnitte: [{ titel: 'Hersteller und Flottenaufbau', p: ['Die Triebwagen kamen 1931 zur Freiburg–Murten–Ins-Bahn (FMA) und gehörten später zur GFM. Der ABDe 2/4 155 wurde 2025 abgebrochen; seine Führerstände gingen an ÖV Historique.'] }, { titel: 'Einsatz und Technik', p: ['Sie fuhren auf der Normalspurstrecke Freiburg–Murten–Ins, zuerst mit Gleichstrom. 1946 wurden sie auf Wechselstrom mit 15 kV und 16,7 Hz umgebaut.'] }, { titel: 'Ausstattung und Zugänglichkeit', liste: ['Plätze in der 1. und 2. Klasse (Buchstaben A und B)', 'Gepäckabteil (Buchstabe D)', 'Hochflurige Einstiege mit Stufen'] }],
     quellen: ['Wikipedia – Chemins de fer fribourgeois Gruyère–Fribourg–Morat', 'Datenblatt HCKD «ABDe 2/4 151», Oktober 2026'],
     art: { typ: 'triebzug', nase: 'kurz', farbe: GFM_CREME, akzent: '#3E5A3B', tuer: '#3E5A3B', panto: true },
     bilder: [
@@ -282,7 +282,7 @@ ZUEGE.push(
     kennzahlen: [['1946', 'erste gebaut'], ['1965', 'umgebaut'], ['SIG / BBC', 'Hersteller'], ['48', 'Plätze (16 + 32)']],
     daten: { 'Bauart': 'Elektrischer Triebwagen', 'Hersteller': 'SIG und BBC', 'Betreiber': 'GFM', 'Spurweite': 'Normalspur, 1435 mm', 'Fahrzeugnummern': '161–167 (166 als ABe 4/4)', 'Sitzplätze': '16 in der 1., 32 in der 2. Klasse', 'Verbleib': '162, 163 und 167 abgebrochen', 'In Betrieb seit': '1946' },
     specOrder: ['Bauart', 'Hersteller', 'Betreiber', 'Spurweite', 'Fahrzeugnummern', 'Sitzplätze', 'Verbleib', 'In Betrieb seit'],
-    abschnitte: [],
+    abschnitte: [{ titel: 'Hersteller und Flottenaufbau', p: ['SIG und BBC bauten 1946 bis 1948 die Triebwagen 161–167; die 166 war ein ABe 4/4. Die meisten wurden 1965 umgebaut. Die 162, 163 und 167 sind abgebrochen.'] }, { titel: 'Einsatz und Technik', p: ['Die Triebwagen modernisierten den Verkehr auf den Normalspurstrecken der GFM.'] }, { titel: 'Ausstattung und Zugänglichkeit', liste: ['16 Plätze in der 1. und 32 in der 2. Klasse', 'Gepäckabteil (Buchstabe D), ausser bei der 166', 'Hochflurige Einstiege mit Stufen'] }],
     quellen: ['Wikipedia (Englisch) – Transports publics Fribourgeois, Rollmaterial', 'Datenblatt HCKD «ABDe 4/4 161–167», Oktober 2026'],
     art: { typ: 'triebzug', nase: 'kurz', farbe: GFM_CREME, akzent: '#3E5A3B', tuer: '#3E5A3B', panto: true },
     bilder: [
@@ -294,7 +294,7 @@ ZUEGE.push(
     kennzahlen: [['5', 'Triebwagen'], ['1983', 'erste gebaut'], ['1991', 'zweite Serie'], ['Normalspur', 'Spurweite']],
     daten: { 'Bauart': 'Elektrischer Triebwagen für Pendelzüge', 'Hersteller': 'SIG, SWS, BBC (171–173); SWP, SIG, ABB (181–182)', 'Betreiber': 'GFM, später TPF', 'Spurweite': 'Normalspur, 1435 mm', 'Fahrzeugnummern': '171–173, 181–182', 'Anzahl': '5', 'In Betrieb seit': '1983' },
     specOrder: ['Bauart', 'Hersteller', 'Betreiber', 'Spurweite', 'Fahrzeugnummern', 'Anzahl', 'In Betrieb seit'],
-    abschnitte: [],
+    abschnitte: [{ titel: 'Hersteller und Flottenaufbau', p: ['Die Triebwagen 171–173 von SIG, SWS und BBC stammen von 1983, die 181–182 von SWP, SIG und ABB von 1991. Die 173 kam 1992 von der RVT. In der aktuellen Flottenübersicht der TPF stehen sie nicht mehr; die 171 wurde noch 2024 fotografiert.'] }, { titel: 'Einsatz und Technik', p: ['Die Triebwagen gehören zur Familie der Privatbahn-NPZ und fuhren als Pendelzüge auf dem Normalspurnetz von GFM und TPF.'] }, { titel: 'Ausstattung und Zugänglichkeit', liste: ['Triebwagen für Pendelzüge mit Steuerwagen', 'Gepäckabteil (Buchstabe D)', 'Hochflurige Einstiege im Triebwagen'] }],
     quellen: ['Wikipedia (Englisch) – Transports publics Fribourgeois, Rollmaterial', 'Wikimedia Commons – Fotos der Triebwagen 171 und 182', 'Datenblätter HCKD zu RBDe 567 171–173 und 181–182, Oktober 2026'],
     art: { typ: 'triebzug', nase: 'kurz', farbe: W1, akzent: TPF_BLAU, tuer: TPF_BLAU, panto: true },
     bilder: [
@@ -306,7 +306,7 @@ ZUEGE.push(
     kennzahlen: [['1960', 'gebaut'], ['SIG / BBC', 'Hersteller'], ['217 091', 'spätere Nummer'], ['Normalspur', 'Spurweite']],
     daten: { 'Bauart': 'Elektrische Rangierlok', 'Hersteller': 'SIG und BBC', 'Betreiber': 'GFM, später TPF', 'Spurweite': 'Normalspur, 1435 mm', 'Fahrzeugnummern': '91 (später 217 091)', 'In Betrieb seit': '1960' },
     specOrder: ['Bauart', 'Hersteller', 'Betreiber', 'Spurweite', 'Fahrzeugnummern', 'In Betrieb seit'],
-    abschnitte: [],
+    abschnitte: [{ titel: 'Hersteller und Flottenaufbau', p: ['SIG und BBC bauten die kleine Rangierlok 1960. Später trug sie die Nummer 217 091.'] }, { titel: 'Einsatz und Technik', p: ['Sie rangierte auf dem Normalspurnetz der GFM, etwa in Bulle.'] }, { titel: 'Ausstattung und Zugänglichkeit', liste: ['Zwei angetriebene Achsen', 'Elektrischer Antrieb über die Fahrleitung', 'Kein Fahrgastraum'] }],
     quellen: ['Wikipedia (Englisch) – Transports publics Fribourgeois, Rollmaterial', 'Datenblatt HCKD «Ee 2/2 91», Oktober 2026'],
     art: { typ: 'rangier', farbe: GFM_BLAU, panto: true, klein: true },
     bilder: [
@@ -317,7 +317,7 @@ ZUEGE.push(
     kennzahlen: [['B 235', 'Personenwagen 1903'], ['CFt4 273', 'Steuerwagen'], ['K 671, K 672', 'Güterwagen'], ['Meterspur', 'Spurweite']],
     daten: { 'Bauart': 'Personen-, Steuer- und Güterwagen', 'Betreiber': 'CEG/GFM, heute Museumsvereine', 'Spurweite': 'Meterspur, 1000 mm', 'Fahrzeugnummern': 'B 235, CFt4 273, K 671, K 672', 'Erhalten': 'GFM Historique; Blonay–Chamby' },
     specOrder: ['Bauart', 'Betreiber', 'Spurweite', 'Fahrzeugnummern', 'Erhalten'],
-    abschnitte: [],
+    abschnitte: [{ titel: 'Hersteller und Flottenaufbau', p: ['Erhalten sind der Personenwagen B 235 von 1903 und der Steuerwagen CFt4 273 bei GFM Historique sowie die gedeckten Güterwagen K 671 und K 672 bei der Museumsbahn Blonay–Chamby. Hersteller nennen die verwendeten Quellen nicht.'] }, { titel: 'Einsatz und Technik', p: ['Die Wagen fuhren auf dem Meterspurnetz der CEG und der GFM. Heute sind sie in der Obhut von Museumsvereinen.'] }, { titel: 'Ausstattung und Zugänglichkeit', liste: ['Personenwagen B 235 von 1903', 'Steuerwagen CFt4 273 mit Gepäckabteil (Buchstabe F)', 'Gedeckte Güterwagen K 671 und K 672'] }],
     quellen: ['GFM Historique – Sammlung', 'Wikimedia Commons – Fotos der K 671 und K 672', 'Datenblätter HCKD zu B 235, CFt 273 und K 671–674, Oktober 2026'],
     art: { typ: 'wagen', geschlossen: true, zweiachs: true, farbe: '#7A4B2A', akzent: '#3A2A1E' },
     bilder: [

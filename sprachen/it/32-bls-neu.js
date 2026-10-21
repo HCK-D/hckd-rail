@@ -2,10 +2,7 @@
 uebDict({ 'Schotter- und Kippwagen': 'Carri per pietrisco e ribaltabili' });
 
 uebZug('bls-br-185', {
-  abschnitte: [
-      { titel: 'Costruttore e composizione della flotta', p: ['Le quattro locomotive sono TRAXX F140 AC di Bombardier Transportation. Appartengono al noleggiatore Alpha Trains e sono immatricolate in Germania; BLS Cargo le noleggia.'] },
-      { titel: 'Impiego e tecnica', p: ['Omologate per Germania, Austria e Svizzera, completano presso BLS Cargo le Re 485 proprie, con cui sono tecnicamente strettamente imparentate.', 'Erogano fino a 5600 kW e viaggiano fino a 140 km/h.'] }
-    ],
+  abschnitte: [{ titel: 'Costruttore e composizione della flotta', p: ['Le quattro locomotive sono TRAXX F140 AC di Bombardier Transportation. Appartengono al noleggiatore Alpha Trains e sono immatricolate in Germania; BLS Cargo le noleggia.'] }, { titel: 'Impiego e tecnica', p: ['Omologate per Germania, Austria e Svizzera, completano presso BLS Cargo le Re 485 proprie, con cui sono tecnicamente strettamente imparentate.', 'Erogano fino a 5600 kW e viaggiano fino a 140 km/h.'] }, { titel: 'Dotazione e accessibilità', liste: ['Due cabine di guida', 'Omologazione per Germania, Austria e Svizzera', 'Immatricolata in Germania, proprietà di Alpha Trains'], p: ['La BR 185 è una locomotiva merci e non ha compartimento passeggeri.'] }],
   typ: 'Locomotiva elettrica noleggiata da Alpha Trains',
   text: ['Oltre alle proprie locomotive, BLS Cargo impiega locomotive noleggiate immatricolate in Germania. Tra queste ci sono quattro TRAXX della serie 185 di Alpha Trains.', 'Tecnicamente sono strette parenti delle Re 485 della BLS, che corrispondono alla serie tedesca 185 con un equipaggiamento svizzero aggiuntivo.'],
   kennzahlen: [['4', 'locomotive noleggiate'], ['140 km/h', 'velocità massima'], ['fino a 5600 kW', 'potenza'], ['D, A, CH', 'omologazione']],
@@ -14,10 +11,7 @@ uebZug('bls-br-185', {
   bilder: ['185 525 con i colori BLS a Friburgo (2009)']
 });
 uebZug('bls-br-186', {
-  abschnitte: [
-      { titel: 'Costruttore e composizione della flotta', p: ['Le nove locomotive sono TRAXX policorrente F140 MS di Bombardier Transportation. Appartengono al noleggiatore Railpool; su foto si vedono tra l’altro le 186 101, 103–105, 108 e 109 con la scritta BLS.'] },
-      { titel: 'Impiego e tecnica', p: ['Le locomotive sono omologate per Germania, Austria, Svizzera, Italia e Paesi Bassi. Trainano treni merci sull’asse Rotterdam–Italia, per esempio il Melzo-Shuttle.', 'Con corrente alternata erogano 5600 kW, con 1,5 kV continua nei Paesi Bassi 4000 kW; viaggiano fino a 140 km/h.'] }
-    ],
+  abschnitte: [{ titel: 'Costruttore e composizione della flotta', p: ['Le nove locomotive sono TRAXX policorrente F140 MS di Bombardier Transportation. Appartengono al noleggiatore Railpool; su foto si vedono tra l’altro le 186 101, 103–105, 108 e 109 con la scritta BLS.'] }, { titel: 'Impiego e tecnica', p: ['Le locomotive sono omologate per Germania, Austria, Svizzera, Italia e Paesi Bassi. Trainano treni merci sull’asse Rotterdam–Italia, per esempio il Melzo-Shuttle.', 'Con corrente alternata erogano 5600 kW, con 1,5 kV continua nei Paesi Bassi 4000 kW; viaggiano fino a 140 km/h.'] }, { titel: 'Dotazione e accessibilità', liste: ['Due cabine di guida', 'Locomotiva multisistema: 5600 kW in corrente alternata, 4000 kW a 1,5 kV continua', 'Omologazione per Germania, Austria, Svizzera, Italia e Paesi Bassi'], p: ['La BR 186 è una locomotiva merci e non ha compartimento passeggeri.'] }],
   typ: 'Locomotiva policorrente noleggiata da Railpool',
   text: ['BLS Cargo noleggia da Railpool nove TRAXX policorrente della serie 186. Possono circolare in cinque paesi, fino ai Paesi Bassi.', 'Trainano così treni merci sull’asse Rotterdam–Italia, per esempio il Melzo-Shuttle.'],
   kennzahlen: [['9', 'locomotive noleggiate'], ['140 km/h', 'velocità massima'], ['5600 kW', 'potenza'], ['5', 'paesi']],
@@ -26,10 +20,7 @@ uebZug('bls-br-186', {
   bilder: ['186 101 di BLS Cargo', '186 109 con il Melzo-Shuttle presso Elten (NL)']
 });
 uebZug('bls-br-187', {
-  abschnitte: [
-      { titel: 'Costruttore e composizione della flotta', p: ['Le tre locomotive appartengono alla terza generazione TRAXX (AC3) di Bombardier Transportation. BLS Cargo le noleggia a lungo termine dal noleggiatore Railpool; la 187 004 compare su foto con la scritta BLS.'] },
-      { titel: 'Impiego e tecnica', p: ['Omologate per Germania, Austria e Svizzera, trainano treni merci di BLS Cargo.', 'Erogano 5600 kW e pesano 84 t. La serie 187 esiste anche con un piccolo motore diesel per l’«ultimo miglio» senza linea di contatto; non è documentato pubblicamente se le tre locomotive della BLS ne siano dotate.'] }
-    ],
+  abschnitte: [{ titel: 'Costruttore e composizione della flotta', p: ['Le tre locomotive appartengono alla terza generazione TRAXX (AC3) di Bombardier Transportation. BLS Cargo le noleggia a lungo termine dal noleggiatore Railpool; la 187 004 compare su foto con la scritta BLS.'] }, { titel: 'Impiego e tecnica', p: ['Omologate per Germania, Austria e Svizzera, trainano treni merci di BLS Cargo.', 'Erogano 5600 kW e pesano 84 t. La serie 187 esiste anche con un piccolo motore diesel per l’«ultimo miglio» senza linea di contatto; non è documentato pubblicamente se le tre locomotive della BLS ne siano dotate.'] }, { titel: 'Dotazione e accessibilità', liste: ['Due cabine di guida', 'Omologazione per Germania, Austria e Svizzera', 'Non è documentato se sia montato un motore diesel per l’«ultimo miglio»'], p: ['La BR 187 è una locomotiva merci e non ha compartimento passeggeri.'] }],
   typ: 'Locomotiva elettrica noleggiata da Railpool',
   text: ['BLS Cargo ha noleggiato a lungo termine da Railpool tre locomotive della serie 187. Appartengono alla terza generazione TRAXX.', 'La serie 187 esiste anche con un piccolo motore diesel per l’«ultimo miglio» senza linea di contatto. Non è documentato pubblicamente se le tre locomotive della BLS ne siano dotate.'],
   kennzahlen: [['3', 'locomotive noleggiate'], ['5600 kW', 'potenza'], ['84 t', 'peso'], ['D, A, CH', 'omologazione']],
@@ -37,10 +28,7 @@ uebZug('bls-br-187', {
   bilder: ['187 004 di BLS Cargo']
 });
 uebZug('bls-br-193', {
-  abschnitte: [
-      { titel: 'Costruttore e composizione della flotta', p: ['Le locomotive sono Vectron di Siemens Mobility. Secondo l’elenco della flotta, BLS Cargo noleggia sei locomotive e altre quattro, che circolano in parte con i colori dell’operatore combinato Hupac (tra l’altro 193 494–496). Su foto si vedono inoltre le 193 711, 713 e 716.'] },
-      { titel: 'Impiego e tecnica', p: ['Omologate per Germania, Austria, Svizzera, Italia e Paesi Bassi, circolano soprattutto nel traffico di transito tra i porti del Mare del Nord e l’Italia.', 'Come locomotive policorrente erogano fino a 6400 kW.'] }
-    ],
+  abschnitte: [{ titel: 'Costruttore e composizione della flotta', p: ['Le locomotive sono Vectron di Siemens Mobility. Secondo l’elenco della flotta, BLS Cargo noleggia sei locomotive e altre quattro, che circolano in parte con i colori dell’operatore combinato Hupac (tra l’altro 193 494–496). Su foto si vedono inoltre le 193 711, 713 e 716.'] }, { titel: 'Impiego e tecnica', p: ['Omologate per Germania, Austria, Svizzera, Italia e Paesi Bassi, circolano soprattutto nel traffico di transito tra i porti del Mare del Nord e l’Italia.', 'Come locomotive policorrente erogano fino a 6400 kW.'] }, { titel: 'Dotazione e accessibilità', liste: ['Due cabine di guida', 'Locomotiva multisistema', 'Omologazione per Germania, Austria, Svizzera, Italia e Paesi Bassi', 'In parte con i colori di Hupac'], p: ['La BR 193 è una locomotiva merci e non ha compartimento passeggeri.'] }],
   typ: 'Siemens Vectron noleggiate per BLS Cargo',
   text: ['Oltre alle proprie Re 475, BLS Cargo noleggia locomotive Vectron della serie 193. Secondo l’elenco della flotta si tratta di sei locomotive e di altre quattro, che circolano in parte con i colori dell’operatore combinato Hupac.', 'Omologate fino ai Paesi Bassi e in Italia, circolano soprattutto nel traffico di transito.'],
   kennzahlen: [['10', 'locomotive noleggiate'], ['fino a 6400 kW', 'potenza'], ['5', 'paesi'], ['Siemens', 'costruttore']],
@@ -49,6 +37,7 @@ uebZug('bls-br-193', {
   bilder: ['193 716 di BLS Cargo', '193 496 con i colori Hupac e il Melzo-Shuttle presso Angeren (NL)']
 });
 uebZug('bls-fccnpps', {
+  abschnitte: [{ titel: 'Costruttore e composizione della flotta', p: ['Nel 2012 BLS Netz AG ha ordinato al costruttore LEGIOS 20 carri per pietrisco a due assi numerati 21 85 64 39 720–739.'] }, { titel: 'Impiego e tecnica', p: ['I carri servono soprattutto ai trasporti propri della BLS verso i cantieri. Come carri della categoria F si scaricano verso il basso per gravità.'] }, { titel: 'Dotazione e accessibilità', liste: ['Due assi', 'Scarico verso il basso per gravità', 'Nessuna trazione propria, nessun compartimento passeggeri'] }],
   typ: 'Carri per pietrisco a due assi di BLS Netz SA',
   text: ['Nel 2012 BLS Netz SA ha ordinato al costruttore LEGIOS 20 carri per pietrisco a due assi. Servono soprattutto per i trasporti propri verso i cantieri.', 'Come carri della categoria F, si scaricano verso il basso per gravità.'],
   kennzahlen: [['20', 'carri'], ['2', 'assi'], ['2012', 'acquisto'], ['LEGIOS', 'costruttore']],
@@ -56,12 +45,14 @@ uebZug('bls-fccnpps', {
   bilder: ['Fccnpps 722 a Spiez (2012)']
 });
 uebZug('bls-faccnpps', {
+  abschnitte: [{ titel: 'Costruttore e composizione della flotta', p: ['Nel 2023 BLS Netz AG ha completato i suoi carri per pietrisco con 20 carri a quattro assi di Waggonbau Niesky, numerati 31 85 6937 700–719.'] }, { titel: 'Impiego e tecnica', p: ['I carri portano il pietrisco ai cantieri della BLS. Sono costruiti in modo simile ai Fccnpps a due assi del 2012 e si scaricano verso il basso per gravità.'] }, { titel: 'Dotazione e accessibilità', liste: ['Quattro assi', 'Scarico verso il basso per gravità', 'Nessuna trazione propria, nessun compartimento passeggeri'] }],
   typ: 'Carri per pietrisco a quattro assi di BLS Netz SA',
   text: ['Nel 2023 BLS Netz SA ha completato i suoi carri per pietrisco con 20 carri a quattro assi. Sono costruiti in modo simile ai Fccnpps a due assi del 2012.', 'Sono stati prodotti nello stabilimento di Niesky, in Germania.'],
   kennzahlen: [['20', 'carri'], ['4', 'assi'], ['2023', 'acquisto'], ['Niesky', 'costruttore']],
   daten: { 'Bauart': 'carro per pietrisco a quattro assi', 'Betreiber': 'BLS Netz SA' }
 });
 uebZug('bls-xas', {
+  abschnitte: [{ titel: 'Costruttore e composizione della flotta', p: ['Nel 1990 sono stati costruiti sette carri ribaltabili Xas. In seguito sono passati a BLS Netz AG e hanno ricevuto i numeri 99 85 93 53 770–776 al posto di 80 63 98 62 770–776.'] }, { titel: 'Impiego e tecnica', p: ['I carri trasportano materiale di scavo dai cantieri. A seconda del registro sono elencati come carri di servizio o come carri merci.'] }, { titel: 'Dotazione e accessibilità', liste: ['Cassa ribaltabile', 'Nessuna trazione propria, nessun compartimento passeggeri'] }],
   typ: 'Vecchi carri ribaltabili per materiale di scavo',
   text: ['I sette carri ribaltabili Xas sono stati costruiti nel 1990 e trasportano materiale di scavo dai cantieri. In seguito sono passati a BLS Netz SA e hanno ricevuto nuovi numeri.', 'A seconda del registro sono classificati come carri di servizio o come carri merci.'],
   kennzahlen: [['7', 'carri'], ['1990', 'costruiti'], ['770–776', 'numeri'], ['scavo', 'carico']],
@@ -73,7 +64,7 @@ uebZug('bls-fans-u', {
   text: ['Nove carri ribaltabili Fans-u del 1990 trasportano materiale di scavo dai cantieri per BLS Netz SA.', 'In passato BLS Cargo possedeva altri Fans-u per il materiale di scavo dei cantieri AlpTransit (NFTA). Questi carri 510–530 sono stati venduti nel 2010.'],
   kennzahlen: [['9', 'carri'], ['1990', 'costruiti'], ['500–508', 'numeri'], ['scavo', 'carico']],
   daten: { 'Bauart': 'carro ribaltabile a quattro assi', 'Betreiber': 'BLS Netz SA', 'Fahrzeugnummern': '31 63 6770 500–508, poi 31 85 6770 500–508' },
-  abschnitte: [{ titel: 'I carri NFTA di BLS Cargo', p: ['I carri 510–529 (costruiti nel 2000) e 530 (1995) appartenevano a BLS Cargo e trasportavano il materiale di scavo dei cantieri NFTA. Nell’aprile 2010 sono stati venduti a RTS e nel 2014 ceduti a MBC.'] }],
+  abschnitte: [{ titel: 'Costruttore e composizione della flotta', p: ['I nove carri ribaltabili sono stati costruiti nel 1990. Presso BLS Netz AG portano oggi i numeri 31 85 6770 500–508, prima 31 63 6770 500–508.'] }, { titel: 'Impiego e tecnica', p: ['I carri trasportano materiale di scavo dai cantieri della BLS.'] }, { titel: 'Dotazione e accessibilità', liste: ['Quattro assi', 'Cassa ribaltabile', 'Nessuna trazione propria, nessun compartimento passeggeri'] }, { titel: 'I carri NFTA di BLS Cargo', p: ['I carri 510–529 (costruiti nel 2000) e 530 (1995) appartenevano a BLS Cargo e trasportavano il materiale di scavo dei cantieri NFTA. Nell’aprile 2010 sono stati venduti a RTS e nel 2014 ceduti a MBC.'] }],
   bilder: ['Fans-u 505 a Heustrich-Emdthal (2007)']
 });
 uebZug('bls-schleiffahrzeug', {
@@ -83,9 +74,10 @@ uebZug('bls-schleiffahrzeug', {
   kennzahlen: [['strada + binario', 'strada-rotaia'], ['mole', 'utensile'], ['2025', 'primo impiego'], ['Spiez', 'primo luogo d’impiego']],
   daten: { 'Bauart': 'veicolo strada-rotaia per la molatura delle rotaie', 'Betreiber': 'BLS Netz SA', 'Einsatz': 'molatura di rotaie e scambi' },
   specNote: 'La BLS ha ricevuto il veicolo a fine 2024; il primo impiego effettivo era previsto a inizio 2025 a Spiez. La BLS non indica costruttore né dati tecnici.',
-  abschnitte: [{ titel: 'Perché molare?', p: ['Il carico delle ruote crea sulle rotaie sottili fessure e deformazioni. La molatura ripristina il profilo originale della rotaia. Così rotaie e scambi durano di più e i treni viaggiano più silenziosi.'] }]
+  abschnitte: [{ titel: 'Costruttore e composizione della flotta', p: ['La BLS ha rilevato il veicolo a fine 2024; il primo impiego reale era previsto a inizio 2025 a Spiez. La BLS non indica costruttore né dati tecnici.'] }, { titel: 'Impiego e tecnica', p: ['Con esso una squadra propria della BLS può reagire rapidamente ai difetti delle rotaie e molare preventivamente gli scambi importanti, in aggiunta ai grandi treni di molatura.'] }, { titel: 'Dotazione e accessibilità', liste: ['Circola su strada e su binario', 'Mole sotto il veicolo per rotaie e scambi', 'Nessun compartimento passeggeri'] }, { titel: 'Perché molare?', p: ['Il carico delle ruote crea sulle rotaie sottili fessure e deformazioni. La molatura ripristina il profilo originale della rotaia. Così rotaie e scambi durano di più e i treni viaggiano più silenziosi.'] }]
 });
 uebZug('bls-hilfswagen', {
+  abschnitte: [{ titel: 'Costruttore e composizione della flotta', p: ['Il carro di soccorso è entrato in servizio nel 2011 e appartiene al servizio d’intervento di BLS AG. È composto dal carro di soccorso vero e proprio e da un carro supplementare. La BLS non indica un costruttore.'] }, { titel: 'Impiego e tecnica', p: ['Interviene in caso di deragliamenti e altri guasti per recuperare veicoli e prestare aiuto tecnico. Insieme i due carri sono lunghi 46 m e pesano 101,5 t.'] }, { titel: 'Dotazione e accessibilità', liste: ['Attrezzatura per recupero e aiuto tecnico', 'Carro supplementare', 'Nessun compartimento passeggeri'] }],
   name: 'Carro di soccorso',
   typ: 'Carro di soccorso con carro supplementare per recupero e assistenza tecnica',
   text: ['Il carro di soccorso fa parte del servizio d’intervento, il corpo pompieri aziendale della BLS. Interviene in caso di deragliamenti e altri guasti per recuperare veicoli e prestare assistenza tecnica.', 'È composto dal carro di soccorso vero e proprio e da un carro supplementare.'],

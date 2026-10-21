@@ -101,10 +101,7 @@ ZUEGE.push(
     nummern: [[465001, 465018]],
     daten: { 'Bauart': 'Elektrolokomotive Bo’Bo’', 'Fahrzeugfamilie': 'Lok 2000', 'Betreiber': 'BLS AG', 'Spurweite': 'Normalspur, 1435 mm', 'Fahrzeugnummern': '001–018', 'Länge': '18,5 m', 'Gewicht': '84 t', 'Leistung': '6400 kW', 'Höchstgeschwindigkeit': '160 km/h (zugelassen)', 'Anzahl': '18', 'In Betrieb seit': '1994' },
     specOrder: ['Bauart', 'Fahrzeugfamilie', 'Betreiber', 'Spurweite', 'Fahrzeugnummern', 'Länge', 'Gewicht', 'Leistung', 'Höchstgeschwindigkeit', 'Anzahl', 'In Betrieb seit'],
-    abschnitte: [
-      { titel: 'Hersteller und Flottenaufbau', p: ['Die Re 465 gehört zur Familie der Lok 2000 von SLM und ABB. Die BLS bestellte zuerst acht Loks (001–008), später zehn weitere (009–018) für den Huckepackkorridor; sie gingen 1994 bis 1997 in Betrieb.', 'Von 2019 bis 2022 wurden alle 18 Loks in der Werkstätte Bönigen für rund 20 Millionen Franken modernisiert und grün lackiert. Damit sind sie bis etwa 2040 einsetzbar.'] },
-      { titel: 'Einsatz und Technik', p: ['Die Re 465 ziehen oder schieben den GoldenPass Express zwischen Interlaken Ost und Zweisimmen. Seit dem 19. Dezember 2023 fahren sie den Autoverlad am Lötschberg, ab 2026 auch am Simplon, und ersetzen dort die braunen Re 425.', 'Im Güterverkehr fahren sie oft in Vielfachsteuerung mit TRAXX und Vectron. Die Lok leistet 6400 kW und ist für 160 km/h zugelassen.'] }
-    ],
+    abschnitte: [{ titel: 'Hersteller und Flottenaufbau', p: ['Die Re 465 gehört zur Familie der Lok 2000 von SLM und ABB. Die BLS bestellte zuerst acht Loks (001–008), später zehn weitere (009–018) für den Huckepackkorridor; sie gingen 1994 bis 1997 in Betrieb.', 'Von 2019 bis 2022 wurden alle 18 Loks in der Werkstätte Bönigen für rund 20 Millionen Franken modernisiert und grün lackiert. Damit sind sie bis etwa 2040 einsetzbar.'] }, { titel: 'Einsatz und Technik', p: ['Die Re 465 ziehen oder schieben den GoldenPass Express zwischen Interlaken Ost und Zweisimmen. Seit dem 19. Dezember 2023 fahren sie den Autoverlad am Lötschberg, ab 2026 auch am Simplon, und ersetzen dort die braunen Re 425.', 'Im Güterverkehr fahren sie oft in Vielfachsteuerung mit TRAXX und Vectron. Die Lok leistet 6400 kW und ist für 160 km/h zugelassen.'] }, { titel: 'Ausstattung und Zugänglichkeit', liste: ['Zwei Führerstände', 'Vielfachsteuerung, im Güterverkehr oft mit TRAXX und Vectron', 'Zieht oder schiebt Züge, zum Beispiel den GoldenPass Express'], p: ['Als Lok hat die Re 465 keinen Fahrgastraum. Beim GoldenPass Express und beim Autoverlad hängt die Zugänglichkeit von den Wagen ab.'] }],
     quellen: ['BLS – Flotte: Re 465, technische Daten, Refit und Einsatz', 'Datenblatt HCKD «Re 465 – Lok 2000», Oktober 2026'],
     art: { typ: 'lok', form: 'rund', farbe: BLS_GRUEN, panto: true },
     bilder: [
@@ -118,12 +115,8 @@ ZUEGE.push(
     nummern: [[475401, 475450]],
     daten: { 'Bauart': 'Mehrsystem-Elektrolokomotive Bo’Bo’', 'Fahrzeugfamilie': 'Vectron', 'Hersteller': 'Siemens Mobility', 'Betreiber': 'BLS Cargo', 'Spurweite': 'Normalspur, 1435 mm', 'Fahrzeugnummern': '401–450', 'Zulassung': 'CH, D, A, I, NL; ab Nr. 416 auch B', 'Anzahl': '50 (in drei Serien)', 'In Betrieb seit': '2016' },
     specOrder: ['Bauart', 'Fahrzeugfamilie', 'Hersteller', 'Betreiber', 'Spurweite', 'Fahrzeugnummern', 'Zulassung', 'Anzahl', 'In Betrieb seit'],
-    abschnitte: [
-      { titel: 'Hersteller und Flottenaufbau', p: ['Die Re 475 ist die Vectron-Lokomotive von Siemens Mobility für BLS Cargo. Die Flotte wächst in drei Serien auf 50 Loks: 401–415 (2016–2018), 416–440 (2020 und 2024–2025) und 441–450 (ab 2026).'] },
-      { titel: 'Einsatz und Technik', p: ['BLS Cargo setzt die Re 475 vor allem auf der Lötschberg-Simplon- und der Gotthard-Achse ein und fährt damit bis in die Niederlande, nach Belgien, Deutschland, Österreich und Italien.', 'Die Mehrsystemlok ist für bis zu sechs Länder zugelassen; ab Nummer 416 auch für Belgien.'] },
-      { titel: 'Drei Serien', tabelle: { kopf: ['Nummern', 'Anzahl', 'Lieferung', 'Zulassung'], zeilen: [
-      ['401–415', '15', '2016–2018', 'CH, D, A, I, NL'], ['416–440', '25', '2020, 2024–2025', 'CH, D, A, I, NL, B'], ['441–450', '10', 'ab 2026', 'CH, D, A, I, NL, B']] } }
-    ],
+    abschnitte: [{ titel: 'Hersteller und Flottenaufbau', p: ['Die Re 475 ist die Vectron-Lokomotive von Siemens Mobility für BLS Cargo. Die Flotte wächst in drei Serien auf 50 Loks: 401–415 (2016–2018), 416–440 (2020 und 2024–2025) und 441–450 (ab 2026).'] }, { titel: 'Einsatz und Technik', p: ['BLS Cargo setzt die Re 475 vor allem auf der Lötschberg-Simplon- und der Gotthard-Achse ein und fährt damit bis in die Niederlande, nach Belgien, Deutschland, Österreich und Italien.', 'Die Mehrsystemlok ist für bis zu sechs Länder zugelassen; ab Nummer 416 auch für Belgien.'] }, { titel: 'Ausstattung und Zugänglichkeit', liste: ['Zwei Führerstände', 'Mehrsystemlok für Wechsel- und Gleichstrom', 'Zulassung für die Schweiz, Deutschland, Österreich, Italien und die Niederlande, ab Nummer 416 auch für Belgien'], p: ['Die Re 475 ist eine Güterzuglok und hat keinen Fahrgastraum.'] }, { titel: 'Drei Serien', tabelle: { kopf: ['Nummern', 'Anzahl', 'Lieferung', 'Zulassung'], zeilen: [
+      ['401–415', '15', '2016–2018', 'CH, D, A, I, NL'], ['416–440', '25', '2020, 2024–2025', 'CH, D, A, I, NL, B'], ['441–450', '10', 'ab 2026', 'CH, D, A, I, NL, B']] } }],
     quellen: ['Wikipedia – BLS Cargo, Flottentabelle', 'Datenblatt HCKD «Re 475 – Siemens Vectron», Oktober 2026'],
     art: { typ: 'lok', form: 'kantig', farbe: BLS_GRUEN, akzent: BLS_DUNKEL, panto: true },
     bilder: [
@@ -136,10 +129,7 @@ ZUEGE.push(
     daten: { 'Bauart': 'Elektrolokomotive Bo’Bo’', 'Fahrzeugfamilie': 'TRAXX F140 AC', 'Hersteller': 'Bombardier Transportation', 'Betreiber': 'BLS Cargo', 'Spurweite': 'Normalspur, 1435 mm', 'Fahrzeugnummern': '001–020', 'Höchstgeschwindigkeit': '140 km/h', 'Zulassung': 'Schweiz, Deutschland', 'Anzahl': '20 beschafft; 485 004 nach Unfall 2020 ausgeschieden', 'In Betrieb seit': '2002' },
     specOrder: ['Bauart', 'Fahrzeugfamilie', 'Hersteller', 'Betreiber', 'Spurweite', 'Fahrzeugnummern', 'Höchstgeschwindigkeit', 'Zulassung', 'Anzahl', 'In Betrieb seit'],
     specNote: 'Die 140 km/h stehen für die Bauart TRAXX F140.',
-    abschnitte: [
-      { titel: 'Hersteller und Flottenaufbau', p: ['BLS Cargo bestellte 2002 bei Bombardier 20 TRAXX vom Typ F140 AC; sie wurden bis Mitte 2003 geliefert und tragen die Nummern 485 001–020.', 'Die 485 004 wurde 2020 bei einem Unfall in Auggen (Deutschland) zerstört. Wie viele Re 485 heute betriebsbereit sind, ist nicht öffentlich bestätigt.'] },
-      { titel: 'Einsatz und Technik', p: ['Die Re 485 fahren Güterzüge in der Schweiz und nach Deutschland, auf der Lötschberg-Simplon- und der Gotthard-Achse.', 'Technisch entsprechen sie der deutschen Baureihe 185 und den Re 482 von SBB Cargo, mit einem Schweizer Ausrüstungspaket. Sie fahren bis 140 km/h.'] }
-    ],
+    abschnitte: [{ titel: 'Hersteller und Flottenaufbau', p: ['BLS Cargo bestellte 2002 bei Bombardier 20 TRAXX vom Typ F140 AC; sie wurden bis Mitte 2003 geliefert und tragen die Nummern 485 001–020.', 'Die 485 004 wurde 2020 bei einem Unfall in Auggen (Deutschland) zerstört. Wie viele Re 485 heute betriebsbereit sind, ist nicht öffentlich bestätigt.'] }, { titel: 'Einsatz und Technik', p: ['Die Re 485 fahren Güterzüge in der Schweiz und nach Deutschland, auf der Lötschberg-Simplon- und der Gotthard-Achse.', 'Technisch entsprechen sie der deutschen Baureihe 185 und den Re 482 von SBB Cargo, mit einem Schweizer Ausrüstungspaket. Sie fahren bis 140 km/h.'] }, { titel: 'Ausstattung und Zugänglichkeit', liste: ['Zwei Führerstände', 'Zulassung für die Schweiz und Deutschland', 'Schweizer Ausrüstungspaket auf der Basis der deutschen Baureihe 185'], p: ['Die Re 485 ist eine Güterzuglok und hat keinen Fahrgastraum.'] }],
     quellen: ['Wikipedia – BLS Cargo, Flottentabelle und Geschichte', 'Datenblatt HCKD «Re 485 – TRAXX», Oktober 2026'],
     art: { typ: 'lok', form: 'kantig', farbe: BLS_GRUEN, akzent: BLS_DUNKEL, panto: true },
     bilder: [
@@ -154,10 +144,7 @@ ZUEGE.push(
     daten: { 'Bauart': 'Mehrsystem-Elektrolokomotive Bo’Bo’', 'Fahrzeugfamilie': 'TRAXX F140 MS', 'Hersteller': 'Bombardier Transportation', 'Betreiber': 'BLS Cargo', 'Spurweite': 'Normalspur, 1435 mm', 'Fahrzeugnummern': '501–510', 'Höchstgeschwindigkeit': '140 km/h', 'Zulassung': 'Schweiz, Deutschland, Italien, Österreich', 'Anzahl': '10', 'In Betrieb seit': '2008' },
     specOrder: ['Bauart', 'Fahrzeugfamilie', 'Hersteller', 'Betreiber', 'Spurweite', 'Fahrzeugnummern', 'Höchstgeschwindigkeit', 'Zulassung', 'Anzahl', 'In Betrieb seit'],
     specNote: 'Die 140 km/h stehen für die Bauart TRAXX F140.',
-    abschnitte: [
-      { titel: 'Hersteller und Flottenaufbau', p: ['Bombardier lieferte BLS Cargo ab Herbst 2008 zehn Mehrsystem-TRAXX vom Typ F140 MS mit den Nummern 486 501–510; die letzten folgten 2009.'] },
-      { titel: 'Einsatz und Technik', p: ['Die Re 486 dürfen in der Schweiz, in Deutschland, Italien und Österreich fahren. Damit eignen sie sich für den Transitverkehr durch die Alpen, zum Beispiel mit der Rollenden Landstrasse.', 'Als Mehrsystemlok fahren sie unter Wechsel- und Gleichstrom; die Höchstgeschwindigkeit beträgt 140 km/h.'] }
-    ],
+    abschnitte: [{ titel: 'Hersteller und Flottenaufbau', p: ['Bombardier lieferte BLS Cargo ab Herbst 2008 zehn Mehrsystem-TRAXX vom Typ F140 MS mit den Nummern 486 501–510; die letzten folgten 2009.'] }, { titel: 'Einsatz und Technik', p: ['Die Re 486 dürfen in der Schweiz, in Deutschland, Italien und Österreich fahren. Damit eignen sie sich für den Transitverkehr durch die Alpen, zum Beispiel mit der Rollenden Landstrasse.', 'Als Mehrsystemlok fahren sie unter Wechsel- und Gleichstrom; die Höchstgeschwindigkeit beträgt 140 km/h.'] }, { titel: 'Ausstattung und Zugänglichkeit', liste: ['Zwei Führerstände', 'Mehrsystemlok für Wechsel- und Gleichstrom', 'Zulassung für die Schweiz, Deutschland, Italien und Österreich'], p: ['Die Re 486 ist eine Güterzuglok und hat keinen Fahrgastraum.'] }],
     quellen: ['Wikipedia – BLS Cargo, Flottentabelle', 'Datenblatt HCKD «Re 486 – TRAXX MS», Oktober 2026'],
     art: { typ: 'lok', form: 'kantig', farbe: BLS_GRUEN, akzent: BLS_DUNKEL, panto: true },
     bilder: [
@@ -171,10 +158,7 @@ ZUEGE.push(
     daten: { 'Bauart': 'Elektrolokomotive Bo’Bo’', 'Fahrzeugfamilie': 'TRAXX F140 AC', 'Hersteller': 'Bombardier Transportation', 'Eigentümer': 'Alpha Trains', 'Betreiber': 'BLS Cargo (gemietet)', 'Spurweite': 'Normalspur, 1435 mm', 'Leistung': 'bis 5600 kW', 'Höchstgeschwindigkeit': '140 km/h', 'Zulassung': 'Deutschland, Österreich, Schweiz', 'Anzahl': '4 gemietet' },
     specOrder: ['Bauart', 'Fahrzeugfamilie', 'Hersteller', 'Eigentümer', 'Betreiber', 'Spurweite', 'Leistung', 'Höchstgeschwindigkeit', 'Zulassung', 'Anzahl'],
     specNote: 'Welche Nummern die vier gemieteten Loks tragen, ist nicht öffentlich aufgelistet. Das Foto zeigt die 185 525 in BLS-Farben im Jahr 2009.',
-    abschnitte: [
-      { titel: 'Hersteller und Flottenaufbau', p: ['Die vier Lokomotiven sind TRAXX F140 AC von Bombardier Transportation. Sie gehören dem Vermieter Alpha Trains und sind in Deutschland registriert; BLS Cargo hat sie gemietet.'] },
-      { titel: 'Einsatz und Technik', p: ['Die Loks sind für Deutschland, Österreich und die Schweiz zugelassen und ergänzen bei BLS Cargo die eigenen Re 485, mit denen sie technisch eng verwandt sind.', 'Sie leisten bis 5600 kW und fahren bis 140 km/h.'] }
-    ],
+    abschnitte: [{ titel: 'Hersteller und Flottenaufbau', p: ['Die vier Lokomotiven sind TRAXX F140 AC von Bombardier Transportation. Sie gehören dem Vermieter Alpha Trains und sind in Deutschland registriert; BLS Cargo hat sie gemietet.'] }, { titel: 'Einsatz und Technik', p: ['Die Loks sind für Deutschland, Österreich und die Schweiz zugelassen und ergänzen bei BLS Cargo die eigenen Re 485, mit denen sie technisch eng verwandt sind.', 'Sie leisten bis 5600 kW und fahren bis 140 km/h.'] }, { titel: 'Ausstattung und Zugänglichkeit', liste: ['Zwei Führerstände', 'Zulassung für Deutschland, Österreich und die Schweiz', 'In Deutschland registriert, Eigentümer Alpha Trains'], p: ['Die BR 185 ist eine Güterzuglok und hat keinen Fahrgastraum.'] }],
     quellen: ['Wikipedia – BLS Cargo, Tabelle der gemieteten Lokomotiven', 'Wikipedia – Bombardier Traxx, Baureihe 185'],
     art: { typ: 'lok', form: 'kantig', farbe: '#2F6DB5', akzent: BLS_GRUEN, panto: true },
     bilder: [
@@ -186,10 +170,7 @@ ZUEGE.push(
     daten: { 'Bauart': 'Mehrsystem-Elektrolokomotive Bo’Bo’', 'Fahrzeugfamilie': 'TRAXX F140 MS', 'Hersteller': 'Bombardier Transportation', 'Eigentümer': 'Railpool', 'Betreiber': 'BLS Cargo (gemietet)', 'Spurweite': 'Normalspur, 1435 mm', 'Fahrzeugnummern': 'u. a. 186 101, 103–105, 108, 109 (auf Fotos belegt)', 'Leistung': '5600 kW (unter 1,5 kV Gleichstrom 4000 kW)', 'Höchstgeschwindigkeit': '140 km/h', 'Zulassung': 'Deutschland, Österreich, Schweiz, Italien, Niederlande', 'Anzahl': '9 gemietet' },
     specOrder: ['Bauart', 'Fahrzeugfamilie', 'Hersteller', 'Eigentümer', 'Betreiber', 'Spurweite', 'Fahrzeugnummern', 'Leistung', 'Höchstgeschwindigkeit', 'Zulassung', 'Anzahl'],
     specNote: 'Die eigenen Mehrsystem-TRAXX von BLS Cargo heissen Re 486 und haben eine eigene Seite.',
-    abschnitte: [
-      { titel: 'Hersteller und Flottenaufbau', p: ['Die neun Lokomotiven sind Mehrsystem-TRAXX F140 MS von Bombardier Transportation. Sie gehören dem Vermieter Railpool; auf Fotos sind unter anderem die 186 101, 103–105, 108 und 109 mit BLS-Anschrift zu sehen.'] },
-      { titel: 'Einsatz und Technik', p: ['Die Loks sind für Deutschland, Österreich, die Schweiz, Italien und die Niederlande zugelassen. Sie ziehen Güterzüge auf der Achse Rotterdam–Italien, zum Beispiel den Melzo-Shuttle.', 'Unter Wechselstrom leisten sie 5600 kW, unter 1,5 kV Gleichstrom in den Niederlanden 4000 kW; sie fahren bis 140 km/h.'] }
-    ],
+    abschnitte: [{ titel: 'Hersteller und Flottenaufbau', p: ['Die neun Lokomotiven sind Mehrsystem-TRAXX F140 MS von Bombardier Transportation. Sie gehören dem Vermieter Railpool; auf Fotos sind unter anderem die 186 101, 103–105, 108 und 109 mit BLS-Anschrift zu sehen.'] }, { titel: 'Einsatz und Technik', p: ['Die Loks sind für Deutschland, Österreich, die Schweiz, Italien und die Niederlande zugelassen. Sie ziehen Güterzüge auf der Achse Rotterdam–Italien, zum Beispiel den Melzo-Shuttle.', 'Unter Wechselstrom leisten sie 5600 kW, unter 1,5 kV Gleichstrom in den Niederlanden 4000 kW; sie fahren bis 140 km/h.'] }, { titel: 'Ausstattung und Zugänglichkeit', liste: ['Zwei Führerstände', 'Mehrsystemlok: 5600 kW unter Wechselstrom, 4000 kW unter 1,5 kV Gleichstrom', 'Zulassung für Deutschland, Österreich, die Schweiz, Italien und die Niederlande'], p: ['Die BR 186 ist eine Güterzuglok und hat keinen Fahrgastraum.'] }],
     quellen: ['Wikipedia – BLS Cargo, Tabelle der gemieteten Lokomotiven', 'Wikipedia – Bombardier Traxx, Baureihe 186', 'Wikimedia Commons – Fotos der BLS 186 101–109'],
     art: { typ: 'lok', form: 'kantig', farbe: '#8C959E', akzent: BLS_GRUEN, panto: true },
     bilder: [
@@ -201,10 +182,7 @@ ZUEGE.push(
     kennzahlen: [['3', 'gemietete Lokomotiven'], ['5600 kW', 'Leistung'], ['84 t', 'Gewicht'], ['D, A, CH', 'Zulassung']],
     daten: { 'Bauart': 'Elektrolokomotive Bo’Bo’', 'Fahrzeugfamilie': 'TRAXX AC3', 'Hersteller': 'Bombardier Transportation', 'Eigentümer': 'Railpool', 'Betreiber': 'BLS Cargo (gemietet)', 'Spurweite': 'Normalspur, 1435 mm', 'Beispiel': '187 004', 'Gewicht': '84 t', 'Leistung': '5600 kW', 'Höchstgeschwindigkeit': '140 oder 160 km/h, je nach Ausführung', 'Zulassung': 'Deutschland, Österreich, Schweiz', 'Anzahl': '3 gemietet' },
     specOrder: ['Bauart', 'Fahrzeugfamilie', 'Hersteller', 'Eigentümer', 'Betreiber', 'Spurweite', 'Beispiel', 'Gewicht', 'Leistung', 'Höchstgeschwindigkeit', 'Zulassung', 'Anzahl'],
-    abschnitte: [
-      { titel: 'Hersteller und Flottenaufbau', p: ['Die drei Lokomotiven gehören zur dritten TRAXX-Generation (AC3) von Bombardier Transportation. BLS Cargo hat sie langfristig beim Vermieter Railpool gemietet; die 187 004 ist auf Fotos mit BLS-Anschrift zu sehen.'] },
-      { titel: 'Einsatz und Technik', p: ['Die Loks sind für Deutschland, Österreich und die Schweiz zugelassen und fahren Güterzüge von BLS Cargo.', 'Sie leisten 5600 kW und wiegen 84 t. Die Baureihe 187 gibt es auch mit einem kleinen Dieselmotor für die «letzte Meile» ohne Fahrleitung; ob die drei BLS-Loks ihn haben, ist nicht öffentlich belegt.'] }
-    ],
+    abschnitte: [{ titel: 'Hersteller und Flottenaufbau', p: ['Die drei Lokomotiven gehören zur dritten TRAXX-Generation (AC3) von Bombardier Transportation. BLS Cargo hat sie langfristig beim Vermieter Railpool gemietet; die 187 004 ist auf Fotos mit BLS-Anschrift zu sehen.'] }, { titel: 'Einsatz und Technik', p: ['Die Loks sind für Deutschland, Österreich und die Schweiz zugelassen und fahren Güterzüge von BLS Cargo.', 'Sie leisten 5600 kW und wiegen 84 t. Die Baureihe 187 gibt es auch mit einem kleinen Dieselmotor für die «letzte Meile» ohne Fahrleitung; ob die drei BLS-Loks ihn haben, ist nicht öffentlich belegt.'] }, { titel: 'Ausstattung und Zugänglichkeit', liste: ['Zwei Führerstände', 'Zulassung für Deutschland, Österreich und die Schweiz', 'Ob ein Dieselmotor für die «letzte Meile» eingebaut ist, ist nicht belegt'], p: ['Die BR 187 ist eine Güterzuglok und hat keinen Fahrgastraum.'] }],
     quellen: ['Wikipedia – BLS Cargo, Tabelle der gemieteten Lokomotiven', 'Wikipedia – Bombardier Traxx, Baureihe 187 und Railpool'],
     art: { typ: 'lok', form: 'kantig', farbe: '#C9CED3', akzent: '#2F6DB5', panto: true },
     bilder: [
@@ -216,10 +194,7 @@ ZUEGE.push(
     daten: { 'Bauart': 'Mehrsystem-Elektrolokomotive Bo’Bo’', 'Fahrzeugfamilie': 'Vectron', 'Hersteller': 'Siemens Mobility', 'Eigentümer': 'verschiedene Vermieter, u. a. BRCE', 'Betreiber': 'BLS Cargo (gemietet)', 'Spurweite': 'Normalspur, 1435 mm', 'Fahrzeugnummern': 'u. a. 193 494–496 (Hupac), 193 711, 713, 716 (auf Fotos belegt)', 'Leistung': 'bis 6400 kW', 'Zulassung': 'Deutschland, Österreich, Schweiz, Italien, Niederlande', 'Anzahl': '6 + 4 gemietet' },
     specOrder: ['Bauart', 'Fahrzeugfamilie', 'Hersteller', 'Eigentümer', 'Betreiber', 'Spurweite', 'Fahrzeugnummern', 'Leistung', 'Zulassung', 'Anzahl'],
     specNote: 'Die eigenen Vectron von BLS Cargo heissen Re 475 und haben eine eigene Seite.',
-    abschnitte: [
-      { titel: 'Hersteller und Flottenaufbau', p: ['Die Lokomotiven sind Vectron von Siemens Mobility. BLS Cargo mietet laut Flottenliste sechs Loks sowie vier weitere, die zum Teil in den Farben des Kombi-Operateurs Hupac fahren (unter anderem 193 494–496). Auf Fotos sind zudem die 193 711, 713 und 716 zu sehen.'] },
-      { titel: 'Einsatz und Technik', p: ['Die Loks sind für Deutschland, Österreich, die Schweiz, Italien und die Niederlande zugelassen und fahren vor allem im Transitverkehr zwischen den Nordseehäfen und Italien.', 'Als Mehrsystemlok leisten sie bis 6400 kW.'] }
-    ],
+    abschnitte: [{ titel: 'Hersteller und Flottenaufbau', p: ['Die Lokomotiven sind Vectron von Siemens Mobility. BLS Cargo mietet laut Flottenliste sechs Loks sowie vier weitere, die zum Teil in den Farben des Kombi-Operateurs Hupac fahren (unter anderem 193 494–496). Auf Fotos sind zudem die 193 711, 713 und 716 zu sehen.'] }, { titel: 'Einsatz und Technik', p: ['Die Loks sind für Deutschland, Österreich, die Schweiz, Italien und die Niederlande zugelassen und fahren vor allem im Transitverkehr zwischen den Nordseehäfen und Italien.', 'Als Mehrsystemlok leisten sie bis 6400 kW.'] }, { titel: 'Ausstattung und Zugänglichkeit', liste: ['Zwei Führerstände', 'Mehrsystemlok', 'Zulassung für Deutschland, Österreich, die Schweiz, Italien und die Niederlande', 'Teilweise in den Farben von Hupac'], p: ['Die BR 193 ist eine Güterzuglok und hat keinen Fahrgastraum.'] }],
     quellen: ['Wikipedia – BLS Cargo, Tabelle der gemieteten Lokomotiven (Railcolornews 2018 und 2019)', 'Wikimedia Commons – Fotos der BLS 193 494–496, 711, 713 und 716'],
     art: { typ: 'lok', form: 'kantig', farbe: '#2E3338', akzent: BLS_GRUEN, panto: true },
     bilder: [
@@ -232,7 +207,7 @@ ZUEGE.push(
     nummern: [[425161, 425195]],
     daten: { 'Bauart': 'Elektrolokomotive Bo’Bo’', 'Frühere Bezeichnung': 'Re 4/4', 'Betreiber': 'BLS und BLS Cargo (historisch); einzelne Loks heute im Museums- oder Sonderbetrieb', 'Spurweite': 'Normalspur, 1435 mm', 'Länge': '15,1 m (ab Nr. 174: 15,47 m)', 'Gewicht': '80 t', 'Leistung': '4980 kW', 'Höchstgeschwindigkeit': '140 km/h', 'Anzahl': '35 gebaut', 'In Betrieb seit': '1964' },
     specOrder: ['Bauart', 'Frühere Bezeichnung', 'Betreiber', 'Spurweite', 'Länge', 'Gewicht', 'Leistung', 'Höchstgeschwindigkeit', 'Anzahl', 'In Betrieb seit'],
-    abschnitte: [{ titel: 'Die Re 4/4 165 «Moutier»', p: ['Die 165 wurde ursprünglich als Ae 4/4 II 265 an die BLS geliefert und trägt das Wappen der Gemeinde Moutier. Seit 2017 gehört sie zu den historischen Fahrzeugen der BLS-Stiftung und steht nicht mehr betriebsfähig im Depot Burgdorf.'] }],
+    abschnitte: [{ titel: 'Hersteller und Flottenaufbau', p: ['Gebaut wurden 35 Lokomotiven; die erste ging 1964 in Betrieb. Heute tragen sie die Nummern Re 425 161–195. Ab Nummer 174 sind die Loks mit 15,47 m etwas länger als die älteren mit 15,1 m.'] }, { titel: 'Einsatz und Technik', p: ['Die Loks zogen Schnellzüge Bern–Brig, Güterzüge Basel–Domodossola und den Autoverlad am Lötschberg. Bei BLS Cargo endete der Güterverkehr 2021. Ab Ende 2023 übernahmen die Re 465 den Autoverlad; die letzte planmässige Fahrt war am 27. Juli 2026 zwischen Kandersteg und Goppenstein.', 'Die Lok leistet 4980 kW und fährt bis 140 km/h.'] }, { titel: 'Ausstattung und Zugänglichkeit', liste: ['Zwei Führerstände', 'Kein Fahrgastraum'], p: ['Vor Personenzügen und beim Autoverlad hing die Zugänglichkeit von den Wagen ab.'] }, { titel: 'Die Re 4/4 165 «Moutier»', p: ['Die 165 wurde ursprünglich als Ae 4/4 II 265 an die BLS geliefert und trägt das Wappen der Gemeinde Moutier. Seit 2017 gehört sie zu den historischen Fahrzeugen der BLS-Stiftung und steht nicht mehr betriebsfähig im Depot Burgdorf.'] }],
     quellen: ['BLS – Flotte: Re 425, technische Daten', 'BLS Inside – «Bye-bye Bruneli», 19. Juli 2026', 'Bahnonline.ch – Letzte fahrplanmässige Fahrt der Re 425, 26. Juli 2026','BLS-Stiftung – Re 425 165 «Moutier»', 'Wikipedia – BLS Cargo, Flottentabelle (Re 4/4 170–195)', 'Datenblatt HCKD «Re 425», Oktober 2026'],
     art: { typ: 'lok', form: 'kantig', farbe: BLS_BRAUN, akzent: '#E8DCC8', panto: true },
     bilder: [
@@ -245,7 +220,7 @@ ZUEGE.push(
     daten: { 'Bauart': 'Diesellokomotive', 'Antrieb': 'dieselhydraulisch', 'Betreiber': 'BLS Infrastruktur', 'Spurweite': 'Normalspur, 1435 mm', 'Beispiel': 'Am 843 503', 'Länge': '15,2 m', 'Gewicht': '80 t', 'Einsatz': 'Bauzüge, Rangieren, Intervention', 'In Betrieb seit': '2008' },
     specOrder: ['Bauart', 'Antrieb', 'Betreiber', 'Spurweite', 'Beispiel', 'Länge', 'Gewicht', 'Einsatz', 'In Betrieb seit'],
     specNote: 'Länge, Gewicht und Jahr nennt die BLS für die Am 843 ihres Interventionsdienstes. Wie viele Am 843 die BLS insgesamt besitzt, ist nicht öffentlich belegt.',
-    abschnitte: [{ titel: 'Im Interventionsdienst', p: ['Die BLS führt eine Am 843 als Fahrzeug ihres Interventionsdienstes auf, zusammen mit dem Lösch- und Rettungszug LRZ 04 und dem Hilfswagen. Der Interventionsdienst ist die Betriebsfeuerwehr der BLS.'] }],
+    abschnitte: [{ titel: 'Hersteller und Flottenaufbau', p: ['Die Am 843 ist eine Lok von Vossloh und entspricht technisch der Am 843 der SBB. Für die Lok im Interventionsdienst nennt die BLS das Jahr 2008. Wie viele Am 843 die BLS besitzt, ist nicht öffentlich belegt.'] }, { titel: 'Einsatz und Technik', p: ['Die BLS führt eine Am 843 als Fahrzeug ihres Interventionsdienstes auf, zusammen mit dem Lösch- und Rettungszug LRZ 04 und dem Hilfswagen. Der Interventionsdienst ist die Betriebsfeuerwehr der BLS.'] }, { titel: 'Ausstattung und Zugänglichkeit', liste: ['Dieselhydraulischer Antrieb, unabhängig von der Fahrleitung', '15,2 m lang, 80 t schwer', 'Kein Fahrgastraum'] }],
     quellen: ['BLS – «Einsatzbereit für den Ernstfall», Interventionsfahrzeuge (2025)', 'Wikimedia Commons – Foto der BLS Infra Am 843 503', 'Datenblatt HCKD «Am 843», Oktober 2026'],
     art: { typ: 'lok', form: 'kantig', farbe: YEL, akzent: '#2E3338' },
     bilder: [
@@ -256,7 +231,7 @@ ZUEGE.push(
     kennzahlen: [['20', 'Wagen'], ['2', 'Achsen'], ['2012', 'Beschaffung'], ['LEGIOS', 'Hersteller']],
     daten: { 'Bauart': 'Zweiachsiger Schotterwagen', 'Hersteller': 'LEGIOS', 'Betreiber': 'BLS Netz AG', 'Spurweite': 'Normalspur, 1435 mm', 'Fahrzeugnummern': '21 85 64 39 720–739', 'Anzahl': '20', 'In Betrieb seit': '2012' },
     specOrder: ['Bauart', 'Hersteller', 'Betreiber', 'Spurweite', 'Fahrzeugnummern', 'Anzahl', 'In Betrieb seit'],
-    abschnitte: [],
+    abschnitte: [{ titel: 'Hersteller und Flottenaufbau', p: ['Die BLS Netz AG bestellte 2012 beim Hersteller LEGIOS 20 zweiachsige Schotterwagen mit den Nummern 21 85 64 39 720–739.'] }, { titel: 'Einsatz und Technik', p: ['Die Wagen fahren vor allem für eigene Transporte der BLS zu Baustellen. Als Wagen der Gattung F werden sie durch die Schwerkraft nach unten entladen.'] }, { titel: 'Ausstattung und Zugänglichkeit', liste: ['Zwei Achsen', 'Entladung nach unten durch Schwerkraft', 'Kein eigener Fahrantrieb, kein Fahrgastraum'] }],
     quellen: ['Wikipedia – BLS-Güterwagen, Dienstwagen der BLS Netz AG'],
     art: { typ: 'wagen', var: 'schotter', zweiachs: true, farbe: YEL },
     bilder: [
@@ -267,7 +242,7 @@ ZUEGE.push(
     kennzahlen: [['20', 'Wagen'], ['4', 'Achsen'], ['2023', 'Beschaffung'], ['Niesky', 'Hersteller']],
     daten: { 'Bauart': 'Vierachsiger Schotterwagen', 'Hersteller': 'Waggonbau Niesky', 'Betreiber': 'BLS Netz AG', 'Spurweite': 'Normalspur, 1435 mm', 'Fahrzeugnummern': '31 85 6937 700–719', 'Anzahl': '20', 'In Betrieb seit': '2023' },
     specOrder: ['Bauart', 'Hersteller', 'Betreiber', 'Spurweite', 'Fahrzeugnummern', 'Anzahl', 'In Betrieb seit'],
-    abschnitte: [],
+    abschnitte: [{ titel: 'Hersteller und Flottenaufbau', p: ['2023 ergänzte die BLS Netz AG ihre Schotterwagen um 20 vierachsige Wagen von Waggonbau Niesky mit den Nummern 31 85 6937 700–719.'] }, { titel: 'Einsatz und Technik', p: ['Die Wagen bringen Schotter zu den Baustellen der BLS. Sie sind ähnlich gebaut wie die zweiachsigen Fccnpps von 2012 und werden durch die Schwerkraft nach unten entladen.'] }, { titel: 'Ausstattung und Zugänglichkeit', liste: ['Vier Achsen', 'Entladung nach unten durch Schwerkraft', 'Kein eigener Fahrantrieb, kein Fahrgastraum'] }],
     quellen: ['Wikipedia – BLS-Güterwagen, Dienstwagen der BLS Netz AG'],
     art: { typ: 'wagen', var: 'schotter', farbe: YEL },
     bilder: [] },
@@ -276,7 +251,7 @@ ZUEGE.push(
     kennzahlen: [['7', 'Wagen'], ['1990', 'gebaut'], ['770–776', 'Nummern'], ['Aushub', 'Ladung']],
     daten: { 'Bauart': 'Kippwagen', 'Betreiber': 'BLS Netz AG', 'Spurweite': 'Normalspur, 1435 mm', 'Fahrzeugnummern': '80 63 98 62 770–776, später 99 85 93 53 770–776', 'Anzahl': '7', 'In Betrieb seit': '1990' },
     specOrder: ['Bauart', 'Betreiber', 'Spurweite', 'Fahrzeugnummern', 'Anzahl', 'In Betrieb seit'],
-    abschnitte: [],
+    abschnitte: [{ titel: 'Hersteller und Flottenaufbau', p: ['1990 wurden sieben Kippwagen Xas gebaut. Später gingen sie an die BLS Netz AG und erhielten statt 80 63 98 62 770–776 die Nummern 99 85 93 53 770–776.'] }, { titel: 'Einsatz und Technik', p: ['Die Wagen transportieren Aushub von Baustellen. Je nach Verzeichnis werden sie als Dienstwagen oder als Güterwagen geführt.'] }, { titel: 'Ausstattung und Zugänglichkeit', liste: ['Kippbarer Wagenkasten', 'Kein eigener Fahrantrieb, kein Fahrgastraum'] }],
     quellen: ['Wikipedia – BLS-Güterwagen, Xas'],
     art: { typ: 'wagen', var: 'kipp', farbe: YEL },
     bilder: [
@@ -287,7 +262,7 @@ ZUEGE.push(
     kennzahlen: [['9', 'Wagen'], ['1990', 'gebaut'], ['500–508', 'Nummern'], ['Aushub', 'Ladung']],
     daten: { 'Bauart': 'Vierachsiger Kippwagen', 'Betreiber': 'BLS Netz AG', 'Spurweite': 'Normalspur, 1435 mm', 'Fahrzeugnummern': '31 63 6770 500–508, später 31 85 6770 500–508', 'Anzahl': '9', 'In Betrieb seit': '1990' },
     specOrder: ['Bauart', 'Betreiber', 'Spurweite', 'Fahrzeugnummern', 'Anzahl', 'In Betrieb seit'],
-    abschnitte: [{ titel: 'Die NEAT-Wagen von BLS Cargo', p: ['Die Wagen 510–529 (Baujahr 2000) und 530 (1995) gehörten BLS Cargo und fuhren Aushub der NEAT-Baustellen ab. Im April 2010 wurden sie an RTS verkauft und 2014 an MBC weitergegeben.'] }],
+    abschnitte: [{ titel: 'Hersteller und Flottenaufbau', p: ['Die neun Kippwagen wurden 1990 gebaut. Bei der BLS Netz AG tragen sie heute die Nummern 31 85 6770 500–508, früher 31 63 6770 500–508.'] }, { titel: 'Einsatz und Technik', p: ['Die Wagen transportieren Aushub von den Baustellen der BLS.'] }, { titel: 'Ausstattung und Zugänglichkeit', liste: ['Vier Achsen', 'Kippbarer Wagenkasten', 'Kein eigener Fahrantrieb, kein Fahrgastraum'] }, { titel: 'Die NEAT-Wagen von BLS Cargo', p: ['Die Wagen 510–529 (Baujahr 2000) und 530 (1995) gehörten BLS Cargo und fuhren Aushub der NEAT-Baustellen ab. Im April 2010 wurden sie an RTS verkauft und 2014 an MBC weitergegeben.'] }],
     quellen: ['Wikipedia – BLS-Güterwagen, Fans-u'],
     art: { typ: 'wagen', var: 'kipp', farbe: YEL },
     bilder: [
@@ -299,7 +274,7 @@ ZUEGE.push(
     daten: { 'Bauart': 'Zweiwege-Schienenschleiffahrzeug', 'Betreiber': 'BLS Netz AG', 'Spurweite': 'Normalspur, 1435 mm', 'Einsatz': 'Schleifen von Schienen und Weichen', 'In Betrieb seit': '2025' },
     specOrder: ['Bauart', 'Betreiber', 'Spurweite', 'Einsatz', 'In Betrieb seit'],
     specNote: 'Die BLS übernahm das Fahrzeug Ende 2024, der erste Ernsteinsatz war Anfang 2025 in Spiez geplant. Hersteller und technische Daten nennt die BLS nicht.',
-    abschnitte: [{ titel: 'Wozu schleifen?', p: ['Durch die Belastung der Räder entstehen auf Schienen feine Risse und Verformungen. Beim Schleifen wird das ursprüngliche Schienenprofil wiederhergestellt. So halten Schienen und Weichen länger, und die Züge fahren ruhiger.'] }],
+    abschnitte: [{ titel: 'Hersteller und Flottenaufbau', p: ['Die BLS übernahm das Fahrzeug Ende 2024; der erste Ernsteinsatz war Anfang 2025 in Spiez geplant. Hersteller und technische Daten nennt die BLS nicht.'] }, { titel: 'Einsatz und Technik', p: ['Ein eigenes BLS-Team kann damit kurzfristig auf Schienenfehler reagieren und wichtige Weichen vorbeugend schleifen, zusätzlich zu den grossen Schleifzügen.'] }, { titel: 'Ausstattung und Zugänglichkeit', liste: ['Fährt auf der Strasse und auf dem Gleis', 'Schleiftöpfe unter dem Fahrzeug für Schienen und Weichen', 'Kein Fahrgastraum'] }, { titel: 'Wozu schleifen?', p: ['Durch die Belastung der Räder entstehen auf Schienen feine Risse und Verformungen. Beim Schleifen wird das ursprüngliche Schienenprofil wiederhergestellt. So halten Schienen und Weichen länger, und die Züge fahren ruhiger.'] }],
     quellen: ['BLS – «Schienenschleifen», BLS Inside, Februar 2025'],
     art: { typ: 'spezial', var: 'montage', farbe: YEL, akzent: '#2E3338' },
     bilder: [] },
@@ -308,10 +283,9 @@ ZUEGE.push(
     kennzahlen: [['5', 'Typen auf Fotos belegt'], ['Ee 936', 'grösste Rangierlok'], ['Kandersteg', 'u. a. fotografiert'], ['BLS', 'Betreiber']],
     daten: { 'Bauart': 'Rangierloks und Rangiertraktoren', 'Betreiber': 'BLS AG', 'Spurweite': 'Normalspur, 1435 mm', 'Typen': 'Ee 936, Eea 935, Tem 225, Tm 235, Tea 245', 'Einsatz': 'Rangieren in Bahnhöfen und Werkstätten' },
     specOrder: ['Bauart', 'Betreiber', 'Spurweite', 'Typen', 'Einsatz'],
-    abschnitte: [{ titel: 'Auf Fotos belegt', tabelle: { kopf: ['Typ', 'Beispiel', 'Antrieb', 'Foto'], zeilen: [
+    abschnitte: [{ titel: 'Hersteller und Flottenaufbau', p: ['Die BLS nutzt Rangierloks und Traktoren der Typen Ee 936, Eea 935, Tem 225, Tm 235 und Tea 245. Einige stammen von Bahnen, die heute zur BLS gehören, etwa der Emmental–Burgdorf–Thun-Bahn. Wie viele Fahrzeuge jedes Typs die BLS heute besitzt, ist nicht öffentlich belegt.'] }, { titel: 'Einsatz und Technik', p: ['Die Fahrzeuge rangieren Wagen und Züge in Bahnhöfen und Werkstätten. Je nach Typ fahren sie elektrisch über die Fahrleitung, mit Dieselmotor oder mit Batterie.'] }, { titel: 'Ausstattung und Zugänglichkeit', liste: ['Kleine Loks und Traktoren für kurze Rangierfahrten', 'Kein Fahrgastraum'] }, { titel: 'Auf Fotos belegt', tabelle: { kopf: ['Typ', 'Beispiel', 'Antrieb', 'Foto'], zeilen: [
       ['Ee 936', '936 132', 'elektrisch', 'Kandersteg 2016'], ['Eea 935', '935 402', 'elektrisch und Batterie', 'Kandersteg 2016'],
-      ['Tem 225', '225 041', 'elektrisch und Diesel', 'Burgdorf 2018'], ['Tm 235', '235 091', 'Diesel', 'Spiez 2012'], ['Tea 245', '245 021', 'elektrisch und Batterie', 'ohne Ort']] } },
-      { p: ['Wie viele Fahrzeuge jedes Typs die BLS heute besitzt, ist nicht öffentlich belegt. Deshalb nennt RailBase hier nur Beispiele mit Foto.'] }],
+      ['Tem 225', '225 041', 'elektrisch und Diesel', 'Burgdorf 2018'], ['Tm 235', '235 091', 'Diesel', 'Spiez 2012'], ['Tea 245', '245 021', 'elektrisch und Batterie', 'ohne Ort']] } }],
     quellen: ['Wikimedia Commons – Fotos der BLS-Rangierfahrzeuge mit Nummern', 'Datenblätter HCKD zu Ee 936, Eea 935, Tem 225, Tm 235 und Tea 245, Oktober 2026'],
     art: { typ: 'rangier', farbe: BLS_GRUEN, akzent: '#2E3338', panto: true },
     bilder: [
@@ -327,7 +301,7 @@ ZUEGE.push(
     daten: { 'Bauart': 'Lösch- und Rettungszug', 'Betreiber': 'BLS AG', 'Spurweite': 'Normalspur, 1435 mm', 'Beispiel': 'LRZ 04', 'Länge': '80 m (LRZ 04)', 'Gewicht': '285 t (LRZ 04)', 'Standort': 'u. a. Interventionszentrum Frutigen', 'Einsatz': 'Tunnelrettung, Brandbekämpfung', 'In Betrieb seit': '2004' },
     specOrder: ['Bauart', 'Betreiber', 'Spurweite', 'Beispiel', 'Länge', 'Gewicht', 'Standort', 'Einsatz', 'In Betrieb seit'],
     specNote: 'Die Daten gelten für den LRZ 04, den die BLS für ihren Interventionsdienst nennt. Wie viele Züge es insgesamt gibt, ist nicht öffentlich belegt.',
-    abschnitte: [{ titel: 'Der LRZ 04', liste: ['Gerätefahrzeug', 'Tanklöschfahrzeug', 'zwei Rettungsfahrzeuge'] }],
+    abschnitte: [{ titel: 'Hersteller und Flottenaufbau', p: ['Für ihren Interventionsdienst nennt die BLS den LRZ 04 aus dem Jahr 2004. Wie viele Züge es insgesamt gibt, ist nicht öffentlich belegt.'] }, { titel: 'Einsatz und Technik', p: ['Die Züge stehen unter anderem beim Interventionszentrum in Frutigen bereit, am Nordportal des Lötschberg-Basistunnels. Sie bringen Löschmittel, Rettungskräfte und Atemschutz in lange Tunnel. Der LRZ 04 ist 80 m lang und wiegt 285 t.'] }, { titel: 'Ausstattung und Zugänglichkeit', liste: ['Gerätefahrzeug', 'Tanklöschfahrzeug', 'zwei Rettungsfahrzeuge'] }],
     quellen: ['BLS – «Einsatzbereit für den Ernstfall», Interventionsfahrzeuge (2025)', 'Wikimedia Commons – Foto «LRZ der BLS vor Interventionszentrum Frutigen»', 'Datenblatt HCKD «LRZ 04», Oktober 2026'],
     art: { typ: 'spezial', var: 'loesch', farbe: YEL, akzent: CRED },
     bilder: [
@@ -338,7 +312,7 @@ ZUEGE.push(
     kennzahlen: [['2011', 'Inbetriebnahme'], ['46 m', 'Länge'], ['101,5 t', 'Gewicht'], ['2', 'Wagen']],
     daten: { 'Bauart': 'Hilfswagen mit Zusatzwagen', 'Betreiber': 'BLS AG, Interventionsdienst', 'Spurweite': 'Normalspur, 1435 mm', 'Länge': '46 m', 'Gewicht': '101,5 t', 'Einsatz': 'Bergung, technische Intervention', 'In Betrieb seit': '2011' },
     specOrder: ['Bauart', 'Betreiber', 'Spurweite', 'Länge', 'Gewicht', 'Einsatz', 'In Betrieb seit'],
-    abschnitte: [],
+    abschnitte: [{ titel: 'Hersteller und Flottenaufbau', p: ['Der Hilfswagen ging 2011 in Betrieb und gehört zum Interventionsdienst der BLS AG. Er besteht aus dem eigentlichen Hilfswagen und einem Zusatzwagen. Einen Hersteller nennt die BLS nicht.'] }, { titel: 'Einsatz und Technik', p: ['Er kommt bei Entgleisungen und anderen Störungen zum Einsatz, um Fahrzeuge zu bergen und technische Hilfe zu leisten. Zusammen sind die beiden Wagen 46 m lang und wiegen 101,5 t.'] }, { titel: 'Ausstattung und Zugänglichkeit', liste: ['Ausrüstung für Bergung und technische Hilfe', 'Zusatzwagen', 'Kein Fahrgastraum'] }],
     quellen: ['BLS – «Einsatzbereit für den Ernstfall», Interventionsfahrzeuge (2025)'],
     art: { typ: 'wagen', geschlossen: true, farbe: YEL, akzent: CRED },
     bilder: [] },
@@ -348,7 +322,7 @@ ZUEGE.push(
     kennzahlen: [['1944', 'erste Lieferung'], ['2945 kW', 'Leistung'], ['125 km/h', 'Höchstgeschwindigkeit'], ['80 t', 'Gewicht']],
     daten: { 'Bauart': 'Elektrolokomotive Bo’Bo’', 'Hersteller': 'SLM und BBC', 'Betreiber': 'BLS, heute BLS Historic', 'Spurweite': 'Normalspur, 1435 mm', 'Länge': '15,6 m', 'Gewicht': '80 t', 'Leistung': '2945 kW', 'Höchstgeschwindigkeit': '125 km/h', 'Erhalten': 'Ae 415 251, betriebsfähig', 'In Betrieb seit': '1944' },
     specOrder: ['Bauart', 'Hersteller', 'Betreiber', 'Spurweite', 'Länge', 'Gewicht', 'Leistung', 'Höchstgeschwindigkeit', 'Erhalten', 'In Betrieb seit'],
-    abschnitte: [{ titel: 'Modernisiert', liste: ['Neue Stufenschalter und Drucklufthauptschalter', 'Doppelt so starke elektrische Bremse; dafür wurde ein Stromabnehmer abgebaut', 'Gummifedern statt Blattfedern', 'Seilzug, der die vorlaufenden Achsen stärker belastet und so die Haftung verbessert'] }],
+    abschnitte: [{ titel: 'Hersteller und Flottenaufbau', p: ['SLM und BBC bauten die Ae 4/4 der BLS; die erste ging 1944 in Betrieb. Später hiessen sie Ae 415. Die Ae 415 251 ist fahrtüchtig erhalten und kann bei der BLS gemietet werden.'] }, { titel: 'Einsatz und Technik', p: ['Die Ae 4/4 waren die ersten modernen vierachsigen Drehgestell-Lokomotiven mit 1000 PS pro Achse und gelten als Vorläufer aller modernen vierachsigen Hochleistungsloks. Sie leisten 2945 kW und fahren bis 125 km/h.'] }, { titel: 'Ausstattung und Zugänglichkeit', liste: ['Zwei Führerstände', 'Kein Fahrgastraum'] }, { titel: 'Modernisiert', liste: ['Neue Stufenschalter und Drucklufthauptschalter', 'Doppelt so starke elektrische Bremse; dafür wurde ein Stromabnehmer abgebaut', 'Gummifedern statt Blattfedern', 'Seilzug, der die vorlaufenden Achsen stärker belastet und so die Haftung verbessert'] }],
     quellen: ['BLS Historic – Ae 4/4, technische Daten und Geschichte', 'Datenblatt HCKD «Ae 4/4 (Ae 415)», Oktober 2026'],
     art: { typ: 'lok', form: 'kantig', farbe: BLS_BRAUN, akzent: '#E8DCC8', panto: true },
     bilder: [
@@ -359,7 +333,7 @@ ZUEGE.push(
     kennzahlen: [['8', 'gebaut 1926–1943'], ['4415 kW', 'Leistung'], ['100 km/h', 'Höchstgeschwindigkeit'], ['120 t', 'Gewicht']],
     daten: { 'Bauart': 'Elektrolokomotive (1’Co)(Co1’)', 'Hersteller': 'Elektrik SAAS; Mechanik Breda (201–204), SLM (205–208)', 'Betreiber': 'BLS, heute BLS-Stiftung', 'Spurweite': 'Normalspur, 1435 mm', 'Länge': '20,2 m', 'Gewicht': '120 t', 'Leistung': '4415 kW', 'Höchstgeschwindigkeit': '100 km/h', 'Erhalten': 'Ae 6/8 205', 'In Betrieb seit': '1926' },
     specOrder: ['Bauart', 'Hersteller', 'Betreiber', 'Spurweite', 'Länge', 'Gewicht', 'Leistung', 'Höchstgeschwindigkeit', 'Erhalten', 'In Betrieb seit'],
-    abschnitte: [{ titel: 'Zwei Serien', p: ['Die Nummern 201–204 entstanden 1926–1931 noch als Be 6/8, die 205–208 1939–1943 gleich als Ae 6/8 für 100 km/h. 1939 erhielten auch die ersten vier Loks neue Getriebe für Schnellzüge im Flachland.'] }],
+    abschnitte: [{ titel: 'Hersteller und Flottenaufbau', p: ['Die elektrische Ausrüstung lieferte die SAAS, den mechanischen Teil Breda (201–204) und SLM (205–208). Gebaut wurden die acht Loks von 1926 bis 1943. Die Ae 6/8 205 war 1939 an der Landesausstellung in Zürich ausgestellt und gehört heute der BLS-Stiftung.'] }, { titel: 'Einsatz und Technik', p: ['Die Ae 6/8 zogen schwere Züge auf der Lötschbergbahn und waren bei ihrer Entstehung die stärkste Lokomotive der Welt. Sie leisten 4415 kW und fahren bis 100 km/h.'] }, { titel: 'Ausstattung und Zugänglichkeit', liste: ['Sechs Triebachsen, Achsfolge (1’Co)(Co1’)', 'Kein Fahrgastraum'] }, { titel: 'Zwei Serien', p: ['Die Nummern 201–204 entstanden 1926–1931 noch als Be 6/8, die 205–208 1939–1943 gleich als Ae 6/8 für 100 km/h. 1939 erhielten auch die ersten vier Loks neue Getriebe für Schnellzüge im Flachland.'] }],
     quellen: ['BLS-Stiftung – Ae 6/8, technische Daten und Geschichte', 'Datenblatt HCKD «Ae 6/8», Oktober 2026'],
     art: { typ: 'lok', form: 'kantig', farbe: BLS_BRAUN, akzent: '#E8DCC8', panto: true },
     bilder: [
@@ -370,7 +344,7 @@ ZUEGE.push(
     kennzahlen: [['6475 kW', 'Leistung'], ['160 t', 'Gewicht'], ['125 km/h', 'Höchstgeschwindigkeit'], ['1959', 'erster Einsatz']],
     daten: { 'Bauart': 'Doppellokomotive Bo’Bo’+Bo’Bo’', 'Betreiber': 'BLS, heute BLS-Stiftung', 'Spurweite': 'Normalspur, 1435 mm', 'Länge': '30,2 m', 'Gewicht': '160 t', 'Leistung': '6475 kW', 'Höchstgeschwindigkeit': '125 km/h', 'Erhalten': 'Ae 8/8 273 und 275', 'In Betrieb seit': '1959' },
     specOrder: ['Bauart', 'Betreiber', 'Spurweite', 'Länge', 'Gewicht', 'Leistung', 'Höchstgeschwindigkeit', 'Erhalten', 'In Betrieb seit'],
-    abschnitte: [{ titel: 'Heute', p: ['In Dienst gestellt wurden die Ae 8/8 zwischen 1959 und 1966. Eine der letzten Aufgaben der 273 waren Züge mit Aushub aus dem Lötschberg-Basistunnel.', 'Die BLS-Stiftung sammelt Geld, um die 273 wieder fahrfähig zu machen. Die Zukunft der 275 ist wegen ihres Zustands ungewiss.'] }],
+    abschnitte: [{ titel: 'Hersteller und Flottenaufbau', p: ['Die BLS beschaffte die Doppellokomotiven ab 1956; in Dienst gestellt wurden sie zwischen 1959 und 1966. Erhalten sind die 273 und die 275 bei der BLS-Stiftung.'] }, { titel: 'Einsatz und Technik', p: ['Weil auf der Lötschbergstrecke immer mehr schwere Züge eine Vorspannlok brauchten, besteht die Ae 8/8 im Prinzip aus zwei fest gekuppelten Ae 4/4. Sie ist 30,2 m lang, wiegt 160 t, leistet 6475 kW und fährt bis 125 km/h.'] }, { titel: 'Ausstattung und Zugänglichkeit', liste: ['Doppellok aus zwei fest gekuppelten Hälften (Bo’Bo’+Bo’Bo’)', 'Kein Fahrgastraum'] }, { titel: 'Heute', p: ['In Dienst gestellt wurden die Ae 8/8 zwischen 1959 und 1966. Eine der letzten Aufgaben der 273 waren Züge mit Aushub aus dem Lötschberg-Basistunnel.', 'Die BLS-Stiftung sammelt Geld, um die 273 wieder fahrfähig zu machen. Die Zukunft der 275 ist wegen ihres Zustands ungewiss.'] }],
     quellen: ['BLS-Stiftung – Ae 8/8 «Muni», technische Daten und Geschichte', 'Datenblatt HCKD «Ae 8/8 – Muni», Oktober 2026'],
     art: { typ: 'lok', form: 'kantig', farbe: BLS_BRAUN, akzent: '#E8DCC8', panto: true },
     bilder: [
@@ -381,7 +355,7 @@ ZUEGE.push(
     kennzahlen: [['13', 'gebaut'], ['1913', 'erster Einsatz'], ['1840 kW', 'Stundenleistung'], ['75 km/h', 'Höchstgeschwindigkeit']],
     daten: { 'Bauart': 'Elektrolokomotive 1’E1’', 'Hersteller': 'SLM, MFO und BBC', 'Betreiber': 'BLS', 'Spurweite': 'Normalspur, 1435 mm', 'Fahrzeugnummern': '151–163', 'Länge': '16,0 m', 'Gewicht': '107 t', 'Leistung': '1840 kW (Stundenleistung)', 'Höchstgeschwindigkeit': '75 km/h, spätere Loks 80 km/h', 'Erhalten': 'eine Lok im Verkehrshaus der Schweiz', 'In Betrieb seit': '1913' },
     specOrder: ['Bauart', 'Hersteller', 'Betreiber', 'Spurweite', 'Fahrzeugnummern', 'Länge', 'Gewicht', 'Leistung', 'Höchstgeschwindigkeit', 'Erhalten', 'In Betrieb seit'],
-    abschnitte: [{ titel: 'Im Verkehrshaus', p: ['Im Verkehrshaus der Schweiz in Luzern steht seit 1959 die Lok 161 (ursprünglich 155). Sie ist dort als Nummer 151 beschriftet.'] }],
+    abschnitte: [{ titel: 'Hersteller und Flottenaufbau', p: ['SLM, MFO und BBC bauten die Lokomotiven mit den Nummern 151–163; die erste ging 1913 in Betrieb. Spätere Loks fuhren 80 statt 75 km/h.'] }, { titel: 'Einsatz und Technik', p: ['Die Be 5/7 war die erste Serienlok der elektrischen Lötschbergbahn und als Universallok für Schnell- und Güterzüge gedacht. Nach der Ankunft der Ae 4/4 fuhr sie vor allem Güterzüge. Sie leistet 1840 kW.'] }, { titel: 'Ausstattung und Zugänglichkeit', liste: ['Fünf Triebachsen, Achsfolge 1’E1’', 'Kein Fahrgastraum'] }, { titel: 'Im Verkehrshaus', p: ['Im Verkehrshaus der Schweiz in Luzern steht seit 1959 die Lok 161 (ursprünglich 155). Sie ist dort als Nummer 151 beschriftet.'] }],
     quellen: ['Wikipedia – BLS Be 5/7', 'Datenblatt HCKD «Be 5/7», Oktober 2026'],
     art: { typ: 'lok', form: 'kantig', farbe: BLS_BRAUN, akzent: '#E8DCC8', panto: true },
     bilder: [
@@ -392,7 +366,7 @@ ZUEGE.push(
     kennzahlen: [['1', 'Exemplar'], ['1910', 'gebaut'], ['1968', 'abgebrochen'], ['1,7 Mio. km', 'Laufleistung']],
     daten: { 'Bauart': 'Elektrolokomotive mit zwei dreiachsigen Triebgestellen', 'Hersteller': 'MFO und SLM', 'Betreiber': 'BLS', 'Spurweite': 'Normalspur, 1435 mm', 'Fahrzeugnummern': '121', 'Leistung': '2 × 1000 PS (Stundenleistung)', 'Höchstgeschwindigkeit': '70 km/h, später 60 km/h', 'Verbleib': '1968 abgebrochen, ein Drehgestell im Verkehrshaus', 'In Betrieb seit': '1910' },
     specOrder: ['Bauart', 'Hersteller', 'Betreiber', 'Spurweite', 'Fahrzeugnummern', 'Leistung', 'Höchstgeschwindigkeit', 'Verbleib', 'In Betrieb seit'],
-    abschnitte: [{ titel: 'Lange im Dienst', p: ['Ab 1928 fuhr die Lok bei der Bern–Neuenburg-Bahn Güterzüge. Am 10. Juli 1968 wurde sie nach 57 Jahren abgebrochen. Ein Drehgestell ist im Verkehrshaus Luzern ausgestellt.'] }],
+    abschnitte: [{ titel: 'Hersteller und Flottenaufbau', p: ['MFO und SLM bauten 1910 die einzelne Lok 121. Sie hiess zuerst F 2×3/3, dann Fc 2×3/3 und zuletzt Ce 6/6.'] }, { titel: 'Einsatz und Technik', p: ['Die Lok fuhr vor allem Güterzüge auf flacheren Strecken wie Thun–Interlaken, ab 1928 bei der Bern–Neuenburg-Bahn. Zwei Triebgestelle leisteten je 1000 PS; die Höchstgeschwindigkeit sank später von 70 auf 60 km/h.'] }, { titel: 'Ausstattung und Zugänglichkeit', liste: ['Zwei dreiachsige Triebgestelle', 'Kein Fahrgastraum'] }, { titel: 'Lange im Dienst', p: ['Ab 1928 fuhr die Lok bei der Bern–Neuenburg-Bahn Güterzüge. Am 10. Juli 1968 wurde sie nach 57 Jahren abgebrochen. Ein Drehgestell ist im Verkehrshaus Luzern ausgestellt.'] }],
     quellen: ['Wikipedia – BLS Ce 6/6', 'Datenblatt HCKD «Ce 6/6», Oktober 2026'],
     art: { typ: 'lok', form: 'kantig', farbe: BLS_BRAUN, akzent: '#E8DCC8', panto: true },
     bilder: [
@@ -403,7 +377,7 @@ ZUEGE.push(
     kennzahlen: [['17', 'Loks 301–317'], ['1920', 'Baujahr der 307'], ['993 kW', 'Leistung'], ['65 km/h', 'Höchstgeschwindigkeit']],
     daten: { 'Bauart': 'Elektrolokomotive mit Stangenantrieb', 'Betreiber': 'BLS-Gruppe, heute BLS-Stiftung', 'Spurweite': 'Normalspur, 1435 mm', 'Fahrzeugnummern': '301–317', 'Länge': '15,6 m', 'Gewicht': '70 t', 'Leistung': '993 kW', 'Höchstgeschwindigkeit': '65 km/h', 'Erhalten': 'Ce 4/6 307, nicht betriebsfähig', 'In Betrieb seit': '1920' },
     specOrder: ['Bauart', 'Betreiber', 'Spurweite', 'Fahrzeugnummern', 'Länge', 'Gewicht', 'Leistung', 'Höchstgeschwindigkeit', 'Erhalten', 'In Betrieb seit'],
-    abschnitte: [{ titel: 'Leicht gebaut', p: ['Weil die Loks vor allem auf Nebenlinien fahren sollten, durften sie höchstens 12 Tonnen Achsdruck haben. Die 308–317 wurden 1954–1956 zu Ce 4/4 umgebaut.', 'Die 307 ist seit 1999 historisches Fahrzeug der BLS und seit 2023 Eigentum der BLS-Stiftung.'] }],
+    abschnitte: [{ titel: 'Hersteller und Flottenaufbau', p: ['Die BLS-Gruppe erhielt ab 1920 die Loks 301–317. Die 308–317 wurden 1954–1956 zu Ce 4/4 umgebaut. Die Ce 4/6 307 der früheren Erlenbach–Zweisimmen-Bahn ist seit 2023 Eigentum der BLS-Stiftung.'] }, { titel: 'Einsatz und Technik', p: ['Die Loks fuhren vor allem auf Nebenlinien, die nach dem Dekret der Berner Regierung von 1918 elektrifiziert wurden. Sie leisten 993 kW und fahren bis 65 km/h.'] }, { titel: 'Ausstattung und Zugänglichkeit', liste: ['Stangenantrieb', 'Höchstens 12 t Achsdruck für Nebenlinien', 'Kein Fahrgastraum'] }, { titel: 'Leicht gebaut', p: ['Weil die Loks vor allem auf Nebenlinien fahren sollten, durften sie höchstens 12 Tonnen Achsdruck haben. Die 308–317 wurden 1954–1956 zu Ce 4/4 umgebaut.', 'Die 307 ist seit 1999 historisches Fahrzeug der BLS und seit 2023 Eigentum der BLS-Stiftung.'] }],
     quellen: ['BLS-Stiftung – Ce 4/6 307 «Dekretsmühle»', 'Datenblatt HCKD «Ce 4/6 307», Oktober 2026'],
     art: { typ: 'lok', form: 'kantig', farbe: BLS_BRAUN, akzent: '#E8DCC8', panto: true },
     bilder: [
@@ -414,7 +388,7 @@ ZUEGE.push(
     kennzahlen: [['1920', 'gebaut'], ['1957', 'Umbau der 312'], ['993 kW', 'Leistung'], ['65 km/h', 'Höchstgeschwindigkeit']],
     daten: { 'Bauart': 'Elektrolokomotive', 'Betreiber': 'BLS-Gruppe, heute BLS-Stiftung', 'Spurweite': 'Normalspur, 1435 mm', 'Fahrzeugnummern': '312 (früher GBS)', 'Länge': '12,34 m', 'Gewicht': '64 t', 'Leistung': '993 kW', 'Höchstgeschwindigkeit': '65 km/h', 'Erhalten': 'Ce 4/4 312, nicht betriebsfähig', 'In Betrieb seit': '1920' },
     specOrder: ['Bauart', 'Betreiber', 'Spurweite', 'Fahrzeugnummern', 'Länge', 'Gewicht', 'Leistung', 'Höchstgeschwindigkeit', 'Erhalten', 'In Betrieb seit'],
-    abschnitte: [{ p: ['Die 312 ist seit 2013 mit neu gespritztem Kasten historisches Fahrzeug der BLS und seit 2023 Eigentum der BLS-Stiftung. Sie kann bei Führungen besichtigt werden.'] }],
+    abschnitte: [{ titel: 'Hersteller und Flottenaufbau', p: ['Die Ce 4/4 entstanden 1954–1956 aus den ab 1920 gebauten Ce 4/6 308–317. Die 312, früher bei der GBS, ist seit 2013 mit neu gespritztem Kasten historisches Fahrzeug und seit 2023 Eigentum der BLS-Stiftung. Sie kann bei Führungen im Depot Burgdorf besichtigt werden.'] }, { titel: 'Einsatz und Technik', p: ['Beim Umbau wurden Vorbauten und Laufachsen entfernt. So stiegen Haftgewicht und Zugkraft, obwohl die Lok leichter wurde. Sie leistet 993 kW und fährt bis 65 km/h.'] }, { titel: 'Ausstattung und Zugänglichkeit', liste: ['Vier angetriebene Achsen', '12,34 m lang, 64 t', 'Kein Fahrgastraum'] }],
     quellen: ['BLS-Stiftung – Lokomotive Ce 4/4 312', 'Datenblatt HCKD «Ce 4/4 312», Oktober 2026'],
     art: { typ: 'lok', form: 'kantig', farbe: BLS_BRAUN, akzent: '#E8DCC8', panto: true },
     bilder: [] },
@@ -423,7 +397,7 @@ ZUEGE.push(
     kennzahlen: [['1938', 'gebaut'], ['136', 'Plätze'], ['110 km/h', 'Höchstgeschwindigkeit'], ['41,5 m', 'Länge']],
     daten: { 'Bauart': 'Elektrischer Doppeltriebwagen', 'Hersteller': 'Sécheron (Elektrik), SIG (Mechanik)', 'Betreiber': 'BLS-Gruppe, heute BLS Historic', 'Spurweite': 'Normalspur, 1435 mm', 'Fahrzeugnummern': '736 (früher BCFZe 4/6 der BN)', 'Länge': '41,5 m', 'Gewicht': '82 t', 'Leistung': '710 kW', 'Höchstgeschwindigkeit': '110 km/h', 'Sitzplätze': '136', 'In Betrieb seit': '1938' },
     specOrder: ['Bauart', 'Hersteller', 'Betreiber', 'Spurweite', 'Fahrzeugnummern', 'Länge', 'Gewicht', 'Leistung', 'Höchstgeschwindigkeit', 'Sitzplätze', 'In Betrieb seit'],
-    abschnitte: [{ titel: 'Geschichte', p: ['1935 führte die BLS einteilige Leichttriebwagen ein. Weil der Versuch gelang, bestellte sie drei Doppeltriebwagen BCFZe 4/6, die im Sommer 1938 kamen. Die 731 war 1939 an der Landesausstellung zu sehen.', 'Jahrzehntelang trugen die drei Züge den Personenverkehr der BLS-Gruppe, bis sie 1983 verkauft wurden. Die 736 der Bern–Neuenburg-Bahn ist erhalten.'] }],
+    abschnitte: [{ titel: 'Hersteller und Flottenaufbau', p: ['1935 führte die BLS einteilige Leichttriebwagen ein. Weil der Versuch gelang, bestellte sie drei Doppeltriebwagen BCFZe 4/6, die im Sommer 1938 kamen. Die 731 war 1939 an der Landesausstellung zu sehen.', 'Jahrzehntelang trugen die drei Züge den Personenverkehr der BLS-Gruppe, bis sie 1983 verkauft wurden. Die 736 der Bern–Neuenburg-Bahn ist erhalten.'] }, { titel: 'Einsatz und Technik', p: ['Die Doppeltriebwagen trugen jahrzehntelang den Personenverkehr der BLS-Gruppe. Ein Zug ist 41,5 m lang, leistet 710 kW und fährt bis 110 km/h. Die Elektrik stammt von Sécheron, die Mechanik von SIG.'] }, { titel: 'Ausstattung und Zugänglichkeit', liste: ['136 Sitzplätze', 'Grosse Fenster mit fast rundum freier Sicht', 'Fahrtüchtig, für Ausflüge mietbar'] }],
     quellen: ['BLS Historic – BCFe 4/6 «Blauer Pfeil», technische Daten und Geschichte', 'Datenblatt HCKD «BCFe 4/6 – Blauer Pfeil», Oktober 2026'],
     art: { typ: 'triebzug', nase: 'lang', farbe: '#2F5D9A', akzent: '#E8DCC8', tuer: '#1F3F6E', panto: true },
     bilder: [
@@ -434,7 +408,7 @@ ZUEGE.push(
     kennzahlen: [['1953', 'gebaut'], ['1470 kW', 'Leistung'], ['125 km/h', 'Höchstgeschwindigkeit'], ['56', 'Sitzplätze']],
     daten: { 'Bauart': 'Elektrischer Triebwagen', 'Frühere Bezeichnung': 'Ce 4/4, dann Be 4/4 761', 'Betreiber': 'BN, heute BLS Historic', 'Spurweite': 'Normalspur, 1435 mm', 'Fahrzeugnummern': '761–763 (erhalten: 761)', 'Länge': '23,7 m', 'Gewicht': '64 t', 'Leistung': '1470 kW', 'Höchstgeschwindigkeit': '125 km/h', 'Sitzplätze': '56', 'In Betrieb seit': '1953' },
     specOrder: ['Bauart', 'Frühere Bezeichnung', 'Betreiber', 'Spurweite', 'Fahrzeugnummern', 'Länge', 'Gewicht', 'Leistung', 'Höchstgeschwindigkeit', 'Sitzplätze', 'In Betrieb seit'],
-    abschnitte: [{ p: ['Die 761 und 762 kamen 1953 zur Bern–Neuenburg-Bahn, die 763 1956 zur GBS. Die 761 gehört seit 2003 zu den historischen Fahrzeugen der BLS und wurde 2010 innen umfassend renoviert.'] }],
+    abschnitte: [{ titel: 'Hersteller und Flottenaufbau', p: ['Die 761 und 762 kamen 1953 zur Bern–Neuenburg-Bahn, die 763 1956 zur GBS. Die 761 heisst heute Be 545 761 und gehört seit 2003 zu den historischen Fahrzeugen der BLS.'] }, { titel: 'Einsatz und Technik', p: ['Mit 2000 PS (1470 kW) konnte der Triebwagen sogar internationale Züge Bern–Paris zwischen Bern und Neuenburg ziehen. Er fährt bis 125 km/h.'] }, { titel: 'Ausstattung und Zugänglichkeit', liste: ['56 Sitzplätze', '2010 innen umfassend renoviert', 'Seit 2001 wieder im Originalanstrich hell- und dunkelgrün'] }],
     quellen: ['BLS Historic – Be 545 «Wellensittich», technische Daten und Geschichte', 'Datenblatt HCKD «Be 4/4 (Be 545) – Wellensittich», Oktober 2026'],
     art: { typ: 'triebzug', nase: 'kurz', farbe: '#7FB069', akzent: '#2F5A33', tuer: '#2F5A33', panto: true },
     bilder: [
@@ -445,7 +419,7 @@ ZUEGE.push(
     kennzahlen: [['1935', 'gebaut'], ['727, 787', 'Nummern'], ['1', 'Wagen'], ['BLS', 'Gruppe']],
     daten: { 'Bauart': 'Elektrischer Leichttriebwagen', 'Betreiber': 'BLS-Gruppe', 'Spurweite': 'Normalspur, 1435 mm', 'Fahrzeugnummern': '727, 787', 'In Betrieb seit': '1935' },
     specOrder: ['Bauart', 'Betreiber', 'Spurweite', 'Fahrzeugnummern', 'In Betrieb seit'],
-    abschnitte: [],
+    abschnitte: [{ titel: 'Hersteller und Flottenaufbau', p: ['1935 führte die BLS-Gruppe einteilige Leichttriebwagen ein, darunter die Ce 2/4 727 und 787. Erhaltene Daten zu diesen Triebwagen sind spärlich; Hersteller nennen die verwendeten Quellen nicht.'] }, { titel: 'Einsatz und Technik', p: ['Die Triebwagen waren ein Versuch mit leichten elektrischen Fahrzeugen. Weil er gelang, folgten 1938 die Doppeltriebwagen «Blauer Pfeil».'] }, { titel: 'Ausstattung und Zugänglichkeit', p: ['Zur Ausstattung sind keine verlässlichen Angaben veröffentlicht. Der Buchstabe C steht für Plätze der damaligen 3. Klasse.'] }],
     quellen: ['Wikipedia – BLS Ce 2/4 (Begriffsklärung mit Nummern und Baujahren)', 'BLS Historic – Geschichte des «Blauen Pfeils»', 'Datenblatt HCKD «Ce 2/4», Oktober 2026'],
     art: { typ: 'triebzug', nase: 'kurz', farbe: BLS_BRAUN, akzent: '#E8DCC8', tuer: '#4A2E1A', panto: true },
     bilder: [
@@ -456,7 +430,7 @@ ZUEGE.push(
     kennzahlen: [['13', 'Züge 1945–1964'], ['125 km/h', 'Höchstgeschwindigkeit'], ['1177 kW', 'Leistung spätere Züge'], ['2003', 'letzte ausgemustert']],
     daten: { 'Bauart': 'Elektrischer Doppeltriebwagen', 'Hersteller': 'SIG und SAAS, später auch BBC', 'Betreiber': 'BLS, SEZ, GBS, BN', 'Spurweite': 'Normalspur, 1435 mm', 'Fahrzeugnummern': '741–755', 'Länge': 'etwa 46,8–47,8 m', 'Leistung': '706 kW (741–743), 1177 kW (spätere)', 'Höchstgeschwindigkeit': '110 km/h, später 125 km/h', 'Erhalten': 'ex 742 bei Kerzers-Kallnach', 'In Betrieb seit': '1945' },
     specOrder: ['Bauart', 'Hersteller', 'Betreiber', 'Spurweite', 'Fahrzeugnummern', 'Länge', 'Leistung', 'Höchstgeschwindigkeit', 'Erhalten', 'In Betrieb seit'],
-    abschnitte: [],
+    abschnitte: [{ titel: 'Hersteller und Flottenaufbau', p: ['SIG und SAAS, später auch BBC, bauten die Doppeltriebwagen 741–755 für BLS, SEZ, GBS und BN. Der erste fuhr 1945. Erhalten ist nur die ehemalige 742 bei der Bahnmuseum-Gruppe Kerzers-Kallnach.'] }, { titel: 'Einsatz und Technik', p: ['Die Züge fuhren im Regionalverkehr der BLS-Gruppe, etwa im Simmental, zwischen Spiez und Interlaken und im Gürbetal, oft als Pendelzug mit Steuerwagen. Die ersten (741–743) leisteten 706 kW, spätere 1177 kW; die Höchstgeschwindigkeit stieg von 110 auf 125 km/h.'] }, { titel: 'Ausstattung und Zugänglichkeit', liste: ['Doppeltriebwagen, etwa 47 m lang', 'Gepäckabteil (Buchstabe D)', 'Hochflurige Einstiege mit Stufen'] }],
     quellen: ['Wikipedia – BLS ABDe 4/8', 'Datenblatt HCKD «ABDe 4/8», Oktober 2026'],
     art: { typ: 'triebzug', nase: 'kurz', farbe: BLS_BRAUN, akzent: '#E8DCC8', tuer: '#4A2E1A', panto: true },
     bilder: [
@@ -467,7 +441,7 @@ ZUEGE.push(
     kennzahlen: [['22', 'Triebwagen'], ['125 km/h', 'Höchstgeschwindigkeit'], ['1650 kW', 'Dauerleistung'], ['1982', 'erster Einsatz']],
     daten: { 'Bauart': 'Elektrischer Triebwagen für Pendelzüge', 'Hersteller': 'SIG, SWS, SWP, BBC und ABB', 'Betreiber': 'BLS', 'Spurweite': 'Normalspur, 1435 mm', 'Fahrzeugnummern': '721–742', 'Leistung': '1650 kW (Dauerleistung)', 'Höchstgeschwindigkeit': '125 km/h', 'Anzahl': '22', 'In Betrieb seit': '1982' },
     specOrder: ['Bauart', 'Hersteller', 'Betreiber', 'Spurweite', 'Fahrzeugnummern', 'Leistung', 'Höchstgeschwindigkeit', 'Anzahl', 'In Betrieb seit'],
-    abschnitte: [],
+    abschnitte: [{ titel: 'Hersteller und Flottenaufbau', p: ['SIG, SWS, SWP, BBC und ABB bauten 22 Triebwagen mit den Nummern 721–742; der erste ging 1982 in Betrieb.'] }, { titel: 'Einsatz und Technik', p: ['Die Triebwagen fuhren mit Zwischen- und Steuerwagen im Regional- und S-Bahn-Verkehr der BLS. Sie leisten 1650 kW dauernd und fahren bis 125 km/h. Von 2022 bis 2025 wurden sie durch die MIKA abgelöst.'] }, { titel: 'Ausstattung und Zugänglichkeit', liste: ['Pendelzug mit Zwischen- und Steuerwagen', 'Gepäckabteil im Triebwagen (Buchstabe D)', 'Hochflurige Einstiege im Triebwagen'] }],
     quellen: ['Wikipedia – BLS RBDe 4/4', 'Datenblatt HCKD «RBDe 565 – NPZ», Oktober 2026'],
     art: { typ: 'triebzug', nase: 'kurz', farbe: W1, akzent: BLS_GRUEN, tuer: BLS_GRUEN, panto: true },
     bilder: [
@@ -478,7 +452,7 @@ ZUEGE.push(
     kennzahlen: [['13', 'Triebwagen'], ['1984', 'erster Einsatz'], ['2024', 'letzte Fahrt'], ['230–242', 'Nummern']],
     daten: { 'Bauart': 'Elektrischer Triebwagen für Pendelzüge', 'Betreiber': 'EBT-Gruppe und RM, ab 2006 BLS', 'Spurweite': 'Normalspur, 1435 mm', 'Fahrzeugnummern': '230–242', 'Anzahl': '13', 'Verbleib': '566 241 mit Wagen beim Verein Pendelzug Mirage', 'In Betrieb seit': '1984' },
     specOrder: ['Bauart', 'Betreiber', 'Spurweite', 'Fahrzeugnummern', 'Anzahl', 'Verbleib', 'In Betrieb seit'],
-    abschnitte: [],
+    abschnitte: [{ titel: 'Hersteller und Flottenaufbau', p: ['Die 13 Triebwagen 230–242 wurden 1984–1985 für die EBT-Gruppe gebaut und kamen mit der Fusion von 2006 zur BLS. Die 566 241 ist mit Wagen beim Verein Pendelzug Mirage erhalten.'] }, { titel: 'Einsatz und Technik', p: ['Die Züge fuhren unter anderem Spiez–Frutigen, Brig–Goppenstein, in der S-Bahn Bern und zwischen Thun und Solothurn. Die letzte planmässige Fahrt war am 6. Dezember 2024.'] }, { titel: 'Ausstattung und Zugänglichkeit', liste: ['Triebwagen für Pendelzüge mit Zwischen- und Steuerwagen', 'Gepäckabteil (Buchstabe D)', 'Hochflurige Einstiege im Triebwagen'] }],
     quellen: ['Wikipedia – EBT RBDe 4/4 II', 'Datenblatt HCKD «RBDe 566 II», Oktober 2026'],
     art: { typ: 'triebzug', nase: 'kurz', farbe: W1, akzent: BLS_GRUEN, tuer: BLS_GRUEN, panto: true },
     bilder: [
@@ -489,7 +463,7 @@ ZUEGE.push(
     kennzahlen: [['13', 'Züge'], ['2013', 'an die SBB'], ['2018', 'an Thurbo'], ['Stadler', 'Hersteller']],
     daten: { 'Bauart': 'Elektrischer Gelenktriebwagen', 'Fahrzeugfamilie': 'GTW', 'Hersteller': 'Stadler', 'Betreiber': 'RM, dann BLS, SBB, Thurbo', 'Spurweite': 'Normalspur, 1435 mm', 'Anzahl': '13' },
     specOrder: ['Bauart', 'Fahrzeugfamilie', 'Hersteller', 'Betreiber', 'Spurweite', 'Anzahl'],
-    abschnitte: [],
+    abschnitte: [{ titel: 'Hersteller und Flottenaufbau', p: ['Stadler baute die 13 Gelenktriebwagen GTW für die Regionalverkehr Mittelland (RM). Mit der Fusion kamen sie zur BLS.'] }, { titel: 'Einsatz und Technik', p: ['2013 verkaufte die BLS die Züge an die SBB, die sie im Jura ab Biel einsetzte; 2018 gingen sie an Thurbo. Heute fahren sie nicht mehr bei der BLS.'] }, { titel: 'Ausstattung und Zugänglichkeit', liste: ['Elektrischer Gelenktriebwagen der Stadler-Familie GTW', 'Teilweise niederflurig'] }],
     quellen: ['RailPictures.net – Bildbeschreibung zur Geschichte der RM-GTW', 'Wikimedia Commons – Kategorie «THB ex SBB ex BLS ex RM RABe 526»', 'Datenblatt HCKD «RABe 526 – Stadler GTW», Oktober 2026'],
     art: { typ: 'triebzug', nase: 'kurz', farbe: CRED, akzent: W1, tuer: '#8E1A1F', panto: true },
     bilder: [
@@ -500,7 +474,7 @@ ZUEGE.push(
     kennzahlen: [['1973', 'erster Einsatz'], ['2021', 'ausser Betrieb'], ['165 m', 'Zuglänge'], ['140 km/h', 'Höchstgeschwindigkeit']],
     daten: { 'Bauart': 'Pendelzug mit Lok und 6 Wagen', 'Wagen': 'AD/ABS, A, B, B, B, Bt', 'Lokomotive': 'Re 465 (Kambly-Zug: Re 420)', 'Betreiber': 'BLS', 'Spurweite': 'Normalspur, 1435 mm', 'Länge': '165 m', 'Gewicht': '263 t', 'Höchstgeschwindigkeit': '140 km/h', 'Sitzplätze': '63 in der 1., 280 in der 2. Klasse', 'In Betrieb seit': '1973' },
     specOrder: ['Bauart', 'Wagen', 'Lokomotive', 'Betreiber', 'Spurweite', 'Länge', 'Gewicht', 'Höchstgeschwindigkeit', 'Sitzplätze', 'In Betrieb seit'],
-    abschnitte: [],
+    abschnitte: [{ titel: 'Hersteller und Flottenaufbau', p: ['Die BLS setzte die Pendelzüge mit Einheitswagen III von 1973 bis Ende 2021 ein. Ein Zug bestand aus Lok und sechs Wagen: AD/ABS, A, B, B, B und Steuerwagen Bt. SBB Historic hat einen Zug übernommen und erhält ihn.'] }, { titel: 'Einsatz und Technik', p: ['Zuletzt fuhren die Züge vor allem als RegioExpress Bern–Neuchâtel, gezogen von einer Re 465, der Kambly-Zug von einer Re 420. Ein Zug ist 165 m lang, wiegt 263 t und fährt bis 140 km/h. Die MIKA ersetzten sie.'] }, { titel: 'Ausstattung und Zugänglichkeit', liste: ['63 Plätze in der 1. und 280 in der 2. Klasse', 'Steuerwagen Bt für den Pendelbetrieb', 'Hochflurige Einstiege mit Stufen'] }],
     quellen: ['BLS – Flotte: EWIII-Pendelzug mit Lokomotive', 'Datenblatt HCKD «EW III – Pendelzug», Oktober 2026'],
     art: { typ: 'wagen', farbe: W1, akzent: BLS_GRUEN },
     bilder: [
@@ -511,7 +485,7 @@ ZUEGE.push(
     kennzahlen: [['4700 kW', 'Leistung'], ['140 km/h', 'Höchstgeschwindigkeit'], ['80 t', 'Gewicht'], ['14,8 m', 'Länge']],
     daten: { 'Bauart': 'Elektrolokomotive Bo’Bo’', 'Fahrzeugfamilie': 'Re 4/4 II', 'Betreiber': 'BLS (früher)', 'Spurweite': 'Normalspur, 1435 mm', 'Länge': '14,8 m', 'Gewicht': '80 t', 'Leistung': '4700 kW', 'Höchstgeschwindigkeit': '140 km/h' },
     specOrder: ['Bauart', 'Fahrzeugfamilie', 'Betreiber', 'Spurweite', 'Länge', 'Gewicht', 'Leistung', 'Höchstgeschwindigkeit'],
-    abschnitte: [],
+    abschnitte: [{ titel: 'Hersteller und Flottenaufbau', p: ['Die BLS hatte zeitweise eigene Re 420 aus der Familie Re 4/4 II. Heute besitzt sie keine Loks dieses Typs mehr.'] }, { titel: 'Einsatz und Technik', p: ['Die letzten drei zogen die Wagen der GoldenPass Line zwischen Interlaken Ost und Zweisimmen. Die Lok ist 14,8 m lang, wiegt 80 t, leistet 4700 kW und fährt bis 140 km/h.'] }, { titel: 'Ausstattung und Zugänglichkeit', liste: ['Zwei Führerstände', 'Kein Fahrgastraum'], p: ['Die Zugänglichkeit hing von den gezogenen Wagen ab.'] }],
     quellen: ['BLS – Flotte: Re 420', 'Datenblatt HCKD «Re 420 – Re 4/4 II», Oktober 2026'],
     art: { typ: 'lok', form: 'kantig', farbe: BLS_GRUEN, panto: true },
     bilder: [
