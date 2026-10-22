@@ -161,10 +161,11 @@ function Build-Page([string]$l, [string]$start, [string]$titel, [string]$text, [
     $img = if ($bild) { $bild } else { 'bilder/slides/slide-01.jpg' }
     $meta += "<meta property=`"og:image`" content=`"$base$img`">`n<meta name=`"twitter:card`" content=`"summary_large_image`">`n"
     # Startseite: Name der Website für Google (erscheint dann als «RailBase» über dem Suchtreffer)
-    if (-not $start) { $meta += "<script type=`"application/ld+json`">{`"@context`":`"https://schema.org`",`"@type`":`"WebSite`",`"name`":`"RailBase`",`"alternateName`":[`"RailBase Train Database`",`"railbase.ch`"],`"url`":`"$base`"}</script>`n" }
+    if (-not $start) { $meta += "<script type=`"application/ld+json`">{`"@context`":`"https://schema.org`",`"@type`":`"WebSite`",`"name`":`"RailBase`",`"alternateName`":[`"RailBase Train Database`",`"railbase.ch`"],`"url`":`"$base`"}</script>`n<script type=`"application/ld+json`">{`"@context`":`"https://schema.org`",`"@type`":`"Organization`",`"name`":`"RailBase`",`"url`":`"$base`",`"logo`":`"${base}bilder/app/icon-512.png`"}</script>`n" }
   }
   if ($start -eq 'vergleich' -or $start -eq 'sammlung') { $meta +="<meta name=`"robots`" content=`"noindex`">`n" }
-  $meta += "<link rel=`"icon`" href=`"favicon.svg`" type=`"image/svg+xml`">`n"
+  # Favicon: SVG für Browser, dazu PNG (192 px, ein Vielfaches von 48 px wie von Google verlangt) und favicon.ico
+  $meta += "<link rel=`"icon`" href=`"favicon.svg`" type=`"image/svg+xml`">`n<link rel=`"icon`" href=`"bilder/app/icon-192.png`" sizes=`"192x192`" type=`"image/png`">`n<link rel=`"icon`" href=`"favicon.ico`" sizes=`"48x48`">`n"
   # als App installierbar (manifest.webmanifest, sw.js und js/app.js)
   $meta += "<link rel=`"manifest`" href=`"manifest.webmanifest`">`n<meta name=`"theme-color`" content=`"#D71920`">`n"
   $meta += "<link rel=`"apple-touch-icon`" href=`"bilder/app/apple-touch-icon.png`">`n<meta name=`"apple-mobile-web-app-capable`" content=`"yes`">`n<meta name=`"apple-mobile-web-app-title`" content=`"RailBase`">`n"
@@ -183,6 +184,8 @@ foreach ($l in $sprachen) {
 
 # ---------- Dateien kopieren ----------
 foreach ($d in 'css', 'js', 'bilder', 'schrift') { Copy-Item -Recurse (Join-Path $root $d) (Join-Path $out $d) }
+# Google und ältere Browser fragen direkt nach /favicon.ico (48 × 48 px, aus bilder/app/icon-192.png)
+Copy-Item (Join-Path $root 'bilder\app\favicon.ico') (Join-Path $out 'favicon.ico')
 # Browser-Symbol aus dem Logo: quadratisch, weisse Fläche, Gleis dunkel
 $logo = [regex]::Match($body, '<symbol id="logo" viewBox="([^"]+)">([\s\S]*?)</symbol>')
 if ($logo.Success) {
