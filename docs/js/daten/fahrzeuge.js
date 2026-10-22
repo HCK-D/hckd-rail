@@ -13,7 +13,7 @@ const KATS = [
   { id: 'infrastruktur', code: 'I', name: 'Infrastruktur', text: 'Fahrzeuge für Bau, Unterhalt und Logistik am Netz: Bauzuglokomotiven und Baudienstfahrzeuge.', rep: 'aem-940', gruppen: ['Lokomotiven und Traktoren', 'Schotter- und Kippwagen', 'Schienentransport', 'Werkstatt- und Mannschaftswagen'], bild: 'bilder/aem-940-c1.jpg', bildPos: 'center 62%' },
   { id: 'rangier', code: 'R', name: 'Rangierfahrzeuge', text: 'Lokomotiven und Traktoren für das Rangieren in Bahnhöfen, Abstellanlagen und Anschlussgleisen.', rep: 'eem-923', bild: 'bilder/ee-922-c3.jpg', bildPos: 'center 60%' },
   { id: 'dienst', code: 'D', name: 'Dienst- und Spezialfahrzeuge', text: 'Lösch- und Rettungszüge, Schneeräumung, Messfahrzeuge, Krane und Fahrleitungsfahrzeuge.', rep: 'xrotm', bild: 'bilder/lrz-18-c1.jpg', bildPos: 'center 65%' },
-  { id: 'historisch', code: 'H', name: 'Historische Fahrzeuge', text: 'Klassiker von SBB, BLS, TPF, SOB und transN, die heute nicht mehr im Alltag fahren. Viele sind bei SBB Historic, der BLS-Stiftung, GFM Historique, RVT-Historique, in Vereinen oder in Museen erhalten.', rep: 'h-ce68ii', bild: 'bilder/h-ce68ii-c1.jpg', bildPos: 'center 60%' }
+  { id: 'historisch', code: 'H', name: 'Historische Fahrzeuge', text: 'Klassiker von SBB, BLS, TPF, SOB, transN und RhB, die heute nicht mehr im Alltag fahren. Viele sind bei SBB Historic, der BLS-Stiftung, GFM Historique, RVT-Historique, historic RhB, in Vereinen oder in Museen erhalten.', rep: 'h-ce68ii', bild: 'bilder/h-ce68ii-c1.jpg', bildPos: 'center 60%' }
 ];
 
 const W1 = '#F3F4F2', RED = '#D71920', CRED = '#C8102E', YEL = '#E8B400', ORA = '#E0661B';

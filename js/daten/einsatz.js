@@ -408,3 +408,84 @@ Object.assign(EINSATZ, {
   'trn-g-3-3-1': { linien: [['Le Locle', 'Les Brenets']], orte: [BLONAY_CHAMBY], text: 'Von 1890 bis 1950 auf der Strecke Le Locle–Les Brenets. Heute bei der Museumsbahn Blonay–Chamby.' + TRN_MS },
   'trn-kkl-41': { linien: [['Le Locle', 'Les Brenets']], text: 'Fotografiert 2014 im Bahnhof Les Brenets an der Meterspurstrecke Le Locle–Les Brenets.' + TRN_MS }
 });
+/* =====================================================================
+   Rhätische Bahn (Oktober 2026): Meterspur mit «linien» (gestrichelt).
+   Zusätzliche Bahnhöfe (LV95, geo.admin.ch, auf etwa 1 km genau).
+   ===================================================================== */
+Object.assign(BAHNHOF_EXTRA, {
+  'Thusis': [2753194, 1174068], 'Tiefencastel': [2763726, 1169897], 'Bergün/Bravuogn': [2776803, 1166750], 'Preda': [2779183, 1162427],
+  'Bever': [2787886, 1158562], 'Poschiavo': [2801750, 1133654], 'Ospizio Bernina': [2798656, 1143340], 'Alp Grüm': [2799460, 1139158],
+  'Brusio': [2806891, 1126819], 'Campocologno': [2808466, 1123824], 'Reichenau-Tamins': [2750427, 1187915], 'Arosa': [2770870, 1183194],
+  'Sagliains': [2802982, 1182560], 'Klosters Selfranga': [2786463, 1192331], 'Mesocco': [2738026, 1139728], 'Castione-Arbedo': [2723791, 1120674],
+  'Grono': [2731772, 1123312], 'Realp': [2681564, 1161330], 'Untervaz-Trimmis': [2761469, 1198622], 'Davos Wolfgang': [2784409, 1189288]
+});
+const RHB_STAMM = ['Landquart', 'Untervaz-Trimmis', 'Chur'];
+const RHB_ALBULA = ['Chur', 'Reichenau-Tamins', 'Thusis', 'Tiefencastel', 'Filisur', 'Bergün/Bravuogn', 'Preda', 'Bever', 'Samedan', 'St. Moritz'];
+const RHB_PRAETTIGAU = ['Landquart', 'Klosters Platz', 'Davos Wolfgang', 'Davos Platz', 'Filisur'];
+const RHB_ENGADIN = ['Bever', 'Zernez', 'Sagliains', 'Scuol-Tarasp'];
+const RHB_VEREINA = ['Klosters Platz', 'Klosters Selfranga', 'Sagliains'];
+const RHB_BERNINA = ['St. Moritz', 'Pontresina', 'Ospizio Bernina', 'Alp Grüm', 'Poschiavo', 'Brusio', 'Campocologno', 'Tirano'];
+const RHB_SURSELVA = ['Reichenau-Tamins', 'Ilanz', 'Disentis/Mustér'];
+const RHB_AROSA = ['Chur', 'Arosa'];
+const RHB_MISOX = ['Bellinzona', 'Castione-Arbedo', 'Grono', 'Mesocco'];
+const RHB_AC = [RHB_STAMM, RHB_ALBULA, RHB_PRAETTIGAU, RHB_ENGADIN, RHB_VEREINA, RHB_SURSELVA, RHB_AROSA];
+const RHB_ALLE = [...RHB_AC, RHB_BERNINA];
+const RHB_BERGUEN = ['Bergün/Bravuogn'];
+const RHB_MS = ' Die Meterspur ist gestrichelt und vereinfacht eingezeichnet.';
+Object.assign(EINSATZ, {
+  'rhb-capricorn': { linien: [RHB_STAMM, RHB_PRAETTIGAU, RHB_VEREINA, RHB_ENGADIN, ['Bever', 'Samedan', 'St. Moritz'], ['Chur', 'Reichenau-Tamins'], RHB_SURSELVA], text: 'Laut RhB auf Landquart–Davos–Filisur, Landquart–Scuol, Landquart–St. Moritz und Chur–Disentis/Mustér.' + RHB_MS },
+  'rhb-allegra': { linien: [RHB_ALBULA, RHB_BERNINA, RHB_STAMM, RHB_AROSA], text: 'Auf dem Stammnetz und auf der Berninalinie bis Tirano, etwa im Bernina Express von Chur über die Albula.' + RHB_MS },
+  'rhb-allegra-stz': { linien: [RHB_STAMM, ['Chur', 'Reichenau-Tamins', 'Thusis']], text: 'Vor allem im Pendlerverkehr rund um Chur, etwa auf der S-Bahn Chur–Thusis.' + RHB_MS },
+  'rhb-alvra': { linien: [RHB_ALBULA], text: 'Auf der Albulalinie zwischen Chur und St. Moritz.' + RHB_MS },
+  'rhb-ge44ii': { linien: RHB_AC, text: 'Auf dem ganzen Wechselstromnetz der RhB, auch auf der Arosalinie.' + RHB_MS },
+  'rhb-ge44iii': { linien: [RHB_ALBULA, RHB_STAMM, RHB_VEREINA, RHB_SURSELVA, RHB_PRAETTIGAU], text: 'Vor Schnellzügen über die Albula, vor dem Glacier Express und vor den Autozügen durch den Vereinatunnel.' + RHB_MS },
+  'rhb-panorama': { linien: [RHB_ALBULA, RHB_BERNINA, RHB_SURSELVA], text: 'Im Bernina Express von Chur über die Albula und den Berninapass nach Tirano; offene Aussichtswagen auch in der Rheinschlucht.' + RHB_MS },
+  'rhb-glacier': { linien: [RHB_ALBULA, RHB_PRAETTIGAU, RHB_SURSELVA], orte: [['Realp']], text: 'Im Glacier Express von St. Moritz und Davos über Chur und Disentis/Mustér weiter auf dem Netz der MGB nach Zermatt.' + RHB_MS },
+  'rhb-ew': { linien: RHB_ALLE, text: 'In lokbespannten Zügen auf dem ganzen Netz der RhB.' + RHB_MS },
+  'rhb-steuerwagen': { linien: [...RHB_AC], text: 'In Pendelzügen mit Lok auf dem Stammnetz und in den Autozügen.' + RHB_MS },
+  'rhb-gastro': { linien: [RHB_ALBULA, RHB_BERNINA, RHB_SURSELVA], text: 'In Sonder- und Charterzügen, etwa im Alpine Classic Pullman Express.' + RHB_MS },
+  'rhb-vereina': { linien: [RHB_VEREINA], orte: [['Klosters Selfranga'], ['Sagliains']], text: 'Zwischen den Verladestationen Klosters Selfranga und Sagliains durch den Vereinatunnel.' + RHB_MS },
+  'rhb-gepaeckwagen': { linien: RHB_AC, text: 'In Zügen des Stammnetzes; die Velowagen BD 56401–56406 fahren in den Alvra-Zügen auf der Albula.' + RHB_MS },
+  'rhb-haik': { linien: RHB_ALLE, text: 'Im Güterverkehr in die Täler Graubündens.' + RHB_MS },
+  'rhb-uac': { linien: RHB_AC, text: 'Im Güterverkehr auf dem Netz der RhB.' + RHB_MS },
+  'rhb-za': { linien: RHB_ALLE, text: 'Bei der Versorgung Graubündens mit Mineralöl, auf dem ganzen Netz.' + RHB_MS },
+  'rhb-fac': { linien: RHB_AC, text: 'Für Kies und andere Schüttgüter auf dem Netz der RhB.' + RHB_MS },
+  'rhb-flachwagen': { linien: RHB_ALLE, text: 'Im Güterverkehr mit Maschinen, Holz, Stahl und Containern auf dem ganzen Netz.' + RHB_MS },
+  'rhb-acts': { linien: RHB_ALLE, text: 'Im Containerverkehr auf dem ganzen Netz der RhB.' + RHB_MS },
+  'rhb-container': { linien: RHB_ALLE, text: 'Im Containerverkehr auf dem ganzen Netz der RhB.' + RHB_MS },
+  'rhb-spezialtransport': { linien: RHB_AC, text: 'Für schwere und hohe Ladungen auf dem Netz der RhB.' + RHB_MS },
+  'rhb-geaf22': { orte: [['Landquart'], ['Chur'], ['Ilanz'], ['Thusis'], ['Davos Platz'], ['Zernez']], text: 'Im Rangierdienst, unter anderem in Landquart, Chur, Ilanz, Thusis, Davos Platz und Zernez.' },
+  'rhb-ge33': { orte: [['Samedan'], ['Chur']], text: 'Im Rangierdienst in Samedan und Chur.' },
+  'rhb-gmf44-242': { orte: [['Klosters Platz'], ['Landquart'], ['Davos Platz']], linien: [RHB_STAMM, RHB_PRAETTIGAU], text: 'Im Rangierdienst auf dem Stammnetz, etwa in Klosters Platz, Landquart und Davos.' + RHB_MS },
+  'rhb-taf22': { orte: [['Landquart'], ['Poschiavo']], text: 'In Werkstätten und Depots, unter anderem in Landquart und Poschiavo.' },
+  'rhb-gmf44ii': { linien: RHB_ALLE, text: 'Vor Bauzügen und im Winter mit Schneeschleudern im ganzen Netz der RhB.' + RHB_MS },
+  'rhb-gem44': { linien: [RHB_BERNINA], orte: [['Pontresina'], ['Poschiavo']], text: 'Auf der Berninalinie, stationiert in Pontresina und Poschiavo; mit Diesel auch auf dem Stammnetz.' + RHB_MS },
+  'rhb-tm': { linien: RHB_ALLE, text: 'Im Rangierdienst und vor kleinen Bauzügen auf dem ganzen Netz.' + RHB_MS },
+  'rhb-tieflade': { linien: RHB_ALLE, text: 'In der Baustellenlogistik auf dem Netz der RhB.' + RHB_MS },
+  'rhb-windhoff': { linien: RHB_ALLE, text: 'Ab 2029 geplant für Bau und Unterhalt auf dem ganzen Netz der RhB.' + RHB_MS },
+  'rhb-dienstwagen': { linien: RHB_ALLE, text: 'Für Bahnbau, Messungen und Material auf dem ganzen Netz.' + RHB_MS },
+  'rhb-loeref': { linien: [RHB_VEREINA], orte: [['Klosters Selfranga'], ['Sagliains']], text: 'Für Einsätze im Vereinatunnel, stationiert an beiden Tunnelseiten.' + RHB_MS },
+  'rhb-fahrleitung': { linien: RHB_ALLE, text: 'Für Arbeiten an der Fahrleitung auf dem ganzen Netz.' + RHB_MS },
+  'rhb-schneeschleuder': { linien: RHB_ALLE, text: 'Im Winter auf dem Stammnetz und auf der Berninalinie.' + RHB_MS },
+  'rhb-ge66i': { linien: [RHB_ALBULA, RHB_STAMM], orte: [['Luzern'], RHB_BERGUEN], text: 'Früher vor allem auf der Albulalinie. Erhalten in Landquart und Samedan sowie im Verkehrshaus Luzern und in Bergün.' + RHB_MS },
+  'rhb-ge66ii': { linien: [RHB_ALBULA, RHB_STAMM, RHB_PRAETTIGAU, RHB_SURSELVA], orte: [['Luzern']], text: 'Früher vor schweren Zügen auf dem Stammnetz; die 702 steht im Verkehrshaus Luzern.' + RHB_MS },
+  'rhb-ge44i': { linien: RHB_AC, text: 'Früher auf dem ganzen Wechselstromnetz; die 605 fährt heute vor historischen Zügen.' + RHB_MS },
+  'rhb-ge24': { linien: [RHB_ENGADIN, RHB_STAMM], orte: [['Luzern'], RHB_BERGUEN], text: 'Zuerst auf der Engadinerlinie Bever–Scuol; erhalten in Landquart, im Verkehrshaus Luzern und beim Bahnmuseum Albula.' + RHB_MS },
+  'rhb-ge46': { linien: [RHB_ENGADIN, RHB_ALBULA], text: 'Zuerst auf der Engadinerlinie, später auf dem Stammnetz; die 353 fährt vor Museumszügen.' + RHB_MS },
+  'rhb-bernina-loks': { linien: [RHB_BERNINA], orte: [['Blonay–Chamby', 2559237, 1144746]], text: 'Auf der Berninalinie; die 81 fährt heute bei der Museumsbahn Blonay–Chamby.' + RHB_MS },
+  'rhb-g34': { linien: [RHB_PRAETTIGAU, RHB_STAMM], text: 'Ab 1889 auf der Landquart–Davos-Bahn; heute vor Dampf-Sonderzügen.' + RHB_MS },
+  'rhb-mallet': { linien: [RHB_PRAETTIGAU, RHB_ALBULA], text: 'Früher im schweren Bergdienst auf der Landquart–Davos-Bahn und der Albula.' + RHB_MS },
+  'rhb-g45': { linien: [RHB_ALBULA], text: 'Früher vor schweren Zügen auf der Albula; heute vor Dampf-Sonderzügen.' + RHB_MS },
+  'rhb-bernina-tw': { linien: [RHB_BERNINA], orte: [['Blonay–Chamby', 2559237, 1144746]], text: 'Auf der Berninalinie; die 35 steht bei der Museumsbahn Blonay–Chamby.' + RHB_MS },
+  'rhb-abe44ii': { linien: [RHB_BERNINA], text: 'Auf der Berninalinie zwischen St. Moritz und Tirano.' + RHB_MS },
+  'rhb-abe44iii': { linien: [RHB_BERNINA], orte: [RHB_BERGUEN], text: 'Bis 2023 auf der Berninalinie; die 53 steht im Bahnmuseum Albula in Bergün.' + RHB_MS },
+  'rhb-abe501': { linien: [RHB_STAMM, RHB_ALBULA, RHB_ENGADIN], text: 'Früher auf dem Wechselstromnetz, etwa im Engadin.' + RHB_MS },
+  'rhb-be44-511': { linien: [RHB_STAMM, ['Chur', 'Reichenau-Tamins', 'Thusis'], RHB_PRAETTIGAU], text: 'Früher im Regional- und Vorortsverkehr, etwa rund um Chur, nach Thusis und Davos.' + RHB_MS },
+  'rhb-misox': { linien: [RHB_MISOX], orte: [RHB_BERGUEN], text: 'Früher auf der Bahn Bellinzona–Mesocco; der 491 steht in Bergün.' + RHB_MS },
+  'rhb-arosa': { linien: [RHB_AROSA], text: 'Früher auf der Arosalinie Chur–Arosa, bis 1997 mit Gleichstrom.' + RHB_MS },
+  'rhb-dampfschneeschleuder': { linien: [RHB_BERNINA, RHB_ALBULA], orte: [['Realp'], ['Blonay–Chamby', 2559237, 1144746]], text: 'Früher auf der Berninalinie und dem Stammnetz; erhalten bei der RhB, der DFB in Realp und bei Blonay–Chamby.' + RHB_MS },
+  'rhb-hist-wagen': { linien: [RHB_ALBULA, RHB_PRAETTIGAU, RHB_BERNINA], orte: [['Blonay–Chamby', 2559237, 1144746]], text: 'In historischen Zügen der RhB; einzelne Wagen bei Blonay–Chamby.' + RHB_MS },
+  'rhb-hist-gueterwagen': { linien: [RHB_ALBULA, RHB_PRAETTIGAU], text: 'Früher im Güterverkehr der RhB; heute in historischen Zügen.' + RHB_MS },
+  'rhb-ehem-diesel': { orte: [['Landquart'], ['Chur'], ['Realp']], text: 'Früher im Rangierdienst, etwa in Landquart und Chur; die Gm 3/3 stehen heute bei der DFB in Realp.' },
+  'rhb-draisinen': { orte: [['Blonay–Chamby', 2559237, 1144746]], text: 'Heute bei der Museumsbahn Blonay–Chamby.' }
+});
