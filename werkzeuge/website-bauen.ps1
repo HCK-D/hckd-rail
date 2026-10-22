@@ -1,4 +1,4 @@
-# RailBase – fertige Website für GitHub Pages bauen
+﻿# RailBase – fertige Website für GitHub Pages bauen
 # Erzeugt den Ordner "docs" mit:
 #   - index.html und einer eigenen HTML-Datei pro Fahrzeug, Kategorie, Impressum, Datenschutz und Vergleich
 #     (z. B. re-460.html), jede mit eigenem Titel, Beschreibung und Vorschaubild für Google und Messenger
@@ -160,6 +160,8 @@ function Build-Page([string]$l, [string]$start, [string]$titel, [string]$text, [
     $meta += "<link rel=`"alternate`" hreflang=`"x-default`" href=`"$(Adresse 'de' $start)`">`n"
     $img = if ($bild) { $bild } else { 'bilder/slides/slide-01.jpg' }
     $meta += "<meta property=`"og:image`" content=`"$base$img`">`n<meta name=`"twitter:card`" content=`"summary_large_image`">`n"
+    # Startseite: Name der Website für Google (erscheint dann als «RailBase» über dem Suchtreffer)
+    if (-not $start) { $meta += "<script type=`"application/ld+json`">{`"@context`":`"https://schema.org`",`"@type`":`"WebSite`",`"name`":`"RailBase`",`"alternateName`":[`"RailBase Train Database`",`"railbase.ch`"],`"url`":`"$base`"}</script>`n" }
   }
   if ($start -eq 'vergleich' -or $start -eq 'sammlung') { $meta +="<meta name=`"robots`" content=`"noindex`">`n" }
   $meta += "<link rel=`"icon`" href=`"favicon.svg`" type=`"image/svg+xml`">`n"

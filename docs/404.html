@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex">
-<title>Seite nicht gefunden Â· RailBase</title>
+<title>Seite nicht gefunden · RailBase</title>
 <style>
 :root{color-scheme:light dark;--bg:#F5F6F7;--fg:#202326;--fg2:#626971;--accent:#D71920}
 @media (prefers-color-scheme:dark){:root{--bg:#141618;--fg:#EEF0F2;--fg2:#A3A9B0}}
@@ -23,8 +23,8 @@ a{display:inline-block;padding:12px 20px;border-radius:12px;background:var(--acc
 <script>
 (function () {
   var T = {
-    fr: ['Voie introuvable', 'Cette page nâ€™existe pas (ou plus) sur RailBase.', 'Vers lâ€™accueil', 'fr-CH'],
-    it: ['Binario non trovato', 'Questa pagina non esiste (piÃ¹) su RailBase.', 'Alla pagina iniziale', 'it-CH'],
+    fr: ['Voie introuvable', 'Cette page n’existe pas (ou plus) sur RailBase.', 'Vers l’accueil', 'fr-CH'],
+    it: ['Binario non trovato', 'Questa pagina non esiste (più) su RailBase.', 'Alla pagina iniziale', 'it-CH'],
     en: ['Track not found', 'This page does not exist (any more) on RailBase.', 'Go to the home page', 'en']
   };
   var l = '';
@@ -32,7 +32,7 @@ a{display:inline-block;padding:12px 20px;border-radius:12px;background:var(--acc
   if (!T[l]) { var n = (navigator.language || '').slice(0, 2); if (T[n]) l = n; }
   if (!T[l]) return;
   document.documentElement.lang = T[l][3];
-  document.title = T[l][0] + ' Â· RailBase';
+  document.title = T[l][0] + ' · RailBase';
   document.getElementById('t').textContent = T[l][0];
   document.getElementById('p').textContent = T[l][1];
   var a = document.getElementById('a');
