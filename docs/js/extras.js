@@ -145,6 +145,8 @@ function albumSync() {
 }
 function seenSpeichern() {
   try { localStorage.setItem(SEEN_KEY, JSON.stringify(seenIds)); } catch (e) { /* private window: keep it for this visit */ }
+  // once per browser: someone started a collection (statistik.js; the vehicles are not sent)
+  if (seenIds.length && typeof zaehleEinmal === 'function') zaehleEinmal('sammlung-person', 'Sammlung begonnen');
 }
 seenBtn.addEventListener('click', () => {
   if (!curZug) return;
@@ -161,6 +163,8 @@ const heute = () => { const d = new Date(); return d.getFullYear() + '-' + Strin
 const datumText = s => { const d = new Date(s + 'T12:00:00'); return isNaN(d) ? s : d.toLocaleDateString(LOCALE, { day: 'numeric', month: 'long', year: 'numeric' }); };
 function sichtSpeichern() {
   try { localStorage.setItem(SICHT_KEY, JSON.stringify(sicht)); } catch (e) { /* private window: keep it for this visit */ }
+  // once per browser: someone entered a sighting (statistik.js; date, place and notes stay here)
+  if (sichtAnzahl() && typeof zaehleEinmal === 'function') zaehleEinmal('sichtung-person', 'Sichtung eingetragen');
 }
 function sichtRender() {
   if (!curZug) return;

@@ -27,6 +27,15 @@
 .ad-zahl span{font-size:13px;color:var(--fg-3)}
 .ad-zahl a{font-size:14px;font-weight:600;color:var(--accent-ink)}
 .ad-notiz-l small{font-weight:400;color:var(--fg-3)}
+.ad-mit{display:grid;gap:10px;padding:14px;border-radius:16px;background:var(--surface-2)}
+.ad-mit>small{font:600 12px/1.3 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--fg-3)}
+.ad-mit>small span{letter-spacing:0;text-transform:none;font-weight:400}
+.ad-mit ul{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;margin:0;padding:0;list-style:none}
+.ad-mit li{grid-column:span 3;display:grid;align-content:start;gap:2px;padding:10px 12px;border-radius:12px;background:var(--surface)}
+.ad-mit li.klein{grid-column:span 2}
+.ad-mit li b{font:800 26px/1.1 var(--display);font-variant-numeric:tabular-nums;color:var(--fg)}
+.ad-mit li span{font-size:13px;line-height:1.3;color:var(--fg-2)}
+.ad-mit li.gross{grid-column:1 / -1}
 .ad-ohne{border:1px solid var(--line);border-radius:12px;padding:10px 14px}
 .ad-ohne summary{font:600 14px/1.4 var(--body);color:var(--fg-2);cursor:pointer}
 .ad-ohne summary b{margin-left:6px;padding:1px 8px;border-radius:999px;background:var(--surface-2);color:var(--fg)}

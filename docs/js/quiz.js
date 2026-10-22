@@ -76,6 +76,8 @@
     const richtig = fragen.filter((q, i) => wahl[i] === q.ok).length, pct = Math.round(richtig / n * 100);
     const neu = best[level] == null || pct > best[level];
     if (neu) { best[level] = pct; try { localStorage.setItem(BEST_KEY, JSON.stringify(best)); } catch (e) { /* private window */ } }
+    // once per browser: someone finished a quiz, and which level (statistik.js; no result is sent)
+    if (typeof zaehleEinmal === 'function') { zaehleEinmal('quiz-person', 'Quiz beendet'); zaehleEinmal('quiz-' + level, 'Quiz beendet: ' + level); }
     const lob = tr(pct === 100 ? 'Perfekt! Alles richtig.' : pct >= 80 ? 'Sehr stark, du kennst dich aus.' : pct >= 60 ? 'Gut gemacht!' : pct >= 40 ? 'Nicht schlecht, da geht noch mehr.' : 'Noch etwas üben, dann klappt es.');
     run.ergebnis = { pct, richtig, n };
     box.innerHTML = `<div class="qz-result">

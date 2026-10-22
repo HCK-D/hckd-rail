@@ -40,7 +40,7 @@
   const istOffen = () => { try { return sessionStorage.getItem(OFFEN_KEY) === '1'; } catch (e) { return false; } };
   function zeigePanel(auf) {
     pin.hidden = auf; panel.hidden = !auf;
-    if (auf) { ladeZahl(); ohneFotos(); notiz.value = lies(); notiz.focus(); } else { code.value = ''; pinMsg.textContent = ''; code.focus(); }
+    if (auf) { ladeZahl(); ladeMitmachen(); ohneFotos(); notiz.value = lies(); notiz.focus(); } else { code.value = ''; pinMsg.textContent = ''; code.focus(); }
   }
 
   // vehicles without photos, grouped by railway and category; built from the data, so it stays current
@@ -83,6 +83,28 @@
       feld.textContent = isNaN(n) ? '–' : n.toLocaleString('de-CH');
       stand.textContent = isNaN(n) ? 'Zahl gerade nicht verfügbar.' : 'GoatCounter, bis zu 4 Stunden verzögert';
     } catch (err) { feld.textContent = '–'; stand.textContent = 'Zahl gerade nicht verfügbar (Vorschau oder keine Verbindung).'; }
+  }
+
+  // who takes part: the counts of the once-per-browser steps from statistik.js (zaehleEinmal);
+  // a step nobody has reached yet is unknown to GoatCounter (404) and shows 0
+  const MITMACHEN = [
+    ['quiz-person', 'haben ein Quiz beendet', 'gross'],
+    ['quiz-einfach', 'Level Einfach', 'klein'], ['quiz-normal', 'Level Normal', 'klein'], ['quiz-schwierig', 'Level Schwierig', 'klein'],
+    ['sammlung-person', 'sammeln Fahrzeuge («Hab ich gesehen»)'],
+    ['sichtung-person', 'haben eine Sichtung eingetragen']
+  ];
+  async function ladeMitmachen() {
+    const liste = $('#ad-mit'), gc = (typeof STATISTIK !== 'undefined' && STATISTIK.goatcounter) || '';
+    liste.innerHTML = MITMACHEN.map(([p, text, art]) => `<li${art ? ` class="${art}"` : ''}><b data-mit="${p}">…</b><span>${esc(text)}</span></li>`).join('');
+    await Promise.all(MITMACHEN.map(async ([p]) => {
+      const feld = $(`[data-mit="${p}"]`, liste);
+      if (!gc) { feld.textContent = '–'; return; }
+      try {
+        const r = await fetch('https://' + gc + '.goatcounter.com/counter/' + p + '.json', { cache: 'no-store' });
+        const d = r.ok ? await r.json() : null, n = d && parseInt(String(d.count).replace(/\D/g, ''), 10);
+        feld.textContent = r.status === 404 ? '0' : isNaN(n) ? '–' : n.toLocaleString('de-CH');
+      } catch (err) { feld.textContent = '–'; }
+    }));
   }
 
   // notes: kept in this browser only, saved while typing
