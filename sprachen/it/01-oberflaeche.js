@@ -232,6 +232,7 @@ uebDict({
   'seit': 'dal',
   'Gesehen': 'Visto',
   'Kein Fahrzeug passt zu «{q}».': 'Nessun veicolo corrisponde a «{q}».',
+  'Wagen ohne eigenen Antrieb': 'Carrozze e carri senza trazione propria',
   'In dieser Kategorie filtern': 'Filtra in questa categoria',
   'Sortieren': 'Ordina',
   'Reihenfolge im Katalog': 'Ordine del catalogo',

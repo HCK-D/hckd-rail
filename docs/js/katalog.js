@@ -260,9 +260,13 @@ function renderKatList() {
       <p class="card-typ">${esc(zt(z, 'typ'))}</p>
       <ul class="facts">${cardFacts(z)}</ul>
     </div></a></li>`;
-  // categories with groups (e.g. Infrastruktur: locomotives, then wagons): one heading per group
+  // categories with groups (e.g. Infrastruktur: locomotives, then wagons): one heading per group;
+  // elsewhere the wagons without a drive of their own come last, under their own heading
   const gruppen = curKat.gruppen || [];
-  const html = !gruppen.length ? list.map(card).join('')
+  const istWagen = z => z.art && z.art.typ === 'wagen';
+  const motor = list.filter(z => !istWagen(z)), wagen = list.filter(istWagen);
+  const html = !gruppen.length ? motor.map(card).join('')
+      + (motor.length && wagen.length ? `<li class="kat-gruppe"><h2>${esc(tr('Wagen ohne eigenen Antrieb'))}</h2></li>` : '') + wagen.map(card).join('')
     : gruppen.map((g, i) => {
       const teil = list.filter(z => (z.gruppe || gruppen[0]) === g);
       return teil.length ? `<li class="kat-gruppe"><h2>${esc(tr(g))}</h2></li>` + teil.map(card).join('') : '';

@@ -231,6 +231,7 @@ uebDict({
   'seit': 'since',
   'Gesehen': 'Seen',
   'Kein Fahrzeug passt zu «{q}».': 'No vehicle matches «{q}».',
+  'Wagen ohne eigenen Antrieb': 'Coaches and wagons without a drive of their own',
   'In dieser Kategorie filtern': 'Filter in this category',
   'Sortieren': 'Sort',
   'Reihenfolge im Katalog': 'Catalogue order',

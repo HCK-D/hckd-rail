@@ -232,6 +232,7 @@ uebDict({
   'seit': 'depuis',
   'Gesehen': 'Vu',
   'Kein Fahrzeug passt zu «{q}».': 'Aucun véhicule ne correspond à « {q} ».',
+  'Wagen ohne eigenen Antrieb': 'Voitures et wagons sans traction propre',
   'In dieser Kategorie filtern': 'Filtrer dans cette catégorie',
   'Sortieren': 'Trier',
   'Reihenfolge im Katalog': 'Ordre du catalogue',
