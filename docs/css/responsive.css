@@ -1,16 +1,20 @@
 /* RailBase – Anpassungen für Tablet und Desktop (zuletzt laden) */
 
 /* ---------- responsive ---------- */
-/* phone and app: the categories sit in one row and are swiped sideways; the next card peeks in */
-.kat-dots{display:none}
+/* phone and app: the categories stay one below the other, but compact: photo on the left,
+   name and number of vehicles on the right; the description and the name chips are left out */
 @media (max-width:639px){
-  .kat-grid{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;scrollbar-width:none;margin-inline:calc(-1 * max(20px,env(safe-area-inset-left,0px))) calc(-1 * max(20px,env(safe-area-inset-right,0px)));padding:4px max(20px,env(safe-area-inset-right,0px)) 18px max(20px,env(safe-area-inset-left,0px));scroll-padding-inline:max(20px,env(safe-area-inset-left,0px))}
-  .kat-grid::-webkit-scrollbar{display:none}
-  .kat-grid>li{flex:0 0 86%;scroll-snap-align:start}
+  .kat-grid{gap:10px}
+  .kat{flex-direction:row;border-radius:18px}
   .kat:hover{transform:none}
-  .kat-dots{display:flex;justify-content:center;gap:8px;margin:2px 0 6px}
-  .kat-dots button{width:8px;height:8px;padding:0;border:0;border-radius:999px;background:var(--line);cursor:pointer;transition:width .3s ease,background .3s ease}
-  .kat-dots button[aria-current="true"]{width:22px;background:var(--accent)}
+  .kat .art-panel{flex:0 0 108px;aspect-ratio:auto;min-height:104px}
+  .kat-body{gap:4px;padding:14px 16px;min-width:0}
+  .kat-code{font-size:11px}
+  .kat-title{font-size:19px}
+  .kat-text,.kat .names{display:none}
+  .kat-foot{margin-top:auto;padding-top:8px;border-top:0}
+  .count{font-size:12.5px}
+  .go{font-size:14px}
 }
 @media (min-width:640px){
   .kat-grid{grid-template-columns:repeat(2,1fr)}
