@@ -7,7 +7,7 @@
 
 /* ---------- category tools: filter + sort ---------- */
 .kat-tools{display:grid;gap:10px;min-width:0}
-/* choice of railway (SBB, BLS, TPF, SOB, transN, RhB) above the vehicle list */
+/* choice of railway (SBB, BLS, RhB, SOB, TPF, transN) above the vehicle list */
 .bahn-wahl{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;max-width:1140px;margin:0 0 22px}
 @media (max-width:1020px){.bahn-wahl{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media (max-width:760px){.bahn-wahl{grid-template-columns:repeat(3,minmax(0,1fr))}}

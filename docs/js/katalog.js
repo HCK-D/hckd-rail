@@ -228,10 +228,10 @@ katSort.addEventListener('change', () => renderKatList());
 const BAHNEN = [
   { id: 'sbb', name: 'SBB', lang: 'Schweizerische Bundesbahnen' },
   { id: 'bls', name: 'BLS', lang: 'BLS AG' },
-  { id: 'tpf', name: 'TPF', lang: 'Transports publics fribourgeois' },
+  { id: 'rhb', name: 'RhB', lang: 'Rhätische Bahn' },
   { id: 'sob', name: 'SOB', lang: 'Schweizerische Südostbahn' },
-  { id: 'transn', name: 'transN', lang: 'Transports Publics Neuchâtelois' },
-  { id: 'rhb', name: 'RhB', lang: 'Rhätische Bahn' }
+  { id: 'tpf', name: 'TPF', lang: 'Transports publics fribourgeois' },
+  { id: 'transn', name: 'transN', lang: 'Transports Publics Neuchâtelois' }
 ];
 const bahnOf = z => z.bahn || 'sbb';
 const bahnName = z => tr(BAHNEN.find(b => b.id === bahnOf(z)).name);
