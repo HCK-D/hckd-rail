@@ -5,14 +5,18 @@
    SPENDEN
    Angaben hier eintragen, z. B. twint: '079 123 45 67' (TWINT-Nummer) und/oder iban: 'CH12 …'.
    Solange beide leer sind, ist der Spenden-Knopf auf der ganzen Seite ausgeblendet.
+   SPENDEN_AN: false blendet alles zum Spenden aus (Knöpfe und Abschnitt in der
+   Datenschutzerklärung), die Angaben bleiben erhalten. Wieder einschalten: true.
    ===================================================================== */
+const SPENDEN_AN = false;
 // empfaenger: genau der Name, auf den das Konto lautet (Banken vergleichen Name und IBAN).
 // Er steht hier verschlüsselt (Base64), damit Suchmaschinen und Sammelprogramme ihn nicht einfach im Quelltext finden,
 // und erscheint im Spenden-Fenster erst nach einem Klick auf «Namen anzeigen». Neuer Name: btoa('Vorname Nachname') im Browser.
 const SPENDE = { empfaengerB64: 'S2V2aW4gS291YXNtaQ==', iban: 'CH34 0618 6560 0743 8090 2', twint: '' };
 SPENDE.empfaenger = (() => { try { return decodeURIComponent(escape(atob(SPENDE.empfaengerB64))); } catch (e) { return ''; } })();
 let dnNameSichtbar = false;
-if (!SPENDE.iban && !SPENDE.twint) {
+if (!SPENDEN_AN || (!SPENDE.iban && !SPENDE.twint)) {
+  $$('[data-spenden-info]').forEach(el => { el.hidden = true; });
   $$('[data-donate]').forEach(b => {
     // also remove the « · » in front of the button in the footer
     const vor = b.previousSibling;
