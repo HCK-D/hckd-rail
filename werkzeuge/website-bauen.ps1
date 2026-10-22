@@ -243,6 +243,8 @@ self.addEventListener('fetch', e => {
 Write-Utf8 (Join-Path $out 'sw.js') $sw.Replace('__VERSION__', (Get-Date -Format 'yyyyMMddHHmmss'))
 # Eigene Domain: GitHub Pages braucht die Datei CNAME im docs-Ordner (bei *.github.io nicht)
 if ($base -match '^https?://([^/]+)/' -and $Matches[1] -notmatch '\.github\.io$') { Write-Utf8 (Join-Path $out 'CNAME') ($Matches[1] + "`n") }
+# Bestätigung der Google Search Console (Datei muss genau so bleiben, sonst verliert railbase.ch die Bestätigung)
+Write-Utf8 (Join-Path $out 'googleef863c8922f18742.html') 'google-site-verification: googleef863c8922f18742.html'
 
 # ---------- 404, sitemap, robots ----------
 $startUrl = if ($base) { $base } else { './' }
