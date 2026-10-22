@@ -10,14 +10,19 @@
 /* choice of railway (SBB, BLS, RhB, SOB, TPF, transN) above the vehicle list */
 .bahn-wahl{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;max-width:1140px;margin:0 0 22px}
 @media (max-width:1020px){.bahn-wahl{grid-template-columns:repeat(3,minmax(0,1fr))}}
-@media (max-width:760px){.bahn-wahl{grid-template-columns:repeat(3,minmax(0,1fr))}}
+/* phone and app: one row to swipe sideways, the next railway peeks in at the edge */
+@media (max-width:760px){
+  .bahn-wahl{display:flex;gap:8px;overflow-x:auto;scroll-snap-type:x proximity;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;scrollbar-width:none;margin-inline:calc(-1 * max(20px,env(safe-area-inset-left,0px))) calc(-1 * max(20px,env(safe-area-inset-right,0px)));padding:2px max(20px,env(safe-area-inset-right,0px)) 4px max(20px,env(safe-area-inset-left,0px));scroll-padding-inline:max(20px,env(safe-area-inset-left,0px))}
+  .bahn-wahl::-webkit-scrollbar{display:none}
+  .bahn-wahl button{flex:0 0 auto;min-width:112px;scroll-snap-align:start}
+}
 .bahn-wahl button{display:grid;gap:4px;justify-items:start;padding:14px 16px;border:2px solid var(--line);border-radius:var(--r-md);background:var(--surface);color:var(--fg);text-align:left;cursor:pointer;transition:border-color .2s ease,background-color .2s ease}
 .bahn-wahl button b{font:900 22px/1 var(--display);letter-spacing:-.01em}
 .bahn-wahl button span{font-size:13px;color:var(--fg-3)}
 .bahn-wahl button:hover{border-color:color-mix(in srgb,var(--accent) 45%,var(--line))}
 .bahn-wahl button[aria-selected="true"]{border-color:var(--accent);background:var(--accent-soft)}
 .bahn-wahl button[aria-selected="true"] b{color:var(--accent-ink)}
-@media (max-width:420px){.bahn-wahl{gap:6px}.bahn-wahl button{padding:10px 12px}.bahn-wahl button b{font-size:18px}.bahn-wahl button span{font-size:12px}}
+@media (max-width:420px){.bahn-wahl{gap:6px}.bahn-wahl button{padding:10px 12px;min-width:96px}.bahn-wahl button b{font-size:18px}.bahn-wahl button span{font-size:12px}}
 .sortbox{display:grid;gap:6px;min-width:0}
 .sortbox span{font:700 12px/1 var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--fg-3)}
 .sortbox select{height:48px;width:100%;min-width:0;padding:0 40px 0 14px;border:0;border-radius:14px;background:var(--surface) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23626971' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") no-repeat right 14px center;box-shadow:var(--shadow);color:var(--fg);font:500 16px/1 var(--body);appearance:none;-webkit-appearance:none;cursor:pointer}

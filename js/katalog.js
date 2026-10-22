@@ -258,7 +258,12 @@ function renderBahnWahl() {
   const n = id => inKat(curKat.id).filter(z => bahnOf(z) === id).length;
   if (!n(curBahn)) curBahn = (BAHNEN.find(b => n(b.id)) || BAHNEN[0]).id;
   // operators without vehicles in this category get no button at all
-  $('#kat-bahn').innerHTML = BAHNEN.filter(b => n(b.id)).map(b => `<button type="button" role="tab" data-bahn="${b.id}" aria-selected="${b.id === curBahn}" title="${esc(tr(b.lang))}"><b>${esc(tr(b.name))}</b><span>${esc(tr(n(b.id) === 1 ? '{n} Fahrzeug' : '{n} Fahrzeuge', { n: n(b.id) }))}</span></button>`).join('');
+  const reihe = $('#kat-bahn'), links = reihe.scrollLeft;
+  reihe.innerHTML = BAHNEN.filter(b => n(b.id)).map(b => `<button type="button" role="tab" data-bahn="${b.id}" aria-selected="${b.id === curBahn}" title="${esc(tr(b.lang))}"><b>${esc(tr(b.name))}</b><span>${esc(tr(n(b.id) === 1 ? '{n} Fahrzeug' : '{n} Fahrzeuge', { n: n(b.id) }))}</span></button>`).join('');
+  // on phones the row is swiped sideways: keep its position, but bring the chosen railway into view
+  reihe.scrollLeft = links;
+  const sel = $('[aria-selected="true"]', reihe), r = reihe.getBoundingClientRect(), s = sel && sel.getBoundingClientRect();
+  if (s && (s.left < r.left || s.right > r.right)) reihe.scrollLeft += s.left - r.left - (r.width - s.width) / 2;
 }
 $('#kat-bahn').addEventListener('click', e => {
   const b = e.target.closest('[data-bahn]');
