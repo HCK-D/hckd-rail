@@ -66,7 +66,7 @@ uebZug('trn-bde-4-4', {
   typ: 'Railcars of 1950 for Le Locle–Les Brenets',
   text: ['The two railcars of 1950 run on the short line from Le Locle to Les Brenets. They were modernised in the 1980s.', 'According to a decision at the end of 2023, the railway will continue until at least 2031.'],
   kennzahlen: [['2', 'railcars (3, 5)'], ['60 km/h', 'top speed'], ['146', 'places in total'], ['1950', 'built']],
-  daten: { 'Bauart': 'electric railcar with luggage compartment', 'Fahrzeugnummern': '3 and 5', 'Länge': '16.6 m', 'Breite': '2.68 m', 'Gewicht': '24 t empty', 'Sitzplätze': '146 places in total' },
+  daten: { 'Bauart': 'electric railcar with luggage compartment', 'Fahrzeugnummern': '3 and 5', 'Länge': '16.6 m', 'Breite': '2.68 m', 'Gewicht': '24 t empty', 'Sitzplätze': '42 seats, 146 places in total' },
   abschnitte: [
       { titel: 'Manufacturer and fleet build-up', p: ['Reggiane in Italy built the railcars in 1950, with equipment from TIBB and SAAS. Ramseier & Jenzer in Biel modernised number 3 in 1985/86 and number 5 in 1986/87. transN runs these two railcars today.'] },
       { titel: 'Service and technology', p: ['The railcars run on the R24, the line of just over 4 km from Le Locle to Les Brenets. In 2020 the canton and municipalities planned to replace the railway with a bus from 2025; at the end of 2023 it was decided that the trains will run until at least 2031.', 'A railcar is 16.6 m long, weighs 24 t, has 480 kW and runs at up to 60 km/h.'] },
@@ -75,16 +75,16 @@ uebZug('trn-bde-4-4', {
   bilder: ['BDe 4/4 5 leaving the Petits-Monts tunnel near Le Locle (2020)', 'BDe 4/4 5 in Les Brenets (2018)', 'CMN BDe 4/4 5 in Les Brenets (1998)']
 });
 uebZug('trn-tm-44-normal', {
-  beiname: 'standard gauge',
+  beiname: '235 077 standard gauge',
   typ: 'Diesel-electric Stadler engineering tractor',
-  text: ['transN has two modern Stadler Tm 4/4 engineering tractors, one for standard gauge and one for metre gauge. This one works on the standard-gauge network.', 'It has a crane and a load area for material.'],
-  kennzahlen: [['1', 'vehicle'], ['80 km/h', 'top speed (type)'], ['480 kW', 'engine power (type)'], ['diesel', 'drive']],
+  text: ['transN has two modern Stadler Tm 4/4 engineering tractors, one for standard gauge and one for metre gauge. This one, the Tm 235 077, has worked on the standard-gauge network since 2023.', 'It has a crane and a load area for material.'],
+  kennzahlen: [['1', 'vehicle (235 077)'], ['80 km/h', 'top speed (type)'], ['480 kW', 'engine power (type)'], ['2023', 'first in service']],
   daten: { 'Bauart': 'diesel-electric engineering tractor with crane', 'Motor': 'Mercedes-Benz OM 473 (type)', 'Länge': '18.0 m (type)', 'Gewicht': '52 t (type)', 'Leistung': '480 kW (type)', 'Höchstgeschwindigkeit': '80 km/h (type)' },
-  specNote: 'Values marked «type» describe the vehicle family according to Schweizer Eisenbahn-Revue 3/2023. The sources checked do not give the number or exact year of entry into service of the standard-gauge tractor.',
+  specNote: 'Values marked «type» describe the vehicle family according to Schweizer Eisenbahn-Revue 3/2023. The operating regulations give 60 t for this tractor in the train table; the reason for the difference is not clear.',
   abschnitte: [
-      { titel: 'Manufacturer and fleet build-up', p: ['According to the 2025 annual report, transN has two Stadler Tm 4/4, one each for standard and metre gauge. The number of the standard-gauge tractor is not given in the sources checked.'] },
+      { titel: 'Manufacturer and fleet build-up', p: ['In May 2021 transN ordered four related vehicles from Stadler together with TRAVYS and NStCM; one standard-gauge and one metre-gauge machine were for transN. Both arrived in 2023.', 'The standard-gauge tractor carries the number 98 85 5 235 077-5, Tm 235 077 for short. It is not to be confused with the old Tm 237 312.'] },
       { titel: 'Service and technology', p: ['The tractor is used for construction, maintenance and material transport on the transN standard-gauge network, for example on the Travers–Buttes line.', 'The type is diesel-electric: a Mercedes-Benz OM 473 engine of 480 kW supplies power to four traction motors. The tractor is 18.0 m long, weighs 52 t and runs at up to 80 km/h.'] },
-      { titel: 'Facilities and accessibility', liste: ['Palfinger crane with up to 17 m reach (type)', 'Loading platform for 12 t (type)', 'Radio remote control (type)', 'No passenger compartment'] }
+      { titel: 'Facilities and accessibility', liste: ['Palfinger crane with up to 17 m reach (type)', 'Loading platform for 12 t, carries rails up to 15 m (type)', 'Radio remote control (type)', 'No passenger compartment'] }
     ]
 });
 uebZug('trn-tm-44-meter', {

@@ -380,4 +380,31 @@ Object.assign(EINSATZ, {
 Object.assign(EINSATZ, {
   'ama-832': { netz: true, orte: [['St. Margrethen']], text: 'Im Rangierdienst von SBB Cargo in der Schweiz, zum Beispiel in St. Margrethen.' },
   'h-re430': { netz: true, strecken: [['Zürich HB', 'Zug', ...GOTTHARD_BERG]], text: 'Früher vor Schnell- und Güterzügen am Gotthard, später vor allem im Güterverkehr von SBB Cargo im ganzen Netz.' }
+});/* =====================================================================
+   transN: historische und Spezialfahrzeuge (Oktober 2026).
+   Museen mit Koordinaten (LV95, geo.admin.ch): Blonay–Chamby in Chaulin.
+   ===================================================================== */
+Object.assign(BAHNHOF_EXTRA, { 'Corcelles NE': [2557088, 1203959] });
+const TRN_RVT = [['Travers', 'Fleurier', 'Buttes']];
+const TRN_LITTORAIL = ['Neuchâtel Place Pury', 'Auvernier', 'Boudry Littorail'];
+const TRN_CMN = [['La Chaux-de-Fonds', 'Les Ponts-de-Martel'], ['Le Locle', 'Les Brenets']];
+const BLONAY_CHAMBY = ['Blonay–Chamby', 2559237, 1144746];
+const TRN_MS = ' Die Meterspur ist gestrichelt und vereinfacht eingezeichnet.';
+Object.assign(EINSATZ, {
+  'trn-tm-2-2-11': { linien: [['La Chaux-de-Fonds', 'Les Ponts-de-Martel']], text: 'Im Baudienst auf der Meterspurstrecke La Chaux-de-Fonds–Les Ponts-de-Martel.' + TRN_MS },
+  'trn-tm-237-312': { strecken: TRN_RVT, orte: [['Fleurier']], text: 'Im Unterhalts- und Rangierdienst im Val-de-Travers; zuletzt beim Depot Fleurier fotografiert.' },
+  'trn-zweiwege': { linien: TRN_CMN, text: 'Im Baudienst auf den Meterspurstrecken La Chaux-de-Fonds–Les Ponts-de-Martel und Le Locle–Les Brenets.' + TRN_MS },
+  'trn-ast-21': { linien: TRN_CMN, text: 'Für Sonderfahrten auf den Meterspurstrecken von transN in den Neuenburger Bergen.' + TRN_MS },
+  'trn-be-4-4-1': { strecken: TRN_RVT, text: 'Früher vor Güter- und Schülerzügen auf der RVT-Strecke im Val-de-Travers. Heute gehört die Lok RVT-Historique.' },
+  'trn-abde-2-4-102': { strecken: TRN_RVT, text: 'Früher im Regelbetrieb auf der RVT-Strecke im Val-de-Travers, heute auf Sonder- und Gruppenfahrten von RVT-Historique.' },
+  'trn-rbde-106': { strecken: TRN_RVT, orte: [['Fribourg/Freiburg']], text: 'Früher auf der RVT-Strecke im Val-de-Travers; 2004 bis 2013 an die TPF vermietet, zum Beispiel in Freiburg. Heute auf Fahrten von RVT-Historique.' },
+  'trn-abm-2-5-9': { strecken: TRN_RVT, orte: [['Luzern']], text: 'Von 1924 bis 1965 auf dem RVT im Val-de-Travers. Heute gehört er zur Sammlung des Verkehrshauses der Schweiz in Luzern.' },
+  'trn-be-2-4': { linien: [TRN_LITTORAIL], text: 'Früher auf der Überlandstrecke Neuchâtel–Boudry und nach Cortaillod. Heute beim Tram-Museum Neuchâtel in Boudry.' + TRN_MS },
+  'trn-be-2-2': { linien: [['Neuchâtel Place Pury', 'Corcelles NE'], TRN_LITTORAIL], orte: [BLONAY_CHAMBY], text: 'Früher im Stadttram von Neuchâtel, etwa auf der Linie 3 nach Corcelles. Die 73 fährt heute historisch nach Boudry, die 76 steht bei Blonay–Chamby.' + TRN_MS },
+  'trn-be-4-4-583': { linien: [['Neuchâtel Place Pury', 'Corcelles NE'], TRN_LITTORAIL], text: 'Zuerst auf der Stadtlinie 3 nach Corcelles, ab 1976 auf der Überlandstrecke nach Boudry. Heute beim Tram-Museum Neuchâtel.' + TRN_MS },
+  'trn-be-4-4-littorail': { linien: [TRN_LITTORAIL], text: 'Von 1981 bis 2019 auf der Littorail-Linie Neuchâtel–Boudry. Die 504 ist heute beim Tram-Museum Neuchâtel.' + TRN_MS },
+  'trn-xe-2-2-601': { linien: [TRN_LITTORAIL], text: 'Früher im Dienst auf dem Tramnetz von Neuchâtel. Heute beim Tram-Museum Neuchâtel in Boudry.' + TRN_MS },
+  'trn-tn-wagen': { linien: [['Neuchâtel Place Pury', 'Corcelles NE'], TRN_LITTORAIL], orte: [BLONAY_CHAMBY], text: 'Früher auf dem Tramnetz von Neuchâtel und nach Boudry. Vier Wagen sind beim Tram-Museum Neuchâtel, der C4 121 bei Blonay–Chamby.' + TRN_MS },
+  'trn-g-3-3-1': { linien: [['Le Locle', 'Les Brenets']], orte: [BLONAY_CHAMBY], text: 'Von 1890 bis 1950 auf der Strecke Le Locle–Les Brenets. Heute bei der Museumsbahn Blonay–Chamby.' + TRN_MS },
+  'trn-kkl-41': { linien: [['Le Locle', 'Les Brenets']], text: 'Fotografiert 2014 im Bahnhof Les Brenets an der Meterspurstrecke Le Locle–Les Brenets.' + TRN_MS }
 });

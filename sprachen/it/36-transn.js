@@ -66,7 +66,7 @@ uebZug('trn-bde-4-4', {
   typ: 'Automotrici del 1950 per Le Locle–Les Brenets',
   text: ['Le due automotrici del 1950 circolano sulla breve linea da Le Locle a Les Brenets. Furono modernizzate negli anni 1980.', 'Secondo una decisione di fine 2023, la ferrovia continuerà almeno fino al 2031.'],
   kennzahlen: [['2', 'automotrici (3, 5)'], ['60 km/h', 'velocità massima'], ['146', 'posti in totale'], ['1950', 'costruzione']],
-  daten: { 'Bauart': 'automotrice elettrica con compartimento bagagli', 'Fahrzeugnummern': '3 e 5', 'Länge': '16,6 m', 'Breite': '2,68 m', 'Gewicht': '24 t a vuoto', 'Sitzplätze': '146 posti in totale' },
+  daten: { 'Bauart': 'automotrice elettrica con compartimento bagagli', 'Fahrzeugnummern': '3 e 5', 'Länge': '16,6 m', 'Breite': '2,68 m', 'Gewicht': '24 t a vuoto', 'Sitzplätze': '42 posti a sedere, 146 posti in totale' },
   abschnitte: [
       { titel: 'Costruttore e composizione della flotta', p: ['Reggiane, in Italia, costruì le automotrici nel 1950, con equipaggiamento di TIBB e SAAS. Ramseier & Jenzer a Bienne modernizzò la 3 nel 1985/86 e la 5 nel 1986/87. transN impiega oggi queste due automotrici.'] },
       { titel: 'Impiego e tecnica', p: ['Le automotrici circolano sulla R24, la linea di poco più di 4 km tra Le Locle e Les Brenets. Nel 2020 cantone e comuni prevedevano di sostituire la ferrovia con un bus dal 2025; a fine 2023 è stato deciso che i treni circoleranno almeno fino al 2031.', 'Un’automotrice è lunga 16,6 m, pesa 24 t, ha 480 kW e viaggia fino a 60 km/h.'] },
@@ -75,16 +75,16 @@ uebZug('trn-bde-4-4', {
   bilder: ['BDe 4/4 5 esce dalla galleria dei Petits-Monts presso Le Locle (2020)', 'BDe 4/4 5 a Les Brenets (2018)', 'BDe 4/4 5 delle CMN a Les Brenets (1998)']
 });
 uebZug('trn-tm-44-normal', {
-  beiname: 'scartamento normale',
+  beiname: '235 077 scartamento normale',
   typ: 'Trattore da cantiere diesel-elettrico Stadler',
-  text: ['transN possiede due moderni trattori da cantiere Tm 4/4 di Stadler, uno per lo scartamento normale e uno per quello metrico. Questo lavora sulla rete a scartamento normale.', 'Ha una gru e una superficie di carico per il materiale.'],
-  kennzahlen: [['1', 'veicolo'], ['80 km/h', 'velocità massima (tipo)'], ['480 kW', 'potenza del motore (tipo)'], ['diesel', 'trazione']],
+  text: ['transN possiede due moderni trattori da cantiere Tm 4/4 di Stadler, uno per lo scartamento normale e uno per quello metrico. Questo, il Tm 235 077, lavora dal 2023 sulla rete a scartamento normale.', 'Ha una gru e una superficie di carico per il materiale.'],
+  kennzahlen: [['1', 'veicolo (235 077)'], ['80 km/h', 'velocità massima (tipo)'], ['480 kW', 'potenza del motore (tipo)'], ['2023', 'primo impiego']],
   daten: { 'Bauart': 'trattore da cantiere diesel-elettrico con gru', 'Motor': 'Mercedes-Benz OM 473 (tipo)', 'Länge': '18,0 m (tipo)', 'Gewicht': '52 t (tipo)', 'Leistung': '480 kW (tipo)', 'Höchstgeschwindigkeit': '80 km/h (tipo)' },
-  specNote: 'I valori con «tipo» descrivono la famiglia di veicoli secondo la Schweizer Eisenbahn-Revue 3/2023. Le fonti verificate non indicano né il numero né l’anno esatto di entrata in servizio del trattore a scartamento normale.',
+  specNote: 'I valori con «tipo» descrivono la famiglia di veicoli secondo la Schweizer Eisenbahn-Revue 3/2023. Le prescrizioni d’esercizio indicano 60 t per questo trattore nella tabella dei treni; il motivo della differenza non è chiarito.',
   abschnitte: [
-      { titel: 'Costruttore e composizione della flotta', p: ['Secondo il rapporto di gestione 2025, transN possiede due Tm 4/4 di Stadler, uno per lo scartamento normale e uno per quello metrico. Il numero del trattore a scartamento normale non è indicato nelle fonti verificate.'] },
+      { titel: 'Costruttore e composizione della flotta', p: ['Nel maggio 2021 transN ordinò a Stadler quattro veicoli affini insieme a TRAVYS e NStCM; una macchina a scartamento normale e una a scartamento metrico erano destinate a transN. Entrambe arrivarono nel 2023.', 'Il trattore a scartamento normale porta il numero 98 85 5 235 077-5, in breve Tm 235 077. Non va confuso con il vecchio Tm 237 312.'] },
       { titel: 'Impiego e tecnica', p: ['Il trattore serve per costruzione, manutenzione e trasporto di materiale sulla rete a scartamento normale di transN, per esempio sulla linea Travers–Buttes.', 'Il tipo è diesel-elettrico: un motore Mercedes-Benz OM 473 da 480 kW alimenta quattro motori di trazione. Il trattore è lungo 18,0 m, pesa 52 t e viaggia fino a 80 km/h.'] },
-      { titel: 'Dotazione e accessibilità', liste: ['Gru Palfinger con sbraccio fino a 17 m (tipo)', 'Piattaforma di carico da 12 t (tipo)', 'Radiocomando (tipo)', 'Nessun compartimento passeggeri'] }
+      { titel: 'Dotazione e accessibilità', liste: ['Gru Palfinger con sbraccio fino a 17 m (tipo)', 'Piattaforma di carico da 12 t, trasporto di rotaie fino a 15 m (tipo)', 'Radiocomando (tipo)', 'Nessun compartimento passeggeri'] }
     ]
 });
 uebZug('trn-tm-44-meter', {

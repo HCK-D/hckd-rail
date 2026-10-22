@@ -1,7 +1,7 @@
 /* English – SOB (Südostbahn) */
 uebDict({
   'Schweizerische Südostbahn': 'Southeastern Railway of Switzerland',
-  'Klassiker von SBB, BLS, TPF und SOB, die heute nicht mehr im Alltag fahren. Viele sind bei SBB Historic, der BLS-Stiftung, GFM Historique, in Vereinen oder in Museen erhalten.': 'Classics from SBB, BLS, TPF and SOB that no longer run in everyday service. Many are preserved by SBB Historic, the BLS Foundation, GFM Historique, by associations or in museums.',
+  'Klassiker von SBB, BLS, TPF, SOB und transN, die heute nicht mehr im Alltag fahren. Viele sind bei SBB Historic, der BLS-Stiftung, GFM Historique, RVT-Historique, in Vereinen oder in Museen erhalten.': 'Classics from SBB, BLS, TPF, SOB and transN that no longer run in everyday service. Many are preserved by SBB Historic, the BLS Foundation, GFM Historique, RVT-Historique, by associations or in museums.',
   'Fahrzeugfamilie': 'Vehicle family', 'Wagenarten': 'Car types', 'Herkunft': 'Origin', 'Frühere Nummern': 'Former numbers', 'Frühere Bezeichnungen': 'Former designations',
   'Umbau': 'Rebuilt', 'Antrieb': 'Drive', 'Wiederbeschaffungswert': 'Replacement value', 'Einsatz': 'Use', 'Ausmusterung': 'Withdrawn', 'Baujahre': 'Years built',
   'Achsfolge': 'Wheel arrangement', 'SOB': 'SOB', 'SOB Infrastruktur': 'SOB Infrastructure', 'SOB (historisch)': 'SOB (historic)',
