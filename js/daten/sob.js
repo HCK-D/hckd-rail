@@ -28,9 +28,9 @@ ZUEGE.push(
     quellen: ['SOB – Fahrzeugflotte: Traverso, technische Daten und Ausstattung', 'SOB – «Die SOB-Flotte ist komplettiert», 23. Mai 2025', 'Wikipedia – Schweizerische Südostbahn (2001), Linien und Fahrzeuge', 'Dossier HCKD «RABe 526 Traverso», Oktober 2026'],
     art: { typ: 'triebzug', nase: 'mittel', farbe: SOB_KUPFER, akzent: SOB_GRAU, tuer: SOB_GRAU, panto: true },
     bilder: [
-      { src: 'bilder/sob-traverso-c1.jpg', titel: 'Traverso als IR 46 Locarno–Zürich bei Wassen (2025)', foto: 'Kabelleger', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:SOB_RABe_526_Wassen.jpg' },
       { src: 'bilder/sob-traverso-c2.jpg', titel: 'Traverso 105 in Kreuzlingen (2019)', foto: 'JoachimKohler-HB', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:SOB_RABe_526_105_Traverso_in_Kreuzlingen.jpg' },
-      { src: 'bilder/sob-traverso-c3.jpg', titel: 'Traverso 121 in Göschenen (2023)', foto: 'NAC', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:SOB_RABe_526_121_Goeschenen_021223.jpg' }
+      { src: 'bilder/sob-traverso-c3.jpg', titel: 'Traverso 121 in Göschenen (2023)', foto: 'NAC', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:SOB_RABe_526_121_Goeschenen_021223.jpg' },
+      { src: 'bilder/sob-traverso-c1.jpg', titel: 'Traverso als IR 46 Locarno–Zürich bei Wassen (2025)', foto: 'Kabelleger', lizenz: 'CC BY-SA 4.0', lizenzUrl: 'https://creativecommons.org/licenses/by-sa/4.0', quelle: 'https://commons.wikimedia.org/wiki/File:SOB_RABe_526_Wassen.jpg' }
     ] },
   { id: 'sob-flirt3', kat: 'personenverkehr', name: 'RABe 526', beiname: 'FLIRT 3', typ: 'Vierteiliger Stadler FLIRT 3 in Silber', bahn: 'sob', vorlaeufig: false,
     text: ['Der silberne FLIRT 3 ist der kleine Bruder des Traverso. Er fährt allein auf S-Bahn- und Regionallinien oder verstärkt einen Traverso.', 'Alle 13 Züge tragen Bergnamen, vom «Bachtel» bis zum «Vilan».'],

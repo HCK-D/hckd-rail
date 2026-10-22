@@ -287,11 +287,13 @@ document.addEventListener('click', e => {
 });
 
 /* =====================================================================
-   FAHRZEUG DES TAGES: jeden Tag ein anderes, zuerst die fertigen Einträge
+   FAHRZEUG DES TAGES: jeden Tag ein anderes, nur Loks, Triebzüge und
+   Traktoren mit Foto, nie Wagen
    ===================================================================== */
 (() => {
-  const fertig = ZUEGE.filter(z => z.vorlaeufig === false || (z.bilder && z.bilder.length));
-  const list = fertig.length ? fertig : ZUEGE;
+  const mitAntrieb = z => ['lok', 'haube', 'rangier', 'triebzug'].includes(z.art && z.art.typ);
+  const fertig = ZUEGE.filter(z => mitAntrieb(z) && z.bilder && z.bilder.length);
+  const list = fertig.length ? fertig : ZUEGE.filter(mitAntrieb);
   const d = new Date(), tag = Math.floor(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()) / 864e5);
   const z = list[tag % list.length], k = katOf(z.kat);
   const datum = d.toLocaleDateString(LOCALE, { weekday: 'long', day: 'numeric', month: 'long' });

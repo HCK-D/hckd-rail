@@ -23,7 +23,7 @@ uebZug('sob-traverso', {
       { titel: 'Dotazione e accessibilità', liste: ['Accessi a pianale ribassato con pedane scorrevoli', 'WC accessibile in sedia a rotelle', 'Climatizzazione', 'Informazione ai passeggeri acustica e visiva', 'Prese di corrente', 'Posti per biciclette', '380 posti: 68 in 1a, 291 in 2a classe e 21 strapuntini'],
         p: ['Grazie al pianale ribassato e alle pedane scorrevoli si sale senza gradino sulla maggior parte dei marciapiedi.'] }
     ],
-  bilder: ['Traverso come IR 46 Locarno–Zurigo presso Wassen (2025)', 'Traverso 105 a Kreuzlingen (2019)', 'Traverso 121 a Göschenen (2023)']
+  bilder: ['Traverso 105 a Kreuzlingen (2019)', 'Traverso 121 a Göschenen (2023)', 'Traverso come IR 46 Locarno–Zurigo presso Wassen (2025)']
 });
 uebZug('sob-flirt3', {
   typ: 'Stadler FLIRT 3 a quattro casse, color argento',

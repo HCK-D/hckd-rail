@@ -23,7 +23,7 @@ uebZug('sob-traverso', {
       { titel: 'Facilities and accessibility', liste: ['Low-floor entrances with sliding steps', 'Wheelchair-accessible toilet', 'Air conditioning', 'Audio and visual passenger information', 'Power sockets', 'Bike spaces', '380 places: 68 in 1st, 291 in 2nd class and 21 folding seats'],
         p: ['Thanks to the low floor and sliding steps, you can board without a step at most platforms.'] }
     ],
-  bilder: ['Traverso as IR 46 Locarno–Zurich near Wassen (2025)', 'Traverso 105 in Kreuzlingen (2019)', 'Traverso 121 in Göschenen (2023)']
+  bilder: ['Traverso 105 in Kreuzlingen (2019)', 'Traverso 121 in Göschenen (2023)', 'Traverso as IR 46 Locarno–Zurich near Wassen (2025)']
 });
 uebZug('sob-flirt3', {
   typ: 'Four-car Stadler FLIRT 3 in silver',
