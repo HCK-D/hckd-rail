@@ -1,6 +1,17 @@
 /* RailBase – Anpassungen für Tablet und Desktop (zuletzt laden) */
 
 /* ---------- responsive ---------- */
+/* phone and app: the categories sit in one row and are swiped sideways; the next card peeks in */
+.kat-dots{display:none}
+@media (max-width:639px){
+  .kat-grid{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;scrollbar-width:none;margin-inline:calc(-1 * max(20px,env(safe-area-inset-left,0px))) calc(-1 * max(20px,env(safe-area-inset-right,0px)));padding:4px max(20px,env(safe-area-inset-right,0px)) 18px max(20px,env(safe-area-inset-left,0px));scroll-padding-inline:max(20px,env(safe-area-inset-left,0px))}
+  .kat-grid::-webkit-scrollbar{display:none}
+  .kat-grid>li{flex:0 0 86%;scroll-snap-align:start}
+  .kat:hover{transform:none}
+  .kat-dots{display:flex;justify-content:center;gap:8px;margin:2px 0 6px}
+  .kat-dots button{width:8px;height:8px;padding:0;border:0;border-radius:999px;background:var(--line);cursor:pointer;transition:width .3s ease,background .3s ease}
+  .kat-dots button[aria-current="true"]{width:22px;background:var(--accent)}
+}
 @media (min-width:640px){
   .kat-grid{grid-template-columns:repeat(2,1fr)}
   .grid{grid-template-columns:repeat(2,1fr)}

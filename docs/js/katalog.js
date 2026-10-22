@@ -115,6 +115,24 @@ $('#kat-grid').innerHTML = KATS.map(k => {
       <div class="kat-foot"><span class="count">${esc(tr('{n} Fahrzeuge', { n: list.length }))}<span class="seen-n" data-seen-kat="${k.id}"></span></span><span class="go">${esc(tr('Öffnen'))} ${arrow}</span></div>
     </div></a></li>`;
 }).join('');
+// on phones the tiles are swiped sideways: one dot per category, the visible one is marked
+{
+  const grid = $('#kat-grid'), dots = $('#kat-dots');
+  dots.innerHTML = KATS.map((k, i) => `<button type="button" aria-label="${esc(tr(k.name))}" aria-current="${i === 0}"></button>`).join('');
+  const zeige = () => {
+    const tiles = [...grid.children], links = grid.getBoundingClientRect().left;
+    let best = 0, bd = Infinity;
+    tiles.forEach((t, i) => { const d = Math.abs(t.getBoundingClientRect().left - links); if (d < bd) { bd = d; best = i; } });
+    // at the end of the row the last tile cannot reach the left edge
+    if (grid.scrollLeft + grid.clientWidth >= grid.scrollWidth - 4) best = tiles.length - 1;
+    [...dots.children].forEach((b, i) => b.setAttribute('aria-current', i === best));
+  };
+  grid.addEventListener('scroll', zeige, { passive: true });
+  dots.addEventListener('click', e => {
+    const i = [...dots.children].indexOf(e.target.closest('button'));
+    if (i >= 0) grid.scrollTo({ left: grid.children[i].offsetLeft - grid.firstElementChild.offsetLeft, behavior: 'smooth' });
+  });
+}
 
 // search
 const q = $('#q'), results = $('#results');
