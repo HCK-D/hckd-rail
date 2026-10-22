@@ -376,3 +376,8 @@ Object.assign(EINSATZ, {
   'trn-tm-44-meter': { linien: [['Neuchâtel Place Pury', 'Auvernier', 'Boudry Littorail'], ['La Chaux-de-Fonds', 'Les Ponts-de-Martel'], ['Le Locle', 'Les Brenets']],
     text: 'Im Baudienst auf den Meterspurlinien von transN, unter anderem La Chaux-de-Fonds–Les Ponts-de-Martel. Die Meterspur ist gestrichelt und vereinfacht eingezeichnet.' }
 });
+/* Re 430 und Ama 832 (Oktober 2026) */
+Object.assign(EINSATZ, {
+  'ama-832': { netz: true, orte: [['St. Margrethen']], text: 'Im Rangierdienst von SBB Cargo in der Schweiz, zum Beispiel in St. Margrethen.' },
+  'h-re430': { netz: true, strecken: [['Zürich HB', 'Zug', ...GOTTHARD_BERG]], text: 'Früher vor Schnell- und Güterzügen am Gotthard, später vor allem im Güterverkehr von SBB Cargo im ganzen Netz.' }
+});
