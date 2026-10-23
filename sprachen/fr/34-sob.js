@@ -1,7 +1,7 @@
 /* Français – SOB (Südostbahn) */
 uebDict({
   'Schweizerische Südostbahn': 'Chemin de fer du Sud-Est suisse',
-  'Klassiker von SBB, BLS, RhB, SOB, TPF und transN, die heute nicht mehr im Alltag fahren. Viele sind bei SBB Historic, der BLS-Stiftung, GFM Historique, RVT-Historique, historic RhB, in Vereinen oder in Museen erhalten.': 'Classiques des CFF, du BLS, des Chemins de fer rhétiques, du SOB, des TPF et de transN qui ne circulent plus au quotidien. Beaucoup sont conservés par CFF Historic, la Fondation BLS, GFM Historique, RVT-Historique, historic RhB, des associations ou dans des musées.',
+  'Klassiker von SBB, BLS, RhB, SOB, TPF, transN, MOB und zb, die heute nicht mehr im Alltag fahren. Viele sind bei SBB Historic, der BLS-Stiftung, GFM Historique, RVT-Historique, historic RhB, in Vereinen oder in Museen erhalten.': 'Classiques des CFF, du BLS, des Chemins de fer rhétiques, du SOB, des TPF, de transN, du MOB et de la zb qui ne circulent plus au quotidien. Beaucoup sont conservés par CFF Historic, la Fondation BLS, GFM Historique, RVT-Historique, historic RhB, des associations ou dans des musées.',
   'Fahrzeugfamilie': 'Famille de véhicules', 'Wagenarten': 'Types de voitures', 'Herkunft': 'Origine', 'Frühere Nummern': 'Anciens numéros', 'Frühere Bezeichnungen': 'Anciennes désignations',
   'Umbau': 'Transformation', 'Antrieb': 'Propulsion', 'Wiederbeschaffungswert': 'Valeur de remplacement', 'Einsatz': 'Utilisation', 'Ausmusterung': 'Retrait', 'Baujahre': 'Années de construction',
   'Achsfolge': 'Disposition des essieux', 'SOB': 'SOB', 'SOB Infrastruktur': 'SOB Infrastructure', 'SOB (historisch)': 'SOB (historique)',

@@ -2671,7 +2671,7 @@ uebEinsatz({
 /* Italiano – SOB (Südostbahn) */
 uebDict({
   'Schweizerische Südostbahn': 'Ferrovia del Sud-Est svizzera',
-  'Klassiker von SBB, BLS, RhB, SOB, TPF und transN, die heute nicht mehr im Alltag fahren. Viele sind bei SBB Historic, der BLS-Stiftung, GFM Historique, RVT-Historique, historic RhB, in Vereinen oder in Museen erhalten.': 'Classici di FFS, BLS, Ferrovia retica, SOB, TPF e transN che oggi non circolano più nel servizio quotidiano. Molti sono conservati da FFS Historic, dalla Fondazione BLS, da GFM Historique, da RVT-Historique, da historic RhB, da associazioni o nei musei.',
+  'Klassiker von SBB, BLS, RhB, SOB, TPF, transN, MOB und zb, die heute nicht mehr im Alltag fahren. Viele sind bei SBB Historic, der BLS-Stiftung, GFM Historique, RVT-Historique, historic RhB, in Vereinen oder in Museen erhalten.': 'Classici di FFS, BLS, Ferrovia retica, SOB, TPF, transN, MOB e zb che oggi non circolano più nel servizio quotidiano. Molti sono conservati da FFS Historic, dalla Fondazione BLS, da GFM Historique, da RVT-Historique, da historic RhB, da associazioni o nei musei.',
   'Fahrzeugfamilie': 'Famiglia di veicoli', 'Wagenarten': 'Tipi di carrozze', 'Herkunft': 'Origine', 'Frühere Nummern': 'Numeri precedenti', 'Frühere Bezeichnungen': 'Designazioni precedenti',
   'Umbau': 'Trasformazione', 'Antrieb': 'Trazione', 'Wiederbeschaffungswert': 'Valore di sostituzione', 'Einsatz': 'Impiego', 'Ausmusterung': 'Ritiro', 'Baujahre': 'Anni di costruzione',
   'Achsfolge': 'Rodiggio', 'SOB': 'SOB', 'SOB Infrastruktur': 'SOB Infrastruttura', 'SOB (historisch)': 'SOB (storico)',
@@ -4424,4 +4424,579 @@ uebEinsatz({
   'rhb-hist-gueterwagen': 'In passato nel traffico merci della RhB; oggi in treni storici. Lo scartamento metrico è tratteggiato e semplificato.',
   'rhb-ehem-diesel': 'In passato in servizio di manovra, per esempio a Landquart e Coira; le Gm 3/3 si trovano oggi alla DFB a Realp.',
   'rhb-draisinen': 'Oggi alla ferrovia museo Blonay–Chamby.'
+});
+
+/* ---- 40-zb.js ---- */
+/* Italiano – Zentralbahn (zb) */
+uebDict({
+  'Zentralbahn': 'Zentralbahn', 'zb Zentralbahn': 'zb Zentralbahn', '1200 V Gleichstrom': '1200 V corrente continua', 'Dieselelektrisch': 'diesel-elettrica'
+});
+
+/* ---------- traffico viaggiatori ---------- */
+uebZug('zb-adler', {
+  typ: 'Elettrotreno Stadler a cremagliera di sette casse per Lucerna–Interlaken',
+  text: ['L’ADLER è il lungo elettrotreno espresso della Zentralbahn. I quattro treni Stadler di sette casse circolano dal 2012, soprattutto come Luzern–Interlaken Express attraverso il Brünig.', 'In valle viaggia solo sulle ruote, sulle rampe ripide lo aiuta una ruota dentata. Altri ADLER sono stati ordinati.'],
+  kennzahlen: [['4', 'treni (150 001–004)'], ['313', 'posti a sedere'], ['120 km/h', 'velocità massima'], ['2012', 'in servizio']],
+  daten: { 'Bauart': 'elettrotreno a cremagliera e aderenza, 7 casse', 'Fahrzeugnummern': '150 001–004; ordinati 151 011–012 e altri cinque', 'Länge': '126 m tra gli accoppiatori', 'Gewicht': 'circa 200 t', 'Leistung': '2800 kW (aderenza), 3200 kW (cremagliera)', 'Anfahrzugkraft': '240 kN (aderenza)', 'Höchstgeschwindigkeit': '120 km/h (aderenza), 40 km/h su cremagliera', 'Sitzplätze': '313, di cui 63 in 1a classe', 'Anzahl': '4 treni, altri 7 ordinati' },
+  specNote: 'Posti secondo l’attuale pagina della Zentralbahn; la scheda Stadler originale e Wikipedia indicano altre suddivisioni (307 e 317 posti). Potenza secondo Stadler. Per lo sforzo di trazione all’avviamento su cremagliera le fonti divergono molto (200 e 440 kN); non è quindi indicato.',
+  abschnitte: [
+      { titel: 'Costruttore e composizione della flotta', p: ['Stadler ha consegnato i quattro ADLER nel 2012 e 2013. Il nome sta per «alpiner dynamischer leiser edler Reisezug» (treno alpino dinamico, silenzioso e nobile). Due elementi motori di tre casse racchiudono una carrozza bistrò. Sono battezzati 150 001 «Bern» e 150 003 «Luzern».', 'La Zentralbahn ha ordinato altri ADLER: prima due treni (secondo Wikipedia nel dicembre 2019, numeri 151 011–012, con una carrozza multifunzionale invece del bistrò), poi altri cinque nel settembre 2025. Dovrebbero arrivare da fine 2027; tre di essi avranno uno scompartimento premium.'] },
+      { titel: 'Impiego e tecnica', p: ['Gli ADLER circolano soprattutto come Luzern–Interlaken Express attraverso il Brünig. Sui tratti a cremagliera tra Giswil e Meiringen le ruote dentate ingranano nella cremagliera (sistema Riggenbach); lì il treno sale fino a 40 km/h, in valle viaggia fino a 120 km/h.', 'Il treno è lungo 126 m e pesa circa 200 t. Può essere accoppiato con un FINK; ne risulta un treno più lungo con più posti.'] },
+      { titel: 'Dotazione e accessibilità', liste: ['313 posti, di cui 63 in 1a classe (dato della Zentralbahn)', 'Carrozza bistrò al centro del treno', 'Accessi a pianale ribassato (circa 420 mm) a quattro porte su sette per lato, WC accessibile in sedia a rotelle', 'Climatizzazione, grandi finestrini panoramici, informazione ai viaggiatori e prese', 'Portabiciclette e portasci'] }
+    ],
+  bilder: ['ADLER sul lago di Lungern (2014)', 'ABeh 150 002 (2014)', '1a classe nell’ADLER (2017)']
+});
+uebZug('zb-fink', {
+  typ: 'Elettrotreno Stadler a cremagliera di tre casse per la S-Bahn e il Brünig',
+  text: ['Il FINK è il fratello corto dell’ADLER. Gli undici treni Stadler di tre casse circolano dal 2012 sulla S-Bahn di Lucerna, sul Brünig e verso Engelberg.', 'Come l’ADLER ha una ruota dentata per i tratti ripidi. Circola da solo o rinforza un ADLER.'],
+  kennzahlen: [['11', 'treni (6 + 5)'], ['139', 'posti fissi'], ['120 km/h', 'velocità massima'], ['2012', 'in servizio']],
+  daten: { 'Bauart': 'elettrotreno a cremagliera e aderenza, 3 casse', 'Länge': '54 m tra gli accoppiatori', 'Gewicht': 'circa 90 t', 'Leistung': '1400 kW (aderenza), 1600 kW (cremagliera)', 'Anfahrzugkraft': '120 kN (aderenza)', 'Höchstgeschwindigkeit': '120 km/h (aderenza), 40 km/h su cremagliera', 'Sitzplätze': '139, di cui 18 in 1a classe, più 8 strapuntini', 'Anzahl': '11 treni' },
+  specNote: 'Valori secondo Stadler e la Zentralbahn; Wikipedia indica 93 t. Anche per il FINK i dati sulla trazione su cremagliera divergono (100 e 220 kN). I nuovi FINK dal 2026 hanno una scheda propria.',
+  abschnitte: [
+      { titel: 'Costruttore e composizione della flotta', p: ['Stadler ha consegnato sei FINK nel 2012 (160 001–006) e altri cinque nel 2016 (161 011–015). Il nome sta per «flinke innovative Niederflurkomposition» (composizione agile e innovativa a pianale ribassato). Sulla seconda serie i carrelli a cremagliera sono stati migliorati per usurarsi meno.', 'Alcuni treni portano un nome, come 160 004 «Oberried» e 161 015 «Interlaken».'] },
+      { titel: 'Impiego e tecnica', p: ['I FINK circolano sulla S-Bahn di Lucerna (S4, S5), nel traffico regionale Meiringen–Interlaken Ost, come rinforzo degli ADLER e sulla diramazione per Engelberg. Linee e turni cambiano con l’orario.', 'Il treno è lungo 54 m. Sui tratti a cremagliera del Brünig e prima di Engelberg sale fino a 40 km/h.'] },
+      { titel: 'Dotazione e accessibilità', liste: ['139 posti fissi, di cui 18 in 1a classe, più 8 strapuntini', 'Zone a pianale ribassato con porte larghe e aree accessibili', 'Climatizzazione, finestrini panoramici e informazione ai viaggiatori', 'Nessun bistrò'] }
+    ],
+  bilder: ['ABeh 161 013 come IR per Engelberg a Lucerna (2019)', 'ABeh 160 004 a Stans (2025)', 'FINK sul Brünig (2012)']
+});
+uebZug('zb-fink-neu', {
+  beiname: 'nuovo FINK',
+  typ: 'Nuova generazione del FINK, entrata in servizio prevista da dicembre 2026',
+  text: ['Dieci nuovi FINK rafforzeranno la flotta della Zentralbahn da fine 2026. Il primo veicolo è arrivato nella notte sul 13 agosto 2026 e da allora è in prova a Meiringen.', 'Dal cambio d’orario del 13 dicembre 2026 dovrebbero circolare sul RE44 Lucerna–Engelberg.'],
+  kennzahlen: [['10', 'treni ordinati'], ['128', 'posti a sedere'], ['2026', 'primo veicolo'], ['RE44', 'Lucerna–Engelberg']],
+  daten: { 'Bauart': 'elettrotreno a cremagliera e aderenza, 3 casse', 'Fahrzeugnummern': '162 021–030 (secondo Wikipedia)', 'Sitzplätze': '17 in 1a, 111 in 2a classe', 'Anzahl': '10 ordinati (7 + 3)', 'In Betrieb seit': '2026 previsto' },
+  specNote: 'Secondo il comunicato della Zentralbahn dell’agosto 2026. I nuovi FINK hanno 128 posti, i precedenti 139; i valori non valgono gli uni per gli altri. I dati tecnici della nuova versione non sono ancora pubblicati.',
+  abschnitte: [
+      { titel: 'Costruttore e composizione della flotta', p: ['La Zentralbahn ha ordinato a Stadler prima sette nuovi FINK e nel settembre 2025 altri tre. Nella notte tra il 12 e il 13 agosto 2026 il primo treno è arrivato a Interlaken ed è stato trasferito a Meiringen.'] },
+      { titel: 'Impiego e tecnica', p: ['Dopo prove e omologazione, i treni dovrebbero circolare dal 13 dicembre 2026 sul RE44 Lucerna–Engelberg. In seguito rinforzeranno anche Interregio e S-Bahn e circoleranno accoppiati sul Regio Meiringen–Interlaken Ost.', 'Come i FINK precedenti hanno una ruota dentata. Un treno arrivato non è ancora un treno in orario: fino all’omologazione circola solo per prove.'] },
+      { titel: 'Dotazione e accessibilità', liste: ['128 posti: 17 in 1a e 111 in 2a classe', 'Nuovo arredamento interno e nuovo design', 'Altre dotazioni secondo lo stato dell’omologazione'] }
+    ]
+});
+uebZug('zb-spatz', {
+  typ: 'Elettrotreno panoramico di tre casse senza cremagliera per la S-Bahn',
+  text: ['Lo SPATZ è il più vecchio elettrotreno moderno della Zentralbahn. Stadler ha consegnato i dieci treni nel 2004 e 2005; circolano soprattutto sulla S-Bahn di Lucerna.', 'Non ha ruota dentata e quindi circola solo sulle linee più pianeggianti, per esempio fino a Giswil o tra Meiringen e Interlaken.'],
+  kennzahlen: [['10', 'treni (130 001–010)'], ['134', 'posti a sedere'], ['100 km/h', 'velocità massima'], ['2004', 'consegnati']],
+  daten: { 'Bauart': 'elettrotreno a pianale ribassato, 3 casse (senza cremagliera)', 'Länge': '51,93 m tra gli accoppiatori', 'Gewicht': '68,5 t a vuoto', 'Leistung': '1150 kW alla ruota (breve durata), 660 kW continui', 'Sitzplätze': '19 in 1a, 115 in 2a classe, più 14 strapuntini' },
+  specNote: 'Valori secondo la scheda Stadler (stato di consegna); potenza continua secondo Wikipedia. Rinnovi successivi possono aver modificato interni e posti.',
+  abschnitte: [
+      { titel: 'Costruttore e composizione della flotta', p: ['Stadler ha costruito i dieci SPATZ nel 2004 e 2005. Il nome sta per «Schmalspur-Panorama-Triebzug» (elettrotreno panoramico a scartamento ridotto). Le testate provengono dai GTW della linea del Seetal. Diversi treni portano un nome, come 130 001 «Haslital» e 130 002 «Pilatus».', 'Dal 2017 tutti gli SPATZ hanno accoppiatori automatici con cui possono circolare anche accoppiati a un FINK. Porte, pavimenti, toilette e informazione ai viaggiatori sono stati rinnovati più tardi a Stansstad.'] },
+      { titel: 'Impiego e tecnica', p: ['Gli SPATZ circolano sulla S-Bahn di Lucerna, per esempio sulla S4 e S5 verso Giswil e Stans, e tra Meiringen e Interlaken Ost. Da soli non possono superare il Brünig né salire a Engelberg, perché manca loro la ruota dentata.', 'La trazione si trova nei carrelli sotto la parte centrale. Il treno è lungo quasi 52 m e viaggia fino a 100 km/h.'] },
+      { titel: 'Dotazione e accessibilità', liste: ['134 posti: 19 in 1a e 115 in 2a classe, più 14 strapuntini', 'Accessi a pianale ribassato (circa 400 mm) e zona per sedie a rotelle', 'WC chiuso accessibile in sedia a rotelle', 'Climatizzazione e grandi finestrini panoramici nella parte centrale'] }
+    ],
+  bilder: ['SPATZ ABe 130 002 a Sarnen (2017)', 'SPATZ sul lago di Brienz (2014)', 'Nello SPATZ (2006)']
+});
+uebZug('zb-hge44ii', {
+  typ: 'Locomotiva elettrica a cremagliera e aderenza per il Brünig ed Engelberg',
+  text: ['Fino al 2012 le otto HGe 4/4 II trainavano tutti i treni espressi attraverso il Brünig. Oggi trainano soprattutto il Luzern–Engelberg Express e treni supplementari.', 'Hanno ruote per le linee di valle e ruote dentate per le rampe ripide.'],
+  kennzahlen: [['8', 'locomotive (101 961–968)'], ['1932 kW', 'potenza oraria'], ['100 km/h', 'velocità massima'], ['1989', 'prime locomotive']],
+  daten: { 'Bauart': 'locomotiva elettrica a cremagliera e aderenza', 'Hersteller': 'SLM (meccanica), BBC/ABB (elettrica)', 'Betreiber': 'zb Zentralbahn (fino al 2004 linea del Brünig delle FFS)', 'Länge': '14,80 m respingenti compresi', 'Leistung': '1932 kW (potenza oraria)', 'Anfahrzugkraft': '230 kN (aderenza), 280 kN (cremagliera)', 'Höchstgeschwindigkeit': '100 km/h (aderenza), 40 km/h su cremagliera' },
+  specNote: 'Valori secondo Wikipedia. Le fonti verificate non indicano chiaramente quante delle otto locomotive siano ancora in servizio oggi.',
+  abschnitte: [
+      { titel: 'Costruttore e composizione della flotta', p: ['SLM e BBC (poi ABB) hanno costruito le locomotive; la linea del Brünig delle FFS le ha messe in servizio nel 1989 e 1990. Portano nomi di località, da «Horw» a «Ringgenberg». Locomotive identiche circolano sulla Matterhorn Gotthard Bahn.'] },
+      { titel: 'Impiego e tecnica', p: ['Fino al 2012 le HGe 4/4 II trainavano tutti i treni espressi tra Lucerna e Interlaken. Oggi due treni navetta appositamente attrezzati effettuano il Luzern–Engelberg Express; altre navette circolano in treni stagionali, sulla S41 e come riserva. Nuovi elettrotreni dovrebbero rilevarne una parte.', 'Su cremagliera (sistema Riggenbach) la locomotiva sale a 40 km/h e traina fino a 170 t su una pendenza del 120 per mille.'] },
+      { titel: 'Dotazione e accessibilità', liste: ['Due cabine di guida, nessuno spazio per viaggiatori', 'Trazione a cremagliera e aderenza', 'Circola con carrozze panoramiche e carrozze pilota articolate in treni navetta'] }
+    ],
+  bilder: ['HGe 101 966 con il Luzern–Engelberg Express a Engelberg (2014)', 'HGe 101 con un Interregio presso Niederried (2009)', 'HGe 101 968 a Interlaken Ost (2009)']
+});
+uebZug('zb-bdeh140', {
+  typ: 'Automotrice a cremagliera della ferrovia Lucerna–Stans–Engelberg (riserva e storica)',
+  text: ['Dal 1964 al 2010 le otto BDeh 4/4 della LSE hanno trainato i treni sulla ripida rampa verso Engelberg. Oggi la 140 006 serve da riserva, la 140 005 circola come veicolo storico.', 'Avevano due rapporti di trasmissione: uno per la ripida cremagliera e uno per 75 km/h in valle.'],
+  kennzahlen: [['8', 'automotrici (1–8)'], ['736 kW', 'potenza oraria'], ['75 km/h', 'velocità massima'], ['1964', 'prime automotrici']],
+  daten: { 'Bauart': 'automotrice elettrica a cremagliera e aderenza', 'Betreiber': 'LSE, dal 2005 zb Zentralbahn', 'Fahrzeugnummern': '1–5 (1964), 6–7 (1970), 8 (1980); oggi 140 005 e 140 006', 'Gewicht': '47,9 t a vuoto', 'Leistung': '736 kW (potenza oraria)', 'Höchstgeschwindigkeit': '75 km/h (aderenza), 20 km/h su cremagliera', 'Sitzplätze': 'da 40 a 42 in 2a classe', 'Anzahl': '8 costruite' },
+  specNote: 'Valori secondo la scheda del Verein Engelbergbahn per la 005 e secondo Wikipedia; Wikipedia indica 40, la scheda dell’associazione 42 posti. Wikipedia indica la 007 come venduta; secondo la Zentralbahn si trova al Museo Svizzero dei Trasporti e serve da simulatore di guida.',
+  abschnitte: [
+      { titel: 'Costruttore e composizione della flotta', p: ['La LSE ha acquistato le automotrici in tre lotti: 1–5 nel 1964, 6–7 nel 1970 e la 8 nel 1980. SWP ha costruito la cassa, SLM il rodiggio a cremagliera e BBC l’equipaggiamento elettrico.', 'Le 2 e 8 sono state demolite nel 2012, le 1 e 3 nel 2014.'] },
+      { titel: 'Impiego e tecnica', p: ['Fino all’apertura della nuova galleria Grafenort–Engelberg nel dicembre 2010 hanno svolto tutto il traffico verso Engelberg sulla vecchia, ripidissima rampa a cremagliera. In seguito hanno effettuato treni supplementari e sostituzioni sulla S-Bahn.', 'Oggi la 140 006 circola secondo la Zentralbahn sulla S41 e in treni stagionali. La 140 005 è conservata nei colori della LSE per corse speciali, la 140 007 si trova al Museo Svizzero dei Trasporti di Lucerna.'] },
+      { titel: 'Dotazione e accessibilità', liste: ['Compartimento viaggiatori e bagagli', 'Due rapporti di trasmissione per cremagliera e valle', 'Accesso a pianale alto, non senza gradini', 'La 005 circola con la carrozza pilota ABt 923'] }
+    ],
+  bilder: ['BDeh 140 006 (2007)', 'BDeh 4/4 4 della LSE a Engelberg (1998)', 'BDeh 4/4 8 in arrivo a Stansstad (2006)']
+});
+uebZug('zb-mib', {
+  beiname: '013 e 008',
+  typ: 'Automotrici a corrente continua della ferrovia Meiringen–Innertkirchen',
+  text: ['Sulla linea Meiringen–Innertkirchen, lunga poco meno di 5 km, circolano automotrici proprie a 1200 V corrente continua. L’automotrice articolata 125 013 svolge il servizio quotidiano, la 125 008 è di riserva.', 'Dal 2021 la linea appartiene alla Zentralbahn.'],
+  kennzahlen: [['2', 'automotrici'], ['1200 V', 'corrente continua'], ['5 km', 'linea'], ['2021', 'alla Zentralbahn']],
+  daten: { 'Bauart': 'automotrici elettriche (automotrice articolata e veicolo singolo)', 'Betreiber': 'zb Zentralbahn (fino al 2020 MIB)', 'Fahrzeugnummern': '125 013 (ex MIB Be 2/6 13), 125 008 (ex MIB Be 4/4 8)' },
+  specNote: 'Secondo la pagina del materiale rotabile della Zentralbahn e Wikipedia. Posti e masse non vi sono indicati e non vengono ripresi da altri GTW.',
+  abschnitte: [
+      { titel: 'Costruttore e composizione della flotta', p: ['La Be 4/4 8 è stata costruita da Stadler nel 1996 ed è un esemplare unico; oggi si chiama Be 125 008 ed è pronta come riserva.', 'L’automotrice articolata Be 2/6 è stata costruita nel 1997 per la MVR sulla Riviera vodese ed è arrivata alla MIB nel 2018. Oggi si chiama Be 125 013.'] },
+      { titel: 'Impiego e tecnica', p: ['La linea parte da Meiringen, passa accanto alla gola dell’Aare e attraversa la galleria del Kirchet (1502 m) fino a Innertkirchen. Di giorno i treni circolano circa ogni 30 minuti.', 'Poiché la linea è alimentata a 1200 V corrente continua, gli altri treni della Zentralbahn (15 kV corrente alternata) non possono circolarvi. La Zentralbahn ha studiato una conversione alla corrente alternata per treni diretti da Interlaken.'] },
+      { titel: 'Dotazione e accessibilità', liste: ['Nessuna cremagliera necessaria (linea ad aderenza)', 'Parte centrale a pianale ribassato sull’automotrice articolata 125 013', 'Esemplare unico 125 008 come riserva'] }
+    ],
+  bilder: ['Be 125 013 presso Aareschlucht West (2021)', 'Be 4/4 8, oggi Be 125 008, a Meiringen (2013)']
+});
+uebZug('zb-wagen', {
+  name: 'Carrozze panoramiche e pilota', beiname: 'treni espressi',
+  typ: 'Carrozze trainate per Lucerna–Engelberg e treni stagionali',
+  text: ['Con le HGe 4/4 II circolano treni navetta di carrozze panoramiche, carrozze di 2a classe rinnovate e una carrozza pilota articolata. Il più noto è il Luzern–Engelberg Express con la carrozza Globi.', 'Le carrozze non hanno trazione propria; dalla carrozza pilota il macchinista comanda la locomotiva all’altra estremità del treno.'],
+  kennzahlen: [['3', 'carrozze pilota articolate'], ['2', 'navette espresso'], ['1a', 'classe nella carrozza panoramica'], ['Globi', 'carrozza al centro']],
+  daten: { 'Bauart': 'carrozze panoramiche, carrozze viaggiatori e carrozze pilota articolate', 'Anzahl': '3 carrozze pilota articolate' },
+  specNote: 'Secondo la pagina del materiale rotabile della Zentralbahn. Numeri e posti delle singole carrozze non vi sono indicati per intero.',
+  abschnitte: [
+      { titel: 'Costruttore e composizione della flotta', p: ['Il Luzern–Engelberg Express è composto da una HGe 4/4 II, una carrozza panoramica di 1a classe impiegata in passato nel servizio GoldenPass, tre carrozze di 2a classe rinnovate e una carrozza pilota articolata. Una carrozza Globi al centro dà al treno il nome di Globi-Express.', 'La Zentralbahn ha tre carrozze pilota articolate con cabina di guida e parte a pianale ribassato.'] },
+      { titel: 'Impiego e tecnica', p: ['Due navette di questo tipo effettuano il Luzern–Engelberg Express. Tre, a volte quattro altre navette circolano in treni stagionali, sulla S41 e come riserva. I nuovi FINK dovrebbero rilevare una parte di questi treni da fine 2026.'] },
+      { titel: 'Dotazione e accessibilità', liste: ['Zona a pianale ribassato nella carrozza pilota articolata', 'Climatizzazione, grandi finestrini, sospensione pneumatica e freni a disco nella carrozza pilota articolata', 'Carrozza panoramica di 1a classe', 'Le carrozze più vecchie non sono senza gradini'] }
+    ],
+  bilder: ['Carrozza pilota articolata ABt a Hergiswil (2009)', 'Vista da un treno trainato tra Meiringen e il Brünig (2010)']
+});
+
+/* ---------- infrastruttura ---------- */
+uebZug('zb-hgm104', {
+  typ: 'Locomotiva diesel a cremagliera Stadler per treni cantiere e servizio invernale',
+  text: ['Le HGm sono piccole locomotive diesel con ruota dentata. Trainano treni cantiere, aiutano quando la linea di contatto è disinserita e d’inverno lavorano allo sgombero della neve – anche sulle cremagliere del Brünig e prima di Engelberg.', 'Stadler ne ha consegnata una nel 2005, una nel 2010 e una nel 2022.'],
+  kennzahlen: [['3', 'locomotive (104 001–003)'], ['450 kW', 'potenza'], ['60 km/h', 'velocità massima'], ['2005', 'prima locomotiva']],
+  daten: { 'Bauart': 'locomotiva diesel-elettrica a cremagliera e aderenza' },
+  specNote: 'Valori per le 104 001 e 002 secondo Wikipedia (Stadler HGm 2/2); per la 104 003 consegnata nel 2022 non sono pubblicati dati. I valori della Gm 105 non vengono ripresi.',
+  abschnitte: [
+      { titel: 'Costruttore e composizione della flotta', p: ['Stadler ha consegnato la 104 001 nel 2005 e la 104 002 nel 2010; una delle due era stata ordinata in origine dalle FFS per la linea del Brünig. Nel 2022 è arrivata un’altra locomotiva diesel a cremagliera, la 104 003.', 'Locomotive identiche circolano anche sulla Matterhorn Gotthard Bahn e su ferrovie a cremagliera in Spagna e Austria.'] },
+      { titel: 'Impiego e tecnica', p: ['Le locomotive trainano treni di costruzione e di materiale e lavorano quando la linea di contatto è disinserita. D’inverno aiutano a sgomberare la neve. Dove una locomotiva ad aderenza non supera la rampa, serve la ruota dentata.'] },
+      { titel: 'Dotazione e accessibilità', liste: ['Trazione diesel-elettrica, indipendente dalla linea di contatto', 'Ruota dentata per i tratti a cremagliera', 'Cabina pensata per il servizio di lavoro'] }
+    ],
+  bilder: ['HGm 104 001 a Meiringen (2015)', 'HGm 104 002 (2011)']
+});
+uebZug('zb-gm105', {
+  typ: 'Locomotiva diesel da manovra senza cremagliera per treni cantiere',
+  text: ['La Gm 105 001 è una locomotiva diesel a due assi senza ruota dentata. Stadler l’ha consegnata nel 2011 per i treni cantiere sulle linee pianeggianti della Zentralbahn, della BOB e della MIB.', 'D’inverno spinge anche una fresa da neve.'],
+  kennzahlen: [['1', 'locomotiva'], ['450 kW', 'potenza alla ruota'], ['80 km/h', 'velocità massima'], ['2011', 'consegnata']],
+  daten: { 'Bauart': 'locomotiva diesel-elettrica senza cremagliera, 2 assi', 'Motor': 'MTU 12V183TB32, circa 550 kW', 'Länge': '8,09 m respingenti compresi', 'Leistung': '450 kW alla ruota' },
+  specNote: 'Valori secondo la scheda Stadler (L4232ZBGm22_0812d). L’esempio di carico di 400 t sul 6 per mille a 30 km/h è un punto di calcolo, non un carico generale.',
+  abschnitte: [
+      { titel: 'Costruttore e composizione della flotta', p: ['Stadler ha consegnato la locomotiva nel 2011. È strettamente imparentata con le locomotive a cremagliera HGm, ma non ha ruota dentata.'] },
+      { titel: 'Impiego e tecnica', p: ['Traina treni cantiere sulle linee ad aderenza della Zentralbahn, della Berner Oberland-Bahn e della MIB e d’inverno spinge frese da neve. Il freno elettrico eroga 360 kW.'] },
+      { titel: 'Dotazione e accessibilità', liste: ['Due posti di comando in diagonale e sedili per quattro persone', 'Radiocomando e telecamera sul lato dell’accoppiatore', 'Rete ausiliaria 400 V da 25 kVA'] }
+    ],
+  bilder: ['Gm 105 001 (2014)', 'Gm 105 001 a Stansstad (2014)']
+});
+
+/* ---------- veicoli storici ---------- */
+uebZug('zb-deh46', {
+  typ: 'Automotrice bagagliaio della linea del Brünig elettrificata nel 1941 (storica)',
+  text: ['Con le 16 automotrici bagagliaio Fhe 4/6 iniziò nel 1941 l’esercizio elettrico sul Brünig. Avevano ruote per la valle e un carrello a cremagliera per le rampe.', 'Molte furono poi trasformate in locomotive ad aderenza De 110. Sono conservate le 909, 912 e 914.'],
+  kennzahlen: [['16', 'automotrici (901–916)'], ['894 kW', 'potenza'], ['75 km/h', 'velocità massima'], ['1941', 'in servizio']],
+  daten: { 'Bauart': 'automotrice bagagliaio elettrica a cremagliera e aderenza', 'Hersteller': 'SLM; parte elettrica BBC, MFO e SAAS', 'Betreiber': 'linea del Brünig delle FFS, dal 2005 zb Zentralbahn', 'Fahrzeugnummern': 'Fhe 4/6 901–916, poi Deh 4/6 e Deh 120 006–012; trasformate in De 110 000–005, De 121 e 122 della LSE', 'Höchstgeschwindigkeit': '75 km/h (aderenza)', 'Erhalten': '909 (zb Historic), 912 e 914 (FFS Historic); attualmente non in esercizio' },
+  specNote: 'Lunghezza, peso e potenza secondo la scheda della 909; storia secondo Wikipedia (SBB Fhe 4/6). I 75 km/h non valgono su cremagliera.',
+  abschnitte: [
+      { titel: 'Costruttore e composizione della flotta', p: ['Durante la Seconda guerra mondiale le FFS elettrificarono la linea del Brünig a 15 kV. SLM costruì le 16 automotrici nel 1941 e 1942, l’equipaggiamento elettrico veniva da BBC, MFO e SAAS. Alla trazione ad aderenza si aggiunse un carrello centrale a cremagliera.', 'Le Fhe divennero poi Deh 4/6. La 915 fu demolita nel 1990 dopo un incidente.'] },
+      { titel: 'Impiego e tecnica', p: ['Le automotrici trainavano treni viaggiatori e bagagli attraverso il Brünig. Dal 1954 le HGe 4/4 I le aiutarono in montagna, dal 1990 le HGe 4/4 II rilevarono i treni Lucerna–Interlaken.', 'Dal 1987 sei automotrici furono trasformate in locomotive ad aderenza (De 110 000–005); le altre si chiamarono Deh 120 006–012. Nel 1991 la LSE rilevò le 905 e 907 e le trasformò nelle De 121 e 122.'] },
+      { titel: 'Dotazione e accessibilità', liste: ['Bagagliaio per circa 3 t', 'Carrello centrale a cremagliera', 'Conservate: 909, 912 e 914, attualmente non in esercizio'] }
+    ],
+  bilder: ['Deh 4/6 914 con carrozze storiche a Giswil (2013)', 'Fhe 4/6 915 nello stato originale', 'De 110 021 trasformata a Interlaken Ost (2013)']
+});
+uebZug('zb-hge44i', {
+  typ: 'Locomotiva a cremagliera della linea del Brünig del 1954 (storica)',
+  text: ['Dal 1954 le due HGe 4/4 I 1991 e 1992 furono le potenti locomotive a cremagliera del Brünig. Per la loro forza di trazione il personale le chiamava «Muni» (toro).', 'La 1991 è stata demolita, la 1992 è conservata.'],
+  kennzahlen: [['2', 'locomotive (1991, 1992)'], ['1954', 'in servizio'], ['50 km/h', 'velocità massima'], ['1992', 'conservata']],
+  daten: { 'Bauart': 'locomotiva elettrica a cremagliera e aderenza', 'Betreiber': 'linea del Brünig delle FFS' },
+  specNote: 'Secondo Wikipedia e la Zentralbahn. Se la 1992 sia oggi in esercizio è indicato in modo contraddittorio: la pagina della flotta la dice in esercizio, la pagina nostalgia no.',
+  abschnitte: [
+      { titel: 'Costruttore e composizione della flotta', p: ['SLM, BBC e MFO costruirono le due locomotive nel 1954 per la linea del Brünig delle FFS.'] },
+      { titel: 'Impiego e tecnica', p: ['Le locomotive lavoravano soprattutto sul tratto di montagna tra Giswil e Meiringen. Con 50 km/h erano troppo lente per le linee di valle. La potente trazione si guastava spesso, per cui le locomotive restavano a lungo in officina.', 'La 1991 fu ritirata nel 1994 dopo un guasto al motore e poi demolita. La 1992 è stata conservata e rimessa in esercizio nel 2014 dalla Brünig-Nostalgie-Bahn.'] },
+      { titel: 'Dotazione e accessibilità', liste: ['Due cabine di guida', 'Trazione a cremagliera e aderenza', 'Conservata: 1992'] }
+    ],
+  bilder: ['HGe 4/4 I 1992 (prima del 1968)', 'HGe 4/4 I sul Brünig']
+});
+uebZug('zb-lse-diesel', {
+  typ: 'Locomotiva diesel e trattori da manovra della LSE (storici)',
+  text: ['La Gm 4/4 111 «Jumbo» era una locomotiva diesel-idraulica proveniente dalla Finlandia, in servizio alla LSE dal 1974. Piccoli trattori da manovra RACO completavano il parco.', 'Dove si trovino oggi questi veicoli non è documentato per tutti.'],
+  kennzahlen: [['368 kW', 'potenza del Jumbo'], ['36 t', 'peso del Jumbo'], ['1955', 'costruzione (Jumbo)'], ['1974', 'alla LSE']],
+  daten: { 'Bauart': 'locomotiva diesel-idraulica e trattori diesel', 'Hersteller': 'Jung (Jumbo), RACO (trattori)', 'Länge': '11,23 m (Jumbo)', 'Gewicht': '36 t (Jumbo)', 'Leistung': '368 kW (Jumbo)', 'Höchstgeschwindigkeit': '40 km/h (Jumbo)' },
+  specNote: 'Valori storici secondo l’archivio del Verein Engelbergbahn. L’attuale ubicazione del gruppo non viene affermata.',
+  abschnitte: [
+      { titel: 'Costruttore e composizione della flotta', p: ['Jung costruì il Jumbo nel 1955 per un’azienda industriale in Finlandia; la LSE lo impiegò dal 1974. I trattori venivano da RACO: il Tm 102 del 1961 (ex StEB 51), il Tm 103 del 1967 e un Tm 101 costruito come trattore FFS a scartamento normale e trasformato per la LSE.'] },
+      { titel: 'Impiego e tecnica', p: ['Il Jumbo trainava treni cantiere e di servizio, i trattori manovravano a Stansstad e nelle stazioni. Il Jumbo è una locomotiva puramente diesel, anche se un titolo dell’archivio lascia supporre altro.'] },
+      { titel: 'Dotazione e accessibilità', liste: ['Jumbo: diesel-idraulica, 11,23 m, 36 t, 368 kW, 40 km/h', 'Tm 102: 5,07 m, 10 t, 81 kW, 45 km/h', 'Tm 103: 5,90 m, 16 t, 110 kW, 50 km/h'] }
+    ]
+});
+uebZug('zb-traktoren', {
+  name: 'Te I e Tm', beiname: 'piccoli trattori',
+  typ: 'Piccoli trattori da manovra della linea del Brünig e della LSE (storici)',
+  text: ['Tra i veicoli storici ci sono piccoli trattori: il Te I 198 elettrico della linea del Brünig del 1941 e i trattori diesel Tm 100 e Tm II OKK 5.', 'Manovravano carri nelle stazioni e nelle officine.'],
+  kennzahlen: [['1941', 'Te I 198'], ['1931', 'Tm 100'], ['13 t', 'peso del Te I'], ['33 kW', 'potenza del Tm 100']],
+  daten: { 'Bauart': 'trattore da manovra elettrico e trattori diesel', 'Hersteller': 'SLM e MFO (Te I), RACO (Tm)', 'Betreiber': 'linea del Brünig delle FFS, LSE', 'Fahrzeugnummern': 'Te I 198; Tm 100 (prima 491, 591, LSE 59 e 101); Tm II OKK 5', 'Erhalten': 'Te I 198, Tm 100 (accantonato), Tm II OKK 5' },
+  specNote: 'Secondo le schede del Verein Engelbergbahn. Secondo l’archivio il gemello Te I 199 è stato demolito nel 2018. L’attuale disponibilità al servizio non è stata riconfermata.',
+  abschnitte: [
+      { titel: 'Costruttore e composizione della flotta', p: ['SLM e MFO costruirono nel 1941 i trattori da manovra elettrici Te I 198 e 199 per la linea del Brünig. Il Tm 100 fu costruito nel 1931 da RACO e ha un motore diesel da una trasformazione del 1968. RACO costruì il Tm II OKK 5 nel 1953; proviene da un parco militare.'] },
+      { titel: 'Impiego e tecnica', p: ['Il Te I manovrava sotto la linea di contatto, i Tm anche su binari senza corrente. Il Tm 100 ha portato in successione i numeri 491, 591, LSE 59 e 101; un Tm 101 più recente è un altro veicolo.'] },
+      { titel: 'Dotazione e accessibilità', liste: ['Te I 198: circa 5,8 m, 13 t', 'Tm 100: circa 4,4 m, 6 t, 33 kW, 28 km/h', 'Tm II OKK 5: veicolo di supporto del servizio museale'] }
+    ],
+  bilder: ['Te I 199, gemello del 198 conservato']
+});
+uebZug('zb-g34', {
+  typ: 'Locomotiva a vapore della linea del Brünig del 1913 (storica)',
+  text: ['La G 3/4 208 è una locomotiva a vapore della linea del Brünig senza ruota dentata. SLM la costruì nel 1913 per le linee di valle.', 'Oggi appartiene alla Brünig-Dampfbahn (BDB) e circola in treni storici.'],
+  kennzahlen: [['1913', 'costruzione'], ['SLM', 'costruttore'], ['3', 'assi motori'], ['BDB', 'proprietaria']],
+  daten: { 'Bauart': 'locomotiva a vapore senza cremagliera', 'Betreiber': 'linea del Brünig delle FFS; oggi Brünig-Dampfbahn', 'Erhalten': 'Brünig-Dampfbahn (BDB)' },
+  specNote: 'Secondo la Brünig-Dampfbahn e la Zentralbahn. La G 3/4 non ha ruota dentata; non sale quindi con le proprie forze sulle rampe del Brünig.',
+  abschnitte: [
+      { titel: 'Costruttore e composizione della flotta', p: ['SLM costruì la locomotiva nel 1913 per la linea del Brünig delle FFS. Ha tre assi accoppiati e un asse portante.'] },
+      { titel: 'Impiego e tecnica', p: ['La G 3/4 trainava treni sui tratti pianeggianti, per esempio tra Lucerna e Giswil o tra Meiringen e Interlaken. Oggi appartiene alla Brünig-Dampfbahn, in passato Ballenberg Dampfbahn, e circola in treni storici dopo autorizzazione.'] },
+      { titel: 'Dotazione e accessibilità', liste: ['Nessuna ruota dentata, solo per linee di valle', 'Proprietà della Brünig-Dampfbahn, non della Zentralbahn', 'Circola con carrozze storiche'] }
+    ],
+  bilder: ['G 3/4 208 a Brienz (2007)', 'G 3/4 208 della linea del Brünig']
+});
+uebZug('zb-hg33', {
+  beiname: '1067 e 1068',
+  typ: 'Locomotiva a vapore a cremagliera della linea del Brünig (storica)',
+  text: ['Dal 1905 le HG 3/3 trainavano i treni attraverso il Brünig – con ruote in valle e ruota dentata in montagna. Tra quelle conservate ci sono le 1067 e 1068 della Brünig-Dampfbahn.', 'La 1068 è stata ricostruita dopo un incendio del deposito e circola di nuovo dal 2022.'],
+  kennzahlen: [['18', 'locomotive (1051–1068)'], ['1905', 'prime locomotive'], ['40 km/h', 'velocità massima (valle)'], ['13 km/h', 'su cremagliera']],
+  daten: { 'Bauart': 'locomotiva a vapore a cremagliera e aderenza', 'Betreiber': 'linea del Brünig delle FFS; oggi Brünig-Dampfbahn', 'Höchstgeschwindigkeit': '40 km/h (aderenza), 13 km/h su cremagliera', 'Erhalten': '1067 e 1068 (Brünig-Dampfbahn), 1063 (Museo Svizzero dei Trasporti, Lucerna)' },
+  specNote: 'Secondo Wikipedia (SBB HG 3/3) e la Brünig-Dampfbahn. Le 1051–1067 furono costruite nel 1905–1910, la 1068 nel 1926 come replica.',
+  abschnitte: [
+      { titel: 'Costruttore e composizione della flotta', p: ['Dal 1905 SLM costruì le locomotive 1051–1067; la 1068 seguì nel 1926 come replica. Quattro cilindri azionano separatamente le ruote e la ruota dentata.', 'Sostituirono le più deboli HG 2/2. Con l’elettrificazione del 1941 divennero superflue; le ultime (1065, 1067, 1068) furono ritirate nel 1965.'] },
+      { titel: 'Impiego e tecnica', p: ['La 1067 circola dal 1972 con la Ballenberg Dampfbahn, oggi Brünig-Dampfbahn. La 1068 fu prima un monumento a Meiringen, arrivò alla ferrovia a vapore nel 2000 e fu gravemente danneggiata da un incendio del deposito nel 2013. Dopo la ricostruzione circola di nuovo dal 2022; nel 2026 ha compiuto 100 anni.', 'La 1063 si trova dal 1957 al Museo Svizzero dei Trasporti di Lucerna, sezionata come oggetto espositivo.'] },
+      { titel: 'Dotazione e accessibilità', liste: ['Trazione a quattro cilindri per ruote e ruota dentata', 'Può scendere con la caldaia in avanti', 'Corse secondo il programma e l’autorizzazione della Brünig-Dampfbahn'] }
+    ],
+  bilder: ['HG 3/3 1067 (2013)', 'HG 3/3 1068 a Meiringen (1991)', 'HG 3/3 1063 sezionata al Museo Svizzero dei Trasporti di Lucerna (2007)']
+});
+uebZug('zb-mib-akku', {
+  beiname: 'automotrici ad accumulatori',
+  typ: 'Automotrici ad accumulatori della ferrovia Meiringen–Innertkirchen (storiche)',
+  text: ['Prima dell’elettrificazione del 1977, sulla linea Meiringen–Innertkirchen circolavano automotrici ad accumulatori. Ricavavano l’energia da batterie invece che da una linea di contatto.', 'La vettura 5 è conservata, la numero 4 si trova al Museo Svizzero dei Trasporti di Lucerna.'],
+  kennzahlen: [['1926', 'ferrovia industriale aperta'], ['1946', 'servizio viaggiatori'], ['1939', 'n. 4 costruita'], ['1977', 'linea di contatto']],
+  daten: { 'Bauart': 'automotrice ad accumulatori', 'Betreiber': 'Kraftwerke Oberhasli (KWO), MIB', 'Stromsystem': 'accumulatori (batteria)', 'Fahrzeugnummern': 'CFa 2/2 4 e 5; la 5 oggi anche BDa 125 005', 'Erhalten': '5 (veicolo storico della MIB), 4 (Museo Svizzero dei Trasporti, Lucerna)' },
+  specNote: 'Secondo la Zentralbahn e il catalogo del Museo Svizzero dei Trasporti. Le fonti non indicano un anno di costruzione comune e sicuro per le due automotrici; solo la numero 4 è datata 1939.',
+  abschnitte: [
+      { titel: 'Costruttore e composizione della flotta', p: ['Le Kraftwerke Oberhasli costruirono la linea negli anni 1920 come ferrovia industriale per la costruzione delle centrali; dal 1946 poté trasportare anche viaggiatori. Si viaggiava prima a vapore, poi con automotrici ad accumulatori.'] },
+      { titel: 'Impiego e tecnica', p: ['Le automotrici ad accumulatori trasportavano materiale e poi anche viaggiatori tra Meiringen e Innertkirchen. Nel 1977 la linea fu elettrificata a 1200 V corrente continua; in seguito circolarono automotrici con pantografo.', 'La vettura 5 è oggi registrata come veicolo storico della MIB (BDa 125 005).'] },
+      { titel: 'Dotazione e accessibilità', liste: ['Trazione a batteria senza linea di contatto', 'Compartimento viaggiatori', 'Conservate: n. 5 e n. 4 (museo)'] }
+    ],
+  bilder: ['Automotrice ad accumulatori CFa 2/2 5 a Innertkirchen (2021)', 'Automotrice ad accumulatori 5 (verso il 1976)']
+});
+uebZug('zb-hist-wagen', {
+  name: 'Carrozze storiche', beiname: 'Brünig e LSE',
+  typ: 'Carrozze viaggiatori e ristorante storiche (storiche)',
+  text: ['Per le corse speciali sono conservate numerose vecchie carrozze della linea del Brünig: carrozze in legno degli anni 1920, carrozze in acciaio leggero come la carrozza Landi del 1939 e carrozze ristorante.', 'Appartengono in parte a FFS Historic, in parte ad associazioni, e non fanno parte del normale parco carrozze della Zentralbahn.'],
+  kennzahlen: [['1925', 'carrozza più vecchia (A 260)'], ['1939', 'carrozza Landi A 101'], ['80 km/h', 'velocità massima'], ['WR 426', 'carrozza ristorante']],
+  daten: { 'Bauart': 'carrozze viaggiatori e ristorante storiche', 'Hersteller': 'SIG e altri', 'Betreiber': 'FFS Historic, zb Historic e associazioni', 'Höchstgeschwindigkeit': 'per lo più 80 km/h' },
+  specNote: 'Secondo le schede del Verein Engelbergbahn. Una scheda museale non conferma né l’ubicazione attuale né una revisione valida.',
+  abschnitte: [
+      { titel: 'Costruttore e composizione della flotta', p: ['Prima della riforma delle classi, C indicava la 3a classe; le lettere attuali non dicono quindi sempre come fosse allestita una carrozza in passato.'],
+        tabelle: { kopf: ['Carrozza', 'Costruzione', 'Lunghezza', 'Posti', 'Particolarità'], zeilen: [
+          ['A 260', '1925 (SIG)', '13,61 m', '36', '1a classe, restauro previsto'], ['B 761, B 762', '1927, 1928 (SIG)', '14,48 m', '60', 'sedili in legno, prima C 4805 e C 4808'],
+          ['BC 451, BC 452', '1927 (SIG)', '14,48 m', '56', 'poi carrozze di servizio X 9985 e X 9988'], ['A 101', '1939', '16,47 m', '28', 'carrozza Landi per l’Esposizione nazionale'],
+          ['AB 473', '1946', '16,47 m', '64', 'FFS Historic, carrozza in acciaio leggero'], ['A 111, A 181', '1947, 1949', '16,74 m', '34', '1a classe'],
+          ['B 865', '1954', '16,74 m', '64', '2a classe'], ['WR 426', '1945, trasformata nel 1997', '16,74 m', '28', 'carrozza ristorante'], ['WR 825', '1931/32', '–', '–', 'poi cucina per squadre, danneggiata']] } },
+      { titel: 'Impiego e tecnica', p: ['Le carrozze circolano in treni storici, spesso dietro la Deh 4/6 o locomotive a vapore della Brünig-Dampfbahn. La presenza di un freno a cremagliera dipende dalla singola carrozza e decide dove può circolare.'] },
+      { titel: 'Dotazione e accessibilità', liste: ['Sedili in legno nelle vecchie carrozze B', 'Cucina e sala da pranzo nella WR 426', 'Pianale alto, non senza gradini', 'Nessuna trazione propria'] }
+    ],
+  bilder: ['Deh 4/6 914 con le carrozze B 865, WR 426 e AB 473 a Meiringen (2013)', 'Carrozza ristorante WR 426 (2013)']
+});
+uebZug('zb-lse-gueterwagen', {
+  name: 'Carri merci e di servizio', beiname: 'LSE e Brünig',
+  typ: 'Carri merci, per sci e di servizio storici (storici)',
+  text: ['Le ferrovie del Brünig e di Engelberg trasportavano un tempo anche merci. Sono conservati tra l’altro carri coperti della LSE che servirono poi come carri per sci e biciclette.', 'A questi si aggiungono carri di servizio come un carro attrezzi e un carro gru.'],
+  kennzahlen: [['4', 'Hb-v 261–264'], ['1969', 'costruzione (Hb-v)'], ['16 t', 'portata'], ['8,5 t', 'tara']],
+  daten: { 'Bauart': 'carri merci, per sci e di servizio', 'Betreiber': 'LSE, linea del Brünig', 'Fahrzeugnummern': 'Hb-v 261–264; Haik-v 271, 272; Ua 9857; X 9742; carro gru', 'Gewicht': '8,5 t a vuoto (Hb-v)' },
+  specNote: 'Secondo l’archivio del Verein Engelbergbahn. Si tratta di un registro documentato di tipi, non di un elenco completo dei carri; non prova alcun traffico merci attuale della Zentralbahn.',
+  abschnitte: [
+      { titel: 'Costruttore e composizione della flotta', p: ['SWS costruì nel 1969 i quattro carri coperti Hb-v 261–264 per la linea del Brünig; la LSE li rilevò. I carri a pareti scorrevoli Haik-v 271 e 272 derivano da bagagliai postali. A questi si aggiunge un vecchio carrello trasportatore Ua 9857.'] },
+      { titel: 'Impiego e tecnica', p: ['Gli Hb-v 261 e 262 furono allestiti come carri per sci e biciclette, gli altri servivano da magazzino. Il carro attrezzi X 9742 si occupa oggi dei veicoli storici. Per il vecchio carro gru l’archivio indica due numeri (X 9762 e X 9962).', 'La C 827 del 1933 servì poi come carro per materiale e cavi e fu demolita.'] },
+      { titel: 'Dotazione e accessibilità', liste: ['Carri coperti con porte scorrevoli', 'Carri per sci e biciclette (261, 262)', 'Carro attrezzi e carro gru per il servizio', 'Nessuna trazione propria'] }
+    ]
+});
+
+/* carte «Dove circola?» */
+uebEinsatz({
+  'zb-adler': 'Soprattutto come Luzern–Interlaken Express attraverso il Brünig. Lo scartamento metrico è tratteggiato e semplificato.',
+  'zb-fink': 'Sulla S-Bahn di Lucerna, tra Meiringen e Interlaken Ost, come rinforzo degli ADLER e sulla diramazione per Engelberg. Lo scartamento metrico è tratteggiato e semplificato.',
+  'zb-fink-neu': 'Previsto da dicembre 2026 sul RE44 Lucerna–Engelberg; più tardi anche su altre linee. Lo scartamento metrico è tratteggiato e semplificato.',
+  'zb-spatz': 'Sulla S-Bahn di Lucerna, per esempio verso Giswil e Stans, e tra Meiringen e Interlaken Ost. Senza ruota dentata non attraverso il Brünig. Lo scartamento metrico è tratteggiato e semplificato.',
+  'zb-hge44ii': 'Oggi soprattutto nel Luzern–Engelberg Express e in treni supplementari; fino al 2012 in testa a tutti i treni espressi attraverso il Brünig. Lo scartamento metrico è tratteggiato e semplificato.',
+  'zb-bdeh140': 'Un tempo su tutta la linea Lucerna–Engelberg; la 140 007 si trova al Museo Svizzero dei Trasporti di Lucerna. Lo scartamento metrico è tratteggiato e semplificato.',
+  'zb-mib': 'Sulla linea Meiringen–Innertkirchen, lunga poco meno di 5 km, a 1200 V corrente continua. Lo scartamento metrico è tratteggiato e semplificato.',
+  'zb-wagen': 'Nel Luzern–Engelberg Express e nei treni stagionali dietro una HGe 4/4 II. Lo scartamento metrico è tratteggiato e semplificato.',
+  'zb-hgm104': 'Con treni cantiere e nel servizio invernale su tutta la rete, anche sulle cremagliere. Lo scartamento metrico è tratteggiato e semplificato.',
+  'zb-gm105': 'Con treni cantiere sulle linee senza cremagliera, anche alla MIB. Lo scartamento metrico è tratteggiato e semplificato.',
+  'zb-deh46': 'Dal 1941 su tutta la linea del Brünig; oggi conservate come veicoli storici. Lo scartamento metrico è tratteggiato e semplificato.',
+  'zb-hge44i': 'Soprattutto sul tratto di montagna tra Giswil e Meiringen. Lo scartamento metrico è tratteggiato e semplificato.',
+  'zb-lse-diesel': 'Un tempo alla LSE, per esempio a Stansstad e nelle stazioni verso Engelberg. Lo scartamento metrico è tratteggiato e semplificato.',
+  'zb-traktoren': 'Un tempo in manovra nelle stazioni e officine della linea del Brünig e della LSE.',
+  'zb-g34': 'Un tempo sui tratti pianeggianti della linea del Brünig; oggi alla Brünig-Dampfbahn. Lo scartamento metrico è tratteggiato e semplificato.',
+  'zb-hg33': 'Un tempo attraverso il Brünig; oggi alla Brünig-Dampfbahn, la 1063 al Museo Svizzero dei Trasporti di Lucerna. Lo scartamento metrico è tratteggiato e semplificato.',
+  'zb-mib-akku': 'Un tempo tra Meiringen e Innertkirchen; la numero 4 si trova al Museo Svizzero dei Trasporti di Lucerna. Lo scartamento metrico è tratteggiato e semplificato.',
+  'zb-hist-wagen': 'In treni storici sulla linea del Brünig. Lo scartamento metrico è tratteggiato e semplificato.',
+  'zb-lse-gueterwagen': 'Un tempo nel traffico merci e di servizio sul Brünig e verso Engelberg. Lo scartamento metrico è tratteggiato e semplificato.'
+});
+
+/* ---- 41-mob.js ---- */
+/* Italiano – Montreux Oberland Bernese (MOB) */
+uebDict({
+  'Montreux Berner Oberland-Bahn': 'Ferrovia Montreux Oberland Bernese', 'MOB': 'MOB', '900 V Gleichstrom': '900 V corrente continua',
+  '900 V Gleichstrom und Diesel': '900 V corrente continua e diesel', '850 V Gleichstrom (historisch)': '850 V corrente continua (storico)'
+});
+
+/* ---------- traffico viaggiatori ---------- */
+uebZug('mob-alpina', {
+  name: 'Be 4/4 e ABe 4/4',
+  typ: 'Moderne automotrici Stadler, per lo più in coppia',
+  text: ['Le ALPINA sono le moderne automotrici della MOB. Nel 2016 Stadler ha consegnato quattro Be 4/4 e quattro ABe 4/4, che circolano per lo più in coppia e possono trainare altre carrozze.', 'Appartengono alla stessa famiglia di veicoli delle automotrici delle CJ, delle TPC e di transN.'],
+  kennzahlen: [['8', 'automotrici (4 coppie)'], ['1020 kW', 'potenza per automotrice'], ['100 km/h', 'velocità massima'], ['2016', 'in servizio']],
+  daten: { 'Bauart': 'automotrici elettriche a pianale ribassato con 4 assi', 'Länge': '20,46 m per automotrice', 'Leistung': '1020 kW continui alla ruota per automotrice', 'Sitzplätze': '18 in 1a, 63 in 2a classe (per coppia, secondo Wikipedia)', 'Anzahl': '8 automotrici' },
+  specNote: 'Lunghezza e potenza secondo un ritratto del veicolo (Passiontrain), posti secondo Wikipedia. Una coppia sono due automotrici; gli otto veicoli non sono otto treni. I documenti della MOB indicano storicamente 900 V, quelli più recenti 960 V.',
+  abschnitte: [
+      { titel: 'Costruttore e composizione della flotta', p: ['Stadler ha sviluppato le automotrici insieme per diverse ferrovie a scartamento metrico della Svizzera occidentale. Nel 2016 la MOB ha ricevuto le Be 4/4 9201–9204 (2a classe) e le ABe 4/4 9301–9304 (1a e 2a classe). Alcune portano un nome, come 9301 «Montbovon», 9302 «Château-d’Œx» e 9303 «Lenk».'] },
+      { titel: 'Impiego e tecnica', p: ['Le ALPINA circolano sulla linea principale Montreux–Zweisimmen in treni regionali e trainano anche carrozze panoramiche, fino a nove carrozze. Possono essere comandate in multiplo con altri veicoli della MOB.', 'In origine erano previste per il GoldenPass Express; lì però sono le locomotive Ge 4/4 a trainare le carrozze. Le automotrici sono leggere, il che rende più difficile trasmettere la trazione ai binari quando sono scivolosi.'] },
+      { titel: 'Dotazione e accessibilità', liste: ['Accesso a pianale ribassato (480 mm) con predellini ribaltabili per l’inverno', '1a e 2a classe nell’ABe, 2a classe nella Be', 'Informazione ai viaggiatori e area multifunzionale', 'La dotazione dell’intero treno dipende dalle carrozze agganciate'] }
+    ],
+  bilder: ['ABe 4/4 9303 a Zweisimmen (2023)', 'Nell’ABe 4/4 9303 (2023)', 'Stemma di Château-d’Œx sull’ALPINA 9302 (2022)']
+});
+uebZug('mob-be44-5000', {
+  typ: 'Treni navetta regionali, soprattutto nel Simmental',
+  text: ['Le quattro Be 4/4 della serie 5000 formano brevi treni navetta con carrozze pilota. Circolano soprattutto tra Zweisimmen e Lenk e fino a Gstaad.', 'Sono a fine vita; automotrici usate delle CJ dovrebbero sostituirle.'],
+  kennzahlen: [['4', 'automotrici'], ['1976', 'prime due'], ['1979', 'altre due'], ['2026', 'successori previsti']],
+  daten: { 'Bauart': 'automotrice elettrica con carrozze pilota', 'Fahrzeugnummern': 'Be 4/4 5001–5004; carrozze pilota ABt 341–344 e Bt 241–244', 'Anzahl': '4 treni navetta' },
+  specNote: 'Secondo Wikipedia (elenco dei veicoli della MOB) e il rapporto di gestione 2025 della MOB. Il numero di automotrici CJ acquistate non è ancora un numero di veicoli MOB omologati.',
+  abschnitte: [
+      { titel: 'Costruttore e composizione della flotta', p: ['SIG e SAAS hanno consegnato due automotrici nel 1976 e due nel 1979. All’inizio avevano una cabina di guida. Dal 2004 al 2009 sono state trasformate senza cabina e hanno ricevuto carrozze pilota a pianale ribassato: ABt 341–344 e Bt 241–244. Le vecchie carrozze pilota erano le ABt 5301–5304.'] },
+      { titel: 'Impiego e tecnica', p: ['Le navette circolano nella composizione ABt – Be – Bt, soprattutto tra Zweisimmen e Lenk im Simmental e fino a Gstaad.', 'Secondo il rapporto di gestione 2025 sono a fine vita. Nel novembre 2025 la MOB ha acquistato automotrici usate a quattro assi delle Chemins de fer du Jura (CJ); quattro di esse (652–655) sono state trasferite nel dicembre 2025. Vengono adattate per tensione, accoppiatori e informazione ai viaggiatori; la prima entrata in servizio era prevista per fine 2026.'] },
+      { titel: 'Dotazione e accessibilità', liste: ['Carrozze pilota ABt e Bt a pianale ribassato', '1a e 2a classe nell’ABt', 'Area bagagli e multifunzionale', 'La dotazione vale per l’intero treno navetta'] }
+    ],
+  bilder: ['Bt 242, Be 4/4 5002 e ABt 342 a Schönried (2022)', 'Carrozza pilota ABt 343 a St. Stephan (2023)', 'Nella Be 4/4 5003 (2023)']
+});
+uebZug('mob-ge44-8000', {
+  typ: 'Locomotiva elettrica per il GoldenPass Express',
+  text: ['Le Ge 4/4 della serie 8000 trainano oggi il GoldenPass Express sullo scartamento metrico tra Montreux e Zweisimmen. A Zweisimmen la locomotiva resta sulla sua rete; sono le carrozze a cambiare scartamento.', 'La 8003 è stata venduta alla Ferrovia retica nel 2019.'],
+  kennzahlen: [['4', 'locomotive costruite'], ['3', 'alla MOB'], ['2000 kW', 'potenza'], ['1995', 'in servizio']],
+  daten: { 'Bauart': 'locomotiva elettrica a 4 assi', 'Fahrzeugnummern': '8001–8004 (8003 alla RhB dal 2019)', 'Höchstgeschwindigkeit': '120 km/h (tecnica)', 'Anzahl': '3 (su 4)' },
+  specNote: 'Secondo Wikipedia; l’articolo indica come anno di costruzione il 1994, l’elenco dei veicoli il 1995. Le locomotive sono strettamente imparentate con le Ge 4/4 III della RhB, ma attrezzate per la corrente continua. La RhB ha trasformato l’ex 8003 nella Ge 4/4 III 653.',
+  abschnitte: [
+      { titel: 'Costruttore e composizione della flotta', p: ['SLM e ABB hanno costruito le quattro locomotive nel 1994/95. Somigliano alle Ge 4/4 III della RhB e alla Ge 4/4 della BAM. La 8003 è passata alla RhB nel 2019 e vi circola come 653 «St. Moritz».'] },
+      { titel: 'Impiego e tecnica', p: ['Le locomotive trainano treni viaggiatori e, dal dicembre 2022, il GoldenPass Express tra Montreux e Zweisimmen. Dal 2017 al 2019 hanno ricevuto accoppiatori automatici Schwab; dal 2020 possono essere comandate in multiplo con carrozze e automotrici adatte.', 'Nel 2024 la MOB ha ordinato quattro nuove locomotive della serie 8500 per sostituirle.'] },
+      { titel: 'Dotazione e accessibilità', liste: ['Due cabine di guida, nessuno spazio per viaggiatori', 'Accoppiatore automatico Schwab', 'Comando dalla carrozza pilota del GoldenPass Express'] }
+    ],
+  bilder: ['Ge 4/4 8002 a Zweisimmen (2023)', 'Ge 4/4 8001 a Montreux (2024)', 'Ge 4/4 8004 a Zweisimmen (1995)']
+});
+uebZug('mob-gde44', {
+  typ: 'Locomotiva elettrica con bagagliaio per i treni panoramici',
+  text: ['Le GDe 4/4 del 1983 sono locomotive con un proprio bagagliaio. Trainano i treni panoramici sulle ripide rampe sopra Montreux.', 'Il 3 novembre 1983 la 6003 raggiunse 110 km/h tra Zweisimmen e Lenk – un record per lo scartamento metrico in Europa.'],
+  kennzahlen: [['6', 'locomotive (4 + 2 ex GFM)'], ['100 km/h', 'velocità massima'], ['50 t', 'peso'], ['1983', 'costruzione']],
+  daten: { 'Bauart': 'locomotiva elettrica con bagagliaio', 'Länge': 'circa 16,4 m', 'Anzahl': '6 costruite; 6001 e 6004 demolite nel dicembre 2024' },
+  specNote: 'Secondo Wikipedia e il dossier. Per potenza e portata le fonti pubbliche indicano stati di riferimento diversi; non sono quindi indicate. Wikipedia data l’acquisto delle due locomotive GFM al 2007 o 2008.',
+  abschnitte: [
+      { titel: 'Costruttore e composizione della flotta', p: ['SLM e BBC costruirono sei locomotive nel 1983: quattro per la MOB e due per le GFM di Friburgo. La MOB rilevò le due locomotive GFM nel 2007/08 come 6005 e 6006.', 'Il capitolato chiedeva di trainare un treno di 110 t a 40 km/h su una pendenza del 70 per mille.'] },
+      { titel: 'Impiego e tecnica', p: ['Le GDe 4/4 trainavano il Panoramic Express e treni diretti, in parte con carrozze pilota, e servivano anche per treni merci e di servizio. Una locomotiva traina stagionalmente il Treno del cioccolato.', 'Ogni asse ha un proprio motore; la locomotiva frena elettricamente recuperando energia. Le 6001 e 6004 sono state demolite nel dicembre 2024.'] },
+      { titel: 'Dotazione e accessibilità', liste: ['Bagagliaio nella cassa', 'Due cabine di guida', 'Comando a chopper e freno a recupero'] }
+    ],
+  bilder: ['GDe 4/4 6005 a Montreux (2014)', 'GDe 4/4 6003 a Schönried (2022)', 'GDe 4/4 presso Rougemont (1984)']
+});
+uebZug('mob-ge44-8500', {
+  typ: 'Nuove locomotive elettriche per il GoldenPass Express (ordinate)',
+  text: ['Nell’ottobre 2024 la MOB ha ordinato a Stadler quattro nuove locomotive elettriche per il GoldenPass Express. Dovrebbero sostituire le Ge 4/4 della serie 8000.', 'Lo stesso ordine comprende due locomotive ibride per il servizio lavori.'],
+  kennzahlen: [['4', 'locomotive ordinate'], ['3 MW', 'potenza'], ['100 km/h', 'velocità massima'], ['2024', 'ordinate']],
+  daten: { 'Bauart': 'locomotiva elettrica a 4 assi', 'Fahrzeugnummern': '8501–8504 (secondo Wikipedia)', 'Länge': 'circa 17 m', 'Anzahl': '4 ordinate' },
+  specNote: 'Secondo il comunicato Stadler del 14 ottobre 2024 e il rapporto di gestione 2025 della MOB. Date di consegna e numeri di servizio sono ancora una pianificazione.',
+  abschnitte: [
+      { titel: 'Costruttore e composizione della flotta', p: ['Il 15 ottobre 2024 Stadler e la MOB hanno firmato il contratto per quattro locomotive elettriche e due locomotive ibride di servizio. I documenti finanziari della MOB indicano le locomotive elettriche come serie 8500.'] },
+      { titel: 'Impiego e tecnica', p: ['Le nuove locomotive dovrebbero trainare e spingere il GoldenPass Express e sostituire locomotive più vecchie. L’ordine non significa ancora una consegna o un’omologazione conclusa.'] },
+      { titel: 'Dotazione e accessibilità', liste: ['Quattro assi motori', 'Lunghe circa 17 m', 'Nessuno spazio per viaggiatori'] }
+    ]
+});
+uebZug('mob-gpx', {
+  beiname: 'carrozze a scartamento variabile',
+  typ: 'Carrozze a scartamento regolabile per Montreux–Interlaken',
+  text: ['Dal dicembre 2022 il GoldenPass Express collega Montreux a Interlaken senza cambi. A Zweisimmen le sue carrozze passano dallo scartamento metrico a quello normale.', 'Sulla MOB lo traina una Ge 4/4, sulla BLS una locomotiva a scartamento normale.'],
+  kennzahlen: [['23', 'carrozze'], ['1000/1435', 'mm di scartamento'], ['2022', 'in servizio'], ['Prestige', 'classe']],
+  daten: { 'Bauart': 'carrozze viaggiatori con carrelli a scartamento variabile', 'Hersteller': 'Stadler (carrozze), Alstom (sistema dei carrelli)', 'Betreiber': 'MOB, con la BLS', 'Spurweite': 'scartamento metrico e normale (variabile)', 'Länge': '18,8–19,4 m per carrozza', 'Gewicht': '25,3–26,5 t per carrozza', 'Anzahl': '23 carrozze' },
+  specNote: 'Secondo l’articolo di Stephan Frei (Eisenbahn Amateur 10/2022) e la MOB. I posti corrispondono allo stato del 2022 e oggi possono essere diversi.',
+  abschnitte: [
+      { titel: 'Costruttore e composizione della flotta', p: ['Stadler ha costruito le 23 carrozze; i carrelli a scartamento variabile provengono dal sistema sviluppato con Alstom. Il design delle testate è di Pininfarina, gli interni di Innova Design. Le carrozze appartengono alla MOB.'],
+        tabelle: { kopf: ['Carrozza', 'Numeri', 'Funzione', 'Posti (2022)'], zeilen: [
+          ['Ast', '181–184', 'carrozza pilota, Prestige e 1a classe', '9 + 20'], ['ABst', '381–384', 'carrozza pilota, Prestige e 2a classe', '9 + 25'],
+          ['As', '191–194', '1a classe con ristorazione', '28'], ['Bs', '281–284', '2a classe', '54'], ['Bs NF', '271–274', 'carrozza a pianale ribassato 2a classe', '39'],
+          ['Bsi', '291–293', 'carrozza d’interfaccia verso la locomotiva a scartamento normale', '54']] } },
+      { titel: 'Impiego e tecnica', p: ['A Zweisimmen il treno attraversa l’impianto di cambio dello scartamento: le ruote vengono spostate sull’altro scartamento e il pavimento adattato all’altezza del marciapiede. Poi una locomotiva della BLS prosegue via Spiez fino a Interlaken.', 'La carrozza d’interfaccia Bsi collega le carrozze alla locomotiva a scartamento normale, che ha accoppiatore e comando diversi.'] },
+      { titel: 'Dotazione e accessibilità', liste: ['Classe Prestige con sedili girevoli e regolabili', 'Climatizzazione, prese USB e 230 V al posto', 'Carrozza a pianale ribassato; secondo la MOB 2 posti per sedie a rotelle per treno', 'Nessuna trazione propria'] }
+    ],
+  bilder: ['GoldenPass Express con la Ge 4/4 8004 (2024)', 'Carrozza pilota Ast 183 a Zweisimmen (2023)', 'Carrozza a pianale ribassato Bs NF 272 (2024)']
+});
+uebZug('mob-panoramic', {
+  name: 'Carrozze panoramiche',
+  typ: 'Carrozze panoramiche e pilota con grandi finestrini',
+  text: ['La MOB è diventata famosa dal 1976 per le sue carrozze panoramiche. Grandi finestrini fino al tetto aprono la vista sul lago Lemano, sul Pays-d’Enhaut e sul Saanenland.', 'In alcune carrozze pilota i viaggiatori siedono davanti e il macchinista sopra di loro – così si viaggia in prima fila.'],
+  kennzahlen: [['1976', 'prime carrozze panoramiche'], ['1993', 'carrozze pilota Crystal'], ['1a e 2a', 'classe'], ['Chernex', 'officina propria']],
+  daten: { 'Bauart': 'carrozze panoramiche e pilota', 'Hersteller': 'R+J, officina MOB di Chernex, Breda', 'Fahrzeugnummern': 'tra l’altro As 110–119, Ast 116–117, Ast 151–152, Bs 220–238' },
+  specNote: 'Secondo Wikipedia (elenco dei veicoli della MOB) e x-rail. Alcune carrozze sono state rinumerate più volte o vendute.',
+  abschnitte: [
+      { titel: 'Costruttore e composizione della flotta', p: ['Le prime carrozze panoramiche furono costruite dal 1976 da R+J e nell’officina MOB di Chernex. Nel 1993 Breda consegnò le carrozze pilota Crystal Ast 151 e 152.', 'Nel 2023 la MOB ha venduto alcune carrozze più vecchie (As 110, Bs 220 e 222–225) ad Arterail in Francia; la Bs 227 è stata demolita nel 2015.'] },
+      { titel: 'Impiego e tecnica', p: ['Le carrozze circolano nel GoldenPass Panoramic tra Montreux e Zweisimmen, per lo più dietro una GDe 4/4 o un’ALPINA. Anche offerte come il Treno del cioccolato usano queste carrozze.', 'Nelle carrozze pilota Ast 116 e 117 (Superpanoramic) e Ast 151 e 152 (Crystal) i viaggiatori siedono davanti alla cabina di guida rialzata.'] },
+      { titel: 'Dotazione e accessibilità', liste: ['Grandi finestrini fino al tetto', 'Posti panoramici davanti alla cabina nelle carrozze pilota', 'Carrozze a pianale ribassato Bs 231–238', 'Nessuna trazione propria'] }
+    ],
+  bilder: ['Carrozza pilota Ast 151 a Montreux (2014)', 'Carrozza panoramica As 118 a Gstaad (2016)', 'Carrozza panoramica Bs 236 (2014)']
+});
+uebZug('mob-belle-epoque', {
+  name: 'Carrozze Belle Époque',
+  typ: 'Carrozze in stile 1900 per treni di gita',
+  text: ['Le carrozze Belle Époque sembrano carrozze del 1900. Sono state costruite nel 2004 e 2005 nell’officina della MOB su veicoli più vecchi.', 'Le vere vecchie carrozze salone sono la Ars 101 e la As 102.'],
+  kennzahlen: [['4', 'carrozze trasformate'], ['2004', 'trasformazione'], ['1a e 2a', 'classe'], ['Bar', 'nella Brs 201']],
+  daten: { 'Bauart': 'carrozze viaggiatori in stile storico', 'Hersteller': 'officina MOB di Chernex (trasformazione)', 'Fahrzeugnummern': 'As 103, As 107, Brs 201, Bs 202; carrozze salone Ars 101 e As 102' },
+  specNote: 'Secondo la MOB e x-rail. Secondo la MOB le carrozze Belle Époque non sono accessibili in sedia a rotelle né con un deambulatore.',
+  abschnitte: [
+      { titel: 'Costruttore e composizione della flotta', p: ['Nel 2004 e 2005 l’officina MOB di Chernex costruì quattro carrozze su telai più vecchi, con nuove casse e interni in stile storico: le As 103 e As 107 (1a classe), la Brs 201 con bar e la Bs 202 (2a classe).', 'Da distinguere sono le vecchie carrozze salone Ars 101 e As 102 con una propria storia.'] },
+      { titel: 'Impiego e tecnica', p: ['Le carrozze circolano nel GoldenPass Belle Époque tra Montreux e Zweisimmen e in offerte prenotabili. Menu e servizio valgono per l’offerta prenotata.'] },
+      { titel: 'Dotazione e accessibilità', liste: ['Legno e ottone in stile 1900', 'Bar nella Brs 201', 'Non accessibili in sedia a rotelle né con un deambulatore', 'Nessuna trazione propria'] }
+    ],
+  bilder: ['Carrozza Belle Époque Brs 201 (2012)', 'Carrozza Belle Époque Bs 202 (2012)']
+});
+
+/* ---------- infrastruttura ---------- */
+uebZug('mob-gem22', {
+  typ: 'Locomotiva di servizio bimodale Stadler',
+  text: ['Le tre Gem 2/2 viaggiano con la corrente della linea di contatto o a diesel. Trainano treni cantiere e di materiale sulla MOB.', 'Una quarta, la HGem 2/2 2501, ha una ruota dentata e lavora alla MVR sulla linea per Les Pléiades.'],
+  kennzahlen: [['3', 'locomotive alla MOB'], ['600 kW', 'elettrica'], ['400 kW', 'diesel'], ['2016', 'consegnate']],
+  daten: { 'Bauart': 'locomotiva bimodale (elettrica e diesel), 2 assi', 'Fahrzeugnummern': '2502–2504; HGem 2/2 2501 alla MVR', 'Leistung': '600 kW in elettrico, 400 kW a diesel', 'Anzahl': '3 (più la 2501)' },
+  specNote: 'Potenza secondo il rapporto di gestione 2016 della MOB. Il carico rimorchiabile dipende molto dalla pendenza e non è quindi indicato con un solo valore.',
+  abschnitte: [
+      { titel: 'Costruttore e composizione della flotta', p: ['Stadler ha consegnato le locomotive nel 2016 nell’ambito di un ordine comune di più ferrovie. Tre sono per la MOB, la 2501 con cremagliera per la linea MVR di Les Pléiades.'] },
+      { titel: 'Impiego e tecnica', p: ['Le locomotive trainano treni cantiere e trasporti di materiale e aiutano nella manutenzione. A diesel circolano anche quando la linea di contatto è disinserita. Possono essere radiocomandate e impiegate accoppiate.'] },
+      { titel: 'Dotazione e accessibilità', liste: ['Pantografo e motore diesel', 'Radiocomando', 'Nessuna ruota dentata (tranne la 2501)'] }
+    ],
+  bilder: ['Gem 2/2 2504 a Montbovon (2022)', 'Gem 2/2 2503 a Saanen (2022)']
+});
+uebZug('mob-gm44', {
+  beiname: '2003 e 2004',
+  typ: 'Locomotiva diesel per treni cantiere pesanti',
+  text: ['Le due Gm 4/4 sono locomotive diesel provenienti dalla Francia. Trainano treni cantiere pesanti e hanno talvolta circolato anche nel servizio viaggiatori.', 'Nonostante il numero simile non hanno nulla a che fare con le vecchie locomotive bagagliaio 2001 e 2002.'],
+  kennzahlen: [['2', 'locomotive'], ['1976', '2003 costruita'], ['1982', '2004 costruita'], ['80 km/h', 'velocità massima']],
+  daten: { 'Bauart': 'locomotiva diesel a 4 assi' },
+  specNote: 'Secondo Wikipedia (elenco dei veicoli della MOB) e il dossier. Le fonti verificate non indicano potenza né peso.',
+  abschnitte: [
+      { titel: 'Costruttore e composizione della flotta', p: ['Moyse costruì la 2003 nel 1976, CFD la 2004 nel 1982, entrambe in Francia.'] },
+      { titel: 'Impiego e tecnica', p: ['Le locomotive trainano treni di costruzione e cantiere pesanti, anche quando la linea di contatto è disinserita. La MOB prevede nuovi trattori per l’infrastruttura; il rapporto di gestione 2025 indica come obiettivo la metà del 2028.'] },
+      { titel: 'Dotazione e accessibilità', liste: ['Trazione diesel, indipendente dalla linea di contatto', 'Due carrelli', 'Pensata per treni cantiere'] }
+    ]
+});
+uebZug('mob-gem44', {
+  typ: 'Nuove locomotive di servizio bimodali (ordinate)',
+  text: ['Insieme alle nuove locomotive del GoldenPass, la MOB ha ordinato nel 2024 due locomotive ibride per il servizio lavori. Dovrebbero trainare treni cantiere e di servizio anche senza linea di contatto.', 'Sono lunghe circa 17 m e hanno quattro assi motori.'],
+  kennzahlen: [['2', 'locomotive ordinate'], ['17 m', 'lunghezza'], ['100 km/h', 'velocità massima'], ['2024', 'ordinate']],
+  daten: { 'Bauart': 'locomotiva bimodale a 4 assi', 'Fahrzeugnummern': '8601–8602 (secondo Wikipedia)', 'Länge': 'circa 17 m', 'Anzahl': '2 ordinate' },
+  specNote: 'Secondo Stadler (ottobre 2024) e Wikipedia. Potenza per modalità, motore diesel e batteria non sono ancora pubblicati; i 3 MW delle locomotive elettriche non valgono per queste locomotive.',
+  abschnitte: [
+      { titel: 'Costruttore e composizione della flotta', p: ['Nell’ottobre 2024 Stadler e la MOB hanno concordato due locomotive di servizio ibride a quattro assi, imparentate con le quattro nuove locomotive elettriche della serie 8500.'] },
+      { titel: 'Impiego e tecnica', p: ['Le locomotive dovrebbero trainare treni cantiere e di servizio su tutta la MOB, anche su tratti senza corrente. Una data di consegna non è ancora pubblicata.'] },
+      { titel: 'Dotazione e accessibilità', liste: ['Esercizio con la corrente della linea di contatto', 'Seconda fonte di energia per tratti senza linea di contatto', 'Quattro assi motori'] }
+    ]
+});
+
+/* ---------- veicoli di servizio e speciali ---------- */
+uebZug('mob-schnee', {
+  name: 'Spazzaneve e carro gru', beiname: 'Zaugg e Nencki',
+  typ: 'Veicoli per il servizio invernale e la manutenzione',
+  text: ['Per l’inverno la MOB ha ricevuto nel 2016 due nuovi spazzaneve Zaugg e un carro gru attrezzato da Nencki.', 'Uno spazzaneve spinge la neve di lato; viene mosso da una locomotiva o da un’automotrice.'],
+  kennzahlen: [['2', 'spazzaneve (2016)'], ['1', 'carro gru'], ['Zaugg', 'costruttore spazzaneve'], ['2016', 'acquisto']],
+  daten: { 'Bauart': 'spazzaneve e carro gru', 'Hersteller': 'Zaugg (spazzaneve), Nencki (gru)', 'Anzahl': '2 spazzaneve, 1 carro gru' },
+  specNote: 'Secondo il rapporto di gestione 2016 della MOB. Numeri, pesi e diagrammi di carico non sono pubblicati; un carico massimo della gru non è quindi indicato.',
+  abschnitte: [
+      { titel: 'Costruttore e composizione della flotta', p: ['Secondo il rapporto di gestione 2016 sono arrivati alla MOB due spazzaneve ad aderenza di Zaugg e un carro gru attrezzato da Nencki.'] },
+      { titel: 'Impiego e tecnica', p: ['D’inverno gli spazzaneve tengono aperta la linea tra Montreux, Zweisimmen e Lenk. Il carro gru solleva materiale per costruzione e manutenzione. Entro la metà del 2028 circa dovrebbero arrivare anche piattaforme con gru e cestello per lavori al binario e alla linea di contatto.'] },
+      { titel: 'Dotazione e accessibilità', liste: ['Lama per sgomberare di lato', 'Gru con stabilizzatori', 'Larghezza di lavoro e carico della gru secondo il mezzo'] }
+    ],
+  bilder: ['Spazzaneve rapido della MOB davanti a un’automotrice presso Oeschseite (2017)']
+});
+
+/* ---------- veicoli storici ---------- */
+uebZug('mob-bcfe44', {
+  typ: 'Automotrice elettrica della prima generazione del 1905 (storica)',
+  text: ['La BCFe 4/4 11 è una delle prime automotrici elettriche della MOB. Risale al 1905 e circola oggi alla ferrovia museo Blonay–Chamby.', 'Aveva compartimenti di 2a e 3a classe e un bagagliaio.'],
+  kennzahlen: [['1905', 'costruzione'], ['192 kW', 'potenza'], ['50 km/h', 'velocità massima'], ['29 t', 'peso']],
+  daten: { 'Bauart': 'automotrice elettrica viaggiatori e bagagli', 'Betreiber': 'MOB, oggi ferrovia museo Blonay–Chamby', 'Fahrzeugnummern': '11 (serie 7–20)', 'Sitzplätze': '12 in 2a, 16 in 3a classe (storico)', 'Erhalten': 'Blonay–Chamby, in esercizio' },
+  specNote: 'Secondo la scheda della ferrovia museo Blonay–Chamby. Per la consegna al museo le fonti indicano il 1999 e il 2000.',
+  abschnitte: [
+      { titel: 'Costruttore e composizione della flotta', p: ['SIG e Alioth costruirono l’automotrice nel 1905 per la giovane MOB. Appartiene alla serie BCFe 4/4 7–20, con cui la MOB sviluppò il suo esercizio elettrico.'] },
+      { titel: 'Impiego e tecnica', p: ['La vettura trasportava viaggiatori e bagagli sulla linea di montagna da Montreux. Verso il 2000 arrivò alla ferrovia museo Blonay–Chamby e fu restaurata per il centenario della MOB nel 2001. Oggi vi circola in treni museali.'] },
+      { titel: 'Dotazione e accessibilità', liste: ['Compartimenti di 2a e 3a classe (storici)', 'Bagagliaio di 6 m² per 2 t', 'Quattro motori da 48 kW ciascuno'] }
+    ],
+  bilder: ['BCFe 4/4 11 a Chamby (2018)', 'BCFe 4/4 11 (2013)']
+});
+uebZug('mob-fze66', {
+  beiname: '2001 e 2002',
+  typ: 'Locomotiva bagagliaio e postale del 1932 (storica)',
+  text: ['Fino al 1968 le FZe 6/6 furono i veicoli più potenti della MOB. Furono costruite nel 1932 per un treno di lusso presto soppresso a causa della crisi economica.', 'La 2002 circola oggi alla ferrovia museo Blonay–Chamby.'],
+  kennzahlen: [['2', 'locomotive'], ['738 kW', 'potenza'], ['55 km/h', 'velocità massima'], ['1932', 'costruzione']],
+  daten: { 'Bauart': 'locomotiva elettrica bagagliaio e postale su 3 carrelli', 'Betreiber': 'MOB, oggi ferrovia museo Blonay–Chamby', 'Fahrzeugnummern': '2001, 2002 (dal 1962 DZe 6/6)', 'Erhalten': '2002 (Blonay–Chamby, dal 2008)' },
+  specNote: 'Secondo la scheda della ferrovia museo Blonay–Chamby e Wikipedia. FZe e DZe sono due designazioni degli stessi veicoli, non due locomotive diverse.',
+  abschnitte: [
+      { titel: 'Costruttore e composizione della flotta', p: ['SIG e BBC costruirono i due veicoli nel 1932 per il Golden Mountain Pullman Express del 1931. Il treno di lusso fallì a causa della crisi economica mondiale; in seguito le locomotive circolarono con normali treni viaggiatori e merci.'] },
+      { titel: 'Impiego e tecnica', p: ['Trainavano spesso pesanti treni merci, per esempio di materiali da costruzione. Nel 1962 furono rinominate DZe 6/6, nel 1977/79 adattate ai treni con carrelli trasportatori.', 'La 2001 fu accantonata nel 1988 e demolita nel 2007. La 2002 fu ritirata nel 2002, arrivò alla ferrovia museo Blonay–Chamby il 19 luglio 2008 ed è lì in esercizio.'] },
+      { titel: 'Dotazione e accessibilità', liste: ['Vano bagagli e posta di 10,2 m² per 4 t', 'Sei motori da 123 kW ciascuno', 'Cassa articolata su tre carrelli'] }
+    ],
+  bilder: ['FZe 6/6 2002 a Chamby-Musée (2026)']
+});
+uebZug('mob-bde44-3000', {
+  typ: 'Automotrici leggere del 1944 e 1946 (storiche)',
+  text: ['Le sei BDe 4/4 della serie 3000 hanno caratterizzato l’esercizio della MOB dopo la Seconda guerra mondiale. Trainavano anche carrozze più vecchie e carrozze pilota.', 'La maggior parte è stata demolita; la 3002 esiste ancora.'],
+  kennzahlen: [['6', 'automotrici'], ['1944', 'prime quattro'], ['1946', 'altre due'], ['3002', 'esiste ancora']],
+  daten: { 'Bauart': 'automotrice elettrica viaggiatori e bagagli' },
+  specNote: 'Secondo Wikipedia (elenco dei veicoli della MOB) e il dossier. Demolizioni: 3003 (1996), 3004 (2010), 3001 (2019), 3005 e 3006 (2024). Un’attuale idoneità all’esercizio della 3002 non è confermata.',
+  abschnitte: [
+      { titel: 'Costruttore e composizione della flotta', p: ['SIG e BBC consegnarono le 3001–3004 nel 1944 e le 3005 e 3006 nel 1946.'] },
+      { titel: 'Impiego e tecnica', p: ['Le automotrici leggere effettuavano treni viaggiatori e bagagli su tutta la MOB, spesso con carrozze più vecchie e carrozze pilota. Dal 1968 le ABDe 8/8 rilevarono parte dei loro compiti; più tardi servirono nel servizio interno e come riserva.', 'Per la 3002 il rapporto di gestione 2012 documenta una revisione parziale e adattamenti alla cabina di guida.'] },
+      { titel: 'Dotazione e accessibilità', liste: ['Compartimenti per viaggiatori e bagagli', 'Due cabine di guida', 'Conservata: 3002'] }
+    ],
+  bilder: ['BDe 4/4 3002 a Zweisimmen (2014)', 'BDe 4/4 con un treno merci (1984)']
+});
+uebZug('mob-abde88', {
+  typ: 'Automotrice doppia del 1968 (storica)',
+  text: ['Le quattro ABDe 8/8 del 1968 sono state a lungo la spina dorsale della MOB. Ogni unità è formata da due metà unite stabilmente, con in totale otto assi motori.', 'Sono fuori servizio dal 2017; due sono accantonate a Lenk.'],
+  kennzahlen: [['4', 'automotrici doppie'], ['70 km/h', 'velocità massima'], ['86', 'posti a sedere'], ['1968', 'in servizio']],
+  daten: { 'Bauart': 'automotrice doppia elettrica', 'Sitzplätze': '18 in 1a, 68 in 2a classe', 'Erhalten': '4001 e 4004 accantonate a Lenk' },
+  specNote: 'Secondo Wikipedia. Wikipedia indica 840 V corrente continua, documenti di rete più vecchi 900 V. Accantonata non significa conservata da un museo.',
+  abschnitte: [
+      { titel: 'Costruttore e composizione della flotta', p: ['SIG, BBC e SAAS costruirono le quattro unità nel 1968. Ciascuna porta uno stemma: 4001 quello svizzero, 4002 Vaud, 4003 Berna e 4004 Friburgo.'] },
+      { titel: 'Impiego e tecnica', p: ['Dal 1968 effettuarono la maggior parte del traffico Montreux–Zweisimmen e sostituirono le BDe 4/4 della serie 3000. Su una pendenza del 73 per mille trainavano fino a cinque carrozze per 80 t.', 'Dopo l’arrivo delle GDe 4/4 dal 1983 assunsero compiti minori. Furono ufficialmente congedate il 2 e 3 settembre 2017. La 4003 fu demolita nel 2018, la 4002 nel 2021; le 4001 e 4004 sono a Lenk dal 2020.'] },
+      { titel: 'Dotazione e accessibilità', liste: ['18 posti in 1a e 68 in 2a classe', 'Bagagliaio', 'Due metà come unità fissa'] }
+    ],
+  bilder: ['ABDe 8/8 4003 a Zweisimmen (2014)', 'ABDe 8/8 4001 accantonata a Lenk (2023)']
+});
+uebZug('mob-hist-wagen', {
+  name: 'Carrozze viaggiatori storiche', beiname: 'BC4 22 e B4 61',
+  typ: 'Prime carrozze viaggiatori della MOB a Blonay–Chamby (storiche)',
+  text: ['Alla ferrovia museo Blonay–Chamby sono conservate due prime carrozze viaggiatori della MOB: la BC4 22 del 1902 e la B4 61 del 1906.', 'Mostrano come si viaggiava nei primi anni della MOB.'],
+  kennzahlen: [['1902', 'BC4 22'], ['1906', 'B4 61'], ['48', 'posti nella BC4 22'], ['SIG', 'costruttore']],
+  daten: { 'Bauart': 'carrozze viaggiatori storiche a carrelli', 'Betreiber': 'MOB, oggi ferrovia museo Blonay–Chamby', 'Sitzplätze': '48 di 3a classe (BC4 22), 30 di 2a classe (B4 61)', 'Erhalten': 'ferrovia museo Blonay–Chamby' },
+  specNote: 'Secondo le schede della ferrovia museo Blonay–Chamby. Nonostante la designazione di classe mista, la BC4 22 ha oggi un allestimento solo di 3a classe; secondo la scheda la B4 61 era in revisione.',
+  abschnitte: [
+      { titel: 'Costruttore e composizione della flotta', p: ['La SIG di Neuhausen costruì la BC4 22 nel 1902 e la B4 61 nel 1906.'] },
+      { titel: 'Impiego e tecnica', p: ['Le carrozze circolarono sulla MOB nei primi decenni, dietro le prime automotrici come la BCFe 4/4 11. Oggi fanno parte della collezione della ferrovia museo Blonay–Chamby.', 'La 3a classe è una caratteristica storica, non un’offerta attuale.'] },
+      { titel: 'Dotazione e accessibilità', liste: ['BC4 22: 48 posti di 3a classe', 'B4 61: 30 posti di 2a classe', 'Nessuna trazione propria'] }
+    ],
+  bilder: ['BC4 22 a Blonay–Chamby (2023)', 'B4 61 a Blonay (2018)', 'Nella B4 61 (2019)']
+});
+uebZug('mob-hist-gueterwagen', {
+  name: 'Carri merci storici', beiname: 'K, L, M e O',
+  typ: 'Primi carri merci della MOB a Blonay–Chamby (storici)',
+  text: ['La MOB trasportava un tempo merci varie, bestiame, legname e materiali da costruzione. Quattro primi carri merci dal 1901 al 1905 sono conservati alla ferrovia museo Blonay–Chamby.', 'L’L 153 è stato persino uno spazzaneve per un certo periodo.'],
+  kennzahlen: [['4', 'carri'], ['1901', 'il più vecchio (K 101)'], ['10–12 t', 'portata'], ['1905', 'il più recente (O 810)']],
+  daten: { 'Bauart': 'carri merci storici', 'Betreiber': 'MOB, oggi ferrovia museo Blonay–Chamby', 'Gewicht': '5,0–7,8 t a vuoto', 'Nutzlast': '10 o 12 t', 'Erhalten': 'ferrovia museo Blonay–Chamby' },
+  specNote: 'Secondo le schede della ferrovia museo Blonay–Chamby. La portata è il carico ammesso, non il peso totale. Oggi la MOB non ha più un traffico merci proprio di rilievo.',
+  abschnitte: [
+      { titel: 'Costruttore e composizione della flotta', p: ['I quattro carri conservati risalgono ai primi anni d’esercizio della MOB.'],
+        tabelle: { kopf: ['Carro', 'Costruzione', 'Costruttore', 'A vuoto', 'Portata'], zeilen: [
+          ['K 101', '1901', 'SIG', '7,7 t', '10 t'], ['L 153', '1903', 'SIG Neuhausen', '6,7 t', '10 t'], ['M 706', '1904', 'Busch Bautzen', '5,0 t', '10 t'], ['O 810', '1905', 'Busch Bautzen', '7,8 t', '12 t']] } },
+      { titel: 'Impiego e tecnica', p: ['I carri hanno freni a mano e a vuoto automatici. L’L 153 fu trasformato nel 1971 nello spazzaneve X 153, poi chiamato Xa 9. Dopo la cessione a Blonay–Chamby nel 2006 fu ripristinato come L 153 e circola di nuovo dal 2009.', 'Più tardi la MOB trasportò anche carri merci a scartamento normale su carrelli trasportatori, soprattutto tra Zweisimmen e Lenk.'] },
+      { titel: 'Dotazione e accessibilità', liste: ['Carri coperti e aperti', 'Freno a mano e freno a vuoto', 'Nessuna trazione propria'] }
+    ],
+  bilder: ['Carro merci M 706 a Blonay–Chamby (2021)', 'Carro a sponde alte O 801 a Blonay–Chamby (2012)']
+});
+
+/* carte «Dove circola?» */
+uebEinsatz({
+  'mob-alpina': 'Sulla linea principale Montreux–Zweisimmen e fino a Lenk, in treni regionali e con carrozze panoramiche. Lo scartamento metrico è tratteggiato e semplificato.',
+  'mob-be44-5000': 'Soprattutto tra Zweisimmen e Lenk im Simmental e fino a Gstaad. Lo scartamento metrico è tratteggiato e semplificato.',
+  'mob-ge44-8000': 'In testa al GoldenPass Express tra Montreux e Zweisimmen. Lo scartamento metrico è tratteggiato e semplificato.',
+  'mob-gde44': 'In testa ai treni panoramici su tutta la MOB, stagionalmente anche al Treno del cioccolato. Lo scartamento metrico è tratteggiato e semplificato.',
+  'mob-ge44-8500': 'Prevista in testa al GoldenPass Express tra Montreux e Zweisimmen. Lo scartamento metrico è tratteggiato e semplificato.',
+  'mob-gpx': 'Montreux–Zweisimmen a scartamento metrico (tratteggiato), poi dopo il cambio di scartamento a scartamento normale via Spiez fino a Interlaken Ost.',
+  'mob-panoramic': 'Nel GoldenPass Panoramic tra Montreux e Zweisimmen. Lo scartamento metrico è tratteggiato e semplificato.',
+  'mob-belle-epoque': 'Nel GoldenPass Belle Époque tra Montreux e Zweisimmen. Lo scartamento metrico è tratteggiato e semplificato.',
+  'mob-gem22': 'Con treni cantiere e di materiale su tutta la MOB. Lo scartamento metrico è tratteggiato e semplificato.',
+  'mob-gm44': 'In testa a pesanti treni cantiere su tutta la MOB. Lo scartamento metrico è tratteggiato e semplificato.',
+  'mob-gem44': 'Previste per treni cantiere e di servizio su tutta la MOB. Lo scartamento metrico è tratteggiato e semplificato.',
+  'mob-schnee': 'D’inverno tra Montreux, Zweisimmen e Lenk. Lo scartamento metrico è tratteggiato e semplificato.',
+  'mob-bcfe44': 'Un tempo sulla linea di montagna da Montreux; oggi alla ferrovia museo Blonay–Chamby. Lo scartamento metrico è tratteggiato e semplificato.',
+  'mob-fze66': 'Un tempo in testa a treni pesanti su tutta la MOB; la 2002 circola oggi a Blonay–Chamby. Lo scartamento metrico è tratteggiato e semplificato.',
+  'mob-bde44-3000': 'Un tempo su tutta la MOB. Lo scartamento metrico è tratteggiato e semplificato.',
+  'mob-abde88': 'Un tempo soprattutto tra Montreux e Zweisimmen; due unità sono accantonate a Lenk. Lo scartamento metrico è tratteggiato e semplificato.',
+  'mob-hist-wagen': 'Un tempo sulla MOB; oggi alla ferrovia museo Blonay–Chamby. Lo scartamento metrico è tratteggiato e semplificato.',
+  'mob-hist-gueterwagen': 'Un tempo nel traffico merci della MOB; oggi alla ferrovia museo Blonay–Chamby. Lo scartamento metrico è tratteggiato e semplificato.'
 });

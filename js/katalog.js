@@ -230,7 +230,9 @@ const BAHNEN = [
   { id: 'rhb', name: 'RhB', lang: 'Rhätische Bahn' },
   { id: 'sob', name: 'SOB', lang: 'Schweizerische Südostbahn' },
   { id: 'tpf', name: 'TPF', lang: 'Transports publics fribourgeois' },
-  { id: 'transn', name: 'transN', lang: 'Transports Publics Neuchâtelois' }
+  { id: 'transn', name: 'transN', lang: 'Transports Publics Neuchâtelois' },
+  { id: 'mob', name: 'MOB', lang: 'Montreux Berner Oberland-Bahn' },
+  { id: 'zb', name: 'zb', lang: 'Zentralbahn' }
 ];
 const bahnOf = z => z.bahn || 'sbb';
 const bahnName = z => tr(BAHNEN.find(b => b.id === bahnOf(z)).name);

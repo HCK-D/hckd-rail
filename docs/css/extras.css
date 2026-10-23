@@ -7,9 +7,9 @@
 
 /* ---------- category tools: filter + sort ---------- */
 .kat-tools{display:grid;gap:10px;min-width:0}
-/* choice of railway (SBB, BLS, RhB, SOB, TPF, transN) above the vehicle list */
-.bahn-wahl{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;max-width:1140px;margin:0 0 22px}
-@media (max-width:1020px){.bahn-wahl{grid-template-columns:repeat(3,minmax(0,1fr))}}
+/* choice of railway (SBB, BLS, RhB, SOB, TPF, transN, MOB, zb) above the vehicle list */
+.bahn-wahl{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:10px;max-width:1240px;margin:0 0 22px}
+@media (max-width:1180px){.bahn-wahl{grid-template-columns:repeat(4,minmax(0,1fr))}}
 /* phone and app: one row to swipe sideways, the next railway peeks in at the edge */
 @media (max-width:760px){
   .bahn-wahl{display:flex;gap:8px;overflow-x:auto;scroll-snap-type:x proximity;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;scrollbar-width:none;margin-inline:calc(-1 * max(20px,env(safe-area-inset-left,0px))) calc(-1 * max(20px,env(safe-area-inset-right,0px)));padding:2px max(20px,env(safe-area-inset-right,0px)) 4px max(20px,env(safe-area-inset-left,0px));scroll-padding-inline:max(20px,env(safe-area-inset-left,0px))}

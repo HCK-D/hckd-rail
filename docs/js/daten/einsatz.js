@@ -489,3 +489,63 @@ Object.assign(EINSATZ, {
   'rhb-ehem-diesel': { orte: [['Landquart'], ['Chur'], ['Realp']], text: 'Früher im Rangierdienst, etwa in Landquart und Chur; die Gm 3/3 stehen heute bei der DFB in Realp.' },
   'rhb-draisinen': { orte: [['Blonay–Chamby', 2559237, 1144746]], text: 'Heute bei der Museumsbahn Blonay–Chamby.' }
 });
+/* =====================================================================
+   Zentralbahn und MOB (Oktober 2026): Meterspur mit «linien» (gestrichelt),
+   der Normalspurteil des GoldenPass Express mit «strecken».
+   Zusätzliche Bahnhöfe (LV95, geo.admin.ch, auf etwa 1 km genau).
+   ===================================================================== */
+Object.assign(BAHNHOF_EXTRA, {
+  'Horw': [2666165, 1208353], 'Hergiswil': [2666495, 1204390], 'Alpnachstad': [2663880, 1200781], 'Sarnen': [2661300, 1193700],
+  'Giswil': [2657150, 1188600], 'Lungern': [2655354, 1181942], 'Brünig-Hasliberg': [2653481, 1178747], 'Ringgenberg': [2635270, 1172620],
+  'Stansstad': [2668730, 1203396], 'Stans': [2670385, 1201224], 'Wolfenschiessen': [2672846, 1195634], 'Grafenort': [2671136, 1191289],
+  'Innertkirchen': [2660487, 1173012], 'Les Avants': [2561956, 1144820], 'Rossinière': [2572663, 1146014], 'Saanen': [2586304, 1148599],
+  'Schönried': [2588829, 1150262], 'Saanenmöser': [2590540, 1151774], 'St. Stephan': [2595865, 1151926], 'Lenk im Simmental': [2600395, 1145186]
+});
+const ZB_BRUENIG = ['Luzern', 'Horw', 'Hergiswil', 'Alpnachstad', 'Sarnen', 'Giswil', 'Lungern', 'Brünig-Hasliberg', 'Meiringen', 'Brienz', 'Ringgenberg', 'Interlaken Ost'];
+const ZB_TAL_NORD = ['Luzern', 'Horw', 'Hergiswil', 'Alpnachstad', 'Sarnen', 'Giswil'];
+const ZB_TAL_SUED = ['Meiringen', 'Brienz', 'Ringgenberg', 'Interlaken Ost'];
+const ZB_ENGELBERG = ['Hergiswil', 'Stansstad', 'Stans', 'Wolfenschiessen', 'Grafenort', 'Engelberg'];
+const ZB_MIB = ['Meiringen', 'Innertkirchen'];
+const ZB_ALLE = [ZB_BRUENIG, ZB_ENGELBERG];
+const MOB_HAUPT = ['Montreux', 'Les Avants', 'Montbovon', 'Rossinière', "Château-d'Oex", 'Saanen', 'Gstaad', 'Schönried', 'Saanenmöser', 'Zweisimmen'];
+const MOB_LENK = ['Zweisimmen', 'St. Stephan', 'Lenk im Simmental'];
+const MOB_ALLE = [MOB_HAUPT, MOB_LENK];
+Object.assign(EINSATZ, {
+  'zb-adler': { linien: [ZB_BRUENIG], text: 'Vor allem als Luzern–Interlaken Express über den Brünig.' + RHB_MS },
+  'zb-fink': { linien: ZB_ALLE, text: 'In der S-Bahn Luzern, zwischen Meiringen und Interlaken Ost, als Verstärkung der ADLER und auf dem Ast nach Engelberg.' + RHB_MS },
+  'zb-fink-neu': { linien: [['Luzern', 'Horw', 'Hergiswil'], ZB_ENGELBERG], text: 'Ab Dezember 2026 geplant auf dem RE44 Luzern–Engelberg; später auch auf weiteren Linien.' + RHB_MS },
+  'zb-spatz': { linien: [ZB_TAL_NORD, ['Hergiswil', 'Stansstad', 'Stans', 'Wolfenschiessen'], ZB_TAL_SUED], text: 'In der S-Bahn Luzern, etwa Richtung Giswil und Stans, und zwischen Meiringen und Interlaken Ost. Ohne Zahnrad nicht über den Brünig.' + RHB_MS },
+  'zb-hge44ii': { linien: [['Luzern', 'Horw', 'Hergiswil'], ZB_ENGELBERG, ZB_BRUENIG], text: 'Heute vor allem im Luzern–Engelberg Express und in Zusatzzügen; bis 2012 vor allen Schnellzügen über den Brünig.' + RHB_MS },
+  'zb-bdeh140': { linien: [['Luzern', 'Horw', 'Hergiswil'], ZB_ENGELBERG], orte: [['Luzern']], text: 'Früher auf der ganzen Strecke Luzern–Engelberg; der 140 007 steht im Verkehrshaus Luzern.' + RHB_MS },
+  'zb-mib': { linien: [ZB_MIB], text: 'Auf der knapp 5 km langen Strecke Meiringen–Innertkirchen mit 1200 V Gleichstrom.' + RHB_MS },
+  'zb-wagen': { linien: [['Luzern', 'Horw', 'Hergiswil'], ZB_ENGELBERG], text: 'Im Luzern–Engelberg Express und in Saisonzügen hinter einer HGe 4/4 II.' + RHB_MS },
+  'zb-hgm104': { linien: ZB_ALLE, text: 'Bei Bauzügen und im Winterdienst auf dem ganzen Netz, auch auf den Zahnstangen.' + RHB_MS },
+  'zb-gm105': { linien: [ZB_TAL_NORD, ZB_TAL_SUED, ZB_MIB], text: 'Bei Bauzügen auf den Strecken ohne Zahnstange, auch bei der MIB.' + RHB_MS },
+  'zb-deh46': { linien: [ZB_BRUENIG], text: 'Ab 1941 auf der ganzen Brünigbahn; heute als historische Fahrzeuge erhalten.' + RHB_MS },
+  'zb-hge44i': { linien: [['Giswil', 'Lungern', 'Brünig-Hasliberg', 'Meiringen']], text: 'Vor allem auf der Bergstrecke zwischen Giswil und Meiringen.' + RHB_MS },
+  'zb-lse-diesel': { linien: [ZB_ENGELBERG], text: 'Früher bei der LSE, etwa in Stansstad und auf den Bahnhöfen nach Engelberg.' + RHB_MS },
+  'zb-traktoren': { orte: [['Luzern'], ['Meiringen'], ['Stansstad']], text: 'Früher im Rangierdienst in Bahnhöfen und Werkstätten der Brünigbahn und der LSE.' },
+  'zb-g34': { linien: [ZB_TAL_NORD, ZB_TAL_SUED], text: 'Früher auf den flachen Abschnitten der Brünigbahn; heute bei der Brünig-Dampfbahn.' + RHB_MS },
+  'zb-hg33': { linien: [ZB_BRUENIG], orte: [['Luzern']], text: 'Früher über den Brünig; heute bei der Brünig-Dampfbahn, die 1063 im Verkehrshaus Luzern.' + RHB_MS },
+  'zb-mib-akku': { linien: [ZB_MIB], orte: [['Luzern']], text: 'Früher zwischen Meiringen und Innertkirchen; die Nummer 4 steht im Verkehrshaus Luzern.' + RHB_MS },
+  'zb-hist-wagen': { linien: [ZB_BRUENIG], text: 'In historischen Zügen auf der Brünigbahn.' + RHB_MS },
+  'zb-lse-gueterwagen': { linien: [ZB_ENGELBERG, ZB_BRUENIG], text: 'Früher im Güter- und Dienstverkehr am Brünig und nach Engelberg.' + RHB_MS },
+  'mob-alpina': { linien: MOB_ALLE, text: 'Auf der Hauptstrecke Montreux–Zweisimmen und weiter nach Lenk, in Regionalzügen und mit Panoramawagen.' + RHB_MS },
+  'mob-be44-5000': { linien: [MOB_LENK, ['Zweisimmen', 'Saanenmöser', 'Schönried', 'Gstaad']], text: 'Vor allem zwischen Zweisimmen und Lenk im Simmental und bis Gstaad.' + RHB_MS },
+  'mob-ge44-8000': { linien: [MOB_HAUPT], text: 'Vor dem GoldenPass Express zwischen Montreux und Zweisimmen.' + RHB_MS },
+  'mob-gde44': { linien: MOB_ALLE, text: 'Vor den Panoramazügen auf der ganzen MOB, saisonal auch vor dem Schokoladenzug.' + RHB_MS },
+  'mob-ge44-8500': { linien: [MOB_HAUPT], text: 'Geplant vor dem GoldenPass Express zwischen Montreux und Zweisimmen.' + RHB_MS },
+  'mob-gpx': { linien: [MOB_HAUPT], strecken: [['Zweisimmen', 'Spiez', 'Interlaken Ost']], text: 'Montreux–Zweisimmen auf Meterspur (gestrichelt), danach nach dem Spurwechsel auf Normalspur über Spiez nach Interlaken Ost.' },
+  'mob-panoramic': { linien: [MOB_HAUPT], text: 'Im GoldenPass Panoramic zwischen Montreux und Zweisimmen.' + RHB_MS },
+  'mob-belle-epoque': { linien: [MOB_HAUPT], text: 'Im GoldenPass Belle Époque zwischen Montreux und Zweisimmen.' + RHB_MS },
+  'mob-gem22': { linien: MOB_ALLE, text: 'Bei Bau- und Materialzügen auf der ganzen MOB.' + RHB_MS },
+  'mob-gm44': { linien: MOB_ALLE, text: 'Vor schweren Bauzügen auf der ganzen MOB.' + RHB_MS },
+  'mob-gem44': { linien: MOB_ALLE, text: 'Geplant für Bau- und Dienstzüge auf der ganzen MOB.' + RHB_MS },
+  'mob-schnee': { linien: MOB_ALLE, text: 'Im Winter zwischen Montreux, Zweisimmen und Lenk.' + RHB_MS },
+  'mob-bcfe44': { linien: [['Montreux', 'Les Avants', 'Montbovon']], orte: [BLONAY_CHAMBY], text: 'Früher auf der Bergstrecke ab Montreux; heute bei der Museumsbahn Blonay–Chamby.' + RHB_MS },
+  'mob-fze66': { linien: MOB_ALLE, orte: [BLONAY_CHAMBY], text: 'Früher vor schweren Zügen auf der ganzen MOB; die 2002 fährt heute bei Blonay–Chamby.' + RHB_MS },
+  'mob-bde44-3000': { linien: MOB_ALLE, text: 'Früher auf der ganzen MOB.' + RHB_MS },
+  'mob-abde88': { linien: MOB_ALLE, orte: [['Lenk im Simmental']], text: 'Früher vor allem zwischen Montreux und Zweisimmen; zwei Einheiten stehen abgestellt in Lenk.' + RHB_MS },
+  'mob-hist-wagen': { linien: [MOB_HAUPT], orte: [BLONAY_CHAMBY], text: 'Früher auf der MOB; heute bei der Museumsbahn Blonay–Chamby.' + RHB_MS },
+  'mob-hist-gueterwagen': { linien: MOB_ALLE, orte: [BLONAY_CHAMBY], text: 'Früher im Güterverkehr der MOB; heute bei der Museumsbahn Blonay–Chamby.' + RHB_MS }
+});
