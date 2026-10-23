@@ -21,7 +21,7 @@ uebEinsatz({
   'aem-940': 'In the Limmattal and Lausanne Triage marshalling yards and with engineering trains throughout Switzerland.',
   'lrz-18': 'Bases of the two series: Geneva, Melide and Brig, plus Zurich, Winterthur and Bern. From there the trains respond to incidents on the network.',
   'kirow-krc-1100': 'Anywhere on the SBB standard-gauge network, mainly for installing temporary bridges.',
-  'am-843': 'In shunting and local delivery work and for engineering trains throughout Switzerland.',
+  'am-843': 'In shunting and local delivery work and for engineering trains throughout Switzerland. The locomotives with ETCS also run through the Lötschberg Base Tunnel.',
   'tm-234': 'On construction sites across the network for track, overhead line and signal maintenance.',
   'rabe-512': 'In the Zurich/Mittelland region, in western and northern Switzerland and between Zurich and Chur.',
   're-450': 'On the Zurich S-Bahn, among others as far as Schaffhausen, Zug and Glarus.',

@@ -84,7 +84,9 @@ const EINSATZ = {
   'lrz-18': { orte: [['Genève'], ['Melide', 2717900, 1089300], ['Brig'], ['Zürich HB'], ['Winterthur'], ['Bern']],
     text: 'Standorte der beiden Serien: Genf, Melide und Brig, dazu Zürich, Winterthur und Bern. Von dort rücken die Züge zu Ereignissen im Netz aus.' },
   'kirow-krc-1100': { netz: true, text: 'Freizügig im ganzen SBB-Normalspurnetz, vor allem für den Einbau von Hilfsbrücken.' },
-  'am-843': { netz: true, text: 'Im Rangier- und Zustelldienst sowie für Bauzüge in der ganzen Schweiz.' },
+  // der Lötschberg-Basistunnel gehört zu BLS Netz, «netz» allein zeichnet ihn darum nicht
+  'am-843': { netz: true, strecken: [['Spiez', 'Visp']],
+    text: 'Im Rangier- und Zustelldienst sowie für Bauzüge in der ganzen Schweiz. Die Loks mit ETCS fahren auch durch den Lötschberg-Basistunnel.' },
   'tm-234': { netz: true, text: 'Auf Baustellen im ganzen Netz für Gleis-, Fahrleitungs- und Signalunterhalt.' }
 };
 

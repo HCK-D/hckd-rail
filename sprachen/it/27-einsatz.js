@@ -21,7 +21,7 @@ uebEinsatz({
   'aem-940': 'Negli scali di smistamento di Limmattal e Lausanne Triage e con treni cantiere in tutta la Svizzera.',
   'lrz-18': 'Sedi delle due serie: Ginevra, Melide e Briga, oltre a Zurigo, Winterthur e Berna. Da lì i treni partono verso gli eventi sulla rete.',
   'kirow-krc-1100': 'Liberamente in tutta la rete FFS a scartamento normale, soprattutto per la posa di ponti provvisori.',
-  'am-843': 'In manovra e nella distribuzione, nonché per treni cantiere in tutta la Svizzera.',
+  'am-843': 'In manovra e nella distribuzione, nonché per treni cantiere in tutta la Svizzera. Le locomotive con ETCS circolano anche nella galleria di base del Lötschberg.',
   'tm-234': 'Nei cantieri di tutta la rete per la manutenzione di binari, linea di contatto e segnali.',
   'rabe-512': 'Nella regione Zurigo/Altopiano, nella Svizzera occidentale e settentrionale e tra Zurigo e Coira.',
   're-450': 'Sulla S-Bahn di Zurigo, tra l’altro fino a Sciaffusa, Zugo e Glarona.',

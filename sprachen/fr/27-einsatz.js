@@ -21,7 +21,7 @@ uebEinsatz({
   'aem-940': 'Dans les gares de triage de Limmattal et de Lausanne Triage ainsi qu’avec des trains de travaux dans toute la Suisse.',
   'lrz-18': 'Sites des deux séries : Genève, Melide et Brigue, ainsi que Zurich, Winterthour et Berne. Les trains partent de là vers les événements sur le réseau.',
   'kirow-krc-1100': 'Librement dans tout le réseau CFF à voie normale, surtout pour la pose de ponts provisoires.',
-  'am-843': 'En manœuvre et en desserte ainsi que pour les trains de travaux dans toute la Suisse.',
+  'am-843': 'En manœuvre et en desserte ainsi que pour les trains de travaux dans toute la Suisse. Les locomotives équipées de l’ETCS circulent aussi dans le tunnel de base du Lötschberg.',
   'tm-234': 'Sur les chantiers de tout le réseau pour l’entretien de la voie, de la caténaire et de la signalisation.',
   'rabe-512': 'Dans la région Zurich/Plateau, en Suisse occidentale et du Nord et entre Zurich et Coire.',
   're-450': 'Sur le RER zurichois, entre autres jusqu’à Schaffhouse, Zoug et Glaris.',
