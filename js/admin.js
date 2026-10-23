@@ -40,7 +40,7 @@
   const istOffen = () => { try { return sessionStorage.getItem(OFFEN_KEY) === '1'; } catch (e) { return false; } };
   function zeigePanel(auf) {
     pin.hidden = auf; panel.hidden = !auf;
-    if (auf) { ladeZahl(); ladeMitmachen(); ohneFotos(); notiz.value = lies(); notiz.focus(); } else { code.value = ''; pinMsg.textContent = ''; code.focus(); }
+    if (auf) { ladeZahl(); ladeZeit(); ladeMitmachen(); ohneFotos(); notiz.value = lies(); notiz.focus(); } else { code.value = ''; pinMsg.textContent = ''; code.focus(); }
   }
 
   // vehicles without photos, grouped by railway and category; built from the data, so it stays current
@@ -83,6 +83,41 @@
       feld.textContent = isNaN(n) ? '–' : n.toLocaleString('de-CH');
       stand.textContent = isNaN(n) ? 'Zahl gerade nicht verfügbar.' : 'GoatCounter, bis zu 4 Stunden verzögert';
     } catch (err) { feld.textContent = '–'; stand.textContent = 'Zahl gerade nicht verfügbar (Vorschau oder keine Verbindung).'; }
+  }
+
+  // visitors per period from the public GoatCounter counter. A day is start=day&end=next day:
+  // with start and end on the same day GoatCounter returns too few visitors.
+  const gcZahl = async (gc, q) => {
+    try {
+      const r = await fetch('https://' + gc + '.goatcounter.com/counter/TOTAL.json' + q, { cache: 'no-store' });
+      if (!r.ok) return NaN;
+      const d = await r.json();
+      return parseInt(String(d.count).replace(/\D/g, ''), 10);
+    } catch (err) { return NaN; }
+  };
+  const isoTag = d => d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+  const plusTage = (d, n) => new Date(d.getFullYear(), d.getMonth(), d.getDate() + n);
+  const zahlText = n => isNaN(n) ? '–' : n.toLocaleString('de-CH');
+  async function ladeZeit() {
+    const gc = (typeof STATISTIK !== 'undefined' && STATISTIK.goatcounter) || '';
+    const jetzt = new Date(), t0 = new Date(jetzt.getFullYear(), jetzt.getMonth(), jetzt.getDate()), morgen = plusTage(t0, 1);
+    const ZEIT = [['Heute', t0], ['Diese Woche', plusTage(t0, -((t0.getDay() + 6) % 7))], ['Dieser Monat', new Date(t0.getFullYear(), t0.getMonth(), 1)]];
+    const zeit = $('#ad-zeit'), tage = $('#ad-tage');
+    zeit.innerHTML = ZEIT.map(([text]) => `<li class="klein"><b>…</b><span>${esc(text)}</span></li>`).join('');
+    // the last 30 days, newest first; older days simply drop out of the list
+    const liste = Array.from({ length: 30 }, (_, i) => plusTage(t0, -i));
+    tage.innerHTML = liste.map((d, i) => `<li${i ? '' : ' class="heute"'}><span>${esc((i ? '' : 'Heute, ') + d.toLocaleDateString('de-CH', { weekday: 'short', day: 'numeric', month: 'long', year: 'numeric' }))}</span><b>…</b><i></i></li>`).join('');
+    if (!gc) { $$('b', zeit).concat($$('b', tage)).forEach(b => { b.textContent = '–'; }); return; }
+    const werte = await Promise.all(ZEIT.map(([, von]) => gcZahl(gc, '?start=' + isoTag(von) + '&end=' + isoTag(morgen))));
+    $$('b', zeit).forEach((b, i) => { b.textContent = zahlText(werte[i]); });
+    // six days at a time, so the counter is not flooded with 30 requests at once
+    const zahlen = [];
+    for (let i = 0; i < liste.length; i += 6) {
+      const teil = await Promise.all(liste.slice(i, i + 6).map(d => gcZahl(gc, '?start=' + isoTag(d) + '&end=' + isoTag(plusTage(d, 1)))));
+      teil.forEach((n, k) => { zahlen[i + k] = n; $$('li', tage)[i + k].querySelector('b').textContent = zahlText(n); });
+    }
+    const max = Math.max(1, ...zahlen.filter(n => !isNaN(n)));
+    $$('li', tage).forEach((li, i) => { li.querySelector('i').style.width = (isNaN(zahlen[i]) ? 0 : zahlen[i] / max * 100) + '%'; });
   }
 
   // who takes part: the counts of the once-per-browser steps from statistik.js (zaehleEinmal);

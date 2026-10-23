@@ -820,11 +820,20 @@
     </form>
     <div class="ad-panel" id="ad-panel" hidden>
       <div class="ad-zahl">
-        <small>Besuche insgesamt</small>
+        <small>Besucher seit dem Start</small>
         <b id="ad-total">–</b>
         <span id="ad-stand">GoatCounter, bis zu 4 Stunden verzögert</span>
         <a href="https://hckd-rail.goatcounter.com" target="_blank" rel="noopener">Ganze Statistik öffnen ↗</a>
       </div>
+      <div class="ad-mit">
+        <small>Besucher <span>(Woche ab Montag, Monat ab dem 1.)</span></small>
+        <ul id="ad-zeit"></ul>
+      </div>
+      <details class="ad-ohne ad-tage">
+        <summary>Besucher pro Tag <b>letzte 30 Tage</b></summary>
+        <p class="ad-tage-hinweis">Der neueste Tag steht oben. Kommt ein neuer Tag dazu, fällt der älteste weg.</p>
+        <ol id="ad-tage"></ol>
+      </details>
       <div class="ad-mit">
         <small>Wer macht mit? <span>(Personen bzw. Browser, seit dem 22. Oktober 2026)</span></small>
         <ul id="ad-mit"></ul>

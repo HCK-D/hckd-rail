@@ -33,6 +33,15 @@
 .ad-mit ul{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;margin:0;padding:0;list-style:none}
 .ad-mit li{grid-column:span 3;display:grid;align-content:start;gap:2px;padding:10px 12px;border-radius:12px;background:var(--surface)}
 .ad-mit li.klein{grid-column:span 2}
+/* visitors per day: date, bar, number */
+.ad-tage-hinweis{margin:8px 0 6px;font-size:13px;color:var(--fg-3)}
+.ad-tage ol{display:grid;gap:4px;margin:0;padding:0;list-style:none}
+.ad-tage li{display:grid;grid-template-columns:minmax(0,1fr) 3.5em;align-items:center;gap:4px 10px;padding:6px 0;border-bottom:1px solid var(--line);font-size:14px}
+.ad-tage li:last-child{border-bottom:0}
+.ad-tage li span{color:var(--fg-2)}
+.ad-tage li.heute span{font-weight:700;color:var(--fg)}
+.ad-tage li b{text-align:right;font-variant-numeric:tabular-nums}
+.ad-tage li i{grid-column:1 / -1;display:block;height:4px;border-radius:999px;background:var(--accent);opacity:.7;width:0;transition:width .4s ease}
 .ad-mit li b{font:800 26px/1.1 var(--display);font-variant-numeric:tabular-nums;color:var(--fg)}
 .ad-mit li span{font-size:13px;line-height:1.3;color:var(--fg-2)}
 .ad-mit li.gross{grid-column:1 / -1}
