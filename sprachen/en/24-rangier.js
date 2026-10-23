@@ -2,9 +2,9 @@
 uebZug('ee-922', {
   typ: 'Electric shunting locomotive for passenger stations',
   text: ['The Ee 922 is a compact electric shunting locomotive from Stadler.', 'SBB procured it for preparing passenger trains and adding extra coaches in large stations.'],
-  kennzahlen: [['21', 'locomotives ordered'], ['750 kW', 'maximum power'], ['45 t', 'empty weight'], ['2009–2010', 'delivery']],
-  daten: { 'Spurweite': 'standard gauge, 1435 mm', 'Stromsystem': '15 kV 16.7 Hz and 25 kV 50 Hz', 'Gewicht': '45 t empty', 'Bedienung': 'radio remote control', 'Einsatz': 'passenger shunting' },
-  abschnitte: [{ titel: 'Manufacturer and fleet build-up', p: ['SBB ordered the 21 locomotives in December 2007. Stadler handed over the first vehicle in July 2009; seven large stations were to be equipped by the end of 2010.'] }, { titel: 'Service and technology', p: ['The Ee 922 replaced older Ee 3/3 in passenger service. Its dual-frequency equipment also allows use in border stations with 25 kV overhead lines.'] }, { titel: 'Facilities and accessibility', liste: ['Radio remote control', 'Two power systems: 15 kV 16.7 Hz and 25 kV 50 Hz', 'Compact: 8.8 m long', 'No passenger compartment'] }],
+  kennzahlen: [['26', 'locomotives'], ['750 kW', 'maximum power'], ['45 t', 'empty weight'], ['2009', 'first locomotive handed over']],
+  daten: { 'Spurweite': 'standard gauge, 1435 mm', 'Stromsystem': '15 kV 16.7 Hz and 25 kV 50 Hz', 'Gewicht': '45 t empty', 'Bedienung': 'from the cab, no radio remote control', 'Einsatz': 'passenger shunting in stations, not on the open line' },
+  abschnitte: [{ titel: 'Manufacturer and fleet build-up', p: ['SBB first ordered 21 locomotives in December 2007. Stadler handed over the first vehicle in July 2009; seven large stations were to be equipped by the end of 2010. SBB later ordered more; today there are 26.'] }, { titel: 'Service and technology', p: ['The Ee 922 replaced older Ee 3/3 in passenger service. Its dual-frequency equipment also allows use in border stations with 25 kV overhead lines.', 'It works only as a shunter inside stations and is not used on the open line. It is driven from the cab; it has no radio remote control.'] }, { titel: 'Facilities and accessibility', liste: ['Driven from the cab, no radio remote control', 'Two power systems: 15 kV 16.7 Hz and 25 kV 50 Hz', 'Compact: 8.8 m long', 'No passenger compartment'] }],
   bilder: ['Ee 922 011', 'Ee 922 012', 'Ee 922 021 in Brig', 'Ee 922 006 in Basel', 'Ee 922 002 in Romanshorn']
 });
 

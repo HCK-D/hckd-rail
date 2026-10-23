@@ -148,7 +148,9 @@ Object.assign(EINSATZ, {
   're-421': { strecken: [['Basel SBB', 'Basel Bad Bf']],
     text: 'Vor allem für Güterzüge von der Schweiz nach Deutschland.' },
   // Rangierfahrzeuge
-  'ee-922': { netz: true, text: 'Im Rangierdienst des Personenverkehrs in grösseren Bahnhöfen; dank zwei Stromsystemen auch in Grenzbahnhöfen.' },
+  // nur in den Bahnhöfen, nicht auf der Strecke: Bahnhöfe nach den Stationierungen (Wikipedia, SBB Ee 922)
+  'ee-922': { orte: [['Zürich HB'], ['Basel SBB'], ['Bern'], ['Biel/Bienne'], ['Luzern'], ['Brig'], ['Chur'], ['Romanshorn'], ['Genève']],
+    text: 'Nur im Rangierdienst des Personenverkehrs in grösseren Bahnhöfen, zum Beispiel Zürich, Basel, Bern, Genève und Brig; dank zwei Stromsystemen auch in Grenzbahnhöfen. Auf der Strecke wird sie nicht eingesetzt.' },
   // nicht im Gotthard- (594, 595, Spurwechsel 597, 598, Anschluss 590) und Ceneri-Basistunnel (580, 581, Anschlüsse 592, 593)
   'eem-923': { netz: true, ohne: ['594', '595', '597', '598', '590', '580', '581', '592', '593'],
     text: 'Bei SBB Cargo im Rangier- und Zustelldienst; ohne Fahrleitung fährt sie mit dem Hilfsdiesel. Durch den Gotthard- und den Ceneri-Basistunnel darf sie nicht fahren.' },
