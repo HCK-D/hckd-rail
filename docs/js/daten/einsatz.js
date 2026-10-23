@@ -9,6 +9,8 @@
    orte      [Name, Ost, Nord] mit Schweizer Koordinaten (LV95), für Orte
              ohne Bahnhof in der Liste, z. B. Rangierbahnhöfe
    netz      true = im ganzen Normalspurnetz unterwegs
+   ohne      bei netz: Linien, die nicht rot werden (BAV-Liniennummern),
+             z. B. ['594', '595'] = Gotthard-Basistunnel
    linien    Listen von Bahnhöfen für Meterspur-Linien (nicht im Normalspurnetz):
              gestrichelte gerade Linie von Bahnhof zu Bahnhof
    text      kurze Beschreibung unter der Karte
@@ -147,7 +149,9 @@ Object.assign(EINSATZ, {
     text: 'Vor allem für Güterzüge von der Schweiz nach Deutschland.' },
   // Rangierfahrzeuge
   'ee-922': { netz: true, text: 'Im Rangierdienst des Personenverkehrs in grösseren Bahnhöfen; dank zwei Stromsystemen auch in Grenzbahnhöfen.' },
-  'eem-923': { netz: true, text: 'Bei SBB Cargo im Rangier- und Zustelldienst; ohne Fahrleitung fährt sie mit dem Hilfsdiesel.' },
+  // nicht im Gotthard- (594, 595, Spurwechsel 597, 598, Anschluss 590) und Ceneri-Basistunnel (580, 581, Anschlüsse 592, 593)
+  'eem-923': { netz: true, ohne: ['594', '595', '597', '598', '590', '580', '581', '592', '593'],
+    text: 'Bei SBB Cargo im Rangier- und Zustelldienst; ohne Fahrleitung fährt sie mit dem Hilfsdiesel. Durch den Gotthard- und den Ceneri-Basistunnel darf sie nicht fahren.' },
   'bm-44': { netz: true, text: 'Früher im schweren Rangierdienst in grossen Bahnhöfen, unabhängig von der Fahrleitung.' },
   'tm-232': { netz: true, text: 'Im leichten Rangier- und Baudienst im ganzen SBB-Netz.' },
   'ee-33': { netz: true, text: 'Über Jahrzehnte im Rangierdienst in Bahnhöfen und Depots im ganzen SBB-Netz.' },

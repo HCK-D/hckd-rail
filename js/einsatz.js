@@ -20,7 +20,7 @@ const einsatzKarte = (() => {
     const flip = y => y1 - y;
     const segs = N.segs
       .filter(([oi, gi]) => !TRAM.has(N.ops[oi]) && /1435/.test(N.gauges[gi]))
-      .map(([oi, gi, ei, tr, li, len, d]) => ({ len, pts: dec(d), sbb: N.ops[oi] === 'SBB CFF FFS' }));
+      .map(([oi, gi, ei, tr, li, len, d]) => ({ len, pts: dec(d), sbb: N.ops[oi] === 'SBB CFF FFS', linie: N.lines[li] || '' }));
     // graph: segment ends are the corners; ends closer than 60 m are joined
     const key = ([x, y]) => x + ',' + y, adj = new Map(), pos = new Map();
     const add = (k, p, e) => { if (!adj.has(k)) { adj.set(k, []); pos.set(k, p); } adj.get(k).push(e); };
@@ -49,7 +49,7 @@ const einsatzKarte = (() => {
         best = q; bd = d;
       }
       if (!best) continue;
-      const i = segs.push({ len: bd * N.unit, pts: [p, pos.get(best)], sbb: s.sbb }) - 1;
+      const i = segs.push({ len: bd * N.unit, pts: [p, pos.get(best)], sbb: s.sbb, linie: s.linie }) - 1;
       adj.get(k).push({ to: best, i, w: bd * N.unit }); adj.get(best).push({ to: k, i, w: bd * N.unit });
     }
     const pathD = pts => 'M' + pts.map(([x, y]) => x + ' ' + flip(y)).join('L');
@@ -143,6 +143,9 @@ const einsatzKarte = (() => {
     });
   }
 
+  // the SBB network for «netz: true», without the lines in «ohne» (BAV line numbers, e.g. '594' = GBT West)
+  const sbbNetz = e => G.segs.filter(s => s.sbb && !(e.ohne || []).some(n => s.linie.startsWith(n + ' ')));
+
   function zeigeSchweiz(e) {
     if (!G) baue();
     svg.setAttribute('viewBox', G.vb.join(' '));
@@ -150,7 +153,7 @@ const einsatzKarte = (() => {
     svg.setAttribute('aria-label', tr('Karte der Schweiz mit den Einsatzstrecken'));
     svg.appendChild(el('path', { d: G.land, class: 'ez-land' }));
     svg.appendChild(el('path', { d: G.netz, class: e.netz ? 'ez-netz on' : 'ez-netz' }));
-    if (e.netz) svg.appendChild(el('path', { d: G.sbb, class: 'ez-hl' }));
+    if (e.netz) svg.appendChild(el('path', { d: e.ohne ? sbbNetz(e).map(s => G.pathD(s.pts)).join('') : G.sbb, class: 'ez-hl' }));
     const marken = [];
     for (const [name, r, label] of e.gebiete || []) {
       const n = node(name); if (!n) continue;
@@ -180,7 +183,7 @@ const einsatzKarte = (() => {
       else if (E != null) marken.push([name, (E - N.x0) / N.unit, (Nn - N.y0) / N.unit, false, true]);
     }
     const rot = [];
-    for (const s of e.netz ? G.segs.filter(s => s.sbb) : [...ids].map(i => G.segs[i])) punkte(s.pts.map(([x, y]) => [x, G.flip(y)]), rot);
+    for (const s of e.netz ? sbbNetz(e) : [...ids].map(i => G.segs[i])) punkte(s.pts.map(([x, y]) => [x, G.flip(y)]), rot);
     for (const pts of schmal) punkte(pts, rot);
     beschrifte(marken.map(([n, x, y, g, o, r]) => [n, x, G.flip(y), g, o, r]), rot, G.vb);
   }
