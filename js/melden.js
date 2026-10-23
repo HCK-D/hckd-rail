@@ -118,22 +118,24 @@ rpForm.addEventListener('submit', async e => {
 });
 
 /* ---------- contact form (page #kontakt) ----------
-   Same mailbox and spam protection as the reports; the e-mail address is required
-   so we can answer. The timer starts when someone first types in the form. */
+   Same mailbox and spam protection as the reports; first name, name and e-mail
+   address are required so we can answer. The timer starts when someone first types in the form. */
 (() => {
   const form = $('#kt-form');
   if (!form) return;
-  const name = $('#kt-name'), mail = $('#kt-mail'), thema = $('#kt-thema'), text = $('#kt-text'), send = $('#kt-send'), msg = $('#kt-msg'), trap = $('#kt-botcheck');
+  const vorname = $('#kt-vorname'), name = $('#kt-name'), mail = $('#kt-mail'), thema = $('#kt-thema'), text = $('#kt-text'), send = $('#kt-send'), msg = $('#kt-msg'), trap = $('#kt-botcheck');
   const say = (t, kind) => { msg.textContent = t; msg.className = 'rp-msg' + (kind ? ' ' + kind : ''); };
   let begonnen = 0;
   form.addEventListener('input', () => { if (!begonnen) begonnen = Date.now(); });
   form.addEventListener('submit', async e => {
     e.preventDefault();
-    const adresse = mail.value.trim(), t = text.value.trim();
-    mail.removeAttribute('aria-invalid'); text.removeAttribute('aria-invalid');
+    const vn = vorname.value.trim(), nn = name.value.trim(), adresse = mail.value.trim(), t = text.value.trim();
+    [vorname, name, mail, text].forEach(f => f.removeAttribute('aria-invalid'));
+    if (vn.length < 2) { say(tr('Bitte gib deinen Vornamen an.'), 'err'); vorname.setAttribute('aria-invalid', 'true'); vorname.focus(); return; }
+    if (nn.length < 2) { say(tr('Bitte gib deinen Nachnamen an.'), 'err'); name.setAttribute('aria-invalid', 'true'); name.focus(); return; }
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(adresse)) { say(tr('Bitte gib deine E-Mail-Adresse an, damit wir dir antworten können.'), 'err'); mail.setAttribute('aria-invalid', 'true'); mail.focus(); return; }
     if (t.length < 10) { say(tr('Bitte schreib uns eine kurze Nachricht.'), 'err'); text.setAttribute('aria-invalid', 'true'); text.focus(); return; }
-    if (rpLinks(t) + rpLinks(name.value) > 1) { say(tr('Bitte höchstens einen Link angeben.'), 'err'); text.focus(); return; }
+    if (rpLinks(t) + rpLinks(vn + ' ' + nn) > 1) { say(tr('Bitte höchstens einen Link angeben.'), 'err'); text.focus(); return; }
     if (rpRecent().length >= RP_MAX) { say(tr('Du hast in kurzer Zeit schon mehrere Meldungen geschickt. Bitte warte ein paar Minuten. Danke!'), 'err'); return; }
     // bots: hidden field filled in or sent right after the first keystroke. They see "sent", but nothing goes out
     const bot = trap.checked || !begonnen || Date.now() - begonnen < RP_MIN_MS;
@@ -146,8 +148,9 @@ rpForm.addEventListener('submit', async e => {
           body: JSON.stringify({
             access_key: MELDEN.web3formsKey,
             subject: 'RailBase – Kontakt: ' + thema.value,
-            from_name: 'RailBase Kontakt',
-            Name: name.value.trim().slice(0, 100) || '(keine Angabe)',
+            from_name: (vn + ' ' + nn).slice(0, 120) + ' (RailBase Kontakt)',
+            Vorname: vn.slice(0, 60),
+            Nachname: nn.slice(0, 60),
             E_Mail: adresse.slice(0, 200),
             Thema: thema.value,
             Nachricht: t.slice(0, 3000),

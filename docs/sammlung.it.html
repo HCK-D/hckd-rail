@@ -667,13 +667,16 @@
         </div>
         <form class="kontakt-form" id="kt-form" novalidate>
           <div class="kt-zeile">
-            <label class="fld" for="kt-name"><span>Name <small>freiwillig</small></span>
-              <input id="kt-name" type="text" maxlength="100" autocomplete="name">
+            <label class="fld" for="kt-vorname"><span>Vorname <small>Pflicht</small></span>
+              <input id="kt-vorname" type="text" maxlength="60" autocomplete="given-name" required aria-required="true">
             </label>
-            <label class="fld" for="kt-mail"><span>E-Mail <small>Pflicht</small></span>
-              <input id="kt-mail" type="email" maxlength="200" autocomplete="email" inputmode="email" required aria-required="true">
+            <label class="fld" for="kt-name"><span>Nachname <small>Pflicht</small></span>
+              <input id="kt-name" type="text" maxlength="60" autocomplete="family-name" required aria-required="true">
             </label>
           </div>
+          <label class="fld" for="kt-mail"><span>E-Mail <small>Pflicht</small></span>
+            <input id="kt-mail" type="email" maxlength="200" autocomplete="email" inputmode="email" required aria-required="true">
+          </label>
           <label class="fld" for="kt-thema"><span>Thema</span>
             <select id="kt-thema">
               <option>Allgemeine Frage</option>
@@ -751,7 +754,7 @@
           <h2>Fehler melden</h2>
           <p>Sendest du eine Meldung, übermitteln wir deinen Text, die betroffene Seite und, falls du sie angibst, deinen Namen und deine E-Mail-Adresse über den Dienst Web3Forms (web3forms.com) an unser Postfach. Dabei können Daten auch ausserhalb der Schweiz, zum Beispiel in den USA, verarbeitet werden. Wir nutzen die Angaben nur, um die Meldung zu bearbeiten und dir allenfalls zu antworten, und löschen sie, wenn sie nicht mehr gebraucht werden.</p>
           <h2>Kontaktformular</h2>
-          <p>Schreibst du uns über das Kontaktformular, übermitteln wir deine E-Mail-Adresse, deine Nachricht, das gewählte Thema und, falls du ihn angibst, deinen Namen ebenfalls über Web3Forms an unser Postfach. Die E-Mail-Adresse brauchen wir, um dir zu antworten. Wir nutzen die Angaben nur dafür und löschen sie, wenn sie nicht mehr gebraucht werden.</p>
+          <p>Schreibst du uns über das Kontaktformular, übermitteln wir deinen Vornamen und Namen, deine E-Mail-Adresse, deine Nachricht und das gewählte Thema ebenfalls über Web3Forms an unser Postfach. Name und E-Mail-Adresse brauchen wir, um dir persönlich zu antworten. Wir nutzen die Angaben nur dafür und löschen sie, wenn sie nicht mehr gebraucht werden.</p>
           <h2>Fotos einsenden</h2>
           <p>Wer uns Fotos anbietet, schickt über dasselbe Formular wie bei «Fehler melden» (Web3Forms) einen Link zu den Fotos, den Namen für die Bildunterschrift, eine E-Mail-Adresse für Rückfragen und auf Wunsch Ort und Datum. Die Fotos selbst liegen beim gewählten Dienst (z. B. SwissTransfer); dort gelten dessen Bedingungen. Wir nutzen die Angaben nur, um die Fotos zu prüfen, nachzufragen und den Namen beim Foto zu nennen.</p>
           <h2 data-spenden-info>Spenden</h2>

@@ -5017,7 +5017,6 @@ uebDict({
   'Kontakt': 'Contact',
   'Schreib uns': 'Écris-nous',
   'Du hast eine Frage, eine Idee oder möchtest mit uns zusammenarbeiten? Schreib uns hier. Wir antworten an deine E-Mail-Adresse.': 'Tu as une question, une idée ou tu aimerais collaborer avec nous ? Écris-nous ici. Nous te répondons à ton adresse e-mail.',
-  'Name': 'Nom',
   'freiwillig': 'facultatif',
   'E-Mail': 'E-mail',
   'Pflicht': 'obligatoire',
@@ -5034,5 +5033,9 @@ uebDict({
   'Danke! Deine Nachricht ist angekommen. Wir melden uns per E-Mail.': 'Merci ! Ton message est bien arrivé. Nous te répondrons par e-mail.',
   'Kontakt: über das <a href="#kontakt">Kontaktformular</a>. Nachrichten kommen direkt bei uns an.': 'Contact : via le <a href="#kontakt">formulaire de contact</a>. Les messages nous parviennent directement.',
   'Kontaktformular': 'Formulaire de contact',
-  'Schreibst du uns über das Kontaktformular, übermitteln wir deine E-Mail-Adresse, deine Nachricht, das gewählte Thema und, falls du ihn angibst, deinen Namen ebenfalls über Web3Forms an unser Postfach. Die E-Mail-Adresse brauchen wir, um dir zu antworten. Wir nutzen die Angaben nur dafür und löschen sie, wenn sie nicht mehr gebraucht werden.': 'Si tu nous écris via le formulaire de contact, nous transmettons ton adresse e-mail, ton message, le sujet choisi et, si tu l’indiques, ton nom, également via Web3Forms à notre boîte de réception. Nous avons besoin de l’adresse e-mail pour te répondre. Nous utilisons ces données uniquement dans ce but et les supprimons lorsqu’elles ne sont plus nécessaires.'
+  'Vorname': 'Prénom',
+  'Bitte gib deinen Vornamen an.': 'Indique ton prénom.',
+  'Nachname': 'Nom',
+  'Bitte gib deinen Nachnamen an.': 'Indique ton nom de famille.',
+  'Schreibst du uns über das Kontaktformular, übermitteln wir deinen Vornamen und Namen, deine E-Mail-Adresse, deine Nachricht und das gewählte Thema ebenfalls über Web3Forms an unser Postfach. Name und E-Mail-Adresse brauchen wir, um dir persönlich zu antworten. Wir nutzen die Angaben nur dafür und löschen sie, wenn sie nicht mehr gebraucht werden.': 'Si tu nous écris via le formulaire de contact, nous transmettons ton prénom et ton nom, ton adresse e-mail, ton message et le sujet choisi, également via Web3Forms, à notre boîte de réception. Nous avons besoin du nom et de l’adresse e-mail pour te répondre personnellement. Nous utilisons ces données uniquement dans ce but et les supprimons lorsqu’elles ne sont plus nécessaires.'
 });
