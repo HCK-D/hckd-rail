@@ -14,6 +14,8 @@
    linien    Listen von Bahnhöfen für Meterspur-Linien (nicht im Normalspurnetz):
              gestrichelte gerade Linie von Bahnhof zu Bahnhof
    text      kurze Beschreibung unter der Karte
+   Rangierfahrzeuge bekommen nur eine Karte, wenn der Einsatzort sicher belegt
+   ist (z. B. pro Fahrzeugnummer). Ohne Eintrag hier erscheint keine Karte.
    Bahnhöfe: Zürich HB, Bern, Basel SBB, Genève, Lausanne, Luzern, St. Gallen,
    Lugano, Chur, Brig, Biel/Bienne, Olten, Winterthur, Bellinzona, Sion,
    Fribourg/Freiburg, Neuchâtel, Schaffhausen, Arth-Goldau, Thun, Spiez, Visp,
@@ -148,15 +150,9 @@ Object.assign(EINSATZ, {
   're-421': { strecken: [['Basel SBB', 'Basel Bad Bf']],
     text: 'Vor allem für Güterzüge von der Schweiz nach Deutschland.' },
   // Rangierfahrzeuge
-  // nur in den Bahnhöfen, nicht auf der Strecke: Bahnhöfe nach den Stationierungen (Wikipedia, SBB Ee 922)
-  'ee-922': { orte: [['Zürich HB'], ['Basel SBB'], ['Bern'], ['Biel/Bienne'], ['Luzern'], ['Brig'], ['Chur'], ['Romanshorn'], ['Genève']],
-    text: 'Nur im Rangierdienst des Personenverkehrs in grösseren Bahnhöfen, zum Beispiel Zürich, Basel, Bern, Genève und Brig; dank zwei Stromsystemen auch in Grenzbahnhöfen. Auf der Strecke wird sie nicht eingesetzt.' },
   // nicht im Gotthard- (594, 595, Spurwechsel 597, 598, Anschluss 590) und Ceneri-Basistunnel (580, 581, Anschlüsse 592, 593)
   'eem-923': { netz: true, ohne: ['594', '595', '597', '598', '590', '580', '581', '592', '593'],
     text: 'Bei SBB Cargo im Rangier- und Zustelldienst; ohne Fahrleitung fährt sie mit dem Hilfsdiesel. Durch den Gotthard- und den Ceneri-Basistunnel darf sie nicht fahren.' },
-  'bm-44': { netz: true, text: 'Früher im schweren Rangierdienst in grossen Bahnhöfen, unabhängig von der Fahrleitung.' },
-  'tm-232': { netz: true, text: 'Im leichten Rangier- und Baudienst im ganzen SBB-Netz.' },
-  'ee-33': { netz: true, text: 'Über Jahrzehnte im Rangierdienst in Bahnhöfen und Depots im ganzen SBB-Netz.' },
   // Infrastruktur: Lokomotiven und Traktoren
   'am-841': { netz: true, text: 'Im Bau-, Rangier- und Zustelldienst im ganzen SBB-Netz, je nach Baustelle.' },
   'am-842': { netz: true, text: 'Im Bau-, Rangier- und Zustelldienst im ganzen SBB-Netz, je nach Baustelle.' },
@@ -298,8 +294,6 @@ Object.assign(EINSATZ, {
   'sob-e-3-3': { strecken: SOB_ALT, text: 'Früher auf der Wädenswil–Einsiedeln-Bahn und dem Netz der alten SOB.' },
   'sob-ed-4-5': { strecken: SOB_ALT, text: 'Früher vor schwereren Zügen auf den Linien der alten SOB.' },
   'sob-am-846': { strecken: SOB_ALT, orte: [['Samstagern']], text: 'Früher vor Bauzügen und im Rangierdienst auf dem Netz der SOB, zum Beispiel in Samstagern.' },
-  'sob-eea-936': { orte: [['Herisau'], ['Samstagern']], text: 'Früher im Rangierdienst in Bahnhöfen und Werkstätten der BT und der SOB.' },
-  'sob-te-216': { orte: [['Herisau']], text: 'Im Rangierdienst in Bahnhöfen und Werkstätten, zum Beispiel in Herisau.' },
   'sob-tm-236': { strecken: SOB_NETZ, orte: [['Herisau']], text: 'Früher im Rangier- und Baudienst auf dem Netz der SOB, oft in Herisau.' },
   'sob-xtmas': { strecken: SOB_NETZ, text: 'Von 2010 bis 2014 für Arbeiten an der Infrastruktur auf dem Netz der SOB.' }
 });
@@ -322,7 +316,6 @@ Object.assign(EINSATZ, {
   'bls-xas': { strecken: BLS_NETZ, text: BLS_NETZ_TEXT },
   'bls-fans-u': { strecken: BLS_NETZ, text: BLS_NETZ_TEXT },
   'bls-schleiffahrzeug': { strecken: BLS_NETZ, orte: [['Spiez']], text: 'Auf dem Netz der BLS; der erste Ernsteinsatz war in Spiez geplant.' },
-  'bls-rangier': { strecken: BLS_NETZ, text: 'In Bahnhöfen und Werkstätten auf dem Netz der BLS.' },
   'bls-lrz': { strecken: [['Frutigen', 'Visp'], ['Thun', 'Spiez', 'Frutigen', 'Kandersteg', 'Goppenstein', 'Brig']], orte: [['Frutigen']],
     text: 'Vom Interventionszentrum Frutigen aus, unter anderem für den Lötschberg-Basistunnel und die Bergstrecke.' },
   'bls-hilfswagen': { strecken: BLS_NETZ, text: 'Für Bergungen und technische Hilfe auf dem Netz der BLS.' },
@@ -357,12 +350,11 @@ Object.assign(EINSATZ, {
   'gfm-be-151': { linien: TPF_METER, text: 'Früher als Pendelzug auf dem Meterspurnetz der GFM und der TPF. Die Meterspur ist gestrichelt und vereinfacht eingezeichnet.' },
   'gfm-gde-101': { linien: [...TPF_METER, ['Montreux', 'Montbovon', 'Zweisimmen']], text: 'Früher auf dem Meterspurnetz der GFM; heute bei der MOB zwischen Montreux und Zweisimmen. Die Meterspur ist gestrichelt und vereinfacht eingezeichnet.' },
   'gfm-te-22': { orte: [['Bulle'], ['Montbovon']], text: 'Früher im Rangierdienst auf dem Meterspurnetz der GFM: der 11 in Bulle, der 12 in Montbovon.' },
-  'gfm-te-44': { orte: [['Broc-Fabrique', 2574770, 1161626]], linien: TPF_METER, text: 'Früher im Rangierdienst in Broc-Fabrique und vor Bauzügen auf dem Meterspurnetz der GFM.' },
+  'gfm-te-44': { orte: [['Broc-Fabrique', 2574770, 1161626]], text: 'Früher im Rangierdienst in Broc-Fabrique und vor Bauzügen auf dem Meterspurnetz der GFM.' },
   'gfm-tm-15': { orte: [['Bulle']], linien: TPF_METER, text: 'Früher vor Bauzügen auf dem Meterspurnetz der GFM und im Rangierdienst in Bulle.' },
   'gfm-abde-24': { strecken: [['Fribourg/Freiburg', 'Murten/Morat', 'Ins']], text: 'Früher auf der Normalspurstrecke Freiburg–Murten–Ins.' },
   'gfm-abde-44': { strecken: TPF_NORMAL, text: 'Früher auf den Normalspurstrecken der GFM.' },
   'gfm-rbde-567': { strecken: TPF_NORMAL, text: 'Früher als Pendelzüge auf dem Normalspurnetz von GFM und TPF.' },
-  'gfm-ee-91': { orte: [['Bulle']], strecken: TPF_NORMAL, text: 'Früher im Rangierdienst auf dem Normalspurnetz der GFM, etwa in Bulle.' },
   'gfm-wagen': { linien: TPF_METER, text: 'Früher auf dem Meterspurnetz der CEG und der GFM. Die Meterspur ist gestrichelt und vereinfacht eingezeichnet.' }
 });
 /* =====================================================================
@@ -389,7 +381,6 @@ Object.assign(EINSATZ, {
 });
 /* Re 430 und Ama 832 (Oktober 2026) */
 Object.assign(EINSATZ, {
-  'ama-832': { netz: true, orte: [['St. Margrethen']], text: 'Im Rangierdienst von SBB Cargo in der Schweiz, zum Beispiel in St. Margrethen.' },
   'h-re430': { netz: true, strecken: [['Zürich HB', 'Zug', ...GOTTHARD_BERG]], text: 'Früher vor Schnell- und Güterzügen am Gotthard, später vor allem im Güterverkehr von SBB Cargo im ganzen Netz.' }
 });/* =====================================================================
    transN: historische und Spezialfahrzeuge (Oktober 2026).
@@ -465,10 +456,7 @@ Object.assign(EINSATZ, {
   'rhb-acts': { linien: RHB_ALLE, text: 'Im Containerverkehr auf dem ganzen Netz der RhB.' + RHB_MS },
   'rhb-container': { linien: RHB_ALLE, text: 'Im Containerverkehr auf dem ganzen Netz der RhB.' + RHB_MS },
   'rhb-spezialtransport': { linien: RHB_AC, text: 'Für schwere und hohe Ladungen auf dem Netz der RhB.' + RHB_MS },
-  'rhb-geaf22': { orte: [['Landquart'], ['Chur'], ['Ilanz'], ['Thusis'], ['Davos Platz'], ['Zernez']], text: 'Im Rangierdienst, unter anderem in Landquart, Chur, Ilanz, Thusis, Davos Platz und Zernez.' },
   'rhb-ge33': { orte: [['Samedan'], ['Chur']], text: 'Im Rangierdienst in Samedan und Chur.' },
-  'rhb-gmf44-242': { orte: [['Klosters Platz'], ['Landquart'], ['Davos Platz']], linien: [RHB_STAMM, RHB_PRAETTIGAU], text: 'Im Rangierdienst auf dem Stammnetz, etwa in Klosters Platz, Landquart und Davos.' + RHB_MS },
-  'rhb-taf22': { orte: [['Landquart'], ['Poschiavo']], text: 'In Werkstätten und Depots, unter anderem in Landquart und Poschiavo.' },
   'rhb-gmf44ii': { linien: RHB_ALLE, text: 'Vor Bauzügen und im Winter mit Schneeschleudern im ganzen Netz der RhB.' + RHB_MS },
   'rhb-gem44': { linien: [RHB_BERNINA], orte: [['Pontresina'], ['Poschiavo']], text: 'Auf der Berninalinie, stationiert in Pontresina und Poschiavo; mit Diesel auch auf dem Stammnetz.' + RHB_MS },
   'rhb-tm': { linien: RHB_ALLE, text: 'Im Rangierdienst und vor kleinen Bauzügen auf dem ganzen Netz.' + RHB_MS },
@@ -535,7 +523,6 @@ Object.assign(EINSATZ, {
   'zb-deh46': { linien: [ZB_BRUENIG], text: 'Ab 1941 auf der ganzen Brünigbahn; heute als historische Fahrzeuge erhalten.' + RHB_MS },
   'zb-hge44i': { linien: [['Giswil', 'Lungern', 'Brünig-Hasliberg', 'Meiringen']], text: 'Vor allem auf der Bergstrecke zwischen Giswil und Meiringen.' + RHB_MS },
   'zb-lse-diesel': { linien: [ZB_ENGELBERG], text: 'Früher bei der LSE, etwa in Stansstad und auf den Bahnhöfen nach Engelberg.' + RHB_MS },
-  'zb-traktoren': { orte: [['Luzern'], ['Meiringen'], ['Stansstad']], text: 'Früher im Rangierdienst in Bahnhöfen und Werkstätten der Brünigbahn und der LSE.' },
   'zb-g34': { linien: [ZB_TAL_NORD, ZB_TAL_SUED], text: 'Früher auf den flachen Abschnitten der Brünigbahn; heute bei der Brünig-Dampfbahn.' + RHB_MS },
   'zb-hg33': { linien: [ZB_BRUENIG], orte: [['Luzern']], text: 'Früher über den Brünig; heute bei der Brünig-Dampfbahn, die 1063 im Verkehrshaus Luzern.' + RHB_MS },
   'zb-mib-akku': { linien: [ZB_MIB], orte: [['Luzern']], text: 'Früher zwischen Meiringen und Innertkirchen; die Nummer 4 steht im Verkehrshaus Luzern.' + RHB_MS },
