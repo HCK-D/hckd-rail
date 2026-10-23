@@ -47,6 +47,7 @@
           <li><a href="#quiz">Quiz</a></li>
           <li><a href="#sammlung">Meine Sammlung</a></li>
           <li><a href="#danke">Danke</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
         </ul>
       </details>
       <a href="#vergleich">Vergleich</a>
@@ -625,6 +626,45 @@
         </div>
       </div>
     </section>
+    <section class="section" data-seite="kontakt" hidden>
+      <div class="wrap">
+        <ol class="crumbs"><li><a href="#start">Start</a></li><li aria-current="page">Kontakt</li></ol>
+        <div class="page-head">
+          <div>
+            <span class="kicker">Kontakt</span>
+            <h1>Schreib uns</h1>
+            <p>Du hast eine Frage, eine Idee oder möchtest mit uns zusammenarbeiten? Schreib uns hier. Wir antworten an deine E-Mail-Adresse.</p>
+          </div>
+        </div>
+        <form class="kontakt-form" id="kt-form" novalidate>
+          <div class="kt-zeile">
+            <label class="fld" for="kt-name"><span>Name <small>freiwillig</small></span>
+              <input id="kt-name" type="text" maxlength="100" autocomplete="name">
+            </label>
+            <label class="fld" for="kt-mail"><span>E-Mail <small>Pflicht</small></span>
+              <input id="kt-mail" type="email" maxlength="200" autocomplete="email" inputmode="email" required aria-required="true">
+            </label>
+          </div>
+          <label class="fld" for="kt-thema"><span>Thema</span>
+            <select id="kt-thema">
+              <option>Allgemeine Frage</option>
+              <option>Idee oder Vorschlag</option>
+              <option>Zusammenarbeit</option>
+              <option>Medien und Presse</option>
+              <option>Anderes</option>
+            </select>
+          </label>
+          <label class="fld" for="kt-text"><span>Nachricht</span>
+            <textarea id="kt-text" rows="6" maxlength="3000" required aria-required="true"></textarea>
+          </label>
+          <!-- Falle für Spam-Programme: für Menschen unsichtbar -->
+          <label class="hp" aria-hidden="true">Nicht ausfüllen <input type="checkbox" id="kt-botcheck" tabindex="-1" autocomplete="off"></label>
+          <p class="kt-hinweis">Wie wir mit deinen Angaben umgehen, steht im <a href="#datenschutz">Datenschutz</a>.</p>
+          <p class="rp-msg" id="kt-msg" role="status"></p>
+          <button class="btn-send" type="submit" id="kt-send">Nachricht senden</button>
+        </form>
+      </div>
+    </section>
   </div>
 
   <!-- ===== IMPRESSUM / DATENSCHUTZ ===== -->
@@ -636,7 +676,7 @@
           <h1>Impressum</h1>
           <h2>Verantwortlich für diese Website</h2>
           <p class="adresse">Kevin D.<br>1700 Fribourg, Schweiz</p>
-          <p>Kontakt: über das Formular <button class="link-btn" type="button" data-report="allg" aria-haspopup="dialog">Fehler melden</button>. Nachrichten kommen direkt bei uns an.</p>
+          <p>Kontakt: über das <a href="#kontakt">Kontaktformular</a>. Nachrichten kommen direkt bei uns an.</p>
           <h2>Unabhängiges Projekt</h2>
           <p>RailBase by HCKD ist ein privates, nicht kommerzielles Projekt von Bahnfans. Es steht in keiner Verbindung zu den Schweizerischen Bundesbahnen SBB, zu SBB Cargo oder zu anderen Bahnunternehmen. Namen und Marken gehören ihren Inhaberinnen und Inhabern und werden nur zur Beschreibung der Fahrzeuge genannt.</p>
           <h2>Haftung</h2>
@@ -681,6 +721,8 @@
           <p>Der Knopf «Teilen» öffnet das Teilen-Menü deines Geräts oder kopiert den Link. Was du danach damit machst, bestimmst du selbst; wir erfahren davon nichts.</p>
           <h2>Fehler melden</h2>
           <p>Sendest du eine Meldung, übermitteln wir deinen Text, die betroffene Seite und, falls du sie angibst, deinen Namen und deine E-Mail-Adresse über den Dienst Web3Forms (web3forms.com) an unser Postfach. Dabei können Daten auch ausserhalb der Schweiz, zum Beispiel in den USA, verarbeitet werden. Wir nutzen die Angaben nur, um die Meldung zu bearbeiten und dir allenfalls zu antworten, und löschen sie, wenn sie nicht mehr gebraucht werden.</p>
+          <h2>Kontaktformular</h2>
+          <p>Schreibst du uns über das Kontaktformular, übermitteln wir deine E-Mail-Adresse, deine Nachricht, das gewählte Thema und, falls du ihn angibst, deinen Namen ebenfalls über Web3Forms an unser Postfach. Die E-Mail-Adresse brauchen wir, um dir zu antworten. Wir nutzen die Angaben nur dafür und löschen sie, wenn sie nicht mehr gebraucht werden.</p>
           <h2>Fotos einsenden</h2>
           <p>Wer uns Fotos anbietet, schickt über dasselbe Formular wie bei «Fehler melden» (Web3Forms) einen Link zu den Fotos, den Namen für die Bildunterschrift, eine E-Mail-Adresse für Rückfragen und auf Wunsch Ort und Datum. Die Fotos selbst liegen beim gewählten Dienst (z. B. SwissTransfer); dort gelten dessen Bedingungen. Wir nutzen die Angaben nur, um die Fotos zu prüfen, nachzufragen und den Namen beim Foto zu nennen.</p>
           <h2 data-spenden-info>Spenden</h2>
@@ -709,6 +751,7 @@
     <div style="display:grid;gap:14px">
       <div class="foot-brand"><svg class="mark" aria-hidden="true"><use href="#logo"/></svg><span class="foot-wm"><span class="wm">Rail<em>Base</em></span><small class="foot-by">by HCKD</small></span></div>
       <p>Die Train Database für die Schweizer Bahn: Fahrzeuge sortiert nach Bereich, mit Daten und Bildern.</p>
+      <a class="foot-kontakt" href="#kontakt"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 7l8.5 6 8.5-6"/></svg>Kontakt</a>
     </div>
     <ul class="foot-links" id="foot-links"></ul>
     <div class="foot-bottom">© 2026 HCKD · Fahrzeugdaten: Stand Oktober 2026 · Netzkarte: Stand Juli 2021 ·<button class="foot-donate" type="button" data-report="allg" aria-haspopup="dialog">Fehler melden</button> · <button class="foot-donate" type="button" data-fotos="allg" aria-haspopup="dialog">Fotos einsenden</button> ·<button class="foot-donate" type="button" data-donate aria-haspopup="dialog">Spenden</button></div>

@@ -116,3 +116,59 @@ rpForm.addEventListener('submit', async e => {
     rpSay(tr('Senden hat nicht geklappt. Bitte versuche es in einem Moment nochmals. Dein Text bleibt erhalten.'), 'err');
   }
 });
+
+/* ---------- contact form (page #kontakt) ----------
+   Same mailbox and spam protection as the reports; the e-mail address is required
+   so we can answer. The timer starts when someone first types in the form. */
+(() => {
+  const form = $('#kt-form');
+  if (!form) return;
+  const name = $('#kt-name'), mail = $('#kt-mail'), thema = $('#kt-thema'), text = $('#kt-text'), send = $('#kt-send'), msg = $('#kt-msg'), trap = $('#kt-botcheck');
+  const say = (t, kind) => { msg.textContent = t; msg.className = 'rp-msg' + (kind ? ' ' + kind : ''); };
+  let begonnen = 0;
+  form.addEventListener('input', () => { if (!begonnen) begonnen = Date.now(); });
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    const adresse = mail.value.trim(), t = text.value.trim();
+    mail.removeAttribute('aria-invalid'); text.removeAttribute('aria-invalid');
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(adresse)) { say(tr('Bitte gib deine E-Mail-Adresse an, damit wir dir antworten können.'), 'err'); mail.setAttribute('aria-invalid', 'true'); mail.focus(); return; }
+    if (t.length < 10) { say(tr('Bitte schreib uns eine kurze Nachricht.'), 'err'); text.setAttribute('aria-invalid', 'true'); text.focus(); return; }
+    if (rpLinks(t) + rpLinks(name.value) > 1) { say(tr('Bitte höchstens einen Link angeben.'), 'err'); text.focus(); return; }
+    if (rpRecent().length >= RP_MAX) { say(tr('Du hast in kurzer Zeit schon mehrere Meldungen geschickt. Bitte warte ein paar Minuten. Danke!'), 'err'); return; }
+    // bots: hidden field filled in or sent right after the first keystroke. They see "sent", but nothing goes out
+    const bot = trap.checked || !begonnen || Date.now() - begonnen < RP_MIN_MS;
+    send.disabled = true; send.textContent = tr('Wird gesendet …'); say('');
+    let ok = bot;
+    if (!bot && MELDEN.web3formsKey) {
+      try {
+        const res = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          body: JSON.stringify({
+            access_key: MELDEN.web3formsKey,
+            subject: 'RailBase – Kontakt: ' + thema.value,
+            from_name: 'RailBase Kontakt',
+            Name: name.value.trim().slice(0, 100) || '(keine Angabe)',
+            E_Mail: adresse.slice(0, 200),
+            Thema: thema.value,
+            Nachricht: t.slice(0, 3000),
+            Sprache: SPRACHEN[LANG],
+            replyto: adresse,
+            botcheck: trap.checked
+          })
+        });
+        const out = await res.json().catch(() => ({}));
+        ok = !!(res.ok && out.success);
+      } catch (err) { ok = false; }
+    }
+    if (ok) {
+      if (!bot) rpRemember();
+      form.reset(); begonnen = 0;
+      send.textContent = tr('Gesendet');
+      say(tr('Danke! Deine Nachricht ist angekommen. Wir melden uns per E-Mail.'), 'ok');
+      setTimeout(() => { send.disabled = false; send.textContent = tr('Nachricht senden'); }, 4000);
+    } else {
+      send.disabled = false; send.textContent = tr('Nachricht senden');
+      say(tr('Senden hat nicht geklappt. Bitte versuche es in einem Moment nochmals. Dein Text bleibt erhalten.'), 'err');
+    }
+  });
+})();
