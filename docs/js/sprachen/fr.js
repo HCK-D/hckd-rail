@@ -892,7 +892,7 @@ uebDict({
   'Raum Basel': 'Région bâloise',
   'Auf der trinationalen S-Bahn Basel und grenzüberschreitend nach Deutschland, dazu im Seehas-Verkehr ab Konstanz.': 'Sur le RER trinational de Bâle et en trafic transfrontalier vers l’Allemagne, ainsi que sur le Seehas au départ de Constance.',
   'Im Léman-Express-Netz rund um Genf und auf grenznahen Regionalverbindungen im Raum Basel.': 'Sur le réseau Léman Express autour de Genève et sur des liaisons régionales frontalières dans la région bâloise.',
-  'Im TILO-Netz im Tessin und grenzüberschreitend in die Lombardei.': 'Sur le réseau TILO au Tessin et en trafic transfrontalier vers la Lombardie.',
+  'Im TILO-Netz im Tessin von Airolo bis Chiasso, durch den Ceneri-Basistunnel und über die alte Bergstrecke, nach Locarno sowie grenzüberschreitend nach Luino und in die Lombardei.': 'Sur le réseau TILO au Tessin, d’Airolo à Chiasso, par le tunnel de base du Ceneri et par l’ancienne ligne de montagne, vers Locarno et en trafic transfrontalier vers Luino et la Lombardie.',
   'Vor allem für Güterzüge von der Schweiz nach Deutschland.': 'Surtout pour des trains de marchandises de la Suisse vers l’Allemagne.',
   'Im Rangierdienst des Personenverkehrs in grösseren Bahnhöfen; dank zwei Stromsystemen auch in Grenzbahnhöfen.': 'En service de manœuvre du trafic voyageurs dans les grandes gares ; grâce à deux systèmes de courant aussi dans les gares frontières.',
   'Bei SBB Cargo im Rangier- und Zustelldienst; ohne Fahrleitung fährt sie mit dem Hilfsdiesel.': 'Chez CFF Cargo en service de manœuvre et de desserte ; sans caténaire, elle roule avec son diesel auxiliaire.',

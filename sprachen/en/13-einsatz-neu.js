@@ -5,7 +5,7 @@ uebDict({
   'Raum Basel': 'Basel area',
   'Auf der trinationalen S-Bahn Basel und grenzüberschreitend nach Deutschland, dazu im Seehas-Verkehr ab Konstanz.': 'On the trinational Basel S-Bahn and across the border to Germany, plus on the Seehas service from Konstanz.',
   'Im Léman-Express-Netz rund um Genf und auf grenznahen Regionalverbindungen im Raum Basel.': 'On the Léman Express network around Geneva and on cross-border regional services around Basel.',
-  'Im TILO-Netz im Tessin und grenzüberschreitend in die Lombardei.': 'On the TILO network in Ticino and across the border into Lombardy.',
+  'Im TILO-Netz im Tessin von Airolo bis Chiasso, durch den Ceneri-Basistunnel und über die alte Bergstrecke, nach Locarno sowie grenzüberschreitend nach Luino und in die Lombardei.': 'On the TILO network in Ticino from Airolo to Chiasso, through the Ceneri Base Tunnel and over the old mountain line, to Locarno and across the border to Luino and into Lombardy.',
   'Vor allem für Güterzüge von der Schweiz nach Deutschland.': 'Mainly for freight trains from Switzerland to Germany.',
   'Im Rangierdienst des Personenverkehrs in grösseren Bahnhöfen; dank zwei Stromsystemen auch in Grenzbahnhöfen.': 'Shunting passenger trains in larger stations; with two power systems also in border stations.',
   'Bei SBB Cargo im Rangier- und Zustelldienst; ohne Fahrleitung fährt sie mit dem Hilfsdiesel.': 'With SBB Cargo for shunting and local deliveries; without overhead line it runs on its auxiliary diesel.',

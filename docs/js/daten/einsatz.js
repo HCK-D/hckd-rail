@@ -23,7 +23,9 @@
    Payerne, Nyon, Vevey, Aigle, Monthey, St-Maurice, Mendrisio, Chiasso
    ===================================================================== */
 // Bahnhöfe, die nicht in der Liste oben stehen: Name -> Schweizer Koordinaten (LV95)
-const BAHNHOF_EXTRA = { 'Rorschach': [2754815, 1260640], 'Interlaken Ost': [2632944, 1171143], 'Brunnen': [2688715, 1205543] };
+const BAHNHOF_EXTRA = { 'Rorschach': [2754815, 1260640], 'Interlaken Ost': [2632944, 1171143], 'Brunnen': [2688715, 1205543],
+  // Tessin: Ceneri-Bergstrecke, Linie nach Luino (Italien, ausserhalb des Netzes: gestrichelt) und Stabio
+  'Rivera-Bironico': [2714920, 1109140], 'Ranzo-S. Abbondio': [2703420, 1108160], 'Luino': [2701100, 1095300], 'Stabio': [2716940, 1078680] };
 const GOTTHARD =['Basel SBB', 'Olten', 'Arth-Goldau', 'Erstfeld', 'Bellinzona', 'Chiasso'];
 const LOETSCHBERG = ['Basel SBB', 'Olten', 'Bern', 'Spiez', 'Visp', 'Brig'];
 const EINSATZ = {
@@ -136,8 +138,9 @@ Object.assign(EINSATZ, {
     text: 'Auf der trinationalen S-Bahn Basel und grenzüberschreitend nach Deutschland, dazu im Seehas-Verkehr ab Konstanz.' },
   'rabe-522': { gebiete: [['Genève', 14, 'Léman Express'], ['Basel SBB', 12, 'Raum Basel']],
     text: 'Im Léman-Express-Netz rund um Genf und auf grenznahen Regionalverbindungen im Raum Basel.' },
-  'rabe-524': { strecken: [['Bellinzona', 'Lugano', 'Chiasso'], ['Bellinzona', 'Locarno']],
-    text: 'Im TILO-Netz im Tessin und grenzüberschreitend in die Lombardei.' },
+  'rabe-524': { strecken: [['Airolo', 'Bellinzona', 'Lugano', 'Chiasso'], ['Bellinzona', 'Rivera-Bironico', 'Lugano'], ['Bellinzona', 'Locarno'], ['Bellinzona', 'Ranzo-S. Abbondio'], ['Mendrisio', 'Stabio']],
+    linien: [['Ranzo-S. Abbondio', 'Luino']],
+    text: 'Im TILO-Netz im Tessin von Airolo bis Chiasso, durch den Ceneri-Basistunnel und über die alte Bergstrecke, nach Locarno sowie grenzüberschreitend nach Luino und in die Lombardei.' },
   're-421': { strecken: [['Basel SBB', 'Basel Bad Bf']],
     text: 'Vor allem für Güterzüge von der Schweiz nach Deutschland.' },
   // Rangierfahrzeuge
