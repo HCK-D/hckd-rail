@@ -458,12 +458,12 @@ document.addEventListener('keydown', e => {
 });
 
 /* =====================================================================
-   ROUTER (#start, #<kategorie>, #<fahrzeug>, #kategorien, #spurweite)
+   ROUTER (#start, #<kategorie>, #<fahrzeug>, #kategorien, #spurweite …)
    ===================================================================== */
 const views = { home: $('#v-home'), kat: $('#v-kat'), zug: $('#v-zug'), text: $('#v-text'), vergleich: $('#v-vergleich'), entdecken: $('#v-entdecken') };
 const TEXTSEITEN = { impressum: 'Impressum', datenschutz: 'Datenschutz' };
 // pages that are only reached through the menu «Entdecken», not shown on the start page
-const ENTDECKEN = { neu: 'Neu und aktualisiert', erkennen: 'Züge unterscheiden', sammlung: 'Meine Sammlung', danke: 'Danke', kontakt: 'Kontakt' };
+const ENTDECKEN = { neu: 'Neu und aktualisiert', erkennen: 'Züge unterscheiden', sammlung: 'Meine Sammlung', danke: 'Danke', kontakt: 'Kontakt', spurweite: 'Spurweite' };
 let curView = 'home';
 function show(name) {
   for (const [n, el] of Object.entries(views)) el.hidden = n !== name;

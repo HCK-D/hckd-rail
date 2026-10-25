@@ -37,7 +37,8 @@ $fix = @{
           sammlung = 'Meine Sammlung'; sammlungText = 'Gesehene Fahrzeuge, Sichtungen und Entdecker-Abzeichen bei RailBase.'
           erkennen = 'FLIRT 521, 522, 523 oder 524?';erkennenText = 'So unterscheidest du die FLIRT-Baureihen 521, 522, 523 und 524 der SBB: Nummer, Strom, Farben und Einsatzgebiet.'
           danke = 'Danke'; dankeText = 'Danke an die Bahnfotografen und an alle, die bei RailBase mithelfen, auch bei der Informatik. Und wie du selbst mithelfen kannst.'
-          kontakt = 'Kontakt'; kontaktText = 'Schreib RailBase: Fragen, Ideen und Zusammenarbeit über das Kontaktformular.' }
+          kontakt = 'Kontakt'; kontaktText = 'Schreib RailBase: Fragen, Ideen und Zusammenarbeit über das Kontaktformular.'
+          spurweite = 'Normalspur oder Meterspur'; spurweiteText = 'Zwei Führerstandsfahrten auf Normalspur (1435 mm) und Meterspur (1000 mm), mit Live-Fahrdaten.' }
   fr = @{ start = 'RailBase – Train Database des CFF : voyageurs, Cargo, infrastructure, véhicules de manœuvre, de service et spéciaux.'; zug = 'Caractéristiques techniques, histoire et images.'
           impressum = 'Mentions légales'; impressumText = 'Mentions légales, responsabilité et crédits photo de RailBase.'
           datenschutz = 'Protection des données'; datenschutzText = 'Protection des données chez RailBase : pas de cookies, pas de publicité, seulement un comptage anonyme des visites.'
@@ -46,7 +47,8 @@ $fix = @{
           sammlung = 'Ma collection'; sammlungText = "Véhicules vus, observations et badges d’explorateur sur RailBase."
           erkennen = 'FLIRT 521, 522, 523 ou 524 ?';erkennenText = "Comment distinguer les séries FLIRT 521, 522, 523 et 524 des CFF : numéro, courant, couleurs et région d’engagement."
           danke = 'Merci'; dankeText = 'Merci aux photographes ferroviaires et à toutes les personnes qui aident RailBase, y compris en informatique. Et comment tu peux aider toi aussi.'
-          kontakt = 'Contact'; kontaktText = 'Écris à RailBase : questions, idées et collaboration via le formulaire de contact.' }
+          kontakt = 'Contact'; kontaktText = 'Écris à RailBase : questions, idées et collaboration via le formulaire de contact.'
+          spurweite = 'Voie normale ou voie métrique'; spurweiteText = 'Deux trajets en cabine de conduite sur voie normale (1435 mm) et voie métrique (1000 mm), avec données de marche en direct.' }
   it = @{ start = 'RailBase – Train Database delle FFS: viaggiatori, Cargo, infrastruttura, veicoli di manovra, di servizio e speciali.'; zug = 'Dati tecnici, storia e immagini.'
           impressum = 'Note legali'; impressumText = 'Note legali, responsabilità e crediti fotografici di RailBase.'
           datenschutz = 'Protezione dei dati'; datenschutzText = 'Protezione dei dati su RailBase: nessun cookie, nessuna pubblicità, solo un conteggio anonimo delle visite.'
@@ -55,7 +57,8 @@ $fix = @{
           sammlung = 'La mia collezione'; sammlungText = 'Veicoli visti, avvistamenti e distintivi da esploratore su RailBase.'
           erkennen = 'FLIRT 521, 522, 523 o 524?';erkennenText = "Come distinguere le serie FLIRT 521, 522, 523 e 524 delle FFS: numero, corrente, colori e zona d’impiego."
           danke = 'Grazie'; dankeText = 'Grazie ai fotografi ferroviari e a tutte le persone che aiutano RailBase, anche per la parte informatica. E come puoi aiutare anche tu.'
-          kontakt = 'Contatto'; kontaktText = 'Scrivi a RailBase: domande, idee e collaborazioni tramite il modulo di contatto.' }
+          kontakt = 'Contatto'; kontaktText = 'Scrivi a RailBase: domande, idee e collaborazioni tramite il modulo di contatto.'
+          spurweite = 'Scartamento normale o metrico'; spurweiteText = 'Due viaggi in cabina di guida su scartamento normale (1435 mm) e metrico (1000 mm), con dati di marcia in tempo reale.' }
   en = @{ start = 'RailBase – Train Database for SBB passenger, Cargo, infrastructure, shunting, service and special vehicles.'; zug = 'Technical data, history and pictures.'
           impressum = 'Legal notice'; impressumText = 'Legal notice, liability and picture credits of RailBase.'
           datenschutz = 'Privacy'; datenschutzText = 'RailBase privacy policy: no cookies, no advertising, only anonymous visitor counting.'
@@ -64,7 +67,8 @@ $fix = @{
           sammlung = 'My collection'; sammlungText = 'Vehicles seen, sightings and explorer badges on RailBase.'
           erkennen = 'FLIRT 521, 522, 523 or 524?';erkennenText = 'How to tell the SBB FLIRT classes 521, 522, 523 and 524 apart: number, power system, colours and area of service.'
           danke = 'Thank you'; dankeText = 'Thank you to the railway photographers and everyone who helps RailBase, including with IT. And how you can help too.'
-          kontakt = 'Contact'; kontaktText = 'Write to RailBase: questions, ideas and collaboration through the contact form.' }
+          kontakt = 'Contact'; kontaktText = 'Write to RailBase: questions, ideas and collaboration through the contact form.'
+          spurweite = 'Standard gauge or metre gauge'; spurweiteText = 'Two cab rides on standard gauge (1435 mm) and metre gauge (1000 mm), with live running data.' }
 }
 # Übersetzte Kategorienamen und Fahrzeugtypen aus js\sprachen\xx.js lesen
 $jsStr = '''((?:[^''\\]|\\.)*)'''
@@ -134,6 +138,7 @@ for ($i = 0; $i -lt $zm.Count; $i++) {
 [void]$seiten.Add([pscustomobject]@{ art = 'fix'; id = 'erkennen'; bild = 'bilder/rabe-523-c1.jpg'; prio = '0.6' })
 [void]$seiten.Add([pscustomobject]@{ art = 'fix'; id = 'danke'; bild = ''; prio = '0.3' })
 [void]$seiten.Add([pscustomobject]@{ art = 'fix'; id = 'kontakt'; bild = ''; prio = '0.3' })
+[void]$seiten.Add([pscustomobject]@{ art = 'fix'; id = 'spurweite'; bild = ''; prio = '0.5' })
 
 # Titel und Beschreibung einer Seite in einer Sprache
 function Kopf([string]$l, $s) {

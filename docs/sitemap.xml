@@ -304,6 +304,7 @@
   <url><loc>https://railbase.ch/erkennen.html</loc><lastmod>2026-10-25</lastmod><priority>0.6</priority></url>
   <url><loc>https://railbase.ch/danke.html</loc><lastmod>2026-10-25</lastmod><priority>0.3</priority></url>
   <url><loc>https://railbase.ch/kontakt.html</loc><lastmod>2026-10-25</lastmod><priority>0.3</priority></url>
+  <url><loc>https://railbase.ch/spurweite.html</loc><lastmod>2026-10-25</lastmod><priority>0.5</priority></url>
   <url><loc>https://railbase.ch/index.fr.html</loc><lastmod>2026-10-25</lastmod><priority>1.0</priority></url>
   <url><loc>https://railbase.ch/personenverkehr.fr.html</loc><lastmod>2026-10-25</lastmod><priority>0.8</priority></url>
   <url><loc>https://railbase.ch/cargo.fr.html</loc><lastmod>2026-10-25</lastmod><priority>0.8</priority></url>
@@ -608,6 +609,7 @@
   <url><loc>https://railbase.ch/erkennen.fr.html</loc><lastmod>2026-10-25</lastmod><priority>0.6</priority></url>
   <url><loc>https://railbase.ch/danke.fr.html</loc><lastmod>2026-10-25</lastmod><priority>0.3</priority></url>
   <url><loc>https://railbase.ch/kontakt.fr.html</loc><lastmod>2026-10-25</lastmod><priority>0.3</priority></url>
+  <url><loc>https://railbase.ch/spurweite.fr.html</loc><lastmod>2026-10-25</lastmod><priority>0.5</priority></url>
   <url><loc>https://railbase.ch/index.it.html</loc><lastmod>2026-10-25</lastmod><priority>1.0</priority></url>
   <url><loc>https://railbase.ch/personenverkehr.it.html</loc><lastmod>2026-10-25</lastmod><priority>0.8</priority></url>
   <url><loc>https://railbase.ch/cargo.it.html</loc><lastmod>2026-10-25</lastmod><priority>0.8</priority></url>
@@ -912,6 +914,7 @@
   <url><loc>https://railbase.ch/erkennen.it.html</loc><lastmod>2026-10-25</lastmod><priority>0.6</priority></url>
   <url><loc>https://railbase.ch/danke.it.html</loc><lastmod>2026-10-25</lastmod><priority>0.3</priority></url>
   <url><loc>https://railbase.ch/kontakt.it.html</loc><lastmod>2026-10-25</lastmod><priority>0.3</priority></url>
+  <url><loc>https://railbase.ch/spurweite.it.html</loc><lastmod>2026-10-25</lastmod><priority>0.5</priority></url>
   <url><loc>https://railbase.ch/index.en.html</loc><lastmod>2026-10-25</lastmod><priority>1.0</priority></url>
   <url><loc>https://railbase.ch/personenverkehr.en.html</loc><lastmod>2026-10-25</lastmod><priority>0.8</priority></url>
   <url><loc>https://railbase.ch/cargo.en.html</loc><lastmod>2026-10-25</lastmod><priority>0.8</priority></url>
@@ -1216,4 +1219,5 @@
   <url><loc>https://railbase.ch/erkennen.en.html</loc><lastmod>2026-10-25</lastmod><priority>0.6</priority></url>
   <url><loc>https://railbase.ch/danke.en.html</loc><lastmod>2026-10-25</lastmod><priority>0.3</priority></url>
   <url><loc>https://railbase.ch/kontakt.en.html</loc><lastmod>2026-10-25</lastmod><priority>0.3</priority></url>
+  <url><loc>https://railbase.ch/spurweite.en.html</loc><lastmod>2026-10-25</lastmod><priority>0.5</priority></url>
 </urlset>

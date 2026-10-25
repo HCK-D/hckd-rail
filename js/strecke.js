@@ -885,7 +885,8 @@ function step(ts) {
   if (camDone) { camX = camTarget; camH = camHT; }
   if (playing) { rt += dt * CO.ride.rate(CO.R.at(rt).v); if (rt >= CO.R.DUR) rt -= CO.R.DUR; }
   draw();
-  if ((playing || !camDone) && visible && !document.hidden && !views.home.hidden) raf = requestAnimationFrame(step); else last = 0;
+  // only while the page «Spurweite» is shown (offsetParent is null inside a hidden section)
+  if ((playing || !camDone) && visible && !document.hidden && stage.offsetParent) raf = requestAnimationFrame(step); else last = 0;
 }
 function kick() { if (!raf) raf = requestAnimationFrame(step); }
 readColors();

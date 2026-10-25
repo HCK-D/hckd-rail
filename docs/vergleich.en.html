@@ -213,57 +213,6 @@
       </div>
     </section>
 
-    <section class="section band" id="spurweite">
-      <div class="wrap">
-        <div class="sec-head">
-          <span class="kicker">Spurweite</span>
-          <h2 class="h2">Normalspur oder Meterspur</h2>
-          <p class="sec-lede">Zwei Führerstandsfahrten. Auf Normalspur geht es mit 200 km/h durch einen Tunnel und durch zwei Bahnhöfe mit vielen Weichen, auf Meterspur über eine Weichenverbindung nach Lindmatt.</p>
-        </div>
-        <div class="gauge">
-          <div class="gauge-copy">
-            <div class="seg" id="seg" role="radiogroup" aria-label="Spurweite wählen">
-              <span class="seg-thumb" aria-hidden="true"></span>
-              <button type="button" role="radio" aria-checked="true" tabindex="0" data-course="n">Normalspur<small>1435 mm</small></button>
-              <button type="button" role="radio" aria-checked="false" tabindex="-1" data-course="m">Meterspur<small>1000 mm</small></button>
-            </div>
-            <p class="track-caption" id="caption"></p>
-            <p class="track-note">Spurweite = Abstand der Schieneninnenkanten, gemessen 14 mm unter Schienenoberkante.</p>
-            <div class="live" aria-label="Fahrdaten in Echtzeit">
-              <div class="live-head"><span class="live-dot" aria-hidden="true"></span>Live-Fahrdaten</div>
-              <div class="live-row">
-                <div class="live-stat"><span>Gefahren</span><b id="lv-dist">0 m</b></div>
-                <div class="live-stat"><span>Tempo</span><b id="lv-speed">0 km/h</b></div>
-                <div class="live-stat"><span>Fahrzeit</span><b id="lv-time">0:00</b></div>
-              </div>
-              <div class="live-track" aria-hidden="true"><i id="lv-bar"></i><span id="lv-marks"></span></div>
-              <p class="live-next" id="lv-next"></p>
-              <div class="calc">
-                <p class="calc-head">Bei <b id="lc-kmh">0 km/h</b> legt der Zug zurück:</p>
-                <ul class="calc-list">
-                  <li><span>pro Sekunde</span><b id="lc-s">0 m</b></li>
-                  <li><span>in 10 Sekunden</span><b id="lc-10">0 m</b></li>
-                  <li><span>pro Minute</span><b id="lc-m">0 m</b></li>
-                  <li><span>pro Stunde</span><b id="lc-h">0 km</b></li>
-                </ul>
-                <p class="calc-note" id="lc-f">Rechnung: km/h ÷ 3,6 = Meter pro Sekunde</p>
-              </div>
-            </div>
-          </div>
-          <div class="track-stage" id="stage">
-            <canvas id="track" role="img" aria-label="Führerstandsfahrt auf Normalspur, 1435 mm"></canvas>
-            <span class="gauge-tag" id="gauge-tag" aria-hidden="true">1435 mm</span>
-            <div class="hud g-spd" aria-hidden="true"><span class="lbl">Geschwindigkeit</span><span class="spd"><span id="g-spd">60</span> <small>km/h</small></span></div>
-            <div class="hud hud-status" id="g-status" aria-hidden="true"><i></i><span id="g-status-t"></span></div>
-            <button class="icon-btn" id="pause" type="button" aria-label="Animation pausieren" aria-pressed="false">
-              <svg id="ico-pause" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M9 6v12M15 6v12"/></svg>
-              <svg id="ico-play" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" hidden><path d="M8 5.5v13l11-6.5z"/></svg>
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section class="section" id="abfahrten">
       <div class="wrap">
         <div class="sec-head">
@@ -665,6 +614,60 @@
         </div>
       </div>
     </section>
+    <section class="section" data-seite="spurweite" hidden>
+      <div class="wrap">
+        <ol class="crumbs"><li><a href="#start">Start</a></li><li aria-current="page">Spurweite</li></ol>
+        <div class="page-head">
+          <div>
+            <span class="kicker">Spurweite</span>
+            <h1>Normalspur oder Meterspur</h1>
+            <p>Zwei Führerstandsfahrten. Auf Normalspur geht es mit 200 km/h durch einen Tunnel und durch zwei Bahnhöfe mit vielen Weichen, auf Meterspur über eine Weichenverbindung nach Lindmatt.</p>
+          </div>
+        </div>
+        <div class="gauge">
+          <div class="gauge-copy">
+            <div class="seg" id="seg" role="radiogroup" aria-label="Spurweite wählen">
+              <span class="seg-thumb" aria-hidden="true"></span>
+              <button type="button" role="radio" aria-checked="true" tabindex="0" data-course="n">Normalspur<small>1435 mm</small></button>
+              <button type="button" role="radio" aria-checked="false" tabindex="-1" data-course="m">Meterspur<small>1000 mm</small></button>
+            </div>
+            <p class="track-caption" id="caption"></p>
+            <p class="track-note">Spurweite = Abstand der Schieneninnenkanten, gemessen 14 mm unter Schienenoberkante.</p>
+            <div class="live" aria-label="Fahrdaten in Echtzeit">
+              <div class="live-head"><span class="live-dot" aria-hidden="true"></span>Live-Fahrdaten</div>
+              <div class="live-row">
+                <div class="live-stat"><span>Gefahren</span><b id="lv-dist">0 m</b></div>
+                <div class="live-stat"><span>Tempo</span><b id="lv-speed">0 km/h</b></div>
+                <div class="live-stat"><span>Fahrzeit</span><b id="lv-time">0:00</b></div>
+              </div>
+              <div class="live-track" aria-hidden="true"><i id="lv-bar"></i><span id="lv-marks"></span></div>
+              <p class="live-next" id="lv-next"></p>
+              <div class="calc">
+                <p class="calc-head">Bei <b id="lc-kmh">0 km/h</b> legt der Zug zurück:</p>
+                <ul class="calc-list">
+                  <li><span>pro Sekunde</span><b id="lc-s">0 m</b></li>
+                  <li><span>in 10 Sekunden</span><b id="lc-10">0 m</b></li>
+                  <li><span>pro Minute</span><b id="lc-m">0 m</b></li>
+                  <li><span>pro Stunde</span><b id="lc-h">0 km</b></li>
+                </ul>
+                <p class="calc-note" id="lc-f">Rechnung: km/h ÷ 3,6 = Meter pro Sekunde</p>
+              </div>
+            </div>
+          </div>
+          <div class="track-stage" id="stage">
+            <canvas id="track" role="img" aria-label="Führerstandsfahrt auf Normalspur, 1435 mm"></canvas>
+            <span class="gauge-tag" id="gauge-tag" aria-hidden="true">1435 mm</span>
+            <div class="hud g-spd" aria-hidden="true"><span class="lbl">Geschwindigkeit</span><span class="spd"><span id="g-spd">60</span> <small>km/h</small></span></div>
+            <div class="hud hud-status" id="g-status" aria-hidden="true"><i></i><span id="g-status-t"></span></div>
+            <button class="icon-btn" id="pause" type="button" aria-label="Animation pausieren" aria-pressed="false">
+              <svg id="ico-pause" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M9 6v12M15 6v12"/></svg>
+              <svg id="ico-play" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" hidden><path d="M8 5.5v13l11-6.5z"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section" data-seite="kontakt" hidden>
       <div class="wrap">
         <ol class="crumbs"><li><a href="#start">Start</a></li><li aria-current="page">Kontakt</li></ol>
