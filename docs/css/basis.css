@@ -132,17 +132,27 @@ button{font:inherit}
 .nav-dd ul{position:absolute;top:calc(100% + 10px);left:0;z-index:40;display:grid;gap:2px;min-width:230px;margin:0;padding:8px;list-style:none;background:var(--surface);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow-lift)}
 .nav-dd ul a{display:block;padding:10px 12px;border-radius:10px;color:var(--fg);font-size:15px;text-decoration:none}
 .nav-dd ul a:hover,.nav-dd ul a:focus-visible{background:var(--surface-2)}
+/* opening «Entdecken»: the list slides in, the entries follow one after the other (--i from menue.js) */
+.nav-dd[open] ul{max-height:calc(100dvh - 100px);overflow-y:auto;overscroll-behavior:contain;animation:menu-auf .22s cubic-bezier(.2,.8,.2,1)}
+.nav-dd[open] ul li{animation:menu-eintrag .3s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(var(--i,0) * 22ms)}
+@keyframes menu-auf{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+@keyframes menu-eintrag{from{opacity:0;transform:translateX(-6px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.topnav.open,.nav-dd[open] ul,.nav-dd[open] ul li{animation:none}}
 .nav-spenden{display:none}
 .hclock{flex:none}
 .menu-btn{display:none;place-items:center;flex:none;width:34px;height:34px;padding:0;border:1px solid var(--line);border-radius:50%;background:transparent;color:var(--fg-2);cursor:pointer}
 .menu-btn[aria-expanded="true"]{color:var(--accent-ink);background:var(--accent-soft)}
 @media (max-width:1060px){
   .menu-btn{display:grid}
-  .topnav{display:none;position:absolute;top:100%;left:0;right:0;z-index:40;flex-direction:column;align-items:stretch;gap:2px;margin:0;padding:10px max(20px,env(safe-area-inset-left,0px)) 18px;background:var(--surface);border-bottom:1px solid var(--line);box-shadow:0 18px 30px rgba(0,0,0,.12);max-height:calc(100vh - 64px);overflow:auto}
-  .topnav.open{display:flex}
+  /* 100dvh: in Safari, 100vh reaches behind the toolbar and the last entries could not be scrolled to */
+  .topnav{display:none;position:absolute;top:100%;left:0;right:0;z-index:40;flex-direction:column;align-items:stretch;gap:2px;margin:0;padding:10px max(20px,env(safe-area-inset-left,0px)) calc(18px + env(safe-area-inset-bottom,0px));background:var(--surface);border-bottom:1px solid var(--line);box-shadow:0 18px 30px rgba(0,0,0,.12);max-height:calc(100vh - 64px);max-height:calc(100dvh - 64px - env(safe-area-inset-top,0px));overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
+  .topnav.open{display:flex;animation:menu-auf .24s cubic-bezier(.2,.8,.2,1)}
   .topnav>*{flex:none}
   .topnav>a,.nav-dd>summary{justify-content:space-between;height:46px;padding:0 12px;font-size:17px;color:var(--fg)}
   .nav-dd ul{position:static;min-width:0;padding:0 0 4px 12px;border:0;box-shadow:none;background:transparent}
+  html.menu-offen,html.menu-offen body{overflow:hidden}
+  /* inside the phone menu only the menu itself scrolls */
+  .nav-dd[open] ul{max-height:none;overflow:visible;animation:none}
   /* «Spenden» as the last menu entry, in red */
   .topnav .nav-spenden:not([hidden]){display:flex;align-items:center;height:46px;margin-top:6px;padding:0 12px;border:0;border-radius:999px;background:var(--accent-soft);color:var(--accent-ink);font:700 17px/1 var(--body);text-align:left;cursor:pointer}
 }

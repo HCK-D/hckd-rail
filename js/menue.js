@@ -9,15 +9,20 @@
 (() => {
   const nav = $('#topnav'), btn = $('#menu-btn'), dd = $('.nav-dd', nav);
   const schmal = () => getComputedStyle(btn).display !== 'none';
+  // position of each entry for the small opening animation (css/basis.css)
+  $$('li', dd).forEach((li, i) => li.style.setProperty('--i', i));
+  // while the phone menu is open the page behind does not scroll (Safari otherwise scrolls both and lags)
+  const sperre = auf => document.documentElement.classList.toggle('menu-offen', auf);
   function zu() {
     nav.classList.remove('open'); btn.setAttribute('aria-expanded', 'false');
-    dd.open = false;
+    dd.open = false; sperre(false);
   }
   btn.addEventListener('click', () => {
     const auf = !nav.classList.contains('open');
     nav.classList.toggle('open', auf);
     btn.setAttribute('aria-expanded', String(auf));
     dd.open = auf; // on small screens the list under «Entdecken» is shown right away
+    sperre(auf);
   });
   // a link was chosen, a click outside or Escape: close everything
   nav.addEventListener('click', e => { if (e.target.closest('a, [data-donate]')) zu(); });
