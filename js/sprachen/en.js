@@ -5074,6 +5074,7 @@ uebDict({
 /* ---- 54-neu-seiten.js ---- */
 /* English – pages for the news (new vehicles, new photos, updated data), swipe tip, thanks page */
 uebDict({
+  'Extras': 'Extras',
   'Mehr dazu': 'More',
   '{n} Foto': '{n} photo',
   '{n} Fotos': '{n} photos',

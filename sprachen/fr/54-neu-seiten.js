@@ -1,5 +1,6 @@
 /* Français – pages des nouveautés (nouveaux véhicules, nouvelles photos, données mises à jour), astuce de balayage, page merci */
 uebDict({
+  'Extras': 'Extras',
   'Mehr dazu': 'En savoir plus',
   '{n} Foto': '{n} photo',
   '{n} Fotos': '{n} photos',

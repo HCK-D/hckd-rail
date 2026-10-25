@@ -5077,6 +5077,7 @@ uebDict({
 /* ---- 54-neu-seiten.js ---- */
 /* Italiano – pagine delle novità (nuovi veicoli, nuove foto, dati aggiornati), suggerimento per scorrere, pagina grazie */
 uebDict({
+  'Extras': 'Extra',
   'Mehr dazu': 'Di più',
   '{n} Foto': '{n} foto',
   '{n} Fotos': '{n} foto',
