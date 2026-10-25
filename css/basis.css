@@ -90,6 +90,15 @@ button{font:inherit}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 .view{animation:viewin .45s var(--ease-out)}
 @keyframes viewin{from{opacity:.001;transform:translateY(8px)}to{opacity:1;transform:none}}
+/* small, quiet movements: cards after a change of railway (js/katalog.js), parts of the start page
+   while scrolling in (js/start.js), the chosen railway, the light/dark icon */
+.list-in>li{animation:karte-in .42s var(--ease-out) both;animation-delay:calc(var(--i,0) * 32ms)}
+@keyframes karte-in{from{opacity:0;transform:translateY(10px) scale(.985)}to{opacity:1;transform:none}}
+html.anim .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s var(--ease-out),transform .6s var(--ease-out)}
+html.anim .reveal.sichtbar{opacity:1;transform:none}
+html.anim .kat-grid>li.reveal{transition-delay:calc(var(--i,0) * 60ms)}
+@keyframes wahl-pop{0%{transform:scale(.97)}60%{transform:scale(1.02)}100%{transform:none}}
+@keyframes dreh{from{opacity:0;transform:rotate(-90deg) scale(.6)}to{opacity:1;transform:none}}
 
 /* ---------- header ---------- */
 .topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:30}
@@ -171,7 +180,12 @@ button{font:inherit}
 .foot-wm{display:grid;gap:5px;line-height:1}
 .foot-by{font:600 10.5px/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--foot-dim);opacity:.75}
 .footer p{margin:0;max-width:40em;color:var(--foot-dim);font-size:15px}
-.foot-links{display:flex;flex-wrap:wrap;gap:8px 18px;margin:0;padding:0;list-style:none}
-.foot-links a{color:var(--foot-fg);text-decoration:none;font-weight:600;font-size:15px;opacity:.85}
-.foot-links a:hover{opacity:1;text-decoration:underline}
+/* footer: four columns (vehicles, discover, take part, RailBase), two on phones */
+.foot-nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 20px}
+.foot-spalte h2{margin:0 0 10px;font:700 11.5px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--foot-dim)}
+.foot-spalte ul{display:grid;gap:9px;margin:0;padding:0;list-style:none}
+.foot-spalte li:has(> [hidden]){display:none}
+.foot-spalte a,.foot-link-btn{padding:0;border:0;background:none;color:var(--foot-fg);text-decoration:none;font:600 15px/1.3 var(--body);text-align:left;opacity:.85;cursor:pointer;transition:opacity .2s ease,transform .25s ease}
+.foot-spalte a:hover,.foot-link-btn:hover{opacity:1;text-decoration:underline;text-underline-offset:3px}
+@media (min-width:900px){.foot-nav{grid-template-columns:repeat(4,minmax(0,1fr))}}
 .foot-bottom{padding-top:18px;border-top:1px solid rgba(255,255,255,.1);font:500 12.5px/1.4 var(--mono);color:var(--foot-dim)}

@@ -7,19 +7,21 @@
    und schützt darum nur vor Neugierigen, nicht vor Fachleuten. Hinter dem
    Fenster liegt nichts Geheimes: Die Besucherzahl ist öffentlich, die Notizen
    bleiben im Browser des eigenen Geräts.
-   Der Code steht nicht im Klartext hier, nur seine SHA-256-Prüfsumme
-   (mit dem Vorsatz 'hckd-rail-admin:'). Neuen Code setzen: im Browser
-     crypto.subtle.digest('SHA-256', new TextEncoder().encode('hckd-rail-admin:NEUERCODE'))
-   ausrechnen und die Hex-Zahl unten bei HASH eintragen.
+   Es braucht drei Codes. Sie stehen nicht im Klartext hier, nur die
+   SHA-256-Prüfsumme aller drei zusammen (Vorsatz 'hckd-rail-admin:',
+   getrennt mit '|'). Neue Codes setzen: im Browser
+     crypto.subtle.digest('SHA-256', new TextEncoder().encode('hckd-rail-admin:CODE1|CODE2|CODE3'))
+   ausrechnen und die Hex-Zahl unten bei HASH eintragen. Bei einem Fehler
+   wird nicht verraten, welcher der drei Codes falsch war.
    Senden: über Web3Forms wie «Fehler melden» (js/melden.js), damit keine
    E-Mail-Adresse im Code steht.
    ===================================================================== */
 (() => {
-  const HASH = '756c29d7cf954f687c3935c21cc309be3d9d3227a9b5be6ef84c73a6ed579f01';
+  const HASH = '1906abe0b218b53b7f670497e9f66b6b6c600ccb0ab0fb590f035b008a83027b';
   const NOTIZ_KEY = 'hckd-admin-notizen', OFFEN_KEY = 'hckd-admin-offen';
   const dlg = $('#admin'), logo = $('.foot-brand');
   if (!dlg || !logo) return;
-  const pin = $('#ad-pin'), code = $('#ad-code'), pinMsg = $('#ad-pin-msg'), panel = $('#ad-panel');
+  const pin = $('#ad-pin'), code = $('#ad-code'), codes = $$('.ad-code', pin), pinMsg = $('#ad-pin-msg'), panel = $('#ad-panel');
   const notiz = $('#ad-notiz'), msg = $('#ad-msg');
   let zurueck = null, fehler = 0, sperreBis = 0;
 
@@ -40,7 +42,7 @@
   const istOffen = () => { try { return sessionStorage.getItem(OFFEN_KEY) === '1'; } catch (e) { return false; } };
   function zeigePanel(auf) {
     pin.hidden = auf; panel.hidden = !auf;
-    if (auf) { ladeZahl(); ladeZeit(); ladeMitmachen(); ohneFotos(); notiz.value = lies(); notiz.focus(); } else { code.value = ''; pinMsg.textContent = ''; code.focus(); }
+    if (auf) { ladeZahl(); ladeZeit(); ladeMitmachen(); ohneFotos(); notiz.value = lies(); notiz.focus(); } else { codes.forEach(c => { c.value = ''; }); pinMsg.textContent = ''; code.focus(); }
   }
 
   // vehicles without photos, grouped by railway and category; built from the data, so it stays current
@@ -58,15 +60,15 @@
   pin.addEventListener('submit', async e => {
     e.preventDefault();
     if (Date.now() < sperreBis) { pinMsg.textContent = 'Zu viele Versuche. Bitte eine Minute warten.'; return; }
-    if (await pruefe(code.value.trim())) {
+    if (await pruefe(codes.map(c => c.value.trim()).join('|'))) {
       fehler = 0;
       try { sessionStorage.setItem(OFFEN_KEY, '1'); } catch (err) { /* only for this visit */ }
       zeigePanel(true);
     } else {
       fehler++;
       if (fehler >= 5) { sperreBis = Date.now() + 60000; fehler = 0; }
-      pinMsg.textContent = 'Falscher Code.';
-      code.select();
+      pinMsg.textContent = 'Mindestens ein Code ist falsch.';
+      codes.forEach(c => { c.value = ''; }); code.focus();
     }
   });
 

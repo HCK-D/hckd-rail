@@ -39,8 +39,8 @@
   .gauge-copy{padding:30px}
   .track-stage{aspect-ratio:auto;align-self:start;position:sticky;top:calc(64px + env(safe-area-inset-top,0px));height:min(660px,calc(100vh - 96px));min-height:440px}
   .zug-grid{grid-template-columns:minmax(0,1.5fr) minmax(0,1fr)}
-  .footer .wrap{grid-template-columns:1.2fr 1fr;align-items:start}
-  .foot-bottom{grid-column:1 / -1}
+  .footer .wrap{grid-template-columns:minmax(240px,.8fr) 2.2fr;align-items:start;column-gap:48px}
+  .foot-bottom,.foot-app{grid-column:1 / -1}
 }
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}

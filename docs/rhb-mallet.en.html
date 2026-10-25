@@ -94,9 +94,8 @@
         <g id="h-hour"><path d="M95.5 112 L97.8 50 Q100 45 102.2 50 L104.5 112 Q100 115 95.5 112 Z" fill="#202326"/></g>
         <g id="h-min"><path d="M96.6 116 L98.6 23 Q100 19 101.4 23 L103.4 116 Q100 118.5 96.6 116 Z" fill="#202326"/></g>
         <g id="h-sec">
-          <line x1="100" y1="124" x2="100" y2="19" stroke="#D71920" stroke-width="3" stroke-linecap="round"/>
-          <circle cx="100" cy="24" r="9" fill="#D71920"/>
-          <circle cx="100" cy="100" r="5" fill="#D71920"/>
+          <line x1="100" y1="124" x2="100" y2="17" stroke="#D71920" stroke-width="3.4" stroke-linecap="round"/>
+          <circle cx="100" cy="100" r="4" fill="#D71920"/>
         </g>
       </svg>
       <span class="hclock-txt"><span class="clock-time" id="clock-time">--:--:--</span><span class="clock-date" id="clock-date">&nbsp;</span></span>
@@ -678,6 +677,7 @@
           </div>
         </div>
         <form class="kontakt-form" id="kt-form" novalidate>
+          <button class="kt-bug" type="button" id="kt-bug" aria-pressed="false"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 8a4 4 0 0 1 8 0v1H8zM6 9h12v4a6 6 0 0 1-12 0zM12 9v10M3 13h3M18 13h3M4 7l2 2M20 7l-2 2M4 19l2-2M20 19l-2-2"/></svg><span>Problem oder Bug melden</span></button>
           <div class="kt-zeile">
             <label class="fld" for="kt-vorname"><span>Vorname <small>Pflicht</small></span>
               <input id="kt-vorname" type="text" maxlength="60" autocomplete="given-name" required aria-required="true">
@@ -695,9 +695,11 @@
               <option>Idee oder Vorschlag</option>
               <option>Zusammenarbeit</option>
               <option>Medien und Presse</option>
+              <option>Problem oder Bug</option>
               <option>Anderes</option>
             </select>
           </label>
+          <p class="kt-bug-hinweis" id="kt-bug-hinweis" hidden>Beschreibe bitte kurz: Was ist passiert? Auf welcher Seite? Mit welchem Gerät und welchem Browser?</p>
           <label class="fld" for="kt-text"><span>Nachricht</span>
             <textarea id="kt-text" rows="6" maxlength="3000" required aria-required="true"></textarea>
           </label>
@@ -797,8 +799,8 @@
       <p>Die Train Database für die Schweizer Bahn: Fahrzeuge sortiert nach Bereich, mit Daten und Bildern.</p>
       <a class="foot-kontakt" href="#kontakt"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 7l8.5 6 8.5-6"/></svg>Kontakt</a>
     </div>
-    <ul class="foot-links" id="foot-links"></ul>
-    <div class="foot-bottom">© 2026 HCKD · Fahrzeugdaten: Stand Oktober 2026 · Netzkarte: Stand Juli 2021 ·<button class="foot-donate" type="button" data-report="allg" aria-haspopup="dialog">Fehler melden</button> · <button class="foot-donate" type="button" data-fotos="allg" aria-haspopup="dialog">Fotos einsenden</button> ·<button class="foot-donate" type="button" data-donate aria-haspopup="dialog">Spenden</button></div>
+    <nav class="foot-nav" id="foot-links" aria-label="Alle Seiten"></nav>
+    <div class="foot-bottom">© 2026 HCKD · Fahrzeugdaten: Stand Oktober 2026 · Netzkarte: Stand Juli 2021</div>
     <div class="foot-app">
       <button class="qz-btn ghost app-install" id="app-install" type="button" hidden>
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M12 7v7M9 11l3 3 3-3"/></svg>
@@ -872,8 +874,12 @@
     <span class="kicker">Admin</span>
     <h2 id="ad-h">RailBase intern</h2>
     <form class="ad-pin" id="ad-pin" autocomplete="off">
-      <label for="ad-code">Code eingeben</label>
-      <input id="ad-code" type="password" inputmode="numeric" pattern="[0-9]*" maxlength="12" autocomplete="off">
+      <label for="ad-code">Erster Code</label>
+      <input class="ad-code" id="ad-code" type="password" inputmode="numeric" pattern="[0-9]*" maxlength="12" autocomplete="off">
+      <label for="ad-code2">Zweiter Code</label>
+      <input class="ad-code" id="ad-code2" type="password" inputmode="numeric" pattern="[0-9]*" maxlength="12" autocomplete="off">
+      <label for="ad-code3">Dritter Code</label>
+      <input class="ad-code" id="ad-code3" type="password" inputmode="numeric" pattern="[0-9]*" maxlength="12" autocomplete="off">
       <button class="qz-btn" type="submit">Öffnen</button>
       <p class="ad-msg" id="ad-pin-msg" aria-live="polite"></p>
     </form>

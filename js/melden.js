@@ -125,6 +125,17 @@ rpForm.addEventListener('submit', async e => {
   if (!form) return;
   const vorname = $('#kt-vorname'), name = $('#kt-name'), mail = $('#kt-mail'), thema = $('#kt-thema'), text = $('#kt-text'), send = $('#kt-send'), msg = $('#kt-msg'), trap = $('#kt-botcheck');
   const say = (t, kind) => { msg.textContent = t; msg.className = 'rp-msg' + (kind ? ' ' + kind : ''); };
+  // button «Problem oder Bug melden»: chooses that topic and shows what helps us to find the error
+  const bugBtn = $('#kt-bug'), bugHinweis = $('#kt-bug-hinweis'), BUG = 'Problem oder Bug';
+  const istBug = () => thema.value === BUG;
+  const bugZeigen = () => { bugHinweis.hidden = !istBug(); bugBtn.setAttribute('aria-pressed', String(istBug())); };
+  thema.addEventListener('change', bugZeigen);
+  form.addEventListener('reset', () => setTimeout(bugZeigen, 0));
+  bugBtn.addEventListener('click', () => {
+    thema.value = istBug() ? Array.from(thema.options)[0].value : BUG;
+    bugZeigen();
+    if (istBug()) text.focus();
+  });
   let begonnen = 0;
   form.addEventListener('input', () => { if (!begonnen) begonnen = Date.now(); });
   form.addEventListener('submit', async e => {

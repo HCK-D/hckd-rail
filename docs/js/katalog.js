@@ -33,9 +33,15 @@ const QICO = {
 const qIcon = id => `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${QICO[id]}</svg>`;
 $('#quick').innerHTML = KATS.map(k => `<a href="#${k.id}">${qIcon(k.id)}${esc(tr(k.name.replace('SBB ', '').replace('Dienst- und Spezialfahrzeuge', 'Spezialfahrzeuge').replace('Historische Fahrzeuge', 'Historisch')))}</a>`).join('') + `<a href="#netz">${qIcon('netz')}${esc(tr('Karte'))}</a>`
   + `<button type="button" class="quick-rand" data-zufall><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3"/><circle cx="9" cy="9" r="1.2" fill="currentColor"/><circle cx="15" cy="15" r="1.2" fill="currentColor"/><circle cx="15" cy="9" r="1.2" fill="currentColor"/><circle cx="9" cy="15" r="1.2" fill="currentColor"/></svg>${esc(tr('Zufälliges Fahrzeug'))}</button>`;
-$('#foot-links').innerHTML = KATS.map(k => `<li><a href="#${k.id}">${esc(tr(k.name))}</a></li>`).join('') +
-  [['spurweite', 'Normalspur / Meterspur'], ['abfahrten', 'Abfahrten'], ['bahn-abc', 'Bahn-ABC'], ['netz', 'Bahnnetz Schweiz'], ['zeitstrahl', 'Zeitstrahl'], ['quiz', 'Quiz'], ['vergleich', 'Vergleich'], ['impressum', 'Impressum'], ['datenschutz', 'Datenschutz']]
-    .map(([id, t]) => `<li><a href="#${id}">${esc(tr(t))}</a></li>`).join('');
+// footer: all pages in four columns (vehicles, discover, take part, RailBase); the buttons open the dialogs
+const fussLink = ([id, t]) => `<li><a href="#${id}">${esc(tr(t))}</a></li>`;
+const fussKnopf = ([attr, t]) => `<li><button class="foot-link-btn" type="button" ${attr} aria-haspopup="dialog">${esc(tr(t))}</button></li>`;
+$('#foot-links').innerHTML = [
+  ['Fahrzeuge', KATS.map(k => fussLink([k.id, k.name])).join('') + fussLink(['vergleich', 'Vergleich'])],
+  ['Entdecken', [['neu', 'Neu und aktualisiert'], ['abfahrten', 'Abfahrten'], ['bahn-abc', 'Bahn-ABC'], ['erkennen', 'Züge unterscheiden'], ['netz', 'Bahnnetz Schweiz'], ['zeitstrahl', 'Zeitstrahl'], ['spurweite', 'Spurweite'], ['quiz', 'Quiz'], ['sammlung', 'Meine Sammlung']].map(fussLink).join('')],
+  ['Mitmachen', fussLink(['kontakt', 'Kontakt']) + [['data-report="allg"', 'Fehler melden'], ['data-fotos="allg"', 'Fotos einsenden'], ['data-donate', 'Spenden']].map(fussKnopf).join('') + fussLink(['danke', 'Danke'])],
+  ['RailBase', [['impressum', 'Impressum'], ['datenschutz', 'Datenschutz']].map(fussLink).join('')]
+].map(([titel, inhalt]) => `<div class="foot-spalte"><h2>${esc(tr(titel))}</h2><ul>${inhalt}</ul></div>`).join('');
 /* ---------- slideshow beside the search ---------- */
 (() => {
   const S = [
@@ -220,7 +226,7 @@ function sortiert(list) {
     return (x - y) * dir;
   });
 }
-katSort.addEventListener('change', () => renderKatList());
+katSort.addEventListener('change', () => renderKatList(true));
 
 /* ---------- Bahnen: in jeder Kategorie zuerst SBB, BLS oder TPF wählen ----------
    Fahrzeuge ohne «bahn» gehören zur SBB. Die Wahl bleibt im Browser gespeichert. */
@@ -253,10 +259,17 @@ $('#kat-bahn').addEventListener('click', e => {
   if (!b || b.dataset.bahn === curBahn) return;
   curBahn = b.dataset.bahn;
   try { localStorage.setItem('hckd-bahn', curBahn); } catch (err) { /* private window */ }
-  renderBahnWahl(); renderKatList();
+  renderBahnWahl(); renderKatList(true);
 });
 
-function renderKatList() {
+// small entrance of the cards after a change of railway or category (not while typing in the search)
+function karteneingang(liste) {
+  liste.classList.remove('list-in');
+  [...liste.children].forEach((li, i) => li.style.setProperty('--i', Math.min(i, 12)));
+  void liste.offsetWidth; // restart the animation
+  liste.classList.add('list-in');
+}
+function renderKatList(animiert) {
   const v = norm(katQ.value);
   const list = sortiert(inKat(curKat.id).filter(z => bahnOf(z) === curBahn && (!v || norm(z.name + zn(z) + z.beiname + z.typ + zt(z, 'beiname') + zt(z, 'typ')).includes(v))));
   const card = z => `<li><a class="card" href="#${z.id}">
@@ -278,8 +291,9 @@ function renderKatList() {
       return teil.length ? `<li class="kat-gruppe"><h2>${esc(tr(g))}</h2></li>` + teil.map(card).join('') : '';
     }).join('');
   $('#kat-list').innerHTML = list.length ? html : `<li class="empty" style="grid-column:1/-1">${esc(tr('Kein Fahrzeug passt zu «{q}».', { q: katQ.value }))}</li>`;
+  if (animiert === true) karteneingang($('#kat-list'));
 }
-katQ.addEventListener('input', renderKatList);
+katQ.addEventListener('input', () => renderKatList());
 function renderKat(k) {
   curKat = k;
   katQ.value = '';
@@ -292,7 +306,7 @@ function renderKat(k) {
   $('#kat-title').textContent = tr(k.name);
   $('#kat-text').textContent = tr(k.text);
   renderBahnWahl();
-  renderKatList();
+  renderKatList(true);
 }
 
 /* =====================================================================

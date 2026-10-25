@@ -20,7 +20,7 @@
 .bahn-wahl button b{font:900 22px/1 var(--display);letter-spacing:-.01em}
 .bahn-wahl button span{font-size:13px;color:var(--fg-3)}
 .bahn-wahl button:hover{border-color:color-mix(in srgb,var(--accent) 45%,var(--line))}
-.bahn-wahl button[aria-selected="true"]{border-color:var(--accent);background:var(--accent-soft)}
+.bahn-wahl button[aria-selected="true"]{border-color:var(--accent);background:var(--accent-soft);animation:wahl-pop .32s var(--ease-out)}
 .bahn-wahl button[aria-selected="true"] b{color:var(--accent-ink)}
 @media (max-width:420px){.bahn-wahl{gap:6px}.bahn-wahl button{padding:10px 12px;min-width:96px}.bahn-wahl button b{font-size:18px}.bahn-wahl button span{font-size:12px}}
 .sortbox{display:grid;gap:6px;min-width:0}
@@ -307,7 +307,7 @@ body.has-cmp .footer{padding-bottom:76px}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark}}
 .theme-btn{display:grid;place-items:center;flex:none;width:34px;height:34px;margin-left:4px;padding:0;border:1px solid var(--line);border-radius:50%;background:transparent;color:var(--fg-2);cursor:pointer;transition:color .2s ease,border-color .2s ease,background-color .2s ease}
 .theme-btn:hover{color:var(--accent-ink);border-color:color-mix(in srgb,var(--accent) 35%,transparent);background:var(--accent-soft)}
-.theme-btn svg{grid-area:1/1;display:none}
+.theme-btn svg{grid-area:1/1;display:none;animation:dreh .45s var(--ease-out)}
 .theme-btn[data-mode="light"] .ti-light,.theme-btn[data-mode="dark"] .ti-dark{display:block}
 .theme-btn + .donate{margin-left:0}
 /* language: globe and a native select (DE / FR / IT / EN) */
@@ -447,6 +447,10 @@ body.has-cmp .footer{padding-bottom:76px}
 .kt-hinweis{margin:0;font-size:14px;color:var(--fg-3)}
 .kt-hinweis a{color:var(--fg-2)}
 .kontakt-form .btn-send{justify-self:start;padding:0 26px}
+.kt-bug{justify-self:start;display:inline-flex;align-items:center;gap:8px;min-height:42px;padding:0 16px;border:1.5px solid var(--line);border-radius:999px;background:var(--bg);color:var(--fg);font:600 15px/1.2 var(--body);cursor:pointer;transition:background-color .2s ease,border-color .2s ease,color .2s ease}
+.kt-bug:hover{border-color:var(--accent);color:var(--accent-ink)}
+.kt-bug[aria-pressed="true"]{background:var(--accent-soft);border-color:var(--accent);color:var(--accent-ink)}
+.kt-bug-hinweis{margin:-4px 0 0;padding:10px 14px;border-radius:12px;background:var(--accent-soft);color:var(--accent-ink);font-size:14.5px;line-height:1.45}
 .foot-kontakt{justify-self:start;display:inline-flex;align-items:center;gap:8px;height:38px;padding:0 16px;border:1px solid rgba(255,255,255,.22);border-radius:999px;color:var(--foot-fg);font:600 15px/1 var(--body);text-decoration:none;transition:background-color .2s ease,border-color .2s ease}
 .foot-kontakt:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.4)}
 .ft-ok{display:flex;gap:10px;align-items:flex-start;margin:10px 0 4px;font-size:14.5px;line-height:1.45;color:var(--fg)}
