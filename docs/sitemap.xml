@@ -308,6 +308,7 @@
   <url><loc>https://railbase.ch/neu-fahrzeuge.html</loc><lastmod>2026-10-25</lastmod><priority>0.4</priority></url>
   <url><loc>https://railbase.ch/neu-fotos.html</loc><lastmod>2026-10-25</lastmod><priority>0.4</priority></url>
   <url><loc>https://railbase.ch/neu-daten.html</loc><lastmod>2026-10-25</lastmod><priority>0.4</priority></url>
+  <url><loc>https://railbase.ch/fotos-gesucht.html</loc><lastmod>2026-10-25</lastmod><priority>0.4</priority></url>
   <url><loc>https://railbase.ch/index.fr.html</loc><lastmod>2026-10-25</lastmod><priority>1.0</priority></url>
   <url><loc>https://railbase.ch/personenverkehr.fr.html</loc><lastmod>2026-10-25</lastmod><priority>0.8</priority></url>
   <url><loc>https://railbase.ch/cargo.fr.html</loc><lastmod>2026-10-25</lastmod><priority>0.8</priority></url>
@@ -616,6 +617,7 @@
   <url><loc>https://railbase.ch/neu-fahrzeuge.fr.html</loc><lastmod>2026-10-25</lastmod><priority>0.4</priority></url>
   <url><loc>https://railbase.ch/neu-fotos.fr.html</loc><lastmod>2026-10-25</lastmod><priority>0.4</priority></url>
   <url><loc>https://railbase.ch/neu-daten.fr.html</loc><lastmod>2026-10-25</lastmod><priority>0.4</priority></url>
+  <url><loc>https://railbase.ch/fotos-gesucht.fr.html</loc><lastmod>2026-10-25</lastmod><priority>0.4</priority></url>
   <url><loc>https://railbase.ch/index.it.html</loc><lastmod>2026-10-25</lastmod><priority>1.0</priority></url>
   <url><loc>https://railbase.ch/personenverkehr.it.html</loc><lastmod>2026-10-25</lastmod><priority>0.8</priority></url>
   <url><loc>https://railbase.ch/cargo.it.html</loc><lastmod>2026-10-25</lastmod><priority>0.8</priority></url>
@@ -924,6 +926,7 @@
   <url><loc>https://railbase.ch/neu-fahrzeuge.it.html</loc><lastmod>2026-10-25</lastmod><priority>0.4</priority></url>
   <url><loc>https://railbase.ch/neu-fotos.it.html</loc><lastmod>2026-10-25</lastmod><priority>0.4</priority></url>
   <url><loc>https://railbase.ch/neu-daten.it.html</loc><lastmod>2026-10-25</lastmod><priority>0.4</priority></url>
+  <url><loc>https://railbase.ch/fotos-gesucht.it.html</loc><lastmod>2026-10-25</lastmod><priority>0.4</priority></url>
   <url><loc>https://railbase.ch/index.en.html</loc><lastmod>2026-10-25</lastmod><priority>1.0</priority></url>
   <url><loc>https://railbase.ch/personenverkehr.en.html</loc><lastmod>2026-10-25</lastmod><priority>0.8</priority></url>
   <url><loc>https://railbase.ch/cargo.en.html</loc><lastmod>2026-10-25</lastmod><priority>0.8</priority></url>
@@ -1232,4 +1235,5 @@
   <url><loc>https://railbase.ch/neu-fahrzeuge.en.html</loc><lastmod>2026-10-25</lastmod><priority>0.4</priority></url>
   <url><loc>https://railbase.ch/neu-fotos.en.html</loc><lastmod>2026-10-25</lastmod><priority>0.4</priority></url>
   <url><loc>https://railbase.ch/neu-daten.en.html</loc><lastmod>2026-10-25</lastmod><priority>0.4</priority></url>
+  <url><loc>https://railbase.ch/fotos-gesucht.en.html</loc><lastmod>2026-10-25</lastmod><priority>0.4</priority></url>
 </urlset>

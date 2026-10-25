@@ -6,38 +6,91 @@
 <meta name="robots" content="noindex">
 <title>Seite nicht gefunden · RailBase</title>
 <style>
-:root{color-scheme:light dark;--bg:#F5F6F7;--fg:#202326;--fg2:#626971;--accent:#D71920}
-@media (prefers-color-scheme:dark){:root{--bg:#141618;--fg:#EEF0F2;--fg2:#A3A9B0}}
-body{margin:0;min-height:100vh;display:grid;place-items:center;padding:24px;box-sizing:border-box;background:var(--bg);color:var(--fg);font:18px/1.5 "Segoe UI",-apple-system,BlinkMacSystemFont,Roboto,Arial,sans-serif;text-align:center}
-h1{margin:0 0 8px;font-size:clamp(32px,6vw,52px);line-height:1.05}
-p{margin:0 0 24px;color:var(--fg2)}
-a{display:inline-block;padding:12px 20px;border-radius:12px;background:var(--accent);color:#fff;font-weight:700;text-decoration:none}
+:root{color-scheme:light dark;--bg:#F5F6F7;--fg:#202326;--fg2:#626971;--box:#FFFFFF;--line:#E3E6E9;--accent:#D71920;--soft:#FBE8E9}
+@media (prefers-color-scheme:dark){:root{--bg:#141618;--fg:#EEF0F2;--fg2:#A3A9B0;--box:#1E2124;--line:#2E3236;--soft:#3A1E20}}
+body{margin:0;min-height:100vh;display:grid;place-items:center;padding:24px 16px;box-sizing:border-box;background:var(--bg);color:var(--fg);font:17px/1.5 "Segoe UI",-apple-system,BlinkMacSystemFont,Roboto,Arial,sans-serif}
+main{width:min(640px,100%);text-align:center}
+.kick{margin:0;font:800 14px/1 ui-monospace,Consolas,monospace;letter-spacing:.2em;color:var(--accent)}
+h1{margin:8px 0;font-size:clamp(32px,6vw,52px);line-height:1.05}
+h2{margin:26px 0 10px;font-size:17px}
+p{margin:0 0 18px;color:var(--fg2)}
+form{margin:18px 0 6px;text-align:left}
+label{display:block;margin-bottom:6px;font-weight:700;font-size:15px}
+input{box-sizing:border-box;width:100%;height:50px;padding:0 16px;border:2px solid var(--line);border-radius:14px;background:var(--box);color:var(--fg);font:inherit}
+input:focus{border-color:var(--accent);outline:none}
+ul{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:0;padding:0;list-style:none}
+ul a{display:inline-block;padding:8px 14px;border:1px solid var(--line);border-radius:999px;background:var(--box);color:var(--fg);font-weight:600;font-size:15px;text-decoration:none}
+ul a:hover{border-color:var(--accent);color:var(--accent)}
+#vl a{background:var(--soft);border-color:transparent;color:var(--accent)}
+#sl{margin-top:10px}
+.leer{color:var(--fg2);font-size:15px}
+.btn{display:inline-block;margin-top:28px;padding:12px 20px;border-radius:12px;background:var(--accent);color:#fff;font-weight:700;text-decoration:none}
 </style>
 </head>
 <body>
 <main>
+<p class="kick">404</p>
 <h1 id="t">Gleis nicht gefunden</h1>
 <p id="p">Diese Seite gibt es bei RailBase nicht (mehr).</p>
-<a id="a" href="https://railbase.ch/">Zur Startseite</a>
+<div id="vor" hidden><h2 id="vh">Meintest du vielleicht …</h2><ul id="vl"></ul></div>
+<form id="f" role="search"><label for="q" id="ql">Fahrzeug suchen</label><input id="q" type="search" autocomplete="off" placeholder="z. B. Re 460, Giruno, Krokodil"></form>
+<ul id="sl"></ul>
+<h2 id="kh">Oder stöbere in einer Kategorie</h2>
+<ul id="kl"></ul>
+<a class="btn" id="a" href="https://railbase.ch/">Zur Startseite</a>
 </main>
 <script>
 (function () {
+  var Z = [["rabe-501","RABe 501","Giruno"],["rabde-500","RABDe 500","ICN"],["rabe-502","RABe 502","FV-Dosto"],["rabe-511","RABe 511","KISS"],["rabe-514","RABe 514","DTZ"],["rabe-523","RABe 523","FLIRT"],["rbde-560","RBDe 560","Domino"],["re-460","Re 460","Lok 2000"],["rabe-503","RABe 503","Astoro"],["re-450","Re 450","DPZ"],["rabe-512","RABe 512","IR-Dosto"],["rabe-520","RABe 520","GTW"],["rabe-521","RABe 521","FLIRT"],["rabe-522","RABe 522","FLIRT"],["rabe-524","RABe 524","FLIRT TILO"],["ic2000","IC2000","Doppelstockwagen"],["ew-iv","EW IV","Einheitswagen IV"],["re-482","Re 482","TRAXX"],["re-484","Re 484","TRAXX MS"],["re-420","Re 420","Re 4/4 II"],["re-620","Re 620","Re 6/6"],["re-474","Re 474","ES 64 F4"],["re-193","Re 193","Vectron"],["re-421","Re 421","Re 4/4 II für Deutschland"],["aem-940","Aem 940","Prima H4"],["am-843","Am 843","G 1700"],["tm-234","Tm 234","Ameise"],["am-841","Am 841","GA-DE 900"],["am-842","Am 842","MaK G 1204 BB"],["tmf-232","Tmf 232","Tm IV Refit"],["tm-234-4","Tm 234-4","DART"],["fans-u","Fans-u",""],["xans-37","Xans 37","Faccnpps"],["xans-74","Xans 74",""],["xas-53","Xas 53",""],["xas-62","Xas 62",""],["xas-62-fb","Xas 62","mit Förderband"],["xas-73","Xas 73","Talbot"],["xns-39","Xns 39","Fccnpps"],["xns-60","Xns 60",""],["xs-72","Xs 72",""],["silad-1-3","SILAD 1–3","Robel"],["silad-4","SILAD 4",""],["silad-reserve","SILAD Reserve",""],["ste-kurz","STE kurz","Xans 51"],["ste-lang","STE lang","Xans 51"],["xs-45","Xs 45",""],["xs-48","Xs 48",""],["xs-mannschaftswagen","Xs","Mannschaftswagen"],["kirow-mannschaftswagen","Kirow-Mannschaftswagen",""],["pwfz","PWFZ","Personal Werkstatt Fahrzeug"],["ee-922","Ee 922",""],["eem-923","Eem 923","Butler"],["ama-832","Ama 832","Prima H3"],["bm-44","Bm 4/4",""],["tm-232","Tm 232","Tm III und Tm IV"],["ee-33","Ee 3/3",""],["lrz-18","LRZ 18","Lösch- und Rettungszug"],["lrz-14","LRZ 14","Lösch- und Rettungszug"],["lrz-08","LRZ 08","Lösch- und Rettungszug"],["lrz-04","LRZ 04","Lösch- und Rettungszug"],["xrotm","Schneeschleudern","Xrotm"],["diagnose","Diagnosefahrzeug","ROGER 1000"],["kirow-krc-1100","Kirow KRC 1100","Multi Tasker"],["kirow-800","Kirow KRC 800","Kirow 1"],["kirow-250","Kirow KRC 250",""],["kirow-krc-100","Kirow KRC 100","Multi Tasker"],["bendini","Bendini","XTms"],["fahrleitung","Fahrleitungsfahrzeuge","Hubi, Krani, Combi 4A"],["h-ce68ii","Ce 6/8 II","Krokodil"],["h-ce68iii","Ce 6/8 III","Krokodil"],["h-ae66","Ae 6/6","Kantonslok"],["h-ae47","Ae 4/7",""],["h-ae36i","Ae 3/6 I",""],["h-ae814","Ae 8/14","Landi-Lok"],["h-be46","Be 4/6","Rehbock"],["h-re44i","Re 4/4 I",""],["h-re430","Re 430","Re 4/4 III"],["h-tee","RAe TEE II","Gottardo"],["h-roterpfeil","RCe 2/4","Roter Pfeil"],["h-a35","A 3/5",""],["h-c56","C 5/6","Elefant"],["h-eb35","Eb 3/5","Habersack"],["h-mirage","RABDe 12/12","Mirage"],["h-rbe540","RBe 540","RBe 4/4"],["bls-rabe-528","RABe 528","MIKA"],["bls-rabe-515","RABe 515","MUTZ"],["bls-rabe-535","RABe 535","Lötschberger"],["bls-rabe-525","RABe 525","NINA"],["bls-re-465","Re 465",""],["bls-re-475","Re 475","Vectron"],["bls-re-485","Re 485","TRAXX"],["bls-re-486","Re 486","TRAXX MS"],["bls-br-185","BR 185","TRAXX AC"],["bls-br-186","BR 186","TRAXX MS"],["bls-br-187","BR 187","TRAXX AC3"],["bls-br-193","BR 193","Vectron"],["bls-re-425","Re 425","Re 4/4"],["bls-am-843","Am 843",""],["bls-fccnpps","Fccnpps","BLS Netz"],["bls-faccnpps","Faccnpps","BLS Netz"],["bls-xas","Xas","BLS Netz"],["bls-fans-u","Fans-u","BLS Netz"],["bls-schleiffahrzeug","Schleiffahrzeug","Zweiweg"],["bls-rangier","Rangierfahrzeuge","BLS"],["bls-lrz","LRZ","BLS"],["bls-hilfswagen","Hilfswagen","HW"],["bls-ae-4-4","Ae 4/4","Ae 415"],["bls-ae-6-8","Ae 6/8","Ae 015"],["bls-ae-8-8","Ae 8/8","Muni"],["bls-be-5-7","Be 5/7",""],["bls-ce-6-6","Ce 6/6","Fc 2×3/3"],["bls-ce-4-6","Ce 4/6","Dekretsmühle"],["bls-ce-4-4","Ce 4/4","312"],["bls-bcfe-4-6","BCFe 4/6","Blauer Pfeil"],["bls-be-4-4-761","Be 4/4","Wellensittich"],["bls-ce-2-4","Ce 2/4",""],["bls-abde-4-8","ABDe 4/8",""],["bls-rbde-565","RBDe 565","NPZ"],["bls-rbde-566","RBDe 566 II",""],["bls-rabe-526","RABe 526","GTW"],["bls-ew-iii","EW III","Pendelzug"],["bls-re-420","Re 420","BLS"],["tpf-rabe-527","RABe 527","FLIRT"],["tpf-rbde-560","RBDe 560","Domino"],["tpf-abe-4-12","ABe 4/12","Serie 100"],["tpf-be-4-4-120","Be 4/4","Serie 120"],["tpf-funiculaire","Funiculaire","Fribourg"],["tpf-tm-87","Tm 234","87"],["tpf-tmf-17","Tmf 2/2","17"],["tpf-gem-18","Gem 2/2","18"],["tpf-x-925","X 925","Kranwagen"],["tpf-retrozug","Retrozug","Be 4/4 116"],["gfm-be-111","Be 4/4","111"],["gfm-be-115","Be 4/4","115"],["gfm-be-131","Be 4/4","131–133"],["gfm-bde-141","BDe 4/4","141–142"],["gfm-be-151","Be 4/4","151–152"],["gfm-gde-101","GDe 4/4","101"],["gfm-te-22","Te 2/2","11–12"],["gfm-te-44","Te 4/4","13–14"],["gfm-tm-15","Tm 2/2","15"],["gfm-abde-24","ABDe 2/4","FMA"],["gfm-abde-44","ABDe 4/4","161–167"],["gfm-rbde-567","RBDe 567","171–182"],["gfm-ee-91","Ee 2/2","91"],["gfm-wagen","Historische Wagen","GFM"],["sob-traverso","RABe 526","Traverso"],["sob-flirt3","RABe 526","FLIRT 3"],["sob-flirt-1","RABe 526","FLIRT Serie 1"],["sob-flirt-2","RABe 526","FLIRT Serie 2"],["sob-tm-234","Tm 234","Robel"],["sob-dienstwagen","Dienstwagen","SOB"],["sob-rbde-561","RBDe 561","NPZ Süd"],["sob-abt-npz-sued","ABt","NPZ Süd"],["sob-rbde-566","RBDe 566","NPZ Ost"],["sob-abt-npz-ost","ABt","NPZ Ost"],["sob-revvivo","Revvivo","Wagen"],["sob-ew-iv","EW IV","SOB"],["sob-ew-i-ii","EW I / EW II","SOB und BT"],["sob-bde-576","BDe 4/4","BDe 576"],["sob-abe-4-4","ABe 4/4","CFZe / BCFZe"],["sob-de-4-4","De 4/4","21 und 22"],["bt-be-4-4","Be 4/4","BT 11–16"],["bt-be-3-4","Be 3/4","Tino"],["sob-re-446","Re 446","ex Re 4/4 IV"],["sob-re-456","Re 456","BT Re 4/4 91–96"],["sob-re-4-4-iii","Re 4/4 III","SOB 41–44"],["sob-ae-476","Ae 476","ex DB 142"],["sob-e-3-3","E 3/3","1–11"],["sob-ed-4-5","Ed 4/5","21 und 22"],["sob-am-846","Am 846","461 / 033"],["sob-eea-936","Eea 936","031 und 032"],["sob-te-216","Te 212 / Te 216","Rangiertraktoren"],["sob-tm-236","Tm 236","Tm III"],["sob-xtmas","XTmas","Windhoff MPV"],["trn-rabe-523","RABe 523","FLIRT"],["trn-rabe-527","RABe 527","FLIRT"],["trn-be-4-8","Be 4/8","Littorail"],["trn-abe-4-8","ABe 4/8","9 und 10"],["trn-bde-4-4","BDe 4/4","3 und 5"],["trn-tm-44-normal","Tm 4/4","235 077 Normalspur"],["trn-tm-44-meter","Tm 4/4","012 Meterspur"],["trn-tm-2-2-11","Tm 2/2","11"],["trn-tm-237-312","Tm 237","312"],["trn-zweiwege","Zweiwegefahrzeuge","Dumper 102 und Bagger"],["trn-ast-21","ASt","21"],["trn-be-4-4-1","Be 4/4 1","Bobo"],["trn-abde-2-4-102","ABDe 2/4 102","L’Étincelante"],["trn-rbde-106","RBDe 4/4","106 und ABt 204"],["trn-abm-2-5-9","ABm 2/5","9"],["trn-be-2-4","Be 2/4","41–47"],["trn-be-2-2","Be 2/2","73 und 76"],["trn-be-4-4-583","Be 4/4","583 (ex 83)"],["trn-be-4-4-littorail","Be 4/4","501–506 Littorail"],["trn-xe-2-2-601","Xe 2/2","601"],["trn-tn-wagen","Historische Wagen","TN"],["trn-g-3-3-1","G 3/3 1","Le Doubs"],["trn-kkl-41","Kkl","41"],["rhb-capricorn","ABe 4/16","Capricorn"],["rhb-allegra","ABe 8/12","Allegra"],["rhb-allegra-stz","ABe 4/16","Allegra 3101–3105"],["rhb-alvra","Alvra","Gliederzüge 5701–5706"],["rhb-ge44ii","Ge 4/4 II","611–633"],["rhb-ge44iii","Ge 4/4 III","641–653"],["rhb-panorama","Panorama- und Aussichtswagen","Bernina Express"],["rhb-glacier","Glacier-Express-Wagen","RhB"],["rhb-ew","Einheitswagen","EW I–IV"],["rhb-steuerwagen","Steuerwagen","BDt, Bt und At"],["rhb-gastro","Speise- und Salonwagen","WR und Pullman"],["rhb-vereina","Autozüge","Vereina"],["rhb-gepaeckwagen","Gepäck-, Velo- und Heizwagen","BD, WS, DS"],["rhb-haik","Haik","Schiebewandwagen"],["rhb-uac","Uac","Zementwagen"],["rhb-za","Za","Kesselwagen"],["rhb-fac","Fac","Schüttgutwagen"],["rhb-flachwagen","Flach- und Rungenwagen","R, Re-t, Sp-w, Sgp"],["rhb-acts","ACTS-Wagen","Sl und Rp"],["rhb-container","Containertragwagen","Sb und Lb"],["rhb-spezialtransport","Spezialtransportwagen","Uaa-z und Xak"],["rhb-geaf22","Geaf 2/2","20601–20607"],["rhb-ge33","Ge 3/3","214 und 215"],["rhb-gmf44-242","Gmf 4/4","242 und 243"],["rhb-taf22","Taf 2/2","29591–29596"],["rhb-gmf44ii","Gmf 4/4 II","23401–23404"],["rhb-gem44","Gem 4/4","801 und 802"],["rhb-tm","Tm 2/2 und Tmf 2/2","Traktoren"],["rhb-tieflade","Xmf 4/4","23411–23415 Tieflader"],["rhb-windhoff","MPV VentuS","Windhoff (bestellt)"],["rhb-dienstwagen","Dienstwagen","X-Wagen"],["rhb-loeref","Xm 2/4","Lösch- und Rettungsfahrzeuge"],["rhb-fahrleitung","Fahrleitungs- und Kranfahrzeuge","Xm und Xmf"],["rhb-schneeschleuder","Schneeschleudern und Schneepflüge","Xrot mt und Xk"],["rhb-ge66i","Ge 6/6 I","Krokodil"],["rhb-ge66ii","Ge 6/6 II","701–707"],["rhb-ge44i","Ge 4/4 I","601–610"],["rhb-ge24","Ge 2/4","201–207"],["rhb-ge46","Ge 4/6","301–391"],["rhb-bernina-loks","Bernina-Loks","Ge 2/2, Ge 4/4 181–182, De 2/2 151"],["rhb-g34","G 3/4","1–16"],["rhb-mallet","Mallet-Loks","21–32"],["rhb-g45","G 4/5","101–129"],["rhb-bernina-tw","Bernina-Triebwagen","BCe 4/4 und ABe 4/4 I"],["rhb-abe44ii","ABe 4/4 II","41–49"],["rhb-abe44iii","ABe 4/4 III","51–56"],["rhb-abe501","ABe 4/4 501–504","Fliegender Rätier"],["rhb-be44-511","Be 4/4","511–516 Pendelzüge"],["rhb-misox","Misoxer Triebwagen","451–455, 471, 491"],["rhb-arosa","Arosa-Triebwagen","481–488"],["rhb-dampfschneeschleuder","Historische Schneeschleudern","Xrot d, Xrot e, Xrot m"],["rhb-hist-wagen","Historische Personenwagen","RhB"],["rhb-hist-gueterwagen","Historische Güterwagen","RhB"],["rhb-ehem-diesel","Ehemalige Diesel-Triebfahrzeuge","Gm 3/3, Gm 4/4, BFm"],["rhb-draisinen","Draisinen","Dh 1/2 und Dm 1/2"],["mob-alpina","Be 4/4 und ABe 4/4","ALPINA"],["mob-be44-5000","Be 4/4","5001–5004"],["mob-ge44-8000","Ge 4/4","8001–8004"],["mob-gde44","GDe 4/4","6001–6006"],["mob-ge44-8500","Ge 4/4","8501–8504"],["mob-gpx","GoldenPass Express","Spurwechselwagen"],["mob-panoramic","Panoramawagen","GoldenPass Panoramic"],["mob-belle-epoque","Belle-Époque-Wagen","GoldenPass Belle Époque"],["mob-gem22","Gem 2/2","2502–2504"],["mob-gm44","Gm 4/4","2003 und 2004"],["mob-gem44","Gem 4/4","8601–8602"],["mob-schnee","Schneepflüge und Kranwagen","Zaugg und Nencki"],["mob-bcfe44","BCFe 4/4","11"],["mob-fze66","FZe 6/6","2001 und 2002"],["mob-bde44-3000","BDe 4/4","3001–3006"],["mob-abde88","ABDe 8/8","4001–4004"],["mob-hist-wagen","Historische Personenwagen","BC4 22 und B4 61"],["mob-hist-gueterwagen","Historische Güterwagen","K, L, M und O"],["zb-adler","ABeh 150","ADLER"],["zb-fink","ABeh 160/161","FINK"],["zb-fink-neu","ABeh 162","neuer FINK"],["zb-spatz","ABe 130","SPATZ"],["zb-hge44ii","HGe 4/4 II","101 961–968"],["zb-bdeh140","BDeh 4/4","140 001–008"],["zb-mib","Be 125","013 und 008"],["zb-wagen","Panorama- und Steuerwagen","Expresszüge"],["zb-hgm104","HGm 2/2","104 001–003"],["zb-gm105","Gm 2/2","105 001"],["zb-deh46","Deh 4/6","Fhe 4/6 901–916"],["zb-hge44i","HGe 4/4 I","Muni"],["zb-lse-diesel","Gm 4/4 111","Jumbo"],["zb-traktoren","Te I und Tm","kleine Traktoren"],["zb-g34","G 3/4","208"],["zb-hg33","HG 3/3","1067 und 1068"],["zb-mib-akku","CFa 2/2","Akkutriebwagen"],["zb-hist-wagen","Historische Wagen","Brünig und LSE"],["zb-lse-gueterwagen","Güter- und Dienstwagen","LSE und Brünig"]];
+  var K = {de:[["personenverkehr","Personenverkehr"],["cargo","Cargo"],["infrastruktur","Infrastruktur"],["rangier","Rangierfahrzeuge"],["dienst","Dienst- und Spezialfahrzeuge"],["historisch","Historische Fahrzeuge"]],fr:[["personenverkehr","Voyageurs"],["cargo","Cargo"],["infrastruktur","Infrastructure"],["rangier","Véhicules de manœuvre"],["dienst","Véhicules de service et spéciaux"],["historisch","Véhicules historiques"]],it:[["personenverkehr","Viaggiatori"],["cargo","Cargo"],["infrastruktur","Infrastruttura"],["rangier","Veicoli di manovra"],["dienst","Veicoli di servizio e speciali"],["historisch","Veicoli storici"]],en:[["personenverkehr","Passenger"],["cargo","Cargo"],["infrastruktur","Infrastructure"],["rangier","Shunting vehicles"],["dienst","Service and special vehicles"],["historisch","Historic vehicles"]]};
   var T = {
-    fr: ['Voie introuvable', 'Cette page n’existe pas (ou plus) sur RailBase.', 'Vers l’accueil', 'fr-CH'],
-    it: ['Binario non trovato', 'Questa pagina non esiste (più) su RailBase.', 'Alla pagina iniziale', 'it-CH'],
-    en: ['Track not found', 'This page does not exist (any more) on RailBase.', 'Go to the home page', 'en']
+    de: ['Gleis nicht gefunden', 'Diese Seite gibt es bei RailBase nicht (mehr).', 'Zur Startseite', 'de-CH', 'Meintest du vielleicht …', 'Fahrzeug suchen', 'z. B. Re 460, Giruno, Krokodil', 'Oder stöbere in einer Kategorie', 'Kein Fahrzeug gefunden.'],
+    fr: ['Voie introuvable', 'Cette page n’existe pas (ou plus) sur RailBase.', 'Vers l’accueil', 'fr-CH', 'Cherchais-tu peut-être …', 'Chercher un véhicule', 'p. ex. Re 460, Giruno, Crocodile', 'Ou parcours une catégorie', 'Aucun véhicule trouvé.'],
+    it: ['Binario non trovato', 'Questa pagina non esiste (più) su RailBase.', 'Alla pagina iniziale', 'it-CH', 'Cercavi forse …', 'Cerca un veicolo', 'p. es. Re 460, Giruno, Coccodrillo', 'Oppure sfoglia una categoria', 'Nessun veicolo trovato.'],
+    en: ['Track not found', 'This page does not exist (any more) on RailBase.', 'Go to the home page', 'en', 'Did you mean …', 'Search for a vehicle', 'e.g. Re 460, Giruno, Crocodile', 'Or browse a category', 'No vehicle found.']
   };
-  var l = '';
-  try { l = localStorage.getItem('hckd-lang') || ''; } catch (e) {}
-  if (!T[l]) { var n = (navigator.language || '').slice(0, 2); if (T[n]) l = n; }
-  if (!T[l]) return;
-  document.documentElement.lang = T[l][3];
-  document.title = T[l][0] + ' · RailBase';
-  document.getElementById('t').textContent = T[l][0];
-  document.getElementById('p').textContent = T[l][1];
-  var a = document.getElementById('a');
-  a.textContent = T[l][2];
-  a.href = a.getAttribute('href').replace(/\/?$/, '/') + 'index.' + l + '.html';
+  var l = '', gespeichert = '';
+  try { gespeichert = localStorage.getItem('hckd-lang') || ''; } catch (e) {}
+  l = T[gespeichert] ? gespeichert : (T[(navigator.language || '').slice(0, 2)] ? (navigator.language || '').slice(0, 2) : 'de');
+  var t = T[l], basis = document.getElementById('a').getAttribute('href').replace(/\/?$/, '/');
+  var seite = function (id) { return basis + id + (l === 'de' ? '' : '.' + l) + '.html'; };
+  var el = function (id) { return document.getElementById(id); };
+  document.documentElement.lang = t[3];
+  document.title = t[0] + ' · RailBase';
+  el('t').textContent = t[0]; el('p').textContent = t[1]; el('vh').textContent = t[4];
+  el('ql').textContent = t[5]; el('q').placeholder = t[6]; el('kh').textContent = t[7];
+  el('a').textContent = t[2];
+  if (l !== 'de') el('a').href = basis + 'index.' + l + '.html';
+  var norm = function (s) { return String(s).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]/g, ''); };
+  var link = function (z) { return '<li><a href="' + seite(z[0]) + '">' + z[1].replace(/</g, '&lt;') + (z[2] ? ' «' + z[2].replace(/</g, '&lt;') + '»' : '') + '</a></li>'; };
+  el('kl').innerHTML = (K[l] || K.de).map(function (k) { return '<li><a href="' + seite(k[0]) + '">' + k[1] + '</a></li>'; }).join('');
+  // guess from the wrong address, e.g. /re460.html -> Re 460
+  var abstand = function (a, b) {
+    var d = [], i, j;
+    for (i = 0; i <= a.length; i++) { d[i] = [i]; }
+    for (j = 1; j <= b.length; j++) { d[0][j] = j; }
+    for (i = 1; i <= a.length; i++) { for (j = 1; j <= b.length; j++) { d[i][j] = Math.min(d[i - 1][j] + 1, d[i][j - 1] + 1, d[i - 1][j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1)); } }
+    return d[a.length][b.length];
+  };
+  var pfad = decodeURIComponent(location.pathname.split('/').pop() || '').replace(/\.html?$/, '').replace(/\.(fr|it|en)$/, '');
+  var slug = norm(pfad);
+  if (slug.length >= 2) {
+    var treffer = Z.map(function (z) {
+      var k = norm(z[0]), n = norm(z[1] + z[2]);
+      var p = k === slug || n === slug ? 0 : (k.indexOf(slug) >= 0 || slug.indexOf(k) >= 0 || n.indexOf(slug) >= 0) ? 1 : abstand(slug, k);
+      return [p, z];
+    }).filter(function (x) { return x[0] <= Math.max(2, Math.floor(slug.length / 3)); })
+      .sort(function (a, b) { return a[0] - b[0]; }).slice(0, 5);
+    if (treffer.length) { el('vl').innerHTML = treffer.map(function (x) { return link(x[1]); }).join(''); el('vor').hidden = false; }
+  }
+  // search over all vehicles while typing
+  el('f').addEventListener('submit', function (e) { e.preventDefault(); var a = el('sl').querySelector('a'); if (a) location.href = a.href; });
+  el('q').addEventListener('input', function () {
+    var v = norm(this.value);
+    if (!v) { el('sl').innerHTML = ''; return; }
+    var r = Z.filter(function (z) { return norm(z[0] + z[1] + z[2]).indexOf(v) >= 0; }).slice(0, 8);
+    el('sl').innerHTML = r.length ? r.map(link).join('') : '<li class="leer">' + t[8] + '</li>';
+  });
 })();
 </script>
 </body>

@@ -16,7 +16,9 @@
 
   function oeffnen(btn) {
     // name: German, for the mail; anzeige: in the chosen language, for the dialog
-    ziel = btn.dataset.fotos === 'zug' && curZug ? { id: curZug.id, name: fullNameDe(curZug), anzeige: fullName(curZug) }
+    // data-fotos="zug": the vehicle of this page; a vehicle id (page «Fotos gesucht»): that vehicle
+    const z = btn.dataset.fotos === 'zug' ? curZug : zugOf(btn.dataset.fotos);
+    ziel = z ? { id: z.id, name: fullNameDe(z), anzeige: fullName(z) }
       : { id: 'allgemein', name: 'beliebiges Fahrzeug (bitte unten angeben)', anzeige: tr('beliebiges Fahrzeug (bitte unten angeben)') };
     $('#ft-target').textContent = ziel.anzeige;
     say(''); send.disabled = false; send.textContent = tr('Fotos senden');
@@ -70,4 +72,23 @@
       say(tr('Senden hat nicht geklappt. Bitte versuche es in einem Moment nochmals.'), 'err');
     }
   });
+})();
+
+/* =====================================================================
+   FOTOS GESUCHT (Seite unter «Extras»): alle Fahrzeuge und Wagen ohne Foto,
+   nach Bahn und Kategorie, je mit Knopf «Foto einsenden» für genau dieses
+   Fahrzeug. Die Liste entsteht aus den Daten und bleibt so immer aktuell.
+   ===================================================================== */
+(() => {
+  const box = $('#fg-liste');
+  if (!box) return;
+  const ohne = ZUEGE.filter(z => !(z.bilder && z.bilder.length));
+  $('#fg-anzahl').textContent = tr(ohne.length === 1 ? 'Noch {n} Fahrzeug ohne Foto' : 'Noch {n} Fahrzeuge ohne Foto', { n: ohne.length });
+  box.innerHTML = BAHNEN.flatMap(b => KATS.map(k => {
+    const zz = ohne.filter(z => bahnOf(z) === b.id && z.kat === k.id).sort(SORT.name);
+    return zz.length ? `<section class="fg-gruppe"><h2>${esc(tr(b.name))} · ${esc(tr(k.name))} <small>${zz.length}</small></h2><ul>${zz.map(z => `<li>
+      <a class="fg-pic" href="#${z.id}" tabindex="-1" aria-hidden="true">${art(z)}</a>
+      <span class="fg-txt"><a href="#${z.id}"><b>${esc(zn(z))}</b>${zt(z, 'beiname') ? ` <small>«${esc(zt(z, 'beiname'))}»</small>` : ''}</a><span>${esc(zt(z, 'typ'))}</span></span>
+      <button class="report-btn" type="button" data-fotos="${z.id}" aria-haspopup="dialog">${esc(tr('Foto einsenden'))}</button></li>`).join('')}</ul></section>` : '';
+  })).join('') || `<p class="sam-hint">${esc(tr('Alle Fahrzeuge haben Fotos. Danke allen Fotografinnen und Fotografen!'))}</p>`;
 })();

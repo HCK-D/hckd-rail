@@ -41,7 +41,8 @@ $fix = @{
           spurweite = 'Normalspur oder Meterspur'; spurweiteText = 'Zwei Führerstandsfahrten auf Normalspur (1435 mm) und Meterspur (1000 mm), mit Live-Fahrdaten.'
           'neu-fahrzeuge' = 'Neue Fahrzeuge'; 'neu-fahrzeugeText' = 'Alle Fahrzeuge, die neu bei RailBase dazugekommen sind, die neuesten zuoberst.'
           'neu-fotos' = 'Neue Fahrzeugfotos'; 'neu-fotosText' = 'Fahrzeuge mit neuen Fotos bei RailBase.'
-          'neu-daten' = 'Aktualisierte Daten'; 'neu-datenText' = 'Was bei RailBase korrigiert oder ergänzt wurde, Fahrzeug für Fahrzeug erklärt.' }
+          'neu-daten' = 'Aktualisierte Daten'; 'neu-datenText' = 'Was bei RailBase korrigiert oder ergänzt wurde, Fahrzeug für Fahrzeug erklärt.'
+          'fotos-gesucht' = 'Fotos gesucht'; 'fotos-gesuchtText' = 'Für diese Schweizer Bahnfahrzeuge sucht RailBase noch Fotos. Schick uns deine Bilder.' }
   fr = @{ start = 'RailBase – Train Database des CFF : voyageurs, Cargo, infrastructure, véhicules de manœuvre, de service et spéciaux.'; zug = 'Caractéristiques techniques, histoire et images.'
           impressum = 'Mentions légales'; impressumText = 'Mentions légales, responsabilité et crédits photo de RailBase.'
           datenschutz = 'Protection des données'; datenschutzText = 'Protection des données chez RailBase : pas de cookies, pas de publicité, seulement un comptage anonyme des visites.'
@@ -54,7 +55,8 @@ $fix = @{
           spurweite = 'Voie normale ou voie métrique'; spurweiteText = 'Deux trajets en cabine de conduite sur voie normale (1435 mm) et voie métrique (1000 mm), avec données de marche en direct.'
           'neu-fahrzeuge' = 'Nouveaux véhicules'; 'neu-fahrzeugeText' = 'Tous les véhicules ajoutés sur RailBase, les plus récents en haut.'
           'neu-fotos' = 'Nouvelles photos de véhicules'; 'neu-fotosText' = 'Véhicules avec de nouvelles photos sur RailBase.'
-          'neu-daten' = 'Données mises à jour'; 'neu-datenText' = 'Ce qui a été corrigé ou complété sur RailBase, véhicule par véhicule.' }
+          'neu-daten' = 'Données mises à jour'; 'neu-datenText' = 'Ce qui a été corrigé ou complété sur RailBase, véhicule par véhicule.'
+          'fotos-gesucht' = 'Photos recherchées'; 'fotos-gesuchtText' = 'RailBase cherche encore des photos de ces véhicules ferroviaires suisses. Envoie-nous tes images.' }
   it = @{ start = 'RailBase – Train Database delle FFS: viaggiatori, Cargo, infrastruttura, veicoli di manovra, di servizio e speciali.'; zug = 'Dati tecnici, storia e immagini.'
           impressum = 'Note legali'; impressumText = 'Note legali, responsabilità e crediti fotografici di RailBase.'
           datenschutz = 'Protezione dei dati'; datenschutzText = 'Protezione dei dati su RailBase: nessun cookie, nessuna pubblicità, solo un conteggio anonimo delle visite.'
@@ -67,7 +69,8 @@ $fix = @{
           spurweite = 'Scartamento normale o metrico'; spurweiteText = 'Due viaggi in cabina di guida su scartamento normale (1435 mm) e metrico (1000 mm), con dati di marcia in tempo reale.'
           'neu-fahrzeuge' = 'Nuovi veicoli'; 'neu-fahrzeugeText' = 'Tutti i veicoli aggiunti su RailBase, i più recenti in alto.'
           'neu-fotos' = 'Nuove foto di veicoli'; 'neu-fotosText' = 'Veicoli con nuove foto su RailBase.'
-          'neu-daten' = 'Dati aggiornati'; 'neu-datenText' = 'Cosa è stato corretto o completato su RailBase, veicolo per veicolo.' }
+          'neu-daten' = 'Dati aggiornati'; 'neu-datenText' = 'Cosa è stato corretto o completato su RailBase, veicolo per veicolo.'
+          'fotos-gesucht' = 'Foto cercate'; 'fotos-gesuchtText' = 'RailBase cerca ancora foto di questi veicoli ferroviari svizzeri. Inviaci le tue immagini.' }
   en = @{ start = 'RailBase – Train Database for SBB passenger, Cargo, infrastructure, shunting, service and special vehicles.'; zug = 'Technical data, history and pictures.'
           impressum = 'Legal notice'; impressumText = 'Legal notice, liability and picture credits of RailBase.'
           datenschutz = 'Privacy'; datenschutzText = 'RailBase privacy policy: no cookies, no advertising, only anonymous visitor counting.'
@@ -80,7 +83,8 @@ $fix = @{
           spurweite = 'Standard gauge or metre gauge'; spurweiteText = 'Two cab rides on standard gauge (1435 mm) and metre gauge (1000 mm), with live running data.'
           'neu-fahrzeuge' = 'New vehicles'; 'neu-fahrzeugeText' = 'All vehicles added to RailBase, the newest first.'
           'neu-fotos' = 'New vehicle photos'; 'neu-fotosText' = 'Vehicles with new photos on RailBase.'
-          'neu-daten' = 'Updated data'; 'neu-datenText' = 'What was corrected or added on RailBase, vehicle by vehicle.' }
+          'neu-daten' = 'Updated data'; 'neu-datenText' = 'What was corrected or added on RailBase, vehicle by vehicle.'
+          'fotos-gesucht' = 'Photos wanted'; 'fotos-gesuchtText' = 'RailBase is still looking for photos of these Swiss railway vehicles. Send us your pictures.' }
 }
 # Übersetzte Kategorienamen und Fahrzeugtypen aus js\sprachen\xx.js lesen
 $jsStr = '''((?:[^''\\]|\\.)*)'''
@@ -151,7 +155,7 @@ for ($i = 0; $i -lt $zm.Count; $i++) {
 [void]$seiten.Add([pscustomobject]@{ art = 'fix'; id = 'danke'; bild = ''; prio = '0.3' })
 [void]$seiten.Add([pscustomobject]@{ art = 'fix'; id = 'kontakt'; bild = ''; prio = '0.3' })
 [void]$seiten.Add([pscustomobject]@{ art = 'fix'; id = 'spurweite'; bild = ''; prio = '0.5' })
-foreach ($nd in 'neu-fahrzeuge', 'neu-fotos', 'neu-daten') { [void]$seiten.Add([pscustomobject]@{ art = 'fix'; id = $nd; bild = ''; prio = '0.4' }) }
+foreach ($nd in 'neu-fahrzeuge', 'neu-fotos', 'neu-daten', 'fotos-gesucht') { [void]$seiten.Add([pscustomobject]@{ art = 'fix'; id = $nd; bild = ''; prio = '0.4' }) }
 
 # Titel und Beschreibung einer Seite in einer Sprache
 function Kopf([string]$l, $s) {
@@ -182,7 +186,9 @@ function Build-Page([string]$l, [string]$start, [string]$titel, [string]$text, [
     foreach ($a in $sprachen) { $meta += "<link rel=`"alternate`" hreflang=`"$($hreflang[$a])`" href=`"$(Adresse $a $start)`">`n" }
     $meta += "<link rel=`"alternate`" hreflang=`"x-default`" href=`"$(Adresse 'de' $start)`">`n"
     $img = if ($bild) { $bild } else { 'bilder/slides/slide-01.jpg' }
-    $meta += "<meta property=`"og:image`" content=`"$base$img`">`n<meta name=`"twitter:card`" content=`"summary_large_image`">`n"
+    $meta += "<meta property=`"og:image`" content=`"$base$img`">`n<meta property=`"og:image:alt`" content=`"$(Esc $titel)`">`n<meta name=`"twitter:card`" content=`"summary_large_image`">`n"
+    # Vorschaukarte eines Fahrzeugs (siehe unten): Grösse angeben, dann zeigen Messenger sie sofort gross an
+    if ($img -like 'bilder/teilen/*') { $meta += "<meta property=`"og:image:width`" content=`"1200`">`n<meta property=`"og:image:height`" content=`"630`">`n<meta property=`"og:image:type`" content=`"image/jpeg`">`n" }
     # Startseite: Name der Website für Google (erscheint dann als «RailBase» über dem Suchtreffer)
     if (-not $start) { $meta += "<script type=`"application/ld+json`">{`"@context`":`"https://schema.org`",`"@type`":`"WebSite`",`"name`":`"RailBase`",`"alternateName`":[`"RailBase Train Database`",`"railbase.ch`"],`"url`":`"$base`"}</script>`n<script type=`"application/ld+json`">{`"@context`":`"https://schema.org`",`"@type`":`"Organization`",`"name`":`"RailBase`",`"url`":`"$base`",`"logo`":`"${base}bilder/app/icon-512.png`"}</script>`n" }
   }
@@ -202,7 +208,8 @@ function Build-Page([string]$l, [string]$start, [string]$titel, [string]$text, [
 }
 foreach ($l in $sprachen) {
   Build-Page $l '' 'RailBase – Train Database' $fix[$l].start ''
-  foreach ($s in $seiten) { $k = Kopf $l $s; Build-Page $l $s.id "$($k[0]) · RailBase" $k[1] $s.bild }
+  # Fahrzeuge mit Foto teilen sich mit ihrer eigenen Vorschaukarte (bilder/teilen/<id>.jpg)
+  foreach ($s in $seiten) { $k = Kopf $l $s; Build-Page $l $s.id "$($k[0]) · RailBase" $k[1] $(if ($s.art -eq 'zug' -and $s.bild) { "bilder/teilen/$($s.id).jpg" } else { $s.bild }) }
 }
 
 # ---------- Dateien kopieren ----------
@@ -217,6 +224,75 @@ if ($logo.Success) {
 }
 # GitHub Pages: Dateien unverändert ausliefern
 Write-Utf8 (Join-Path $out '.nojekyll') ''
+
+# ---------- Vorschaukarten zum Teilen (1200 × 630 Pixel) ----------
+# Teilt jemand einen Fahrzeug-Link in WhatsApp, Instagram usw., erscheint dieses Bild: das erste Foto,
+# darauf der Name des Fahrzeugs und «RailBase». Fertige Karten liegen im Zwischenspeicher
+# werkzeuge\cache-teilen (nicht auf GitHub) und werden nur neu gezeichnet, wenn sich Foto oder Name ändern.
+Add-Type -AssemblyName System.Drawing
+$cache = Join-Path $PSScriptRoot 'cache-teilen'
+New-Item -ItemType Directory -Force $cache | Out-Null
+$teilenOut = Join-Path $out 'bilder\teilen'
+New-Item -ItemType Directory -Force $teilenOut | Out-Null
+$jpgCodec = [Drawing.Imaging.ImageCodecInfo]::GetImageEncoders() | Where-Object { $_.MimeType -eq 'image/jpeg' }
+$jpgParam = New-Object Drawing.Imaging.EncoderParameters 1
+$jpgParam.Param[0] = New-Object Drawing.Imaging.EncoderParameter ([Drawing.Imaging.Encoder]::Quality), ([long]78)
+$typo = [Drawing.StringFormat]::GenericTypographic
+$schatten = New-Object Drawing.SolidBrush ([Drawing.Color]::FromArgb(150, 0, 0, 0))
+# Text mit weichem Schatten, damit er auch auf hellen Fotos lesbar bleibt
+function Text([Drawing.Graphics]$g, [string]$t, $f, $farbe, [float]$x, [float]$y) { $g.DrawString($t, $f, $schatten, $x + 2, $y + 3, $typo); $g.DrawString($t, $f, $farbe, $x, $y, $typo) }
+$md5 = [Security.Cryptography.MD5]::Create()
+function Schrift([Drawing.Graphics]$g, [string]$text, [float]$start, [float]$max, [Drawing.FontStyle]$stil) {
+  $gr = $start
+  while ($gr -gt 20) { $f = New-Object Drawing.Font('Segoe UI', $gr, $stil, [Drawing.GraphicsUnit]::Pixel); if ($g.MeasureString($text, $f, 5000, $typo).Width -le $max) { return $f }; $f.Dispose(); $gr -= 2 }
+  return New-Object Drawing.Font('Segoe UI', $gr, $stil, [Drawing.GraphicsUnit]::Pixel)
+}
+$neuGezeichnet = 0
+foreach ($s in ($seiten | Where-Object { $_.art -eq 'zug' -and $_.bild })) {
+  $quelle = Join-Path $root ($s.bild -replace '/', '\')
+  if (-not (Test-Path $quelle)) { continue }
+  $schluessel = "$($s.bild)|$([IO.File]::GetLastWriteTimeUtc($quelle).Ticks)|$($s.name)|$($s.bei)|v3"
+  $hash = (($md5.ComputeHash([Text.Encoding]::UTF8.GetBytes($schluessel)) | Select-Object -First 5 | ForEach-Object { $_.ToString('x2') }) -join '')
+  $karte = Join-Path $cache "$($s.id)-$hash.jpg"
+  if (-not (Test-Path $karte)) {
+    Get-ChildItem $cache -Filter "$($s.id)-*.jpg" | Remove-Item -Force
+    $foto = [Drawing.Image]::FromFile($quelle)
+    $bmp = New-Object Drawing.Bitmap 1200, 630
+    $g = [Drawing.Graphics]::FromImage($bmp)
+    $g.SmoothingMode = 'AntiAlias'; $g.InterpolationMode = 'HighQualityBicubic'; $g.TextRenderingHint = 'AntiAliasGridFit'
+    # Foto füllt die Karte (überstehende Ränder werden abgeschnitten)
+    $f = [Math]::Max(1200 / $foto.Width, 630 / $foto.Height)
+    $g.DrawImage($foto, [float]((1200 - $foto.Width * $f) / 2), [float]((630 - $foto.Height * $f) / 2), [float]($foto.Width * $f), [float]($foto.Height * $f))
+    # dunkler Verlauf unten, damit die Schrift gut lesbar ist
+    $verlauf = [Drawing.Drawing2D.LinearGradientBrush]::new([Drawing.Point]::new(0, 280), [Drawing.Point]::new(0, 631), [Drawing.Color]::FromArgb(0, 10, 12, 16), [Drawing.Color]::FromArgb(225, 10, 12, 16))
+    $g.FillRectangle($verlauf, 0, 281, 1200, 349)
+    # «RailBase» oben links auf weisser Fläche mit rotem Rand
+    $fMarke = New-Object Drawing.Font('Segoe UI', 30, [Drawing.FontStyle]::Bold, [Drawing.GraphicsUnit]::Pixel)
+    $wRail = $g.MeasureString('Rail', $fMarke, 500, $typo).Width; $wBase = $g.MeasureString('Base', $fMarke, 500, $typo).Width
+    $g.FillRectangle([Drawing.Brushes]::White, 40, 36, [int]($wRail + $wBase + 34), 54)
+    $g.FillRectangle((New-Object Drawing.SolidBrush ([Drawing.Color]::FromArgb(215, 25, 32))), 40, 36, 6, 54)
+    $g.DrawString('Rail', $fMarke, (New-Object Drawing.SolidBrush ([Drawing.Color]::FromArgb(32, 35, 38))), 60, 46, $typo)
+    $g.DrawString('Base', $fMarke, (New-Object Drawing.SolidBrush ([Drawing.Color]::FromArgb(215, 25, 32))), [float](60 + $wRail), 46, $typo)
+    # Name (und Beiname) unten links, zu lange Namen werden kleiner
+    $weiss = [Drawing.Brushes]::White
+    $hell = New-Object Drawing.SolidBrush ([Drawing.Color]::FromArgb(230, 234, 238))
+    $fName = Schrift $g $s.name 80 1110 ([Drawing.FontStyle]::Bold)
+    if ($s.bei) {
+      $fBei = Schrift $g "«$($s.bei)»" 44 1110 ([Drawing.FontStyle]::Regular)
+      Text $g $s.name $fName $weiss 40 ([float](548 - $fName.Size * 1.2 - $fBei.Size * 1.25))
+      Text $g "«$($s.bei)»" $fBei $hell 42 ([float](548 - $fBei.Size * 1.25))
+    } else {
+      Text $g $s.name $fName $weiss 40 ([float](548 - $fName.Size * 1.2))
+    }
+    $fAdr = New-Object Drawing.Font('Segoe UI', 24, [Drawing.FontStyle]::Bold, [Drawing.GraphicsUnit]::Pixel)
+    Text $g 'railbase.ch' $fAdr $hell 42 568
+    $bmp.Save($karte, $jpgCodec, $jpgParam)
+    $g.Dispose(); $bmp.Dispose(); $foto.Dispose()
+    $neuGezeichnet++
+  }
+  Copy-Item $karte (Join-Path $teilenOut "$($s.id).jpg")
+}
+Write-Host "Vorschaukarten: $neuGezeichnet neu gezeichnet"
 
 # ---------- App (PWA) ----------
 # Symbole: bilder\app\*.png (neu zeichnen mit werkzeuge\app-symbole.ps1)
@@ -274,6 +350,10 @@ Write-Utf8 (Join-Path $out 'googleef863c8922f18742.html') 'google-site-verificat
 
 # ---------- 404, sitemap, robots ----------
 $startUrl = if ($base) { $base } else { './' }
+# Fehlerseite mit Vorschlägen: Aus der falschen Adresse wird das ähnlichste Fahrzeug erraten,
+# dazu ein Suchfeld über alle Fahrzeuge und die Kategorien. Listen: [id, Name, Beiname] und [id, Kategorie]
+$liste404 = ($seiten | Where-Object { $_.art -eq 'zug' } | ForEach-Object { '["' + $_.id + '","' + ($_.name -replace '["\\]', '') + '","' + ($_.bei -replace '["\\]', '') + '"]' }) -join ','
+$kats404 = ($sprachen | ForEach-Object { $sp = $_; $sp + ':[' + (($seiten | Where-Object { $_.art -eq 'kat' } | ForEach-Object { '["' + $_.id + '","' + ((Tr $sp $_.name) -replace '["\\]', '') + '"]' }) -join ',') + ']' }) -join ','
 $p404 = @"
 <!doctype html>
 <html lang="de-CH">
@@ -283,38 +363,91 @@ $p404 = @"
 <meta name="robots" content="noindex">
 <title>Seite nicht gefunden · RailBase</title>
 <style>
-:root{color-scheme:light dark;--bg:#F5F6F7;--fg:#202326;--fg2:#626971;--accent:#D71920}
-@media (prefers-color-scheme:dark){:root{--bg:#141618;--fg:#EEF0F2;--fg2:#A3A9B0}}
-body{margin:0;min-height:100vh;display:grid;place-items:center;padding:24px;box-sizing:border-box;background:var(--bg);color:var(--fg);font:18px/1.5 "Segoe UI",-apple-system,BlinkMacSystemFont,Roboto,Arial,sans-serif;text-align:center}
-h1{margin:0 0 8px;font-size:clamp(32px,6vw,52px);line-height:1.05}
-p{margin:0 0 24px;color:var(--fg2)}
-a{display:inline-block;padding:12px 20px;border-radius:12px;background:var(--accent);color:#fff;font-weight:700;text-decoration:none}
+:root{color-scheme:light dark;--bg:#F5F6F7;--fg:#202326;--fg2:#626971;--box:#FFFFFF;--line:#E3E6E9;--accent:#D71920;--soft:#FBE8E9}
+@media (prefers-color-scheme:dark){:root{--bg:#141618;--fg:#EEF0F2;--fg2:#A3A9B0;--box:#1E2124;--line:#2E3236;--soft:#3A1E20}}
+body{margin:0;min-height:100vh;display:grid;place-items:center;padding:24px 16px;box-sizing:border-box;background:var(--bg);color:var(--fg);font:17px/1.5 "Segoe UI",-apple-system,BlinkMacSystemFont,Roboto,Arial,sans-serif}
+main{width:min(640px,100%);text-align:center}
+.kick{margin:0;font:800 14px/1 ui-monospace,Consolas,monospace;letter-spacing:.2em;color:var(--accent)}
+h1{margin:8px 0;font-size:clamp(32px,6vw,52px);line-height:1.05}
+h2{margin:26px 0 10px;font-size:17px}
+p{margin:0 0 18px;color:var(--fg2)}
+form{margin:18px 0 6px;text-align:left}
+label{display:block;margin-bottom:6px;font-weight:700;font-size:15px}
+input{box-sizing:border-box;width:100%;height:50px;padding:0 16px;border:2px solid var(--line);border-radius:14px;background:var(--box);color:var(--fg);font:inherit}
+input:focus{border-color:var(--accent);outline:none}
+ul{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:0;padding:0;list-style:none}
+ul a{display:inline-block;padding:8px 14px;border:1px solid var(--line);border-radius:999px;background:var(--box);color:var(--fg);font-weight:600;font-size:15px;text-decoration:none}
+ul a:hover{border-color:var(--accent);color:var(--accent)}
+#vl a{background:var(--soft);border-color:transparent;color:var(--accent)}
+#sl{margin-top:10px}
+.leer{color:var(--fg2);font-size:15px}
+.btn{display:inline-block;margin-top:28px;padding:12px 20px;border-radius:12px;background:var(--accent);color:#fff;font-weight:700;text-decoration:none}
 </style>
 </head>
 <body>
 <main>
+<p class="kick">404</p>
 <h1 id="t">Gleis nicht gefunden</h1>
 <p id="p">Diese Seite gibt es bei RailBase nicht (mehr).</p>
-<a id="a" href="$startUrl">Zur Startseite</a>
+<div id="vor" hidden><h2 id="vh">Meintest du vielleicht …</h2><ul id="vl"></ul></div>
+<form id="f" role="search"><label for="q" id="ql">Fahrzeug suchen</label><input id="q" type="search" autocomplete="off" placeholder="z. B. Re 460, Giruno, Krokodil"></form>
+<ul id="sl"></ul>
+<h2 id="kh">Oder stöbere in einer Kategorie</h2>
+<ul id="kl"></ul>
+<a class="btn" id="a" href="$startUrl">Zur Startseite</a>
 </main>
 <script>
 (function () {
+  var Z = [$liste404];
+  var K = {$kats404};
   var T = {
-    fr: ['Voie introuvable', 'Cette page n’existe pas (ou plus) sur RailBase.', 'Vers l’accueil', 'fr-CH'],
-    it: ['Binario non trovato', 'Questa pagina non esiste (più) su RailBase.', 'Alla pagina iniziale', 'it-CH'],
-    en: ['Track not found', 'This page does not exist (any more) on RailBase.', 'Go to the home page', 'en']
+    de: ['Gleis nicht gefunden', 'Diese Seite gibt es bei RailBase nicht (mehr).', 'Zur Startseite', 'de-CH', 'Meintest du vielleicht …', 'Fahrzeug suchen', 'z. B. Re 460, Giruno, Krokodil', 'Oder stöbere in einer Kategorie', 'Kein Fahrzeug gefunden.'],
+    fr: ['Voie introuvable', 'Cette page n’existe pas (ou plus) sur RailBase.', 'Vers l’accueil', 'fr-CH', 'Cherchais-tu peut-être …', 'Chercher un véhicule', 'p. ex. Re 460, Giruno, Crocodile', 'Ou parcours une catégorie', 'Aucun véhicule trouvé.'],
+    it: ['Binario non trovato', 'Questa pagina non esiste (più) su RailBase.', 'Alla pagina iniziale', 'it-CH', 'Cercavi forse …', 'Cerca un veicolo', 'p. es. Re 460, Giruno, Coccodrillo', 'Oppure sfoglia una categoria', 'Nessun veicolo trovato.'],
+    en: ['Track not found', 'This page does not exist (any more) on RailBase.', 'Go to the home page', 'en', 'Did you mean …', 'Search for a vehicle', 'e.g. Re 460, Giruno, Crocodile', 'Or browse a category', 'No vehicle found.']
   };
-  var l = '';
-  try { l = localStorage.getItem('hckd-lang') || ''; } catch (e) {}
-  if (!T[l]) { var n = (navigator.language || '').slice(0, 2); if (T[n]) l = n; }
-  if (!T[l]) return;
-  document.documentElement.lang = T[l][3];
-  document.title = T[l][0] + ' · RailBase';
-  document.getElementById('t').textContent = T[l][0];
-  document.getElementById('p').textContent = T[l][1];
-  var a = document.getElementById('a');
-  a.textContent = T[l][2];
-  a.href = a.getAttribute('href').replace(/\/?$/, '/') + 'index.' + l + '.html';
+  var l = '', gespeichert = '';
+  try { gespeichert = localStorage.getItem('hckd-lang') || ''; } catch (e) {}
+  l = T[gespeichert] ? gespeichert : (T[(navigator.language || '').slice(0, 2)] ? (navigator.language || '').slice(0, 2) : 'de');
+  var t = T[l], basis = document.getElementById('a').getAttribute('href').replace(/\/?$/, '/');
+  var seite = function (id) { return basis + id + (l === 'de' ? '' : '.' + l) + '.html'; };
+  var el = function (id) { return document.getElementById(id); };
+  document.documentElement.lang = t[3];
+  document.title = t[0] + ' · RailBase';
+  el('t').textContent = t[0]; el('p').textContent = t[1]; el('vh').textContent = t[4];
+  el('ql').textContent = t[5]; el('q').placeholder = t[6]; el('kh').textContent = t[7];
+  el('a').textContent = t[2];
+  if (l !== 'de') el('a').href = basis + 'index.' + l + '.html';
+  var norm = function (s) { return String(s).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]/g, ''); };
+  var link = function (z) { return '<li><a href="' + seite(z[0]) + '">' + z[1].replace(/</g, '&lt;') + (z[2] ? ' «' + z[2].replace(/</g, '&lt;') + '»' : '') + '</a></li>'; };
+  el('kl').innerHTML = (K[l] || K.de).map(function (k) { return '<li><a href="' + seite(k[0]) + '">' + k[1] + '</a></li>'; }).join('');
+  // guess from the wrong address, e.g. /re460.html -> Re 460
+  var abstand = function (a, b) {
+    var d = [], i, j;
+    for (i = 0; i <= a.length; i++) { d[i] = [i]; }
+    for (j = 1; j <= b.length; j++) { d[0][j] = j; }
+    for (i = 1; i <= a.length; i++) { for (j = 1; j <= b.length; j++) { d[i][j] = Math.min(d[i - 1][j] + 1, d[i][j - 1] + 1, d[i - 1][j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1)); } }
+    return d[a.length][b.length];
+  };
+  var pfad = decodeURIComponent(location.pathname.split('/').pop() || '').replace(/\.html?$/, '').replace(/\.(fr|it|en)$/, '');
+  var slug = norm(pfad);
+  if (slug.length >= 2) {
+    var treffer = Z.map(function (z) {
+      var k = norm(z[0]), n = norm(z[1] + z[2]);
+      var p = k === slug || n === slug ? 0 : (k.indexOf(slug) >= 0 || slug.indexOf(k) >= 0 || n.indexOf(slug) >= 0) ? 1 : abstand(slug, k);
+      return [p, z];
+    }).filter(function (x) { return x[0] <= Math.max(2, Math.floor(slug.length / 3)); })
+      .sort(function (a, b) { return a[0] - b[0]; }).slice(0, 5);
+    if (treffer.length) { el('vl').innerHTML = treffer.map(function (x) { return link(x[1]); }).join(''); el('vor').hidden = false; }
+  }
+  // search over all vehicles while typing
+  el('f').addEventListener('submit', function (e) { e.preventDefault(); var a = el('sl').querySelector('a'); if (a) location.href = a.href; });
+  el('q').addEventListener('input', function () {
+    var v = norm(this.value);
+    if (!v) { el('sl').innerHTML = ''; return; }
+    var r = Z.filter(function (z) { return norm(z[0] + z[1] + z[2]).indexOf(v) >= 0; }).slice(0, 8);
+    el('sl').innerHTML = r.length ? r.map(link).join('') : '<li class="leer">' + t[8] + '</li>';
+  });
 })();
 </script>
 </body>
