@@ -143,7 +143,7 @@
     const foto = (z.bilder || [])[0];
     if (foto) {
       try {
-        const img = await ladeBild(foto.src);
+        const img = await ladeBild(web(foto.src));
         const h = Math.min(CW * img.naturalHeight / img.naturalWidth, 230);
         doc.bilder.push(await alsJpeg(img, CW, h));
         doc.bild(0, doc.bilder.length - 1, M, y, CW, h);

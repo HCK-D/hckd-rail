@@ -306,7 +306,7 @@ document.addEventListener('click', e => {
   const z = list[(woche * 7919) % list.length], k = katOf(z.kat);
   const montag = new Date(Date.UTC(1970, 0, 1) + (woche * 7 - 3) * 864e5);
   const datum = tr('Woche ab {d}', { d: montag.toLocaleDateString(LOCALE, { day: 'numeric', month: 'long', timeZone: 'UTC' }) });
-  const pic = z.bilder && z.bilder.length ? `<img src="${esc(z.bilder[0].src)}" alt="${esc(zb(z, 0))}" loading="lazy">` : art(z);
+  const pic = z.bilder && z.bilder.length ? `<img src="${esc(web(z.bilder[0].src))}" alt="${esc(zb(z, 0))}" loading="lazy">` : art(z);
   const kz = zt(z, 'kennzahlen') || [], bei = zt(z, 'beiname');
   $('#heute-card').innerHTML = `<a class="heute-pic" href="#${z.id}" tabindex="-1" aria-hidden="true">${pic}</a>
     <div class="heute-body">

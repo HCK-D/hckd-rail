@@ -7,7 +7,10 @@ ZUEGE.forEach(z => { if (!z.daten['Spurweite']) z.daten['Spurweite'] = 'Normalsp
 const katOf = id => KATS.find(k => k.id === id);
 // small version of a photo (480 px) for cards and thumbnails: bilder/x.jpg -> bilder/klein/x.jpg
 // only the built website (website-bauen.ps1 sets HCKD_SEITEN) has the small versions; the preview uses the photo itself
-const klein = src => window.HCKD_SEITEN ? String(src).replace(/^bilder\//, 'bilder/klein/') : String(src);
+// built website: photos as WebP (smaller, loads faster); website-bauen.ps1 converts them and sets HCKD_WEBP.
+// The share cards (bilder/teilen) and app icons stay as they are.
+const web = src => window.HCKD_WEBP && /^bilder\/(?!app\/|teilen\/).*\.jpe?g$/i.test(String(src)) ? String(src).replace(/\.jpe?g$/i, '.webp') : String(src);
+const klein = src => web(window.HCKD_SEITEN ? String(src).replace(/^bilder\//, 'bilder/klein/') : String(src));
 const zugOf = id => ZUEGE.find(z => z.id === id);
 const inKat = id => ZUEGE.filter(z => z.kat === id);
 const fullName = z => { const b = zt(z, 'beiname'); return zn(z) + (b ? ' «' + b + '»' : ''); };
@@ -62,7 +65,7 @@ $('#foot-links').innerHTML = [
   ];
   const show = $('#hero-show'), list = $('#hs-slides'), dots = $('#hs-dots'), cap = $('#hs-cap'), playBtn = $('#hs-play');
   S.forEach(s => { s[1] = tr(s[1]); });
-  list.innerHTML = S.map(([f, t], i) => `<li class="hs-slide${i ? '' : ' on'}" aria-hidden="${i ? 'true' : 'false'}"><img ${i < 2 ? 'src' : 'data-src'}="bilder/slides/${f}.jpg" alt="${esc(t)}" draggable="false"></li>`).join('');
+  list.innerHTML = S.map(([f, t], i) => `<li class="hs-slide${i ? '' : ' on'}" aria-hidden="${i ? 'true' : 'false'}"><img ${i < 2 ? 'src' : 'data-src'}="${web('bilder/slides/' + f + '.jpg')}" alt="${esc(t)}" draggable="false"></li>`).join('');
   dots.innerHTML = S.map((s, i) => `<button type="button" role="tab" aria-label="${esc(tr('Bild {n}: {t}', { n: i + 1, t: s[1] }))}" aria-selected="${i ? 'false' : 'true'}"></button>`).join('');
   const items = $$('.hs-slide', list), dotBtns = $$('button', dots);
   let cur = 0, timer = 0, auto = !reduce, hover = false, inView = true;
@@ -112,7 +115,7 @@ $('#search-form').addEventListener('submit', e => {
 $('#kat-grid').innerHTML = KATS.map(k => {
   const list = inKat(k.id), shown = list.slice(0, 4);
   return `<li><a class="kat" href="#${k.id}">
-    <div class="art-panel">${k.bild ? `<img class="photo" src="${esc(k.bild)}" alt="" loading="lazy" style="object-position:${esc(k.bildPos || 'center')}">` : art(zugOf(k.rep)) + `<span class="illus">${esc(tr('Illustration'))}</span>`}</div>
+    <div class="art-panel">${k.bild ? `<img class="photo" src="${esc(web(k.bild))}" alt="" loading="lazy" style="object-position:${esc(k.bildPos || 'center')}">` : art(zugOf(k.rep)) + `<span class="illus">${esc(tr('Illustration'))}</span>`}</div>
     <div class="kat-body">
       <span class="kat-code">${esc(tr('Kategorie'))} ${k.code}</span>
       <h3 class="kat-title">${esc(tr(k.name))}</h3>
@@ -320,7 +323,7 @@ function renderKat(k) {
   // cover photo of the category, with the credit of that photo
   const foto = k.bild && ZUEGE.flatMap(z => z.bilder || []).find(b => b.src === k.bild);
   $('#kat-banner').hidden = !k.bild;
-  $('#kat-banner').innerHTML = k.bild ? `<img src="${esc(k.bild)}" alt="${esc(foto ? fotoTitel(k.bild) : tr(k.name))}" style="object-position:${esc(k.bildPos || 'center')}">${foto && foto.foto ? nachweis(foto) : ''}` : '';
+  $('#kat-banner').innerHTML = k.bild ? `<img src="${esc(web(k.bild))}" alt="${esc(foto ? fotoTitel(k.bild) : tr(k.name))}" style="object-position:${esc(k.bildPos || 'center')}">${foto && foto.foto ? nachweis(foto) : ''}` : '';
   $('#kat-kicker').textContent = tr('Kategorie') + ' ' + k.code + ' · ' + tr('{n} Fahrzeuge', { n: inKat(k.id).length });
   $('#kat-title').textContent = tr(k.name);
   $('#kat-text').textContent = tr(k.text);
@@ -402,7 +405,7 @@ const gal = makeSlider(slidesEl, $('#sl-prev'), $('#sl-next'), i => {
   $$('#zug-thumbs .thumb').forEach((t, j) => t.setAttribute('aria-current', j === i ? 'true' : 'false'));
 });
 function slideInner(z, m, i) {
-  if (m.src) return `<img src="${esc(m.src)}" alt="${esc(m.titel)}" ${i > 0 ? 'loading="lazy"' : ''} draggable="false">`;
+  if (m.src) return `<img src="${esc(web(m.src))}" alt="${esc(m.titel)}" ${i > 0 ? 'loading="lazy"' : ''} draggable="false">`;
   if (m.art) return art(z);
   return `<div class="ph-box"><b>${esc(tr('{t} folgt', { t: m.titel }))}</b><span>${esc(tr('Noch kein Foto von {name}. Hast du eines?', { name: zn(z) }))}</span><button class="report-btn" type="button" data-fotos="zug">${esc(tr('Foto einsenden'))}</button></div>`;
 }
@@ -460,7 +463,7 @@ function openLb(i) {
   const z = curZug;
   lbItems = curItems.filter(m => !m.ph);
   const start = Math.max(0, lbItems.indexOf(curItems[i]));
-  lbSlides.innerHTML = lbItems.map(m => `<li class="slide">${m.src ? `<img src="${esc(m.src)}" alt="${esc(m.titel)}" draggable="false">` : art(z)}</li>`).join('');
+  lbSlides.innerHTML = lbItems.map(m => `<li class="slide">${m.src ? `<img src="${esc(web(m.src))}" alt="${esc(m.titel)}" draggable="false">` : art(z)}</li>`).join('');
   lbReturn = document.activeElement;
   lb.hidden = false;
   lbs.reset(lbItems.length, start);

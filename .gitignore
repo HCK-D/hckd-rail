@@ -3,5 +3,7 @@
 archiv/
 website/
 werkzeuge/cache-teilen/
+werkzeuge/cache-webp/
+werkzeuge/libwebp/
 Thumbs.db
 desktop.ini

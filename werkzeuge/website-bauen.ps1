@@ -173,6 +173,38 @@ function Kopf([string]$l, $s) {
   }
 }
 
+# ---------- Fotos als WebP (kleiner, laden schneller) ----------
+# Braucht cwebp von Google (libwebp) im Ordner werkzeuge\libwebp. Umgewandelte Fotos liegen im
+# Zwischenspeicher werkzeuge\cache-webp (beides nicht auf GitHub) und werden nur neu erstellt, wenn
+# sich das Foto ändert. Klappt alles, zeigt die Website die WebP-Dateien (HCKD_WEBP in js/katalog.js,
+# Funktion web). Ohne cwebp bleibt alles bei JPEG.
+$cwebp = Get-ChildItem (Join-Path $PSScriptRoot 'libwebp') -Recurse -Filter cwebp.exe -ErrorAction SilentlyContinue | Select-Object -First 1
+$webp = $false
+$webpListe = @()
+if ($cwebp) {
+  $cacheW = Join-Path $PSScriptRoot 'cache-webp'
+  $bilderSrc = Join-Path $root 'bilder'
+  $fehler = 0; $neuW = 0; $vorher = 0; $nachher = 0
+  foreach ($f in (Get-ChildItem $bilderSrc -Recurse -File -Include *.jpg, *.jpeg | Where-Object { $_.FullName -notmatch '\\bilder\\app\\' })) {
+    $rel = $f.FullName.Substring($bilderSrc.Length + 1)
+    $name = [IO.Path]::GetFileNameWithoutExtension($rel)
+    # Qualität 70: von Auge gleich wie das JPEG, aber rund ein Sechstel kleiner
+    $cacheDatei = Join-Path $cacheW ((Split-Path $rel) + "\$name.$($f.LastWriteTimeUtc.Ticks).q70.webp")
+    if (-not (Test-Path $cacheDatei)) {
+      $ordner = Split-Path $cacheDatei
+      New-Item -ItemType Directory -Force $ordner | Out-Null
+      Get-ChildItem $ordner -Filter "$name.*.webp" | Remove-Item -Force
+      & $cwebp.FullName -quiet -q 70 -m 4 -metadata none $f.FullName -o $cacheDatei
+      if ($LASTEXITCODE -ne 0 -or -not (Test-Path $cacheDatei)) { $fehler++; continue }
+      $neuW++
+    }
+    $vorher += $f.Length; $nachher += (Get-Item $cacheDatei).Length
+    $webpListe += [pscustomobject]@{ rel = $rel; datei = $cacheDatei }
+  }
+  $webp = $fehler -eq 0 -and $webpListe.Count -gt 0
+  Write-Host ("WebP: {0} Fotos ({1} neu), {2:N1} MB statt {3:N1} MB{4}" -f $webpListe.Count, $neuW, ($nachher / 1MB), ($vorher / 1MB), $(if ($fehler) { ", $fehler Fehler: es bleibt bei JPEG" } else { '' }))
+}
+
 # ---------- HTML-Dateien schreiben ----------
 function Build-Page([string]$l, [string]$start, [string]$titel, [string]$text, [string]$bild) {
   $datei = Datei $l $start
@@ -201,6 +233,7 @@ function Build-Page([string]$l, [string]$start, [string]$titel, [string]$text, [
   # HCKD_SEITEN: Links zeigen auf die einzelnen Dateien (re-460.html statt #re-460)
   # HCKD_START: welche Ansicht ohne # gezeigt wird; HCKD_LANG: Sprache dieser Datei
   $js = "window.HCKD_SEITEN=true;window.HCKD_LANG='$l';"
+  if ($webp) { $js += 'window.HCKD_WEBP=true;' }
   if ($start) { $js += "window.HCKD_START='$start';" }
   $meta += "<script>$js</script>`n"
   $html = "<!doctype html>`n<html lang=`"$($hreflang[$l])`">`n<head>`n<meta charset=`"utf-8`">`n<meta name=`"viewport`" content=`"width=device-width,initial-scale=1,viewport-fit=cover`">`n<style>$reset</style>`n$meta$head`n</head>`n<body>`n$body`n</body>`n</html>`n"
@@ -224,6 +257,18 @@ if ($logo.Success) {
 }
 # GitHub Pages: Dateien unverändert ausliefern
 Write-Utf8 (Join-Path $out '.nojekyll') ''
+
+# WebP-Fotos einsetzen; die JPEG-Fassung bleibt nur, wo andere Dienste sie brauchen
+# (Vorschaubilder für Google und Messenger: og:image der Seiten, die kein Fahrzeug sind)
+if ($webp) {
+  $behalten = @{ 'slides\slide-01.jpg' = 1 }
+  foreach ($s in ($seiten | Where-Object { $_.art -ne 'zug' -and $_.bild })) { $behalten[($s.bild -replace '^bilder/', '' -replace '/', '\')] = 1 }
+  foreach ($w in $webpListe) {
+    $jpg = Join-Path $out ('bilder\' + $w.rel)
+    Copy-Item $w.datei ($jpg -replace '\.jpe?g$', '.webp')
+    if (-not $behalten.ContainsKey($w.rel)) { Remove-Item $jpg -Force }
+  }
+}
 
 # ---------- Vorschaukarten zum Teilen (1200 × 630 Pixel) ----------
 # Teilt jemand einen Fahrzeug-Link in WhatsApp, Instagram usw., erscheint dieses Bild: das erste Foto,

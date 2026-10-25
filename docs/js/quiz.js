@@ -56,7 +56,7 @@
       <div class="qz-top"><span class="qz-tag">${esc(levelOf(level).name)}</span><span class="qz-count">${esc(tr('Frage {i} von {n}', { i: i + 1, n }))}</span><button class="qz-stop" type="button">${esc(tr('Abbrechen'))}</button></div>
       <div class="qz-prog" aria-hidden="true"><i style="width:${i / n * 100}%"></i></div>
       <div class="qz-card${q.bild ? ' has-pic' : ''}">
-        ${q.bild ? `<div class="qz-pic"><img src="${esc(q.bild)}" alt="${esc(tr('Foto zur Frage'))}" draggable="false"></div>` : ''}
+        ${q.bild ? `<div class="qz-pic"><img src="${esc(web(q.bild))}" alt="${esc(tr('Foto zur Frage'))}" draggable="false"></div>` : ''}
         <div class="qz-body">
           <h3 class="qz-q" id="qz-q" tabindex="-1">${esc(q.f)}</h3>
           <div class="qz-opts" role="radiogroup" aria-labelledby="qz-q">${q.opts.map((t, k) =>
