@@ -94,6 +94,12 @@ button{font:inherit}
    while scrolling in (js/start.js), the chosen railway, the light/dark icon */
 .list-in>li{animation:karte-in .42s var(--ease-out) both;animation-delay:calc(var(--i,0) * 32ms)}
 @keyframes karte-in{from{opacity:0;transform:translateY(10px) scale(.985)}to{opacity:1;transform:none}}
+.list-in.von-rechts>li{animation-name:wisch-rechts}
+.list-in.von-links>li{animation-name:wisch-links}
+@keyframes wisch-rechts{from{opacity:0;transform:translateX(40px)}to{opacity:1;transform:none}}
+@keyframes wisch-links{from{opacity:0;transform:translateX(-40px)}to{opacity:1;transform:none}}
+.wisch-tipp{display:none;margin:-10px 0 16px;font-size:13.5px;color:var(--fg-3)}
+@media (hover:none) and (pointer:coarse){.wisch-tipp{display:block}}
 html.anim .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s var(--ease-out),transform .6s var(--ease-out)}
 html.anim .reveal.sichtbar{opacity:1;transform:none}
 html.anim .kat-grid>li.reveal{transition-delay:calc(var(--i,0) * 60ms)}

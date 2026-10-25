@@ -10,14 +10,24 @@
           'fahrzeug', 'foto' und 'daten'.
    text   kurzer Satz auf Deutsch; Übersetzung in sprachen/xx/ (uebDict)
    ids    Fahrzeuge, die verlinkt werden (optional)
+   bahnen statt ids: alle Fahrzeuge dieser Bahnen, z. B. ['zb', 'mob'] (optional)
    link   Seite oder Bereich, z. B. 'abfahrten' (optional)
+   details  bei 'daten': pro Fahrzeug ein Satz, was geändert wurde (optional;
+          erscheint auf der Seite «Aktualisierte Daten»)
    ===================================================================== */
 const NEU = [
+  { datum: '2026-10-25', art: 'funktion', text: 'Neue Seiten zu den Neuigkeiten: alle neuen Fahrzeuge, neue Fotos und geänderte Daten auf einen Blick.', link: 'neu-fahrzeuge' },
   { datum: '2026-10-25', art: 'funktion', text: 'Steckbrief als PDF-Datei: Er wird jetzt direkt heruntergeladen, ohne Druckfenster.' },
   { datum: '2026-10-25', art: 'funktion', text: 'Übersichtlichere Startseite: zuerst die Kategorien, dann die Neuigkeiten und der Zug der Woche.' },
-  { datum: '2026-10-25', art: 'daten', text: 'Korrekturen bei RABe 524, Am 843, Eem 923 und Ee 922. Rangierfahrzeuge zeigen nur noch eine Einsatzkarte, wenn der Ort sicher belegt ist.', ids: ['rabe-524', 'am-843', 'eem-923', 'ee-922'] },
+  { datum: '2026-10-25', art: 'daten', text: 'Korrekturen bei RABe 524, Am 843, Eem 923 und Ee 922. Rangierfahrzeuge zeigen nur noch eine Einsatzkarte, wenn der Ort sicher belegt ist.', ids: ['rabe-524', 'am-843', 'eem-923', 'ee-922'],
+    details: {
+      'rabe-524': 'Die Einsatzkarte reicht jetzt bis Airolo und zeigt auch die alte Ceneri-Bergstrecke, die Linie nach Luino und Mendrisio–Stabio.',
+      'am-843': 'Der Lötschberg-Basistunnel ist auf der Karte. Neu steht dabei: Nur einzelne Loks haben ETCS, bekannt sind die Am 843 026–028.',
+      'eem-923': 'Im Betrieb höchstens 100 km/h (gebaut für 120 km/h), mit Funkfernsteuerung. Die Karte zeigt sie nicht mehr im Gotthard- und im Ceneri-Basistunnel.',
+      'ee-922': 'Es gibt 26 Loks. Sie hat keine Funkfernsteuerung und rangiert nur in Bahnhöfen; die Strecken sind darum nicht mehr auf der Karte.'
+    } },
   { datum: '2026-10-25', art: 'funktion', text: 'Neues Kontaktformular: Schreib uns direkt über die Website.', link: 'kontakt' },
-  { datum: '2026-10-25', art: 'fahrzeug', text: 'Zentralbahn und MOB: 37 Fahrzeuge mit Fotos, Daten und Einsatzkarten.', ids: ['zb-adler', 'zb-fink', 'zb-spatz', 'zb-hge44ii', 'mob-gpx', 'mob-alpina', 'mob-ge44-8000', 'mob-panoramic'] },
+  { datum: '2026-10-25', art: 'fahrzeug', text: 'Zentralbahn und MOB: 37 Fahrzeuge mit Fotos, Daten und Einsatzkarten.', bahnen: ['zb', 'mob'] },
   { datum: '2026-10-18', art: 'funktion', text: 'Neue Seite «Danke»: ein Dankeschön an die Bahnfotografen, die Fotos für RailBase gemacht haben.', link: 'danke' },
   { datum: '2026-10-18', art: 'funktion', text: 'Neue Adresse: railbase.ch. Am besten gleich als Lesezeichen speichern.' },
   { datum: '2026-10-18', art: 'funktion', text: 'Aus HCKD RAIL wird RailBase: neuer Name und neues Logo. Sammlung und Sichtungen bleiben, wie sie sind.' },

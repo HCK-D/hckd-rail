@@ -394,6 +394,7 @@
           </div>
         </div>
         <div class="bahn-wahl" id="kat-bahn" role="tablist" aria-label="Bahn wählen"></div>
+        <p class="wisch-tipp">Tipp: Über die Fahrzeuge nach links oder rechts wischen, um die Bahn zu wechseln.</p>
         <ul class="grid" id="kat-list"></ul>
       </div>
     </section>
@@ -502,6 +503,45 @@
         <ol class="neu-list" id="neu-list"></ol>
       </div>
     </section>
+    <section class="section" data-seite="neu-fahrzeuge" hidden>
+      <div class="wrap">
+        <ol class="crumbs"><li><a href="#start">Start</a></li><li><a href="#neu">Neu und aktualisiert</a></li><li aria-current="page">Neue Fahrzeuge</li></ol>
+        <div class="page-head">
+          <div>
+            <span class="kicker">Neu auf RailBase</span>
+            <h1>Neue Fahrzeuge</h1>
+            <p>Alle Fahrzeuge, die neu dazugekommen sind, die neuesten zuoberst. Tippe auf ein Fahrzeug, um alles darüber zu sehen.</p>
+          </div>
+        </div>
+        <div class="nd-liste" id="nd-fahrzeug"></div>
+      </div>
+    </section>
+    <section class="section" data-seite="neu-fotos" hidden>
+      <div class="wrap">
+        <ol class="crumbs"><li><a href="#start">Start</a></li><li><a href="#neu">Neu und aktualisiert</a></li><li aria-current="page">Neue Fahrzeugfotos</li></ol>
+        <div class="page-head">
+          <div>
+            <span class="kicker">Neu auf RailBase</span>
+            <h1>Neue Fahrzeugfotos</h1>
+            <p>Diese Fahrzeuge haben neue Fotos bekommen. Tippe auf ein Bild, um alle Fotos des Fahrzeugs zu sehen.</p>
+          </div>
+        </div>
+        <div class="nd-liste" id="nd-foto"></div>
+      </div>
+    </section>
+    <section class="section" data-seite="neu-daten" hidden>
+      <div class="wrap">
+        <ol class="crumbs"><li><a href="#start">Start</a></li><li><a href="#neu">Neu und aktualisiert</a></li><li aria-current="page">Aktualisierte Daten</li></ol>
+        <div class="page-head">
+          <div>
+            <span class="kicker">Neu auf RailBase</span>
+            <h1>Aktualisierte Daten</h1>
+            <p>Was korrigiert oder ergänzt wurde, Fahrzeug für Fahrzeug erklärt.</p>
+          </div>
+        </div>
+        <div class="nd-liste" id="nd-daten"></div>
+      </div>
+    </section>
     <section class="section" data-seite="erkennen" hidden>
       <div class="wrap">
         <ol class="crumbs"><li><a href="#start">Start</a></li><li aria-current="page">Züge unterscheiden</li></ol>
@@ -573,7 +613,8 @@
           </li>
           <li class="danke-karte">
             <span class="danke-initialen" aria-hidden="true">JE</span>
-            <div><b>Joel E.</b><span>Zuständig für Informatik</span></div>
+            <div><b>Joel E.</b><span>Zuständig für Informatik</span>
+              <a class="danke-link" href="https://feverpictures.ch/" target="_blank" rel="noopener" aria-label="Website von Joel E. (öffnet in neuem Fenster)"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.6 3.8 5.6 3.8 9s-1.2 6.4-3.8 9c-2.6-2.6-3.8-5.6-3.8-9S9.4 5.6 12 3z"/></svg>feverpictures.ch</a></div>
           </li>
         </ul>
         <h2 class="sam-h">Selbst mithelfen</h2>
@@ -649,7 +690,10 @@
           </div>
         </div>
         <form class="kontakt-form" id="kt-form" novalidate>
-          <button class="kt-bug" type="button" id="kt-bug" aria-pressed="false"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 8a4 4 0 0 1 8 0v1H8zM6 9h12v4a6 6 0 0 1-12 0zM12 9v10M3 13h3M18 13h3M4 7l2 2M20 7l-2 2M4 19l2-2M20 19l-2-2"/></svg><span>Problem oder Bug melden</span></button>
+          <div class="kt-knoepfe">
+          <button class="kt-bug" type="button" id="kt-bug" data-thema="Problem oder Bug" aria-pressed="false"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 8a4 4 0 0 1 8 0v1H8zM6 9h12v4a6 6 0 0 1-12 0zM12 9v10M3 13h3M18 13h3M4 7l2 2M20 7l-2 2M4 19l2-2M20 19l-2-2"/></svg><span>Problem oder Bug melden</span></button>
+          <button class="kt-bug" type="button" id="kt-idee" data-thema="Idee oder Vorschlag" aria-pressed="false"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"/></svg><span>Idee oder Vorschlag</span></button>
+          </div>
           <div class="kt-zeile">
             <label class="fld" for="kt-vorname"><span>Vorname <small>Pflicht</small></span>
               <input id="kt-vorname" type="text" maxlength="60" autocomplete="given-name" required aria-required="true">

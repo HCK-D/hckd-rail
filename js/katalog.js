@@ -254,20 +254,39 @@ function renderBahnWahl() {
   const sel = $('[aria-selected="true"]', reihe), r = reihe.getBoundingClientRect(), s = sel && sel.getBoundingClientRect();
   if (s && (s.left < r.left || s.right > r.right)) reihe.scrollLeft += s.left - r.left - (r.width - s.width) / 2;
 }
-$('#kat-bahn').addEventListener('click', e => {
-  const b = e.target.closest('[data-bahn]');
-  if (!b || b.dataset.bahn === curBahn) return;
-  curBahn = b.dataset.bahn;
+// change of railway: the cards slide in from the side of the chosen railway (right = next, left = previous)
+function bahnWechseln(id) {
+  if (!id || id === curBahn) return;
+  const ids = $$('#kat-bahn [data-bahn]').map(b => b.dataset.bahn);
+  const richtung = ids.indexOf(id) > ids.indexOf(curBahn) ? 'rechts' : 'links';
+  curBahn = id;
   try { localStorage.setItem('hckd-bahn', curBahn); } catch (err) { /* private window */ }
-  renderBahnWahl(); renderKatList(true);
-});
+  renderBahnWahl(); renderKatList(richtung);
+}
+$('#kat-bahn').addEventListener('click', e => { const b = e.target.closest('[data-bahn]'); if (b) bahnWechseln(b.dataset.bahn); });
+// phones: swipe sideways over the vehicle list for the next or previous railway
+(() => {
+  const liste = $('#kat-list');
+  let x0 = null, y0 = 0;
+  liste.addEventListener('touchstart', e => { x0 = e.touches.length === 1 ? e.touches[0].clientX : null; y0 = e.touches[0].clientY; }, { passive: true });
+  liste.addEventListener('touchend', e => {
+    if (x0 === null) return;
+    const t = e.changedTouches[0], dx = t.clientX - x0, dy = t.clientY - y0;
+    x0 = null;
+    if (Math.abs(dx) < 70 || Math.abs(dx) < Math.abs(dy) * 1.8) return; // mostly sideways, not scrolling
+    const ids = $$('#kat-bahn [data-bahn]').map(b => b.dataset.bahn);
+    bahnWechseln(ids[ids.indexOf(curBahn) + (dx < 0 ? 1 : -1)]);
+  }, { passive: true });
+})();
 
-// small entrance of the cards after a change of railway or category (not while typing in the search)
-function karteneingang(liste) {
-  liste.classList.remove('list-in');
+// small entrance of the cards after a change of railway (sideways), category or sorting (from below);
+// not while typing in the search
+function karteneingang(liste, richtung) {
+  liste.classList.remove('list-in', 'von-rechts', 'von-links');
   [...liste.children].forEach((li, i) => li.style.setProperty('--i', Math.min(i, 12)));
   void liste.offsetWidth; // restart the animation
   liste.classList.add('list-in');
+  if (richtung) liste.classList.add('von-' + richtung);
 }
 function renderKatList(animiert) {
   const v = norm(katQ.value);
@@ -291,7 +310,7 @@ function renderKatList(animiert) {
       return teil.length ? `<li class="kat-gruppe"><h2>${esc(tr(g))}</h2></li>` + teil.map(card).join('') : '';
     }).join('');
   $('#kat-list').innerHTML = list.length ? html : `<li class="empty" style="grid-column:1/-1">${esc(tr('Kein Fahrzeug passt zu «{q}».', { q: katQ.value }))}</li>`;
-  if (animiert === true) karteneingang($('#kat-list'));
+  if (animiert) karteneingang($('#kat-list'), animiert === true ? '' : animiert);
 }
 katQ.addEventListener('input', () => renderKatList());
 function renderKat(k) {
@@ -477,7 +496,8 @@ document.addEventListener('keydown', e => {
 const views = { home: $('#v-home'), kat: $('#v-kat'), zug: $('#v-zug'), text: $('#v-text'), vergleich: $('#v-vergleich'), entdecken: $('#v-entdecken') };
 const TEXTSEITEN = { impressum: 'Impressum', datenschutz: 'Datenschutz' };
 // pages that are only reached through the menu «Entdecken», not shown on the start page
-const ENTDECKEN = { neu: 'Neu und aktualisiert', erkennen: 'Züge unterscheiden', sammlung: 'Meine Sammlung', danke: 'Danke', kontakt: 'Kontakt', spurweite: 'Spurweite' };
+const ENTDECKEN = { neu: 'Neu und aktualisiert', erkennen: 'Züge unterscheiden', sammlung: 'Meine Sammlung', danke: 'Danke', kontakt: 'Kontakt', spurweite: 'Spurweite',
+  'neu-fahrzeuge': 'Neue Fahrzeuge', 'neu-fotos': 'Neue Fahrzeugfotos', 'neu-daten': 'Aktualisierte Daten' };
 let curView = 'home';
 function show(name) {
   for (const [n, el] of Object.entries(views)) el.hidden = n !== name;

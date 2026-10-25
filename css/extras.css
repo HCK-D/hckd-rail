@@ -197,9 +197,35 @@ body.has-cmp .footer{padding-bottom:76px}
 .neu-art.fahrzeug,.neu-art.funktion{background:var(--accent-soft);color:var(--accent-ink)}
 .neu-art.foto,.neu-art.daten{background:var(--surface-2);color:var(--fg-2)}
 /* start page: one box, three lines (new vehicle, new photos, data updated) */
-.neu-box{max-width:780px;margin:0;padding:4px 22px;list-style:none;border-radius:var(--r-lg);background:var(--surface);box-shadow:var(--shadow)}
-.neu-zeile{display:grid;grid-template-columns:42px 1fr;gap:14px;align-items:start;padding:18px 0}
-.neu-zeile + .neu-zeile{border-top:1px solid var(--line)}
+.neu-box{max-width:820px;margin:0;padding:6px 10px;list-style:none;border-radius:var(--r-lg);background:var(--surface);box-shadow:var(--shadow)}
+.neu-zeile{display:grid;grid-template-columns:42px 1fr auto;gap:14px;align-items:start;padding:16px 12px;border-radius:14px;cursor:pointer;transition:background-color .2s ease}
+.neu-zeile:hover{background:var(--surface-2)}
+.neu-zeile + .neu-zeile{border-top:1px solid var(--line);border-top-left-radius:0;border-top-right-radius:0}
+.neu-weiter{align-self:center;display:inline-flex;align-items:center;gap:4px;height:36px;padding:0 14px;border-radius:999px;background:var(--accent-soft);color:var(--accent-ink);font:700 14px/1 var(--body);text-decoration:none;white-space:nowrap}
+.neu-weiter svg{transition:transform .25s ease}
+.neu-zeile:hover .neu-weiter svg{transform:translateX(3px)}
+@media (max-width:560px){.neu-zeile{grid-template-columns:42px 1fr}.neu-weiter{grid-column:2;justify-self:start}}
+.neu-fotoreihe{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:0;padding:0;list-style:none}
+.neu-fotoreihe a{display:block;border-radius:8px;transition:transform .25s ease}
+.neu-fotoreihe a:hover{transform:translateY(-2px)}
+.neu-fotoreihe img{display:block;width:64px;height:44px;object-fit:cover;border-radius:8px}
+/* pages «Neue Fahrzeuge», «Neue Fahrzeugfotos», «Aktualisierte Daten» */
+.nd-liste{display:grid;gap:36px}
+.nd-eintrag{display:grid;gap:12px}
+.nd-text{margin:0;max-width:46em;font-size:17px;line-height:1.5}
+.nd-fotos{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,240px),1fr));gap:14px;margin:0;padding:0;list-style:none}
+.nd-fotos a{display:block;overflow:hidden;border-radius:var(--r-md);background:var(--surface);box-shadow:var(--shadow);color:var(--fg);text-decoration:none;transition:transform .5s var(--spring),box-shadow .3s ease}
+.nd-fotos a:hover{transform:translateY(-3px);box-shadow:var(--shadow-lift)}
+.nd-fotos img{display:block;width:100%;aspect-ratio:3/2;object-fit:cover}
+.nd-fotos span{display:grid;gap:2px;padding:10px 14px}
+.nd-fotos small{color:var(--fg-3);font-size:13.5px}
+.nd-aenderungen{display:grid;gap:10px;max-width:880px;margin:0;padding:0;list-style:none}
+.nd-aenderungen a{display:grid;grid-template-columns:104px 1fr;gap:16px;align-items:center;padding:10px;border-radius:var(--r-md);background:var(--surface);box-shadow:var(--shadow);color:var(--fg);text-decoration:none;transition:transform .5s var(--spring),box-shadow .3s ease}
+.nd-aenderungen a:hover{transform:translateY(-2px);box-shadow:var(--shadow-lift)}
+.nd-pic{display:block;aspect-ratio:3/2;overflow:hidden;border-radius:10px;background:var(--surface-2)}
+.nd-pic img,.nd-pic svg{display:block;width:100%;height:100%;object-fit:cover}
+.nd-aenderungen b{display:block;margin-bottom:3px;font-size:17px}
+.nd-aenderungen a>span:last-child>span{color:var(--fg-2);font-size:15px;line-height:1.45}
 .neu-ico{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:var(--accent-soft);color:var(--accent-ink)}
 .neu-zeile-txt{display:grid;gap:6px;min-width:0}
 .neu-zeile-txt b{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:17.5px;line-height:1.25}
@@ -208,7 +234,8 @@ body.has-cmp .footer{padding-bottom:76px}
 .neu-item p{margin:0;font-size:16px;line-height:1.45}
 .neu-alle{display:inline-flex;align-items:center;margin-top:18px;text-decoration:none}
 #neu-start{padding-bottom:0}
-#neu-start + .heute-sec{padding-top:40px}.neu-link{white-space:nowrap;font-weight:600;color:var(--accent-ink)}
+#neu-start + .heute-sec{padding-top:40px}
+.neu-link{white-space:nowrap;font-weight:600;color:var(--accent-ink)}
 .neu-chips{display:flex;flex-wrap:wrap;gap:6px;margin:0;padding:0;list-style:none}
 .neu-chips a,.neu-n{display:inline-block;padding:5px 10px;border-radius:999px;background:var(--surface-2);color:var(--fg);font:600 13px/1.2 var(--body);text-decoration:none}
 .neu-chips a:hover{background:var(--accent-soft);color:var(--accent-ink)}
@@ -447,7 +474,8 @@ body.has-cmp .footer{padding-bottom:76px}
 .kt-hinweis{margin:0;font-size:14px;color:var(--fg-3)}
 .kt-hinweis a{color:var(--fg-2)}
 .kontakt-form .btn-send{justify-self:start;padding:0 26px}
-.kt-bug{justify-self:start;display:inline-flex;align-items:center;gap:8px;min-height:42px;padding:0 16px;border:1.5px solid var(--line);border-radius:999px;background:var(--bg);color:var(--fg);font:600 15px/1.2 var(--body);cursor:pointer;transition:background-color .2s ease,border-color .2s ease,color .2s ease}
+.kt-knoepfe{display:flex;flex-wrap:wrap;gap:10px}
+.kt-bug{display:inline-flex;align-items:center;gap:8px;min-height:42px;padding:0 16px;border:1.5px solid var(--line);border-radius:999px;background:var(--bg);color:var(--fg);font:600 15px/1.2 var(--body);cursor:pointer;transition:background-color .2s ease,border-color .2s ease,color .2s ease}
 .kt-bug:hover{border-color:var(--accent);color:var(--accent-ink)}
 .kt-bug[aria-pressed="true"]{background:var(--accent-soft);border-color:var(--accent);color:var(--accent-ink)}
 .kt-bug-hinweis{margin:-4px 0 0;padding:10px 14px;border-radius:12px;background:var(--accent-soft);color:var(--accent-ink);font-size:14.5px;line-height:1.45}
