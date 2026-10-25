@@ -10,6 +10,10 @@
    link   Bereich der Startseite, z. B. 'abfahrten' (optional)
    ===================================================================== */
 const NEU = [
+  { datum: '2026-10-25', art: 'neu', text: 'Übersichtlichere Startseite: zuerst die Kategorien, dann die Neuigkeiten und der Zug der Woche.' },
+  { datum: '2026-10-25', art: 'update', text: 'Korrekturen bei RABe 524, Am 843, Eem 923 und Ee 922. Rangierfahrzeuge zeigen nur noch eine Einsatzkarte, wenn der Ort sicher belegt ist.', ids: ['rabe-524', 'am-843', 'eem-923', 'ee-922'] },
+  { datum: '2026-10-25', art: 'neu', text: 'Neues Kontaktformular: Schreib uns direkt über die Website.', link: 'kontakt' },
+  { datum: '2026-10-25', art: 'neu', text: 'Zentralbahn und MOB: 37 Fahrzeuge mit Fotos, Daten und Einsatzkarten.', ids: ['zb-adler', 'zb-fink', 'zb-spatz', 'zb-hge44ii', 'mob-gpx', 'mob-alpina', 'mob-ge44-8000', 'mob-panoramic'] },
   { datum: '2026-10-18', art: 'neu', text: 'Neue Seite «Danke»: ein Dankeschön an die Bahnfotografen, die Fotos für RailBase gemacht haben.', link: 'danke' },
   { datum: '2026-10-18', art: 'neu', text: 'Neue Adresse: railbase.ch. Am besten gleich als Lesezeichen speichern.' },
   { datum: '2026-10-18', art: 'neu', text: 'Aus HCKD RAIL wird RailBase: neuer Name und neues Logo. Sammlung und Sichtungen bleiben, wie sie sind.' },

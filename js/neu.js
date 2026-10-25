@@ -2,15 +2,14 @@
 'use strict';
 
 /* =====================================================================
-   NEU: alle Änderungen aus js/daten/neu.js, die neuesten zuoberst.
-   Die Seite steht nicht auf der Startseite, sondern unter #neu bzw. neu.html.
+   NEU: alle Änderungen aus js/daten/neu.js, die neuesten zuoberst, auf der
+   Seite #neu bzw. neu.html. Die Startseite zeigt die neuesten vier.
    ===================================================================== */
 (() => {
-  const box = $('#neu-list');
-  if (!box || typeof NEU === 'undefined') return;
-  const CHIPS = 6;
+  if (typeof NEU === 'undefined') return;
+  const CHIPS = 6, AUF_START = 4;
   const tag = s => { const d = new Date(s + 'T12:00:00'); return isNaN(d) ? s : d.toLocaleDateString(LOCALE, { day: 'numeric', month: 'long', year: 'numeric' }); };
-  box.innerHTML = NEU.map(e => {
+  const eintrag = e => {
     const ids = (e.ids || []).filter(id => zugOf(id));
     const chips = ids.slice(0, CHIPS).map(id => `<li><a href="#${id}">${esc(zn(zugOf(id)))}</a></li>`).join('')
       + (ids.length > CHIPS ? `<li class="neu-n">${esc(tr('+{n} weitere', { n: ids.length - CHIPS }))}</li>` : '');
@@ -19,5 +18,8 @@
       <p>${esc(tr(e.text))}${e.link ? ` <a class="neu-link" href="#${esc(e.link)}">${esc(tr('Ansehen'))}</a>` : ''}</p>
       ${chips ? `<ul class="neu-chips">${chips}</ul>` : ''}
     </li>`;
-  }).join('');
+  };
+  const alle = $('#neu-list'), start = $('#neu-start-list');
+  if (alle) alle.innerHTML = NEU.map(eintrag).join('');
+  if (start) start.innerHTML = NEU.slice(0, AUF_START).map(eintrag).join('');
 })();

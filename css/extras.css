@@ -229,6 +229,10 @@ body.has-cmp .footer{padding-bottom:76px}
 .neu-art.neu{background:var(--accent-soft);color:var(--accent-ink)}
 .neu-art.upd{background:var(--surface-2);color:var(--fg-2)}
 .neu-item p{margin:0;font-size:16px;line-height:1.45}
+.neu-alle{display:inline-flex;align-items:center;margin-top:18px;text-decoration:none}
+#neu-start{padding-bottom:0}
+#neu-start + .heute-sec{padding-top:40px}
+@media (max-width:700px){#neu-start-list .neu-item:nth-child(n+4){display:none}}
 .neu-link{white-space:nowrap;font-weight:600;color:var(--accent-ink)}
 .neu-chips{display:flex;flex-wrap:wrap;gap:6px;margin:0;padding:0;list-style:none}
 .neu-chips a,.neu-n{display:inline-block;padding:5px 10px;border-radius:999px;background:var(--surface-2);color:var(--fg);font:600 13px/1.2 var(--body);text-decoration:none}
@@ -266,7 +270,7 @@ body.has-cmp .footer{padding-bottom:76px}
 .seen-badge{position:absolute;left:10px;top:10px;z-index:1;padding:5px 10px 5px 8px;border-radius:99px;background:var(--best);color:#fff;font:700 12px/1 var(--body);box-shadow:0 2px 6px rgba(0,0,0,.18)}
 .seen-badge::before{content:"✓ "}
 
-/* ---------- Fahrzeug des Tages ---------- */
+/* ---------- Zug der Woche ---------- */
 .heute-sec{padding-block:48px 0}
 .heute{display:grid;border-radius:var(--r-lg);background:var(--surface);box-shadow:var(--shadow);overflow:hidden}
 @media (min-width:820px){.heute{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr)}}
@@ -329,7 +333,7 @@ body.has-cmp .footer{padding-bottom:76px}
 .theme-btn{display:grid;place-items:center;flex:none;width:34px;height:34px;margin-left:4px;padding:0;border:1px solid var(--line);border-radius:50%;background:transparent;color:var(--fg-2);cursor:pointer;transition:color .2s ease,border-color .2s ease,background-color .2s ease}
 .theme-btn:hover{color:var(--accent-ink);border-color:color-mix(in srgb,var(--accent) 35%,transparent);background:var(--accent-soft)}
 .theme-btn svg{grid-area:1/1;display:none}
-.theme-btn[data-mode="auto"] .ti-auto,.theme-btn[data-mode="light"] .ti-light,.theme-btn[data-mode="dark"] .ti-dark{display:block}
+.theme-btn[data-mode="light"] .ti-light,.theme-btn[data-mode="dark"] .ti-dark{display:block}
 .theme-btn + .donate{margin-left:0}
 /* language: globe and a native select (DE / FR / IT / EN) */
 .lang-btn{position:relative;display:inline-flex;align-items:center;gap:4px;flex:none;height:34px;margin-left:8px;padding:0 6px 0 9px;border:1px solid var(--line);border-radius:999px;color:var(--fg-2);cursor:pointer;transition:color .2s ease,border-color .2s ease,background-color .2s ease}

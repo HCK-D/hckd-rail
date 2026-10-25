@@ -291,21 +291,26 @@ document.addEventListener('click', e => {
 });
 
 /* =====================================================================
-   FAHRZEUG DES TAGES: jeden Tag ein anderes, nur Loks, Triebzüge und
+   ZUG DER WOCHE: jeden Montag ein anderer, nur von SBB, TPF, BLS und SOB,
+   aus Personenverkehr, Infrastruktur oder Cargo; nur Loks, Triebzüge und
    Traktoren mit Foto, nie Wagen
    ===================================================================== */
 (() => {
+  const BAHNEN_WOCHE = ['sbb', 'tpf', 'bls', 'sob'], KATS_WOCHE = ['personenverkehr', 'infrastruktur', 'cargo'];
   const mitAntrieb = z => ['lok', 'haube', 'rangier', 'triebzug'].includes(z.art && z.art.typ);
-  const fertig = ZUEGE.filter(z => mitAntrieb(z) && z.bilder && z.bilder.length);
-  const list = fertig.length ? fertig : ZUEGE.filter(mitAntrieb);
-  const d = new Date(), tag = Math.floor(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()) / 864e5);
-  const z = list[tag % list.length], k = katOf(z.kat);
-  const datum = d.toLocaleDateString(LOCALE, { weekday: 'long', day: 'numeric', month: 'long' });
+  const passt = z => mitAntrieb(z) && BAHNEN_WOCHE.includes(bahnOf(z)) && KATS_WOCHE.includes(z.kat);
+  const fertig = ZUEGE.filter(z => passt(z) && z.bilder && z.bilder.length);
+  const list = fertig.length ? fertig : ZUEGE.filter(passt);
+  // weeks start on Monday (1.1.1970 was a Thursday); 7919 is prime, so neighbouring weeks get different railways
+  const d = new Date(), tag = Math.floor(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()) / 864e5), woche = Math.floor((tag + 3) / 7);
+  const z = list[(woche * 7919) % list.length], k = katOf(z.kat);
+  const montag = new Date(Date.UTC(1970, 0, 1) + (woche * 7 - 3) * 864e5);
+  const datum = tr('Woche ab {d}', { d: montag.toLocaleDateString(LOCALE, { day: 'numeric', month: 'long', timeZone: 'UTC' }) });
   const pic = z.bilder && z.bilder.length ? `<img src="${esc(z.bilder[0].src)}" alt="${esc(zb(z, 0))}" loading="lazy">` : art(z);
   const kz = zt(z, 'kennzahlen') || [], bei = zt(z, 'beiname');
   $('#heute-card').innerHTML = `<a class="heute-pic" href="#${z.id}" tabindex="-1" aria-hidden="true">${pic}</a>
     <div class="heute-body">
-      <span class="kicker">${esc(tr('Fahrzeug des Tages'))} · ${esc(datum)}</span>
+      <span class="kicker">${esc(tr('Zug der Woche'))} · ${esc(datum)}</span>
       <h2 id="heute-h"><a href="#${z.id}">${esc(zn(z))}${bei ? ` <small>«${esc(bei)}»</small>` : ''}</a></h2>
       <p class="heute-typ">${esc(zt(z, 'typ'))} · ${esc(tr(k.name))}</p>
       <p class="heute-text">${esc(zt(z, 'text')[0])}</p>

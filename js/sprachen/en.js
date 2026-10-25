@@ -5027,3 +5027,18 @@ uebDict({
   'Bitte gib deinen Nachnamen an.': 'Please enter your last name.',
   'Schreibst du uns über das Kontaktformular, übermitteln wir deinen Vornamen und Namen, deine E-Mail-Adresse, deine Nachricht und das gewählte Thema ebenfalls über Web3Forms an unser Postfach. Name und E-Mail-Adresse brauchen wir, um dir persönlich zu antworten. Wir nutzen die Angaben nur dafür und löschen sie, wenn sie nicht mehr gebraucht werden.': 'If you write to us through the contact form, we send your first and last name, your e-mail address, your message and the chosen topic to our mailbox, again via Web3Forms. We need your name and e-mail address to reply to you personally. We use the details only for this and delete them when they are no longer needed.'
 });
+
+/* ---- 51-startseite.js ---- */
+/* English – start page: news, train of the week, light/dark button */
+uebDict({
+  'Neu auf RailBase': 'New on RailBase',
+  'Neuigkeiten und Updates': 'News and updates',
+  'Alle Neuigkeiten ansehen': 'See all news',
+  'Zug der Woche': 'Train of the week',
+  'Woche ab {d}': 'Week from {d}',
+  'Hell oder dunkel': 'Light or dark',
+  'Übersichtlichere Startseite: zuerst die Kategorien, dann die Neuigkeiten und der Zug der Woche.': 'A clearer start page: first the categories, then the news and the train of the week.',
+  'Korrekturen bei RABe 524, Am 843, Eem 923 und Ee 922. Rangierfahrzeuge zeigen nur noch eine Einsatzkarte, wenn der Ort sicher belegt ist.': 'Corrections for the RABe 524, Am 843, Eem 923 and Ee 922. Shunting vehicles now only show a service map when the location is reliably documented.',
+  'Neues Kontaktformular: Schreib uns direkt über die Website.': 'New contact form: write to us directly through the website.',
+  'Zentralbahn und MOB: 37 Fahrzeuge mit Fotos, Daten und Einsatzkarten.': 'Zentralbahn and MOB: 37 vehicles with photos, data and service maps.'
+});

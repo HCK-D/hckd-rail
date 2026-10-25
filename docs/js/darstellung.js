@@ -2,18 +2,19 @@
 'use strict';
 
 /* =====================================================================
-   DARSTELLUNG: automatisch (wie das Gerät) → hell → dunkel → automatisch
+   DARSTELLUNG: der Knopf wechselt nur zwischen hell und dunkel.
    Die Wahl bleibt im Browser (localStorage). Ein kleines Skript im <head>
-   setzt sie schon beim Laden, damit die Seite nicht kurz hell aufblitzt.
+   setzt sie schon beim Laden, damit die Seite nicht kurz hell aufblitzt;
+   beim ersten Besuch übernimmt es einmal die Einstellung des Geräts.
    ===================================================================== */
 (() => {
   const KEY = 'hckd-theme', btn = $('#theme-btn');
-  const NAMEN = { auto: tr('automatisch'), light: tr('hell'), dark: tr('dunkel') };
-  const NEXT = { auto: 'light', light: 'dark', dark: 'auto' };
-  const aktuell = () => root.getAttribute('data-theme') || 'auto';
+  const NAMEN = { light: tr('hell'), dark: tr('dunkel') };
+  const NEXT = { light: 'dark', dark: 'light' };
+  const aktuell = () => root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
   function setze(t) {
-    if (t === 'auto') root.removeAttribute('data-theme'); else root.setAttribute('data-theme', t);
-    try { if (t === 'auto') localStorage.removeItem(KEY); else localStorage.setItem(KEY, t); } catch (e) { /* private window */ }
+    root.setAttribute('data-theme', t);
+    try { localStorage.setItem(KEY, t); } catch (e) { /* private window */ }
     zeige();
   }
   function zeige() {

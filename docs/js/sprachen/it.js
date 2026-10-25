@@ -5030,3 +5030,18 @@ uebDict({
   'Bitte gib deinen Nachnamen an.': 'Indica il tuo cognome.',
   'Schreibst du uns über das Kontaktformular, übermitteln wir deinen Vornamen und Namen, deine E-Mail-Adresse, deine Nachricht und das gewählte Thema ebenfalls über Web3Forms an unser Postfach. Name und E-Mail-Adresse brauchen wir, um dir persönlich zu antworten. Wir nutzen die Angaben nur dafür und löschen sie, wenn sie nicht mehr gebraucht werden.': 'Se ci scrivi tramite il modulo di contatto, trasmettiamo il tuo nome e cognome, il tuo indirizzo e-mail, il tuo messaggio e l’argomento scelto, sempre tramite Web3Forms, alla nostra casella di posta. Nome e indirizzo e-mail ci servono per risponderti personalmente. Usiamo i dati solo a questo scopo e li cancelliamo quando non servono più.'
 });
+
+/* ---- 51-startseite.js ---- */
+/* Italiano – pagina iniziale: novità, treno della settimana, pulsante chiaro/scuro */
+uebDict({
+  'Neu auf RailBase': 'Novità su RailBase',
+  'Neuigkeiten und Updates': 'Novità e aggiornamenti',
+  'Alle Neuigkeiten ansehen': 'Vedi tutte le novità',
+  'Zug der Woche': 'Treno della settimana',
+  'Woche ab {d}': 'Settimana dal {d}',
+  'Hell oder dunkel': 'Chiaro o scuro',
+  'Übersichtlichere Startseite: zuerst die Kategorien, dann die Neuigkeiten und der Zug der Woche.': 'Pagina iniziale più chiara: prima le categorie, poi le novità e il treno della settimana.',
+  'Korrekturen bei RABe 524, Am 843, Eem 923 und Ee 922. Rangierfahrzeuge zeigen nur noch eine Einsatzkarte, wenn der Ort sicher belegt ist.': 'Correzioni per RABe 524, Am 843, Eem 923 ed Ee 922. I veicoli di manovra mostrano una cartina d’impiego solo se il luogo è documentato con certezza.',
+  'Neues Kontaktformular: Schreib uns direkt über die Website.': 'Nuovo modulo di contatto: scrivici direttamente dal sito.',
+  'Zentralbahn und MOB: 37 Fahrzeuge mit Fotos, Daten und Einsatzkarten.': 'Zentralbahn e MOB: 37 veicoli con foto, dati e cartine d’impiego.'
+});
