@@ -167,39 +167,6 @@ body.has-cmp .footer{padding-bottom:76px}
 .sam-txt b{font-size:15.5px;line-height:1.25}
 .sam-txt small{font-size:13px;color:var(--fg-2)}
 
-/* ---------- Steckbrief (only for printing / PDF) ---------- */
-#steckbrief{display:none}
-@media print{
-  @page{size:A4;margin:12mm}
-  html.druck-steckbrief body>*:not(#steckbrief){display:none!important}
-  html.druck-steckbrief,html.druck-steckbrief body{background:#fff!important;color:#202326!important}
-  html.druck-steckbrief #steckbrief{display:block;font:10.5pt/1.4 var(--body);color:#202326;-webkit-print-color-adjust:exact;print-color-adjust:exact}
-  #steckbrief .sb-kopf{display:flex;align-items:center;gap:10px;padding-bottom:8px;border-bottom:2px solid #D71920}
-  #steckbrief .sb-logo{width:auto;height:24px;aspect-ratio:570/270;color:#202326}
-  #steckbrief .sb-kopf div{display:grid;line-height:1.1}
-  #steckbrief .sb-kopf b{font:900 15pt/1 var(--display);letter-spacing:-.01em}
-  #steckbrief .sb-kopf em{font-style:normal;color:#D71920}
-  #steckbrief .sb-kopf span{font-size:8.5pt;color:#626971;text-transform:uppercase;letter-spacing:.12em}
-  #steckbrief .sb-typ{margin:12px 0 0;font:600 8.5pt/1.2 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:#626971}
-  #steckbrief h1{margin:2px 0 10px;font:800 24pt/1.05 var(--display)}
-  #steckbrief figure{margin:0 0 10px}
-  #steckbrief img{display:block;width:100%;max-height:78mm;object-fit:cover;border-radius:3mm}
-  #steckbrief figcaption{margin-top:3px;font-size:7.5pt;color:#626971}
-  #steckbrief .sb-kz{display:flex;flex-wrap:wrap;gap:4mm 9mm;margin:0 0 10px;padding:0;list-style:none}
-  #steckbrief .sb-kz li{display:grid}
-  #steckbrief .sb-kz b{font:800 15pt/1.1 var(--display)}
-  #steckbrief .sb-kz span{font:600 7pt/1.2 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:#626971}
-  #steckbrief .sb-spalten{display:grid;grid-template-columns:1.15fr 1fr;gap:8mm}
-  #steckbrief h2{margin:0 0 4px;font:700 11pt/1.2 var(--body);color:#D71920}
-  #steckbrief dl{margin:0}
-  #steckbrief dl div{display:grid;grid-template-columns:34% 1fr;gap:3mm;padding:3px 0;border-bottom:1px solid #E3E6E9;break-inside:avoid}
-  #steckbrief dt{color:#626971;font-size:9pt}
-  #steckbrief dd{margin:0;font-size:9.5pt}
-  #steckbrief section p{margin:0 0 6px}
-  #steckbrief .sb-note{font-size:8.5pt;color:#626971}
-  #steckbrief .sb-fuss{margin-top:10px;padding-top:6px;border-top:1px solid #E3E6E9;font-size:7.5pt;color:#626971}
-}
-
 /* ---------- «Züge unterscheiden» ---------- */
 .erk-tbl-wrap{margin-bottom:18px}
 .erk-tbl th[scope="row"]{font:700 15px/1.3 var(--body);letter-spacing:0;text-transform:none}
@@ -225,15 +192,23 @@ body.has-cmp .footer{padding-bottom:76px}
 .neu-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr));gap:14px;margin:0;padding:0;list-style:none}
 .neu-item{display:grid;align-content:start;gap:8px;padding:16px 18px;border-radius:var(--r-md);background:var(--surface);box-shadow:var(--shadow)}
 .neu-top{display:flex;align-items:center;gap:10px;font-size:13.5px;color:var(--fg-3)}
-.neu-art{padding:4px 9px;border-radius:999px;font:700 11px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase}
-.neu-art.neu{background:var(--accent-soft);color:var(--accent-ink)}
-.neu-art.upd{background:var(--surface-2);color:var(--fg-2)}
+.neu-art{display:inline-flex;align-items:center;gap:5px;padding:4px 9px;border-radius:999px;font:700 11px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase}
+.neu-art svg{width:13px;height:13px}
+.neu-art.fahrzeug,.neu-art.funktion{background:var(--accent-soft);color:var(--accent-ink)}
+.neu-art.foto,.neu-art.daten{background:var(--surface-2);color:var(--fg-2)}
+/* start page: one box, three lines (new vehicle, new photos, data updated) */
+.neu-box{max-width:780px;margin:0;padding:4px 22px;list-style:none;border-radius:var(--r-lg);background:var(--surface);box-shadow:var(--shadow)}
+.neu-zeile{display:grid;grid-template-columns:42px 1fr;gap:14px;align-items:start;padding:18px 0}
+.neu-zeile + .neu-zeile{border-top:1px solid var(--line)}
+.neu-ico{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:var(--accent-soft);color:var(--accent-ink)}
+.neu-zeile-txt{display:grid;gap:6px;min-width:0}
+.neu-zeile-txt b{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:17.5px;line-height:1.25}
+.neu-sub{color:var(--fg-2);font-size:15px;line-height:1.45}
+.neu-dich{padding:3px 8px;border-radius:999px;background:var(--accent);color:var(--on-accent);font:700 10.5px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase}
 .neu-item p{margin:0;font-size:16px;line-height:1.45}
 .neu-alle{display:inline-flex;align-items:center;margin-top:18px;text-decoration:none}
 #neu-start{padding-bottom:0}
-#neu-start + .heute-sec{padding-top:40px}
-@media (max-width:700px){#neu-start-list .neu-item:nth-child(n+4){display:none}}
-.neu-link{white-space:nowrap;font-weight:600;color:var(--accent-ink)}
+#neu-start + .heute-sec{padding-top:40px}.neu-link{white-space:nowrap;font-weight:600;color:var(--accent-ink)}
 .neu-chips{display:flex;flex-wrap:wrap;gap:6px;margin:0;padding:0;list-style:none}
 .neu-chips a,.neu-n{display:inline-block;padding:5px 10px;border-radius:999px;background:var(--surface-2);color:var(--fg);font:600 13px/1.2 var(--body);text-decoration:none}
 .neu-chips a:hover{background:var(--accent-soft);color:var(--accent-ink)}
