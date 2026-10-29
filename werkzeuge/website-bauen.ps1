@@ -136,7 +136,10 @@ $seiten = New-Object System.Collections.ArrayList
 $katName = @{}
 foreach ($m in [regex]::Matches($daten, "\{ id: '([^']+)', code: '[^']*', name: '([^']+)', text: '([^']*)'")) {
   $katName[$m.Groups[1].Value] = $m.Groups[2].Value
-  [void]$seiten.Add([pscustomobject]@{ art = 'kat'; id = $m.Groups[1].Value; name = $m.Groups[2].Value; text = $m.Groups[3].Value; bild = ''; prio = '0.8' })
+  # Vorschaubild der Kategorie = ihr eigenes Titelfoto (z. B. Cargo: Re 620 im Lavaux)
+  $zeile = $daten.Substring($m.Index, $daten.IndexOf("`n", $m.Index) - $m.Index)
+  $katBild = [regex]::Match($zeile, "bild: '(bilder/[^']+)'").Groups[1].Value
+  [void]$seiten.Add([pscustomobject]@{ art = 'kat'; id = $m.Groups[1].Value; name = $m.Groups[2].Value; text = $m.Groups[3].Value; bild = $katBild; prio = '0.8' })
 }
 $zm = [regex]::Matches($daten, "\{ id: '([^']+)', kat: '([^']+)',(?: gruppe: '[^']*',)? name: '([^']+)', beiname: '([^']*)', typ: '([^']*)'")
 for ($i = 0; $i -lt $zm.Count; $i++) {
