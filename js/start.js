@@ -21,3 +21,8 @@
 
 // start
 route();
+
+// built website: every page is its own file, so the hidden parts here (start page, other pages) never
+// show. Their photos are removed: they do not load, and Google does not file them under this page
+// (otherwise e.g. the Cargo category photo appeared in Google Images as «BCFe 4/6 Blauer Pfeil»).
+if (window.HCKD_SEITEN) $$('.view[hidden] img, .view [data-seite][hidden] img').forEach(img => img.remove());

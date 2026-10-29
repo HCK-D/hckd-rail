@@ -241,8 +241,8 @@ function Build-Page([string]$l, [string]$start, [string]$titel, [string]$text, [
 }
 foreach ($l in $sprachen) {
   Build-Page $l '' 'RailBase – Train Database' $fix[$l].start ''
-  # Fahrzeuge mit Foto teilen sich mit ihrer eigenen Vorschaukarte (bilder/teilen/<id>.jpg)
-  foreach ($s in $seiten) { $k = Kopf $l $s; Build-Page $l $s.id "$($k[0]) · RailBase" $k[1] $(if ($s.art -eq 'zug' -and $s.bild) { "bilder/teilen/$($s.id).jpg" } else { $s.bild }) }
+  # jedes Fahrzeug teilt sich mit seiner eigenen Vorschaukarte (bilder/teilen/<id>.jpg), auch ohne Foto
+  foreach ($s in $seiten) { $k = Kopf $l $s; Build-Page $l $s.id "$($k[0]) · RailBase" $k[1] $(if ($s.art -eq 'zug') { "bilder/teilen/$($s.id).jpg" } else { $s.bild }) }
 }
 
 # ---------- Dateien kopieren ----------
@@ -293,21 +293,31 @@ function Schrift([Drawing.Graphics]$g, [string]$text, [float]$start, [float]$max
   return New-Object Drawing.Font('Segoe UI', $gr, $stil, [Drawing.GraphicsUnit]::Pixel)
 }
 $neuGezeichnet = 0
-foreach ($s in ($seiten | Where-Object { $_.art -eq 'zug' -and $_.bild })) {
-  $quelle = Join-Path $root ($s.bild -replace '/', '\')
-  if (-not (Test-Path $quelle)) { continue }
-  $schluessel = "$($s.bild)|$([IO.File]::GetLastWriteTimeUtc($quelle).Ticks)|$($s.name)|$($s.bei)|v3"
+# Fahrzeuge ohne Foto bekommen eine schlichte Karte (dunkle Fläche, Name, RailBase), nie ein fremdes Foto
+foreach ($s in ($seiten | Where-Object { $_.art -eq 'zug' })) {
+  $quelle = if ($s.bild) { Join-Path $root ($s.bild -replace '/', '\') } else { '' }
+  if ($quelle -and -not (Test-Path $quelle)) { $quelle = '' }
+  $schluessel = if ($quelle) { "$($s.bild)|$([IO.File]::GetLastWriteTimeUtc($quelle).Ticks)|$($s.name)|$($s.bei)|v3" } else { "ohne Foto|$($s.name)|$($s.bei)|v3" }
   $hash = (($md5.ComputeHash([Text.Encoding]::UTF8.GetBytes($schluessel)) | Select-Object -First 5 | ForEach-Object { $_.ToString('x2') }) -join '')
   $karte = Join-Path $cache "$($s.id)-$hash.jpg"
   if (-not (Test-Path $karte)) {
     Get-ChildItem $cache -Filter "$($s.id)-*.jpg" | Remove-Item -Force
-    $foto = [Drawing.Image]::FromFile($quelle)
+    $foto = if ($quelle) { [Drawing.Image]::FromFile($quelle) } else { $null }
     $bmp = New-Object Drawing.Bitmap 1200, 630
     $g = [Drawing.Graphics]::FromImage($bmp)
     $g.SmoothingMode = 'AntiAlias'; $g.InterpolationMode = 'HighQualityBicubic'; $g.TextRenderingHint = 'AntiAliasGridFit'
-    # Foto füllt die Karte (überstehende Ränder werden abgeschnitten)
-    $f = [Math]::Max(1200 / $foto.Width, 630 / $foto.Height)
-    $g.DrawImage($foto, [float]((1200 - $foto.Width * $f) / 2), [float]((630 - $foto.Height * $f) / 2), [float]($foto.Width * $f), [float]($foto.Height * $f))
+    if ($foto) {
+      # Foto füllt die Karte (überstehende Ränder werden abgeschnitten)
+      $f = [Math]::Max(1200 / $foto.Width, 630 / $foto.Height)
+      $g.DrawImage($foto, [float]((1200 - $foto.Width * $f) / 2), [float]((630 - $foto.Height * $f) / 2), [float]($foto.Width * $f), [float]($foto.Height * $f))
+    } else {
+      # ohne Foto: dunkle Fläche mit zwei feinen Schienen als Zeichen
+      $grund = [Drawing.Drawing2D.LinearGradientBrush]::new([Drawing.Point]::new(0, 0), [Drawing.Point]::new(1200, 630), [Drawing.Color]::FromArgb(58, 64, 71), [Drawing.Color]::FromArgb(20, 22, 25))
+      $g.FillRectangle($grund, 0, 0, 1200, 630)
+      $schiene = New-Object Drawing.Pen ([Drawing.Color]::FromArgb(70, 255, 255, 255)), 6
+      $g.DrawLine($schiene, 1200, 170, 560, 630); $g.DrawLine($schiene, 1200, 300, 760, 630)
+      $g.FillRectangle((New-Object Drawing.SolidBrush ([Drawing.Color]::FromArgb(215, 25, 32))), 0, 620, 1200, 10)
+    }
     # dunkler Verlauf unten, damit die Schrift gut lesbar ist
     $verlauf = [Drawing.Drawing2D.LinearGradientBrush]::new([Drawing.Point]::new(0, 280), [Drawing.Point]::new(0, 631), [Drawing.Color]::FromArgb(0, 10, 12, 16), [Drawing.Color]::FromArgb(225, 10, 12, 16))
     $g.FillRectangle($verlauf, 0, 281, 1200, 349)
@@ -332,7 +342,7 @@ foreach ($s in ($seiten | Where-Object { $_.art -eq 'zug' -and $_.bild })) {
     $fAdr = New-Object Drawing.Font('Segoe UI', 24, [Drawing.FontStyle]::Bold, [Drawing.GraphicsUnit]::Pixel)
     Text $g 'railbase.ch' $fAdr $hell 42 568
     $bmp.Save($karte, $jpgCodec, $jpgParam)
-    $g.Dispose(); $bmp.Dispose(); $foto.Dispose()
+    $g.Dispose(); $bmp.Dispose(); if ($foto) { $foto.Dispose() }
     $neuGezeichnet++
   }
   Copy-Item $karte (Join-Path $teilenOut "$($s.id).jpg")

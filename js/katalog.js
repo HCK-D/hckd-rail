@@ -47,6 +47,8 @@ $('#foot-links').innerHTML = [
 ].map(([titel, inhalt]) => `<div class="foot-spalte"><h2>${esc(tr(titel))}</h2><ul>${inhalt}</ul></div>`).join('');
 /* ---------- slideshow beside the search ---------- */
 (() => {
+  // built website: only the start page shows the slideshow, other pages do not load its photos
+  if (window.HCKD_SEITEN && window.HCKD_START) return;
   const S = [
     ['slide-01', 'Regionalzug über einem Bergsee'],
     ['slide-02', 'FV-Dosto (RABe 502) in den Bergen', 'rabe-502'],
