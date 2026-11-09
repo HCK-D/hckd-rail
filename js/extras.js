@@ -129,7 +129,29 @@ let sicht = (() => {
 const sichtAnzahl = () => Object.values(sicht).reduce((n, l) => n + (Array.isArray(l) ? l.length : 0), 0);
 const seenBtn = $('#zug-seen');
 function istGesehen(id) { return seenIds.includes(id); }
+
+/* ---------- Lieblingsfahrzeuge: Herz-Knopf auf der Fahrzeugseite (im Browser; mit Konto auch online, js/konto.js) ---------- */
+const FAV_KEY = 'hckd-favoriten';
+let favIds = (() => {
+  try { const a = JSON.parse(localStorage.getItem(FAV_KEY) || '[]'); return Array.isArray(a) ? a.filter(id => zugOf(id)) : []; }
+  catch (e) { return []; }
+})();
+const favBtn = $('#zug-fav');
+const istFavorit = id => favIds.includes(id);
+function favSync() {
+  const on = !!(curZug && istFavorit(curZug.id));
+  favBtn.setAttribute('aria-pressed', on ? 'true' : 'false');
+  favBtn.setAttribute('aria-label', on ? tr('Aus den Lieblingsfahrzeugen entfernen') : tr('Zu den Lieblingsfahrzeugen'));
+}
+favBtn.addEventListener('click', () => {
+  if (!curZug) return;
+  favIds = istFavorit(curZug.id) ? favIds.filter(id => id !== curZug.id) : favIds.concat(curZug.id);
+  try { localStorage.setItem(FAV_KEY, JSON.stringify(favIds)); } catch (e) { /* private window: keep it for this visit */ }
+  albumSync();
+});
+
 function albumSync() {
+  favSync();
   const on = !!(curZug && istGesehen(curZug.id));
   seenBtn.setAttribute('aria-pressed', on ? 'true' : 'false');
   $('span', seenBtn).textContent = on ? tr('Gesehen') : tr('Hab ich gesehen');
@@ -207,7 +229,7 @@ function datei(name, inhalt, typ) {
 }
 const albumMsg = t => { $('#album-msg').textContent = t; };
 $('#album-export').addEventListener('click', () => {
-  const daten = { app: 'RailBase', version: 1, exportiert: new Date().toISOString(), gesehen: seenIds, sichtungen: sicht };
+  const daten = { app: 'RailBase', version: 1, exportiert: new Date().toISOString(), gesehen: seenIds, sichtungen: sicht, favoriten: favIds };
   datei('hckd-rail-sammlung-' + heute() + '.json', JSON.stringify(daten, null, 2), 'application/json');
   albumMsg(tr('Gesichert: {n} Fahrzeuge, {s} Sichtungen.', { n: seenIds.length, s: sichtAnzahl() }));
 });
@@ -241,6 +263,10 @@ $('#album-import').addEventListener('change', async e => {
         neu++;
       }
       if (!seenIds.includes(id)) seenIds.push(id);
+    }
+    if (Array.isArray(o.favoriten)) {
+      favIds = favIds.concat(o.favoriten.filter(id => typeof id === 'string' && zugOf(id) && !favIds.includes(id)));
+      try { localStorage.setItem(FAV_KEY, JSON.stringify(favIds)); } catch (err) { /* private window */ }
     }
     seenSpeichern(); sichtSpeichern(); albumSync(); sichtRender();
     albumMsg(tr('Geladen: {n} Fahrzeuge, {s} neue Sichtungen.', { n: seenIds.length, s: neu }));

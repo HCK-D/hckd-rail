@@ -1,28 +1,28 @@
-/* RailBase – Hell/Dunkel-Schalter */
+/* RailBase – Darstellung hell oder dunkel */
 'use strict';
 
 /* =====================================================================
-   DARSTELLUNG: der Knopf wechselt nur zwischen hell und dunkel.
-   Die Wahl bleibt im Browser (localStorage). Ein kleines Skript im <head>
-   setzt sie schon beim Laden, damit die Seite nicht kurz hell aufblitzt;
-   beim ersten Besuch übernimmt es einmal die Einstellung des Geräts.
+   DARSTELLUNG: Auswahl auf der Seite «Mein Konto» (#konto, Karte «Darstellung»):
+   Hell, Dunkel oder wie das Gerät. Die Wahl bleibt im Browser (localStorage,
+   hckd-theme; «wie das Gerät» = kein Eintrag). Ein kleines Skript im <head>
+   setzt sie schon beim Laden, damit die Seite nicht kurz hell aufblitzt.
    ===================================================================== */
 (() => {
-  const KEY = 'hckd-theme', btn = $('#theme-btn');
-  const NAMEN = { light: tr('hell'), dark: tr('dunkel') };
-  const NEXT = { light: 'dark', dark: 'light' };
-  const aktuell = () => root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+  const KEY = 'hckd-theme', wahl = $('#kt-darst');
+  if (!wahl) return;
+  const geraet = matchMedia('(prefers-color-scheme: dark)');
+  const gewaehlt = () => { try { const t = localStorage.getItem(KEY); return t === 'light' || t === 'dark' ? t : 'auto'; } catch (e) { return 'auto'; } };
   function setze(t) {
-    root.setAttribute('data-theme', t);
-    try { localStorage.setItem(KEY, t); } catch (e) { /* private window */ }
-    zeige();
+    try { if (t === 'auto') localStorage.removeItem(KEY); else localStorage.setItem(KEY, t); } catch (e) { /* private window */ }
+    anwenden();
   }
-  function zeige() {
-    const t = aktuell(), label = tr('Darstellung: {jetzt} (wechseln zu {neu})', { jetzt: NAMEN[t], neu: NAMEN[NEXT[t]] });
-    btn.dataset.mode = t;
-    btn.setAttribute('aria-label', label);
-    btn.title = label;
+  function anwenden() {
+    const t = gewaehlt();
+    root.setAttribute('data-theme', t === 'auto' ? (geraet.matches ? 'dark' : 'light') : t);
+    $$('[data-darst]', wahl).forEach(b => b.setAttribute('aria-checked', String(b.dataset.darst === t)));
   }
-  btn.addEventListener('click', () => setze(NEXT[aktuell()]));
-  zeige();
+  wahl.addEventListener('click', e => { const b = e.target.closest('[data-darst]'); if (b) setze(b.dataset.darst); });
+  // «wie das Gerät»: folgt dem Gerät, auch wenn es abends auf dunkel wechselt
+  geraet.addEventListener('change', () => { if (gewaehlt() === 'auto') anwenden(); });
+  anwenden();
 })();

@@ -14,6 +14,9 @@ const ABZEICHEN = (() => {
   const kat = (id, titel, text) => ({ id: 'kat-' + id, zeichen: (katOf(id) || {}).code || '?', titel, text, ziel: () => inKat(id).length, wert: () => gesehenIn(id) });
   const liste = (id, zeichen, titel, text, ids) => ({ id, zeichen, titel, text, ziel: () => ids.length, wert: () => ids.filter(istGesehen).length });
   const anzahl = (ziel, zeichen, titel) => ({ id: 'n' + ziel, zeichen, titel, text: ziel === 1 ? '1 Fahrzeug gesehen' : '{n} Fahrzeuge gesehen', ziel: () => ziel, wert: () => seenIds.length });
+  // quiz: best result per level in percent (js/quiz.js keeps it in hckd-quiz-best)
+  const quizBest = lv => { try { return Number((JSON.parse(localStorage.getItem('hckd-quiz-best') || '{}') || {})[lv]) || 0; } catch (e) { return 0; } };
+  const quiz = (lv, zeichen, titel, text) => ({ id: 'quiz-' + lv, zeichen, titel, text, ziel: () => 100, wert: () => quizBest(lv) });
   return [
     anzahl(1, '1', 'Erste Entdeckung'),
     anzahl(10, '10', 'Zehner-Sammler'),
@@ -29,7 +32,12 @@ const ABZEICHEN = (() => {
     liste('flirt', 'F', 'FLIRT-Kenner', 'Die FLIRT 521, 522, 523 und 524 gesehen', ['rabe-521', 'rabe-522', 'rabe-523', 'rabe-524']),
     liste('krokodil', 'Ce', 'Krokodil-Jäger', 'Beide Krokodile Ce 6/8 II und Ce 6/8 III gesehen', ['h-ce68ii', 'h-ce68iii']),
     { id: 's1', zeichen: '✎', titel: 'Notizbuch', text: 'Erste Sichtung eingetragen', ziel: () => 1, wert: () => sichtAnzahl() },
-    { id: 's10', zeichen: '✎', titel: 'Bahnbeobachter', text: '{n} Sichtungen eingetragen', ziel: () => 10, wert: () => sichtAnzahl() }
+    { id: 's10', zeichen: '✎', titel: 'Bahnbeobachter', text: '{n} Sichtungen eingetragen', ziel: () => 10, wert: () => sichtAnzahl() },
+    { id: 'fav1', zeichen: '♥', titel: 'Herzensfahrzeug', text: 'Erstes Lieblingsfahrzeug gewählt', ziel: () => 1, wert: () => favIds.length },
+    { id: 'fav10', zeichen: '♥♥', titel: 'Bahnliebhaber', text: '{n} Lieblingsfahrzeuge gewählt', ziel: () => 10, wert: () => favIds.length },
+    quiz('einfach', '?', 'Quiz-Einsteiger', 'Quiz «Einfach» ohne Fehler'),
+    quiz('normal', '??', 'Quiz-Kenner', 'Quiz «Normal» ohne Fehler'),
+    quiz('schwierig', '!', 'Quiz-Meister', 'Quiz «Schwierig» ohne Fehler')
   ].filter(a => a.ziel() > 0);
 })();
 const erreicht = () => ABZEICHEN.filter(a => a.wert() >= a.ziel());
@@ -53,6 +61,15 @@ function sammlungRender() {
       ${ok ? `<em>${esc(tr('Erreicht'))}</em>` : `<span class="b-prog" aria-label="${esc(tr('{a} von {b}', { a: wert, b: ziel }))}"><i style="width:${(wert / ziel * 100).toFixed(1)}%"></i></span><small>${esc(tr('{a} von {b}', { a: wert, b: ziel }))}</small>`}</div>
     </li>`;
   }).join('');
+
+  // Lieblingsfahrzeuge (Herz-Knopf, extras.js)
+  const favs = favIds.map(zugOf).filter(Boolean);
+  $('#sam-fav').innerHTML = favs.length
+    ? `<ul class="sam-grid">${favs.map(z => {
+        const bild = z.bilder && z.bilder.length ? `<img src="${esc(klein(z.bilder[0].src))}" alt="" loading="lazy">` : art(z);
+        return `<li><a class="sam-card" href="#${z.id}"><span class="sam-pic">${bild}</span><span class="sam-txt"><b>${esc(fullName(z))}</b><small>${esc(tr(katOf(z.kat).name))}</small></span></a></li>`;
+      }).join('')}</ul>`
+    : `<p class="empty">${esc(tr('Noch keine Lieblingsfahrzeuge. Tippe auf einer Fahrzeugseite auf «Lieblingsfahrzeug».'))}</p>`;
 
   if (!n) {
     $('#sam-list').innerHTML = `<p class="empty">${esc(tr('Du hast noch kein Fahrzeug als gesehen markiert. Öffne eine Fahrzeugseite und tippe auf «Hab ich gesehen» oder trage eine Sichtung ein.'))}</p>`;

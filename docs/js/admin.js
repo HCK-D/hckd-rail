@@ -55,6 +55,12 @@
     })).join('') || '<p>Alle Fahrzeuge haben Fotos.</p>';
   }
   function oeffnen(von) { zurueck = von; dlg.hidden = false; msg.textContent = ''; zeigePanel(istOffen()); }
+  // Knopf «Admin» auf der Seite «Mein Konto» (js/konto.js): nur für Konten, die die Datenbank als Admin kennt
+  // (ist_admin, werkzeuge/datenbank-webseite.sql). Dann ohne die drei Codes, nur für diesen Besuch.
+  window.adminOeffnen = von => {
+    try { sessionStorage.setItem(OFFEN_KEY, '1'); } catch (e) { /* only for this visit */ }
+    oeffnen(von);
+  };
   function schliessen() { speichere(); dlg.hidden = true; if (zurueck) zurueck.focus(); }
 
   pin.addEventListener('submit', async e => {

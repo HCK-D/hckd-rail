@@ -35,6 +35,7 @@ $fix = @{
           vergleich = 'Fahrzeuge vergleichen'; vergleichText = 'Bis zu drei Schweizer Bahnfahrzeuge nebeneinander vergleichen.'
           neu = 'Neu und aktualisiert'; neuText = 'Die letzten Ergänzungen bei RailBase: neue Fahrzeuge, neue Fotos und neue Funktionen.'
           sammlung = 'Meine Sammlung'; sammlungText = 'Gesehene Fahrzeuge, Sichtungen und Entdecker-Abzeichen bei RailBase.'
+          konto = 'Mein Konto'; kontoText = 'Dein Konto bei RailBase: Sammlung, Sichtungen, Favoriten und Abzeichen auf allen deinen Geräten.'
           erkennen = 'FLIRT 521, 522, 523 oder 524?';erkennenText = 'So unterscheidest du die FLIRT-Baureihen 521, 522, 523 und 524 der SBB: Nummer, Strom, Farben und Einsatzgebiet.'
           danke = 'Danke'; dankeText = 'Danke an die Bahnfotografen und an alle, die bei RailBase mithelfen, auch bei der Informatik. Und wie du selbst mithelfen kannst.'
           kontakt = 'Kontakt'; kontaktText = 'Schreib RailBase: Fragen, Ideen und Zusammenarbeit über das Kontaktformular.'
@@ -49,6 +50,7 @@ $fix = @{
           vergleich = 'Comparer des véhicules'; vergleichText = "Comparer jusqu’à trois véhicules ferroviaires suisses côte à côte."
           neu = 'Nouveautés et mises à jour'; neuText = 'Les derniers ajouts sur RailBase : nouveaux véhicules, nouvelles photos et nouvelles fonctions.'
           sammlung = 'Ma collection'; sammlungText = "Véhicules vus, observations et badges d’explorateur sur RailBase."
+          konto = 'Mon compte'; kontoText = 'Ton compte RailBase : collection, observations, favoris et badges sur tous tes appareils.'
           erkennen = 'FLIRT 521, 522, 523 ou 524 ?';erkennenText = "Comment distinguer les séries FLIRT 521, 522, 523 et 524 des CFF : numéro, courant, couleurs et région d’engagement."
           danke = 'Merci'; dankeText = 'Merci aux photographes ferroviaires et à toutes les personnes qui aident RailBase, y compris en informatique. Et comment tu peux aider toi aussi.'
           kontakt = 'Contact'; kontaktText = 'Écris à RailBase : questions, idées et collaboration via le formulaire de contact.'
@@ -63,6 +65,7 @@ $fix = @{
           vergleich = 'Confronta veicoli'; vergleichText = "Confronta fino a tre veicoli ferroviari svizzeri uno accanto all’altro."
           neu = 'Novità e aggiornamenti'; neuText = 'Le ultime aggiunte su RailBase: nuovi veicoli, nuove foto e nuove funzioni.'
           sammlung = 'La mia collezione'; sammlungText = 'Veicoli visti, avvistamenti e distintivi da esploratore su RailBase.'
+          konto = 'Il mio account'; kontoText = 'Il tuo account RailBase: collezione, avvistamenti, preferiti e distintivi su tutti i tuoi dispositivi.'
           erkennen = 'FLIRT 521, 522, 523 o 524?';erkennenText = "Come distinguere le serie FLIRT 521, 522, 523 e 524 delle FFS: numero, corrente, colori e zona d’impiego."
           danke = 'Grazie'; dankeText = 'Grazie ai fotografi ferroviari e a tutte le persone che aiutano RailBase, anche per la parte informatica. E come puoi aiutare anche tu.'
           kontakt = 'Contatto'; kontaktText = 'Scrivi a RailBase: domande, idee e collaborazioni tramite il modulo di contatto.'
@@ -77,6 +80,7 @@ $fix = @{
           vergleich = 'Compare vehicles'; vergleichText = 'Compare up to three Swiss railway vehicles side by side.'
           neu = 'New and updated'; neuText = 'The latest additions to RailBase: new vehicles, new photos and new features.'
           sammlung = 'My collection'; sammlungText = 'Vehicles seen, sightings and explorer badges on RailBase.'
+          konto = 'My account'; kontoText = 'Your RailBase account: collection, sightings, favourites and badges on all your devices.'
           erkennen = 'FLIRT 521, 522, 523 or 524?';erkennenText = 'How to tell the SBB FLIRT classes 521, 522, 523 and 524 apart: number, power system, colours and area of service.'
           danke = 'Thank you'; dankeText = 'Thank you to the railway photographers and everyone who helps RailBase, including with IT. And how you can help too.'
           kontakt = 'Contact'; kontaktText = 'Write to RailBase: questions, ideas and collaboration through the contact form.'
@@ -154,6 +158,7 @@ for ($i = 0; $i -lt $zm.Count; $i++) {
 [void]$seiten.Add([pscustomobject]@{ art = 'fix'; id = 'vergleich'; bild = ''; prio = '' })
 [void]$seiten.Add([pscustomobject]@{ art = 'fix'; id = 'neu'; bild = ''; prio = '0.5' })
 [void]$seiten.Add([pscustomobject]@{ art = 'fix'; id = 'sammlung'; bild = ''; prio = '' })
+[void]$seiten.Add([pscustomobject]@{ art = 'fix'; id = 'konto'; bild = ''; prio = '' })
 [void]$seiten.Add([pscustomobject]@{ art = 'fix'; id = 'erkennen'; bild = 'bilder/rabe-523-c1.jpg'; prio = '0.6' })
 [void]$seiten.Add([pscustomobject]@{ art = 'fix'; id = 'danke'; bild = ''; prio = '0.3' })
 [void]$seiten.Add([pscustomobject]@{ art = 'fix'; id = 'kontakt'; bild = ''; prio = '0.3' })
@@ -227,7 +232,7 @@ function Build-Page([string]$l, [string]$start, [string]$titel, [string]$text, [
     # Startseite: Name der Website für Google (erscheint dann als «RailBase» über dem Suchtreffer)
     if (-not $start) { $meta += "<script type=`"application/ld+json`">{`"@context`":`"https://schema.org`",`"@type`":`"WebSite`",`"name`":`"RailBase`",`"alternateName`":[`"RailBase Train Database`",`"railbase.ch`"],`"url`":`"$base`"}</script>`n<script type=`"application/ld+json`">{`"@context`":`"https://schema.org`",`"@type`":`"Organization`",`"name`":`"RailBase`",`"url`":`"$base`",`"logo`":`"${base}bilder/app/icon-512.png`"}</script>`n" }
   }
-  if ($start -eq 'vergleich' -or $start -eq 'sammlung') { $meta +="<meta name=`"robots`" content=`"noindex`">`n" }
+  if ($start -eq 'vergleich' -or $start -eq 'sammlung' -or $start -eq 'konto') { $meta +="<meta name=`"robots`" content=`"noindex`">`n" }
   # Favicon: SVG für Browser, dazu PNG (192 px, ein Vielfaches von 48 px wie von Google verlangt) und favicon.ico
   $meta += "<link rel=`"icon`" href=`"favicon.svg`" type=`"image/svg+xml`">`n<link rel=`"icon`" href=`"bilder/app/icon-192.png`" sizes=`"192x192`" type=`"image/png`">`n<link rel=`"icon`" href=`"favicon.ico`" sizes=`"48x48`">`n"
   # als App installierbar (manifest.webmanifest, sw.js und js/app.js)

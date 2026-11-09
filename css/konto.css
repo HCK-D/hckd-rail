@@ -1,0 +1,267 @@
+/* RailBase – Seite «Mein Konto» (#konto, js/konto.js) und Konto-Knopf in der Kopfzeile */
+
+/* ---------- Konto-Knopf oben ----------
+   Handy: runder Knopf; angemeldet roter Kreis mit dem ersten Buchstaben des Vornamens.
+   Grosser Bildschirm: Pille mit «Anmelden» bzw. «Mein Konto». */
+.konto-btn{gap:7px}
+.konto-btn.an::after{display:none}
+.konto-btn-kreis{display:none}
+.konto-btn-txt{display:none}
+.konto-btn.an{border-color:var(--accent);background:var(--accent);color:#fff}
+.konto-btn.an svg{display:none}
+.konto-btn.an .konto-btn-kreis{display:grid;place-items:center;font:800 16px/1 var(--body)}
+.konto-btn.an:hover{background:var(--accent-hover);color:#fff}
+@media (min-width:1100px){
+  .konto-btn{display:inline-flex;width:auto;padding:0 14px 0 11px;border-radius:999px;font:600 14px/1 var(--body)}
+  .konto-btn-txt{display:inline}
+  .konto-btn.an{padding-left:4px;border-color:var(--line);background:transparent;color:var(--fg)}
+  .konto-btn.an:hover{background:var(--accent-soft);color:var(--accent-ink)}
+  .konto-btn.an .konto-btn-kreis{width:26px;height:26px;border-radius:50%;background:var(--accent);color:#fff;font-size:14px}
+}
+
+/* ---------- Seite ---------- */
+.section.kt-seite{padding-block:22px 72px}
+.kt-seite .crumbs{margin-bottom:14px}
+.kt-layout{display:grid;gap:24px}
+.kt-inhalt{display:grid;gap:16px;min-width:0}
+.kt-teil{display:grid;gap:16px}
+.kt-teil[hidden],.kt-karte[hidden]{display:none}
+.kt-nur-gross{display:none!important}
+.kt-seite h2{margin:0;font:800 22px/1.15 var(--display);color:var(--fg)}
+
+/* Menü links (nur grosser Bildschirm) */
+.kt-nav{display:none}
+
+/* Kopf: Deine Bahnwelt, Hallo Vorname. */
+.kt-kopf{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px 20px}
+.kt-kopf h1{margin:6px 0 0;font:900 clamp(36px,6vw,56px)/1 var(--display);letter-spacing:-.02em;color:var(--fg)}
+.kt-lead{margin:8px 0 0;font-size:18px;color:var(--fg-2)}
+
+/* Karten */
+.kt-karte{padding:18px;border:1px solid var(--line);border-radius:16px;background:var(--surface);box-shadow:var(--shadow)}
+.kt-karte-kopf{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}
+.kt-gast{display:grid;gap:14px}
+.kt-gast p{margin:0;font-size:16px;color:var(--fg-2)}
+.kt-gast .btn-send{justify-self:start;padding:0 26px}
+.kt-leer{padding:6px 0;font-size:15px;color:var(--fg-2);list-style:none}
+
+/* Knöpfe */
+.kt-rand-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 18px;border:1.5px solid var(--accent);border-radius:12px;background:var(--surface);color:var(--accent-ink);font:700 16px/1 var(--body);text-decoration:none;cursor:pointer}
+.kt-rand-btn:hover{background:var(--accent-soft)}
+.kt-rand-btn.kt-dunkel{border-color:var(--fg);color:var(--fg)}
+.kt-rand-btn.kt-dunkel:hover{background:var(--surface-2)}
+.kt-gross-btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;height:54px;border:0;border-radius:12px;background:var(--accent);color:var(--on-accent);font:700 18px/1 var(--body);cursor:pointer}
+.kt-gross-btn:hover,.kt-klein-btn:hover{background:var(--accent-hover)}
+.kt-klein-btn{display:inline-flex;align-items:center;gap:6px;height:38px;padding:0 14px;border:0;border-radius:10px;background:var(--accent);color:var(--on-accent);font:700 15px/1 var(--body);cursor:pointer}
+.kt-pfeil-link{display:inline-flex;align-items:center;gap:8px;margin-top:12px;color:var(--accent-ink);font:700 16px/1.2 var(--body);text-decoration:none}
+.kt-pfeil-link::after{content:"→";font-size:20px;line-height:1}
+.kt-pfeil-link:hover{text-decoration:underline}
+
+/* Handy: Auswahl «Übersicht» */
+.kt-wahl{position:relative;display:flex;align-items:center;gap:12px;height:56px;padding:0 16px;border:1px solid var(--line);border-radius:14px;background:var(--surface);color:var(--accent);box-shadow:var(--shadow)}
+.kt-wahl svg{flex:none}
+.kt-wahl select{flex:1;min-width:0;height:100%;padding:0 30px 0 0;border:0;background:transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23626971' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") no-repeat right center;color:var(--fg);font:700 19px/1 var(--body);appearance:none;-webkit-appearance:none;cursor:pointer}
+.kt-wahl select:focus{outline:none}
+.kt-wahl:focus-within{outline:2px solid color-mix(in srgb,var(--accent) 55%,transparent);outline-offset:1px}
+
+/* Profilkarte */
+.kt-profil{display:flex;align-items:center;gap:18px}
+.kt-avatar{flex:none;display:grid;place-items:center;width:72px;height:72px;border-radius:50%;background:var(--accent);color:#fff;font:800 34px/1 var(--display)}
+.kt-profil-txt{flex:1;display:grid;gap:4px;min-width:0;padding-left:18px;border-left:1px solid var(--line)}
+.kt-profil-txt b{font:800 22px/1.15 var(--display);color:var(--fg);overflow-wrap:anywhere}
+.kt-profil-txt span{font-size:16px;color:var(--fg-2)}
+.kt-stift{flex:none;display:grid;place-items:center;width:44px;height:44px;border:0;border-radius:50%;background:transparent;color:var(--fg);cursor:pointer}
+.kt-stift:hover{background:var(--surface-2);color:var(--accent-ink)}
+
+/* Zahlen */
+.kt-zahlen{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:0;padding:0;list-style:none}
+.kt-zahlen li{display:flex;flex-direction:column;align-items:flex-start;gap:8px;padding:14px 10px;border:1px solid var(--line);border-radius:14px;background:var(--surface);box-shadow:var(--shadow);color:var(--accent)}
+.kt-zahlen svg{flex:none;width:26px;height:26px}
+.kt-zahlen div{display:grid;gap:2px;min-width:0}
+.kt-zahlen b{font:800 26px/1 var(--display);font-variant-numeric:tabular-nums;color:var(--fg)}
+.kt-zahlen span{font-size:12.5px;color:var(--fg-2);hyphens:auto}
+@media (min-width:560px){
+  .kt-zahlen li{flex-direction:row;align-items:center;gap:14px;padding:16px 18px}
+  .kt-zahlen svg{width:30px;height:30px}
+  .kt-zahlen div{padding-left:14px;border-left:1px solid var(--line)}
+  .kt-zahlen b{font-size:30px}
+  .kt-zahlen span{font-size:15px}
+}
+
+/* «Sichtung eintragen»: Fahrzeug wählen */
+.kt-sicht-wahl{display:grid;gap:12px}
+.kt-sicht-wahl .btn-send{justify-self:start;padding:0 26px}
+
+/* Letzte Sichtungen */
+.kt-zwei{display:grid;gap:16px}
+.kt-liste{margin:0;padding:0;list-style:none}
+.kt-liste li+li{border-top:1px solid var(--line)}
+.kt-liste a{display:flex;align-items:center;gap:14px;padding:10px 0;color:var(--fg);text-decoration:none}
+.kt-liste a:hover b{color:var(--accent-ink)}
+.kt-liste a>svg{flex:none;margin-left:auto;color:var(--fg)}
+.kt-bild{flex:none;width:112px;aspect-ratio:16/9;border-radius:8px;overflow:hidden;background:var(--surface-2)}
+.kt-bild img,.kt-bild svg{display:block;width:100%;height:100%;object-fit:cover}
+.kt-txt{display:grid;gap:3px;min-width:0}
+.kt-txt b{font:700 17px/1.2 var(--body)}
+.kt-txt small{font-size:15px;color:var(--fg-2)}
+
+/* Mein Bahnhof */
+.kt-bahnhof{display:grid;gap:12px;align-content:start}
+.kt-ort{display:flex;align-items:center;gap:8px;margin:0;color:var(--accent)}
+.kt-ort b{font:800 20px/1.2 var(--display);color:var(--fg)}
+.kt-bahnhof-bild{display:none;width:100%;height:auto}
+.kt-hinweis-txt{margin:0;font-size:16px;color:var(--fg-2)}
+.kt-bahnhof .kt-rand-btn{width:100%}
+
+/* Favoriten */
+#kt-fav-liste{margin:0}
+
+/* Entdecker-Abzeichen: Handy eine Zeile mit Pfeil, grosser Bildschirm drei Abzeichen */
+.kt-abz-zeile{display:flex;align-items:center;gap:14px;color:var(--fg);text-decoration:none}
+.kt-abz-zeile h2{flex:1;min-width:0;font-size:20px}
+.kt-abz-zeile small{font-size:14px;color:var(--fg-2)}
+.kt-abz-zeile::after{content:"";flex:none;width:20px;height:20px;background:currentColor;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 6l6 6-6 6'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 6l6 6-6 6'/%3E%3C/svg%3E") center/contain no-repeat}
+.kt-abz-zeile:hover h2{color:var(--accent-ink)}
+.kt-abz-liste{display:none;margin:16px 0 0;padding:0;list-style:none}
+.kt-abz-liste li{display:flex;align-items:center;gap:14px;min-width:0}
+.kt-abz-liste li>span:last-child{display:grid;gap:2px;min-width:0}
+.kt-abz-liste b{font:700 16px/1.2 var(--body);color:var(--fg)}
+.kt-abz-liste small{font-size:14px;color:var(--fg-2)}
+.kt-abz-liste li:not(.on) b{color:var(--fg-2)}
+.kt-abz-liste .medal{position:relative}
+.kt-abz-liste li.on .medal{background:radial-gradient(circle at 35% 30%,#FF6B70,#D71920 60%,#A3121A);color:#fff;border:3px solid #F2C14E;box-shadow:0 3px 10px rgba(215,25,32,.35)}
+.kt-schloss{position:absolute;right:-4px;bottom:-4px;width:22px;height:22px;border-radius:50%;background:var(--fg-2);box-shadow:0 0 0 2px var(--surface)}
+.kt-schloss::before{content:"";position:absolute;inset:5px;background:#fff;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M7 10V8a5 5 0 0 1 10 0v2h1v11H6V10zm2 0h6V8a3 3 0 0 0-6 0z'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M7 10V8a5 5 0 0 1 10 0v2h1v11H6V10zm2 0h6V8a3 3 0 0 0-6 0z'/%3E%3C/svg%3E") center/contain no-repeat}
+
+/* Einstellungen */
+.kt-einst{display:grid;gap:12px}
+.kt-einst p{margin:0;font-size:15.5px;color:var(--fg-2)}
+.kt-email b{color:var(--fg);overflow-wrap:anywhere}
+.kt-legends{display:inline-flex;align-items:center;text-decoration:none}
+
+/* ---------- grosser Bildschirm: Menü links, zwei Spalten ---------- */
+@media (min-width:900px){
+  .kt-nur-klein{display:none!important}
+  .kt-nur-gross{display:inline-flex!important}
+  .kt-wahl{display:none}
+  .kt-layout{grid-template-columns:240px minmax(0,1fr);align-items:start}
+  .kt-layout:has(> .kt-nav.aus){grid-template-columns:minmax(0,1fr)}
+  .kt-nav{position:sticky;top:90px;display:grid;gap:2px;padding:20px 14px;border:1px solid var(--line);border-radius:16px;background:var(--surface);box-shadow:var(--shadow)}
+  .kt-nav.aus{display:none}
+  .kt-nav .kicker{padding:0 10px 12px}
+  .kt-nav button,.kt-nav a{display:flex;align-items:center;gap:12px;width:100%;min-height:44px;padding:8px 12px;border:0;border-radius:10px;background:transparent;color:var(--fg);font:500 16px/1.2 var(--body);text-align:left;text-decoration:none;cursor:pointer}
+  .kt-nav button svg,.kt-nav a svg{flex:none;color:var(--fg-2)}
+  .kt-nav button:hover,.kt-nav a:hover{background:var(--surface-2)}
+  .kt-nav [aria-current="true"]{background:var(--accent-soft);color:var(--accent-ink);font-weight:700}
+  .kt-nav [aria-current="true"] svg{color:var(--accent)}
+  .kt-nav hr{width:100%;margin:8px 0;border:0;border-top:1px solid var(--line)}
+  .kt-lead{font-size:19px}
+  .kt-karte{padding:20px 22px}
+  .kt-profil{border-left:5px solid var(--accent)}
+  .kt-avatar{width:84px;height:84px;background:var(--surface-2);color:var(--accent);font-size:40px}
+  .kt-zwei{grid-template-columns:minmax(0,1.45fr) minmax(0,1fr)}
+  .kt-bahnhof-bild{display:block}
+  .kt-bahnhof .kt-rand-btn{justify-self:start;width:auto}
+  .kt-abz-liste{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+  .kt-abz-liste li+li{padding-left:16px;border-left:1px solid var(--line)}
+  .kt-abz-zeile::after{display:none}
+  .kt-abz-zeile>svg{display:none}
+}
+
+/* Profil ergänzen direkt auf der Seite */
+.kt-profilform{display:grid;gap:12px}
+.kt-profilform[hidden]{display:none}
+.kt-profilform .btn-send{justify-self:start;padding:0 26px}
+
+/* Darstellung: Hell, Dunkel, wie das Gerät (js/darstellung.js) */
+.kt-darst-karte{display:grid;gap:14px}
+.kt-darst{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px;padding:4px;border-radius:14px;background:var(--surface-2)}
+.kt-darst button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;min-height:64px;padding:8px 4px;border:0;border-radius:10px;background:transparent;color:var(--fg-2);font:600 14px/1.15 var(--body);text-align:center;cursor:pointer}
+.kt-darst button:hover{color:var(--fg)}
+.kt-darst button[aria-checked="true"]{background:var(--surface);color:var(--accent-ink);box-shadow:var(--shadow)}
+@media (min-width:560px){.kt-darst button{flex-direction:row;min-height:48px;font-size:15px}}
+
+/* ---------- Meine Statistik ---------- */
+.kt-statistik{display:grid;gap:14px}
+.kt-statistik .kt-karte-kopf{margin-bottom:0}
+.kt-filter select{height:42px;padding:0 34px 0 14px;border:1px solid var(--line);border-radius:10px;background:var(--bg) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%23626971' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") no-repeat right 10px center;color:var(--fg);font:600 15px/1 var(--body);appearance:none;-webkit-appearance:none;cursor:pointer}
+.kt-filter select:focus{outline:2px solid color-mix(in srgb,var(--accent) 55%,transparent);outline-offset:1px}
+.kt-stat-zahlen li{box-shadow:none;background:var(--bg)}
+.kt-stat-zahlen div{padding-left:0!important;border-left:0!important}
+.kt-stat-zahlen span{overflow-wrap:anywhere}
+.kt-stat-teile{display:grid;gap:18px}
+.kt-stat-teile[hidden]{display:none}
+.kt-stat-teile h3{margin:0 0 10px;font:700 15px/1.2 var(--body);color:var(--fg-2)}
+.kt-balken{display:grid;gap:8px;margin:0;padding:0;list-style:none}
+.kt-balken li{display:grid;grid-template-columns:64px minmax(0,1fr) auto;align-items:center;gap:10px}
+.kt-b-name{font:700 15px/1.2 var(--body);color:var(--fg)}
+.kt-b-balken{height:10px;border-radius:99px;background:var(--surface-2);overflow:hidden}
+.kt-b-balken i{display:block;height:100%;border-radius:inherit;background:var(--accent)}
+.kt-balken b{min-width:2ch;font:700 15px/1 var(--body);font-variant-numeric:tabular-nums;text-align:right;color:var(--fg)}
+.kt-top{display:grid;gap:8px;margin:0;padding:0 0 0 22px}
+.kt-top li{padding-left:2px}
+.kt-top a{font-weight:700;color:var(--fg);text-decoration:none}
+.kt-top a:hover{color:var(--accent-ink);text-decoration:underline}
+.kt-top span{display:block;font-size:14px;color:var(--fg-2)}
+@media (min-width:900px){.kt-stat-teile{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px}}
+
+/* ---------- Fotos beitragen, Privatsphäre, Meine Daten ---------- */
+.kt-fotos,.kt-privat,.kt-export{display:grid;gap:12px}
+.kt-fotos p,.kt-export p{margin:0;font-size:15.5px;color:var(--fg-2)}
+.kt-fotos-fehlt:empty{display:none}
+.kt-fotos-fehlt{font-weight:600;color:var(--accent-ink)!important}
+.kt-klein-txt{margin:0;font-size:14px;color:var(--fg-3)}
+.kt-klein-txt a{color:var(--accent-ink)}
+.kt-export .rp-msg:empty{display:none}
+
+/* Schalter (Checkbox als Kippschalter) */
+.kt-schalter{display:flex;align-items:flex-start;gap:14px;padding:12px 0;border-top:1px solid var(--line);cursor:pointer}
+.kt-schalter input{flex:none;width:46px;height:28px;margin:0;border-radius:99px;background-color:var(--fg-3);background-image:radial-gradient(circle,#fff 0 10px,transparent 10.5px);background-size:22px 22px;background-repeat:no-repeat;background-position:3px 50%;appearance:none;-webkit-appearance:none;cursor:pointer;transition:background-color .2s ease,background-position .2s var(--ease-out)}
+.kt-schalter input:checked{background-color:var(--accent);background-position:21px 50%}
+.kt-schalter input:focus-visible{outline:2px solid color-mix(in srgb,var(--accent) 55%,transparent);outline-offset:2px}
+.kt-schalter span{display:grid;gap:3px;min-width:0}
+.kt-schalter b{font:700 16px/1.25 var(--body);color:var(--fg)}
+.kt-schalter small{font-size:14px;line-height:1.35;color:var(--fg-2)}
+
+/* ---------- Profilbild (wie in RailBase Legends): Zeichen auf Farbe oder eigenes Foto ---------- */
+.kt-pb{display:grid;place-items:center;width:100%;height:100%;border-radius:50%;background:var(--pb,var(--surface-2));line-height:1}
+.konto-btn-kreis img,.kt-avatar-bild img,.kt-bild-rund img{display:block;width:100%;height:100%;border-radius:50%;object-fit:cover}
+
+/* Kopfzeile: mit Bild statt Buchstabe */
+.konto-btn.an.mit-bild{padding:0;overflow:hidden;border-color:var(--line);background:var(--surface)}
+.konto-btn.an.mit-bild .konto-btn-kreis{width:100%;height:100%;font-size:18px}
+@media (min-width:1100px){
+  .konto-btn.an.mit-bild{padding:0 14px 0 4px;overflow:visible;background:transparent}
+  .konto-btn.an.mit-bild .konto-btn-kreis{width:26px;height:26px;background:transparent;font-size:15px}
+}
+
+/* Profilkarte: Bild antippen = ändern */
+button.kt-avatar{position:relative;padding:0;border:0;cursor:pointer}
+.kt-avatar-bild{display:grid;place-items:center;width:100%;height:100%;border-radius:50%;overflow:hidden}
+.kt-avatar.mit-bild{background:transparent}
+.kt-avatar .kt-pb{font-size:38px}
+.kt-avatar-kamera{position:absolute;right:-2px;bottom:-2px;width:28px;height:28px;border-radius:50%;background:var(--surface);box-shadow:0 0 0 2px var(--surface),var(--shadow)}
+.kt-avatar-kamera::before{content:"";position:absolute;inset:6px;background:var(--fg-2);-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 8h3l2-3h6l2 3h3v11H4z'/%3E%3Ccircle cx='12' cy='13' r='3.5'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 8h3l2-3h6l2 3h3v11H4z'/%3E%3Ccircle cx='12' cy='13' r='3.5'/%3E%3C/svg%3E") center/contain no-repeat}
+.kt-avatar:hover .kt-avatar-kamera::before{background:var(--accent)}
+.kt-avatar:focus-visible{outline:3px solid color-mix(in srgb,var(--accent) 55%,transparent);outline-offset:3px}
+
+/* Fenster «Profilbild wählen» */
+.kt-bild-dlg{width:min(480px,100%)}
+.kt-bild-raster{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:0;padding:0;list-style:none}
+.kt-bild-knopf{display:grid;justify-items:center;gap:5px;width:100%;padding:8px 2px;border:0;border-radius:14px;background:var(--surface-2);color:var(--fg-2);cursor:pointer}
+.kt-bild-knopf small{font:600 12px/1.15 var(--body)}
+.kt-bild-rund{display:grid;place-items:center;width:58px;height:58px;border-radius:50%;overflow:hidden;font-size:30px}
+.kt-bild-ohne{background:var(--accent);color:#fff;font:800 26px/1 var(--display)}
+.kt-pb-kamera{background:var(--surface);border:2px dashed var(--line);font-size:24px}
+.kt-bild-knopf[aria-pressed="true"]{background:var(--accent-soft);box-shadow:inset 0 0 0 2px var(--accent);color:var(--accent-ink)}
+.kt-bild-knopf:focus-visible{outline:2px solid color-mix(in srgb,var(--accent) 55%,transparent);outline-offset:2px}
+.kt-bild-dlg .rp-msg:empty{display:none}
+
+/* Admin-Karte (nur für Admins) */
+.kt-admin{display:flex;align-items:center;gap:14px;border-color:color-mix(in srgb,var(--accent) 35%,var(--line));background:var(--accent-soft);color:var(--accent)}
+.kt-admin[hidden]{display:none}
+.kt-admin svg{flex:none}
+.kt-admin div{flex:1;display:grid;gap:2px;min-width:0}
+.kt-admin b{font:800 18px/1.2 var(--display);color:var(--fg)}
+.kt-admin small{font-size:14px;color:var(--fg-2)}
+.kt-nav [data-kt-admin][hidden]{display:none}

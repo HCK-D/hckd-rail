@@ -108,3 +108,64 @@
 .ib-actions{display:flex;gap:8px;margin-top:4px}
 .ib-actions button{height:30px;padding:0 12px;border:0;border-radius:999px;background:var(--surface-2);color:var(--fg);font:600 13px/1 var(--body);cursor:pointer}
 .ib-empty{padding:18px;border-radius:16px;background:var(--bg);color:var(--fg-3);text-align:center}
+
+/* ---------- Konto (js/konto.js) ---------- */
+.konto-btn{position:relative;display:grid;place-items:center;flex:none;width:34px;height:34px;margin-left:6px;padding:0;border:1px solid var(--line);border-radius:50%;background:transparent;color:var(--fg-2);cursor:pointer;-webkit-tap-highlight-color:transparent;transition:color .2s ease,border-color .2s ease,background-color .2s ease}
+.konto-btn:hover{color:var(--accent-ink);border-color:color-mix(in srgb,var(--accent) 35%,transparent);background:var(--accent-soft)}
+.konto-btn.an{color:var(--accent-ink);border-color:color-mix(in srgb,var(--accent) 35%,transparent)}
+.konto-btn.an::after{content:"";position:absolute;right:-1px;bottom:-1px;width:10px;height:10px;border:2px solid var(--bg);border-radius:50%;background:#1F8A4C}
+.konto-btn + .donate{margin-left:8px}
+.ko-teil{display:grid;gap:14px}
+.ko-teil[hidden]{display:none}
+.ko-reiter{display:grid;grid-template-columns:1fr 1fr;gap:4px;padding:4px;border-radius:14px;background:var(--surface-2)}
+.ko-reiter button{height:40px;border:0;border-radius:10px;background:transparent;color:var(--fg-2);font:600 15px/1 var(--body);cursor:pointer}
+.ko-reiter button[aria-selected="true"]{background:var(--surface);color:var(--fg);box-shadow:var(--shadow)}
+.ko-form{display:grid;gap:12px}
+.ko-oder{display:flex;align-items:center;gap:12px;color:var(--fg-3)!important;font-size:13px!important}
+.ko-oder::before,.ko-oder::after{content:"";flex:1;height:1px;background:var(--line)}
+.ko-google{display:flex;align-items:center;justify-content:center;gap:10px;height:48px;border:1px solid var(--line);border-radius:14px;background:var(--surface);color:var(--fg);font:600 16px/1 var(--body);cursor:pointer}
+.ko-google:hover:not(:disabled){background:var(--surface-2)}
+.ko-google:disabled{opacity:.6;cursor:wait}
+.dlg p.ko-klein{font-size:13.5px;color:var(--fg-3)}
+.ko-wer-zeile b{color:var(--fg);word-break:break-all}
+.dlg p.ko-geladen{padding:10px 12px;border-radius:12px;background:color-mix(in srgb,#1F8A4C 12%,transparent);color:#1F8A4C}
+.dlg p.ko-status{font-size:14.5px;font-weight:600}
+.ko-status:empty{display:none}
+.ko-status[data-status="ok"]{color:#1F8A4C}
+.ko-status[data-status="fehler"],.ko-status[data-status="tabelle"]{color:var(--accent-ink)}
+.ko-spiel{display:grid;place-items:center;height:48px;margin-top:6px;border-radius:14px;text-decoration:none}
+.ko-ab{justify-self:start}
+.ko-ab-frage{display:grid;gap:10px;padding:14px;border-radius:14px;background:var(--surface-2)}
+.ko-ab-frage[hidden]{display:none}
+.ko-ab-knoepfe{display:flex;flex-wrap:wrap;gap:8px}
+/* Handy: mit dem Konto-Knopf wird die Kopfzeile enger, darum kleinere Abstände */
+@media (max-width:600px){.topbar .wrap .lang-btn,.topbar .wrap .theme-btn,.topbar .wrap .konto-btn{margin-left:0}}
+@media (max-width:420px){.topbar .wrap{gap:6px}}
+/* Konto: Profil, Zahlen und Erfolge */
+.ko-neu{display:grid;gap:12px}
+.ko-neu[hidden]{display:none}
+.ko-zwei{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.ko-zwei .fld{min-width:0}
+.fld input[type="date"]{min-height:46px;-webkit-appearance:none;appearance:none}
+.ko-zahlen{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:0;padding:0;list-style:none}
+.ko-zahlen li{display:grid;gap:4px;padding:12px 8px;border-radius:14px;background:var(--surface-2);text-align:center}
+.ko-zahlen b{font:800 20px/1 var(--display);font-variant-numeric:tabular-nums;color:var(--fg)}
+.ko-zahlen span{font-size:12.5px;line-height:1.2;color:var(--fg-3)}
+.ko-erfolge{display:grid;gap:10px;padding:14px;border-radius:16px;background:var(--surface-2)}
+.ko-erfolge h3{margin:0;font:700 16px/1.2 var(--body);color:var(--fg)}
+.ko-erfolge h3 small{margin-left:6px;font-weight:600;font-size:13px;color:var(--fg-3)}
+.ko-medaillen{display:grid;grid-template-columns:repeat(auto-fill,minmax(64px,1fr));gap:10px 6px;margin:0;padding:0;list-style:none}
+.ko-medaillen li{display:grid;justify-items:center;gap:5px;text-align:center}
+.ko-medaillen .medal{width:40px;height:40px;font-size:13px;border-width:2px}
+.ko-medaillen li.on .medal{background:radial-gradient(circle at 35% 30%,#FF6B70,#D71920 60%,#A3121A);color:#fff;border:2px solid #F2C14E;box-shadow:0 3px 10px rgba(215,25,32,.35)}
+.ko-medaillen li:not(.on){opacity:.55}
+.ko-m-name{font-size:11px;line-height:1.15;color:var(--fg-2);overflow-wrap:anywhere}
+.dlg p.ko-naechster{font-size:14px;color:var(--fg-2)}
+.ko-link{font-size:14px;font-weight:600;color:var(--accent-ink)}
+/* Lieblingsfahrzeug: Herz gefüllt, wenn gewählt */
+.fav-toggle[aria-pressed="true"] svg{fill:currentColor}
+/* Konto löschen: unauffällig, aber rot */
+.ko-del-btn{justify-self:start;padding:4px 0;border:0;background:none;color:var(--accent-ink);font:600 14px/1.3 var(--body);text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.ko-del-btn[hidden]{display:none}
+.ko-del-frage{border:2px solid var(--accent)}
+.ko-del-frage b{color:var(--accent-ink)}

@@ -34,6 +34,8 @@ function zaehleEinmal(name, titel) {
 }
 
 (() => {
+  // ausgeschaltet unter «Mein Konto» → Privatsphäre (oder mit #toggle-goatcounter): dann gar nicht laden
+  try { if (localStorage.getItem('skipgc') === 't') return; } catch (e) { /* private window */ }
   const code = STATISTIK.goatcounter.trim();
   // only on the real website: not on claude.ai, not on localhost, not from a file
   if (!/^[a-z0-9-]+$/i.test(code) || !/^https:$/.test(location.protocol) || /(^|\.)claude\.ai$|claudeusercontent|^localhost$|^127\./.test(location.hostname)) return;
