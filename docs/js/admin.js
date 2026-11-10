@@ -42,7 +42,7 @@
   const istOffen = () => { try { return sessionStorage.getItem(OFFEN_KEY) === '1'; } catch (e) { return false; } };
   function zeigePanel(auf) {
     pin.hidden = auf; panel.hidden = !auf;
-    if (auf) { ladeZahl(); ladeZeit(); ladeMitmachen(); ohneFotos(); notiz.value = lies(); notiz.focus(); } else { codes.forEach(c => { c.value = ''; }); pinMsg.textContent = ''; code.focus(); }
+    if (auf) { ladeZahl(); ladeZeit(); ohneFotos(); ladeEingang(); notiz.value = lies(); notiz.focus(); } else { codes.forEach(c => { c.value = ''; }); pinMsg.textContent = ''; code.focus(); }
   }
 
   // vehicles without photos, grouped by railway and category; built from the data, so it stays current
@@ -128,27 +128,86 @@
     $$('li', tage).forEach((li, i) => { li.querySelector('i').style.width = (isNaN(zahlen[i]) ? 0 : zahlen[i] / max * 100) + '%'; });
   }
 
-  // who takes part: the counts of the once-per-browser steps from statistik.js (zaehleEinmal);
-  // a step nobody has reached yet is unknown to GoatCounter (404) and shows 0
-  const MITMACHEN = [
-    ['quiz-person', 'haben ein Quiz beendet', 'gross'],
-    ['quiz-einfach', 'Level Einfach', 'klein'], ['quiz-normal', 'Level Normal', 'klein'], ['quiz-schwierig', 'Level Schwierig', 'klein'],
-    ['sammlung-person', 'sammeln Fahrzeuge («Hab ich gesehen»)'],
-    ['sichtung-person', 'haben eine Sichtung eingetragen']
-  ];
-  async function ladeMitmachen() {
-    const liste = $('#ad-mit'), gc = (typeof STATISTIK !== 'undefined' && STATISTIK.goatcounter) || '';
-    liste.innerHTML = MITMACHEN.map(([p, text, art]) => `<li${art ? ` class="${art}"` : ''}><b data-mit="${p}">…</b><span>${esc(text)}</span></li>`).join('');
-    await Promise.all(MITMACHEN.map(async ([p]) => {
-      const feld = $(`[data-mit="${p}"]`, liste);
-      if (!gc) { feld.textContent = '–'; return; }
-      try {
-        const r = await fetch('https://' + gc + '.goatcounter.com/counter/' + p + '.json', { cache: 'no-store' });
-        const d = r.ok ? await r.json() : null, n = d && parseInt(String(d.count).replace(/\D/g, ''), 10);
-        feld.textContent = r.status === 404 ? '0' : isNaN(n) ? '–' : n.toLocaleString('de-CH');
-      } catch (err) { feld.textContent = '–'; }
-    }));
+  // «Wer macht mit?» (Einmal-Zählung pro Browser) ist seit dem 10.11.2026 entfernt, siehe statistik.js
+
+  /* ---------- Eingesandte Fotos (js/fotos.js, Tabelle foto_eingang, Speicher fotos-eingang) ----------
+     Lesen und löschen darf nur ein Admin-Konto (ist_admin in der Datenbank). Mit den drei Codes allein
+     sieht man hier nichts. Die Fotos werden mit Links geöffnet, die 1 Stunde gültig sind. */
+  const ORDNER = 'fotos-eingang';
+  const eingangListe = $('#ad-fotos-liste'), eingangN = $('#ad-fotos-n');
+  let eingangDb = null;
+  const datumZeit = s => new Date(s).toLocaleString('de-CH', { day: 'numeric', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit' });
+  async function ladeEingang() {
+    if (!eingangListe) return;
+    eingangN.textContent = '…';
+    eingangListe.innerHTML = '<p>Wird geladen …</p>';
+    try {
+      if (typeof window.kontoVerbindung !== 'function') throw new Error('kein Konto');
+      const db = eingangDb = await window.kontoVerbindung();
+      const { data: s } = await db.auth.getSession();
+      if (!s.session) { eingangN.textContent = '–'; eingangListe.innerHTML = '<p>Melde dich mit deinem Admin-Konto an («Mein Konto»), dann erscheinen hier die Fotos.</p>'; return; }
+      const { data: admin } = await db.rpc('ist_admin');
+      if (!admin) { eingangN.textContent = '–'; eingangListe.innerHTML = '<p>Dieses Konto ist kein Admin-Konto.</p>'; return; }
+      const { data: zeilen, error } = await db.from('foto_eingang').select('*').order('erstellt', { ascending: false }).limit(200);
+      if (error) throw error;
+      // Ordner ohne Angaben (Hochladen abgebrochen): auch anzeigen, damit sie gelöscht werden können
+      const { data: ordner } = await db.storage.from(ORDNER).list('', { limit: 500 });
+      const bekannt = new Set(zeilen.map(z => z.id));
+      const waisen = (ordner || []).filter(o => !o.metadata && !bekannt.has(o.name)).map(o => o.name);
+      const offen = zeilen.filter(z => !z.fotos_geloescht);
+      eingangN.textContent = offen.length;
+      const pfade = offen.flatMap(z => z.dateien);
+      const links = {};
+      if (pfade.length) {
+        const { data: signiert } = await db.storage.from(ORDNER).createSignedUrls(pfade, 3600);
+        (signiert || []).forEach(x => { if (x.signedUrl) links[x.path] = x.signedUrl; });
+      }
+      eingangListe.innerHTML = (zeilen.length || waisen.length) ? zeilen.map(z => `
+        <article class="ad-foto" data-id="${esc(z.id)}">
+          <h3>${esc(z.fahrzeug)} <small>${esc(datumZeit(z.erstellt))}</small></h3>
+          <p><b>${esc(z.fotograf)}</b> · <a href="mailto:${esc(z.email)}">${esc(z.email)}</a>${z.ort_datum ? '<br>' + esc(z.ort_datum) : ''}</p>
+          <p class="ad-foto-erl">Website: ja · Personen: ja · Legends: ${z.legends ? 'ja' : 'nein'} · Instagram/Werbung: ${z.social ? 'ja' : 'nein'}<br><small>${esc((z.erlaubnis && z.erlaubnis.version) || '')}, ${esc(datumZeit((z.erlaubnis && z.erlaubnis.zeitpunkt) || z.erstellt))}</small></p>
+          ${z.fotos_geloescht ? `<p><i>Fotos gelöscht am ${esc(datumZeit(z.fotos_geloescht))}.</i></p>` : `<div class="ad-foto-bilder">${z.dateien.map(p => links[p] ? `<a href="${esc(links[p])}" target="_blank" rel="noopener"><img src="${esc(links[p])}" alt="Foto ${esc(p.split('/')[1])}" loading="lazy"></a>` : '<span>Foto fehlt</span>').join('')}</div>`}
+          <div class="ad-btns">
+            ${z.fotos_geloescht ? '' : '<button class="qz-btn ghost" type="button" data-eingang="fotos">Fotos löschen</button>'}
+            <button class="qz-btn ghost" type="button" data-eingang="alles">Alles löschen</button>
+          </div>
+        </article>`).join('') + waisen.map(w => `
+        <article class="ad-foto" data-waise="${esc(w)}">
+          <h3>Unvollständige Einsendung <small>${esc(w.slice(0, 8))}</small></h3>
+          <p>Fotos ohne Angaben (Hochladen wurde abgebrochen).</p>
+          <div class="ad-btns"><button class="qz-btn ghost" type="button" data-eingang="waise">Löschen</button></div>
+        </article>`).join('') : '<p>Keine eingesandten Fotos.</p>';
+    } catch (err) {
+      eingangN.textContent = '–';
+      eingangListe.innerHTML = '<p>Fotos konnten nicht geladen werden (keine Verbindung oder Datenbank noch nicht eingerichtet).</p>';
+    }
   }
+  async function ordnerLeeren(db, id) {
+    const { data } = await db.storage.from(ORDNER).list(id, { limit: 20 });
+    const pfade = (data || []).map(d => id + '/' + d.name);
+    if (pfade.length) { const { error } = await db.storage.from(ORDNER).remove(pfade); if (error) throw error; }
+  }
+  if (eingangListe) eingangListe.addEventListener('click', async e => {
+    const knopf = e.target.closest('[data-eingang]');
+    if (!knopf || !eingangDb) return;
+    const karte = knopf.closest('.ad-foto'), art = knopf.dataset.eingang;
+    const id = karte.dataset.id || karte.dataset.waise;
+    const frage = art === 'alles' ? 'Fotos UND Angaben (Name, E-Mail, Erlaubnis) endgültig löschen?' : 'Die Fotos endgültig aus dem Speicher löschen?';
+    if (!confirm(frage)) return;
+    knopf.disabled = true;
+    try {
+      await ordnerLeeren(eingangDb, id);
+      if (art === 'fotos') {
+        const { error } = await eingangDb.from('foto_eingang').update({ fotos_geloescht: new Date().toISOString() }).eq('id', id);
+        if (error) throw error;
+      } else if (art === 'alles') {
+        const { error } = await eingangDb.from('foto_eingang').delete().eq('id', id);
+        if (error) throw error;
+      }
+      ladeEingang();
+    } catch (err) { knopf.disabled = false; alert('Löschen hat nicht geklappt. Bitte nochmals versuchen.'); }
+  });
 
   // notes: kept in this browser only, saved while typing
   const lies = () => { try { return localStorage.getItem(NOTIZ_KEY) || ''; } catch (e) { return ''; } };

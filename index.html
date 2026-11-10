@@ -150,7 +150,7 @@
           <div class="album-txt">
             <span class="kicker">Sammelalbum</span>
             <b id="album-n">0 von 0 gesehen</b>
-            <span>Tippe auf einer Fahrzeugseite auf «Hab ich gesehen». Die Liste bleibt in deinem Browser.</span>
+            <span>Tippe auf einer Fahrzeugseite auf «Hab ich gesehen». Ohne Konto bleibt die Liste in deinem Browser.</span>
           </div>
           <div class="album-bar" aria-hidden="true"><i id="album-bar"></i></div>
           <div class="album-go">
@@ -485,7 +485,7 @@
           <div>
             <span class="kicker">Vergleich</span>
             <h1>Fahrzeuge vergleichen</h1>
-            <p>Bis zu drei Fahrzeuge nebeneinander. Füge sie hier oder auf der Fahrzeugseite mit «Zum Vergleich» hinzu. Die Auswahl bleibt in deinem Browser gespeichert.</p>
+            <p>Bis zu drei Fahrzeuge nebeneinander. Füge sie hier oder auf der Fahrzeugseite mit «Zum Vergleich» hinzu. Ohne Konto bleibt die Auswahl in deinem Browser gespeichert.</p>
           </div>
           <label class="sortbox" for="cmp-add">
             <span>Fahrzeug hinzufügen</span>
@@ -586,7 +586,7 @@
           <div>
             <span class="kicker">Sammelalbum</span>
             <h1>Meine Sammlung</h1>
-            <p>Alle Fahrzeuge, die du gesehen hast, deine Sichtungen und deine Entdecker-Abzeichen. Alles bleibt in deinem Browser.</p>
+            <p>Alle Fahrzeuge, die du gesehen hast, deine Sichtungen und deine Entdecker-Abzeichen. Ohne Konto bleibt alles in deinem Browser; bist du angemeldet, wird eine Kopie in deinem Konto gespeichert.</p>
           </div>
         </div>
         <div class="sam-stand">
@@ -600,7 +600,7 @@
         <h2 class="sam-h">Gesehene Fahrzeuge</h2>
         <div id="sam-list"></div>
         <h2 class="sam-h">Sammlung sichern</h2>
-        <p class="sam-hint">Die Sammlung ist nur in diesem Browser gespeichert. Sichere sie als Datei, damit sie nicht verloren geht oder um sie auf ein anderes Gerät zu holen.</p>
+        <p class="sam-hint">Ohne Konto ist die Sammlung nur in diesem Browser gespeichert. Sichere sie als Datei, damit sie nicht verloren geht oder um sie auf ein anderes Gerät zu holen. Mit Konto ist sie auf allen deinen Geräten da.</p>
         <div class="album-tools">
           <button class="report-btn" type="button" id="album-export">Sammlung sichern (Datei)</button>
           <button class="report-btn" type="button" id="album-csv">Als Tabelle (CSV)</button>
@@ -658,9 +658,7 @@
                     <input id="kt-p-nachname" type="text" maxlength="50" autocomplete="family-name">
                   </label>
                 </div>
-                <label class="fld" for="kt-p-geburt"><span>Geburtsdatum <small>mindestens 16 Jahre</small></span>
-                  <input id="kt-p-geburt" type="date" min="1900-01-01" autocomplete="bday">
-                </label>
+                <label class="ft-ok"><input type="checkbox" id="kt-p-ab16"> <span>Ich bin mindestens 16 Jahre alt.</span></label>
                 <p class="rp-msg" id="kt-p-msg" role="status"></p>
                 <button class="btn-send" type="submit" id="kt-p-los">Speichern</button>
               </form>
@@ -815,7 +813,8 @@
                 <button class="ko-del-btn" type="button" id="ko-del">Konto löschen</button>
                 <div class="ko-ab-frage ko-del-frage" id="ko-del-frage" hidden>
                   <p><b>Konto wirklich löschen?</b></p>
-                  <p>Dein Konto wird sofort gelöscht, mit allen Daten von RailBase und vom Spiel RailBase Legends (Sammlung, Erfolge, Spielstand, Karten und Freunde). Das kann man nicht rückgängig machen.</p>
+                  <p>Dein Konto ist auch dein Konto für das Spiel RailBase Legends. Gelöscht werden sofort: deine Anmeldung, dein Profil mit Profilbild, deine Daten der Website (Sammlung, Sichtungen, Favoriten, Erfolge) und dein ganzer Spielstand in RailBase Legends (Karten, Coins, Packs, Freunde, Tausch-Anfragen und Geschenke). Danach kannst du dich weder hier noch im Spiel anmelden. Das kann man nicht rückgängig machen.</p>
+                  <p>Nachrichten und eingesandte Fotos sind vom Konto getrennt. Was danach noch für kurze Zeit bestehen bleiben kann, steht im Datenschutz.</p>
                   <p class="rp-msg" id="ko-del-msg" role="status"></p>
                   <div class="ko-ab-knoepfe">
                     <button class="qz-btn ko-del-ja" type="button" id="ko-del-ja">Ja, Konto löschen</button>
@@ -836,7 +835,7 @@
                 <input type="checkbox" id="kt-pr-zaehlen">
                 <span><b>Anonyme Besucherzählung</b><small>Zählt ohne Cookies, welche Seiten aufgerufen werden. Gilt für dieses Gerät.</small></span>
               </label>
-              <p class="kt-klein-txt">Deine Sichtungen, Favoriten und dein Profil sieht niemand ausser dir. Mehr dazu im <a href="#datenschutz">Datenschutz</a>.</p>
+              <p class="kt-klein-txt">Deine Sichtungen, Favoriten und dein Profil sehen andere Nutzerinnen und Nutzer nicht. Mehr dazu im <a href="#datenschutz">Datenschutz</a>.</p>
             </div>
 
             <!-- Darstellung: für alle, auch ohne Konto (js/darstellung.js) -->
@@ -965,8 +964,8 @@
             <label class="fld" for="kt-vorname"><span>Vorname <small>Pflicht</small></span>
               <input id="kt-vorname" type="text" maxlength="60" autocomplete="given-name" required aria-required="true">
             </label>
-            <label class="fld" for="kt-name"><span>Nachname <small>Pflicht</small></span>
-              <input id="kt-name" type="text" maxlength="60" autocomplete="family-name" required aria-required="true">
+            <label class="fld" for="kt-name"><span>Nachname <small>freiwillig</small></span>
+              <input id="kt-name" type="text" maxlength="60" autocomplete="family-name">
             </label>
           </div>
           <label class="fld" for="kt-mail"><span>E-Mail <small>Pflicht</small></span>
@@ -1004,8 +1003,8 @@
           <ol class="crumbs"><li><a href="#start">Start</a></li><li aria-current="page">Impressum</li></ol>
           <h1>Impressum</h1>
           <h2>Verantwortlich für diese Website</h2>
-          <p class="adresse">Huy-K. D.<br>1700 Fribourg, Schweiz</p>
-          <p>Kontakt: über das <a href="#kontakt">Kontaktformular</a>. Nachrichten kommen direkt bei uns an.</p>
+          <p class="adresse">Kevin Kouasmi<br>Rte de la Veveyes 24<br>1700 Freiburg<br>Schweiz</p>
+          <p>E-Mail: <a href="mailto:hckd_rail@gmx.ch">hckd_rail@gmx.ch</a><br>Oder über das <a href="#kontakt">Kontaktformular</a>.</p>
           <h2>Unabhängiges Projekt</h2>
           <p>RailBase by HCKD ist ein privates, nicht kommerzielles Projekt von Bahnfans. Es steht in keiner Verbindung zu den Schweizerischen Bundesbahnen SBB, zu SBB Cargo oder zu anderen Bahnunternehmen. Namen und Marken gehören ihren Inhaberinnen und Inhabern und werden nur zur Beschreibung der Fahrzeuge genannt.</p>
           <h2>Haftung</h2>
@@ -1029,46 +1028,121 @@
         <article class="textseite" data-seite="datenschutz" hidden>
           <ol class="crumbs"><li><a href="#start">Start</a></li><li aria-current="page">Datenschutz</li></ol>
           <h1>Datenschutzerklärung</h1>
-          <p class="lead">Kurz gesagt: Wir verwenden keine Cookies und keine Werbung und verfolgen dich nicht über andere Websites. Wir zählen nur anonym, welche Seiten wie oft aufgerufen werden.</p>
+          <p class="lead">Hier steht, welche Daten bei RailBase anfallen, wer sie bearbeitet und wo. RailBase setzt keine Cookies und zeigt keine Werbung. Auch ohne Cookies werden aber Daten bearbeitet, etwa beim Ausliefern der Seiten und bei der Besucherzählung. Das ist unten genau beschrieben.</p>
           <h2>Verantwortlich</h2>
-          <p>Huy-K. D., 1700 Fribourg, Schweiz. Kontakt über das Formular <button class="link-btn" type="button" data-report="allg" aria-haspopup="dialog">Fehler melden</button>. Es gilt das Schweizer Datenschutzgesetz (DSG).</p>
-          <h2>Hosting</h2>
-          <p>Die Website liegt bei GitHub Pages (GitHub Inc., USA). Beim Aufruf verarbeitet GitHub technisch nötige Daten wie IP-Adresse, Zeitpunkt und aufgerufene Seite, um die Seite auszuliefern und gegen Missbrauch zu schützen. Wir selbst sehen diese Daten nicht. Details stehen in der Datenschutzerklärung von GitHub.</p>
-          <h2>Schrift und Inhalte</h2>
-          <p>Schrift, Bilder und Kartendaten liegen auf demselben Server wie die Website. Beim Aufruf werden keine Daten an Google Fonts geschickt; ausser an GoatCounter (siehe Besucherzählung), an den Fahrplandienst der Abfahrtstafel und, nur wenn du ein Konto nutzt, an Supabase und jsDelivr (siehe Konto) gehen keine Daten an Dritte.</p>
-          <h2>Besucherzählung</h2>
-          <p>Um zu sehen, welche Seiten gefragt sind, nutzen wir GoatCounter (goatcounter.com). GoatCounter setzt keine Cookies und speichert keine IP-Adressen. Erfasst werden die aufgerufene Seite, die Seite, von der du kommst, Browser und Betriebssystem, Bildschirmgrösse und das Land. Daraus lässt sich nicht ablesen, wer du bist. Die Zahlen sehen nur wir. Die Daten können ausserhalb der Schweiz verarbeitet werden.</p>
-          <p>Ausserdem zählt GoatCounter einmal pro Browser, ob jemand ein Quiz beendet (und in welchem Level), die Sammlung begonnen oder eine Sichtung eingetragen hat. Dabei wird nur diese Tatsache übermittelt, nicht dein Ergebnis, nicht deine Fahrzeuge und nicht deine Sichtungen. So sehen wir, wie viele Menschen mitmachen.</p>
-          <p>Auf der Seite «Mein Konto» unter «Privatsphäre» kannst du die Besucherzählung für dein Gerät ausschalten, auch ohne Konto.</p>
+          <p>Kevin Kouasmi, Rte de la Veveyes 24, 1700 Freiburg, Schweiz. E-Mail: <a href="mailto:hckd_rail@gmx.ch">hckd_rail@gmx.ch</a>, oder über das <a href="#kontakt">Kontaktformular</a>. Es gilt das Schweizer Datenschutzgesetz (DSG).</p>
+          <h2>Ohne Konto und mit Konto</h2>
+          <ul>
+            <li><b>Ohne Konto:</b> Deine gesehenen Fahrzeuge, Sichtungen, Lieblingsfahrzeuge, der Fahrzeugvergleich, deine Quiz-Bestwerte und der Bahnhof der Abfahrtstafel bleiben nur im Speicher deines Browsers. Wir erhalten sie nicht.</li>
+            <li><b>Mit Konto:</b> Zusätzlich speichern wir bei Supabase deine E-Mail-Adresse, dein Profil (Vorname, freiwillig Nachname, Profilbild und deine Bestätigung, dass du mindestens 16 Jahre alt bist) und eine Kopie von Sammlung, Sichtungen (mit Datum, Ort, Fahrzeugnummer und Notiz), Lieblingsfahrzeugen, Quiz-Bestwerten, Vergleich, Bahnhof, deinen erreichten Erfolgen und deiner Privatsphäre-Einstellung. Sprache und Darstellung bleiben nur auf dem Gerät.</li>
+            <li><b>RailBase Legends:</b> Die Website und das Spiel nutzen dasselbe Konto, speichern ihre Daten aber getrennt. Das Spiel zeigt dir deine Erfolge der Website an (abschaltbar unter «Privatsphäre»). Die Website zeigt dir dein Profilbild aus dem Spiel, solange du hier keines gewählt hast. Im Spiel sehen deine Freunde deinen Spielernamen (anfangs dein Vorname), dein Profilbild im Spiel und dein Level. Deine Daten der Website, dein Nachname und deine E-Mail-Adresse sind für andere nicht sichtbar.</li>
+          </ul>
+          <h2>Beteiligte Dienste</h2>
+          <p>Diese Anbieter erhalten Daten, wenn du RailBase nutzt. Wo ein Anbieter in unserem Auftrag arbeitet, steht «für uns»; wo er eigene Zwecke verfolgt, gilt zusätzlich seine Datenschutzerklärung.</p>
+          <h3>GitHub Pages (Ausliefern der Website)</h3>
+          <ul>
+            <li><b>Anbieter:</b> GitHub, Inc., USA, für uns.</li>
+            <li><b>Daten und Zeitpunkt:</b> bei jedem Seitenaufruf IP-Adresse, Zeitpunkt, aufgerufene Seite und Angaben des Browsers. Laut GitHub wird die IP-Adresse der Besucher aus Sicherheitsgründen gespeichert.</li>
+            <li><b>Ort:</b> GitHub sitzt in den USA. Ausgeliefert werden die Seiten über das Netz von Fastly mit Servern in vielen Ländern, für die Schweiz meist in Europa (zum Beispiel Frankfurt). Laut eigenen Angaben ist GitHub nach dem Swiss-U.S. Data Privacy Framework zertifiziert.</li>
+            <li><b>Speicherdauer:</b> legt GitHub fest; wir sehen diese Daten nicht.</li>
+            <li><b>Mehr:</b> <a href="https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">Datenschutzerklärung von GitHub</a></li>
+          </ul>
+          <h3>GoatCounter (Besucherzählung)</h3>
+          <ul>
+            <li><b>Anbieter:</b> GoatCounter, betrieben von Martin Tournoij, Irland, für uns.</li>
+            <li><b>Daten und Zeitpunkt:</b> bei jedem Seitenaufruf die aufgerufene Seite, die Seite, von der du kommst, Browser und Betriebssystem, Bildschirmgrösse, Sprache und das Land, das aus der IP-Adresse abgeleitet wird. Was du auf der Website machst (Quiz, Sammlung, Sichtungen), wird nicht gezählt.</li>
+            <li><b>Ort:</b> Server bei Hetzner in Finnland und Deutschland.</li>
+            <li><b>Speicherdauer:</b> Laut GoatCounter werden IP-Adressen und der vollständige Browser-Text nicht gespeichert; IP-Adresse und Browser werden höchstens 8 Stunden im Arbeitsspeicher zusammengeführt, um Besuche zu erkennen. Gespeichert werden zusammengezählte Zahlen; Sicherungskopien bis 30 Tage.</li>
+            <li><b>Widerspruch:</b> unter <button class="link-btn" type="button" data-dsg-einst>Datenschutzeinstellungen</button> (auch in der Fusszeile jeder Seite). Danach wird auf diesem Gerät nichts mehr gezählt, auch nicht für den Rest des Besuchs.</li>
+            <li><b>Mehr:</b> <a href="https://www.goatcounter.com/help/privacy" target="_blank" rel="noopener">Datenschutzerklärung von GoatCounter</a></li>
+          </ul>
+          <h3>transport.opendata.ch (Abfahrtstafel)</h3>
+          <ul>
+            <li><b>Anbieter:</b> Opendata.ch, Schweiz, in eigener Verantwortung.</li>
+            <li><b>Daten und Zeitpunkt:</b> nur solange die Abfahrtstafel auf dem Bildschirm sichtbar ist: der gesuchte Bahnhof, deine IP-Adresse und Angaben des Browsers. Nur wenn du auf «In meiner Nähe» tippst und es im Browser erlaubst, dazu dein Standort, auf etwa 100 Meter gerundet. Wir speichern den Standort nicht.</li>
+            <li><b>Ort:</b> laut Anbieter in der Schweiz.</li>
+            <li><b>Speicherdauer:</b> laut Anbieter Zugriffsprotokoll 30 Tage, Listen der Bahnhofsabfragen 35 Tage.</li>
+            <li><b>Mehr:</b> <a href="https://transport.opendata.ch/privacy.html" target="_blank" rel="noopener">Datenschutzhinweis von transport.opendata.ch</a></li>
+          </ul>
+          <h3>Web3Forms (Formulare)</h3>
+          <ul>
+            <li><b>Anbieter:</b> Web3Forms, für uns. Über Web3Forms gehen Kontaktformular und «Fehler melden» an unser E-Mail-Postfach. Bei «Fotos einsenden» geht nur ein Hinweis mit deinen Angaben darüber, ohne die Fotos.</li>
+            <li><b>Postfach:</b> Die Nachrichten landen in unserem E-Mail-Postfach bei GMX (1&amp;1 Mail &amp; Media GmbH, Deutschland).</li>
+            <li><b>Daten und Zeitpunkt:</b> nur wenn du ein Formular absendest: was du eingibst (siehe «Formulare» unten), die betroffene Seite und technisch deine IP-Adresse.</li>
+            <li><b>Ort:</b> Web3Forms arbeitet laut eigenen Angaben von Indien aus (Web3Creative, Kerala). Die Server stehen bei Amazon Web Services, Cloudflare und Hetzner, auch in den USA. Übermittlungen aus der Schweiz stützt Web3Forms laut seiner Datenschutzerklärung auf Standardvertragsklauseln.</li>
+            <li><b>Speicherdauer:</b> laut Anbieter höchstens 3 Jahre ab dem Absenden, danach werden die Einsendungen dort automatisch gelöscht. Eine Einstellung für eine kürzere Frist bietet Web3Forms nicht an. Protokolle der Server löscht Web3Forms laut eigenen Angaben regelmässig.</li>
+            <li><b>Mehr:</b> <a href="https://web3forms.com/privacy" target="_blank" rel="noopener">Datenschutzerklärung von Web3Forms</a></li>
+          </ul>
+          <h3>Supabase (Konto und eingesandte Fotos)</h3>
+          <ul>
+            <li><b>Anbieter:</b> Supabase, für uns. Vertragspartner ist laut Vertrag die Supabase Pte. Ltd., Singapur.</li>
+            <li><b>Daten und Zeitpunkt:</b> wenn du dich registrierst, anmeldest oder angemeldet bist: die Kontodaten und Inhalte aus «Ohne Konto und mit Konto» oben, dazu technisch deine IP-Adresse bei jeder Anfrage. Das Passwort speichert Supabase nicht im Klartext, sondern als nicht umkehrbaren Hashwert (bcrypt); auch wir können es nicht lesen.</li>
+            <li><b>Fotos einsenden:</b> auch ohne Konto, wenn du Fotos einsendest: die Fotos und deine Angaben im Formular (siehe «Formulare» unten), dazu technisch deine IP-Adresse.</li>
+            <li><b>Ort:</b> Die Datenbank und die eingesandten Fotos liegen in einem Rechenzentrum von Amazon Web Services in Frankfurt, Deutschland. Anfragen laufen über das Netz von Cloudflare (Cloudflare, Inc., USA) mit Servern in vielen Ländern, für die Schweiz meist in Zürich. Supabase stützt Übermittlungen nach Singapur und in die USA laut eigenem Vertrag auf Standardvertragsklauseln mit Schweizer Ergänzung.</li>
+            <li><b>Speicherdauer:</b> Kontodaten, bis du dein Konto löschst (siehe «Konto löschen» unten). Eingesandte Fotos: siehe «Formulare» unten.</li>
+            <li><b>Anmeldeprogramm:</b> Das Programm für die Anmeldung (supabase-js) liegt auf railbase.ch selbst. Dafür fragt dein Browser keinen weiteren Dienst an.</li>
+            <li><b>Mehr:</b> <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Datenschutzerklärung von Supabase</a></li>
+          </ul>
+          <h3>Google (nur bei «Mit Google anmelden»)</h3>
+          <ul>
+            <li><b>Anbieter:</b> für Nutzerinnen und Nutzer in der Schweiz Google Ireland Limited, Irland, in eigener Verantwortung.</li>
+            <li><b>Daten und Zeitpunkt:</b> Google erfährt, dass du dich bei RailBase anmeldest. Wir erhalten von Google deine E-Mail-Adresse, deinen Namen und den Link zu deinem Google-Profilbild; diese Angaben speichert Supabase in deinen Kontodaten. Vor- und Nachname übernehmen wir als Vorschlag in dein Profil.</li>
+            <li><b>Mehr:</b> <a href="https://policies.google.com/privacy?hl=de" target="_blank" rel="noopener">Datenschutzerklärung von Google</a></li>
+          </ul>
           <h2>Speicher im Browser</h2>
-          <p>Dein Browser merkt sich im lokalen Speicher (localStorage), welche Fahrzeuge du für den Vergleich ausgewählt und im Sammelalbum als gesehen markiert hast, sowie dein bestes Quiz-Ergebnis pro Level, deine Sprache und ob du die Seite hell oder dunkel möchtest. Zum Schutz vor Spam merkt er sich ausserdem für 10 Minuten, wann du eine Meldung geschickt hast. Diese Angaben verlassen dein Gerät nicht. Du kannst sie löschen, indem du die Websitedaten im Browser löschst.</p>
-          <p>Auch deine Sichtungen (Datum, Ort, Fahrzeugnummer und Notiz) bleiben nur in deinem Browser. Mit «Sammlung sichern» lädst du sie als Datei auf dein Gerät herunter; diese Datei kannst du später mit «Sammlung laden» wieder einlesen. Dabei wird nichts an uns geschickt.</p>
-          <p>Auch deine Lieblingsfahrzeuge (Herz-Knopf auf den Fahrzeugseiten) merkt sich dein Browser im lokalen Speicher.</p>
-          <p>Damit die Website auch als App schnell startet und ohne Internet funktioniert, legt dein Browser besuchte Seiten, Bilder und Skripte in einem Zwischenspeicher auf deinem Gerät ab. Darin stehen nur Inhalte dieser Website, keine Angaben über dich.</p>
+          <p>RailBase setzt keine Cookies. Dein Browser speichert aber einige Angaben im lokalen Speicher (localStorage) und für die Dauer eines Besuchs im Sitzungsspeicher (sessionStorage):</p>
+          <ul>
+            <li><b>Für die Funktionen:</b> gesehene Fahrzeuge, Sichtungen, Lieblingsfahrzeuge, Vergleich, Quiz-Bestwerte, Bahnhof der Abfahrtstafel, gewählte Bahn in den Kategorien, Sprache, Darstellung und welche Neuigkeiten du schon gesehen hast.</li>
+            <li><b>Mit Konto:</b> die Anmeldung (Schlüssel der Sitzung), der Stand des letzten Abgleichs mit dem Konto und deine Privatsphäre-Einstellung. Beim Abmelden werden Anmeldung und Konto-Daten von diesem Gerät entfernt.</li>
+            <li><b>Zum Schutz vor Spam:</b> für 10 Minuten die Zeitpunkte deiner letzten Meldungen.</li>
+            <li><b>Für die Besucherzählung:</b> nur, ob du der Zählung widersprochen hast.</li>
+            <li><b>Zwischenspeicher (Cache):</b> Damit die Website auch als App schnell startet und ohne Internet funktioniert, legt dein Browser besuchte Seiten, Bilder und Skripte ab. Darin stehen nur Inhalte der Website.</li>
+          </ul>
+          <p>Du kannst alles löschen, indem du die Websitedaten von railbase.ch im Browser löschst. Die Besucherzählung kannst du unter <button class="link-btn" type="button" data-dsg-einst>Datenschutzeinstellungen</button> ausschalten.</p>
           <h2>Konto (freiwillig)</h2>
-          <p>Du kannst die Website ohne Konto nutzen. Erstellst du ein Konto, ist es dasselbe Konto wie im Spiel RailBase Legends (railbase-legends.ch). Gespeichert werden deine E-Mail-Adresse, dein Passwort in verschlüsselter Form (nur bei der Anmeldung mit E-Mail), dein Vorname, auf Wunsch dein Nachname und dein Geburtsdatum. Das Geburtsdatum brauchen wir, weil es ein Konto erst ab 16 Jahren gibt. Das Spiel übernimmt deinen Vornamen als ersten Spielernamen. Bist du angemeldet, wird ausserdem eine Kopie deiner Sammlung, deiner Lieblingsfahrzeuge, deiner Sichtungen, deiner Quiz-Bestwerte, des Fahrzeugvergleichs und des Bahnhofs der Abfahrtstafel im Konto gespeichert, damit sie auf allen deinen Geräten da sind. Die Website und das Spiel speichern ihre Daten getrennt; deine erreichten Erfolge der Website zeigt auch das Spiel an.</p>
-          <p>Wählst du ein Profilbild, speichern wir in deinem Konto das gewählte Bild oder dein eigenes Foto, verkleinert auf höchstens 160 × 160 Pixel. Auf der Website siehst nur du es. Hast du auf der Website noch kein Bild gewählt, zeigt sie dein Profilbild aus dem Spiel.</p>
-          <p>Konten und Daten liegen bei Supabase (Supabase Inc., USA); die Server können ausserhalb der Schweiz stehen. Meldest du dich mit Google an, erhalten wir von Google deine E-Mail-Adresse und deinen Namen; dabei gelten auch die Bedingungen von Google.</p>
-          <p>Die Anmeldung merkt sich dein Browser im lokalen Speicher, nicht in einem Cookie. Das Programm für die Anmeldung lädt dein Browser von jsDelivr (cdn.jsdelivr.net), aber nur, wenn du das Fenster «Konto» öffnest oder angemeldet bist. Beim Abmelden werden die Daten von diesem Gerät entfernt; im Konto bleiben sie gespeichert.</p>
-          <p>Du kannst dein Konto jederzeit selbst löschen: auf der Seite «Mein Konto» unter «Einstellungen» mit «Konto löschen». Es wird sofort mit allen Daten der Website und des Spiels gelöscht. Damit wir davon wissen, bekommen wir dabei eine E-Mail mit deiner E-Mail-Adresse und deinem Namen (über Web3Forms).</p>
-          <h2>Abfahrtstafel</h2>
-          <p>Für die Abfahrtstafel fragt dein Browser den Fahrplan direkt bei transport.opendata.ch (Opendata.ch) ab. Dabei werden der gesuchte Bahnhof und, wie bei jedem Seitenaufruf, deine IP-Adresse übermittelt. Die Tafel lädt nur, solange sie auf dem Bildschirm sichtbar ist. Den zuletzt gewählten Bahnhof merkt sich dein Browser im lokalen Speicher.</p>
-          <p>Nur wenn du auf «In meiner Nähe» tippst, fragt dein Browser dich, ob die Seite deinen Standort verwenden darf. Sagst du ja, wird der Standort auf etwa 100 Meter gerundet an transport.opendata.ch geschickt, um den nächsten Bahnhof zu finden. Wir speichern den Standort nicht.</p>
+          <p>Du kannst die Website ohne Konto nutzen. Ein Konto gibt es ab 16 Jahren; das ist eine Regel von RailBase, siehe <a href="#nutzung">Nutzungsbedingungen</a>. Darum bestätigst du mit einem Häkchen, dass du mindestens 16 Jahre alt bist. Wir speichern nur diese Bestätigung mit dem Datum, kein Geburtsdatum. Das Spiel übernimmt deinen Vornamen als ersten Spielernamen.</p>
+          <p>Wählst du ein Profilbild, speichern wir das gewählte Bild oder dein eigenes Foto, verkleinert auf höchstens 160 × 160 Pixel, in deinem Profil. Auf der Website siehst nur du es.</p>
+          <p>Die Anmeldung merkt sich dein Browser im lokalen Speicher, nicht in einem Cookie.</p>
+          <h2>Konto löschen</h2>
+          <p>Du kannst dein Konto jederzeit selbst löschen: auf der Seite «Mein Konto» unter «Einstellungen». Dein Konto ist auch dein Konto für RailBase Legends. Gelöscht werden sofort in der Datenbank: die Anmeldung, das Profil mit Profilbild, die Daten der Website und der ganze Spielstand im Spiel mit Freunden, Tausch-Anfragen und Geschenken.</p>
+          <p>Kopien können noch eine Zeit lang bestehen: in Protokollen der Anbieter und auf deinem eigenen Gerät, bis du dort die Websitedaten löschst. Im kostenlosen Plan von Supabase, den wir nutzen, sind laut Supabase keine automatischen Sicherungskopien der Datenbank enthalten.</p>
+          <p>Nachrichten, die du uns über die Formulare geschickt hast, und Fotos, die du uns mit Erlaubnis geschickt hast, sind vom Konto getrennt; eine Kontolöschung entfernt sie nicht. Schreib uns per E-Mail, wenn wir sie löschen sollen.</p>
+          <h2>Formulare</h2>
+          <ul>
+            <li><b>Kontaktformular:</b> Vorname, freiwillig Nachname, E-Mail-Adresse, Thema und Nachricht, damit wir dir antworten können.</li>
+            <li><b>Fehler melden:</b> deine Beschreibung, die betroffene Seite und, falls du sie angibst, Name oder E-Mail-Adresse für Rückfragen.</li>
+            <li><b>Fotos einsenden:</b> die Fotos selbst, Name für die Bildunterschrift, E-Mail-Adresse für Rückfragen, auf Wunsch Ort und Datum, sowie deine Erlaubnis mit Datum und dem genauen Wortlaut, dem du zugestimmt hast. Vor dem Hochladen entfernt dein Browser den Standort (GPS) und XMP-Angaben aus den Fotodaten; andere Kameradaten wie Kameramodell und Aufnahmezeit bleiben. Die Fotos liegen in einem privaten Speicher bei Supabase (siehe oben), den nur wir sehen. Nach der Prüfung löschen wir sie dort; Fotos, die wir übernehmen, zeigen wir auf der Website. Die Erlaubnis bewahren wir als Nachweis auf, bis du uns per E-Mail bittest, die Fotos zu löschen.</li>
+          </ul>
+          <p>Wir nutzen diese Angaben nur für den genannten Zweck.</p>
+          <p>Nachrichten aus dem Kontaktformular und von «Fehler melden» bewahren wir in unserem Postfach auf, bis die Sache erledigt ist, höchstens 1 Jahr. Danach löschen wir sie. Für die Erlaubnis zu Fotos gilt die Regel oben.</p>
           <h2>Teilen</h2>
           <p>Der Knopf «Teilen» öffnet das Teilen-Menü deines Geräts oder kopiert den Link. Was du danach damit machst, bestimmst du selbst; wir erfahren davon nichts.</p>
-          <h2>Fehler melden</h2>
-          <p>Sendest du eine Meldung, übermitteln wir deinen Text, die betroffene Seite und, falls du sie angibst, deinen Namen und deine E-Mail-Adresse über den Dienst Web3Forms (web3forms.com) an unser Postfach. Dabei können Daten auch ausserhalb der Schweiz, zum Beispiel in den USA, verarbeitet werden. Wir nutzen die Angaben nur, um die Meldung zu bearbeiten und dir allenfalls zu antworten, und löschen sie, wenn sie nicht mehr gebraucht werden.</p>
-          <h2>Kontaktformular</h2>
-          <p>Schreibst du uns über das Kontaktformular, übermitteln wir deinen Vornamen und Namen, deine E-Mail-Adresse, deine Nachricht und das gewählte Thema ebenfalls über Web3Forms an unser Postfach. Name und E-Mail-Adresse brauchen wir, um dir persönlich zu antworten. Wir nutzen die Angaben nur dafür und löschen sie, wenn sie nicht mehr gebraucht werden.</p>
-          <h2>Fotos einsenden</h2>
-          <p>Wer uns Fotos anbietet, schickt über dasselbe Formular wie bei «Fehler melden» (Web3Forms) einen Link zu den Fotos, den Namen für die Bildunterschrift, eine E-Mail-Adresse für Rückfragen und auf Wunsch Ort und Datum. Die Fotos selbst liegen beim gewählten Dienst (z. B. SwissTransfer); dort gelten dessen Bedingungen. Wir nutzen die Angaben nur, um die Fotos zu prüfen, nachzufragen und den Namen beim Foto zu nennen.</p>
           <h2 data-spenden-info>Spenden</h2>
           <p data-spenden-info>Spenden laufen per Banküberweisung direkt über deine Bank. Die Website verarbeitet dabei keine Zahlungsdaten; IBAN und Name im Spenden-Fenster sind nur zum Kopieren da.</p>
           <h2>Externe Links</h2>
-          <p>Links zu anderen Websites, etwa zur SBB-Netzkarte, öffnen sich in einem neuen Tab. Dort gilt die Datenschutzerklärung des jeweiligen Anbieters.</p>
+          <p>Links zu anderen Websites, etwa zur SBB-Netzkarte oder zu Instagram, öffnen sich in einem neuen Tab. Dort gilt die Datenschutzerklärung des jeweiligen Anbieters.</p>
           <h2>Deine Rechte</h2>
-          <p>Du kannst Auskunft über deine Daten verlangen und sie berichtigen oder löschen lassen. Schreib uns dafür über das Formular.</p>
-          <p>Mit Konto kannst du alle deine Daten auf der Seite «Mein Konto» unter «Meine Daten» selbst herunterladen.</p>
+          <p>Du kannst Auskunft über deine Daten verlangen, sie berichtigen oder löschen lassen und sie in einem gängigen Format erhalten. Schreib uns dafür über das <a href="#kontakt">Kontaktformular</a>. Mit Konto kannst du deine Daten auf der Seite «Mein Konto» unter «Meine Daten» auch selbst herunterladen.</p>
+          <p>Bist du mit unserem Umgang mit deinen Daten nicht einverstanden, kannst du dich beim Eidgenössischen Datenschutz- und Öffentlichkeitsbeauftragten (EDÖB) melden: <a href="https://www.edoeb.admin.ch" target="_blank" rel="noopener">edoeb.admin.ch</a>.</p>
+          <p class="stand">Stand: November 2026</p>
+        </article>
+
+        <article class="textseite" data-seite="nutzung" hidden>
+          <ol class="crumbs"><li><a href="#start">Start</a></li><li aria-current="page">Nutzungsbedingungen</li></ol>
+          <h1>Nutzungsbedingungen für das Konto</h1>
+          <p class="lead">Diese Regeln gelten, wenn du bei RailBase ein Konto hast. Ohne Konto kannst du RailBase frei nutzen.</p>
+          <h2>Mindestalter</h2>
+          <p>Ein Konto gibt es ab 16 Jahren. Das ist eine Regel von RailBase. Beim Erstellen des Kontos bestätigst du mit einem Häkchen, dass du mindestens 16 Jahre alt bist.</p>
+          <h2>Ein Konto für RailBase und RailBase Legends</h2>
+          <p>Dein Konto gilt für die Website RailBase und für das Spiel RailBase Legends. Was du mit dem Konto machst, zum Beispiel es löschen, gilt für beide. Für das Spiel und seine Inhalte gelten zusätzlich dessen eigene Regeln.</p>
+          <h2>Profilbild und Inhalte</h2>
+          <p>Als Profilbild darfst du nur Bilder verwenden, an denen du die Rechte hast. Personen, die man erkennt, nur mit ihrem Einverständnis. In Sichtungen und Notizen gehören keine Angaben über andere Personen. Beleidigende oder verbotene Inhalte sind nicht erlaubt.</p>
+          <h2>Missbrauch und Sperrung</h2>
+          <p>Wer gegen diese Regeln verstösst, fremde Konten nutzt oder die Website stört oder automatisiert missbraucht, dem können wir Inhalte entfernen und das Konto sperren oder löschen. Wenn es möglich ist, informieren wir dich vorher per E-Mail.</p>
+          <h2>Konto löschen</h2>
+          <p>Du kannst dein Konto jederzeit selbst löschen, auf der Seite «Mein Konto» unter «Einstellungen». Dabei werden auch dein Spielstand in RailBase Legends und alle Daten der Website im Konto gelöscht. Das lässt sich nicht rückgängig machen. Was danach noch kurz bestehen bleiben kann, steht im <a href="#datenschutz">Datenschutz</a>.</p>
+          <h2>Kostenlos und ohne Gewähr</h2>
+          <p>Das Konto ist kostenlos. RailBase ist ein Freizeitprojekt; wir können nicht garantieren, dass die Website und das Konto immer erreichbar sind, und können Funktionen ändern. Wichtige Änderungen dieser Regeln kündigen wir auf dieser Seite an.</p>
           <p class="stand">Stand: November 2026</p>
         </article>
       </div>
@@ -1139,10 +1213,11 @@
     <span class="kicker">Foto einsenden</span>
     <h2 id="ft-h">Hast du ein Foto von diesem Zug?</h2>
     <p>Betrifft: <b id="ft-target"></b></p>
-    <p class="ft-hint">Lade deine Fotos zuerst bei einem Dienst wie SwissTransfer, WeTransfer, Google Drive oder Dropbox hoch und füge hier den Link ein. Wir prüfen die Fotos und stellen sie mit deinem Namen auf die Seite.</p>
-    <label class="fld" for="ft-link"><span>Link zu den Fotos</span>
-      <input id="ft-link" type="url" maxlength="500" inputmode="url" autocomplete="off">
+    <p class="ft-hint">Wähle deine Fotos hier aus. Wir prüfen sie und stellen sie mit deinem Namen auf die Seite. Den Standort (GPS) in den Fotodaten entfernt dein Browser vor dem Hochladen.</p>
+    <label class="fld" for="ft-dateien"><span>Fotos <small>bis 5 Fotos, je höchstens 25 MB (JPG, PNG oder WebP)</small></span>
+      <input id="ft-dateien" type="file" accept="image/jpeg,image/png,image/webp" multiple>
     </label>
+    <ul class="ft-auswahl" id="ft-auswahl" hidden></ul>
     <label class="fld" for="ft-name"><span>Name für die Bildunterschrift</span>
       <input id="ft-name" type="text" maxlength="100" autocomplete="name">
     </label>
@@ -1152,7 +1227,11 @@
     <label class="fld" for="ft-text"><span>Wo und wann aufgenommen? <small>freiwillig</small></span>
       <textarea id="ft-text" rows="3" maxlength="1000"></textarea>
     </label>
-    <label class="ft-ok"><input type="checkbox" id="ft-erlaubt"> <span>Ich habe die Fotos selbst gemacht und erlaube RailBase, sie mit meinem Namen auf der Website zu zeigen.</span></label>
+    <label class="ft-ok"><input type="checkbox" id="ft-erlaubt"> <span>Ich habe die Fotos selbst gemacht. Ich erlaube RailBase, sie mit meinem Namen auf railbase.ch zu zeigen: auf den Fahrzeugseiten, in den PDF-Steckbriefen und in den Vorschaubildern beim Teilen eines Links, dafür auch verkleinert oder zugeschnitten.</span></label>
+    <label class="ft-ok"><input type="checkbox" id="ft-personen"> <span>Auf den Fotos sind keine Personen erkennbar, oder sie sind mit der Veröffentlichung einverstanden.</span></label>
+    <p class="ft-hint"><b>Freiwillig</b>, nur wenn du es ausdrücklich ankreuzt:</p>
+    <label class="ft-ok"><input type="checkbox" id="ft-legends"> <span>Die Fotos dürfen auch auf Sammelkarten im Spiel RailBase Legends verwendet werden, mit meinem Namen.</span></label>
+    <label class="ft-ok"><input type="checkbox" id="ft-social"> <span>Die Fotos dürfen auch in Beiträgen von RailBase auf Instagram und in Werbung für RailBase verwendet werden, mit meinem Namen.</span></label>
     <label class="hp" aria-hidden="true">Nicht ausfüllen <input type="checkbox" id="ft-botcheck" tabindex="-1" autocomplete="off"></label>
     <p class="rp-msg" id="ft-msg" role="status"></p>
     <button class="btn-send" type="submit" id="ft-send">Fotos senden</button>
@@ -1191,10 +1270,11 @@
         <p class="ad-tage-hinweis">Der neueste Tag steht oben. Kommt ein neuer Tag dazu, fällt der älteste weg.</p>
         <ol id="ad-tage"></ol>
       </details>
-      <div class="ad-mit">
-        <small>Wer macht mit? <span>(Personen bzw. Browser, seit dem 22. Oktober 2026)</span></small>
-        <ul id="ad-mit"></ul>
-      </div>
+      <details class="ad-ohne ad-fotos" id="ad-fotos">
+        <summary>Eingesandte Fotos <b id="ad-fotos-n">–</b></summary>
+        <p class="ad-tage-hinweis">Nur sichtbar, wenn du mit deinem Admin-Konto angemeldet bist. «Fotos löschen» entfernt die Fotos aus dem Speicher; Name, E-Mail und Erlaubnis bleiben als Nachweis. «Alles löschen» entfernt auch diese Angaben.</p>
+        <div id="ad-fotos-liste"></div>
+      </details>
       <details class="ad-ohne">
         <summary>Fahrzeuge ohne Fotos <b id="ad-ohne-n">–</b></summary>
         <div id="ad-ohne-liste"></div>
@@ -1233,9 +1313,7 @@
               <input id="ko-nachname" type="text" maxlength="50" autocomplete="family-name">
             </label>
           </div>
-          <label class="fld" for="ko-geburt"><span>Geburtsdatum <small>mindestens 16 Jahre</small></span>
-            <input id="ko-geburt" type="date" min="1900-01-01" autocomplete="bday">
-          </label>
+          <label class="ft-ok"><input type="checkbox" id="ko-ab16"> <span>Ich bin mindestens 16 Jahre alt.</span></label>
         </div>
         <label class="fld" for="ko-email"><span>E-Mail</span>
           <input id="ko-email" type="email" maxlength="200" autocomplete="email" inputmode="email">
@@ -1255,8 +1333,9 @@
         <span>Mit Google anmelden</span>
       </button>
       <p class="ko-klein">Freiwillig: Ohne Konto bleibt alles wie bisher nur in deinem Browser. Mehr dazu im Datenschutz.</p>
+      <p class="ko-klein">Mit einem Konto gelten unsere <a href="#nutzung" data-close>Nutzungsbedingungen</a> und der <a href="#datenschutz" data-close>Datenschutz</a>.</p>
     </div>
-    <!-- nach dem Anmelden, solange Vorname, Name oder Geburtsdatum fehlen (z. B. Konto aus dem Spiel oder mit Google) -->
+    <!-- nach dem Anmelden, solange Vorname oder die Bestätigung «mindestens 16» fehlen (z. B. Konto aus dem Spiel oder mit Google) -->
     <form class="ko-teil" id="ko-profil" hidden novalidate>
       <p id="ko-profil-text">Bitte ergänze dein Profil. Ein Konto gibt es ab 16 Jahren.</p>
       <div class="ko-zwei">
@@ -1267,9 +1346,7 @@
           <input id="kp-nachname" type="text" maxlength="50" autocomplete="family-name">
         </label>
       </div>
-      <label class="fld" for="kp-geburt"><span>Geburtsdatum <small>mindestens 16 Jahre</small></span>
-        <input id="kp-geburt" type="date" min="1900-01-01" autocomplete="bday">
-      </label>
+      <label class="ft-ok" id="kp-ab16-zeile"><input type="checkbox" id="kp-ab16"> <span>Ich bin mindestens 16 Jahre alt.</span></label>
       <p class="rp-msg" id="kp-msg" role="status"></p>
       <button class="btn-send" type="submit" id="kp-los">Speichern</button>
       <button class="qz-btn ghost ko-ab" type="button" id="kp-zurueck" hidden>Zurück</button>

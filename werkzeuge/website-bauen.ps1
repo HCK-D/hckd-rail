@@ -31,11 +31,12 @@ $ogLocale = @{ de = 'de_CH'; fr = 'fr_CH'; it = 'it_CH'; en = 'en_GB' }
 $fix = @{
   de = @{ start = 'RailBase – Train Database für SBB Personenverkehr, Cargo, Infrastruktur, Rangier- sowie Dienst- und Spezialfahrzeuge.'; zug = 'Technische Daten, Geschichte und Bilder.'
           impressum = 'Impressum'; impressumText = 'Impressum, Haftung und Bildnachweis von RailBase.'
-          datenschutz = 'Datenschutz'; datenschutzText = 'Datenschutzerklärung von RailBase: keine Cookies, keine Werbung, nur anonyme Besucherzählung.'
+          datenschutz = 'Datenschutz'; datenschutzText = 'Datenschutzerklärung von RailBase: welche Daten wo bearbeitet werden, ohne und mit Konto. Keine Cookies, keine Werbung.'
           vergleich = 'Fahrzeuge vergleichen'; vergleichText = 'Bis zu drei Schweizer Bahnfahrzeuge nebeneinander vergleichen.'
           neu = 'Neu und aktualisiert'; neuText = 'Die letzten Ergänzungen bei RailBase: neue Fahrzeuge, neue Fotos und neue Funktionen.'
           sammlung = 'Meine Sammlung'; sammlungText = 'Gesehene Fahrzeuge, Sichtungen und Entdecker-Abzeichen bei RailBase.'
           konto = 'Mein Konto'; kontoText = 'Dein Konto bei RailBase: Sammlung, Sichtungen, Favoriten und Abzeichen auf allen deinen Geräten.'
+          nutzung = 'Nutzungsbedingungen'; nutzungText = 'Nutzungsbedingungen für das Konto bei RailBase und RailBase Legends.'
           erkennen = 'FLIRT 521, 522, 523 oder 524?';erkennenText = 'So unterscheidest du die FLIRT-Baureihen 521, 522, 523 und 524 der SBB: Nummer, Strom, Farben und Einsatzgebiet.'
           danke = 'Danke'; dankeText = 'Danke an die Bahnfotografen und an alle, die bei RailBase mithelfen, auch bei der Informatik. Und wie du selbst mithelfen kannst.'
           kontakt = 'Kontakt'; kontaktText = 'Schreib RailBase: Fragen, Ideen und Zusammenarbeit über das Kontaktformular.'
@@ -46,11 +47,12 @@ $fix = @{
           'fotos-gesucht' = 'Fotos gesucht'; 'fotos-gesuchtText' = 'Für diese Schweizer Bahnfahrzeuge sucht RailBase noch Fotos. Schick uns deine Bilder.' }
   fr = @{ start = 'RailBase – Train Database des CFF : voyageurs, Cargo, infrastructure, véhicules de manœuvre, de service et spéciaux.'; zug = 'Caractéristiques techniques, histoire et images.'
           impressum = 'Mentions légales'; impressumText = 'Mentions légales, responsabilité et crédits photo de RailBase.'
-          datenschutz = 'Protection des données'; datenschutzText = 'Protection des données chez RailBase : pas de cookies, pas de publicité, seulement un comptage anonyme des visites.'
+          datenschutz = 'Protection des données'; datenschutzText = 'Protection des données chez RailBase : quelles données sont traitées et où, sans et avec compte. Pas de cookies, pas de publicité.'
           vergleich = 'Comparer des véhicules'; vergleichText = "Comparer jusqu’à trois véhicules ferroviaires suisses côte à côte."
           neu = 'Nouveautés et mises à jour'; neuText = 'Les derniers ajouts sur RailBase : nouveaux véhicules, nouvelles photos et nouvelles fonctions.'
           sammlung = 'Ma collection'; sammlungText = "Véhicules vus, observations et badges d’explorateur sur RailBase."
           konto = 'Mon compte'; kontoText = 'Ton compte RailBase : collection, observations, favoris et badges sur tous tes appareils.'
+          nutzung = "Conditions d'utilisation"; nutzungText = "Conditions d'utilisation du compte RailBase et RailBase Legends."
           erkennen = 'FLIRT 521, 522, 523 ou 524 ?';erkennenText = "Comment distinguer les séries FLIRT 521, 522, 523 et 524 des CFF : numéro, courant, couleurs et région d’engagement."
           danke = 'Merci'; dankeText = 'Merci aux photographes ferroviaires et à toutes les personnes qui aident RailBase, y compris en informatique. Et comment tu peux aider toi aussi.'
           kontakt = 'Contact'; kontaktText = 'Écris à RailBase : questions, idées et collaboration via le formulaire de contact.'
@@ -61,11 +63,12 @@ $fix = @{
           'fotos-gesucht' = 'Photos recherchées'; 'fotos-gesuchtText' = 'RailBase cherche encore des photos de ces véhicules ferroviaires suisses. Envoie-nous tes images.' }
   it = @{ start = 'RailBase – Train Database delle FFS: viaggiatori, Cargo, infrastruttura, veicoli di manovra, di servizio e speciali.'; zug = 'Dati tecnici, storia e immagini.'
           impressum = 'Note legali'; impressumText = 'Note legali, responsabilità e crediti fotografici di RailBase.'
-          datenschutz = 'Protezione dei dati'; datenschutzText = 'Protezione dei dati su RailBase: nessun cookie, nessuna pubblicità, solo un conteggio anonimo delle visite.'
+          datenschutz = 'Protezione dei dati'; datenschutzText = 'Protezione dei dati su RailBase: quali dati vengono trattati e dove, senza e con account. Nessun cookie, nessuna pubblicità.'
           vergleich = 'Confronta veicoli'; vergleichText = "Confronta fino a tre veicoli ferroviari svizzeri uno accanto all’altro."
           neu = 'Novità e aggiornamenti'; neuText = 'Le ultime aggiunte su RailBase: nuovi veicoli, nuove foto e nuove funzioni.'
           sammlung = 'La mia collezione'; sammlungText = 'Veicoli visti, avvistamenti e distintivi da esploratore su RailBase.'
           konto = 'Il mio account'; kontoText = 'Il tuo account RailBase: collezione, avvistamenti, preferiti e distintivi su tutti i tuoi dispositivi.'
+          nutzung = "Condizioni d'uso"; nutzungText = "Condizioni d'uso dell'account RailBase e RailBase Legends."
           erkennen = 'FLIRT 521, 522, 523 o 524?';erkennenText = "Come distinguere le serie FLIRT 521, 522, 523 e 524 delle FFS: numero, corrente, colori e zona d’impiego."
           danke = 'Grazie'; dankeText = 'Grazie ai fotografi ferroviari e a tutte le persone che aiutano RailBase, anche per la parte informatica. E come puoi aiutare anche tu.'
           kontakt = 'Contatto'; kontaktText = 'Scrivi a RailBase: domande, idee e collaborazioni tramite il modulo di contatto.'
@@ -76,11 +79,12 @@ $fix = @{
           'fotos-gesucht' = 'Foto cercate'; 'fotos-gesuchtText' = 'RailBase cerca ancora foto di questi veicoli ferroviari svizzeri. Inviaci le tue immagini.' }
   en = @{ start = 'RailBase – Train Database for SBB passenger, Cargo, infrastructure, shunting, service and special vehicles.'; zug = 'Technical data, history and pictures.'
           impressum = 'Legal notice'; impressumText = 'Legal notice, liability and picture credits of RailBase.'
-          datenschutz = 'Privacy'; datenschutzText = 'RailBase privacy policy: no cookies, no advertising, only anonymous visitor counting.'
+          datenschutz = 'Privacy'; datenschutzText = 'RailBase privacy policy: which data is processed and where, with and without an account. No cookies, no advertising.'
           vergleich = 'Compare vehicles'; vergleichText = 'Compare up to three Swiss railway vehicles side by side.'
           neu = 'New and updated'; neuText = 'The latest additions to RailBase: new vehicles, new photos and new features.'
           sammlung = 'My collection'; sammlungText = 'Vehicles seen, sightings and explorer badges on RailBase.'
           konto = 'My account'; kontoText = 'Your RailBase account: collection, sightings, favourites and badges on all your devices.'
+          nutzung = 'Terms of use'; nutzungText = 'Terms of use for the RailBase and RailBase Legends account.'
           erkennen = 'FLIRT 521, 522, 523 or 524?';erkennenText = 'How to tell the SBB FLIRT classes 521, 522, 523 and 524 apart: number, power system, colours and area of service.'
           danke = 'Thank you'; dankeText = 'Thank you to the railway photographers and everyone who helps RailBase, including with IT. And how you can help too.'
           kontakt = 'Contact'; kontaktText = 'Write to RailBase: questions, ideas and collaboration through the contact form.'
@@ -155,6 +159,7 @@ for ($i = 0; $i -lt $zm.Count; $i++) {
 }
 [void]$seiten.Add([pscustomobject]@{ art = 'fix'; id = 'impressum'; bild = ''; prio = '0.2' })
 [void]$seiten.Add([pscustomobject]@{ art = 'fix'; id = 'datenschutz'; bild = ''; prio = '0.2' })
+[void]$seiten.Add([pscustomobject]@{ art = 'fix'; id = 'nutzung'; bild = ''; prio = '0.2' })
 [void]$seiten.Add([pscustomobject]@{ art = 'fix'; id = 'vergleich'; bild = ''; prio = '' })
 [void]$seiten.Add([pscustomobject]@{ art = 'fix'; id = 'neu'; bild = ''; prio = '0.5' })
 [void]$seiten.Add([pscustomobject]@{ art = 'fix'; id = 'sammlung'; bild = ''; prio = '' })

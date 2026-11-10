@@ -43,7 +43,8 @@ $('#foot-links').innerHTML = [
   ['Fahrzeuge', KATS.map(k => fussLink([k.id, k.name])).join('') + fussLink(['vergleich', 'Vergleich'])],
   ['Entdecken', [['neu', 'Neu und aktualisiert'], ['abfahrten', 'Abfahrten'], ['bahn-abc', 'Bahn-ABC'], ['erkennen', 'Züge unterscheiden'], ['netz', 'Bahnnetz Schweiz'], ['zeitstrahl', 'Zeitstrahl'], ['spurweite', 'Spurweite'], ['quiz', 'Quiz'], ['sammlung', 'Meine Sammlung']].map(fussLink).join('')],
   ['Mitmachen', fussLink(['kontakt', 'Kontakt']) + fussLink(['fotos-gesucht', 'Fotos gesucht']) + [['data-report="allg"', 'Fehler melden'], ['data-fotos="allg"', 'Fotos einsenden'], ['data-donate', 'Spenden']].map(fussKnopf).join('') + fussLink(['danke', 'Danke'])],
-  ['RailBase', [['impressum', 'Impressum'], ['datenschutz', 'Datenschutz']].map(fussLink).join('')]
+  ['RailBase', [['impressum', 'Impressum'], ['datenschutz', 'Datenschutz'], ['nutzung', 'Nutzungsbedingungen']].map(fussLink).join('')
+    + fussKnopf(['data-dsg-einst', 'Datenschutzeinstellungen']).replace(' aria-haspopup="dialog"', '')]
 ].map(([titel, inhalt]) => `<div class="foot-spalte"><h2>${esc(tr(titel))}</h2><ul>${inhalt}</ul></div>`).join('');
 /* ---------- slideshow beside the search ---------- */
 (() => {
@@ -499,7 +500,7 @@ document.addEventListener('keydown', e => {
    ROUTER (#start, #<kategorie>, #<fahrzeug>, #kategorien, #spurweite …)
    ===================================================================== */
 const views = { home: $('#v-home'), kat: $('#v-kat'), zug: $('#v-zug'), text: $('#v-text'), vergleich: $('#v-vergleich'), entdecken: $('#v-entdecken') };
-const TEXTSEITEN = { impressum: 'Impressum', datenschutz: 'Datenschutz' };
+const TEXTSEITEN = { impressum: 'Impressum', datenschutz: 'Datenschutz', nutzung: 'Nutzungsbedingungen' };
 // pages that are only reached through the menu «Entdecken», not shown on the start page
 const ENTDECKEN = { neu: 'Neu und aktualisiert', erkennen: 'Züge unterscheiden', sammlung: 'Meine Sammlung', konto: 'Mein Konto', danke: 'Danke', kontakt: 'Kontakt', spurweite: 'Spurweite',
   'neu-fahrzeuge': 'Neue Fahrzeuge', 'neu-fotos': 'Neue Fahrzeugfotos', 'neu-daten': 'Aktualisierte Daten', 'fotos-gesucht': 'Fotos gesucht' };

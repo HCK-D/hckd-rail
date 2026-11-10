@@ -13,14 +13,18 @@
    bisher im Browser; das Konto hält eine Kopie und gleicht sie zwischen
    den Geräten ab. Ohne Konto ändert sich nichts.
    Keine Cookies: die Anmeldung liegt im lokalen Speicher (hckd-konto-auth).
-   Die Bibliothek supabase-js wird erst geladen, wenn jemand angemeldet ist
-   oder sich anmelden will.
+   Die Bibliothek supabase-js (js/vendor/) wird erst geladen, wenn jemand
+   angemeldet ist oder sich anmelden will.
    ===================================================================== */
 const KONTO = {
   url: 'https://ilxtsqfbsejrjgfxkxdf.supabase.co',
   // Publishable key: darf öffentlich in der Website stehen, die Regeln in der Datenbank schützen die Daten
   schluessel: 'sb_publishable_TmIzKNvimUolL3hpX6WVTw_T3azNY9x',
-  bibliothek: 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.118.0/dist/umd/supabase.min.js',
+  // supabase-js 2.118.0 liegt auf railbase.ch selbst (aus dem npm-Paket, Prüfsumme geprüft am 10.11.2026,
+  // Lizenz MIT: js/vendor/supabase-LICENSE.txt). So erfährt kein fremder Server, wer sich anmelden will.
+  bibliothek: (() => {
+    try { return new URL('vendor/supabase-2.118.0.js', document.currentScript.src).href; } catch (e) { return 'js/vendor/supabase-2.118.0.js'; }
+  })(),
   tabelle: 'webseite',
   felder: ['hckd-gesehen', 'hckd-favoriten', 'hckd-sichtungen', 'hckd-quiz-best', 'hckd-vergleich', 'hckd-bahnhof', 'hckd-privat']
 };
@@ -30,12 +34,12 @@ const KONTO = {
   if (!dlg || !knopf) return;
   const AUTH = 'hckd-konto-auth', META = 'hckd-konto-sync', HINWEIS = 'hckd-konto-hinweis', GOOGLE = 'hckd-konto-google';
   const PROFIL_NEU = 'hckd-konto-profil'; // Profil aus «Neues Konto», bis es gespeichert ist (nur für diesen Besuch)
-  const f = { form: $('#ko-form'), vorname: $('#ko-vorname'), nachname: $('#ko-nachname'), geburt: $('#ko-geburt'), email: $('#ko-email'), pw: $('#ko-pw'), pw2: $('#ko-pw2'), los: $('#ko-los'), msg: $('#ko-msg') };
-  const p = { form: $('#ko-profil'), vorname: $('#kp-vorname'), nachname: $('#kp-nachname'), geburt: $('#kp-geburt'), los: $('#kp-los'), msg: $('#kp-msg') };
+  const f = { form: $('#ko-form'), vorname: $('#ko-vorname'), nachname: $('#ko-nachname'), ab16: $('#ko-ab16'), email: $('#ko-email'), pw: $('#ko-pw'), pw2: $('#ko-pw2'), los: $('#ko-los'), msg: $('#ko-msg') };
+  const p = { form: $('#ko-profil'), vorname: $('#kp-vorname'), nachname: $('#kp-nachname'), ab16: $('#kp-ab16'), los: $('#kp-los'), msg: $('#kp-msg') };
 
   let db = null, laden = null;   // Supabase-Client, wird erst bei Bedarf geladen
   let nutzer = null;             // angemeldetes Konto
-  let profil = null;             // { vorname, nachname, geburtsdatum } aus public.profil
+  let profil = null;             // { vorname, nachname, ab16, bild, bild_foto } aus public.profil
   let profilAendern = false;     // Formular «Profil ändern» offen
   let profilFehlt = false;       // angemeldet, aber noch kein Profil gespeichert
   let art = 'anmelden';          // oder 'registrieren'
@@ -50,25 +54,20 @@ const KONTO = {
   const ssGet = k => { try { return sessionStorage.getItem(k); } catch (e) { return null; } };
   const ssSet = (k, v) => { try { if (v == null) sessionStorage.removeItem(k); else sessionStorage.setItem(k, v); } catch (e) { /* ignore */ } };
 
-  /* ---------- Profil und Mindestalter ---------- */
-  const MINDESTALTER = 16;
-  const iso = d => d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
-  // spätestes erlaubtes Geburtsdatum: heute vor 16 Jahren
-  const spaetestens = () => { const d = new Date(); d.setFullYear(d.getFullYear() - MINDESTALTER); return iso(d); };
-  [f.geburt, p.geburt].forEach(el => { el.max = spaetestens(); });
-  // Eingaben prüfen; gibt einen Fehlertext zurück oder ''
-  function profilFehler(vorname, nachname, geburt) {
+  /* ---------- Profil und Mindestalter ----------
+     Ein Konto gibt es ab 16 Jahren (Regel von RailBase). Datensparsam nur als Häkchen «Ich bin mindestens 16 Jahre alt»:
+     gespeichert wird ab16 (ja) mit dem Zeitpunkt der Bestätigung, kein Geburtsdatum (werkzeuge/datenbank-webseite.sql). */
+  function profilFehler(vorname, nachname, ab16) {
     if (!vorname) return { text: tr('Gib deinen Vornamen ein.'), feld: 'vorname' };
-    if (!/^\d{4}-\d{2}-\d{2}$/.test(geburt) || geburt < '1900-01-01') return { text: tr('Gib dein Geburtsdatum ein.'), feld: 'geburt' };
-    if (geburt > spaetestens()) return { text: tr('Ein Konto gibt es erst ab 16 Jahren. Ohne Konto kannst du RailBase ganz normal nutzen.'), feld: 'geburt' };
+    if (!ab16) return { text: tr('Ein Konto gibt es erst ab 16 Jahren. Ohne Konto kannst du RailBase ganz normal nutzen.'), feld: 'ab16' };
     return null;
   }
   let ohneBildSpalten = false; // Datenbank kennt bild/bild_foto noch nicht (SQL noch nicht ausgeführt)
   async function ladeProfil() {
-    let { data, error } = await db.from('profil').select('vorname, nachname, geburtsdatum, bild, bild_foto').eq('id', nutzer.id).maybeSingle();
+    let { data, error } = await db.from('profil').select('vorname, nachname, ab16, bild, bild_foto').eq('id', nutzer.id).maybeSingle();
     if (error && /bild/.test(`${error.message} ${error.details}`)) {
       ohneBildSpalten = true;
-      ({ data, error } = await db.from('profil').select('vorname, nachname, geburtsdatum').eq('id', nutzer.id).maybeSingle());
+      ({ data, error } = await db.from('profil').select('vorname, nachname, ab16').eq('id', nutzer.id).maybeSingle());
     }
     if (error) throw error;
     profil = data || null;
@@ -85,16 +84,17 @@ const KONTO = {
     if (!profil) {
       let neu = null;
       try { neu = JSON.parse(ssGet(PROFIL_NEU) || 'null'); } catch (e) { /* ignore */ }
-      if (neu && String(neu.email).toLowerCase() === String(nutzer.email || '').toLowerCase()) await speichereProfil(neu.vorname, neu.nachname, neu.geburtsdatum);
+      if (neu && neu.ab16 === true && String(neu.email).toLowerCase() === String(nutzer.email || '').toLowerCase()) await speichereProfil(neu.vorname, neu.nachname, true);
     }
     ssSet(PROFIL_NEU, null);
-    profilFehlt = !profil;
+    profilFehlt = !profil || !profil.ab16;
   }
-  async function speichereProfil(vorname, nachname, geburtsdatum) {
-    const zeile = { id: nutzer.id, vorname, nachname, geburtsdatum };
+  async function speichereProfil(vorname, nachname, ab16) {
+    if (!ab16) throw Object.assign(new Error('Mindestalter 16 Jahre'), { hint: 'mindestalter' });
+    const zeile = { id: nutzer.id, vorname, nachname, ab16: true };
     const { error } = await db.from('profil').upsert(zeile);
     if (error) throw error;
-    profil = Object.assign({}, profil, { vorname, nachname, geburtsdatum });
+    profil = Object.assign({}, profil, { vorname, nachname, ab16: true });
   }
 
   /* ---------- Profilbild: gleiche Bilder wie in RailBase Legends (js/freunde.js im Spiel) oder ein eigenes Foto ---------- */
@@ -252,6 +252,8 @@ const KONTO = {
     }
     return laden;
   }
+  // für «Foto einsenden» (js/fotos.js) und das Admin-Fenster (js/admin.js): dieselbe Verbindung, auch ohne Anmeldung
+  window.kontoVerbindung = verbinde;
 
   // Nach dem Anmelden zuerst das Profil holen. Erst mit vollständigem Profil (ab 16 Jahren) wird gespeichert.
   let profilLaeuft = null;
@@ -363,7 +365,6 @@ const KONTO = {
   function deutsch(e) {
     const m = `${(e && e.code) || ''} ${(e && e.message) || ''} ${(e && e.hint) || ''}`;
     if (/mindestalter/i.test(m)) return tr('Ein Konto gibt es erst ab 16 Jahren. Ohne Konto kannst du RailBase ganz normal nutzen.');
-    if (/Geburtsdatum/i.test(m)) return tr('Gib dein Geburtsdatum ein.');
     if (/invalid_credentials|Invalid login credentials/i.test(m)) return tr('E-Mail oder Passwort stimmt nicht.');
     if (/user_already_exists|already registered/i.test(m)) return tr('Für diese E-Mail gibt es schon ein Konto. Melde dich an.');
     if (/weak_password|at least 6|Password should/i.test(m)) return tr('Das Passwort braucht mindestens 6 Zeichen.');
@@ -571,13 +572,18 @@ const KONTO = {
     const daten = {
       app: 'RailBase', art: 'Konto', exportiert: new Date().toISOString(),
       konto: { email: nutzer.email || '', id: nutzer.id, erstellt: nutzer.created_at || '' },
-      profil, website: lies(), erfolge: erreicht().map(a => ({ id: a.id, titel: a.titel, text: String(a.text).replace('{n}', a.ziel()) }))
+      profil, website_auf_diesem_geraet: lies(), erfolge: erreicht().map(a => ({ id: a.id, titel: a.titel, text: String(a.text).replace('{n}', a.ziel()) }))
     };
-    // dazu der Spielstand aus RailBase Legends, falls es einen gibt (gleiches Konto)
-    try {
-      const { data } = await db.from('spieler').select('spieler_id, name, level, stand').eq('id', nutzer.id).maybeSingle();
-      if (data) daten.spiel = data;
-    } catch (e) { /* ohne Spielstand */ }
+    // dazu, was wirklich in der Datenbank steht: Profil, Website-Daten im Konto und der ganze Spieler-Eintrag
+    // aus RailBase Legends (gleiches Konto). Die Regeln der Datenbank liefern nur den eigenen Eintrag.
+    const hole = async (tabelle, felder) => {
+      try { const { data, error } = await db.from(tabelle).select(felder).eq('id', nutzer.id).maybeSingle(); return error ? undefined : data; }
+      catch (e) { return undefined; }
+    };
+    const [p, w, s] = await Promise.all([hole('profil', '*'), hole('webseite', '*'), hole('spieler', '*')]);
+    if (p) daten.profil = p;
+    if (w) daten.website_im_konto = w;
+    if (s) daten.spiel = s;
     datei('railbase-konto-' + new Date().toISOString().slice(0, 10) + '.json', JSON.stringify(daten, null, 2), 'application/json');
     msg.className = 'rp-msg ok';
     msg.textContent = tr('Heruntergeladen.');
@@ -659,6 +665,27 @@ const KONTO = {
     }
   });
 
+  // Fusszeile «Datenschutzeinstellungen» (js/katalog.js): zur Karte «Privatsphäre» auf «Mein Konto», auch ohne Konto
+  const ZIEL = 'hckd-konto-ziel';
+  function zumZiel() {
+    const id = ssGet(ZIEL);
+    if (!id || $('#v-entdecken').hidden || seite.hidden) return;
+    ssSet(ZIEL, null);
+    const el = document.getElementById(id);
+    if (el) setTimeout(() => {
+      scrollTo({ top: el.getBoundingClientRect().top + scrollY - 80, behavior: 'auto' });
+      const f = $('input', el);
+      if (f) f.focus({ preventScroll: true });
+    }, 150);
+  }
+  document.addEventListener('click', e => {
+    if (!e.target.closest('[data-dsg-einst]')) return;
+    ssSet(ZIEL, 'kt-privat');
+    if (!seite.hidden && !$('#v-entdecken').hidden) zumZiel(); else gehe('konto');
+  });
+  addEventListener('hashchange', () => setTimeout(zumZiel, 50));
+  setTimeout(zumZiel, 400); // nach dem Wechsel auf konto.html (fertige Website)
+
   // «Foto einsenden» (js/fotos.js): angemeldet sind Name und E-Mail schon ausgefüllt
   document.addEventListener('click', e => {
     if (!e.target.closest('[data-fotos]') || !nutzer) return;
@@ -681,7 +708,7 @@ const KONTO = {
       verbinde().then(() => db.auth.getSession()).then(r => { if (r.data.session) angemeldet(r.data.session.user); }).catch(() => { /* erst beim Absenden melden */ });
     } else if (t === 'profil') {
       fuelleProfil();
-      (p.vorname.value ? p.geburt : p.vorname).focus();
+      (p.vorname.value ? p.ab16 : p.vorname).focus();
     } else {
       $('#ko-an .dlg-fokus').focus({ preventScroll: true });
       if (Date.now() - zuletzt > 5000) synchron();
@@ -692,7 +719,9 @@ const KONTO = {
     const meta = (nutzer && nutzer.user_metadata) || {};
     p.vorname.value = profil ? profil.vorname : (meta.given_name || meta.spielername || '');
     p.nachname.value = profil ? profil.nachname : (meta.family_name || '');
-    p.geburt.value = profil ? profil.geburtsdatum : '';
+    // schon bestätigt: Häkchen gesetzt und ausgeblendet (einmal bestätigt bleibt bestätigt)
+    p.ab16.checked = !!(profil && profil.ab16);
+    $('#kp-ab16-zeile').hidden = p.ab16.checked;
     p.msg.textContent = '';
     p.msg.className = 'rp-msg';
   }
@@ -777,9 +806,9 @@ const KONTO = {
     e.preventDefault();
     const neu = art === 'registrieren';
     const email = f.email.value.trim(), pw = f.pw.value;
-    const vorname = f.vorname.value.trim().slice(0, 50), nachname = f.nachname.value.trim().slice(0, 50), geburt = f.geburt.value;
+    const vorname = f.vorname.value.trim().slice(0, 50), nachname = f.nachname.value.trim().slice(0, 50), ab16 = f.ab16.checked;
     if (neu) {
-      const fehler = profilFehler(vorname, nachname, geburt);
+      const fehler = profilFehler(vorname, nachname, ab16);
       if (fehler) { sage(fehler.text, 'err'); f[fehler.feld].focus(); return; }
     }
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { sage(tr('Gib deine E-Mail-Adresse ein.'), 'err'); f.email.focus(); return; }
@@ -791,7 +820,7 @@ const KONTO = {
       await verbinde();
       if (neu) {
         // das Profil wird gleich nach dem Anmelden gespeichert (ladeProfil); bis dahin nur für diesen Besuch gemerkt
-        ssSet(PROFIL_NEU, JSON.stringify({ email, vorname, nachname, geburtsdatum: geburt }));
+        ssSet(PROFIL_NEU, JSON.stringify({ email, vorname, nachname, ab16: true }));
         // spielername: den Vornamen zeigt auch das Spiel RailBase Legends
         const { data, error } = await db.auth.signUp({ email, password: pw, options: { data: { spielername: vorname.slice(0, 30) } } });
         if (error) { ssSet(PROFIL_NEU, null); throw error; }
@@ -856,7 +885,7 @@ const KONTO = {
 
   // Konto löschen: zuerst nachfragen. Die Datenbank löscht das Konto (konto_loeschen, werkzeuge/datenbank-webseite.sql),
   // mit allem, was daran hängt: Website, Profil und Spielstand von RailBase Legends. Das geht sofort.
-  // Danach geht eine Mail an RailBase (Web3Forms, gleicher Schlüssel wie «Fehler melden», js/melden.js).
+  // Es geht keine Mitteilung an RailBase (Wunsch des Betreibers, 10.11.2026).
   const GELOESCHT = 'hckd-konto-geloescht';
   $('#ko-del').addEventListener('click', () => {
     $('#ko-del').hidden = true;
@@ -871,7 +900,6 @@ const KONTO = {
     knopfJa.disabled = true;
     msg.className = 'rp-msg';
     msg.textContent = tr('Einen Moment …');
-    const wer = { email: nutzer.email || '', id: nutzer.id, name: profil ? `${profil.vorname} ${profil.nachname}` : '' };
     try {
       const { error } = await db.rpc('konto_loeschen');
       if (error) throw error;
@@ -883,7 +911,6 @@ const KONTO = {
         : deutsch(e);
       return;
     }
-    await meldeLoeschung(wer);
     // alles vom Gerät entfernen, wie beim Abmelden
     try { await db.auth.signOut({ scope: 'local' }); } catch (e) { /* das Konto gibt es schon nicht mehr */ }
     try { Object.keys(localStorage).filter(k => k.indexOf(AUTH) === 0).forEach(lsDel); } catch (e) { /* private window */ }
@@ -892,46 +919,22 @@ const KONTO = {
     ssSet(GELOESCHT, '1');
     location.reload();
   });
-  // Mail an RailBase: wer sein Konto gelöscht hat. 🔴 im Betreff und oben im Text, damit sie auffällt
-  // (Web3Forms schickt die Felder als Tabelle; eigene Farben gehen dort nicht)
-  async function meldeLoeschung(wer) {
-    if (typeof MELDEN === 'undefined' || !MELDEN.web3formsKey) return;
-    const zeit = new Date();
-    try {
-      await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify({
-          access_key: MELDEN.web3formsKey,
-          subject: `🔴🔴 WICHTIG: Konto gelöscht – ${wer.email}`,
-          from_name: 'RailBase Konto',
-          '🔴 WICHTIG': '🔴 Ein Konto wurde gelöscht. Die Datenbank hat das Konto mit Website-Daten, Profil und Spielstand schon automatisch gelöscht. Bitte prüfen, ob sonst noch etwas von dieser Person übrig ist (z. B. Mails, Fotos). 🔴',
-          'E-Mail-Adresse': wer.email,
-          Name: wer.name || '(kein Profil)',
-          'Konto-ID': wer.id,
-          Zeit: zeit.toLocaleString('de-CH', { timeZone: 'Europe/Zurich' }),
-          Seite: location.origin
-        })
-      });
-    } catch (e) { /* das Konto ist trotzdem gelöscht */ }
-  }
 
   // Profil ergänzen oder ändern
   $('#kp-zurueck').addEventListener('click', () => { profilAendern = false; zeige(); $('#ko-an .dlg-fokus').focus({ preventScroll: true }); });
   // Profil speichern: aus dem Fenster (p) oder aus dem Formular direkt auf der Seite «Mein Konto» (kp)
-  const kp = { form: $('#kt-profilform'), vorname: $('#kt-p-vorname'), nachname: $('#kt-p-nachname'), geburt: $('#kt-p-geburt'), los: $('#kt-p-los'), msg: $('#kt-p-msg') };
-  kp.geburt.max = spaetestens();
+  const kp = { form: $('#kt-profilform'), vorname: $('#kt-p-vorname'), nachname: $('#kt-p-nachname'), ab16: $('#kt-p-ab16'), los: $('#kt-p-los'), msg: $('#kt-p-msg') };
   async function profilAbsenden(e, x, imFenster) {
     e.preventDefault();
     const sagP = (t, kind) => { x.msg.textContent = t; x.msg.className = 'rp-msg' + (kind ? ' ' + kind : ''); };
-    const vorname = x.vorname.value.trim().slice(0, 50), nachname = x.nachname.value.trim().slice(0, 50), geburt = x.geburt.value;
-    const fehler = profilFehler(vorname, nachname, geburt);
+    const vorname = x.vorname.value.trim().slice(0, 50), nachname = x.nachname.value.trim().slice(0, 50), ab16 = x.ab16.checked;
+    const fehler = profilFehler(vorname, nachname, ab16);
     if (fehler) { sagP(fehler.text, 'err'); x[fehler.feld].focus(); return; }
     x.los.disabled = true;
     sagP(tr('Einen Moment …'));
     try {
       const erstes = !profil;
-      await speichereProfil(vorname, nachname, geburt);
+      await speichereProfil(vorname, nachname, ab16);
       profilFehlt = false;
       profilAendern = false;
       sagP('');
@@ -980,7 +983,7 @@ const KONTO = {
     ssSet(GELOESCHT, null);
     setTimeout(() => {
       oeffnen(knopf);
-      sage(tr('Dein Konto ist gelöscht. Danke, dass du dabei warst!'), 'ok');
+      sage(tr('Dein Konto ist in unserer Datenbank gelöscht. Danke, dass du dabei warst!'), 'ok');
     }, 300);
   }
   // nach dem ersten Anmelden auf diesem Gerät: kurz zeigen, dass die Daten aus dem Konto da sind

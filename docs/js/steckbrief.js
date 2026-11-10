@@ -148,9 +148,31 @@
         doc.bilder.push(await alsJpeg(img, CW, h));
         doc.bild(0, doc.bilder.length - 1, M, y, CW, h);
         y += h + 4;
-        const credit = foto.foto ? `${tr('Foto:')} ${foto.foto}${foto.lizenz ? ' · ' + foto.lizenz : ''}${foto.quelle ? ' · Wikimedia Commons' : ''}` : '';
-        const cap = [zb(z, 0) || '', credit].filter(Boolean).join(' – ');
-        if (cap) y = doc.absatz(0, cap, M, y, CW, 7, false, 'grau', 9);
+        // Bildnachweis: Urheber, genaue Lizenz mit Version, Hinweis auf die Bearbeitung, Lizenz- und Quellenlink (anklickbar).
+        // Fotos mit freier Lizenz bleiben unter ihrer Lizenz; persönlich erlaubte Fotos werden als solche bezeichnet.
+        if (zb(z, 0)) y = doc.absatz(0, zb(z, 0), M, y, CW, 7, false, 'grau', 9);
+        const urheber = foto.foto || foto.urheber || '';
+        const frei = /^CC|gemeinfrei|public domain/i.test(foto.lizenz || '');
+        const rechte = foto.lizenz
+          ? (/gemeinfrei|public domain/i.test(foto.lizenz) ? tr('gemeinfrei') : tr('Lizenz: {l}', { l: foto.lizenz }))
+          : urheber ? tr('mit Erlaubnis verwendet, Weiterverwendung nur mit Zustimmung') : '';
+        const credit = [urheber ? `${tr('Foto:')} ${urheber}` : '', rechte, frei || urheber ? tr('für den Steckbrief zugeschnitten und verkleinert') : '']
+          .filter(Boolean).join(' · ');
+        if (credit) y = doc.absatz(0, credit, M, y, CW, 7, false, 'grau', 9);
+        // Links: als Text sichtbar (auch ausgedruckt lesbar) und anklickbar
+        const linkZeile = (vorn, url) => {
+          if (!url) return;
+          const v = vorn + ' ';
+          doc.text(0, M, y + 6.6, v, 7, false, 'grau');
+          const ux = M + breite(v, false, 7), max = CW - (ux - M);
+          zeilen(url, false, 7, max).forEach((l, i) => {
+            doc.text(0, ux, y + 6.6 + i * 9, l, 7, false, 'rot');
+            doc.link(0, ux, y + i * 9, breite(l, false, 7), 9, url);
+          });
+          y += zeilen(url, false, 7, max).length * 9;
+        };
+        linkZeile(tr('Lizenz:'), foto.lizenzUrl);
+        linkZeile(tr('Quelle:'), foto.quelle);
         y += 10;
       } catch (e) { /* without photo */ }
     }

@@ -146,7 +146,6 @@ rpForm.addEventListener('submit', async e => {
     const vn = vorname.value.trim(), nn = name.value.trim(), adresse = mail.value.trim(), t = text.value.trim();
     [vorname, name, mail, text].forEach(f => f.removeAttribute('aria-invalid'));
     if (vn.length < 2) { say(tr('Bitte gib deinen Vornamen an.'), 'err'); vorname.setAttribute('aria-invalid', 'true'); vorname.focus(); return; }
-    if (nn.length < 2) { say(tr('Bitte gib deinen Nachnamen an.'), 'err'); name.setAttribute('aria-invalid', 'true'); name.focus(); return; }
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(adresse)) { say(tr('Bitte gib deine E-Mail-Adresse an, damit wir dir antworten können.'), 'err'); mail.setAttribute('aria-invalid', 'true'); mail.focus(); return; }
     if (t.length < 10) { say(tr('Bitte schreib uns eine kurze Nachricht.'), 'err'); text.setAttribute('aria-invalid', 'true'); text.focus(); return; }
     if (rpLinks(t) + rpLinks(vn + ' ' + nn) > 1) { say(tr('Bitte höchstens einen Link angeben.'), 'err'); text.focus(); return; }
@@ -162,9 +161,9 @@ rpForm.addEventListener('submit', async e => {
           body: JSON.stringify({
             access_key: MELDEN.web3formsKey,
             subject: 'RailBase – Kontakt: ' + thema.value,
-            from_name: (vn + ' ' + nn).slice(0, 120) + ' (RailBase Kontakt)',
+            from_name: (vn + ' ' + nn).trim().slice(0, 120) + ' (RailBase Kontakt)',
             Vorname: vn.slice(0, 60),
-            Nachname: nn.slice(0, 60),
+            Nachname: nn.slice(0, 60) || '(freiwillig, keine Angabe)',
             E_Mail: adresse.slice(0, 200),
             Thema: thema.value,
             Nachricht: t.slice(0, 3000),
