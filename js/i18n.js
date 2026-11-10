@@ -49,7 +49,12 @@ function uebZug(id, o) { UEB_Z[id] = o; }
 function zn(z) { const o = UEB_Z[z.id]; return (o && o.name) || z.name; }
 function uebQuiz(level, list) { UEB_QUIZ[level] = list; }
 function uebEinsatz(o) { Object.assign(UEB_EINSATZ, o); }
-if (LANG !== 'de') document.write('<script src="js/sprachen/' + LANG + '.js"><\/script>');
+// HCKD_SPRACH_V: Versionsnummer der Sprachdatei (fertige Website, werkzeuge\website-bauen.ps1),
+// damit der Browser nach einer Änderung sicher die neue Datei holt
+if (LANG !== 'de') {
+  const v = window.HCKD_SPRACH_V && window.HCKD_SPRACH_V[LANG];
+  document.write('<script src="js/sprachen/' + LANG + '.js' + (v ? '?v=' + v : '') + '"><\/script>');
+}
 
 // tr('Text') or tr('{n} Fahrzeuge', { n: 5 })
 function tr(s, v) {

@@ -130,6 +130,26 @@ $body = $page.Substring($cut).Trim()
 $head = [regex]::Replace($head, '<link rel="preconnect" href="https://fonts\.(googleapis|gstatic)\.com"[^>]*>\s*', '')
 $head = [regex]::Replace($head, '<link rel="stylesheet" href="https://fonts\.googleapis\.com[^"]*">',
   '<link rel="preload" href="schrift/source-sans-3-latin.woff2" as="font" type="font/woff2" crossorigin>' + "`n" + '<link rel="stylesheet" href="css/schrift.css">')
+# Versionsnummer an Programm- und Stildateien (js/..., css/...): kurze Pruefsumme des Inhalts.
+# Aendert sich eine Datei, heisst ihre Adresse anders (konto.js?v=...). Dann holt der Browser sicher
+# die neue Datei und nimmt nie eine alte aus seinem Speicher, die nicht zur neuen Seite passt.
+# Unveraenderte Dateien behalten ihre Nummer und bleiben im Speicher.
+$pruefsumme = [Security.Cryptography.SHA1]::Create()
+function Version([string]$rel) {
+  $p = Join-Path $root ($rel -replace '/', '\')
+  if (-not (Test-Path $p)) { return '' }
+  return ([BitConverter]::ToString($pruefsumme.ComputeHash([IO.File]::ReadAllBytes($p))) -replace '-', '').Substring(0, 10).ToLower()
+}
+$mitVersion = [Text.RegularExpressions.MatchEvaluator]{
+  param($m)
+  $v = Version $m.Groups[2].Value
+  if ($v) { return $m.Groups[1].Value + $m.Groups[2].Value + '?v=' + $v + '"' } else { return $m.Value }
+}
+$musterDatei = '((?:src|href)=")((?:js|css)/[^"?#]+\.(?:js|css))"'
+$head = [regex]::Replace($head, $musterDatei, $mitVersion)
+$body = [regex]::Replace($body, $musterDatei, $mitVersion)
+# die Sprachdatei laedt js/i18n.js selbst (js/sprachen/xx.js): Nummern als Liste HCKD_SPRACH_V
+$sprachV = ($sprachen | Where-Object { $_ -ne 'de' } | ForEach-Object { "$_`:'" + (Version "js/sprachen/$_.js") + "'" }) -join ','
 # title und description kommen pro Seite neu dazu
 $head = [regex]::Replace($head, '<title>[^<]*</title>\s*', '')
 $head = [regex]::Replace($head, '<meta name="description"[^>]*>\s*', '')
@@ -245,7 +265,7 @@ function Build-Page([string]$l, [string]$start, [string]$titel, [string]$text, [
   $meta += "<link rel=`"apple-touch-icon`" href=`"bilder/app/apple-touch-icon.png`">`n<meta name=`"apple-mobile-web-app-capable`" content=`"yes`">`n<meta name=`"apple-mobile-web-app-title`" content=`"RailBase`">`n"
   # HCKD_SEITEN: Links zeigen auf die einzelnen Dateien (re-460.html statt #re-460)
   # HCKD_START: welche Ansicht ohne # gezeigt wird; HCKD_LANG: Sprache dieser Datei
-  $js = "window.HCKD_SEITEN=true;window.HCKD_LANG='$l';"
+  $js = "window.HCKD_SEITEN=true;window.HCKD_LANG='$l';window.HCKD_SPRACH_V={$sprachV};"
   if ($webp) { $js += 'window.HCKD_WEBP=true;' }
   if ($start) { $js += "window.HCKD_START='$start';" }
   $meta += "<script>$js</script>`n"
